@@ -35,16 +35,15 @@ export default function Layout({ children, metaConfig }) {
         <meta property="og:type" content="website" />
         <meta
           property="og:image"
-          content="/images/favicon32x32.png"
+          content="/images/logo.jpg"
         />
-
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta
           name="apple-mobile-web-app-status-bar-style"
           content="black-translucent"
         />
 
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/images/favicon.ico" />
         <link rel="apple-touch-icon" href="/images/favicon32x32.png" />
         <link
           rel="apple-touch-icon"

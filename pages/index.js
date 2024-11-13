@@ -7,7 +7,7 @@ export default function MainPage() {
 
   const metaConfig = {
     title: 'Александр "Интеграл" Васильев',
-    description: "БЛАГОСЛОВЕННЫЙ ПОРТАЛ МЕЧТЫ",
+    description: "Благословенный портал мечты",
     keywords: "очищение интеграл ретрит грибы дурман",
   };
 
