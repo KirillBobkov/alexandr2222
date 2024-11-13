@@ -4,6 +4,7 @@
     justify-content: center;
     gap: 30px;
     background-color: var(--bg-color);
+    padding: 10px;
 }
 
 .header__logo {
@@ -19,12 +20,34 @@
 }
 
 .navigation__item {
+    position: relative;
     font-size: 14px;
     color: #281a19;
     font-weight: 400;
     cursor: pointer;
     text-decoration: none;
     flex-shrink: 0;
+}
+.navigation__item:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 20%;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    border-bottom: 1px solid #77806e;
+    -webkit-box-shadow: inset 0px -1px 0px 0px #77806e;
+    -moz-box-shadow: inset 0px -1px 0px 0px #77806e;
+    box-shadow: inset 0px -1px 0px 0px #77806e;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.navigation__item:hover:after {
+    opacity: 1;
+    bottom: -1px;
 }
 
 .button {
@@ -41,6 +64,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    box-shadow: #281a19 0px 0px 4px 0px;
 }
 
 .tBtn {
@@ -54,3 +83,69 @@
     color: #281a19;
     font-weight: 600;
 }
+
+.burgerButton {
+    display: none;
+}
+
+@media (max-width: 1030px) {
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transform: translateY(-100%);
+        transition: transform 0.7s ease-in-out;
+    }
+
+    .header_opened {
+        transform: translateY(0);
+    }
+
+    .navigation {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .burgerButton {
+        display: block;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        position: absolute;
+        top: 20px; /* Adjust as needed */
+        right: 20px; /* Adjust as needed */
+        z-index: 1000; /* Ensure it appears above other elements */
+        transition: transform 0.5s ease; /* Smooth transition for the button */
+    }
+    
+    .burgerLine {
+        width: 30px; /* Adjust width as needed */
+        height: 3px; /* Adjust height as needed */
+        background-color: black; /* Change color as needed */
+        margin: 5px 0; /* Space between lines */
+        transition: all 0.3s ease; /* Smooth transition for animations */
+    }
+    
+    .burgerButton.open .burgerLine:nth-child(1) {
+        transform: translateY(8px) rotate(45deg); /* Move and rotate the first line */
+    }
+    
+    .burgerButton.open .burgerLine:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg); /* Move and rotate the first line */
+    }
+    
+    .burgerButton.open .burgerLine:nth-child(2) {
+        opacity: 0; /* Hide the middle line */
+    }
+}
+

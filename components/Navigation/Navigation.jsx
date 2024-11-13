@@ -1,11 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./Navigation.module.css";
 import logo from "../../public/images/logo.jpg";
 import Image from "next/image.js";
 
 export const Navigation = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleClick = () => {
+      setIsOpen(!isOpen);
+  };
+
   return (
-    <header className={styles.header}>
+    <>
+    <header className={`${styles.header} ${isOpen ? styles.header_opened : ''}`}>
       <Image
         src={logo}
         alt=""
@@ -41,8 +48,15 @@ export const Navigation = () => {
                             БЕСПЛАТНАЯ КОНСУЛЬТАЦИЯ
                         </a>
       </div>
+  
 
     </header>
+        <button className={`${styles.burgerButton} ${isOpen ? styles.open : ''}`} onClick={handleClick}>
+        <div className={styles.burgerLine}></div>
+        <div className={styles.burgerLine}></div>
+        <div className={styles.burgerLine}></div>
+    </button>
+    </>
   );
 };
 
