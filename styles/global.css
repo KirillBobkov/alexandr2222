@@ -1,0 +1,32 @@
+*::-webkit-scrollbar {
+    width: 10px;
+    height: 3px;
+}
+
+*::-webkit-scrollbar-track {
+    background-color: var(--bg-color);
+
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--font-color);
+}
+
+body {
+    font-family: var(--font-tilda);
+    margin: 0;
+    background-color: var(--bg-color);
+    font-size: 16px;
+    line-height: 25px;
+    color: var(--font-color);
+    position: relative;
+}
+
+html, 
+body {
+    overflow-x: hidden;
+}
+
+.no-scroll-page  {
+    overflow: hidden;
+}
