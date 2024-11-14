@@ -1,0 +1,27 @@
+.imageWrapper {
+    position: relative; /* Required for absolute positioning */
+    width: 100%; /* Full width */
+    height: 0; /* Set height to 0 */
+    padding-bottom: 100%; /* This creates a 1:1 aspect ratio */
+    overflow: hidden; /* Hide overflow */
+  }
+  
+  .image {
+    position: absolute; /* Position the image absolutely */
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    object-fit: cover; /* Cover the entire area */
+    object-position: center; /* Center the image */
+    z-index: -1;
+  }
+  
+  .description {
+    color: #fff; /* Text color */
+    position: absolute; /* Position the image absolutely */
+    bottom: 40px;
+    left: 20px;
+    font-size: 14px;
+    line-height: 1.45;
+  }

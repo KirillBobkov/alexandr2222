@@ -131,16 +131,18 @@
     .burgerLine {
         width: 30px; /* Adjust width as needed */
         height: 3px; /* Adjust height as needed */
-        background-color: black; /* Change color as needed */
+        background-color: rgb(255, 255, 255); /* Change color as needed */
         margin: 5px 0; /* Space between lines */
         transition: all 0.3s ease; /* Smooth transition for animations */
     }
     
     .burgerButton.open .burgerLine:nth-child(1) {
+        background-color: rgb(0, 0, 0); /* Change color as needed */
         transform: translateY(8px) rotate(45deg); /* Move and rotate the first line */
     }
     
     .burgerButton.open .burgerLine:nth-child(3) {
+        background-color: rgb(0, 0, 0); /* Change color as needed */
         transform: translateY(-8px) rotate(-45deg); /* Move and rotate the first line */
     }
     
