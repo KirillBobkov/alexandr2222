@@ -17,6 +17,7 @@
     align-items: center;
     justify-content: center;
     gap: 30px;
+    list-style: none;
 }
 
 .navigation__item {
