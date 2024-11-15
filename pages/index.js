@@ -5,7 +5,6 @@ import { ContentBlock } from "../components/ContentBlock/ContentBlock";
 import { Preview } from "../components/Preview/Preview";
 import { Bio } from "../components/Bio/Bio";
 import { VisibilityManager } from "../components/VisibilityManager";
-import { useScrollToLocation } from "../hooks/useScrollToLocation";
 import alex2 from "../public/images/alex2.png";
 import alex3 from "../public/images/alex3.png";
 import alex5 from "../public/images/alex5.png";
@@ -13,9 +12,11 @@ import alex6 from "../public/images/alex6.jpg";
 
 import styles from "../styles/content.module.css";
 import { AskMe } from "../components/AskMe/AskMe";
+import { Form } from "../components/Form/Form";
+import { useState } from "react";
 
 export default function MainPage() {
-  useScrollToLocation();
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const metaConfig = {
     title: 'Александр "Интеграл" Васильев',
@@ -28,13 +29,16 @@ export default function MainPage() {
       <Preview />
       <Bio />
       <GreenBlock />
+      <Form setIsSubmitted={setIsSubmitted} isSubmitted={isSubmitted} />
       <FullWidthImage
         src={alex3}
         alt={"Александр Васильев 2"}
         description={'Ресторан "Вишня Золотая" г.Казань'}
       />
       <ContentBlock background="#ffffff" color="#000000">
-        <VisibilityManager as="span" className={styles.uptitle}>ИN</VisibilityManager>
+        <VisibilityManager as="span" className={styles.uptitle}>
+          ИN
+        </VisibilityManager>
         <VisibilityManager as="h2" className={styles.title}>
           Что я предлагаю Вам?
         </VisibilityManager>
@@ -68,8 +72,12 @@ export default function MainPage() {
         description={"Вечеринка PLMBR (кейс №1) г.Казань"}
       />
 
+      <Form setIsSubmitted={setIsSubmitted} isSubmitted={isSubmitted} />
+
       <ContentBlock background="#053d09" color="#eeeeee">
-        <VisibilityManager as="span" className={styles.uptitle}>ИN</VisibilityManager>
+        <VisibilityManager as="span" className={styles.uptitle}>
+          ИN
+        </VisibilityManager>
         <VisibilityManager as="h2" className={styles.title}>
           Я помогу, если Вы:
         </VisibilityManager>
@@ -113,8 +121,12 @@ export default function MainPage() {
         description={"WHITE PLACE by PLOMBIR PROMO GROUP KAZAN"}
       />
 
+      <Form setIsSubmitted={setIsSubmitted} isSubmitted={isSubmitted} />
+
       <ContentBlock background="#053d09" color="#eeeeee">
-        <VisibilityManager as="span" className={styles.uptitle}>ИN</VisibilityManager>
+        <VisibilityManager as="span" className={styles.uptitle}>
+          ИN
+        </VisibilityManager>
         <VisibilityManager as="h2" className={styles.title}>
           Почему это стоит того?
         </VisibilityManager>
@@ -150,7 +162,9 @@ export default function MainPage() {
       </ContentBlock>
 
       <ContentBlock background="#ffffff" color="#000000">
-        <VisibilityManager as="span" className={styles.uptitle}>ИN</VisibilityManager>
+        <VisibilityManager as="span" className={styles.uptitle}>
+          ИN
+        </VisibilityManager>
         <VisibilityManager as="h2" className={styles.title}>
           Почему Датура?
         </VisibilityManager>
@@ -271,6 +285,7 @@ export default function MainPage() {
           </VisibilityManager>
         </div>
       </ContentBlock>
+      <Form setIsSubmitted={setIsSubmitted} isSubmitted={isSubmitted} />
       <AskMe />
       <FullWidthImage
         src={alex6}

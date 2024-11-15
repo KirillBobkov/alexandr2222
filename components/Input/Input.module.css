@@ -1,0 +1,48 @@
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 0.5rem;
+}
+
+.inputWrapper {
+  position: relative;
+}
+
+.input {
+  width: 100%;
+  padding: 1rem 1rem;
+  border: 1px solid #281a19;
+  transition: all 0.2s;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #281a19;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.input:disabled {
+  background-color: #F3F4F6;
+  cursor: not-allowed;
+}
+
+.input:-webkit-autofill,
+.input:-webkit-autofill:hover,
+.input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 30px white inset;
+  -webkit-text-fill-color: inherit;
+  caret-color: inherit;
+}
+
+.error .input {
+  border-color: #EF4444;
+}
+
+.errorMessage {
+  position: absolute;
+  bottom: -30px;
+  left: 10px;
+  color: #EF4444;
+  font-size: 0.875rem;
+}

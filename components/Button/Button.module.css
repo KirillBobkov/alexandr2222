@@ -1,0 +1,27 @@
+.button {
+  padding: 1rem 1rem;
+  text-align: center;
+  font-weight: 800;
+  width: 100%;
+  color: #ffffff;
+  background-color: #281a19;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.button:hover:not(:disabled) {
+  background-color: #372322;
+}
+
+.button:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.button:disabled {
+  cursor: not-allowed;
+}
+
+.success {
+  background-color: #422a28;
+}
