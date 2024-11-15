@@ -34,7 +34,7 @@ export default function MainPage() {
         description={'Ресторан "Вишня Золотая" г.Казань'}
       />
       <ContentBlock background="#ffffff" color="#000000">
-        <div className={styles.uptitle}>ИN</div>
+        <VisibilityManager as="span" className={styles.uptitle}>ИN</VisibilityManager>
         <VisibilityManager as="h2" className={styles.title}>
           Что я предлагаю Вам?
         </VisibilityManager>
@@ -69,7 +69,7 @@ export default function MainPage() {
       />
 
       <ContentBlock background="#053d09" color="#eeeeee">
-        <span className={styles.uptitle}>ИN</span>
+        <VisibilityManager as="span" className={styles.uptitle}>ИN</VisibilityManager>
         <VisibilityManager as="h2" className={styles.title}>
           Я помогу, если Вы:
         </VisibilityManager>
@@ -114,7 +114,7 @@ export default function MainPage() {
       />
 
       <ContentBlock background="#053d09" color="#eeeeee">
-        <div className={styles.uptitle}>ИN</div>
+        <VisibilityManager as="span" className={styles.uptitle}>ИN</VisibilityManager>
         <VisibilityManager as="h2" className={styles.title}>
           Почему это стоит того?
         </VisibilityManager>
@@ -150,7 +150,7 @@ export default function MainPage() {
       </ContentBlock>
 
       <ContentBlock background="#ffffff" color="#000000">
-        <div className={styles.uptitle}>ИN</div>
+        <VisibilityManager as="span" className={styles.uptitle}>ИN</VisibilityManager>
         <VisibilityManager as="h2" className={styles.title}>
           Почему Датура?
         </VisibilityManager>

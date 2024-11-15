@@ -17,24 +17,24 @@ export const Bio = () => {
           <div className={styles.textContainer}>
             <div className={styles.textWrapper}>
               <h2 className={styles.title}>Александр Васильев</h2>
-              <div className={styles.uptitle}>
-                <strong>Я устраняю причины Ваших страданий навсегда.</strong>
-              </div>
-              <div className={styles.divider}></div>
+              <VisibilityManager as="div" className={styles.uptitle}>
+                Я устраняю причины Ваших страданий навсегда.
+              </VisibilityManager>
+              <VisibilityManager as="div"  className={styles.divider}></VisibilityManager >
               <div className={styles.description}>
-                <p>Вам не нравится то, как Вы живёте и чувствуете себя?</p>
-                <p>Я помогу Вам обрести то состояние, о котором Вы мечтаете.</p>
+                <VisibilityManager as="p">Вам не нравится то, как Вы живёте и чувствуете себя?
+                <br/>Я помогу Вам обрести то состояние, о котором Вы мечтаете.</VisibilityManager>
                 <br />
-                <p>
+                <VisibilityManager as="p">
                   Используя свои навыки, я смог улучшить жизни множества людей и
                   смогу помочь Вам, даже если сейчас Вы в это не верите.
-                </p>
+                </VisibilityManager>
                 <br />
-                <p>
+                <VisibilityManager as="p">
                   Запишитесь на благотворительную консультацию и узнайте
                   истинные причины проблем, способы решения и возможные преграды
                   на пути к Вашему процветанию!
-                </p>
+                </VisibilityManager>
                 <br />
                 168
               </div>
