@@ -1,0 +1,25 @@
+.block {
+    padding-top: 120px;
+    padding-bottom: 90px;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+  }
+  
+  .content {
+    max-width: 960px; /* Limit the width for larger screens */
+    width: 100%; /* Full width for smaller screens */
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .block b {
+    font-weight: 800;
+  }
+
+  .block ul {
+    padding-left: 30px;
+  }
+  
+  

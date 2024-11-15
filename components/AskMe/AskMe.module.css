@@ -1,41 +1,36 @@
 .block {
     padding-top: 120px;
     padding-bottom: 90px;
-    background-color: #053d09; /* Background color */
+    background-color: #301f1e; /* Background color */
     display: flex;
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
   }
   
   .content {
-    max-width: 960px; /* Limit the width for larger screens */
+    max-width: 1000px; /* Limit the width for larger screens */
     width: 100%; /* Full width for smaller screens */
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 50px;
-  }
-  
-  .uptitle {
-    color: #eeeeee; /* Color for the uptitle */
-    text-transform: uppercase; /* Uppercase text */
-    font-size: 14px; /* Font size for the uptitle */
-    margin-bottom: 10px; /* Space below the uptitle */
     text-align: center;
   }
   
   .title {
     color: #eeeeee; /* Color for the title */
-    font-size: 78px;
-    line-height: 100px;
+    font-size: 42px;
+    line-height: 1.23;
     font-weight: 600;
     text-align: center;
   }
   
   .description {
+    max-width: 700px; /* Limit the width for larger screens */
     color: #eeeeee; /* Color for the description */
-    font-size: 26px;
-    line-height: 1.45;
-    font-weight: 300;
+    font-size: 24px;
+    line-height: 1.50;
   }
   
   /* Responsive styles */
@@ -54,3 +49,30 @@
     }
   }
   
+
+
+  .button {
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    background-color: transparent;
+    height: 60px;
+    font-size: 14px;
+    padding-left: 60px;
+    padding-right: 60px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    box-shadow: #ffffff 0px 0px 4px 0px;
+}
+
+.tBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

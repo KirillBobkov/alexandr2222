@@ -12,6 +12,10 @@
     background-color: var(--font-color);
 }
 
+* {
+    -webkit-font-smoothing: antialiased;
+}
+
 body {
     font-family: var(--font-tilda);
     margin: 0;

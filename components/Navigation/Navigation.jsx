@@ -48,8 +48,6 @@ export const Navigation = () => {
                             БЕСПЛАТНАЯ КОНСУЛЬТАЦИЯ
                         </a>
       </div>
-  
-
     </header>
         <button className={`${styles.burgerButton} ${isOpen ? styles.open : ''}`} onClick={handleClick}>
         <div className={styles.burgerLine}></div>

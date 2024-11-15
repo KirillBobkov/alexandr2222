@@ -1,59 +1,65 @@
 .preview {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    gap: 50px;
-    height: 1000px; /* Full height of the viewport */
-    color: white; /* Text color */
-    background: #000000ab;
-  }
-  
-  .preview__bg {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Cover the entire block */
-    z-index: -1; /* Send the image to the back */
-  }
-  
-  .preview__sign {
-    font-size: 14px; /* Adjust as needed */
-    margin-bottom: 10px; /* Space between sign and title */
-  }
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 800px; /* Full height of the viewport */
+  color: white; /* Text color */
+  background: #000000ab;
+}
+
+.preview__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 50px;
+}
+
+.preview__bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cover the entire block */
+  z-index: -1; /* Send the image to the back */
+}
+
+.preview__sign {
+  font-size: 14px; /* Adjust as needed */
+  margin-bottom: 10px; /* Space between sign and title */
+}
+
+.preview__title {
+  font-size: 72px;
+  line-height: 1.17;
+  font-weight: 600;
+}
+
+.preview__description {
+  font-size: 22px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
   .preview__title {
-    font-size: 72px;
-    line-height: 1.17;
-    font-weight: 600;
+    font-size: 36px; /* Smaller title size for mobile */
+    padding: 10px;
   }
 
   .preview__description {
-    font-size: 22px;
+    font-size: 20px; /* Smaller description size for mobile */
   }
-  
-  /* Responsive styles */
-  @media (max-width: 768px) {
-    .preview__title {
-      font-size: 36px; /* Smaller title size for mobile */
-      padding: 10px;
-    }
-  
-    .preview__description {
-        font-size: 20px; /* Smaller description size for mobile */
-    }
+}
+
+@media (max-width: 480px) {
+  .preview__title {
+    font-size: 30px; /* Even smaller title size for very small screens */
   }
-  
-  @media (max-width: 480px) {
-    .preview__title {
-        font-size: 30px; /* Even smaller title size for very small screens */
-    }
-  
-    .preview__description {
-      font-size: 16px; /* Even smaller description size for very small screens */
-    }
+
+  .preview__description {
+    font-size: 16px; /* Even smaller description size for very small screens */
   }
-  
+}

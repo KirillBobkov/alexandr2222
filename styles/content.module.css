@@ -1,0 +1,39 @@
+
+.uptitle {
+    color: inherit; /* Color for the uptitle */
+    text-transform: uppercase; /* Uppercase text */
+    font-size: 14px; /* Font size for the uptitle */
+    margin-bottom: 10px; /* Space below the uptitle */
+    text-align: center;
+  }
+  
+  .title {
+    color: inherit; /* Color for the title */
+    font-size: 78px;
+    line-height: 100px;
+    font-weight: 600;
+    text-align: center;
+  }
+  
+  .description {
+    color: inherit; /* Color for the description */
+    font-size: 26px;
+    line-height: 1.45;
+    font-weight: 300;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .uptitle {
+      font-size: 10px; /* Smaller font size for tablets */
+    }
+  
+    .title {
+      font-size: 28px; /* Smaller font size for tablets */
+      line-height:30px;
+    }
+  
+    .description {
+        font-size: 20px; /* Smaller font size for tablets */
+    }
+  }

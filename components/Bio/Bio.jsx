@@ -1,22 +1,22 @@
 import React from "react";
 import Image from "next/image"; // Adjust this import based on your image handling
-import styles from "./TextWithImage.module.css"; // Adjust the path as necessary
+import styles from "./Bio.module.css"; // Adjust the path as necessary
 import containerStyles from "../../styles/container.module.css";
 import alex1 from "../../public/images/alex1.jpg";
+import { VisibilityManager } from "../VisibilityManager";
 
-export const TextWithImage = () => {
+export const Bio = () => {
   return (
-    <div className={styles.block}>
-      <div className={containerStyles.container + ' ' + styles.block__container}>
+    <section className={styles.block}>
+      <VisibilityManager className={containerStyles.container + ' ' + styles.block__container}>
           <Image
             src={alex1}
             alt="Александр Васильев"
             className={styles.image}
           />
-
           <div className={styles.textContainer}>
             <div className={styles.textWrapper}>
-              <div className={styles.title}>Александр Васильев</div>
+              <h2 className={styles.title}>Александр Васильев</h2>
               <div className={styles.uptitle}>
                 <strong>Я устраняю причины Ваших страданий навсегда.</strong>
               </div>
@@ -40,8 +40,7 @@ export const TextWithImage = () => {
               </div>
             </div>
           </div>
-        </div>
-
-    </div>
+        </VisibilityManager>
+    </section>
   );
 };
