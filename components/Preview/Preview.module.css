@@ -5,7 +5,7 @@
   align-items: center;
   height: 800px; /* Full height of the viewport */
   color: white; /* Text color */
-  background: #000000ab;
+  background: #000000b2;
 }
 
 .preview__content {
@@ -17,14 +17,23 @@
   gap: 50px;
 }
 
+@keyframes rotate-right {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .preview__bg {
   position: fixed;
   top: 0;
-  left: 0;
-  width: 100%;
+  left: 30%;
+  width: auto;
   height: 100%;
-  object-fit: cover; /* Cover the entire block */
   z-index: -1; /* Send the image to the back */
+  animation: rotate-right 80s linear infinite;
 }
 
 .preview__sign {
@@ -44,6 +53,13 @@
 
 /* Responsive styles */
 @media (max-width: 768px) {
+  .preview__bg {
+    top: 0;
+    left: -30%;
+    width: auto;
+    height: 100%;
+  }
+  
   .preview__title {
     font-size: 36px; /* Smaller title size for mobile */
     padding: 10px;
