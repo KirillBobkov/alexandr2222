@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "./Navigation.module.css";
-import logo from "../../public/images/logo.jpg";
+import logo from "../../public/images/logo.webp";
 import Image from "next/image.js";
 
 export const Navigation = () => {

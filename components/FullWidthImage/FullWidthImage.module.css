@@ -2,7 +2,7 @@
     position: relative; /* Required for absolute positioning */
     width: 100%; /* Full width */
     height: 0; /* Set height to 0 */
-    padding-bottom: 100%; /* This creates a 1:1 aspect ratio */
+    padding-bottom: 56%; /* This creates a 1:1 aspect ratio */
     overflow: hidden; /* Hide overflow */
   }
   
@@ -25,3 +25,10 @@
     font-size: 14px;
     line-height: 1.45;
   }
+
+  @media (max-width: 768px) {
+    .imageWrapper {
+      padding-bottom: 150%; /* This creates a 1:1 aspect ratio */
+    }
+  }
+  

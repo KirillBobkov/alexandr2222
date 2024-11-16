@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Preview.module.css";
-import preview_bg from "../../public/images/preview_bg.png";
+import preview_bg from "../../public/images/preview_bg.webp";
 import Image from "next/image.js";
 import { VisibilityManager } from "../VisibilityManager";
 

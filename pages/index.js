@@ -5,10 +5,10 @@ import { ContentBlock } from "../components/ContentBlock/ContentBlock";
 import { Preview } from "../components/Preview/Preview";
 import { Bio } from "../components/Bio/Bio";
 import { VisibilityManager } from "../components/VisibilityManager";
-import alex2 from "../public/images/alex2.png";
-import alex3 from "../public/images/alex3.png";
-import alex5 from "../public/images/alex5.png";
-import alex6 from "../public/images/alex6.jpg";
+import alex2 from "../public/images/alex2.webp";
+import alex3 from "../public/images/alex3.webp";
+import alex5 from "../public/images/alex5.webp";
+import alex6 from "../public/images/alex6.webp";
 
 import styles from "../styles/content.module.css";
 import { AskMe } from "../components/AskMe/AskMe";

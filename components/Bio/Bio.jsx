@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image"; // Adjust this import based on your image handling
 import styles from "./Bio.module.css"; // Adjust the path as necessary
 import containerStyles from "../../styles/container.module.css";
-import alex1 from "../../public/images/alex1.jpg";
+import alex1 from "../../public/images/alex1.webp";
 import { VisibilityManager } from "../VisibilityManager";
 
 export const Bio = () => {
