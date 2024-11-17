@@ -1,5 +1,4 @@
 import { FullWidthImage } from "../components/FullWidthImage/FullWidthImage";
-import { GreenBlock } from "../components/GreenBlock/GreenBlock";
 import Layout from "../components/Layout/Layout";
 import { ContentBlock } from "../components/ContentBlock/ContentBlock";
 import { Preview } from "../components/Preview/Preview";
@@ -14,6 +13,7 @@ import styles from "../styles/content.module.css";
 import { AskMe } from "../components/AskMe/AskMe";
 import { Form } from "../components/Form/Form";
 import { useState } from "react";
+import { TextReviews } from "../components/TextReviews/TextReviews";
 
 export default function MainPage() {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -28,7 +28,30 @@ export default function MainPage() {
     <Layout metaConfig={metaConfig}>
       <Preview />
       <Bio />
-      <GreenBlock />
+
+      <ContentBlock  background="#053d09" color="#eeeeee">
+        <VisibilityManager as="h2" className={styles.title__middle}>
+        <br />
+          Я настолько уверен в своей методике, что предоставляю Вам 100%
+          гарантию.
+        </VisibilityManager>
+        <div className={styles.description} style={{ textAlign: "center" }}>
+          <VisibilityManager as="p">
+            Если после работы со мной, Вы не почувствуете улучшения, <br/>я верну Вам
+            все деньги.
+          </VisibilityManager>
+          <br />
+          <VisibilityManager as="p" style={{ textAlign: "center" }}>
+            Моя цель – сделать так, <br/> чтобы Вы были довольны и рекомендовали меня
+            своим близким.
+          </VisibilityManager>
+        </div>
+        <VisibilityManager as="span" className={styles.uptitle} style={{ textAlign: "center" }}>
+          ИN
+        </VisibilityManager>
+      </ContentBlock>
+
+
       <Form setIsSubmitted={setIsSubmitted} isSubmitted={isSubmitted} />
       <FullWidthImage
         src={alex3}
@@ -286,6 +309,13 @@ export default function MainPage() {
         </div>
       </ContentBlock>
       <Form setIsSubmitted={setIsSubmitted} isSubmitted={isSubmitted} />
+
+      <h2 className={styles.title__middle} style={{ background: "#e7e7e7", paddingTop: "90px" }}>
+						Посмотрите отзывы людей, которым я помог
+      </h2>
+      <TextReviews />
+
+
       <AskMe />
       <FullWidthImage
         src={alex6}

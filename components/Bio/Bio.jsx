@@ -36,7 +36,7 @@ export const Bio = () => {
                   на пути к Вашему процветанию!
                 </VisibilityManager>
                 <br />
-                <VisibilityManager as="span">168</VisibilityManager>
+                <VisibilityManager as="p">168</VisibilityManager>
               </div>
             </div>
           </div>

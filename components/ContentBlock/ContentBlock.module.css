@@ -1,6 +1,6 @@
 .block {
-    padding-top: 120px;
-    padding-bottom: 90px;
+    padding-top: 60px;
+    padding-bottom: 120px;
     display: flex;
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
@@ -22,4 +22,10 @@
     padding-left: 30px;
   }
   
+  @media (max-width: 768px) {
+    .block {
+      padding-top: 30px;
+      padding-bottom: 60px;
+    }
+  }
   
