@@ -14,7 +14,7 @@ import { AskMe } from "../components/AskMe/AskMe";
 import { Form } from "../components/Form/Form";
 import { useState } from "react";
 import { TextReviews } from "../components/TextReviews/TextReviews";
-
+import { VideoWidget } from "../components/VideoWidget/VideoWidget";
 export default function MainPage() {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -29,28 +29,30 @@ export default function MainPage() {
       <Preview />
       <Bio />
 
-      <ContentBlock  background="#053d09" color="#eeeeee">
+      <ContentBlock background="#053d09" color="#eeeeee">
         <VisibilityManager as="h2" className={styles.title__middle}>
-        <br />
-          Я настолько уверен в своей методике, что предоставляю Вам 100%
+          <br />Я настолько уверен в своей методике, что предоставляю Вам 100%
           гарантию.
         </VisibilityManager>
         <div className={styles.description} style={{ textAlign: "center" }}>
           <VisibilityManager as="p">
-            Если после работы со мной, Вы не почувствуете улучшения, <br/>я верну Вам
-            все деньги.
+            Если после работы со мной, Вы не почувствуете улучшения, <br />я
+            верну Вам все деньги.
           </VisibilityManager>
           <br />
           <VisibilityManager as="p" style={{ textAlign: "center" }}>
-            Моя цель – сделать так, <br/> чтобы Вы были довольны и рекомендовали меня
-            своим близким.
+            Моя цель – сделать так, <br /> чтобы Вы были довольны и
+            рекомендовали меня своим близким.
           </VisibilityManager>
         </div>
-        <VisibilityManager as="span" className={styles.uptitle} style={{ textAlign: "center" }}>
+        <VisibilityManager
+          as="span"
+          className={styles.uptitle}
+          style={{ textAlign: "center" }}
+        >
           ИN
         </VisibilityManager>
       </ContentBlock>
-
 
       <Form setIsSubmitted={setIsSubmitted} isSubmitted={isSubmitted} />
       <FullWidthImage
@@ -143,6 +145,15 @@ export default function MainPage() {
         alt={"Александр Васильев 4"}
         description={"WHITE PLACE by PLOMBIR PROMO GROUP KAZAN"}
       />
+      <h2
+        className={styles.title__middle}
+        style={{ background: "#ffffff", paddingTop: "90px" }}
+      >
+        Посмотрите отзывы людей, которым я помог
+      </h2>
+      <TextReviews />
+
+      <AskMe />
 
       <Form setIsSubmitted={setIsSubmitted} isSubmitted={isSubmitted} />
 
@@ -183,6 +194,7 @@ export default function MainPage() {
           </VisibilityManager>
         </div>
       </ContentBlock>
+
 
       <ContentBlock background="#ffffff" color="#000000">
         <VisibilityManager as="span" className={styles.uptitle}>
@@ -308,15 +320,11 @@ export default function MainPage() {
           </VisibilityManager>
         </div>
       </ContentBlock>
+
+      <VideoWidget />
+
       <Form setIsSubmitted={setIsSubmitted} isSubmitted={isSubmitted} />
 
-      <h2 className={styles.title__middle} style={{ background: "#e7e7e7", paddingTop: "90px" }}>
-						Посмотрите отзывы людей, которым я помог
-      </h2>
-      <TextReviews />
-
-
-      <AskMe />
       <FullWidthImage
         src={alex6}
         alt={"Александр Васильев 5"}

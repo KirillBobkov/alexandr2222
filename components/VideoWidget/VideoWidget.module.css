@@ -1,0 +1,32 @@
+.container {
+  width: 100%;
+  background-color: #301f1e;
+  overflow: hidden;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.playerSection {
+  width: 100%;
+}
+
+.listSection {
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .content {
+    flex-direction: row;
+  }
+
+  .playerSection {
+    width: 70%;
+  }
+
+  .listSection {
+    width: 30%;
+  }
+}

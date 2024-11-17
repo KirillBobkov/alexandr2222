@@ -14,9 +14,9 @@ export const AskMe = () => {
           </p>
           <br />
         </div>
-        <a className={`${styles.button} ${styles.tBtn}`} href="">
+        {/* <a className={`${styles.button} ${styles.tBtn}`} href="">
                             БЕСПЛАТНАЯ КОНСУЛЬТАЦИЯ
-                        </a>
+                        </a> */}
       </div>
     </section>
   );
