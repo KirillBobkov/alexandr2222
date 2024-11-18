@@ -4,6 +4,7 @@
     height: 0; /* Set height to 0 */
     padding-bottom: 56%; /* This creates a 1:1 aspect ratio */
     overflow: hidden; /* Hide overflow */
+    background-color: #fff;
   }
   
   .image {

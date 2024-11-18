@@ -95,6 +95,11 @@
   margin: 0.25rem 0 0 0;
 }
 
-@media (min-width: 1024px) {
-
+@media (max-width: 1024px) {
+  .list {
+    max-height: 300px;
+    overflow-y: auto;
+    border-bottom: #301f1e solid 1px;
+    border-top: #301f1e solid 1px;
+  }
 }

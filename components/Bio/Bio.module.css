@@ -92,6 +92,7 @@
 
   .description {
     font-size: 20px; /* Smaller description size for tablets */
+    text-align: left;
   }
 
   .imageContainer {

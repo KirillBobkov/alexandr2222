@@ -36,7 +36,7 @@ export const Bio = () => {
                   на пути к Вашему процветанию!
                 </p>
                 <br />
-                <p>168</p>
+                <p style={{ textAlign: 'center' }}>168</p>
               </VisibilityManager>
             </div>
           </div>
