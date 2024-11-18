@@ -4,16 +4,17 @@ import styles from './Button.module.css';
 interface ButtonProps {
   isSubmitted: boolean;
   disabled?: boolean;
+  status: string;
 }
 
-export function Button({ isSubmitted, disabled }: ButtonProps) {
+export function Button({ isSubmitted, disabled, status }: ButtonProps) {
   return (
     <button
       type="submit"
       disabled={disabled}
       className={`${styles.button} ${isSubmitted ? styles.success : ''}`}
     >
-      {isSubmitted ? 'Запись оформлена' : 'Записаться'}
+      {`${status}`}
     </button>
   );
 }

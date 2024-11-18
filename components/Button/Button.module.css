@@ -8,6 +8,7 @@
   border: none;
   cursor: pointer;
   transition: all 0.2s;
+  position: relative;
 }
 
 .button:hover:not(:disabled) {
@@ -24,4 +25,12 @@
 
 .success {
   background-color: #422a28;
+}
+
+.status {
+  position: absolute;
+  bottom: -30px;
+  left: 10px;
+  color: #000000;
+  font-size: 0.875rem;
 }
