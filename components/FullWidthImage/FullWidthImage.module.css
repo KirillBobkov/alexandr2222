@@ -27,13 +27,18 @@
     position: absolute; /* Position the image absolutely */
     bottom: 40px;
     left: 20px;
-    font-size: 14px;
+    font-size: 20px;
     line-height: 1.45;
+    z-index: 2;
   }
 
   @media (max-width: 768px) {
     .imageWrapper {
       padding-bottom: 150%; /* This creates a 1:1 aspect ratio */
+    }
+
+    .description {
+      font-size: 14px;
     }
   }
   

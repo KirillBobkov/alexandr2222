@@ -20,9 +20,9 @@ export const VideoList: React.FC<VideoListProps> = ({
         </h3>
       </div>
       <div className={styles.list}>
-        {videos.map((video) => (
+        {videos.map((video, i) => (
           <button
-            key={video.link}
+            key={video.link + i}
             onClick={() => onVideoSelect(video)}
             className={`${styles.item} ${
               selectedVideo.link === video.link ? styles.selected : ""
