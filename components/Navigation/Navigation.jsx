@@ -21,16 +21,16 @@ export const Navigation = () => {
       <nav>
         <ul className={styles.navigation}>
           <li className={styles.navigation__item}>
-            <a href="#cases">Кейсы</a>
+            <a href="#cases" onClick={() => setIsOpen(false)}>Кейсы</a>
           </li>
           <li className={styles.navigation__item}>
-            <a href="#reviews">Отзывы</a>
+            <a href="#reviews" onClick={() => setIsOpen(false)}>Отзывы</a>
           </li>
           <li className={styles.navigation__item}>
-            <a href="#about">Обо мне</a>
+            <a href="#about" onClick={() => setIsOpen(false)}>Обо мне</a>
           </li>
           <li className={styles.navigation__item}>
-            <a href="#contacts">Контакты</a>
+            <a href="#contacts" onClick={() => setIsOpen(false)}>Контакты</a>
           </li>
         </ul>
       </nav>
@@ -41,7 +41,7 @@ export const Navigation = () => {
         Сб.–Пн. — Выходной
       </div>
       <div>
-      <a className={`${styles.button} ${styles.tBtn}`} href="#message">
+      <a className={`${styles.button} ${styles.tBtn}`}  onClick={() => setIsOpen(false)}href="#message">
                             БЕСПЛАТНАЯ КОНСУЛЬТАЦИЯ
                         </a>
       </div>
