@@ -53,7 +53,7 @@ export const VideoWidget: React.FC = () => {
   const [selectedVideo, setSelectedVideo] = useState<Video>(videos[0]);
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id="reviews">
       <div className={styles.content}>
         <div className={styles.playerSection}>
           <VideoPlayer video={selectedVideo} />

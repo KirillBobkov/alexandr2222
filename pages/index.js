@@ -15,8 +15,11 @@ import { Form } from "../components/Form/Form";
 import { useState } from "react";
 import { TextReviews } from "../components/TextReviews/TextReviews";
 import { VideoWidget } from "../components/VideoWidget/VideoWidget";
+import { useScrollToLocation } from "../hooks/useScrollToLocation";
 export default function MainPage() {
   const [isSubmitted, setIsSubmitted] = useState(false);
+
+  useScrollToLocation();
 
   const metaConfig = {
     title: 'Александр "Интеграл" Васильев',
@@ -148,6 +151,7 @@ export default function MainPage() {
       <h2
         className={styles.title__middle}
         style={{ background: "#ffffff", paddingTop: "90px" }}
+        id="cases"
       >
         Посмотрите отзывы людей, которым я помог
       </h2>
@@ -330,6 +334,16 @@ export default function MainPage() {
         alt={"Александр Васильев 5"}
         description={"С Айдаром Рустамовичем на Мамаевом Кургане"}
       />
+
+
+      <ContentBlock background="#ffffff" color="#000000">
+        <div className={styles.description}>
+          <VisibilityManager as="p" style={{ textAlign: "center" }}>
+            <b>Запишитесь на бесплатную консультацию, на которой вы узнаете первопричину своего состояния, варианты решения проблемы и возможные препятствия на пути к исцелению.</b>
+          </VisibilityManager>
+        </div>
+      </ContentBlock>
+
 
       <div
         style={{

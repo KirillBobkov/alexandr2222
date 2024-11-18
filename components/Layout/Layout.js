@@ -1,4 +1,4 @@
-import Footer from "../Footer/Footer";
+import { Footer } from "../Footer/Footer";
 import { Navigation } from "../Navigation/Navigation";
 import Head from "next/head";
 import localFont from 'next/font/local';

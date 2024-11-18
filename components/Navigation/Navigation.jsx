@@ -21,19 +21,16 @@ export const Navigation = () => {
       <nav>
         <ul className={styles.navigation}>
           <li className={styles.navigation__item}>
-            <a href="#portfolio">Кейсы</a>
+            <a href="#cases">Кейсы</a>
           </li>
           <li className={styles.navigation__item}>
-            <a href="#otzyvy">Отзывы</a>
+            <a href="#reviews">Отзывы</a>
           </li>
           <li className={styles.navigation__item}>
             <a href="#about">Обо мне</a>
           </li>
           <li className={styles.navigation__item}>
             <a href="#contacts">Контакты</a>
-          </li>
-          <li className={styles.navigation__item}>
-            <a href="#projects">Проекты</a>
           </li>
         </ul>
       </nav>
@@ -44,7 +41,7 @@ export const Navigation = () => {
         Сб.–Пн. — Выходной
       </div>
       <div>
-      <a className={`${styles.button} ${styles.tBtn}`} href="">
+      <a className={`${styles.button} ${styles.tBtn}`} href="#message">
                             БЕСПЛАТНАЯ КОНСУЛЬТАЦИЯ
                         </a>
       </div>
@@ -57,5 +54,3 @@ export const Navigation = () => {
     </>
   );
 };
-
-export default Navigation;

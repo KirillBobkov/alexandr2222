@@ -54,8 +54,7 @@ export function Form({  isSubmitted, setIsSubmitted }) {
     <div className={styles.form}>
       <form
         onSubmit={handleSubmit}
-        className={styles.form__item + " " + containerStyles.container}
-      >
+        className={styles.form__item + " " + containerStyles.container}>
         <div  className={styles.form_elem} >
           <Input
             type="text"

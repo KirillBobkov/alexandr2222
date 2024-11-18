@@ -7,7 +7,7 @@ import { VisibilityManager } from "../VisibilityManager";
 
 export const Bio = () => {
   return (
-    <section className={styles.block}>
+    <section className={styles.block} id="about">
       <VisibilityManager className={containerStyles.container + ' ' + styles.block__container}>
           <Image
             src={alex1}
