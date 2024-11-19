@@ -58,7 +58,7 @@
 .social__link {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 7px;
 }
 
 @media (max-width: 768px) {

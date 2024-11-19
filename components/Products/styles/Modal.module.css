@@ -12,15 +12,6 @@
   padding: 1rem;
 }
 
-.modal {
-  background: white;
-  width: 100%;
-  max-width: 600px;
-  max-height: 90dvh;
-  overflow-y: auto;
-  position: relative;
-}
-
 .closeButton {
   position: absolute;
   top: 1rem;
@@ -37,10 +28,31 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.modalImage {
+
+.modal {
+  background: white;
   width: 100%;
-  height: 250px;
+  max-width: 1000px;
+  max-height: 90dvh;
+  display: flex;
+  overflow-y: auto;
+  position: relative;
+}
+
+
+.modalImageContainer {
+  flex: 1;
+  width: 50%;
+  flex-basis: 50%;
+  background: #000000;
+  overflow: hidden;
+}
+
+.modalImage {
+  height: auto;
+  width: 100%;
   object-fit: cover;
+  object-position: center;
   transition: opacity 1s ease-in-out;
   opacity: 0;
 }
@@ -50,11 +62,13 @@
 }
 
 .modalContent {
+  flex: 1;
+  flex-basis: 50%;
   padding: 2rem;
   padding-top: 0;
-}
-
-.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .formGroup {
@@ -75,23 +89,6 @@
   margin-bottom: 1rem;
 }
 
-
-.button {
-  background: #4f46e5;
-  color: white;
-  border: none;
-  padding: 0.75rem 1.5rem;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: 500;
-  width: 100%;
-  transition: background 0.2s;
-}
-
-.button:hover {
-  background: #4338ca;
-}
-
 .form__item {
   margin-top: 30px;
   display: flex;
@@ -102,7 +99,30 @@
 
 
 @media (max-width: 768px) {
+  .overlay {
+    padding: 0;
+  }
+
+  .modal {
+    background: white;
+    width: 100%;
+    max-width: auto;
+    max-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .modalImageContainer {
+    flex: 1;
+    width: 100%;
+    flex-basis: 100%;
+    background: #000000;
+    overflow: hidden;
+  }
+
   .modalContent {
+    flex: 1;
+    flex-basis: 100%;
     padding: 1rem;
     padding-top: 0;
   }

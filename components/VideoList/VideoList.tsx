@@ -18,6 +18,7 @@ export const VideoList: React.FC<VideoListProps> = ({
         <h3 className={styles.title}>
           Отзывы о работе Александра "Интеграла" Васильева.
         </h3>
+        <p>{videos.length} видео</p>
       </div>
       <div className={styles.list}>
         {videos.map((video, i) => (

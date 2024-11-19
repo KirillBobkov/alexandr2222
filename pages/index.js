@@ -36,17 +36,17 @@ export default function MainPage() {
       <ContentBlock background="#053d09" color="#eeeeee">
         <VisibilityManager as="h2" className={styles.title__middle}>
           <br />Я настолько уверен в своей методике, что предоставляю Вам 100%
-          гарантию.
+          страховку.
         </VisibilityManager>
         <div className={styles.description} style={{ textAlign: "center" }}>
           <VisibilityManager as="p">
-            Если после работы со мной, Вы не почувствуете улучшения, <br />я
-            верну Вам все деньги.
+            Если после работы со мной, Вы не почувствуете улучшения, я верну Вам
+            все деньги.
           </VisibilityManager>
           <br />
           <VisibilityManager as="p" style={{ textAlign: "center" }}>
-            Моя цель – сделать так, <br /> чтобы Вы были довольны и
-            рекомендовали меня своим близким.
+            Моя цель – сделать так, чтобы Вы были довольны
+            <br /> и рекомендовали меня своим близким.
           </VisibilityManager>
         </div>
         <VisibilityManager
@@ -82,7 +82,7 @@ export default function MainPage() {
           <VisibilityManager as="p">
             <b>Полная персонализация</b>. Я разрабатываю индивидуальный подход
             под Ваши уникальные потребности и цели. Это не шаблонные решения —
-            каждый шаг направлен на то, чтобы Вам стало легче достигать успехов{" "}
+            каждый шаг направлен на то, чтобы Вам стало легче достигать успехов
             <b>именно в тех аспектах, которые важны для Вас</b>.
           </VisibilityManager>
           <br />
@@ -113,32 +113,28 @@ export default function MainPage() {
         <div className={styles.description}>
           <ul>
             <VisibilityManager as="li">
-              <b>Стремитесь к успеху в бизнесе </b>— Я предлагаю практический
-              мгновенный результат, чтобы Вы преодолели внутренние барьеры и
-              принимали уверенные решения.
+              <b>Стремитесь к успеху в бизнесе </b>— я предлагаю Вам
+              практический мгновенный результат, чтобы Вы преодолели внутренние
+              барьеры и добились желаемых результатов.
             </VisibilityManager>
 
             <br />
 
             <VisibilityManager as="li">
-              <b>Желаете улучшить отношения</b> — Я помогаю Вам построить или
-              восстановить гармоничные и глубокие связи, с доведением до
-              результата.
+              <b>Желаете улучшить отношения</b> — построить или восстановить
+              гармоничные и глубокие связи, с доведением до результата.
             </VisibilityManager>
 
             <br />
 
             <VisibilityManager as="li">
-              <b>Заботитесь о своём здоровье </b>— Стрессы могут влиять на
-              физическое состояние, баланс и энергию. С помогу Вам избавиться от
-              напряжения и восстановить энергию.
+              <b>Достаточно дисциплинированы</b> — важно немедленно.
             </VisibilityManager>
 
             <br />
 
             <VisibilityManager as="li">
-              <b>Цените своё время.</b> Вам нужно действие <b>сейчас</b>. Я
-              гарантирую результат на 100%.
+              <b>Цените своё время.</b> Вам нужно действие <b>сейчас</b>.
             </VisibilityManager>
           </ul>
         </div>
@@ -156,11 +152,8 @@ export default function MainPage() {
       >
         Посмотрите отзывы людей, которым я помог
       </h2>
+
       <TextReviews />
-
-      <AskMe />
-
-      <Form setIsSubmitted={setIsSubmitted} isSubmitted={isSubmitted} />
 
       <ContentBlock background="#053d09" color="#eeeeee">
         <VisibilityManager as="span" className={styles.uptitle}>
@@ -320,14 +313,14 @@ export default function MainPage() {
           <VisibilityManager as="p">
             В заключение, Датура обладает рядом полезных свойств, но ее
             использование должно быть осуществлено с крайней осторожностью и
-            только под наблюдением опытного специалиста.
+            только под наблюдением опытного специалиста.лучшения всех сфер Вашей
+            жизни.
           </VisibilityManager>
         </div>
       </ContentBlock>
 
       <VideoWidget />
-
-      <Form setIsSubmitted={setIsSubmitted} isSubmitted={isSubmitted} />
+      <AskMe />
 
       <FullWidthImage
         src={alex6}
@@ -336,18 +329,21 @@ export default function MainPage() {
       />
 
       <Products />
-      <ContentBlock background="#ffffff" color="#000000">
+      <ContentBlock background="#ffffff" color="#000000" id="message">
         <div
           className={styles.description}
           style={{ textAlign: "center", fontWeight: "bold" }}
+          id="message"
         >
           <VisibilityManager as="p">
-            Запишитесь на бесплатную консультацию, <br />на которой вы узнаете
-            первопричину своего состояния, варианты решения проблемы и возможные
-            препятствия на пути к исцелению.
+            Запишитесь на бесплатную консультацию, <br />
+            на которой вы узнаете первопричину своего состояния, варианты
+            решения проблемы и возможные препятствия на пути к исцелению.
           </VisibilityManager>
         </div>
       </ContentBlock>
+      <Form setIsSubmitted={setIsSubmitted} isSubmitted={isSubmitted} />
+
       <div
         style={{
           color: "#bcbcbc",

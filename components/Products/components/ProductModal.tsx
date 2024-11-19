@@ -1,19 +1,26 @@
-import React, { useState } from 'react';
-import styles from '../styles/Modal.module.css';
+import React, { useState } from "react";
+import styles from "../styles/Modal.module.css";
 
-import gridStyles from '../styles/ProductGrid.module.css';
-import { Form } from '../../Form/Form';
-import { formatPhoneNumber, validateName, validatePhone } from '../../../utils/validation';
-import { Button } from '../../Button/Button';
-import { Input } from '../../Input/Input';
-import Image from 'next/image';
+import gridStyles from "../styles/ProductGrid.module.css";
+import { Form } from "../../Form/Form";
+import {
+  formatPhoneNumber,
+  validateName,
+  validatePhone,
+} from "../../../utils/validation";
+import { Button } from "../../Button/Button";
+import { Input } from "../../Input/Input";
+import Image from "next/image";
 
 interface ProductModalProps {
   product: any;
   onClose: () => void;
 }
 
-export const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) => {
+export const ProductModal: React.FC<ProductModalProps> = ({
+  product,
+  onClose,
+}) => {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const [formData, setFormData] = useState({
@@ -21,13 +28,13 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) 
     phone: "",
   });
 
-  const [status, setStatus] = useState('Записаться');
+  const [status, setStatus] = useState("Записаться");
 
   const [loaded, setLoaded] = React.useState(false);
 
   const [errors, setErrors] = useState({
     name: "",
-    phone: ""
+    phone: "",
   });
 
   const handleChange = (e) => {
@@ -77,7 +84,7 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) 
         }),
       })
         .then(() => {
-          setStatus('Запись оформлена');
+          setStatus("Запись оформлена");
         })
         .catch((error) => {
           setStatus("Напишите, пожалуйста, в Телеграм");
@@ -94,56 +101,61 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) 
   }
 
   return (
-    <div className={styles.overlay} onClick={onClose}>
-      <div className={styles.modal} onClick={e => e.stopPropagation()}>
+    <div className={styles.overlay}  onClick={onClose}>
+      <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
         <button className={styles.closeButton} onClick={onClose}>
           ✕
         </button>
-        <div style={{ background: '#000000' }}>
-        <Image 
-          src={product.image} 
-          alt={product.title} 
-          className={styles.modalImage + ' ' + (loaded ? styles.loaded : '')}
-          onLoad={() => setLoaded(true)}
-        />
+        <div className={styles.modalImageContainer}>
+        <Image
+            src={product.image}
+            alt={product.title}
+            className={styles.modalImage + " " + (loaded ? styles.loaded : "")}
+            onLoad={() => setLoaded(true)}
+          />
         </div>
-   
+
         <div className={styles.modalContent}>
           <h2 className={gridStyles.title}>{product.title}</h2>
           <p className={styles.description}>{product.description}</p>
-          <form
-        onSubmit={handleSubmit}
-        className={styles.form__item}
-      >
-        <div className={styles.form_elem}>
-          <Input
-            type="text"
-            name="name"
-            placeholder="Введите ваше имя"
-            value={formData.name}
-            onChange={handleChange}
-            disabled={isSubmitted}
-            error={errors.name}
-          />
-        </div>
-        <div className={styles.form_elem}>
-          <Input
-            type="tel"
-            name="phone"
-            placeholder="Введите ваш номер телефона"
-            value={formData.phone}
-            onChange={handleChange}
-            disabled={isSubmitted}
-            error={errors.phone}
-          />
-        </div>
-        <div
-          className={styles.form_elem}
-          style={{ display: "flex", flexWrap: "nowrap", position: "relative" }}
-        >
-          <Button status={status} isSubmitted={isSubmitted} disabled={isSubmitted} />
-        </div>
-      </form>
+          <form onSubmit={handleSubmit} className={styles.form__item}>
+            <div className={styles.form_elem}>
+              <Input
+                type="text"
+                name="name"
+                placeholder="Введите ваше имя"
+                value={formData.name}
+                onChange={handleChange}
+                disabled={isSubmitted}
+                error={errors.name}
+              />
+            </div>
+            <div className={styles.form_elem}>
+              <Input
+                type="tel"
+                name="phone"
+                placeholder="Введите ваш номер телефона"
+                value={formData.phone}
+                onChange={handleChange}
+                disabled={isSubmitted}
+                error={errors.phone}
+              />
+            </div>
+            <div
+              className={styles.form_elem}
+              style={{
+                display: "flex",
+                flexWrap: "nowrap",
+                position: "relative",
+              }}
+            >
+              <Button
+                status={status}
+                isSubmitted={isSubmitted}
+                disabled={isSubmitted}
+              />
+            </div>
+          </form>
         </div>
       </div>
     </div>

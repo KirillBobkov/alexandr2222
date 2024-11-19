@@ -19,7 +19,7 @@ export const Preview = () => {
         <span className={styles.preview__sign}>ИN</span>
         <h1 className={styles.preview__title}>БЛАГОСЛОВЕННЫЙ ПОРТАЛ МЕЧТЫ</h1>
         <p className={styles.preview__description}>
-          здоровье / деньги / отношения
+          здравость / деньги / отношения
         </p>
       </VisibilityManager>
     </section>
