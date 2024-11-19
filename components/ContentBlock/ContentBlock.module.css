@@ -7,7 +7,7 @@
   }
   
   .content {
-    max-width: 960px; /* Limit the width for larger screens */
+    max-width: 900px; /* Limit the width for larger screens */
     width: 100%; /* Full width for smaller screens */
     display: flex;
     flex-direction: column;

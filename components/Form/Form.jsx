@@ -13,17 +13,26 @@ export function Form({ isSubmitted, setIsSubmitted }) {
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
+    checkbox: false,
   });
 
+  const [id] = useState(() => Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15))
   const [status, setStatus] = useState('Записаться');
 
   const [errors, setErrors] = useState({
     name: "",
-    phone: ""
+    phone: "",
+    checkbox: false,
   });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
+
+    if (name === "checkbox") {
+      setFormData((prev) => ({ ...prev, [name]: e.target.value }));
+      setErrors((prev) => ({ ...prev, [name]: !e.target.value }));
+      return;
+    }
 
     if (name === "phone") {
       const formattedPhone = formatPhoneNumber(value);
@@ -41,9 +50,9 @@ export function Form({ isSubmitted, setIsSubmitted }) {
     const nameError = validateName(formData.name);
     const phoneError = validatePhone(formData.phone);
 
-    setErrors((prev) => ({ ...prev, name: nameError, phone: phoneError }));
+    setErrors((prev) => ({ ...prev, name: nameError, phone: phoneError, checkbox: !formData.checkbox }));
 
-    if (!nameError && !phoneError) {
+    if (!nameError && !phoneError && formData.checkbox) {
       handleSend();
     }
   };
@@ -75,12 +84,15 @@ export function Form({ isSubmitted, setIsSubmitted }) {
           setStatus("Напишите, пожалуйста, мне в Телеграм");
         })
         .finally(() => {
-          setFormData({ name: "", phone: "" });
+          setFormData({ name: "", phone: "", checkbox: false });
           setIsSubmitted(true);
         });
     };
     sendMessage();
   }
+  
+
+
 
   return (
     <div className={styles.form}>
@@ -112,9 +124,31 @@ export function Form({ isSubmitted, setIsSubmitted }) {
         </div>
         <div
           className={styles.form_elem}
-          style={{ display: "flex", flexWrap: "nowrap", position: "relative" }}
+          style={{ display: "flex",  flexDirection: "column", gap: 10, position: "relative" }}
         >
           <Button status={status} isSubmitted={isSubmitted} disabled={isSubmitted} />
+          <div className={styles["form-checkbox"]}>
+              <input
+                name="checkbox"
+                className={`${styles["form-checkbox__input"]} ${errors.checkbox ? styles["form-checkbox__input--error"] : ""}`}
+                type="checkbox"
+                id={id}
+                disabled={isSubmitted}
+                onChange={(e) => {
+                  handleChange({
+                    target: { name: "checkbox", value: e.target.checked },
+                  });
+                }}
+                checked={formData.checkbox}
+              />
+              <label className={`${styles["form-checkbox__label"]}`} htmlFor={id}>
+                Я ознакомлен (ознакомлена) с{" "}
+                <a target="_blank" className={styles["form-doc"]} href="/agreement-data.txt">
+                  правилами
+                </a>{" "}
+                обработки персональных данных
+              </label>
+            </div>
         </div>
       </form>
     </div>

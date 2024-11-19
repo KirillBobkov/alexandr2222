@@ -8,9 +8,7 @@ import alex2 from "../public/images/alex2.webp";
 import alex3 from "../public/images/alex3.webp";
 import alex5 from "../public/images/alex5.webp";
 import alex6 from "../public/images/alex6.webp";
-
 import styles from "../styles/content.module.css";
-import { AskMe } from "../components/AskMe/AskMe";
 import { Form } from "../components/Form/Form";
 import { useState } from "react";
 import { TextReviews } from "../components/TextReviews/TextReviews";
@@ -83,7 +81,7 @@ export default function MainPage() {
             <b>Полная персонализация</b>. Я разрабатываю индивидуальный подход
             под Ваши уникальные потребности и цели. Это не шаблонные решения —
             каждый шаг направлен на то, чтобы Вам стало легче достигать успехов
-            <b>именно в тех аспектах, которые важны для Вас</b>.
+            <b> именно в тех аспектах, которые важны для Вас</b>.
           </VisibilityManager>
           <br />
           <VisibilityManager as="p">
@@ -320,7 +318,18 @@ export default function MainPage() {
       </ContentBlock>
 
       <VideoWidget />
-      <AskMe />
+      <ContentBlock background="#301f1e" color="#ffffff">
+        <br />
+        <VisibilityManager as="h2" className={styles.title__middle}>
+          Запишитесь на бесплатную консультацию.
+        </VisibilityManager>
+        <div className={styles.description} style={{ textAlign: "center" }}>
+          <VisibilityManager as="p">
+            Узнайте причины своих проблем, способы их решения и возможные
+            преграды на вашем пути к успеху!
+          </VisibilityManager>
+        </div>
+      </ContentBlock>
 
       <FullWidthImage
         src={alex6}
@@ -329,10 +338,16 @@ export default function MainPage() {
       />
 
       <Products />
-      <ContentBlock background="#ffffff" color="#000000" id="message">
+
+      <div style={{ backgroundColor: "#ffffff" }}>
         <div
           className={styles.description}
-          style={{ textAlign: "center", fontWeight: "bold" }}
+          style={{
+            textAlign: "center",
+            padding: "0 20px",
+            maxWidth: "900px",
+            margin: "0 auto",
+          }}
           id="message"
         >
           <VisibilityManager as="p">
@@ -341,7 +356,7 @@ export default function MainPage() {
             решения проблемы и возможные препятствия на пути к исцелению.
           </VisibilityManager>
         </div>
-      </ContentBlock>
+      </div>
       <Form setIsSubmitted={setIsSubmitted} isSubmitted={isSubmitted} />
 
       <div
@@ -349,7 +364,7 @@ export default function MainPage() {
           color: "#bcbcbc",
           backgroundColor: "#281a19",
           width: "100%",
-          height: "110px",
+          height: "60px",
           textAlign: "center",
           fontSize: "15px",
           lineHeight: "1.55",

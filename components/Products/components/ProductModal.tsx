@@ -26,19 +26,26 @@ export const ProductModal: React.FC<ProductModalProps> = ({
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
+    checkbox: false,
   });
 
-  const [status, setStatus] = useState("Записаться");
-
-  const [loaded, setLoaded] = React.useState(false);
+  const [id] = useState(() => Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15))
+  const [status, setStatus] = useState('Записаться');
 
   const [errors, setErrors] = useState({
     name: "",
     phone: "",
+    checkbox: false,
   });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
+
+    if (name === "checkbox") {
+      setFormData((prev) => ({ ...prev, [name]: e.target.value }));
+      setErrors((prev) => ({ ...prev, [name]: !e.target.value }));
+      return;
+    }
 
     if (name === "phone") {
       const formattedPhone = formatPhoneNumber(value);
@@ -56,12 +63,14 @@ export const ProductModal: React.FC<ProductModalProps> = ({
     const nameError = validateName(formData.name);
     const phoneError = validatePhone(formData.phone);
 
-    setErrors((prev) => ({ ...prev, name: nameError, phone: phoneError }));
+    setErrors((prev) => ({ ...prev, name: nameError, phone: phoneError, checkbox: !formData.checkbox }));
 
-    if (!nameError && !phoneError) {
+    if (!nameError && !phoneError && formData.checkbox) {
       handleSend();
     }
   };
+
+  const [loaded, setLoaded] = React.useState(false);
 
   function handleSend() {
     const sendMessage = () => {
@@ -90,11 +99,11 @@ export const ProductModal: React.FC<ProductModalProps> = ({
           setStatus("Напишите, пожалуйста, в Телеграм");
         })
         .finally(() => {
-          setFormData({ name: "", phone: "" });
+          setFormData({ name: "", phone: "", checkbox: false });
           setIsSubmitted(true);
           setTimeout(() => {
             onClose();
-          }, 2000);
+          }, 3000);
         });
     };
     sendMessage();
@@ -147,6 +156,7 @@ export const ProductModal: React.FC<ProductModalProps> = ({
                 display: "flex",
                 flexWrap: "nowrap",
                 position: "relative",
+                flexDirection: "column", gap: 10,
               }}
             >
               <Button
@@ -154,6 +164,28 @@ export const ProductModal: React.FC<ProductModalProps> = ({
                 isSubmitted={isSubmitted}
                 disabled={isSubmitted}
               />
+                     <div className={styles["form-checkbox"]}>
+              <input
+                name="checkbox"
+                className={`${styles["form-checkbox__input"]} ${errors.checkbox ? styles["form-checkbox__input--error"] : ""}`}
+                type="checkbox"
+                id={id}
+                disabled={isSubmitted}
+                onChange={(e) => {
+                  handleChange({
+                    target: { name: "checkbox", value: e.target.checked },
+                  });
+                }}
+                checked={formData.checkbox}
+              />
+              <label className={`${styles["form-checkbox__label"]}`} htmlFor={id}>
+                Я ознакомлен (ознакомлена) с{" "}
+                <a target="_blank" className={styles["form-doc"]} href="/agreement-data.txt">
+                  правилами
+                </a>{" "}
+                обработки персональных данных
+              </label>
+            </div>
             </div>
           </form>
         </div>

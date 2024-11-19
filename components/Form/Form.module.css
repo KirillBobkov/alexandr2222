@@ -9,7 +9,7 @@
   
   .form__item {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     gap: 1.5rem;
   }
@@ -28,6 +28,46 @@
     flex-grow: 1;
     flex-shrink: 0;
   }
+
+
+.form-checkbox {
+  font-size: 10px;
+  line-height: 12px;
+  color: #000000;
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.form-checkbox__input {
+ width: 15px;
+ height: 15px;
+ border: 1px solid #000000;
+ flex-shrink: 0;
+}
+
+.form-checkbox__input--error {
+  border: 1px solid red;
+}
+
+.form-doc {
+  cursor: pointer;
+  color:  inherit;
+  font-weight: bold;
+}
+
+.form-checkbox__label {
+  font-size: 13px;
+  line-height: 16px;
+  color: #000000;
+}
+
+.form-checkbox__input:checked {
+  border: 1px solid #000000;
+  background-color: #281a19;
+}
 
   @media (max-width: 1030px) {
     .form__item {
