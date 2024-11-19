@@ -336,27 +336,34 @@ export default function MainPage() {
       />
 
       <Products />
-      <ContentBlock background="#301f1e" color="#ffffff">
+      <ContentBlock background="#ffffff" color="#000000">
         <div
           className={styles.description}
           style={{ textAlign: "center", fontWeight: "bold" }}
         >
-          <br />
-          <br />
           <VisibilityManager as="p">
-            Запишитесь на бесплатную консультацию, на которой вы узнаете
+            Запишитесь на бесплатную консультацию, <br />на которой вы узнаете
             первопричину своего состояния, варианты решения проблемы и возможные
             препятствия на пути к исцелению.
           </VisibilityManager>
         </div>
-        <VisibilityManager
-          as="span"
-          className={styles.uptitle}
-          style={{ textAlign: "center" }}
-        >
-          ИN
-        </VisibilityManager>
       </ContentBlock>
+      <div
+        style={{
+          color: "#bcbcbc",
+          backgroundColor: "#281a19",
+          width: "100%",
+          height: "110px",
+          textAlign: "center",
+          fontSize: "15px",
+          lineHeight: "1.55",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        ИN
+      </div>
     </Layout>
   );
 }

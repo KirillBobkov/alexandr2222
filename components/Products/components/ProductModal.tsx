@@ -99,12 +99,15 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) 
         <button className={styles.closeButton} onClick={onClose}>
           ✕
         </button>
+        <div style={{ background: '#000000' }}>
         <Image 
           src={product.image} 
           alt={product.title} 
           className={styles.modalImage + ' ' + (loaded ? styles.loaded : '')}
           onLoad={() => setLoaded(true)}
         />
+        </div>
+   
         <div className={styles.modalContent}>
           <h2 className={gridStyles.title}>{product.title}</h2>
           <p className={styles.description}>{product.description}</p>

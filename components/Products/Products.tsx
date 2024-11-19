@@ -19,7 +19,7 @@ export function Products() {
         ))}
       </div>
 
-      {selectedProduct && (
+      {selectedProduct &&(
         <ProductModal
           product={selectedProduct}
           onClose={() => setSelectedProduct(null)}

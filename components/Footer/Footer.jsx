@@ -16,6 +16,7 @@ export function Footer() {
           <ul className={styles.list}>
             <li>
               <a href="#message" className={styles.social__link}>
+              <span>Запись на консультацию</span>
                 <svg
                   role="presentation"
                   width="20px"
@@ -31,7 +32,7 @@ export function Footer() {
                     fill="#525252"
                   ></path>
                 </svg>
-                <span>Запись на консультацию</span>
+               
               </a>
             </li>
             <li>
@@ -42,6 +43,7 @@ export function Footer() {
                 target="_blank"
                 className={styles.social__link}
               >
+                  <span>Александр "Интеграл" Васильев</span>
                 <svg
                   role="presentation"
                   width="20px"
@@ -57,7 +59,7 @@ export function Footer() {
                     fill="#525252"
                   ></path>
                 </svg>
-                <span>Александр "Интеграл" Васильев</span>
+              
               </a>
             </li>
           </ul>
