@@ -8,12 +8,12 @@
   align-items: center;
   padding: 90px 50px 90px 50px;
   gap: 120px;
-  background-color: #ffffff;
+  background: white;
 }
 
 .slider {
   position: relative;
-  background: white;
+
   max-width: 900px;
   overflow: hidden;
 }
@@ -26,7 +26,6 @@
   top: 0;
   left: 0;
   background: #ffffff;
-  border: 1px solid #301f1e;
   width: 100%;
   height: 100%;
   transition: opacity 0.5s ease-in-out;

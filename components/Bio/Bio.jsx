@@ -6,14 +6,14 @@ import alex1 from "../../public/images/alex1.webp";
 import { VisibilityManager } from "../VisibilityManager";
 
 export const Bio = () => {
+  const [loaded, setLoaded] = React.useState(false);
   return (
     <section className={styles.block} id="about">
       <VisibilityManager className={containerStyles.container + ' ' + styles.block__container}>
           <Image
             src={alex1}
             alt="Александр Васильев"
-            className={styles.image}
-          />
+            className={styles.image + " " + (loaded ? styles.loaded : "")} onLoad={() => setLoaded(true)}/>
           <div className={styles.textContainer}>
             <div className={styles.textWrapper}>
               <VisibilityManager as="h2" className={styles.title}>Александр Васильев</VisibilityManager>

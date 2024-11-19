@@ -52,11 +52,12 @@
 }
 
 .button {
-    color: #281a19;
+    color: #ffffff;
     border: 1px solid #281a19;
-    background-color: #ffffff;
+    background-color: #281a19;
     height: 40px;
     font-size: 14px;
+    font-weight: 800;
     padding-left: 30px;
     padding-right: 30px;
     margin-left: 10px;

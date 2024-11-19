@@ -16,6 +16,7 @@ import { useState } from "react";
 import { TextReviews } from "../components/TextReviews/TextReviews";
 import { VideoWidget } from "../components/VideoWidget/VideoWidget";
 import { useScrollToLocation } from "../hooks/useScrollToLocation";
+import { Products } from "../components/Products/Products";
 export default function MainPage() {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -199,7 +200,6 @@ export default function MainPage() {
         </div>
       </ContentBlock>
 
-
       <ContentBlock background="#ffffff" color="#000000">
         <VisibilityManager as="span" className={styles.uptitle}>
           ИN
@@ -335,32 +335,28 @@ export default function MainPage() {
         description={"С Айдаром Рустамовичем на Мамаевом Кургане"}
       />
 
-
-      <ContentBlock background="#ffffff" color="#000000">
-        <div className={styles.description}>
-          <VisibilityManager as="p" style={{ textAlign: "center" }}>
-            <b>Запишитесь на бесплатную консультацию, на которой вы узнаете первопричину своего состояния, варианты решения проблемы и возможные препятствия на пути к исцелению.</b>
+      <Products />
+      <ContentBlock background="#301f1e" color="#ffffff">
+        <div
+          className={styles.description}
+          style={{ textAlign: "center", fontWeight: "bold" }}
+        >
+          <br />
+          <br />
+          <VisibilityManager as="p">
+            Запишитесь на бесплатную консультацию, на которой вы узнаете
+            первопричину своего состояния, варианты решения проблемы и возможные
+            препятствия на пути к исцелению.
           </VisibilityManager>
         </div>
+        <VisibilityManager
+          as="span"
+          className={styles.uptitle}
+          style={{ textAlign: "center" }}
+        >
+          ИN
+        </VisibilityManager>
       </ContentBlock>
-
-
-      <div
-        style={{
-          color: "#bcbcbc",
-          backgroundColor: "#281a19",
-          width: "100%",
-          height: "110px",
-          textAlign: "center",
-          fontSize: "15px",
-          lineHeight: "1.55",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
-        ИN
-      </div>
     </Layout>
   );
 }

@@ -34,7 +34,7 @@
 }
 
 .item:hover {
-  background-color: rgb(233, 233, 233);
+  background-color: #ececec;
 }
 
 .selected {
@@ -89,17 +89,9 @@
   overflow: hidden;
 }
 
-.views {
-  color: #9ca3af;
-  font-size: 0.875rem;
-  margin: 0.25rem 0 0 0;
-}
-
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .list {
-    max-height: 300px;
+    max-height: 250px;
     overflow-y: auto;
-    border-bottom: #301f1e solid 1px;
-    border-top: #301f1e solid 1px;
   }
 }

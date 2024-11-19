@@ -41,8 +41,8 @@
 
 .errorMessage {
   position: absolute;
-  bottom: -30px;
+  bottom: -27px;
   left: 10px;
   color: #EF4444;
-  font-size: 0.875rem;
+  font-size: 0.8rem;
 }

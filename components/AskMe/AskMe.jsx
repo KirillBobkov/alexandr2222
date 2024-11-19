@@ -3,7 +3,7 @@ import containerStyles from "../../styles/container.module.css";
 import styles from './AskMe.module.css'; // Adjust the path as necessary
 
 
-export const AskMe = () => {
+export const AskMe = ({  }) => {
   return (
   <section className={styles.block} id="message">
       <div className={containerStyles.container + ' ' + styles.content}>
@@ -14,9 +14,6 @@ export const AskMe = () => {
           </p>
           <br />
         </div>
-        {/* <a className={`${styles.button} ${styles.tBtn}`} href="">
-                            БЕСПЛАТНАЯ КОНСУЛЬТАЦИЯ
-                        </a> */}
       </div>
     </section>
   );

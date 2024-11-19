@@ -16,7 +16,12 @@
     object-fit: cover; /* Cover the entire area */
     object-position: center; /* Center the image */
     z-index: 1;
-    transition: transform 1.5s ease-in-out;
+    transition: all 1s ease-in-out;
+    opacity: 0;
+  }
+
+  .loaded {
+    opacity: 1;
   }
 
   .image:hover {

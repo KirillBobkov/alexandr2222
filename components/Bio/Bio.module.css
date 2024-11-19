@@ -18,11 +18,12 @@
   aspect-ratio: 1 / 1;
   height: auto;
   object-fit: cover;
-  transition: transform 1.5s ease-in-out;
+  transition: all 1s ease-in-out;
+  opacity: 0;
 }
 
-.image:hover {
-  transform: scale(1.01);
+.loaded {
+  opacity: 1;
 }
 
 .textContainer {

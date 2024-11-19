@@ -1,15 +1,20 @@
-import React, { useState } from "react";
-import { Input } from "../Input/Input";
-import { Button } from "../Button/Button";
-import {
-  validateName,
-  validatePhone,
-  formatPhoneNumber,
-} from "../../utils/validation";
-import styles from "./Form.module.css";
-import containerStyles from "../../styles/container.module.css";
+import React, { useState } from 'react';
+import styles from '../styles/Modal.module.css';
 
-export function Form({ isSubmitted, setIsSubmitted }) {
+import gridStyles from '../styles/ProductGrid.module.css';
+import { Form } from '../../Form/Form';
+import { formatPhoneNumber, validateName, validatePhone } from '../../../utils/validation';
+import { Button } from '../../Button/Button';
+import { Input } from '../../Input/Input';
+
+interface ProductModalProps {
+  product: any;
+  onClose: () => void;
+}
+
+export const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) => {
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -63,7 +68,7 @@ export function Form({ isSubmitted, setIsSubmitted }) {
           chat_id,
           parse_mode: "html",
           text: `<b>Новая запись на консультацию</b>\n\n
-          <b>Тема консультации</b>: без темы\n
+          <b>Тема консультации</b>: ${product.title}\n
           <b>Имя</b>: ${formData.name}\n
           <b>Номер телефона</b>: ${formData.phone}\n`,
         }),
@@ -72,21 +77,36 @@ export function Form({ isSubmitted, setIsSubmitted }) {
           setStatus('Запись оформлена');
         })
         .catch((error) => {
-          setStatus("Напишите, пожалуйста, мне в Телеграм");
+          setStatus("Напишите, пожалуйста, в Телеграм");
         })
         .finally(() => {
           setFormData({ name: "", phone: "" });
           setIsSubmitted(true);
+          setTimeout(() => {
+            onClose();
+          }, 2000);
         });
     };
     sendMessage();
   }
 
   return (
-    <div className={styles.form}>
-      <form
+    <div className={styles.overlay} onClick={onClose}>
+      <div className={styles.modal} onClick={e => e.stopPropagation()}>
+        <button className={styles.closeButton} onClick={onClose}>
+          ✕
+        </button>
+        <img 
+          src={product.image} 
+          alt={product.title} 
+          className={styles.modalImage}
+        />
+        <div className={styles.modalContent}>
+          <h2 className={gridStyles.title}>{product.title}</h2>
+          <p className={styles.description}>{product.description}</p>
+          <form
         onSubmit={handleSubmit}
-        className={styles.form__item + " " + containerStyles.container}
+        className={styles.form__item}
       >
         <div className={styles.form_elem}>
           <Input
@@ -117,6 +137,8 @@ export function Form({ isSubmitted, setIsSubmitted }) {
           <Button status={status} isSubmitted={isSubmitted} disabled={isSubmitted} />
         </div>
       </form>
+        </div>
+      </div>
     </div>
   );
-}
+};

@@ -68,7 +68,7 @@
 
     .container {
         flex-direction: row;
-        gap: 20px;
+        row-gap: 30px;
     }
 
     .navigation {

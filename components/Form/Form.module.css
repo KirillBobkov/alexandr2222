@@ -25,8 +25,8 @@
 
   .form_elem {
     width: 0;
-     flex-grow: 1;
-      flex-shrink: 0;
+    flex-grow: 1;
+    flex-shrink: 0;
   }
 
   @media (max-width: 1030px) {
