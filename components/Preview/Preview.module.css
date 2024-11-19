@@ -35,6 +35,12 @@
   height: 120%;
   z-index: -1; /* Send the image to the back */
   animation: rotate-right 80s linear infinite;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.loaded {
+  opacity: 1;
 }
 
 .preview__sign {

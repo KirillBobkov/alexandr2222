@@ -5,12 +5,15 @@ import Image from "next/image.js";
 import { VisibilityManager } from "../VisibilityManager";
 
 export const Preview = () => {
+  const [loaded, setLoaded] = React.useState(false);
+  
   return (
     <section className={styles.preview}>
       <Image
         src={preview_bg}
         alt="заставка превью"
-        className={styles.preview__bg}
+        className={styles.preview__bg + " " + (loaded ? styles.loaded : "")}
+        onLoad={() => setLoaded(true)}
       />
       <VisibilityManager as="div" className={styles.preview__content}>
         <span className={styles.preview__sign}>ИN</span>

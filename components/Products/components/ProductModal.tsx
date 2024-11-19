@@ -6,6 +6,7 @@ import { Form } from '../../Form/Form';
 import { formatPhoneNumber, validateName, validatePhone } from '../../../utils/validation';
 import { Button } from '../../Button/Button';
 import { Input } from '../../Input/Input';
+import Image from 'next/image';
 
 interface ProductModalProps {
   product: any;
@@ -21,6 +22,8 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) 
   });
 
   const [status, setStatus] = useState('Записаться');
+
+  const [loaded, setLoaded] = React.useState(false);
 
   const [errors, setErrors] = useState({
     name: "",
@@ -96,10 +99,11 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) 
         <button className={styles.closeButton} onClick={onClose}>
           ✕
         </button>
-        <img 
+        <Image 
           src={product.image} 
           alt={product.title} 
-          className={styles.modalImage}
+          className={styles.modalImage + ' ' + (loaded ? styles.loaded : '')}
+          onLoad={() => setLoaded(true)}
         />
         <div className={styles.modalContent}>
           <h2 className={gridStyles.title}>{product.title}</h2>

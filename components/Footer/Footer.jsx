@@ -43,7 +43,6 @@ export function Footer() {
                 className={styles.social__link}
               >
                 <svg
-                  class="t-sociallinks__svg"
                   role="presentation"
                   width="20px"
                   height="20px"
