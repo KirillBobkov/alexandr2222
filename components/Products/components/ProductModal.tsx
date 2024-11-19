@@ -156,7 +156,7 @@ export const ProductModal: React.FC<ProductModalProps> = ({
                 display: "flex",
                 flexWrap: "nowrap",
                 position: "relative",
-                flexDirection: "column", gap: 10,
+                flexDirection: "column", gap: 15,
               }}
             >
               <Button

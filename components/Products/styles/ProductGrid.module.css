@@ -25,7 +25,7 @@
 .cardImage {
   flex-basis: 70%;
   width: 100%;
-  max-height: 300px;
+  max-height: 500px;
   object-fit: cover;
   background-color: #000000;
   opacity: 0;
@@ -56,5 +56,9 @@
 @media (max-width: 768px) {
   .grid {
     padding: 60px 20px;
+  }
+
+  .cardImage {
+    max-height: 300px;
   }
 }

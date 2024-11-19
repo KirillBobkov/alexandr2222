@@ -124,7 +124,7 @@ export function Form({ isSubmitted, setIsSubmitted }) {
         </div>
         <div
           className={styles.form_elem}
-          style={{ display: "flex",  flexDirection: "column", gap: 10, position: "relative" }}
+          style={{ display: "flex",  flexDirection: "column", gap: 15, position: "relative" }}
         >
           <Button status={status} isSubmitted={isSubmitted} disabled={isSubmitted} />
           <div className={styles["form-checkbox"]}>
