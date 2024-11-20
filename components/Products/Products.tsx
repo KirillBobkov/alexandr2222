@@ -14,12 +14,11 @@ export function Products() {
           <ProductCard
             key={product.id}
             product={product}
-            onClick={() => setSelectedProduct(product)}
+            onClick={() => { setSelectedProduct(product); console.log('click', product)}}
           />
         ))}
       </div>
-
-      {selectedProduct &&(
+      {(
         <ProductModal
           product={selectedProduct}
           onClose={() => setSelectedProduct(null)}

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "../styles/Modal.module.css";
 
 import gridStyles from "../styles/ProductGrid.module.css";
@@ -22,6 +22,16 @@ export const ProductModal: React.FC<ProductModalProps> = ({
   onClose,
 }) => {
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [closing, setClosing] = useState(false);
+
+  const handleClose = () => {
+    setClosing(true)
+    setTimeout(() => {
+      onClose();
+      setClosing(false);
+      console.log('close');
+    }, 1000); // Match this timeout with the CSS transition duration
+  };
 
   const [formData, setFormData] = useState({
     name: "",
@@ -102,6 +112,7 @@ export const ProductModal: React.FC<ProductModalProps> = ({
           setFormData({ name: "", phone: "", checkbox: false });
           setIsSubmitted(true);
           setTimeout(() => {
+            console.log('delete');
             onClose();
           }, 3000);
         });
@@ -110,9 +121,9 @@ export const ProductModal: React.FC<ProductModalProps> = ({
   }
 
   return (
-    <div className={styles.overlay}  onClick={onClose}>
-      <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
-        <button className={styles.closeButton} onClick={onClose}>
+    <div className={`${styles.overlay} ${product && !closing ? styles.open : ''}`}  onClick={handleClose}>
+      {product ? <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
+        <button className={styles.closeButton} onClick={handleClose}>
           ✕
         </button>
         <div className={styles.modalImageContainer}>
@@ -189,7 +200,7 @@ export const ProductModal: React.FC<ProductModalProps> = ({
             </div>
           </form>
         </div>
-      </div>
+      </div>: null}
     </div>
   );
 };

@@ -15,19 +15,18 @@ interface Testimonial {
 const testimonials: Testimonial[] = [
   {
     id: 1,
-    name: "Sarah Johnson",
-    role: "Marketing Director",
+    name: "?????",
+    role: "",
     content:
-      "This product has completely transformed how we operate. The efficiency gains have been remarkable, and our team couldn't be happier with the results we've seen.",
-    image:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=200&h=200",
+    "Прошел страх езды на машине! Села сама за руль, сама поехала, сама покаталась)",
+    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=200&h=200",
   },
   {
     id: 2,
-    name: "Michael Chen",
-    role: "Tech Lead",
+    name: "Никита",
+    role: "",
     content:
-      "I've used many similar solutions before, but none have matched the intuitive design and powerful features offered here. It's been a game-changer for our development process.",
+    "Создалась такая ситуация в которой испытывал тяжелые эмоции, которые блокировали полностью мысли, эмоции стресса, ревности какой-то непонятной, от потери человека. Мешали двигаться, мешали думать, оценивать других людей, полностью пришибленное состояние. После того как мы созвонились с Александром, мы выявлили какие эмоции я испытываю, мы их проработали, отпустили и стало гораздо легче. Мозг как будто проснулся! Стал работать на созидательной энергии. Спасибо, Александр Игоревичь, за помощь.",
     image:
       "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=200&h=200",
   },

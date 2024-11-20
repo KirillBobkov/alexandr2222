@@ -18,7 +18,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onClick }) =>
         className={styles.cardImage + ' ' + (loaded ? styles.loaded : '')}
         onLoad={() => setLoaded(true)}
       />
-        <h3 className={styles.title}>{product.title}</h3>
+      <h3 className={styles.title}>{product.title}</h3>
     </div>
   );
 };

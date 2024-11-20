@@ -10,6 +10,14 @@
   justify-content: center;
   z-index: 1000;
   padding: 1rem;
+  opacity: 0;
+  transform: translate(0,-101%);
+  transition: all 1s ease-in-out;
+}
+
+.open {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .closeButton {
@@ -139,6 +147,12 @@
 @media (max-width: 768px) {
   .overlay {
     padding: 0;
+    transform: translate(101%, 0);
+  }
+  
+  .open {
+    opacity: 1;
+    transform: translate(0, 0);
   }
 
   .modal {
