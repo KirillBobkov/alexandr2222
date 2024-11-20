@@ -328,6 +328,7 @@ export default function MainPage() {
             Узнайте причины своих проблем, способы их решения и возможные
             преграды на вашем пути к успеху!
           </VisibilityManager>
+          <br />
         </div>
       </ContentBlock>
 

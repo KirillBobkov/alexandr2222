@@ -1,14 +1,15 @@
 .block {
   background-color: white;
   gap: 30px;
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding: 120px 40px 120px;
 }
 
 .block__container {
     display: flex;
     justify-content: center;
     align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .image {
@@ -75,8 +76,7 @@
 /* Responsive styles */
 @media (max-width: 768px) {
   .block {
-    padding-top: 90px;
-    padding-bottom: 90px;
+    padding: 90px 20px 90px;
   }
 
   .block__container {

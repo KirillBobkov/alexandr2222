@@ -9,7 +9,7 @@ export const Bio = () => {
   const [loaded, setLoaded] = React.useState(false);
   return (
     <section className={styles.block} id="about">
-      <VisibilityManager className={containerStyles.container + ' ' + styles.block__container}>
+      <VisibilityManager className={styles.block__container}>
           <Image
             src={alex1}
             alt="Александр Васильев"
