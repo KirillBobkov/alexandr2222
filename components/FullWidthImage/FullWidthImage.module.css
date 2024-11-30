@@ -6,7 +6,6 @@
     overflow: hidden; /* Hide overflow */
     background-color: #fff;
   }
-  
   .image {
     position: absolute; /* Position the image absolutely */
     top: 0;

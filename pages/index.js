@@ -33,11 +33,13 @@ export default function MainPage() {
         </VisibilityManager>
         <div className={styles.description} style={{ textAlign: "center" }}>
           <VisibilityManager as="p">
-          Если после работы со мной, Вы не почувствуете<br/>  улучшения,я верну Вам все деньги.
+            Если после работы со мной, Вы не почувствуете
+            улучшения, я верну Вам все деньги.
           </VisibilityManager>
           <br />
           <VisibilityManager as="p" style={{ textAlign: "center" }}>
-          Моя цель – сделать так, чтобы Вы были довольны<br/>  и рекомендовали меня своим близким.
+            Моя цель – сделать так, чтобы Вы были довольны
+            и рекомендовали меня своим близким.
           </VisibilityManager>
         </div>
         <VisibilityManager
@@ -104,13 +106,16 @@ export default function MainPage() {
         <div className={styles.description}>
           <ul>
             <VisibilityManager as="li">
-              <b>Стремитесь к успеху </b>— я предлагаю Вам практический мгновенный результат, чтобы Вы преодолели внутренние барьеры и добились желаемых результатов.
+              <b>Стремитесь к успеху </b>— я предлагаю Вам практический
+              мгновенный результат, чтобы Вы преодолели внутренние барьеры и
+              добились желаемых результатов.
             </VisibilityManager>
 
             <br />
 
             <VisibilityManager as="li">
-              <b>Желаете улучшить отношения</b> — построить или восстановить гармоничные и глубокие связи, с доведением до результата.
+              <b>Желаете улучшить отношения</b> — построить или восстановить
+              гармоничные и глубокие связи, с доведением до результата.
             </VisibilityManager>
 
             <br />
@@ -133,16 +138,16 @@ export default function MainPage() {
         alt={"Александр Васильев 4"}
         description={"WHITE PLACE by PLOMBIR PROMO GROUP KAZAN"}
       />
-      <div id="message"/>
-   <Form setIsSubmitted={setIsSubmitted} isSubmitted={isSubmitted} />
+      <div id="message" />
+      <Form setIsSubmitted={setIsSubmitted} isSubmitted={isSubmitted} />
       <h2
         className={styles.title}
-        style={{ background: "#ffffff", paddingTop: "90px" }}
-        id="cases"
+        style={{ background: "#ffffff", paddingTop: "60px", paddingBottom: "60px"}}
+        id="reviews"
       >
-        Посмотрите отзывы людей, <br/>которым я помог
+        Посмотрите отзывы людей, <br />
+        которым я помог
       </h2>
-
       <VideoWidget />
 
       <ContentBlock background="#301f1e" color="#ffffff">
@@ -156,12 +161,25 @@ export default function MainPage() {
             преграды на вашем пути к успеху!
           </VisibilityManager>
         </div>
-        <a href="#message" style={{ display: 'block', border: "2px solid white", maxWidth: '360px', width: '100%', margin: "0 auto" }}>
-
-
-        <Button status={"БЕСПЛАТНАЯ КОНСУЛЬТАЦИЯ"} isSubmitted={false} disabled={false} />
-        </a>
-      </ContentBlock>  
+        <VisibilityManager as="div">
+          <a
+            href="#message"
+            style={{
+              display: "block",
+              border: "2px solid white",
+              maxWidth: "360px",
+              width: "100%",
+              margin: "0 auto",
+            }}
+          >
+            <Button
+              status={"БЕСПЛАТНАЯ КОНСУЛЬТАЦИЯ"}
+              isSubmitted={false}
+              disabled={false}
+            />
+          </a>
+        </VisibilityManager>
+      </ContentBlock>
     </Layout>
   );
 }

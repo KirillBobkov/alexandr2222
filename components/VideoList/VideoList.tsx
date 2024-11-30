@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./VideoList.module.css";
+import Image from "next/image";
 
 interface VideoListProps {
   videos: any[];
@@ -29,10 +30,13 @@ export const VideoList: React.FC<VideoListProps> = ({
               selectedVideo.link === video.link ? styles.selected : ""
             }`}
           >
+            <p>{i + 1}</p>
             <div className={styles.thumbnail}>
-              <img
+              <Image
+              width={50}
+              height={50}
                 src={video.thumbnailUrl}
-                alt={video.name}
+                alt={""}
                 className={styles.image}
               />
               {/* <div className={styles.duration}>{video.duration}</div> */}

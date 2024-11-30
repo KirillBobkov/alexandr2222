@@ -6,11 +6,12 @@
     padding: 10px;
     max-width: 1000px;
     margin: 0 auto;
-    background: #ffffff;
+    background-color: #000000;
+    color: rgb(255, 255, 255);
 }
 
 .header__logo {
-    height: 112px;
+    height: 100px;
     width: auto;
 }
 
@@ -25,7 +26,7 @@
 .navigation__item {
     position: relative;
     font-size: 14px;
-    color: #281a19;
+    color: #ffffff;
     font-weight: 400;
     cursor: pointer;
     text-decoration: none;
@@ -55,7 +56,7 @@
 
 .button {
     color: #ffffff;
-    border: 1px solid #281a19;
+    border: 2px solid #281a19;
     background-color: #281a19;
     height: 40px;
     font-size: 14px;
@@ -82,7 +83,7 @@
 
 .time {
     font-size: 16px;
-    color: #281a19;
+    color: #ffffff;
     font-weight: 600;
 }
 
@@ -133,18 +134,18 @@
     .burgerLine {
         width: 30px; /* Adjust width as needed */
         height: 3px; /* Adjust height as needed */
-        background-color: rgb(0, 0, 0); /* Change color as needed */
+        background-color: rgb(255, 255, 255); /* Change color as needed */
         margin: 5px 0; /* Space between lines */
         transition: all 0.3s ease; /* Smooth transition for animations */
     }
     
     .burgerButton.open .burgerLine:nth-child(1) {
-        background-color: rgb(0, 0, 0); /* Change color as needed */
+        background-color: rgb(255, 255, 255); /* Change color as needed */
         transform: translateY(8px) rotate(45deg); /* Move and rotate the first line */
     }
     
     .burgerButton.open .burgerLine:nth-child(3) {
-        background-color: rgb(0, 0, 0); /* Change color as needed */
+        background-color: rgb(255, 255, 255); /* Change color as needed */
         transform: translateY(-8px) rotate(-45deg); /* Move and rotate the first line */
     }
     

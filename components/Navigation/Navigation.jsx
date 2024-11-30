@@ -11,7 +11,7 @@ export const Navigation = () => {
   };
 
   return (
-    <div style={{ background: '#ffffff' }}>
+    <div style={{ background: '#000000' }}>
     <header className={`${styles.header} ${isOpen ? styles.header_opened : ''}`}>
       <Image
         src={logo}

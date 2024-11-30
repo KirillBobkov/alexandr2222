@@ -9,11 +9,13 @@ export const Bio = () => {
   const [loaded, setLoaded] = React.useState(false);
   return (
     <section className={styles.block} id="about">
-      <VisibilityManager className={styles.block__container}>
+      <div className={styles.block__container}>
+        <div className={styles.imageWrapper}>
           <Image
             src={alex1}
             alt="Александр Васильев"
             className={styles.image + " " + (loaded ? styles.loaded : "")} onLoad={() => setLoaded(true)}/>
+             </div>
           <div className={styles.textContainer}>
             <div className={styles.textWrapper}>
               <VisibilityManager as="h2" className={styles.title}>Александр Васильев</VisibilityManager>
@@ -26,18 +28,18 @@ export const Bio = () => {
                 <br/>Я помогу Вам обрести то состояние, о котором Вы мечтаете.</p>
                 <br />
                 <p>
-                Используя свои навыки, я смог улучшить жизни множества людей и смогу помочь Вам, даже если сейчас Вы в это не верите.
+                Используя свои навыки, я смог улучшить жизни множества людей и смогу помочь Вам, <br/>даже если сейчас Вы в это не верите.
                 </p>
                 <br />
                 <p>
-                Запишитесь на благотворительную консультацию и узнайте истинные причины проблем, способы решения и возможные преграды на пути к Вашему процветанию!
+                Запишитесь на благотворительную консультацию и узнайте истинные причины проблем, <br/>способы решения и возможные преграды на пути к Вашему процветанию!
                 </p>
                 <br />
                 <p style={{ textAlign: 'center' }}>168</p>
               </VisibilityManager>
             </div>
           </div>
-        </VisibilityManager>
+        </div>
     </section>
   );
 };

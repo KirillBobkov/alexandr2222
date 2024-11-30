@@ -1,24 +1,27 @@
 .block {
   background-color: white;
   gap: 30px;
-  padding: 120px 40px 120px;
 }
 
 .block__container {
     display: flex;
     justify-content: center;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
+    align-items: stretch;
+    align-content: stretch;
+    height: 100%;
+}
+
+.imageWrapper {
+  flex-basis: 50%; /* Устанавливаем ширину элемента на 50% */
+  position: relative;
+  height: auto;
 }
 
 .image {
-  flex: 1; /* Set the width of the container */
-  overflow: hidden; /* Hide overflow */
+  width: 100%; /* Ширина изображения 100% */
+  height: 100%; /* Высота изображения 100% */
+  object-fit: cover; 
   object-position: center;
-  aspect-ratio: 1 / 1;
-  height: auto;
-  object-fit: cover;
   transition: all 1s ease-in-out;
   opacity: 0;
 }
@@ -33,8 +36,8 @@
   flex-direction: column;
   justify-content: center; /* Center text vertically */
   align-items: center; /* Center text horizontally */
-  background-color: white; /* White background */
-  padding: 20px; /* Add some padding */
+  padding: 100px 50px; /* Add some padding */
+  flex-basis: 50%;
 }
 
 .textWrapper {
@@ -74,17 +77,17 @@
 }
 
 /* Responsive styles */
-@media (max-width: 768px) {
-  .block {
-    padding: 90px 20px 90px;
-  }
-
+@media (max-width: 1030px) {
   .block__container {
     flex-direction: column;
   }
 
+  .imageWrapper {
+    flex-basis: 100%;
+  }
+
   .image {
-    width: 100%;
+    aspect-ratio: 1 / 0.8;
   }
 
   .title {
@@ -93,10 +96,24 @@
 
   .description {
     font-size: 20px; /* Smaller description size for tablets */
-    text-align: left;
   }
 
   .imageContainer {
     height: 300px; /* Adjust image height for tablets */
+  }
+
+  .textContainer {
+    padding: 40px 20px; /* Add some padding for tablets */
+    flex-basis: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .image {
+    aspect-ratio: 1 / 1.3;
+  }
+
+  .description {
+    text-align: left;
   }
 }
