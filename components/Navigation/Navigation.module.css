@@ -1,10 +1,12 @@
 .header {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     gap: 50px;
-    background-color: #ffffff;
     padding: 10px;
+    max-width: 1000px;
+    margin: 0 auto;
+    background: #ffffff;
 }
 
 .header__logo {
@@ -131,7 +133,7 @@
     .burgerLine {
         width: 30px; /* Adjust width as needed */
         height: 3px; /* Adjust height as needed */
-        background-color: rgb(255, 255, 255); /* Change color as needed */
+        background-color: rgb(0, 0, 0); /* Change color as needed */
         margin: 5px 0; /* Space between lines */
         transition: all 0.3s ease; /* Smooth transition for animations */
     }

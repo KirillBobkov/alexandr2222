@@ -11,7 +11,7 @@ export const Navigation = () => {
   };
 
   return (
-    <>
+    <div style={{ background: '#ffffff' }}>
     <header className={`${styles.header} ${isOpen ? styles.header_opened : ''}`}>
       <Image
         src={logo}
@@ -20,9 +20,6 @@ export const Navigation = () => {
       />
       <nav>
         <ul className={styles.navigation}>
-          <li className={styles.navigation__item}>
-            <a href="#cases" onClick={() => setIsOpen(false)}>Кейсы</a>
-          </li>
           <li className={styles.navigation__item}>
             <a href="#reviews" onClick={() => setIsOpen(false)}>Отзывы</a>
           </li>
@@ -51,6 +48,6 @@ export const Navigation = () => {
         <div className={styles.burgerLine}></div>
         <div className={styles.burgerLine}></div>
     </button>
-    </>
+    </div>
   );
 };

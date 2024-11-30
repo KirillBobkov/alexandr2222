@@ -9,18 +9,13 @@ export function Footer() {
       <div className={styles.container}>
         <div className={styles.logo__container}>
           <Image className={styles.logo} src={logo} alt="Company Logo" />
-        </div>
-
-        <div className={styles.navigation} id="contacts">
-          <p className={styles.list_title}>Контакты</p>
-          <ul className={styles.list}>
+          <ul className={styles.list} id="contacts">
             <li>
               <a href="#message" className={styles.social__link}>
-              <span>Запись на консультацию</span>
                 <svg
                   role="presentation"
-                  width="20px"
-                  height="20px"
+                  width="25px"
+                  height="25px"
                   viewBox="0 0 100 100"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -43,11 +38,10 @@ export function Footer() {
                 target="_blank"
                 className={styles.social__link}
               >
-                  <span>Александр "Интеграл" Васильев</span>
                 <svg
                   role="presentation"
-                  width="20px"
-                  height="20px"
+                  width="25px"
+                  height="25px"
                   viewBox="0 0 100 100"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -63,45 +57,8 @@ export function Footer() {
               </a>
             </li>
           </ul>
+          <p className={styles.year}>© 2024 Александр "Интеграл" Васильев</p>
         </div>
-
-        <div className={styles.navigation}>
-          <p className={styles.list_title}>Ccылки</p>
-          <ul className={styles.list}>
-            <li>
-              <a target="_blank" href="/privacy-policy.txt">
-                Политика конфиденциальности
-              </a>
-            </li>
-            <li>
-              <a target="_blank" href="/agreement.txt">
-                Пользовательское cоглашение
-              </a>
-            </li>
-            <li>
-              <a target="_blank" href="/agreement-data.txt">
-                Согласие пользователя на обработку персональных данных
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <div className={styles.navigation}>
-          <p className={styles.list_title}>Навигация</p>
-          <ul className={styles.list}>
-            <li>
-              <a href="#cases">Кейсы</a>
-            </li>
-            <li>
-              <a href="#reviews">Отзывы</a>
-            </li>
-            <li>
-              <a href="#about">Обо мне</a>
-            </li>
-          </ul>
-        </div>
-
-      
       </div>
     </footer>
   );
