@@ -60,7 +60,7 @@ export function Form({ isSubmitted, setIsSubmitted }) {
   function handleSend() {
     const sendMessage = () => {
       const token = "7733350115:AAE6tcQZc-R2bRw8ewLKwvtiS3UKHTcgV9c";
-      const chat_id = "-4557805614";
+      const chat_id = "-1002359699160";
       const url = `https://api.telegram.org/bot${token}/sendMessage`; // The url to request
 
       fetch(url, {
