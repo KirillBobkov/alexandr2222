@@ -1,8 +1,6 @@
 import styles from "./TextReviews.module.css";
 import Image from "next/image.js";
 import React, { useState } from "react";
-import { VisibilityManager } from "../VisibilityManager";
-import contentStyles from "../../styles/content.module.css";
 
 interface Testimonial {
   id: number;

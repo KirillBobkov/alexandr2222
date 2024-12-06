@@ -2,6 +2,10 @@ import { Footer } from "../Footer/Footer";
 import { Navigation } from "../Navigation/Navigation";
 import Head from "next/head";
 import localFont from 'next/font/local';
+import favicon32x32 from "../../public/images/favicon32x32.png";
+import favicon180x180 from "../../public/images/favicon180x180.png";
+import logo from "../../public/images/logo.webp";
+import favicon from "../../public/images/favicon.ico";
 
 const font = localFont({
   src: '../../fonts/TildaSans-VF.woff2',
@@ -35,7 +39,7 @@ export default function Layout({ children, metaConfig }) {
         <meta property="og:type" content="website" />
         <meta
           property="og:image"
-          content="/images/logo.jpg"
+          content={logo}
         />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta
@@ -43,19 +47,19 @@ export default function Layout({ children, metaConfig }) {
           content="black-translucent"
         />
 
-        <link rel="icon" href="/images/favicon.ico" />
-        <link rel="apple-touch-icon" href="/images/favicon32x32.png" />
+        <link rel="icon" href={favicon.src} />
+        <link rel="apple-touch-icon" href={favicon32x32.src} />
         <link
           rel="apple-touch-icon"
           sizes="32x32"
-          href="/images/favicon32x32.png"
+          href={favicon32x32.src}
         />
         <link
           rel="apple-touch-icon"
           sizes="180x180"
-          href="/images/favicon180x180.png"
+          href={favicon180x180.src}
         />
-        <link rel="apple-touch-startup-image" href="/images/favicon32x32.png" />
+        <link rel="apple-touch-startup-image" href={favicon32x32.src} />
       </Head>
       <div className={font.className}>
         <Navigation />
