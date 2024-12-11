@@ -8,6 +8,8 @@ import {
 } from "../../utils/validation";
 import styles from "./Form.module.css";
 import containerStyles from "../../styles/container.module.css";
+import { LineAnimation } from "../LineAnomation/LineAnimation";
+import { VisibilityManager } from "../VisibilityManager";
 
 export function Form({ isSubmitted, setIsSubmitted }) {
   const [formData, setFormData] = useState({
@@ -16,8 +18,12 @@ export function Form({ isSubmitted, setIsSubmitted }) {
     checkbox: false,
   });
 
-  const [id] = useState(() => Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15))
-  const [status, setStatus] = useState('Записаться');
+  const [id] = useState(
+    () =>
+      Math.random().toString(36).substring(2, 15) +
+      Math.random().toString(36).substring(2, 15)
+  );
+  const [status, setStatus] = useState("Записаться");
 
   const [errors, setErrors] = useState({
     name: "",
@@ -50,7 +56,12 @@ export function Form({ isSubmitted, setIsSubmitted }) {
     const nameError = validateName(formData.name);
     const phoneError = validatePhone(formData.phone);
 
-    setErrors((prev) => ({ ...prev, name: nameError, phone: phoneError, checkbox: !formData.checkbox }));
+    setErrors((prev) => ({
+      ...prev,
+      name: nameError,
+      phone: phoneError,
+      checkbox: !formData.checkbox,
+    }));
 
     if (!nameError && !phoneError && formData.checkbox) {
       handleSend();
@@ -71,14 +82,11 @@ export function Form({ isSubmitted, setIsSubmitted }) {
         body: JSON.stringify({
           chat_id,
           parse_mode: "html",
-          text: `<b>Новая запись на консультацию</b>\n\n
-          <b>Тема консультации</b>: без темы\n
-          <b>Имя</b>: ${formData.name}\n
-          <b>Номер телефона</b>: ${formData.phone}\n`,
+          text: `<b>Новая запись на консультацию</b>\n\n<b>Тема консультации</b>: без темы\n<b>Имя</b>: ${formData.name}\n<b>Номер телефона</b>: ${formData.phone}\n`,
         }),
       })
         .then(() => {
-          setStatus('Запись оформлена');
+          setStatus("Запись оформлена");
         })
         .catch((error) => {
           setStatus("Напишите, пожалуйста, мне в Телеграм");
@@ -90,47 +98,65 @@ export function Form({ isSubmitted, setIsSubmitted }) {
     };
     sendMessage();
   }
-  
-
-
 
   return (
-    <div className={styles.form}>
-      <form
-        onSubmit={handleSubmit}
-        className={styles.form__item + " " + containerStyles.container}
-      >
-        <div className={styles.form_elem}>
-          <Input
-            type="text"
-            name="name"
-            placeholder="Введите ваше имя"
-            value={formData.name}
-            onChange={handleChange}
-            disabled={isSubmitted}
-            error={errors.name}
-          />
-        </div>
-        <div className={styles.form_elem}>
-          <Input
-            type="tel"
-            name="phone"
-            placeholder="Введите ваш номер телефона"
-            value={formData.phone}
-            onChange={handleChange}
-            disabled={isSubmitted}
-            error={errors.phone}
-          />
-        </div>
-        <div
-          className={styles.form_elem}
-          style={{ display: "flex",  flexDirection: "column", gap: 15, position: "relative" }}
+    <LineAnimation>
+      <div className={styles.form}>
+        <VisibilityManager side="left" className={styles.form_content}>
+          <h3 className={styles.textTitle}>
+            Готовы измениться?
+          </h3>
+          <p className={styles.textDescription}>
+            Запишитесь на благотворительную консультацию, и я свяжусь с Вами в ближайшее время
+          </p>
+        </VisibilityManager>
+        <form
+          onSubmit={handleSubmit}
+          className={styles.form__item}
         >
-          <Button status={status} isSubmitted={isSubmitted} disabled={isSubmitted} />
-          <div className={styles["form-checkbox"]}>
+          <div className={styles.form_elem}>
+            <Input
+              type="text"
+              name="name"
+              placeholder="Введите ваше имя"
+              value={formData.name}
+              onChange={handleChange}
+              disabled={isSubmitted}
+              error={errors.name}
+            />
+          </div>
+          <div className={styles.form_elem}>
+            <Input
+              type="tel"
+              name="phone"
+              placeholder="Введите ваш номер телефона"
+              value={formData.phone}
+              onChange={handleChange}
+              disabled={isSubmitted}
+              error={errors.phone}
+            />
+          </div>
+          <div
+            className={styles.form_elem}
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              gap: 15,
+              position: "relative",
+            }}
+          >
+            <Button
+              status={status}
+              isSubmitted={isSubmitted}
+              disabled={isSubmitted}
+              className={styles.formbutton}
+            />
+            <VisibilityManager className={styles["form-checkbox"]}>
               <input
                 name="checkbox"
-                className={`${styles["form-checkbox__input"]} ${errors.checkbox ? styles["form-checkbox__input--error"] : ""}`}
+                className={`${styles["form-checkbox__input"]} ${
+                  errors.checkbox ? styles["form-checkbox__input--error"] : ""
+                }`}
                 type="checkbox"
                 id={id}
                 disabled={isSubmitted}
@@ -141,16 +167,24 @@ export function Form({ isSubmitted, setIsSubmitted }) {
                 }}
                 checked={formData.checkbox}
               />
-              <label className={`${styles["form-checkbox__label"]}`} htmlFor={id}>
+              <label
+                className={`${styles["form-checkbox__label"]}`}
+                htmlFor={id}
+              >
                 Я ознакомлен (ознакомлена) с{" "}
-                <a target="_blank" className={styles["form-doc"]} href="/agreement-data.txt">
+                <a
+                  target="_blank"
+                  className={styles["form-doc"]}
+                  href="/agreement-data.txt"
+                >
                   правилами
                 </a>{" "}
                 обработки персональных данных
               </label>
-            </div>
-        </div>
-      </form>
-    </div>
+            </VisibilityManager>
+          </div>
+        </form>
+      </div>
+    </LineAnimation>
   );
 }

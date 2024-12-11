@@ -1,29 +1,32 @@
 .block {
-  background-color: white;
+  background: #181818;
   gap: 30px;
+  padding: 130px 30px 150px;
 }
 
 .block__container {
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
-    align-content: stretch;
-    height: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  max-width: 1185px;
+  margin: 0 auto;
 }
 
 .imageWrapper {
   flex-basis: 50%; /* Устанавливаем ширину элемента на 50% */
   position: relative;
-  height: auto;
+  height: 600px;
 }
 
 .image {
   width: 100%; /* Ширина изображения 100% */
   height: 100%; /* Высота изображения 100% */
-  object-fit: cover; 
+  object-fit: cover;
   object-position: center;
   transition: all 1s ease-in-out;
   opacity: 0;
+  background-color: black;
+  border-radius: 20px;
 }
 
 .loaded {
@@ -31,17 +34,15 @@
 }
 
 .textContainer {
-  flex: 1; /* Take up 50% of the width */
   display: flex;
   flex-direction: column;
   justify-content: center; /* Center text vertically */
   align-items: center; /* Center text horizontally */
-  padding: 100px 50px; /* Add some padding */
-  flex-basis: 50%;
+  flex-basis: 45%;
+  max-width: 600px;
 }
 
 .textWrapper {
-  text-align: center; /* Center text */
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -49,71 +50,100 @@
 
 .title {
   font-size: 42px;
-  line-height: 1.23;
+  color: #fefefe;
+  padding: 0;
   font-weight: 600;
+  line-height: 1.3em;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  padding: 0;
+  max-width: 1185px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+.title_empty {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #fff;
 }
 
 .uptitle {
-  font-size: 16px;
-  line-height: 1.55;
-  font-weight: bold;
-  color: #666666;
+  font-size: 26px;
+  line-height: 40px;
+  font-style: italic;
+  padding-left: 100px;
+  position: relative;
+  margin: 15px 0px 15px;
+  color: #fff;
 }
 
-.divider {
-  display: block;
-  max-width: 50px;
-  width: 100%;
-  height: 3px;
-  margin: 0 auto;
-  background-color: #666;
+.uptitle:before {
+  left: 0;
+  top: 0px;
+  height: 100%;
+  content: "\f10d";
+  font-size: 60px;
+  font-weight: 900;
+  font-style: normal;
+  position: absolute;
+  font-family: "Font Awesome 5 Pro";
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: var(--base-color-1);
 }
 
-.description {
-  color: #281a19; /* Description color */
-  font-size: 18px;
-  line-height: 1.55;
-  font-weight: 300;
-}
 
 /* Responsive styles */
 @media (max-width: 1030px) {
-  .block__container {
-    flex-direction: column;
+  .block {
+    padding: 40px 20px;
   }
 
-  .imageWrapper {
-    flex-basis: 100%;
+  .block__container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  .title {
+    font-size: 42px;
+    color: #fefefe;
+    padding: 0;
+    font-weight: 600;
+    line-height: 1.3em;
+    font-family: "Poppins", sans-serif;
+    text-transform: uppercase;
+    max-width: 1185px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+  .uptitle {
+    font-size: 20px;
+    line-height: 30px;
+    font-style: italic;
+    padding-left: 100px;
+    position: relative;
+    margin: 0px 0px 0px;
+  }
+
+  .textWrapper {
+    gap: 30px;
+    padding: 30px 0;
   }
 
   .image {
     aspect-ratio: 1 / 0.8;
   }
-
-  .title {
-    font-size: 28px; /* Smaller title size for tablets */
-  }
-
-  .description {
-    font-size: 20px; /* Smaller description size for tablets */
-  }
-
   .imageContainer {
     height: 300px; /* Adjust image height for tablets */
-  }
-
-  .textContainer {
-    padding: 40px 20px; /* Add some padding for tablets */
-    flex-basis: 100%;
   }
 }
 
 @media (max-width: 768px) {
   .image {
     aspect-ratio: 1 / 1.3;
-  }
-
-  .description {
-    text-align: left;
   }
 }

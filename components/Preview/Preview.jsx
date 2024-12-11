@@ -3,11 +3,13 @@ import styles from "./Preview.module.css";
 import preview_bg from "../../public/images/preview_bg.webp";
 import Image from "next/image.js";
 import { VisibilityManager } from "../VisibilityManager";
+import { LineAnimation } from "../LineAnomation/LineAnimation";
 
 export const Preview = () => {
   const [loaded, setLoaded] = React.useState(false);
   
   return (
+    <LineAnimation>
     <section className={styles.preview}>
       <Image
         src={preview_bg}
@@ -16,12 +18,9 @@ export const Preview = () => {
         onLoad={() => setLoaded(true)}
       />
       <VisibilityManager as="div" className={styles.preview__content}>
-        <span className={styles.preview__sign}>ИN</span>
-        <h1 className={styles.preview__title}>БЛАГОСЛОВЕННЫЙ ПОРТАЛ МЕЧТЫ</h1>
-        <p className={styles.preview__description}>
-          здравость / деньги / отношения
-        </p>
+        <h1 className={styles.preview__title}>Благословенный <span className={styles.preview__title_empty}>портал мечты</span></h1>
       </VisibilityManager>
     </section>
+    </LineAnimation>
   );
 };

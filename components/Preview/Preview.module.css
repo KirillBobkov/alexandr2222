@@ -1,21 +1,17 @@
 .preview {
+  padding-top: 130px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  height: 900px; /* Full height of the viewport */
+  height: 100dvh; /* Full height of the viewport */
+  min-height: 500px;
   color: white; /* Text color */
-  background: #000000b2;
 }
 
 .preview__content {
-  margin-top: -180px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  padding: 0 30px;
+  margin-top: 100px;
   text-align: center;
-  gap: 50px;
 }
 
 @keyframes rotate-right {
@@ -28,13 +24,12 @@
 }
 
 .preview__bg {
-  position: fixed;
-  top: 0;
-  left: 25%;
+  position: absolute;
+  bottom: -50%;
   width: auto;
-  height: 120%;
+  height: 100%;
   z-index: -1; /* Send the image to the back */
-  animation: rotate-right 80s linear infinite;
+  animation: rotate-right 120s linear infinite;
   opacity: 0;
   transition: opacity 1s ease-in-out;
 }
@@ -43,46 +38,35 @@
   opacity: 1;
 }
 
-.preview__sign {
-  font-size: 14px; /* Adjust as needed */
-  margin-bottom: 10px; /* Space between sign and title */
-}
-
 .preview__title {
-  font-size: 72px;
-  line-height: 1.17;
-  font-weight: 600;
+  font-size: 76px;
+  font-weight: 700;
+  line-height: 92px;
+  font-family: var(--heading-1);
+  text-transform: uppercase;
 }
 
-.preview__description {
-  font-size: 22px;
+.preview__title_empty {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #fff;
 }
 
 /* Responsive styles */
 @media (max-width: 768px) {
-  .preview__bg {
-    top: 0;
-    left: -30%;
-    width: auto;
-    height: 100%;
-  }
+
   
   .preview__title {
-    font-size: 36px; /* Smaller title size for mobile */
+    font-size: 60px; /* Smaller title size for mobile */
+    line-height: 72px;
     padding: 10px;
   }
 
-  .preview__description {
-    font-size: 20px; /* Smaller description size for mobile */
-  }
 }
 
 @media (max-width: 480px) {
   .preview__title {
-    font-size: 30px; /* Even smaller title size for very small screens */
-  }
-
-  .preview__description {
-    font-size: 16px; /* Even smaller description size for very small screens */
+    font-size: 35px; /* Even smaller title size for very small screens */
+    line-height: 40px;
   }
 }

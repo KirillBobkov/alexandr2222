@@ -33,9 +33,11 @@ const Block = React.memo((props) => {
     forwardedRef,
     children,
     className,
-    side = "topmax",
-    speed = 1.5,
-    onClick
+    side = "top",
+    speed = 2,
+    delay = 0.3,
+    onClick,
+    disabled  = false,
   } = props;
 
   const meta = {};
@@ -53,13 +55,14 @@ const Block = React.memo((props) => {
   const animationStyles = {
     ...style,
     willChange: "transform, opacity",
-    transition: `transform ${speed}s, opacity ${speed}s, background-size  ${speed}s, background-color ${300}ms`,
+    transition: `transform ${speed}s ${delay}s, opacity ${speed}s ${delay}s, background-size ${speed}s ${delay}s, background-color 300ms ${delay}s`,
     opacity: inViewport || (onInit && enterCount > 0) ? 1 : 0,
     transform: inViewport || (onInit && enterCount > 0) ? sideMap[side] : sideMapNotVisible[side],
   }
 
   return (
     <Tag
+      {...props}
       {...meta}
       id={id}
       ref={forwardedRef}
@@ -67,7 +70,7 @@ const Block = React.memo((props) => {
       onClick={onClick}
       style={animationStyles}
     >
-      {children}
+      <>{children}</>
     </Tag>
   );
 });

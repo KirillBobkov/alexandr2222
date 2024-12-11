@@ -11,13 +11,17 @@ export const Navigation = () => {
   };
 
   return (
-    <div style={{ background: '#000000' }}>
+    <div>
     <header className={`${styles.header} ${isOpen ? styles.header_opened : ''}`}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
       <Image
         src={logo}
         alt=""
         className={styles.header__logo} id="logo"
       />
+      <p className={styles.logo__title}><span className={styles.logo__title_colored}>ИN</span>TEGRAAL</p>
+      </div>
+     
       <nav>
         <ul className={styles.navigation}>
           <li className={styles.navigation__item}>
@@ -27,21 +31,14 @@ export const Navigation = () => {
             <a href="#about" onClick={() => setIsOpen(false)}>Обо мне</a>
           </li>
           <li className={styles.navigation__item}>
-            <a href="#contacts" onClick={() => setIsOpen(false)}>Контакты</a>
+            <a href="#message" onClick={() => setIsOpen(false)}>Контакты</a>
+          </li>
+          <li className={styles.navigation__item}>
+            <a href="#programs" onClick={() => setIsOpen(false)}>Программы</a>
           </li>
         </ul>
       </nav>
-
-      <div className={styles.time}>
-        Вт.–Пт. — 15:00–17:00
-        <br />
-        Сб.–Пн. — Выходной
-      </div>
-      <div>
-      <a className={`${styles.button} ${styles.tBtn}`}  onClick={() => setIsOpen(false)}href="#message">
-                            БЕСПЛАТНАЯ КОНСУЛЬТАЦИЯ
-                        </a>
-      </div>
+    <div></div>
     </header>
         <button className={`${styles.burgerButton} ${isOpen ? styles.open : ''}`} onClick={handleClick}>
         <div className={styles.burgerLine}></div>

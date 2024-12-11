@@ -1,36 +1,76 @@
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    transform: translateX(20px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
 .button {
-  padding: 1rem 1rem;
-  text-align: center;
-  width: 100%;
-  color: #ffffff;
-  background-color: #281a19;
-  border: none;
-  cursor: pointer;
-  transition: all 0.2s;
+  z-index: 1;
+  font-size: 14px;
+  display: block;
+  font-weight: 700;
+  padding: 25px 40px;
   position: relative;
+  display: inline-block;
+  border-radius: 35px;
+  letter-spacing: 0.14em;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.1);
   text-transform: uppercase;
+  visibility: visible;
+    animation-duration: 1500ms;
+    animation-delay: 300ms;
+    animation-name: fadeInRight;
+    -webkit-animation-name: fadeInRight;
+    cursor: pointer;
+    text-align: center;
+}
+
+.button:after {
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 70px;
+  content: "";
+  height: 100%;
+  position: absolute;
+  border-radius: 100%;
+  -webkit-transition: 500ms all ease;
+  transition: 500ms all ease;
+  background-color: var(--base-color-1);
 }
 
 .button:hover:not(:disabled) {
-  background-color: #372322;
-}
-
-.button:active:not(:disabled) {
-  transform: scale(0.98);
+  opacity: 0.8;
 }
 
 .button:disabled {
   cursor: not-allowed;
+  pointer-events: none;
+}
+
+.button:hover:after {
+  width: 100%;
+  border-radius: 35px;
 }
 
 .success {
-  background-color: #422a28;
+  background-color: var(--base-color-1);
 }
 
-.status {
-  position: absolute;
-  bottom: -30px;
-  left: 10px;
-  color: #000000;
-  font-size: 0.875rem;
+
+@media (max-width: 768px) {
+  .button {
+      width: 100%;
+  }
 }

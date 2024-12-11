@@ -1,17 +1,12 @@
 import { Footer } from "../Footer/Footer";
 import { Navigation } from "../Navigation/Navigation";
 import Head from "next/head";
-import localFont from 'next/font/local';
 import favicon32x32 from "../../public/images/favicon32x32.png";
 import favicon180x180 from "../../public/images/favicon180x180.png";
 import logo from "../../public/images/logo.webp";
-import favicon from "../../public/images/favicon.ico";
-
-const font = localFont({
-  src: '../../fonts/TildaSans-VF.woff2',
-  variable: '--font-tilda',
-});
-
+import favicon from "../../public/images/logo.ico";
+import CursorShadow from "../CursorShadow/CursorShadow";
+import ScrollTopButton from "../ScrollTopButton/ScrollTopButton";
 export default function Layout({ children, metaConfig }) {
   const { title, description, keywords } = metaConfig;
 
@@ -30,17 +25,11 @@ export default function Layout({ children, metaConfig }) {
         <meta name="copyright" content="Александр Васильев" />
         <meta name="keywords" content={keywords} />
         <meta name="robots" content="index,follow" />
-        <meta
-          property="og:url"
-          content={`https://alexandrvasilev.ru`}
-        />
+        <meta property="og:url" content={`https://alexandrvasilev.ru`} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:type" content="website" />
-        <meta
-          property="og:image"
-          content={logo}
-        />
+        <meta property="og:image" content={logo} />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta
           name="apple-mobile-web-app-status-bar-style"
@@ -49,11 +38,7 @@ export default function Layout({ children, metaConfig }) {
 
         <link rel="icon" href={favicon.src} />
         <link rel="apple-touch-icon" href={favicon32x32.src} />
-        <link
-          rel="apple-touch-icon"
-          sizes="32x32"
-          href={favicon32x32.src}
-        />
+        <link rel="apple-touch-icon" sizes="32x32" href={favicon32x32.src} />
         <link
           rel="apple-touch-icon"
           sizes="180x180"
@@ -61,11 +46,11 @@ export default function Layout({ children, metaConfig }) {
         />
         <link rel="apple-touch-startup-image" href={favicon32x32.src} />
       </Head>
-      <div className={font.className}>
         <Navigation />
         <main>{children}</main>
         <Footer />
-      </div>
+        <CursorShadow />
+        <ScrollTopButton />
     </>
   );
 }

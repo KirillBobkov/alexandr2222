@@ -3,17 +3,29 @@
     align-items: center;
     justify-content: space-between;
     gap: 50px;
-    padding: 10px;
-    max-width: 1000px;
+    padding: 30px 50px;
     margin: 0 auto;
-    background-color: #000000;
-    color: rgb(255, 255, 255);
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    color: #fff;
 }
 
 .header__logo {
-    height: 100px;
+    height: 50px;
     width: auto;
 }
+
+.logo__title {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 40px;
+    font-family: var(--heading-1);
+}
+
+.logo__title_colored {
+    color: var(--accent);
+} 
 
 .navigation {
     display: flex;
@@ -25,103 +37,53 @@
 
 .navigation__item {
     position: relative;
-    font-size: 14px;
-    color: #ffffff;
-    font-weight: 400;
     cursor: pointer;
     text-decoration: none;
     flex-shrink: 0;
-}
-.navigation__item:after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 20%;
-    opacity: 0;
-    width: 100%;
-    height: 100%;
-    border-bottom: 1px solid #77806e;
-    -webkit-box-shadow: inset 0px -1px 0px 0px #77806e;
-    -moz-box-shadow: inset 0px -1px 0px 0px #77806e;
-    box-shadow: inset 0px -1px 0px 0px #77806e;
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-    pointer-events: none;
-}
-
-.navigation__item:hover:after {
-    opacity: 1;
-    bottom: -1px;
-}
-
-.button {
-    color: #ffffff;
-    border: 2px solid #281a19;
-    background-color: #281a19;
-    height: 40px;
     font-size: 14px;
-    padding-left: 30px;
-    padding-right: 30px;
-    margin-left: 10px;
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.button:hover {
-    box-shadow: #281a19 0px 0px 2px 0px;
-}
-
-.tBtn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.time {
-    font-size: 16px;
-    color: #ffffff;
-    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
 }
 
 .burgerButton {
     display: none;
 }
 
-@media (max-width: 1030px) {
+@media (max-width: 768px) {
     .header {
         position: fixed;
         top: 0;
-        left: 0;
+        left: 60px;
         right: 0;
         width: 100%;
         height: 100%;
+        padding-left: 20px;
         z-index: 10;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        transform: translateY(-100%);
-        transition: transform 0.7s ease-in-out;
+        align-items: flex-start;
+        justify-content: flex-start;
+        transform: translateX(100%);
+        transition: transform 1s ease-in-out;
+        background: #000000;
     }
 
     .header_opened {
-        transform: translateY(0);
+        transform: translateX(0);
     }
 
     .navigation {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        align-items: flex-start;
+        justify-content: flex-start;
         gap: 10px;
     }
 
     .burgerButton {
         display: block;
-        background: transparent;
+        background: rgba(90, 90, 90, 0.347);
+        border-radius: 50%;
+        padding: 15px;
         border: none;
         cursor: pointer;
         position: absolute;
@@ -151,6 +113,11 @@
     
     .burgerButton.open .burgerLine:nth-child(2) {
         opacity: 0; /* Hide the middle line */
+    }
+
+    .logo__title {
+        font-size: 24px;
+        line-height: 30px;
     }
 }
 

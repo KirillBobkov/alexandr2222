@@ -9,7 +9,7 @@ export function Footer() {
       <div className={styles.container}>
         <div className={styles.logo__container}>
           <Image className={styles.logo} src={logo} alt="Company Logo" />
-          <ul className={styles.list} id="contacts">
+          <ul className={styles.list}>
             <li>
               <a href="#message" className={styles.social__link}>
                 <svg

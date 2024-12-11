@@ -1,33 +1,40 @@
 .container {
   width: 100%;
-  background-color: #ffffff;
   overflow: hidden;
+  max-width: 1285px;
+  margin: 0 auto;
+  padding: 100px 30px 100px;
 }
 
 .content {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   margin: 0 auto;
+  gap: 30px;
 }
 
 .playerSection {
-  width: 100%;
+  width: 65%;
 }
 
 .listSection {
-  width: 100%;
+  width: 35%;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 1080px) {
+  .container {
+    padding: 100px 20px;
+  }
+
   .content {
-    flex-direction: row;
+    flex-direction: column;
   }
 
   .playerSection {
-    width: 70%;
+    width: 100%;
   }
 
   .listSection {
-    width: 30%;
+    width: 100%;
   }
 }

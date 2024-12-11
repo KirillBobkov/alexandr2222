@@ -1,0 +1,48 @@
+@keyframes move {
+    0% {
+      transform: translateX(0); /* Начальная позиция */
+    }
+    100% {
+      transform: translateX(-100%); /* Конечная позиция */
+    }
+  }
+.moving {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: nowrap;
+    animation: move 20s linear infinite;
+}
+
+.block {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    min-height: 300px;
+}
+
+.logo__title {
+    font-size: 90px;
+    font-weight: 700;
+    line-height: 92px;
+    font-family: var(--heading-1);
+    text-transform: uppercase;
+    color: #fff;
+}
+  
+.logo__title_colored {
+    color: var(--accent);
+}
+
+.logo__title_empty {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #fff;
+}
+
+.logo {
+        height: 100px;
+        width: auto;
+}

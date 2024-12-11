@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './Input.module.css';
+import { VisibilityManager } from '../VisibilityManager';
 
 interface InputProps {
   type: string;
@@ -44,7 +45,8 @@ export function Input({
   };
 
   return (
-    <div className={`${styles.inputGroup} ${error ? styles.error : ''}`}>
+    <VisibilityManager className={`${styles.inputGroup} ${error ? styles.error : ''}`}>
+      <>
       <div className={styles.inputWrapper}>
         <input
           type={type}
@@ -59,6 +61,7 @@ export function Input({
         />
       </div>
       {error && <p className={styles.errorMessage}>{error}</p>}
-    </div>
+      </>
+    </VisibilityManager>
   );
 }
