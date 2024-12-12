@@ -53,8 +53,10 @@
 
 /* Responsive styles */
 @media (max-width: 768px) {
+  .preview {
+    padding-top: 80px;
+  }
 
-  
   .preview__title {
     font-size: 60px; /* Smaller title size for mobile */
     line-height: 72px;

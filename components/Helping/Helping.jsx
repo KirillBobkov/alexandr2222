@@ -64,7 +64,7 @@ const TextBlock = ({ title, desc }) => {
   return (
     <div className={styles.textBlock}>
       <h3 className={styles.textTitle}>
-      <span className={styles.textSymbol}>⏺</span> 
+      <span className={styles.textSymbol}>●</span> 
         {'  '}
         {title}
       </h3>

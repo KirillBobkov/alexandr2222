@@ -133,16 +133,12 @@
     padding: 30px 0;
   }
 
+
   .imageWrapper {
-    aspect-ratio: 1 / 0.8;
-  }
-  .imageContainer {
-    height: 300px; /* Adjust image height for tablets */
+    height: 500px; /* Adjust image height for tablets */
   }
 }
 
 @media (max-width: 768px) {
-  .imageWrapper {
-    aspect-ratio: 1 / 1.1;
-  }
+
 }

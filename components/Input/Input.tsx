@@ -46,7 +46,7 @@ export function Input({
 
   return (
     <VisibilityManager className={`${styles.inputGroup} ${error ? styles.error : ''}`}>
-      <>
+
       <div className={styles.inputWrapper}>
         <input
           type={type}
@@ -61,7 +61,6 @@ export function Input({
         />
       </div>
       {error && <p className={styles.errorMessage}>{error}</p>}
-      </>
     </VisibilityManager>
   );
 }

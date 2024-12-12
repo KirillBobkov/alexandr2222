@@ -56,7 +56,7 @@
         right: 0;
         width: 100%;
         height: 100%;
-        padding-left: 20px;
+        padding-left: 30px;
         z-index: 10;
         flex-direction: column;
         align-items: flex-start;
@@ -82,12 +82,12 @@
         display: block;
         background: rgba(90, 90, 90, 0.347);
         border-radius: 50%;
-        padding: 15px;
+        padding: 10px;
         border: none;
         cursor: pointer;
         position: absolute;
-        top: 20px; /* Adjust as needed */
-        right: 20px; /* Adjust as needed */
+        top: 25px; /* Adjust as needed */
+        right: 10px; /* Adjust as needed */
         z-index: 1000; /* Ensure it appears above other elements */
         transition: transform 0.5s ease; /* Smooth transition for the button */
     }
