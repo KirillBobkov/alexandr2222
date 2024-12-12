@@ -17,9 +17,8 @@ export const VideoList: React.FC<VideoListProps> = ({
   return (
     <VisibilityManager side="left" className={styles.container}>
       <div  className={styles.header}>
-        <>
-          <h3 className={styles.title}>Отзывы людей которым я помог</h3>
-        </>
+        <h3 className={styles.title}><span className={styles.textSymbol}>⏺
+        </span> Отзывы людей, которым я помог</h3>
       </div>
       <div className={styles.listWrapper}>
         <ul className={styles.list}>

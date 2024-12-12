@@ -14,14 +14,15 @@
 }
 
 .playerSection {
-  width: 65%;
+  flex-basis: 65%;
 }
 
 .listSection {
-  width: 35%;
+  flex-basis: 35%;
+  min-width: 350px;
 }
 
-@media (max-width: 1080px) {
+@media (max-width: 768px) {
   .container {
     padding: 100px 20px;
   }

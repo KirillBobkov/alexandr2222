@@ -22,25 +22,25 @@ export const Helping = () => {
 
             <VisibilityManager className={styles.item2}>
               <TextBlock
-                title={"Стремитесь к успеху"}
+                title={"Мечтаете о большем"}
                 desc={
-                  "Я предлагаю Вам практический мгновенный результат, чтобы Вы преодолели внутренние барьеры и добились желаемых результатов."
+                  "Я могу помочь Вам легко преодолеть внутренние барьеры и быстрее добиться желанных результатов."
                 }
               />
             </VisibilityManager>
             <VisibilityManager className={styles.item5}>
               <TextBlock
-                title={"Желаете улучшить отношения"}
+                title={"Желаете наслаждаться отношениями"}
                 desc={
-                  "Построить или восстановить гармоничные и глубокие связи, с доведением до результата."
+                  "Хотите создать гармоничные и глубокие связи? Я решаю такие задачи, с доведением до результата."
                 }
               />
             </VisibilityManager>
             <VisibilityManager className={styles.item4}>
               <TextBlock
-                title={"Достаточно дисциплинированы"}
+                title={"Хотели бы позаботиться о своём здоровье"}
                 desc={
-                  "Важно немедленно."
+                  "Известно, что большинство проблем со здоровьем «идут от головы», траблшуттинг даёт возможность устранять причины таких проблем."
                 }
               />
             </VisibilityManager>
@@ -48,7 +48,7 @@ export const Helping = () => {
               <TextBlock
                 title={"Цените своё время"}
                 desc={
-                  "Вам нужно действие сейчас."
+                  "Вам нужен результат сейчас. Безопасно и эффективно, а главное - сразу. Я предлагаю Вам практический мгновенный результат."
                 }
               />
             </VisibilityManager>
@@ -64,7 +64,7 @@ const TextBlock = ({ title, desc }) => {
   return (
     <div className={styles.textBlock}>
       <h3 className={styles.textTitle}>
-      <span className={styles.textSymbol}>●</span> 
+      <span className={styles.textSymbol}>⏺</span> 
         {'  '}
         {title}
       </h3>

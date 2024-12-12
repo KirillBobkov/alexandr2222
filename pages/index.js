@@ -1,16 +1,9 @@
 import Layout from "../components/Layout/Layout";
-import { ContentBlock } from "../components/ContentBlock/ContentBlock";
 import { Bio } from "../components/Bio/Bio";
-import { VisibilityManager } from "../components/VisibilityManager";
-import alex2 from "../public/images/alex2.webp";
-import alex3 from "../public/images/alex3.webp";
-import alex5 from "../public/images/alex5.webp";
-import styles from "../styles/content.module.css";
 import { Form } from "../components/Form/Form";
 import { useState } from "react";
 import { VideoWidget } from "../components/VideoWidget/VideoWidget";
 import { useScrollToLocation } from "../hooks/useScrollToLocation";
-import { Button } from "../components/Button/Button";
 import { Preview } from "../components/Preview/Preview";
 import { Warranty } from "../components/Warranty/Warranty";
 import { AnimatedLine } from "../components/AnimatedLine/AnimatedLine";
@@ -38,8 +31,8 @@ export default function MainPage() {
       <Suggest />
       <Helping />
       <VideoWidget />
-      <Products />
       <AnimatedLine /> 
+      <Products />
       <div id="message" />
       <Form setIsSubmitted={setIsSubmitted} isSubmitted={isSubmitted} />
       <Final />

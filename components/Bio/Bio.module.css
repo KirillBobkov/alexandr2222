@@ -1,7 +1,7 @@
 .block {
   background: #181818;
   gap: 30px;
-  padding: 130px 30px 150px;
+  padding: 150px 30px 150px;
 }
 
 .block__container {
@@ -133,7 +133,7 @@
     padding: 30px 0;
   }
 
-  .image {
+  .imageWrapper {
     aspect-ratio: 1 / 0.8;
   }
   .imageContainer {
@@ -142,7 +142,7 @@
 }
 
 @media (max-width: 768px) {
-  .image {
+  .imageWrapper {
     aspect-ratio: 1 / 1.1;
   }
 }
