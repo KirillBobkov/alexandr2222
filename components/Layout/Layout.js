@@ -7,12 +7,43 @@ import logo from "../../public/images/logo.webp";
 import favicon from "../../public/images/logo.ico";
 import CursorShadow from "../CursorShadow/CursorShadow";
 import ScrollTopButton from "../ScrollTopButton/ScrollTopButton";
+
+import { Nunito, Poppins, Rubik } from 'next/font/google'
+
+const nunito = Nunito({
+  weight: ['400', '700'],
+  style: ['normal', 'italic'],
+  display: 'swap',
+  subsets: ['cyrillic']
+})
+
+// const popins = Poppins({
+//   weight: ['400', '700'],
+//   style: ['normal'],
+//   display: 'swap',
+//   subsets: ['cyrillic']
+// })
+
+const rubik = Rubik({
+  weight: ['400', '700'],
+  style: ['normal'],
+  display: 'swap',
+  subsets: ['cyrillic']
+})
+
 export default function Layout({ children, metaConfig }) {
   const { title, description, keywords } = metaConfig;
 
   return (
     <>
       <Head>
+      <style jsx global>{`
+        :root {
+         --heading: ${nunito.style.fontFamily};
+          --body-font: ${rubik.style.fontFamily};  
+        }
+      `}</style>
+
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta charSet="utf-8" />
