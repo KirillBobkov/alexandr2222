@@ -50,25 +50,30 @@
   z-index: 1;
 }
 
-.svg {
+.svgWrapper {
   position: absolute;
   top: 0;
   right: 0;
   left: 0;
   bottom: 0;
-  width: 100%;
-  height: 100%;
-  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: all 0.5s ease-in-out;
   animation-delay: 1s;
   opacity: 0;
-  transform: translateY(10%) rotate(-45deg);
   z-index: 2;
+  transform: translateY(10%);
+}
+.svg {
+  width: 170px;
+  height: 170px;
+  transform: rotate(-45deg);
 }
 
-.card:hover .svg {
+.card:hover .svgWrapper {
   opacity: 1;
-  transform: translateY(0) rotate(-45deg);
+  transform: translateY(0);
 }
 
 .card:hover:before {
@@ -97,7 +102,7 @@
   font-size: 26px;
   font-weight: 700;
   flex-basis: 30%;
-  padding: 60px 30px;
+  padding: 40px 30px;
   color: #ffffff;
   text-align: center;
   align-content: center;

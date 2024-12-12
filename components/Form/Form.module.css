@@ -70,7 +70,7 @@
 .form-checkbox__label {
   font-size: 13px;
   line-height: 16px;
-  color: #ffffff;
+  color: var(--font-color);
 }
 
 .form-checkbox__input:checked {
