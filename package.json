@@ -9,7 +9,6 @@
     "formik": "^2.4.6",
     "next": "latest",
     "react": "18.2.0",
-    "react-animated-cursor": "^2.11.2",
     "react-dom": "18.2.0",
     "react-in-viewport": "^1.0.0-alpha.30",
     "react-input-mask": "^2.0.4",
