@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from '../styles/ProductGrid.module.css';
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface ProductCardProps {
   product: any;
@@ -11,7 +12,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onClick }) =>
   const [loaded, setLoaded] = React.useState(false);
 
   return (
-    <div className={styles.card} onClick={onClick}>
+    <Link prefetch={false} href={product.href} className={styles.card}>
       <Image
         src={product.image} 
         alt={product.title} 
@@ -25,6 +26,6 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onClick }) =>
 </svg>
       </div>
 
-    </div>
+    </Link>
   );
 };

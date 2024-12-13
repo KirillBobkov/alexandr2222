@@ -8,20 +8,22 @@ export const products = [
     title: "Разовая консультация",
     description: "High-quality wireless headphones with noise cancellation and premium sound quality. Perfect for music enthusiasts and professionals.",
     image: card1,
-    price: 299.99
+     href: "/consulting"
+  
   },
   {
     id: 2,
     title: "Доведение до большой цели",
     description: "Advanced smartwatch with health tracking, notifications, and long battery life. Stay connected and monitor your fitness goals.",
     image: card2,
-    price: 199.99
+      href: "/aim"
+    
   },
   {
     id: 3,
     title: "Персональный онлайн-ретрит",
     description: "Complete camera kit for professional photographers. Includes high-resolution sensor and versatile lens options.",
     image: card3,
-    price: 1299.99
+     href: "/retreat"
   },
 ];
