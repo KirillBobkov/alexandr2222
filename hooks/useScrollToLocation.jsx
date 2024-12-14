@@ -27,8 +27,6 @@ export const useScrollToLocation = () => {
           scrolledRef.current = true;
         }
       }
-    } else {
-      window.scrollTo(0, 0);
     }
   });
 };

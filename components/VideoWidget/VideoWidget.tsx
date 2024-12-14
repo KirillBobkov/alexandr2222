@@ -14,6 +14,13 @@ export interface Video {
 
 const videos = [
   {
+    link: "https://vkvideo.ru/video_ext.php?oid=290538287&id=456239191&hash=344bfa2e09b67aa6",
+    thumbnailUrl:
+      "https://i.mycdn.me/getVideoPreview?id=7749927766575&idx=12&type=39&tkn=wU7VVedkp7QlCuStZ29SMqQSNt0&fn=vid_x",
+    name: 'Отзыв Тины о проработке с Александром "Интегралом" Васильевым',
+    uploadDate: new Date("November 14, 2024").toISOString(),
+  },
+  {
     link: "https://vkvideo.ru/video_ext.php?oid=290538287&id=456239188&hash=8a160ed8a99c6834",
     thumbnailUrl:
       "https://i.mycdn.me/getVideoPreview?id=7673156733487&idx=13&type=39&tkn=Q8JRpXn2Vz83D9N5E57aw5QCUIQ&fn=vid_x",
