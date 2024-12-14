@@ -45,23 +45,15 @@
   border: none;
   cursor: pointer;
   text-align: left;
-  transition: background-color 0.2s;
+  transition: all 0.5s;
 }
 
 .item:hover {
-  background-color: #222124;
-}
-
-.selected {
-  background-color: #222124;
+  color: var(--accent);
 }
 
 .selected .videoTitle {
-  color: #ffffff;
-}
-
-.selected:hover {
-  background-color: #222124;
+  color: #fff;
 }
 
 .thumbnail {

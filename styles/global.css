@@ -1,7 +1,7 @@
 :root {
   /* #ff6b61 in decimal RGB */
 
-  --base-color-1: #f0c442;
+  --base-color-1: #eeb100;
   --base-color-2: #ffe43b;
   --base-color-3: #7486e5;
   --base-color-4: #63dad9;
@@ -24,7 +24,7 @@
 
   --bg-color: #0d0d0d;
   --font-color: #bac1d4;
-  --accent: #f0c442;
+  --accent: #eeb100;
 }
 
 * {
