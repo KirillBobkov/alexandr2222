@@ -8,7 +8,7 @@ export const products = [
     title: "Разовая консультация",
     description: "High-quality wireless headphones with noise cancellation and premium sound quality. Perfect for music enthusiasts and professionals.",
     image: card1,
-     href: "/consulting"
+     href: "/consultation"
   
   },
   {
