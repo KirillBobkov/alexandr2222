@@ -9,7 +9,7 @@ export function Products() {
   const [selectedProduct, setSelectedProduct] = useState<any>(null);
 
   return (
-    <div className={styles.container}id="programs">
+    <div className={styles.container} id="programs">
       <div className={styles.block}>
         <VisibilityManager as="h2" side="left"  className={styles.blocktitle}>
           Программы

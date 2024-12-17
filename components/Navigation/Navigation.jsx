@@ -145,14 +145,14 @@ export const navigationTree = [
   },
   {
     parent: {
-      path: "/#message",
-      value: "Контакты",
+      path: "/#reviews",
+      value: "Отзывы",
     },
   },
   {
     parent: {
-      path: "/#reviews",
-      value: "Отзывы",
+      path: "/#faq",
+      value: "Ответы на вопросы",
     },
   },
 ];

@@ -11,9 +11,10 @@ export const Questions = () => {
   return (
     <LineAnimation>
     <VisibilityManager
-      className={`${styles.container}`}
+      className={`${styles.container}` }
+      id="faq"
     >
-      <h2 className={styles.question__main_title} id="faq">
+      <h2 className={styles.question__main_title} >
         {questionsContent.title}
       </h2>
       <ul>
