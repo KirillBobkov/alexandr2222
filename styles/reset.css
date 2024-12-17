@@ -38,6 +38,9 @@ ol, ul, menu {
     margin: 0;
 }
 
+ul {
+    list-style: none;
+}
 
 /* removes spacing between cells in tables */
 table {

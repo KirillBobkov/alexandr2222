@@ -1,0 +1,39 @@
+.textBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .textTitle {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+    color: #ffffff;
+  }
+  
+  .textSymbol {
+    color: var(--accent);
+    margin-right: 5px;
+  }
+
+  .textDescription {
+    margin-bottom: 5px;
+  }
+
+  .title {
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 50px;
+    text-transform: uppercase;
+    color: #fff;
+    margin-top: 60px;
+}
+
+@media screen and (max-width: 768px) {
+    .title {
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 42px;
+    }
+}
+

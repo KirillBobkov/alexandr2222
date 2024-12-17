@@ -1,29 +1,41 @@
-import card1 from "../../../public/images/card1.jpg";
-import card2 from "../../../public/images/card2.jpg";
-import card3 from '../../../public/images/card3.jpg';
+
+import logo from "../../../public/images/logo.webp";
 
 export const products = [
   {
     id: 1,
-    title: "Разовая консультация",
-    description: "High-quality wireless headphones with noise cancellation and premium sound quality. Perfect for music enthusiasts and professionals.",
-    image: card1,
-     href: "/consultation"
-  
+    title: "Полюбить жизнь",
+    image: logo,
+    href: "/love-life"
   },
   {
     id: 2,
-    title: "Доведение до большой цели",
-    description: "Advanced smartwatch with health tracking, notifications, and long battery life. Stay connected and monitor your fitness goals.",
-    image: card2,
-      href: "/aim"
-    
+    title: "Полюбить себя",
+    image: logo,
+    href: "/love-myself"
   },
   {
     id: 3,
-    title: "Персональный онлайн-ретрит",
-    description: "Complete camera kit for professional photographers. Includes high-resolution sensor and versatile lens options.",
-    image: card3,
-     href: "/retreat"
+    title: "Сессия релаксации",
+    image: logo,
+     href: "/relax-session"
+  },
+  {
+    id: 4,
+    title: "Увеличить заработок",
+    image: logo,
+     href: "/grow-money"
+  },
+  {
+    id: 5,
+    title: "Удалить плохие воспоминания",
+    image: logo,
+     href: "/remove-bad-memories"
+  },
+  {
+    id: 6,
+    title: "Бросить курить легко",
+    image: logo,
+     href: "/drop-smoking"
   },
 ];

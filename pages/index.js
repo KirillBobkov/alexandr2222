@@ -11,6 +11,7 @@ import { Suggest } from "../components/Suggests/Suggests";
 import { Helping } from "../components/Helping/Helping";
 import { Final } from "../components/Final/Final";
 import { Products } from "../components/Products/Products";
+import { Questions } from "../components/Questions/Questions";
 export default function MainPage() {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -35,6 +36,7 @@ export default function MainPage() {
       <Products />
       <div id="message" />
       <Form setIsSubmitted={setIsSubmitted} isSubmitted={isSubmitted} />
+      <Questions />
       <Final />
     </Layout>
   );

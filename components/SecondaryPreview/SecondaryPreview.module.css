@@ -29,9 +29,10 @@
   }
   
   .secondaryPreview__title {
-    font-size: 50px;
+    font-size: 60px;
+    text-transform: uppercase;
     font-weight: 700;
-    line-height: 60px;
+    line-height: 72px;
     padding-bottom: 12px;
   }
 

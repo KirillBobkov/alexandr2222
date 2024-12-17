@@ -3,6 +3,7 @@ import styles from "./Navigation.module.css";
 import logo from "../../public/images/logo.webp";
 import Image from "next/image.js";
 import Link from "next/link";
+import { products } from "../Products/data/products";
 
 export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -129,20 +130,12 @@ export const navigationTree = [
       path: "/#programs",
       value: "Программы",
     },
-    childs: [
-      {
-        path: "/retreat",
-        value: "Персональный онлайн ретрит",
-      },
-      {
-        path: "/consultation",
-        value: "Разовая консультация",
-      },
-      {
-        path: "/aim",
-        value: "Доведение до большой цели",
-      },
-    ],
+    childs: products.map((p) => {
+      return {
+        path: p.href,
+        value: p.title
+      }
+    })
   },
   {
     parent: {
