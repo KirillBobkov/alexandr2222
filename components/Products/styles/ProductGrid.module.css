@@ -38,7 +38,7 @@
   position: relative;
   border-radius: 20px;
   min-height: 450px;
-  background: linear-gradient(45deg, var(--accent) 16%, #000000 53%, #000000 83%);
+  background: linear-gradient(-45deg, var(--accent) 16%, #000000 53%, #000000 83%);
 
 }
 
@@ -113,11 +113,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 10px;
 }
 
 .symbol {
   display: inline-block;
-  transform: rotate(180deg);
+  transform: translateY(10%) rotate(180deg);
 }
 
 .description {

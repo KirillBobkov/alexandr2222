@@ -41,7 +41,7 @@ const Question = ({ title, answer }) => {
       >
           
         <h3 itemProp="name">{title}</h3>
-        <span>{isActive ? "-" : "+"}</span>
+        <span>{isActive ? "—" : "+"}</span>
       </div>
       {
         <p
