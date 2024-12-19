@@ -37,7 +37,7 @@
   align-items: center;
   position: relative;
   border-radius: 20px;
-  min-height: 450px;
+  min-height: 400px;
   background: linear-gradient(-45deg, var(--accent) 16%, #000000 53%, #000000 83%);
 
 }
@@ -137,5 +137,13 @@
 
   .block {
     padding: 60px 20px 60px;
+  }
+
+  .svgWrapper {
+    display: none;
+  }
+
+  .card:before {
+    display: none;
   }
 }

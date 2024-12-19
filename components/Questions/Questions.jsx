@@ -2,7 +2,6 @@ import React, { useState } from "react";
 
 import styles from "./Questions.module.css";
 import { VisibilityManager } from "../VisibilityManager.jsx";
-import containerStyles from "../../styles/container.module.css";
 import { questionsContent } from "../../content/questions.js";
 import { LineAnimation } from "../LineAnomation/LineAnimation.jsx";
 
@@ -15,7 +14,7 @@ export const Questions = () => {
       id="faq"
     >
       <h2 className={styles.question__main_title} >
-        {questionsContent.title}
+      <span className={styles.title_empty}> Вопросы и </span> ответы
       </h2>
       <ul>
         {questionsContent.blocks.map((q) => {

@@ -152,7 +152,7 @@ export const navigationTree = [
   {
     parent: {
       path: "/#faq",
-      value: "Ответы на вопросы",
+      value: "Вопросы и ответы",
     },
   },
 ];
