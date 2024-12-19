@@ -24,10 +24,9 @@ export default () => {
         setVisible(false);
     }, []);
 
-    const onClick = useCallback(() => {
+    const onClick = useCallback((e) => {
         document.body.scrollTo({ top: 0, behavior: 'smooth' });
-        const { pathname } = router;
-        router.push({ pathname }, undefined, { shallow: true });
+        window.location.hash = '';
     }, [router]);
 
     useEffect(() => {

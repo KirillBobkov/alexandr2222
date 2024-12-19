@@ -56,8 +56,8 @@ const Block = React.memo((props) => {
     ...style,
     willChange: "transform, opacity",
     transition: `transform ${speed}s ${delay}s, opacity ${speed}s ${delay}s, background-size ${speed}s ${delay}s, background-color 300ms ${delay}s`,
-    opacity: inViewport || (onInit && enterCount > 0) ? 1 : 0,
-    transform: inViewport || (onInit && enterCount > 0) ? sideMap[side] : sideMapNotVisible[side],
+    opacity: (inViewport || (onInit && enterCount > 0)) ? 1 : 0,
+    transform: (inViewport || (onInit && enterCount > 0)) ? sideMap[side] : sideMapNotVisible[side],
   }
 
   return (
@@ -70,7 +70,7 @@ const Block = React.memo((props) => {
       onClick={onClick}
       style={animationStyles}
     >
-      <>{children}</>
+      {children}
     </Tag>
   );
 });

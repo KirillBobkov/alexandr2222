@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import styles from "./Navigation.module.css";
 import logo from "../../public/images/logo.webp";
 import Image from "next/image.js";
@@ -8,7 +8,7 @@ import { products } from "../Products/data/products";
 export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleClick = () => {
+  const handleClick = (e, path) => {
     setIsOpen(!isOpen);
   };
 
@@ -26,13 +26,14 @@ export const Navigation = () => {
 
         <nav>
           <ul className={styles.navigation}>
-            {navigationTree.map((item) => {
+            {navigationTree.map((item, i) => {
               return (
                 <Dropdown
+                  key={i}
                   text={item.parent.value}
                   href={item.parent.path}
                   childs={item.childs}
-                  onClick={() => setIsOpen(false)}
+                  onClick={handleClick}
                 />
               );
             })}
@@ -42,7 +43,7 @@ export const Navigation = () => {
       </header>
       <button
         className={`${styles.burgerButton} ${isOpen ? styles.open : ""}`}
-        onClick={handleClick}
+        onClick={() => setIsOpen(!isOpen)}
       >
         <div className={styles.burgerLine}></div>
         <div className={styles.burgerLine}></div>
@@ -54,6 +55,23 @@ export const Navigation = () => {
 
 const Dropdown = ({ text, href, childs, onClick }) => {
   const [hoverOpened, setHoverOpened] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  const handleResize = () => {
+    if (window.innerWidth < 768) {
+      setIsMobile(true);
+    } else {
+      setIsMobile(false);
+    }
+  };
+
+  useEffect(() => {
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   const handleMouseEnter = useCallback(() => {
     setHoverOpened(true);
@@ -63,13 +81,27 @@ const Dropdown = ({ text, href, childs, onClick }) => {
     setHoverOpened(false);
   }, []);
 
+  const props = isMobile ? {
+  } : {
+    onMouseEnter: handleMouseEnter,
+    onMouseLeave: handleMouseLeave,
+  }
+
   return (
     <li
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
+      {...props}
       className={styles.navigation__item}
     >
-      <Link prefetch={false} href={href} onClick={onClick}>
+      <Link
+        prefetch={false}
+        style={{
+          height: "100%",
+          display: "block",
+        }}
+        href={href}
+        scroll={false}
+        onClick={(e) => onClick(e, href)}
+      >
         {text}{" "}
         {childs ? (
           <span className={styles.symbol}>
@@ -105,8 +137,9 @@ const Dropdown = ({ text, href, childs, onClick }) => {
                 prefetch={false}
                 href={child.path}
                 key={child.path}
-                onClick={onClick}
+                onClick={(e) => onClick(e, child.path)}
                 className={styles.dropdownItem}
+                scroll={false}
               >
                 {child.value}
               </Link>
@@ -133,9 +166,9 @@ export const navigationTree = [
     childs: products.map((p) => {
       return {
         path: p.href,
-        value: p.title
-      }
-    })
+        value: p.title,
+      };
+    }),
   },
   {
     parent: {
