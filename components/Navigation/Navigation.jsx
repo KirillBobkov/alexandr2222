@@ -39,7 +39,6 @@ export const Navigation = () => {
             })}
           </ul>
         </nav>
-        <div></div>
       </header>
       <button
         className={`${styles.burgerButton} ${isOpen ? styles.open : ""}`}
