@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./SecondaryPreview.module.css";
-import secondaryPreview from "../../public/images/preview.png";
+import secondaryPreview from "../../public/images/preview.webp";
 import Image from "next/image.js";
 import { VisibilityManager } from "../VisibilityManager";
 import { LineAnimation } from "../LineAnomation/LineAnimation";

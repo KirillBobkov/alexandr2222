@@ -110,9 +110,9 @@ export function Form({ isSubmitted, setIsSubmitted, type = "" }) {
     <LineAnimation>
       <div className={styles.form}>
         <VisibilityManager side="left" className={styles.form_content}>
-          <h3 className={styles.textTitle}>Готовы измениться?</h3>
+          <h3 className={styles.textTitle}>Готовы жить лучше?</h3>
           <p className={styles.textDescription}>
-            Запишитесь на благотворительную консультацию, и я свяжусь с Вами в
+            Запишитесь на бесплатную консультацию, и я свяжусь с Вами в
             ближайшее время
           </p>
         </VisibilityManager>

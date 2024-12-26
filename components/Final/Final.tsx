@@ -11,7 +11,7 @@ export const Final = () => {
         </VisibilityManager>
         <VisibilityManager as="p" className={styles.description}>
           <span>Узнайте причины своих проблем, способы их решения и возможные преграды
-          на вашем пути к успеху!</span>
+          на Вашем пути к успеху!</span>
         </VisibilityManager>
         <VisibilityManager as="a" href="#message" className={styles.link}>
           <span>Записаться</span>

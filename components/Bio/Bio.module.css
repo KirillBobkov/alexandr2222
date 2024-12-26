@@ -1,7 +1,11 @@
 .block {
-  background: #181818;
+  background-color: #181818;
   gap: 30px;
   padding: 150px 30px 150px;
+  background-image: url('../../public/images/blockbg.webp');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .block__container {

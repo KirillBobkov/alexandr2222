@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./Helping.module.css"; // Adjust the path as necessary
 import { LineAnimation } from "../LineAnomation/LineAnimation";
 import { VisibilityManager } from "../VisibilityManager";
-import alex1 from "../../public/images/alex3.webp";
+import alex5 from "../../public/images/alex5.webp";
 import Image from "next/image";
 import { Button } from "../Button/Button";
 
@@ -13,12 +13,20 @@ export const Helping = () => {
     <LineAnimation>
       <div className={styles.container}>
         <div className={styles.block}>
-          <div className={styles["grid-container"]}>
-          <VisibilityManager as="h2" side="left" className={styles.item1 + ' ' + styles.title}>
-            Я помогу,
+        <VisibilityManager as="h2" side="left" className={styles.title}>
+             Я помогу,
             <br />
             <span className={styles.title_empty}> если вы</span>
-          </VisibilityManager>
+        </VisibilityManager>
+
+
+          <div className={styles["grid-container"]}>
+          <Image
+              src={alex5}
+              alt="Александр Васильев"
+              className={styles.item1 + ' ' + styles.image + " " + (loaded ? styles.loaded : "")}
+              onLoad={() => setLoaded(true)}
+            />
 
             <VisibilityManager className={styles.item2}>
               <TextBlock
@@ -53,7 +61,7 @@ export const Helping = () => {
               />
             </VisibilityManager>
           </div>
-          <Button href="#message" status="Записаться" />
+          <Button className={styles.button} href="#message" status="Записаться" />
         </div>
       </div>
     </LineAnimation>
