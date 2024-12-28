@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./Suggests.module.css"; // Adjust the path as necessary
 import { LineAnimation } from "../LineAnomation/LineAnimation";
 import { VisibilityManager } from "../VisibilityManager";
-import alex1 from "../../public/images/alex3.webp";
+import chart from "../../public/images/chart.webp";
 import Image from "next/image";
 
 export const Suggest = () => {
@@ -36,7 +36,7 @@ export const Suggest = () => {
           <VisibilityManager className={styles.item4}>
             {" "}
             <Image
-              src={alex1}
+              src={chart}
               alt="Александр Васильев"
               className={styles.image + " " + (loaded ? styles.loaded : "")}
               onLoad={() => setLoaded(true)}

@@ -1,9 +1,5 @@
 .container {
   background: #181818;
-  background-image: url('../../public/images/blockbg.webp');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .block {
