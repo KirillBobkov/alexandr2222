@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./AboutMe.module.css"; // Adjust the path as necessary
 import { LineAnimation } from "../LineAnomation/LineAnimation";
 import { VisibilityManager } from "../VisibilityManager";
-import { Button } from "../Button/Button";
+import { Button } from "../Button/Button.jsx";
 export const AboutMe = () => {
 
   return (

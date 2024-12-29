@@ -8,7 +8,7 @@ import {
   validateName,
   validatePhone,
 } from "../../../utils/validation";
-import { Button } from "../../Button/Button";
+import { Button } from "../../Button/Button.jsx";
 import { Input } from "../../Input/Input";
 import Image from "next/image";
 

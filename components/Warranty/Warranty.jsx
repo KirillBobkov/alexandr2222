@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Warranty.module.css"; // Adjust the path as necessary
 import { VisibilityManager } from "../VisibilityManager";
-import { Button } from "../Button/Button";
+import { Button } from "../Button/Button.jsx";
 
 export const Warranty = () => {
   return (

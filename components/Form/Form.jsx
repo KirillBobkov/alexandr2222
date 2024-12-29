@@ -1,15 +1,16 @@
 import React, { useState } from "react";
 import { Input } from "../Input/Input";
-import { Button } from "../Button/Button";
 import {
   validateName,
   validatePhone,
   formatPhoneNumber,
 } from "../../utils/validation";
+import { Button } from "../Button/Button.jsx";
+
 import styles from "./Form.module.css";
-import containerStyles from "../../styles/container.module.css";
 import { LineAnimation } from "../LineAnomation/LineAnimation";
 import { VisibilityManager } from "../VisibilityManager";
+
 
 export function Form({ isSubmitted, setIsSubmitted, type = "" }) {
   const [formData, setFormData] = useState({
@@ -74,21 +75,22 @@ export function Form({ isSubmitted, setIsSubmitted, type = "" }) {
       const chat_id = "-1002359699160";
       const url = `https://api.telegram.org/bot${token}/sendMessage`; // The url to request
 
-      fetch(url, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json;charset=UTF-8",
-        },
-        body: JSON.stringify({
-          chat_id,
-          parse_mode: "html",
-          text: `<b>Новая запись на консультацию</b>\n\n<b>Программа</b>: ${
-            type ?? "отсутствует"
-          }\n<b>Имя</b>: ${formData.name}\n<b>Номер телефона</b>: ${
-            formData.phone
-          }\n`,
-        }),
-      })
+      // fetch(url, {
+      //   method: "POST",
+      //   headers: {
+      //     "Content-Type": "application/json;charset=UTF-8",
+      //   },
+      //   body: JSON.stringify({
+      //     chat_id,
+      //     parse_mode: "html",
+      //     text: `<b>Новая запись на консультацию</b>\n\n<b>Программа</b>: ${
+      //       type ?? "отсутствует"
+      //     }\n<b>Имя</b>: ${formData.name}\n<b>Номер телефона</b>: ${
+      //       formData.phone
+      //     }\n`,
+      //   }),
+      // })
+      Promise.resolve()
         .then(() => {
           console.log(
             `<b>Новая запись на консультацию</b>\n\n<b>Программа</b>: ${

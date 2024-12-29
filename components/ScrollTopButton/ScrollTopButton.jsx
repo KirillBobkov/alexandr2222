@@ -26,7 +26,7 @@ export default () => {
 
     const onClick = useCallback((e) => {
         document.body.scrollTo({ top: 0, behavior: 'smooth' });
-        window.location.hash = '';
+        router.push('', undefined, { shallow: true });
     }, [router]);
 
     useEffect(() => {

@@ -4,7 +4,7 @@ import { LineAnimation } from "../LineAnomation/LineAnimation";
 import { VisibilityManager } from "../VisibilityManager";
 import alex5 from "../../public/images/alex5.webp";
 import Image from "next/image";
-import { Button } from "../Button/Button";
+import { Button } from "../Button/Button.jsx";
 
 export const Helping = () => {
   const [loaded, setLoaded] = React.useState(false);
