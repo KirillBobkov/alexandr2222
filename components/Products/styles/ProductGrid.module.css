@@ -39,7 +39,12 @@
   border-radius: 20px;
   min-height: 400px;
   background: linear-gradient(-45deg, var(--accent) 16%, #000000 53%, #000000 83%);
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
 
+.loaded {
+  opacity: 1;
 }
 
 .card:before {
@@ -89,13 +94,10 @@
 .cardImage {
   width: 200px;
   height: 200px;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-}
-
-.loaded {
   opacity: 0.3;
 }
+
+
 
 .title {
   position: absolute;

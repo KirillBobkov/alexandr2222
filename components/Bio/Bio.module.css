@@ -135,10 +135,6 @@
 
 
   .imageWrapper {
-    height: 450px; /* Adjust image height for tablets */
+    flex-basis: 60%;
   }
-}
-
-@media (max-width: 768px) {
-
 }

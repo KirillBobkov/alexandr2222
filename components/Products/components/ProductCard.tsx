@@ -15,11 +15,11 @@ export const ProductCard: React.FC<ProductCardProps> = ({
   const [loaded, setLoaded] = React.useState(false);
 
   return (
-    <Link prefetch={false} href={product.href} className={styles.card}>
+    <Link prefetch={false} href={product.href} className={styles.card + " " + (loaded ? styles.loaded : "")}>
       <Image
         src={product.image}
         alt={product.title}
-        className={styles.cardImage + " " + (loaded ? styles.loaded : "")}
+        className={styles.cardImage}
         onLoad={() => setLoaded(true)}
       />
       <h3 className={styles.title}>

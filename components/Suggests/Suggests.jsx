@@ -17,7 +17,7 @@ export const Suggest = () => {
         </VisibilityManager>
 
         <div className={styles["grid-container"]}>
-          <VisibilityManager className={styles.item2}>
+          <VisibilityManager className={styles.item5}>
             <TextBlock
               title={"Мгновенные результаты во всех сферах "}
               desc={
@@ -42,7 +42,7 @@ export const Suggest = () => {
               onLoad={() => setLoaded(true)}
             />
           </VisibilityManager>
-          <VisibilityManager className={styles.item5}>
+          <VisibilityManager className={styles.item2}>
             <TextBlock
               title={"Результат "}
               desc={

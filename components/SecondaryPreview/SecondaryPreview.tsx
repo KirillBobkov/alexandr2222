@@ -1,18 +1,16 @@
 import React from "react";
 import styles from "./SecondaryPreview.module.css";
-import secondaryPreview from "../../public/images/preview.webp";
 import Image from "next/image.js";
 import { VisibilityManager } from "../VisibilityManager";
 import { LineAnimation } from "../LineAnomation/LineAnimation";
 
-export const SecondaryPreview = ({ text }) => {
+export const SecondaryPreview = ({ text, image }) => {
   const [loaded, setLoaded] = React.useState(false);
   
   return (
-    <LineAnimation>
     <section className={styles.secondaryPreview}>
       <Image
-        src={secondaryPreview}
+        src={image}
         alt="заставка превью"
         className={styles.secondaryPreview__bg + " " + (loaded ? styles.loaded : "")}
         onLoad={() => setLoaded(true)}
@@ -21,6 +19,5 @@ export const SecondaryPreview = ({ text }) => {
         <h1 className={styles.secondaryPreview__title}>{text}</h1>
       </VisibilityManager>
     </section>
-    </LineAnimation>
   );
 };

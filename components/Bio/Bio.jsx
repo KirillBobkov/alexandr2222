@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image"; // Adjust this import based on your image handling
 import styles from "./Bio.module.css";
-import alex1 from "../../public/images/alex1.webp";
+import alex3 from "../../public/images/alex3.webp";
 import { VisibilityManager } from "../VisibilityManager";
 
 export const Bio = () => {
@@ -14,7 +14,7 @@ export const Bio = () => {
       <div className={styles.block__container}>
       <VisibilityManager  className={styles.imageWrapper}>
           <Image
-            src={alex1}
+            src={alex3}
             alt="Александр Васильев"
             className={styles.image + " " + (loaded ? styles.loaded : "")}
             onLoad={() => setLoaded(true)}

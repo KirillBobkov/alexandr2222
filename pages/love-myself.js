@@ -9,6 +9,8 @@ import { VisibilityManager } from "../components/VisibilityManager";
 import containerStyles from "../styles/container.module.css";
 import contentStyles from "../styles/contentStyles.module.css";
 
+import secondary_preview_2 from '../public/images/secondary_preview_2.webp';
+
 export default function ConsultationPage() {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -22,7 +24,7 @@ export default function ConsultationPage() {
 
   return (
     <Layout metaConfig={metaConfig}>
-      <SecondaryPreview text={content.pageTitle} />
+      <SecondaryPreview text={content.pageTitle} image={secondary_preview_2} />
       <LineAnimation>
         <div className={containerStyles.container}>
           <VisibilityManager as="p">
