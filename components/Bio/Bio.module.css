@@ -135,6 +135,6 @@
 
 
   .imageWrapper {
-    flex-basis: 60%;
+    max-height: 300px;
   }
 }
