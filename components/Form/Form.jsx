@@ -11,7 +11,6 @@ import styles from "./Form.module.css";
 import { LineAnimation } from "../LineAnomation/LineAnimation";
 import { VisibilityManager } from "../VisibilityManager";
 
-
 export function Form({ isSubmitted, setIsSubmitted, type = "" }) {
   const [formData, setFormData] = useState({
     name: "",
@@ -75,22 +74,21 @@ export function Form({ isSubmitted, setIsSubmitted, type = "" }) {
       const chat_id = "-1002359699160";
       const url = `https://api.telegram.org/bot${token}/sendMessage`; // The url to request
 
-      // fetch(url, {
-      //   method: "POST",
-      //   headers: {
-      //     "Content-Type": "application/json;charset=UTF-8",
-      //   },
-      //   body: JSON.stringify({
-      //     chat_id,
-      //     parse_mode: "html",
-      //     text: `<b>Новая запись на консультацию</b>\n\n<b>Программа</b>: ${
-      //       type ?? "отсутствует"
-      //     }\n<b>Имя</b>: ${formData.name}\n<b>Номер телефона</b>: ${
-      //       formData.phone
-      //     }\n`,
-      //   }),
-      // })
-      Promise.resolve()
+      fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json;charset=UTF-8",
+        },
+        body: JSON.stringify({
+          chat_id,
+          parse_mode: "html",
+          text: `<b>Новая запись на консультацию</b>\n\n<b>Программа</b>: ${
+            type ?? "отсутствует"
+          }\n<b>Имя</b>: ${formData.name}\n<b>Номер телефона</b>: ${
+            formData.phone
+          }\n`,
+        }),
+      })
         .then(() => {
           console.log(
             `<b>Новая запись на консультацию</b>\n\n<b>Программа</b>: ${
@@ -119,14 +117,13 @@ export function Form({ isSubmitted, setIsSubmitted, type = "" }) {
           <h3 className={styles.textTitle}>Готовы жить лучше?</h3>
           <p className={styles.textDescription}>
             Запишитесь на бесплатную консультацию, и я свяжусь с Вами в
-            ближайшее время. 
+            ближайшее время.
           </p>
-          <br/>
+          <br />
           <p className={styles.textDescription}>
-            Первая консультация 20 мин бесплатно. Подготовьте
-            вопрос, который Вас интересует, и я раскрою и решу Вашу проблему, а
-            Вы уже сможете сделать вывод, обращаться ко мне в дальнейшем или
-            нет."
+            Первая консультация 20 мин бесплатно. Подготовьте вопрос, который
+            Вас интересует, и я раскрою и решу Вашу проблему, а Вы уже сможете
+            сделать вывод, обращаться ко мне в дальнейшем или нет."
           </p>
         </VisibilityManager>
         <form onSubmit={handleSubmit} className={styles.form__item}>
@@ -161,12 +158,14 @@ export function Form({ isSubmitted, setIsSubmitted, type = "" }) {
               position: "relative",
             }}
           >
-            <Button
-              status={"Записаться"}
-              isSubmitted={isSubmitted}
-              disabled={isSubmitted}
+            <VisibilityManager
+              as="button"
+              type="submit"
               className={styles.formbutton}
-            />
+              disabled={isSubmitted}
+            >
+              {"Записаться"}
+            </VisibilityManager>
             <VisibilityManager className={styles["form-checkbox"]}>
               <input
                 name="checkbox"

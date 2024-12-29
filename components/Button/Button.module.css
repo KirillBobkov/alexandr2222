@@ -51,24 +51,6 @@
   opacity: 0.5;
 }
 
-.hover {
-  animation-duration: 1500ms;
-  animation-delay: 300ms;
-  animation-name: fadeInRight;
-  -webkit-animation-name: fadeInRight;
-}
-
-.hover::after {
-  width: 70px;
-  -webkit-transition: 500ms all ease;
-  transition: 500ms all ease;
-}
-
-.button.hover:hover:after {
-  width: 100%;
-  border-radius: 35px;
-}
-
 .success {
   background-color: var(--base-color-1);
   opacity: 0.5!important;
@@ -76,6 +58,25 @@
 
 @media (max-width: 768px) {
   .button {
+    width: 100%;
+  }
+}
+
+@media (hover: hover) {
+  .button {
+    animation-duration: 1500ms;
+    animation-delay: 300ms;
+    animation-name: fadeInRight;
+    -webkit-animation-name: fadeInRight;
+  }
+  
+  .button::after {
+    width: 70px;
+    -webkit-transition: 500ms all ease;
+    transition: 500ms all ease;
+  }
+  
+  .button:hover:after {
     width: 100%;
   }
 }

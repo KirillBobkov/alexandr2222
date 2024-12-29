@@ -14,18 +14,15 @@ export const Button = ({
   const [progress, setProgress] = useState(20); // Процент заполнения кнопки
   const router = useRouter();
 
-  // Определить, мобильное устройство или нет
-  const isMobile = () => {
-    return typeof window !== "undefined" && window.matchMedia("(pointer: coarse)").matches;
-  };
-
   // Обработчики для свайпа на мобильных устройствах
   const handleTouchStart = (e) => {
+    e.preventDefault();
     touchStartX.current = e.touches[0].clientX;
     setProgress(20); // Сброс прогресса
   };
 
   const handleTouchMove = (e) => {
+    e.preventDefault();
     const touchEndX = e.touches[0].clientX;
     const distance = Math.max(0, touchEndX - touchStartX.current); // Расстояние свайпа
     const buttonWidth = e.target.offsetWidth * 0.8; // Ширина кнопки
@@ -33,7 +30,8 @@ export const Button = ({
     setProgress(20 + swipeProgress); // Установить прогресс
   };
 
-  const handleTouchEnd = () => {
+  const handleTouchEnd = (e) => {
+    e.preventDefault();
     if (progress >= 70) {
       // Если прогресс достиг 100%, выполнить действие
       if (href) router.push(href, undefined, { shallow: true });
@@ -45,17 +43,17 @@ export const Button = ({
 
   return (
     <VisibilityManager
-      as={href ? "a" : "button"}
+      as="a"
       href={href}
       disabled={disabled}
-      className={`${styles.button} ${!isMobile() ? styles.hover : ''} ${className} ${
+      className={`${styles.button} ${className} ${
         isSubmitted ? styles.success : ""
       }`}
       onClick={(e) => {
-        if (href) {
-          e.preventDefault();
+        if (window.matchMedia("(pointer: coarse)").matches) {
+          e.preventDefault(); // Блокирует клик на мобильных
+          router.push(href, undefined, { shallow: true });
         }
-        !isMobile() && href && router.push(href, undefined, { shallow: true });
       }}
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
