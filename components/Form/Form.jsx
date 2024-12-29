@@ -82,7 +82,11 @@ export function Form({ isSubmitted, setIsSubmitted, type = "" }) {
         body: JSON.stringify({
           chat_id,
           parse_mode: "html",
-          text: `<b>Новая запись на консультацию</b>\n\n<b>Программа</b>: ${type ?? 'отсутствует'}\n<b>Имя</b>: ${formData.name}\n<b>Номер телефона</b>: ${formData.phone}\n`,
+          text: `<b>Новая запись на консультацию</b>\n\n<b>Программа</b>: ${
+            type ?? "отсутствует"
+          }\n<b>Имя</b>: ${formData.name}\n<b>Номер телефона</b>: ${
+            formData.phone
+          }\n`,
         }),
       })
         .then(() => {
@@ -113,7 +117,14 @@ export function Form({ isSubmitted, setIsSubmitted, type = "" }) {
           <h3 className={styles.textTitle}>Готовы жить лучше?</h3>
           <p className={styles.textDescription}>
             Запишитесь на бесплатную консультацию, и я свяжусь с Вами в
-            ближайшее время
+            ближайшее время. 
+          </p>
+          <br/>
+          <p className={styles.textDescription}>
+            Первая консультация 20 мин бесплатно. Подготовьте
+            вопрос, который Вас интересует, и я раскрою и решу Вашу проблему, а
+            Вы уже сможете сделать вывод, обращаться ко мне в дальнейшем или
+            нет."
           </p>
         </VisibilityManager>
         <form onSubmit={handleSubmit} className={styles.form__item}>
@@ -121,7 +132,7 @@ export function Form({ isSubmitted, setIsSubmitted, type = "" }) {
             <Input
               type="text"
               name="name"
-              placeholder="Введите ваше имя"
+              placeholder="Введите Ваше имя"
               value={formData.name}
               onChange={handleChange}
               disabled={isSubmitted}
@@ -132,7 +143,7 @@ export function Form({ isSubmitted, setIsSubmitted, type = "" }) {
             <Input
               type="tel"
               name="phone"
-              placeholder="Введите ваш номер телефона"
+              placeholder="Введите Ваш номер телефона"
               value={formData.phone}
               onChange={handleChange}
               disabled={isSubmitted}
@@ -193,16 +204,20 @@ export function Form({ isSubmitted, setIsSubmitted, type = "" }) {
                     Что-то пошло не так. Свяжитесь, пожалуйста, со мной в
                     Телеграм по{" "}
                     <a
-                    target="_blank"
+                      target="_blank"
                       href="https://t.me/Z44LP"
-                      style={{ color: 'var(--accent)', fontWeight: "bold", cursor: 'pointer' }}
+                      style={{
+                        color: "var(--accent)",
+                        fontWeight: "bold",
+                        cursor: "pointer",
+                      }}
                     >
                       ссылке
                     </a>
                   </p>
                 ) : null}
                 {message === "success" ? (
-                  <p>Спасибо, ваша запись оформлена.</p>
+                  <p>Спасибо, Ваша запись оформлена.</p>
                 ) : null}
               </VisibilityManager>
             ) : null}

@@ -12,6 +12,8 @@ import { Helping } from "../components/Helping/Helping";
 import { Final } from "../components/Final/Final";
 import { Products } from "../components/Products/Products";
 import { Questions } from "../components/Questions/Questions";
+import { AboutMe } from "../components/AboutMe/AboutMe";
+import { Arsenal } from "../components/Arsenal/Arsenal";
 export default function MainPage() {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -27,6 +29,8 @@ export default function MainPage() {
     <Layout metaConfig={metaConfig}>
       <Preview />
       <Bio />
+      <AboutMe />
+      <Arsenal />
       <Warranty />
       <AnimatedLine /> 
       <Suggest />
