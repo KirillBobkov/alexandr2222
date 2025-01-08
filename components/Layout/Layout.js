@@ -30,7 +30,7 @@ const rubik = Rubik({
   subsets: ["cyrillic"],
 });
 
-export default function Layout({ children, metaConfig }) {
+export default function Layout({ children, metaConfig, schemaOrg = '' }) {
   const { title, description, keywords } = metaConfig;
 
   return (
@@ -45,6 +45,10 @@ export default function Layout({ children, metaConfig }) {
 
         <title>{title}</title>
         <meta name="description" content={description} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: schemaOrg }}
+        />
         <meta charSet="utf-8" />
         <meta
           name="viewport"
@@ -75,6 +79,7 @@ export default function Layout({ children, metaConfig }) {
           href={favicon180x180.src}
         />
         <link rel="apple-touch-startup-image" href={favicon32x32.src} />
+      
       </Head>
       <Navigation />
       <main>{children}</main>
