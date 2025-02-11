@@ -13,7 +13,7 @@
 }
 
 .imageWrapper {
-  flex-basis: 50%; /* Устанавливаем ширину элемента на 50% */
+  flex-basis: 40%; /* Устанавливаем ширину элемента на 50% */
   position: relative;
   aspect-ratio: 2/2.3;
 }
@@ -38,7 +38,7 @@
   flex-direction: column;
   justify-content: center; /* Center text vertically */
   align-items: center; /* Center text horizontally */
-  flex-basis: 45%;
+  flex-basis: 55%;
   max-width: 600px;
 }
 

@@ -34,17 +34,17 @@
 .grid-container {
   display: grid;
   grid-template-areas:
-    "title text1 text4"
-    "title text2 text3";
+    "text1 text4"
+    "text2 text3";
   gap: 80px 50px;
   grid-auto-columns: 1fr;
   margin-bottom: 120px;
 }
 
 .item1 {
-  grid-area: title;
   align-content: center;
 }
+
 .item2 {
   grid-area: text1;
 }
@@ -91,7 +91,7 @@
 }
 
 .button {
- align-self: flex-end;
+ align-self: center;
 }
 
 @media (max-width: 768px) {

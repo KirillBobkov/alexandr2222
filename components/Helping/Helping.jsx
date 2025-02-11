@@ -2,31 +2,19 @@ import React from "react";
 import styles from "./Helping.module.css"; // Adjust the path as necessary
 import { LineAnimation } from "../LineAnomation/LineAnimation";
 import { VisibilityManager } from "../VisibilityManager";
-import alex5 from "../../public/images/alex5.webp";
-import Image from "next/image";
 import { Button } from "../Button/Button.jsx";
 
 export const Helping = () => {
-  const [loaded, setLoaded] = React.useState(false);
-
   return (
     <LineAnimation>
       <div className={styles.container}>
         <div className={styles.block}>
         <VisibilityManager as="h2" side="left" className={styles.title}>
              Я помогу,
-            <br />
             <span className={styles.title_empty}> если вы</span>
         </VisibilityManager>
-
-
           <div className={styles["grid-container"]}>
-          <Image
-              src={alex5}
-              alt="Александр Васильев"
-              className={styles.item1 + ' ' + styles.image + " " + (loaded ? styles.loaded : "")}
-              onLoad={() => setLoaded(true)}
-            />
+   
 
             <VisibilityManager className={styles.item2}>
               <TextBlock
@@ -72,7 +60,7 @@ const TextBlock = ({ title, desc }) => {
   return (
     <div className={styles.textBlock}>
       <h3 className={styles.textTitle}>
-      <span className={styles.textSymbol}>●</span> 
+      <span className={styles.textSymbol}>//</span> 
         {'  '}
         {title}
       </h3>

@@ -49,9 +49,8 @@ export const Button = ({
       className={`${styles.button} ${className} ${
         isSubmitted ? styles.success : ""
       }`}
-      onClick={(e) => {
-        if (window.matchMedia("(pointer: coarse)").matches) {
-          e.preventDefault(); // Блокирует клик на мобильных
+      onMouseUp={(e) => {
+        if (href) {
           router.push(href, undefined, { shallow: true });
         }
       }}
