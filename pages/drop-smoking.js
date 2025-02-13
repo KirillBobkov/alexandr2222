@@ -8,9 +8,9 @@ import { LineAnimation } from "../components/LineAnomation/LineAnimation";
 import { VisibilityManager } from "../components/shared/VisibilityManager";
 import containerStyles from "../styles/container.module.css";
 import contentStyles from "../styles/contentStyles.module.css";
-import secondary_preview_6 from '../public/images/secondary_preview_6.webp';
+import secondary_preview_6 from "../public/images/secondary_preview_6.webp";
 
-export default function() {
+export default function () {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   useScrollToLocation();
@@ -31,16 +31,15 @@ export default function() {
             помогу Вам быстро и эффективно избавиться от никотиновой
             зависимости.
           </VisibilityManager>
-          <VisibilityManager style={{ width: '100%' }} as="p">
+          <VisibilityManager style={{ width: "100%" }} as="p">
             Зависимость от курения – это не просто вредная привычка, это глубоко
             укоренившаяся подсознательная программа. Она влияет на Ваше
-            поведение, эмоции и даже Ваше самочувствие. 
+            поведение, эмоции и даже Ваше самочувствие.
           </VisibilityManager>
-    
+
           <VisibilityManager as="p">
             Моя методика направлена на работу с Вашим подсознанием, чтобы
-            переписать эти программы. 
-            Я использую эффективные техники, которые
+            переписать эти программы. Я использую эффективные техники, которые
             помогают Вам выявить и трансформировать подсознательные установки,
             которые сейчас поддерживают Вашу зависимость.
           </VisibilityManager>
@@ -77,7 +76,7 @@ export default function() {
           </VisibilityManager>
 
           <VisibilityManager as="div" className={contentStyles.textBlock}>
-            <h3 className={contentStyles.textTitle}>
+            <h3 className={contentStyles.title_small}>
               <span className={contentStyles.textSymbol}>//</span>
               {"  "}
               {"Снижение риска развития рака"}
@@ -90,7 +89,7 @@ export default function() {
           </VisibilityManager>
 
           <VisibilityManager as="div" className={contentStyles.textBlock}>
-            <h3 className={contentStyles.textTitle}>
+            <h3 className={contentStyles.title_small}>
               <span className={contentStyles.textSymbol}>//</span>
               {"  "}
               {"Улучшение работы сердечно-сосудистой системы"}
@@ -103,7 +102,7 @@ export default function() {
           </VisibilityManager>
 
           <VisibilityManager as="div" className={contentStyles.textBlock}>
-            <h3 className={contentStyles.textTitle}>
+            <h3 className={contentStyles.title_small}>
               <span className={contentStyles.textSymbol}>//</span>
               {"  "}
               {"Улучшение функции легких"}
@@ -116,7 +115,7 @@ export default function() {
           </VisibilityManager>
 
           <VisibilityManager as="div" className={contentStyles.textBlock}>
-            <h3 className={contentStyles.textTitle}>
+            <h3 className={contentStyles.title_small}>
               <span className={contentStyles.textSymbol}>//</span>
               {"  "}
               {"Снижение риска респираторных заболеваний"}
@@ -128,7 +127,7 @@ export default function() {
           </VisibilityManager>
 
           <VisibilityManager as="div" className={contentStyles.textBlock}>
-            <h3 className={contentStyles.textTitle}>
+            <h3 className={contentStyles.title_small}>
               <span className={contentStyles.textSymbol}>//</span>
               {"  "}
               {"Улучшение иммунитета"}
@@ -139,7 +138,7 @@ export default function() {
           </VisibilityManager>
 
           <VisibilityManager as="div" className={contentStyles.textBlock}>
-            <h3 className={contentStyles.textTitle}>
+            <h3 className={contentStyles.title_small}>
               <span className={contentStyles.textSymbol}>//</span>
               {"  "}
               {"Снижение риска развития диабета 2 типа"}
@@ -151,7 +150,7 @@ export default function() {
           </VisibilityManager>
 
           <VisibilityManager as="div" className={contentStyles.textBlock}>
-            <h3 className={contentStyles.textTitle}>
+            <h3 className={contentStyles.title_small}>
               <span className={contentStyles.textSymbol}>//</span>
               {"  "}
               {"Улучшение фертильности"}
@@ -162,7 +161,7 @@ export default function() {
           </VisibilityManager>
 
           <VisibilityManager as="div" className={contentStyles.textBlock}>
-            <h3 className={contentStyles.textTitle}>
+            <h3 className={contentStyles.title_small}>
               <span className={contentStyles.textSymbol}>//</span>
               {"  "}
               {"Улучшение состояния кожи, волос и зубов"}
@@ -173,7 +172,7 @@ export default function() {
             </p>
           </VisibilityManager>
           <VisibilityManager as="div" className={contentStyles.textBlock}>
-            <h3 className={contentStyles.textTitle}>
+            <h3 className={contentStyles.title_small}>
               <span className={contentStyles.textSymbol}>//</span>
               {"  "}
               {"Увеличение продолжительности жизни"}
@@ -188,7 +187,7 @@ export default function() {
           </VisibilityManager>
 
           <VisibilityManager as="div" className={contentStyles.textBlock}>
-            <h3 className={contentStyles.textTitle}>
+            <h3 className={contentStyles.title_small}>
               <span className={contentStyles.textSymbol}>//</span>
               {"  "}
               {"Повышение уверенности в себе"}
@@ -200,7 +199,7 @@ export default function() {
           </VisibilityManager>
 
           <VisibilityManager as="div" className={contentStyles.textBlock}>
-            <h3 className={contentStyles.textTitle}>
+            <h3 className={contentStyles.title_small}>
               <span className={contentStyles.textSymbol}>//</span>
               {"  "}
               {"Снижение уровня стресса и тревоги"}
@@ -213,7 +212,7 @@ export default function() {
           </VisibilityManager>
 
           <VisibilityManager as="div" className={contentStyles.textBlock}>
-            <h3 className={contentStyles.textTitle}>
+            <h3 className={contentStyles.title_small}>
               <span className={contentStyles.textSymbol}>//</span>
               {"  "}
               {"Улучшение настроения"}
@@ -225,7 +224,7 @@ export default function() {
           </VisibilityManager>
 
           <VisibilityManager as="div" className={contentStyles.textBlock}>
-            <h3 className={contentStyles.textTitle}>
+            <h3 className={contentStyles.title_small}>
               <span className={contentStyles.textSymbol}>//</span>
               {"  "}
               {"Снижение риска депрессии"}
@@ -237,7 +236,7 @@ export default function() {
           </VisibilityManager>
 
           <VisibilityManager as="div" className={contentStyles.textBlock}>
-            <h3 className={contentStyles.textTitle}>
+            <h3 className={contentStyles.title_small}>
               <span className={contentStyles.textSymbol}>//</span>
               {"  "}
               {"Повышение когнитивных функций"}
@@ -251,7 +250,7 @@ export default function() {
             Социальные аспекты
           </VisibilityManager>
           <VisibilityManager as="div" className={contentStyles.textBlock}>
-            <h3 className={contentStyles.textTitle}>
+            <h3 className={contentStyles.title_small}>
               <span className={contentStyles.textSymbol}>//</span>
               {"  "}
               {"Улучшение отношений с окружающими"}
@@ -264,7 +263,7 @@ export default function() {
           </VisibilityManager>
 
           <VisibilityManager as="div" className={contentStyles.textBlock}>
-            <h3 className={contentStyles.textTitle}>
+            <h3 className={contentStyles.title_small}>
               <span className={contentStyles.textSymbol}>//</span>
               {"  "}
               {"Избавление от неприятного запаха"}
@@ -276,7 +275,7 @@ export default function() {
           </VisibilityManager>
 
           <VisibilityManager as="div" className={contentStyles.textBlock}>
-            <h3 className={contentStyles.textTitle}>
+            <h3 className={contentStyles.title_small}>
               <span className={contentStyles.textSymbol}>//</span>
               {"  "}
               {"Пример для подражания"}
@@ -287,7 +286,7 @@ export default function() {
           </VisibilityManager>
 
           <VisibilityManager as="div" className={contentStyles.textBlock}>
-            <h3 className={contentStyles.textTitle}>
+            <h3 className={contentStyles.title_small}>
               <span className={contentStyles.textSymbol}>//</span>
               {"  "}
               {"Повышение социальной активности"}
@@ -303,7 +302,7 @@ export default function() {
           </VisibilityManager>
 
           <VisibilityManager as="div" className={contentStyles.textBlock}>
-            <h3 className={contentStyles.textTitle}>
+            <h3 className={contentStyles.title_small}>
               <span className={contentStyles.textSymbol}>//</span>
               {"  "}
               {"Экономия денег"}
@@ -315,7 +314,7 @@ export default function() {
           </VisibilityManager>
 
           <VisibilityManager as="div" className={contentStyles.textBlock}>
-            <h3 className={contentStyles.textTitle}>
+            <h3 className={contentStyles.title_small}>
               <span className={contentStyles.textSymbol}>//</span>
               {"  "}
               {"Меньшие затраты на медицинское обслуживание"}
@@ -327,7 +326,7 @@ export default function() {
           </VisibilityManager>
 
           <VisibilityManager as="div" className={contentStyles.textBlock}>
-            <h3 className={contentStyles.textTitle}>
+            <h3 className={contentStyles.title_small}>
               <span className={contentStyles.textSymbol}>//</span>
               {"  "}
               {
@@ -344,7 +343,7 @@ export default function() {
           </VisibilityManager>
 
           <VisibilityManager as="div" className={contentStyles.textBlock}>
-            <h3 className={contentStyles.textTitle}>
+            <h3 className={contentStyles.title_small}>
               <span className={contentStyles.textSymbol}>//</span>
               {"  "}
               {"Улучшение вкусовых ощущений"}
@@ -355,7 +354,7 @@ export default function() {
           </VisibilityManager>
 
           <VisibilityManager as="div" className={contentStyles.textBlock}>
-            <h3 className={contentStyles.textTitle}>
+            <h3 className={contentStyles.title_small}>
               <span className={contentStyles.textSymbol}>//</span>
               {"  "}
               {"Улучшение обоняния"}
@@ -366,7 +365,7 @@ export default function() {
           </VisibilityManager>
 
           <VisibilityManager as="div" className={contentStyles.textBlock}>
-            <h3 className={contentStyles.textTitle}>
+            <h3 className={contentStyles.title_small}>
               <span className={contentStyles.textSymbol}>//</span>
               {"  "}
               {"Общее улучшение качества жизни"}
@@ -389,12 +388,17 @@ export default function() {
           </VisibilityManager>
 
           <VisibilityManager as="p">
-          Забудьте о курении и начните дышать полной грудью. Запишитесь на бесплатную консультацию прямо сейчас!
+            Забудьте о курении и начните дышать полной грудью. Запишитесь на
+            бесплатную консультацию прямо сейчас!
           </VisibilityManager>
         </div>
       </LineAnimation>
       <div id="message" />
-      <Form setIsSubmitted={setIsSubmitted} isSubmitted={isSubmitted} type={content.pageTitle}/>
+      <Form
+        setIsSubmitted={setIsSubmitted}
+        isSubmitted={isSubmitted}
+        type={content.pageTitle}
+      />
     </Layout>
   );
 }

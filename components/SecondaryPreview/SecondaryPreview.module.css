@@ -57,12 +57,11 @@
       line-height: 72px;
       padding: 10px;
     }
-  
   }
   
   @media (max-width: 480px) {
     .secondaryPreview__title {
-      font-size: 35px; /* Even smaller title size for very small screens */
+      font-size: 30px; /* Even smaller title size for very small screens */
       line-height: 40px;
     }
   }

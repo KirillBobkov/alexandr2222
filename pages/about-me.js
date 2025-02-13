@@ -122,10 +122,8 @@ export default function() {
         title="Приглашаю вас на путь исцеления"
         description="Если вы чувствуете, что застряли в жизни, страдаете от болезней или просто хотите узнать своё предназначение и наконец-то обрести гармонию, то я готов стать вашим проводником. Вместе мы найдём корень ваших проблем и создадим условия для исцеления и желаемой трансформации."
         buttonText="Записаться"
-        buttonHref="#message"
+        buttonHref="/#message"
       />
-      <div id="message" />
-      <Form setIsSubmitted={setIsSubmitted} isSubmitted={isSubmitted} type="about-me"/>
     </Layout>
   );
 }
