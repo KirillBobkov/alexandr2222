@@ -57,7 +57,7 @@ export function Footer() {
               </a>
             </li>
           </ul>
-          <p className={styles.year}>© 2024 Александр "Интеграл" Васильев</p>
+          <p className={styles.year}>© {new Date().getFullYear()} Александр "Интеграл" Васильев</p>
         </div>
       </div>
     </footer>

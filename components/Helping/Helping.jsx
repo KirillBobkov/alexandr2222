@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "./Helping.module.css"; // Adjust the path as necessary
 import { LineAnimation } from "../LineAnomation/LineAnimation";
-import { VisibilityManager } from "../VisibilityManager";
-import { Button } from "../Button/Button.jsx";
+import { VisibilityManager } from "../shared/VisibilityManager";
+import { Button } from "../shared/Button/Button.jsx";
 
 export const Helping = () => {
   return (

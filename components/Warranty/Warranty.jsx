@@ -1,11 +1,11 @@
 import React from "react";
 import styles from "./Warranty.module.css"; // Adjust the path as necessary
-import { VisibilityManager } from "../VisibilityManager";
-import { Button } from "../Button/Button.jsx";
-
+import { VisibilityManager } from "../shared/VisibilityManager";
+import { Button } from "../shared/Button/Button.jsx";
+import { LineAnimation } from "../LineAnomation/LineAnimation";
 export const Warranty = () => {
   return (
-    <div  className={styles.blockContainer}>
+    <LineAnimation>
       <div className={styles.block}>
         <VisibilityManager as="h2" side="left" className={styles.title}>
           Я уверен{" "}
@@ -19,6 +19,6 @@ export const Warranty = () => {
           <Button href="#message" status="Записаться" />
         </VisibilityManager>
       </div>
-    </div>
+    </LineAnimation>
   );
 };

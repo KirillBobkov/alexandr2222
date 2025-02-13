@@ -3,7 +3,7 @@ import styles from "./VideoWidget.module.css";
 import { VideoPlayer } from "../VideoPlayer/VideoPlayer";
 import { VideoList } from "../VideoList/VideoList";
 import { LineAnimation } from "../LineAnomation/LineAnimation";
-import { VisibilityManager } from "../VisibilityManager";
+import { VisibilityManager } from "../shared/VisibilityManager";
 
 export interface Video {
   link: string;

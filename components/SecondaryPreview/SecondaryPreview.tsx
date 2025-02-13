@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./SecondaryPreview.module.css";
 import Image from "next/image.js";
-import { VisibilityManager } from "../VisibilityManager";
+import { VisibilityManager } from "../shared/VisibilityManager";
 import { LineAnimation } from "../LineAnomation/LineAnimation";
 
 export const SecondaryPreview = ({ text, image }) => {

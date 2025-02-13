@@ -1,0 +1,37 @@
+.button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 0;
+    color: var(--accent);
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    font-size: 16px;
+    font-weight: 700;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+ 
+    letter-spacing: 0.14em;
+  }
+  
+  .button:hover {
+    transform: translateX(4px);
+  }
+  
+  .text {
+    font-size: 16px;
+  }
+  
+  .arrow {
+    transition: transform 0.2s ease;
+  }
+  
+  .button:hover .arrow {
+    transform: translateX(4px);
+  }

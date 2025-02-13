@@ -4,9 +4,11 @@ import logo from "../../public/images/logo.webp";
 import Image from "next/image.js";
 import Link from "next/link";
 import { products } from "../Products/data/products";
+import { useRouter } from 'next/router';
 
 export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const router = useRouter();
 
   const handleClick = (e, path) => {
     setIsOpen(!isOpen);
@@ -27,6 +29,10 @@ export const Navigation = () => {
         <nav>
           <ul className={styles.navigation}>
             {navigationTree.map((item, i) => {
+              const isActive = router.pathname === item.parent.path || 
+                             (item.childs && item.childs.some(child => 
+                               router.pathname === child.path
+                             ));
               return (
                 <Dropdown
                   key={i}
@@ -34,6 +40,7 @@ export const Navigation = () => {
                   href={item.parent.path}
                   childs={item.childs}
                   onClick={handleClick}
+                  isActive={isActive}
                 />
               );
             })}
@@ -52,9 +59,10 @@ export const Navigation = () => {
   );
 };
 
-const Dropdown = ({ text, href, childs, onClick }) => {
+const Dropdown = ({ text, href, childs, onClick, isActive }) => {
   const [hoverOpened, setHoverOpened] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const router = useRouter();
 
   const handleResize = () => {
     if (window.innerWidth < 768) {
@@ -89,7 +97,7 @@ const Dropdown = ({ text, href, childs, onClick }) => {
   return (
     <li
       {...props}
-      className={styles.navigation__item}
+      className={`${styles.navigation__item} ${isActive ? styles.active : ''}`}
     >
       <Link
         prefetch={false}
@@ -100,6 +108,7 @@ const Dropdown = ({ text, href, childs, onClick }) => {
         href={href}
         scroll={false}
         onClick={(e) => onClick(e, href)}
+        className={isActive ? styles.active : ''}
       >
         {text}{" "}
         {childs ? (
@@ -131,13 +140,14 @@ const Dropdown = ({ text, href, childs, onClick }) => {
           }
         >
           {childs.map((child) => {
+            const isChildActive = router.pathname === child.path;
             return (
               <Link
                 prefetch={false}
                 href={child.path}
                 key={child.path}
                 onClick={(e) => onClick(e, child.path)}
-                className={styles.dropdownItem}
+                className={`${styles.dropdownItem} ${isChildActive ? styles.active : ''}`}
                 scroll={false}
               >
                 {child.value}
@@ -159,6 +169,12 @@ export const navigationTree = [
   },
   {
     parent: {
+      path: "/neurotrableshutting",
+      value: "Нейротраблшуттинг",
+    },
+  },
+  {
+    parent: {
       path: "/#programs",
       value: "Программы",
     },
@@ -171,7 +187,7 @@ export const navigationTree = [
   },
   {
     parent: {
-      path: "/#about",
+      path: "/about-me",
       value: "Обо мне",
     },
   },

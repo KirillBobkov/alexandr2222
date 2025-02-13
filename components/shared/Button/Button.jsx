@@ -49,7 +49,7 @@ export const Button = ({
       className={`${styles.button} ${className} ${
         isSubmitted ? styles.success : ""
       }`}
-      onMouseUp={(e) => {
+      onClick={(e) => {
         if (href) {
           router.push(href, undefined, { shallow: true });
         }

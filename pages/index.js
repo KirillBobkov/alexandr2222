@@ -13,7 +13,7 @@ import { Final } from "../components/Final/Final";
 import { Products } from "../components/Products/Products";
 import { Questions } from "../components/Questions/Questions";
 import { AboutMe } from "../components/AboutMe/AboutMe";
-import { Arsenal } from "../components/Arsenal/Arsenal";
+import { CirclesList } from "../components/CirclesList/CirclesList";
 
 const schemaOrg = `
 {
@@ -174,7 +174,7 @@ const schemaOrg = `
   }
 }
 `
-export default function MainPage() {
+export default function() {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   useScrollToLocation();
@@ -189,20 +189,51 @@ export default function MainPage() {
     <Layout metaConfig={metaConfig} schemaOrg={schemaOrg}>
       <Preview />
       <Bio />
-      <AboutMe />
-      <Arsenal />
-      <Warranty />
-      <AnimatedLine /> 
-      <Suggest />
-      <Helping />
+      <AboutMe
+        {...{
+          title: "могу вам помочь",
+          titleEmpty: "Чем я",
+          items: [
+            { title: "Усталость" },
+            { title: "Психосоматика" },
+            { title: "Ночные кошмары" },
+            { title: "Психические травмы" },
+            { title: "Управление эмоциями" },
+            { title: "Поиск предназначения" },
+            { title: "Подавленное состояние" },
+            { title: "Ментальные ограничения" },
+          ],
+          bottomText:
+            "Возможно, Ваша проблема не вошла в этот список, поэтому, напишите свой запрос, и я подумаю, как Вам помочь.",
+          buttonHref: "#message",
+          buttonStatus: "Записаться",
+        }}
+      />
+
+      <CirclesList
+        {...{
+          title: "Арсенал ",
+          titleEmpty: " применяемых мною инструментов",
+          items: [
+            { title: "Вегетализм" },
+            { title: "Кинезиология" },
+            { title: "Работа с подсознанием" },
+            { title: "Авторские методики" },
+          ],
+        }}
+      />
+      <AnimatedLine />
       <VideoWidget />
-      <AnimatedLine /> 
       <Products />
       <div id="message" />
       <Form setIsSubmitted={setIsSubmitted} isSubmitted={isSubmitted} />
       <Questions />
-      <Final />
+      <Final
+        title="Запишитесь на бесплатную консультацию"
+        description="Узнайте причины своих проблем, способы их решения и возможные преграды на Вашем пути к успеху!"
+        buttonText="Записаться"
+        buttonHref="#message"
+      />
     </Layout>
   );
 }
-

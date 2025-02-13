@@ -3,7 +3,7 @@ import { ProductCard } from "./components/ProductCard";
 import { ProductModal } from "./components/ProductModal";
 import { products } from "./data/products";
 import styles from "./styles/ProductGrid.module.css";
-import { VisibilityManager } from "../VisibilityManager";
+import { VisibilityManager } from "../shared/VisibilityManager";
 
 export function Products() {
   const [selectedProduct, setSelectedProduct] = useState<any>(null);

@@ -8,8 +8,8 @@ import {
   validateName,
   validatePhone,
 } from "../../../utils/validation";
-import { Button } from "../../Button/Button.jsx";
-import { Input } from "../../Input/Input";
+import { Button } from "../../shared/Button/Button.jsx";
+import { Input } from "../../shared/Input/Input";
 import Image from "next/image";
 
 interface ProductModalProps {

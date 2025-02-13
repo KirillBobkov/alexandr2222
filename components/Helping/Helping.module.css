@@ -36,7 +36,7 @@
   grid-template-areas:
     "text1 text4"
     "text2 text3";
-  gap: 80px 50px;
+  gap: 80px 120px;
   grid-auto-columns: 1fr;
   margin-bottom: 120px;
 }
@@ -91,7 +91,7 @@
 }
 
 .button {
- align-self: center;
+ align-self: flex-end;
 }
 
 @media (max-width: 768px) {

@@ -1,15 +1,13 @@
 import React, { useState } from "react";
-import { Input } from "../Input/Input";
+import { Input } from "../shared/Input/Input";
 import {
   validateName,
   validatePhone,
   formatPhoneNumber,
 } from "../../utils/validation";
-import { Button } from "../Button/Button.jsx";
-
 import styles from "./Form.module.css";
 import { LineAnimation } from "../LineAnomation/LineAnimation";
-import { VisibilityManager } from "../VisibilityManager";
+import { VisibilityManager } from "../shared/VisibilityManager";
 
 export function Form({ isSubmitted, setIsSubmitted, type = "" }) {
   const [formData, setFormData] = useState({

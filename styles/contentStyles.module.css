@@ -20,13 +20,39 @@
     margin-bottom: 5px;
   }
 
-  .title {
-    font-size: 40px;
+  .title_middle {
+    font-size: 30px;
     font-weight: 700;
-    line-height: 50px;
+    line-height: 40px;
     text-transform: uppercase;
     color: #fff;
     margin-top: 60px;
+}
+
+.title_small {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 36px;
+  color: #fff;
+}
+
+.title {
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 72px;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  padding: 0;
+  max-width: 1185px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  color: #fff;
+}
+
+.title_empty {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #fff;
 }
 
 @media screen and (max-width: 768px) {

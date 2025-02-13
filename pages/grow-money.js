@@ -5,13 +5,13 @@ import { useScrollToLocation } from "../hooks/useScrollToLocation";
 import { SecondaryPreview } from "../components/SecondaryPreview/SecondaryPreview";
 import { content } from "../content/grow-money";
 import { LineAnimation } from "../components/LineAnomation/LineAnimation";
-import { VisibilityManager } from "../components/VisibilityManager";
+import { VisibilityManager } from "../components/shared/VisibilityManager";
 import containerStyles from "../styles/container.module.css";
 import contentStyles from "../styles/contentStyles.module.css";
 import secondary_preview_4 from '../public/images/secondary_preview_4.webp';
 
 
-export default function ConsultationPage() {
+export default function() {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   useScrollToLocation();
@@ -46,7 +46,7 @@ export default function ConsultationPage() {
             возможности и реально начать зарабатывать больше.
           </VisibilityManager>
 
-          <VisibilityManager as="h3" className={contentStyles.title}>
+          <VisibilityManager as="h3" className={contentStyles.title_middle}>
             Результаты, которые Вы получите
           </VisibilityManager>
           <VisibilityManager as="div">
@@ -73,7 +73,7 @@ export default function ConsultationPage() {
             </p>
           </VisibilityManager>
 
-          <VisibilityManager as="h3" className={contentStyles.title}>
+          <VisibilityManager as="h3" className={contentStyles.title_middle}>
             Представьте себе:
           </VisibilityManager>
           <VisibilityManager as="div">

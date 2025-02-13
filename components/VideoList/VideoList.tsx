@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./VideoList.module.css";
 import Image from "next/image";
-import { VisibilityManager } from "../VisibilityManager";
+import { VisibilityManager } from "../shared/VisibilityManager";
 
 interface VideoListProps {
   videos: any[];
@@ -17,7 +17,7 @@ export const VideoList: React.FC<VideoListProps> = ({
   return (
     <VisibilityManager side="left" className={styles.container}>
       <div  className={styles.header}>
-        <h3 className={styles.title}><span className={styles.textSymbol}>●
+        <h3 className={styles.title}><span className={styles.textSymbol}>//
         </span> Отзывы людей, которым я помог</h3>
       </div>
       <div className={styles.listWrapper}>
