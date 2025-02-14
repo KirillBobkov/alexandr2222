@@ -80,12 +80,13 @@
 
 .formbutton {
   border-radius: 3px;
-  letter-spacing: 0.05em;
   background-color: var(--base-color-1)!important;
   padding: 15px 40px;
   text-align: center;
   color: #fff;
   cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
 }
 
