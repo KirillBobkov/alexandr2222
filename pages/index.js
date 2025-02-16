@@ -194,6 +194,7 @@ export default function() {
           title: "могу вам помочь",
           titleEmpty: "Чем я",
           items: [
+            { title: "Зависимости" },
             { title: "Усталость" },
             { title: "Психосоматика" },
             { title: "Ночные кошмары" },
@@ -223,11 +224,9 @@ export default function() {
         }}
       />
       <AnimatedLine />
-      <VideoWidget />
       <Products />
       <div id="message" />
       <Form setIsSubmitted={setIsSubmitted} isSubmitted={isSubmitted} />
-      <Questions />
       <Final
         title="Запишитесь на бесплатную консультацию"
         description="Узнайте причины своих проблем, способы их решения и возможные преграды на Вашем пути к успеху!"

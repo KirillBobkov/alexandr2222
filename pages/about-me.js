@@ -26,7 +26,7 @@ export default function() {
       <LineAnimation>
         <div className={containerStyles.container}>
           <VisibilityManager as="h1" className={contentStyles.title_middle}>
-            Моя история: от личных испытаний к призванию целителя
+            Моя история: от личных испытаний к истинному призванию
           </VisibilityManager>
 
           <VisibilityManager as="p">

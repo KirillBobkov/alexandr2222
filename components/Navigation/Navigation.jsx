@@ -39,7 +39,7 @@ export const Navigation = () => {
 
         <nav>
           <ul className={styles.navigation}>
-            {navigationTree.map((item) => {
+            {getNavigationTree(router.pathname).map((item) => {
               const isActive = router.pathname === item.parent.path || 
                              (item.childs?.some(child => router.pathname === child.path));
               
@@ -71,7 +71,7 @@ export const Navigation = () => {
   );
 };
 
-export const navigationTree = [
+export const getNavigationTree = (pathname) => [
   {
     parent: {
       path: "/",
@@ -108,16 +108,16 @@ export const navigationTree = [
       value: "Обо мне",
     },
   },
-  {
+  pathname.includes("neurotrableshutting") && {
     parent: {
-      path: "/#reviews",
+      path: "/neurotrableshutting#reviews",
       value: "Отзывы",
     },
   },
-  {
+  pathname.includes("neurotrableshutting") && {
     parent: {
-      path: "/#faq",
+      path: "/neurotrableshutting#faq",
       value: "Вопросы и ответы",
     },
   },
-];
+].filter(Boolean);

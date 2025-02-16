@@ -25,7 +25,7 @@ export const Bio = () => {
               Моя история:
               <span className={contentStyles.title_empty}>
                 {" "}
-                от личных испытаний к призванию целителя
+                от личных испытаний к истинному призванию
               </span>
             </VisibilityManager>
 

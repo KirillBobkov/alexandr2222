@@ -9,6 +9,8 @@ import { Helping } from "../components/Helping/Helping";
 import { Products } from "../components/Products/Products";
 import { SecondaryPreview } from "../components/SecondaryPreview/SecondaryPreview";
 import secondary_preview_7 from '../public/images/secondary_preview_7.webp';
+import { VideoWidget } from "../components/VideoWidget/VideoWidget";
+import { Questions } from "../components/Questions/Questions";
 
 export default function () {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -28,7 +30,9 @@ export default function () {
       <Helping />
       <Warranty />
       <AnimatedLine />
+      <VideoWidget />
       <Products />
+      <Questions />
       <div id="message" />
       <Form setIsSubmitted={setIsSubmitted} isSubmitted={isSubmitted} />
     </Layout>
