@@ -3,7 +3,7 @@ import styles from "./Navigation.module.css";
 import logo from "../../public/images/logo.webp";
 import Image from "next/image.js";
 import Link from "next/link";
-import { products } from "../Products/data/products";
+import { products } from "../../pages/index";
 import { useRouter } from 'next/router';
 import { Dropdown } from './Dropdown';
 

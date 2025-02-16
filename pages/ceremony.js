@@ -9,6 +9,11 @@ import containerStyles from "../styles/container.module.css";
 import contentStyles from "../styles/contentStyles.module.css";
 import secondary_preview_10 from '../public/images/secondary_preview_10.webp';
 import { Final } from "../components/Final/Final";
+import { VideoWidget } from "../components/VideoWidget/VideoWidget";
+
+const videos = [
+  
+];
 
 export default function() {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -101,7 +106,7 @@ export default function() {
               Связь с природой
             </h3>
             <p className={contentStyles.textDescription}>
-              Церемония проводится загородом, в комфортном, спокойном и безопасном месте, что позволяет человеку полноценно отдохнуть и прочувствовать гармонию с самим собой и Миром.
+              Церемония проводится за городом, в комфортном, спокойном и безопасном месте, что позволяет человеку полноценно отдохнуть и прочувствовать гармонию с самим собой и Миром.
             </p>
           </VisibilityManager>
 
@@ -270,14 +275,13 @@ export default function() {
           </VisibilityManager>
         </div>
       </LineAnimation>
+      <VideoWidget videos={videos} />
       <Final
         title="Приглашаю вас на мухоморный ретрит"
         description="Если вы чувствуете готовность к глубокому исцелению и трансформации, я помогу вам безопасно пройти этот путь. Свяжитесь со мной, чтобы узнать больше или записаться на консультацию. Ваше путешествие к исцелению начинается здесь."
         buttonText="Записаться"
         buttonHref="/#message"
       />
-      <div id="message" />
-      <Form setIsSubmitted={setIsSubmitted} isSubmitted={isSubmitted} type="Мухоморный ретрит"/>
     </Layout>
   );
 } 

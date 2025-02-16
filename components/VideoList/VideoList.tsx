@@ -22,7 +22,7 @@ export const VideoList: React.FC<VideoListProps> = ({
       </div>
       <div className={styles.listWrapper}>
         <ul className={styles.list}>
-          {videos.map((video, i) => (
+          {videos.length > 0 ? videos.map((video, i) => (
             <button
               key={video.link + i}
               onClick={() => onVideoSelect(video)}
@@ -43,7 +43,7 @@ export const VideoList: React.FC<VideoListProps> = ({
                 <p className={styles.videoTitle}>{video.name}</p>
               </div>
             </button>
-          ))}
+            )) : <p style={{ padding: "20px", textAlign: "center" } }>Список еще не загружен</p>}
         </ul>
       </div>
     </VisibilityManager>

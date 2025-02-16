@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import { ProductCard } from "./components/ProductCard";
 import { ProductModal } from "./components/ProductModal";
-import { products } from "./data/products";
 import styles from "./styles/ProductGrid.module.css";
 import { VisibilityManager } from "../shared/VisibilityManager";
 
-export function Products() {
+export function Products({ products }) {
   const [selectedProduct, setSelectedProduct] = useState<any>(null);
 
   return (

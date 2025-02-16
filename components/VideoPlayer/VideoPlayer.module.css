@@ -3,6 +3,9 @@
   position: relative;
   background-color: #171717;
   height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 20px;
   overflow: hidden;
 }

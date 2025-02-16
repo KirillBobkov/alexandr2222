@@ -9,7 +9,7 @@ interface VideoPlayerProps {
 export const VideoPlayer: React.FC<VideoPlayerProps> = ({ video }) => {
   return (
     <div className={styles.container}>
-          <iframe
+          {video ? <iframe
             key={video.link}
             className={styles.video__frame}
             src={video.link}
@@ -17,7 +17,9 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({ video }) => {
             frameBorder="0"
             allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
-          ></iframe>
+          ></iframe> : <div>
+            <p>Видео еще не загружено</p>
+          </div>}
     </div>
   );
 };
