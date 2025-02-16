@@ -80,6 +80,24 @@ export const getNavigationTree = (pathname) => [
   },
   {
     parent: {
+      path: "/#programs",
+      value: "Программы",
+    },
+    childs: products.map((p) => {
+      return {
+        path: p.href,
+        value: p.title,
+      };
+    }).filter(value => !value.path.includes("ceremony")),
+  },
+  {
+    parent: {
+      path: "/ceremony",
+      value: "Мухоморный ретрит",
+    },
+  },
+  {
+    parent: {
       path: "/neurotrableshutting",
       value: "Нейротраблшуттинг",
     },
@@ -90,18 +108,7 @@ export const getNavigationTree = (pathname) => [
       value: "Вегетализм",
     },
   },
-  {
-    parent: {
-      path: "/#programs",
-      value: "Программы",
-    },
-    childs: products.map((p) => {
-      return {
-        path: p.href,
-        value: p.title,
-      };
-    }),
-  },
+
   {
     parent: {
       path: "/about-me",
@@ -118,6 +125,12 @@ export const getNavigationTree = (pathname) => [
     parent: {
       path: "/neurotrableshutting#faq",
       value: "Вопросы и ответы",
+    },
+  },
+  pathname.includes("ceremony") && {
+    parent: {
+      path: "/ceremony#reviews",
+      value: "Отзывы",
     },
   },
 ].filter(Boolean);

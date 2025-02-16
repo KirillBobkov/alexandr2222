@@ -4,38 +4,50 @@ import logo from "../../../public/images/logo.webp";
 export const products = [
   {
     id: 1,
-    title: "Полюбить жизнь",
+    title: "Бросить курить",
     image: logo,
-    href: "/love-life"
+    href: "/drop-smoking"
   },
   {
     id: 2,
-    title: "Полюбить себя",
+    title: "Отпустить негатив",
     image: logo,
-    href: "/love-myself"
+    href: "/remove-bad-memories"
   },
   {
     id: 3,
     title: "Сессия релаксации",
     image: logo,
-     href: "/relax-session"
+    href: "/relax-session"
   },
   {
     id: 4,
     title: "Увеличить заработок",
     image: logo,
-     href: "/grow-money"
+    href: "/grow-money"
   },
   {
     id: 5,
-    title: "Удалить плохие воспоминания",
+    title: "Избавиться от фобии",
     image: logo,
-     href: "/remove-bad-memories"
+    href: "/remove-phobia"
   },
   {
     id: 6,
-    title: "Бросить курить легко",
+    title: "Избавиться от аллергии",
     image: logo,
-     href: "/drop-smoking"
+    href: "/remove-allergy"
+  },
+  {
+    id: 7,
+    title: "Избавиться от ночных кошмаров",
+    image: logo,
+    href: "/remove-nightmares"
+  },
+  {
+    id: 8,
+    title: "Священная церемония на Мухоморе",
+    image: logo,
+    href: "/ceremony"
   },
 ];

@@ -14,6 +14,8 @@ import { Products } from "../components/Products/Products";
 import { Questions } from "../components/Questions/Questions";
 import { AboutMe } from "../components/AboutMe/AboutMe";
 import { CirclesList } from "../components/CirclesList/CirclesList";
+import enter_hole_1 from "../public/images/enter_hole_1.webp";
+import enter_hole_2 from "../public/images/enter_hole_2.webp";
 
 const schemaOrg = `
 {
@@ -223,7 +225,22 @@ export default function() {
           ],
         }}
       />
+      <Final
+        title="Мухоморный ретрит"
+        description="Практика, связанная с использованием Мухомора (Amanita muscaria) в духовных и терапевтических целях"
+        buttonText="Подробнее"
+        buttonHref="/ceremony"
+        image={enter_hole_1}
+      />
       <AnimatedLine />
+      <Final
+        title="Нейротраблшуттинг"
+        description="Эффективный способ работы с подсознанием для переработки травмирующих событий и освобождения от ограничивающих убеждений"
+        buttonText="Подробнее"
+        buttonHref="/neurotrableshutting"
+        image={enter_hole_2}
+      />
+
       <Products />
       <div id="message" />
       <Form setIsSubmitted={setIsSubmitted} isSubmitted={isSubmitted} />

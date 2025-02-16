@@ -127,10 +127,12 @@
 .text {
   font-size: 20px;
   font-weight: 700;
+  width: min-content;
+  margin-left: 10px;
 }
 
 .arrow {
-  margin-right: 20px;
+  margin-right: 0px;
   flex-shrink: 0;
 }
 
