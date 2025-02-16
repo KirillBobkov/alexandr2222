@@ -114,13 +114,13 @@ export function Form({ isSubmitted, setIsSubmitted, type = "" }) {
         <VisibilityManager side="left" className={styles.form_content}>
           <h3 className={styles.textTitle}>Готовы жить лучше?</h3>
           <p className={styles.textDescription}>
-            Запишитесь на бесплатную консультацию, и я свяжусь с Вами в
+            Запишитесь на бесплатную консультацию, и я свяжусь с вами в
             ближайшее время.
           </p>
           <br />
           <p className={styles.textDescription}>
             Первая консультация 20 мин бесплатно. Подготовьте вопрос, который
-            Вас интересует, и я раскрою и решу Вашу проблему, а Вы уже сможете
+            вас интересует, и я раскрою и решу вашу проблему, а вы уже сможете
             сделать вывод, обращаться ко мне в дальнейшем или нет."
           </p>
         </VisibilityManager>
@@ -129,7 +129,7 @@ export function Form({ isSubmitted, setIsSubmitted, type = "" }) {
             <Input
               type="text"
               name="name"
-              placeholder="Введите Ваше имя"
+              placeholder="Введите ваше имя"
               value={formData.name}
               onChange={handleChange}
               disabled={isSubmitted}
@@ -140,7 +140,7 @@ export function Form({ isSubmitted, setIsSubmitted, type = "" }) {
             <Input
               type="tel"
               name="phone"
-              placeholder="Введите Ваш номер телефона"
+              placeholder="Введите ваш номер телефона"
               value={formData.phone}
               onChange={handleChange}
               disabled={isSubmitted}
@@ -216,7 +216,7 @@ export function Form({ isSubmitted, setIsSubmitted, type = "" }) {
                   </p>
                 ) : null}
                 {message === "success" ? (
-                  <p>Спасибо, Ваша запись оформлена.</p>
+                  <p>Спасибо, ваша запись оформлена.</p>
                 ) : null}
               </VisibilityManager>
             ) : null}

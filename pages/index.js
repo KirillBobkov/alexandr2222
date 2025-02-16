@@ -38,7 +38,7 @@ const schemaOrg = `
     "@type": "Person",
     "name": "Александр Васильев",
     "url": "https://alexandrvasilev.ru/#about",
-    "description": "Я устраняю причины Ваших страданий навсегда, помогая вам достичь гармонии и счастья.",
+    "description": "Я устраняю причины ваших страданий навсегда, помогая вам достичь гармонии и счастья.",
     "image": {
       "@type": "ImageObject",
       "url": "/_next/static/media/alex3.57d8e42f.webp",
@@ -205,7 +205,7 @@ export default function() {
             { title: "Ментальные ограничения" },
           ],
           bottomText:
-            "Возможно, Ваша проблема не вошла в этот список, поэтому, напишите свой запрос, и я подумаю, как Вам помочь.",
+            "Возможно, ваша проблема не вошла в этот список, поэтому, напишите свой запрос, и я подумаю, как вам помочь.",
           buttonHref: "#message",
           buttonStatus: "Записаться",
         }}
@@ -229,7 +229,7 @@ export default function() {
       <Form setIsSubmitted={setIsSubmitted} isSubmitted={isSubmitted} />
       <Final
         title="Запишитесь на бесплатную консультацию"
-        description="Узнайте причины своих проблем, способы их решения и возможные преграды на Вашем пути к успеху!"
+        description="Узнайте причины своих проблем, способы их решения и возможные преграды на вашем пути к успеху!"
         buttonText="Записаться"
         buttonHref="#message"
       />
