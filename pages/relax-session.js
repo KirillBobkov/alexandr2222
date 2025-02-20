@@ -24,7 +24,7 @@ export default function() {
 
   return (
     <Layout metaConfig={metaConfig}>
-      <SecondaryPreview text={content.pageTitle} image={secondary_preview_3} />
+      <SecondaryPreview text={metaConfig.pageTitle} image={secondary_preview_3} />
       <LineAnimation>
         <div className={containerStyles.container}>
           <VisibilityManager as="p">
@@ -75,7 +75,7 @@ export default function() {
         </div>
       </LineAnimation>
       <div id="message" />
-      <Form setIsSubmitted={setIsSubmitted} isSubmitted={isSubmitted} type={content.pageTitle}/>
+      <Form setIsSubmitted={setIsSubmitted} isSubmitted={isSubmitted} type={metaConfig.pageTitle}/>
     </Layout>
   );
 }
