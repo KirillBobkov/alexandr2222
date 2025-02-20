@@ -15,7 +15,7 @@ export const Final = ({
 
   return (
     <section className={styles.block}>
-      <div className={styles.content}>
+      <div className={`${styles.content}`}>
         {image ? (
           <Image
             src={image}
@@ -33,7 +33,7 @@ export const Final = ({
             <span className={styles.move + " " + styles.moving3}>ИN</span>
           </>
         )}
-        <VisibilityManager as="h3" className={styles.title}>
+        <VisibilityManager as="h3" className={`${styles.title} ${image ? "" : styles.title_no_image}`}>
           <span>{title}</span>
         </VisibilityManager>
         <VisibilityManager as="p" className={styles.description}>

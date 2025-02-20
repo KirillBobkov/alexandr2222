@@ -3,7 +3,6 @@ import { Form } from "../components/Form/Form";
 import { useState } from "react";
 import { useScrollToLocation } from "../hooks/useScrollToLocation";
 import { SecondaryPreview } from "../components/SecondaryPreview/SecondaryPreview";
-import { content } from "../content/love-life";
 import { LineAnimation } from "../components/LineAnomation/LineAnimation";
 import { VisibilityManager } from "../components/shared/VisibilityManager";
 import containerStyles from "../styles/container.module.css";
@@ -17,10 +16,13 @@ export default function() {
   useScrollToLocation();
 
   const metaConfig = {
-    title: content.title,
-    description: content.description,
-    keywords: content.keywords,
-  };
+    title: 'Полюбить жизнь - Александр "Интеграл" Васильев',
+    pageTitle: "Полюбить жизнь",
+    description: "Полюбить жизнь",
+    keywords: "очищение интеграл ретрит грибы дурман",
+    content: '',
+    href: '/love-life',
+};
 
   return (
     <Layout metaConfig={metaConfig}>

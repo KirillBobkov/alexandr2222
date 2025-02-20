@@ -2,10 +2,9 @@ import React, { useState } from "react";
 
 import styles from "./Questions.module.css";
 import { VisibilityManager } from "../shared/VisibilityManager";
-import { questionsContent } from "../../content/questions.js";
 import { LineAnimation } from "../LineAnomation/LineAnimation.jsx";
 
-export const Questions = () => {
+export const Questions = ({ questionsContent }) => {
   return (
     <LineAnimation>
       <div>

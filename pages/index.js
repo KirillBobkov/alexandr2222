@@ -2,16 +2,11 @@ import Layout from "../components/Layout/Layout";
 import { Bio } from "../components/Bio/Bio";
 import { Form } from "../components/Form/Form";
 import { useState } from "react";
-import { VideoWidget } from "../components/VideoWidget/VideoWidget";
 import { useScrollToLocation } from "../hooks/useScrollToLocation";
 import { Preview } from "../components/Preview/Preview";
-import { Warranty } from "../components/Warranty/Warranty";
 import { AnimatedLine } from "../components/AnimatedLine/AnimatedLine";
-import { Suggest } from "../components/Suggests/Suggests";
-import { Helping } from "../components/Helping/Helping";
 import { Final } from "../components/Final/Final";
 import { Products } from "../components/Products/Products";
-import { Questions } from "../components/Questions/Questions";
 import { AboutMe } from "../components/AboutMe/AboutMe";
 import { CirclesList } from "../components/CirclesList/CirclesList";
 import enter_hole_1 from "../public/images/enter_hole_1.webp";
@@ -193,12 +188,6 @@ export const products = [
     href: "/remove-bad-memories"
   },
   {
-    id: 3,
-    title: "Сессия релаксации",
-    image: logo,
-    href: "/relax-session"
-  },
-  {
     id: 4,
     title: "Увеличить заработок",
     image: logo,
@@ -280,7 +269,7 @@ export default function() {
         }}
       />
       <Final
-        title="Мухоморный ретрит"
+        title="Мухоморный ретрит в Казани"
         description="Практика, связанная с использованием Мухомора (Amanita muscaria) в духовных и терапевтических целях"
         buttonText="Подробнее"
         buttonHref="/ceremony"

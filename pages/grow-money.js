@@ -3,7 +3,6 @@ import { Form } from "../components/Form/Form";
 import { useState } from "react";
 import { useScrollToLocation } from "../hooks/useScrollToLocation";
 import { SecondaryPreview } from "../components/SecondaryPreview/SecondaryPreview";
-import { content } from "../content/grow-money";
 import { LineAnimation } from "../components/LineAnomation/LineAnimation";
 import { VisibilityManager } from "../components/shared/VisibilityManager";
 import containerStyles from "../styles/container.module.css";
@@ -17,10 +16,13 @@ export default function() {
   useScrollToLocation();
 
   const metaConfig = {
-    title: content.title,
-    description: content.description,
-    keywords: content.keywords,
-  };
+    title: 'Увеличить заработок - Александр "Интеграл" Васильев',
+    pageTitle: "Увеличить заработок",
+    description: "Увеличить заработок",
+    keywords: "очищение интеграл ретрит грибы дурман",
+    content: '',
+    href: '/grow-money'
+};
 
   return (
     <Layout metaConfig={metaConfig}>

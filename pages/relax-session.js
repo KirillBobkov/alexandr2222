@@ -3,7 +3,6 @@ import { Form } from "../components/Form/Form";
 import { useState } from "react";
 import { useScrollToLocation } from "../hooks/useScrollToLocation";
 import { SecondaryPreview } from "../components/SecondaryPreview/SecondaryPreview";
-import { content } from "../content/relax-session";
 import { LineAnimation } from "../components/LineAnomation/LineAnimation";
 import { VisibilityManager } from "../components/shared/VisibilityManager";
 import containerStyles from "../styles/container.module.css";
@@ -15,10 +14,13 @@ export default function() {
   useScrollToLocation();
 
   const metaConfig = {
-    title: content.title,
-    description: content.description,
-    keywords: content.keywords,
-  };
+    title: 'Сессия релаксации - Александр "Интеграл" Васильев',
+    pageTitle: "Сессия релаксации",
+    description: "Сессия релаксации",
+    keywords: "очищение интеграл ретрит грибы дурман",
+    content: '',
+    href: '/drop-smoking',
+};
 
   return (
     <Layout metaConfig={metaConfig}>

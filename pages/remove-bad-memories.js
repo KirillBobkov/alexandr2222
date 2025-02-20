@@ -3,7 +3,6 @@ import { Form } from "../components/Form/Form";
 import { useState } from "react";
 import { useScrollToLocation } from "../hooks/useScrollToLocation";
 import { SecondaryPreview } from "../components/SecondaryPreview/SecondaryPreview";
-import { content } from "../content/remove-bad-memories";
 import { LineAnimation } from "../components/LineAnomation/LineAnimation";
 import { VisibilityManager } from "../components/shared/VisibilityManager";
 import containerStyles from "../styles/container.module.css";
@@ -14,11 +13,14 @@ export default function() {
 
   useScrollToLocation();
 
-  const metaConfig = {
-    title: content.title,
-    description: content.description,
-    keywords: content.keywords,
-  };
+  const metaConfig =  {
+    title: 'Отпустить негатив - Александр "Интеграл" Васильев',
+    pageTitle: "Отпустить негатив",
+    description: "Удалить плохие воспоминания",
+    keywords: "очищение интеграл ретрит грибы дурман",
+    content: '',
+    href: '/remove-bad-memories'
+};
 
   return (
     <Layout metaConfig={metaConfig}>

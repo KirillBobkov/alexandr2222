@@ -6,9 +6,9 @@
 .content {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    gap: 40px;
+    justify-content: center;
+    gap: 20px;
     max-width: 1285px;
     margin: 0 auto;
     background-color: black;
@@ -40,11 +40,16 @@
     font-weight: 700;
     line-height: 60px;
     padding-bottom: 12px;
+    margin-top: 150px;
     text-align: center;
     max-width: 1000px;
     color: #fff;
     z-index: 1;
     position: relative;
+}
+
+.title_no_image {
+    margin-top: 0;
 }
 
 .description {
@@ -150,7 +155,7 @@
     }
 
     .title {
-        font-size: 24px;
+        font-size: 30px;
         font-weight: 700;
         line-height: 36px;
     }

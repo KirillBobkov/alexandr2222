@@ -80,6 +80,12 @@ export const getNavigationTree = (pathname) => [
   },
   {
     parent: {
+      path: "/about-me",
+      value: "Обо мне",
+    },
+  },
+  {
+    parent: {
       path: "/#programs",
       value: "Программы",
     },
@@ -109,12 +115,7 @@ export const getNavigationTree = (pathname) => [
     },
   },
 
-  {
-    parent: {
-      path: "/about-me",
-      value: "Обо мне",
-    },
-  },
+
   pathname.includes("neurotrableshutting") && {
     parent: {
       path: "/neurotrableshutting#reviews",
@@ -131,6 +132,12 @@ export const getNavigationTree = (pathname) => [
     parent: {
       path: "/ceremony#reviews",
       value: "Отзывы",
+    },
+  },
+  pathname.includes("ceremony") && {
+    parent: {
+      path: "/ceremony#faq",
+      value: "Вопросы и ответы",
     },
   },
 ].filter(Boolean);
