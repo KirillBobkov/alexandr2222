@@ -171,55 +171,54 @@ const schemaOrg = `
     "description": "Записаться на консультацию или сессию через контактную форму."
   }
 }
-`
-
+`;
 
 export const products = [
   {
     id: 1,
     title: "Бросить курить",
     image: logo,
-    href: "/drop-smoking"
+    href: "/drop-smoking",
   },
   {
     id: 2,
     title: "Отпустить негатив",
     image: logo,
-    href: "/remove-bad-memories"
+    href: "/remove-bad-memories",
   },
   {
     id: 4,
     title: "Увеличить заработок",
     image: logo,
-    href: "/grow-money"
+    href: "/grow-money",
   },
   {
     id: 5,
     title: "Избавиться от фобии",
     image: logo,
-    href: "/remove-phobia"
+    href: "/remove-phobia",
   },
   {
     id: 6,
     title: "Избавиться от аллергии",
     image: logo,
-    href: "/remove-allergy"
+    href: "/remove-allergy",
   },
   {
     id: 7,
     title: "Избавиться от ночных кошмаров",
     image: logo,
-    href: "/remove-nightmares"
+    href: "/remove-nightmares",
   },
   {
     id: 8,
     title: "Священная церемония на Мухоморе",
     image: logo,
-    href: "/ceremony"
+    href: "/ceremony",
   },
 ];
 
-export default function() {
+export default function () {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   useScrollToLocation();
@@ -283,15 +282,26 @@ export default function() {
         buttonHref="/neurotrableshutting"
         image={enter_hole_2}
       />
-
-      <Products products={products}/>
-      <div id="message" />
-      <Form setIsSubmitted={setIsSubmitted} isSubmitted={isSubmitted} />
+  <AnimatedLine />
       <Final
         title="Запишитесь на бесплатную консультацию"
         description="Узнайте причины своих проблем, способы их решения и возможные преграды на вашем пути к успеху!"
         buttonText="Записаться"
         buttonHref="#message"
+      />
+      <Products products={products} />
+      <div id="message" />
+      <Form
+        setIsSubmitted={setIsSubmitted}
+        isSubmitted={isSubmitted}
+        title={"Готовы жить лучше?"}
+        type="Первая консультация"
+        description={`Запишитесь на бесплатную консультацию, и я свяжусь с вами в ближайшее время.
+
+          Первая консультация 20 минут — бесплатно. 
+          
+          Подготовьте вопрос, который вас интересует, и я раскрою и решу вашу проблему, а вы уже сможете сделать вывод, обращаться ко мне в дальнейшем или нет.
+        `}
       />
     </Layout>
   );

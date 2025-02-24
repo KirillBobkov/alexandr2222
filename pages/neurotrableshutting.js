@@ -12,6 +12,7 @@ import { VideoWidget } from "../components/VideoWidget/VideoWidget";
 import { Questions } from "../components/Questions/Questions";
 import logo from "../public/images/logo.webp";
 import { Final } from "../components/Final/Final";
+import { Form } from "../components/Form/Form";
 
 export const questionsContent = {
   blocks: [
@@ -171,13 +172,26 @@ export default function () {
       <Warranty />
       <AnimatedLine />
       <VideoWidget videos={videos} />
-      <Products products={products} />
-      <Questions questionsContent={questionsContent} />
       <Final
         title="Запишитесь на бесплатную консультацию"
         description="Узнайте причины своих проблем, способы их решения и возможные преграды на вашем пути к успеху!"
         buttonText="Записаться"
         buttonHref="/#message"
+      />
+      <Products products={products} />
+      <Questions questionsContent={questionsContent} />
+      <div id="message" />
+      <Form
+        setIsSubmitted={setIsSubmitted}
+        isSubmitted={isSubmitted}
+        title={"Готовы жить лучше?"}
+           type="Нейротраблшуттинг"
+        description={`Запишитесь на бесплатную консультацию, и я свяжусь с вами в ближайшее время.
+
+          Первая консультация 20 минут — бесплатно. 
+          
+          Подготовьте вопрос, который вас интересует, и я раскрою и решу вашу проблему, а вы уже сможете сделать вывод, обращаться ко мне в дальнейшем или нет.
+        `}
       />
     </Layout>
   );

@@ -16,13 +16,13 @@ export const Button = ({
 
   // Обработчики для свайпа на мобильных устройствах
   const handleTouchStart = (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     touchStartX.current = e.touches[0].clientX;
     setProgress(20); // Сброс прогресса
   };
 
   const handleTouchMove = (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     const touchEndX = e.touches[0].clientX;
     const distance = Math.max(0, touchEndX - touchStartX.current); // Расстояние свайпа
     const buttonWidth = e.target.offsetWidth * 0.8; // Ширина кнопки
@@ -31,7 +31,7 @@ export const Button = ({
   };
 
   const handleTouchEnd = (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     if (progress >= 70) {
       // Если прогресс достиг 100%, выполнить действие
       if (href) router.push(href, undefined, { shallow: true });

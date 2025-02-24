@@ -9,7 +9,13 @@ import styles from "./Form.module.css";
 import { LineAnimation } from "../LineAnomation/LineAnimation";
 import { VisibilityManager } from "../shared/VisibilityManager";
 
-export function Form({ isSubmitted, setIsSubmitted, type = "" }) {
+export function Form({
+  isSubmitted,
+  setIsSubmitted,
+  type = "",
+  title,
+  description,
+}) {
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -112,17 +118,8 @@ export function Form({ isSubmitted, setIsSubmitted, type = "" }) {
     <LineAnimation>
       <div className={styles.form}>
         <VisibilityManager side="left" className={styles.form_content}>
-          <h3 className={styles.textTitle}>Готовы жить лучше?</h3>
-          <p className={styles.textDescription}>
-            Запишитесь на бесплатную консультацию, и я свяжусь с вами в
-            ближайшее время.
-          </p>
-          <br />
-          <p className={styles.textDescription}>
-            Первая консультация 20 мин бесплатно. Подготовьте вопрос, который
-            вас интересует, и я раскрою и решу вашу проблему, а вы уже сможете
-            сделать вывод, обращаться ко мне в дальнейшем или нет."
-          </p>
+          <h3 className={styles.textTitle}>{title}</h3>
+          <p className={styles.textDescription}>{description}</p>
         </VisibilityManager>
         <form onSubmit={handleSubmit} className={styles.form__item}>
           <div className={styles.form_elem}>
