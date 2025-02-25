@@ -3,7 +3,7 @@
   <!-- Главная страница -->
   <url>
     <loc>https://alexandrvasilev.ru/</loc>
-    <lastmod>2025-02-13</lastmod>
+    <lastmod>2025-02-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -11,42 +11,42 @@
   <!-- Основные страницы услуг -->
   <url>
     <loc>https://alexandrvasilev.ru/love-life</loc>
-    <lastmod>2025-02-13</lastmod>
+    <lastmod>2025-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://alexandrvasilev.ru/love-myself</loc>
-    <lastmod>2025-02-13</lastmod>
+    <lastmod>2025-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://alexandrvasilev.ru/grow-money</loc>
-    <lastmod>2025-02-13</lastmod>
+    <lastmod>2025-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://alexandrvasilev.ru/remove-bad-memories</loc>
-    <lastmod>2025-02-13</lastmod>
+    <lastmod>2025-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://alexandrvasilev.ru/drop-smoking</loc>
-    <lastmod>2025-02-13</lastmod>
+    <lastmod>2025-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://alexandrvasilev.ru/relax-session</loc>
-    <lastmod>2025-02-13</lastmod>
+    <lastmod>2025-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -54,15 +54,22 @@
   <!-- Информационные страницы -->
   <url>
     <loc>https://alexandrvasilev.ru/about-me</loc>
-    <lastmod>2025-02-13</lastmod>
+    <lastmod>2025-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>https://alexandrvasilev.ru/neurotrableshutting</loc>
-    <lastmod>2025-02-13</lastmod>
+    <lastmod>2025-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://alexandrvasilev.ru/ceremony</loc>
+    <lastmod>2025-02-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>

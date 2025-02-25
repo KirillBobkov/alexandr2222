@@ -168,15 +168,15 @@ export default function () {
     <Layout metaConfig={metaConfig}>
       <SecondaryPreview text={"Нейротраблшуттинг"} image={secondary_preview_7} />
       <Suggest />
-      <Helping href={'/neurotrableshutting#message'} />
-      <Warranty href={'/neurotrableshutting#message'}/>
+      <Helping href={{ pathname: '/neurotrableshutting', hash: '#message'}} />
+      <Warranty href={{ pathname: '/neurotrableshutting', hash: '#message'}}/>
       <AnimatedLine />
       <VideoWidget videos={videos} />
       <Final
         title="Запишитесь на бесплатную консультацию"
         description="Узнайте причины своих проблем, способы их решения и возможные преграды на вашем пути к успеху!"
         buttonText="Записаться"
-        buttonHref="/#message"
+        buttonHref="/neurotrableshutting#message"
       />
       <Products products={products} />
       <Questions questionsContent={questionsContent} />

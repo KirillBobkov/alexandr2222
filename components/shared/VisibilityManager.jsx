@@ -30,6 +30,7 @@ const Block = React.memo((props) => {
     inViewport,
     style,
     enterCount,
+    leaveCount,
     forwardedRef,
     children,
     className,
@@ -37,10 +38,8 @@ const Block = React.memo((props) => {
     speed = 2,
     delay = 0.3,
     onClick,
-    disabled  = false,
+    ...restProps
   } = props;
-
-  const meta = {};
 
   if (itemScope !== undefined) {
     meta.itemScope = itemScope;
@@ -62,8 +61,7 @@ const Block = React.memo((props) => {
 
   return (
     <Tag
-      {...props}
-      {...meta}
+      {...restProps}
       id={id}
       ref={forwardedRef}
       className={className}

@@ -3,7 +3,8 @@
   "scripts": {
     "build": "next build",
     "dev": "next dev",
-    "start": "next start"
+    "start": "next start",
+    "clean": "rmdir /s docs"
   },
   "dependencies": {
     "formik": "^2.4.6",

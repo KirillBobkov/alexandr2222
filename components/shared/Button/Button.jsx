@@ -35,7 +35,10 @@ export const Button = ({
     console.log("handleTouchEnd", progress);
     if (progress >= 70) {
       // Если прогресс достиг 100%, выполнить действие
-      if (href) router.push(href, undefined);
+      if (href) router.push({
+        pathname: href.pathname,
+        hash: href.hash
+      }, undefined);
       setProgress(20); // Сброс прогресса
     } else {
       setProgress(20); // Сброс прогресса, если не достигнут 100%
@@ -50,10 +53,11 @@ export const Button = ({
         isSubmitted ? styles.success : ""
       }`}
       onClick={(e) => {
-        e.preventDefault();
         if (href) {
-          console.log("href", href);
-          router.push(href, undefined);
+          router.push({
+            pathname: href.pathname,
+            hash: href.hash
+          }, undefined);
         }
       }}
       onTouchStart={handleTouchStart}
