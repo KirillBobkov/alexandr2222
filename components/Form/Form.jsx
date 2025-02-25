@@ -22,11 +22,7 @@ export function Form({
     checkbox: false,
   });
 
-  const [id] = useState(
-    () =>
-      Math.random().toString(36).substring(2, 15) +
-      Math.random().toString(36).substring(2, 15)
-  );
+  const id = type;
   const [message, setMessage] = useState("");
 
   const [errors, setErrors] = useState({
