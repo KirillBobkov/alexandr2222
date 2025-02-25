@@ -250,7 +250,7 @@ export default function () {
           ],
           bottomText:
             "Возможно, ваша проблема не вошла в этот список, поэтому, напишите свой запрос, и я подумаю, как вам помочь.",
-          buttonHref: "#message",
+          href: "/#message",
           buttonStatus: "Записаться",
         }}
       />

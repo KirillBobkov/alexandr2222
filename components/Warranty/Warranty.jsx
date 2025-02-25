@@ -3,7 +3,7 @@ import styles from "./Warranty.module.css"; // Adjust the path as necessary
 import { VisibilityManager } from "../shared/VisibilityManager";
 import { Button } from "../shared/Button/Button.jsx";
 import { LineAnimation } from "../LineAnomation/LineAnimation";
-export const Warranty = () => {
+export const Warranty = ({ href }) => {
   return (
     <LineAnimation>
       <div className={styles.block}>
@@ -16,7 +16,7 @@ export const Warranty = () => {
           <p>Если после работы со мной, вы не почувствуете улучшения, я верну вам
           все деньги. Моя цель – сделать так, чтобы вы были довольны и
           рекомендовали меня своим близким.</p>
-          <Button href="#message" status="Записаться" />
+          <Button href={href} status="Записаться" />
         </VisibilityManager>
       </div>
     </LineAnimation>

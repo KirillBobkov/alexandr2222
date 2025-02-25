@@ -26,7 +26,8 @@ export default () => {
 
     const onClick = useCallback((e) => {
         document.body.scrollTo({ top: 0, behavior: 'smooth' });
-        router.push('', undefined, { shallow: true });
+        // Сбрасываем хэш, оставляя текущую страницу
+         router.replace({ pathname: router.pathname, query: router.query }, undefined, { shallow: true });
     }, [router]);
 
     useEffect(() => {

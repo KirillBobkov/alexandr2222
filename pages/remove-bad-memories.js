@@ -75,7 +75,13 @@ export default function() {
         </div>
       </LineAnimation>
       <div id="message" />
-      <Form setIsSubmitted={setIsSubmitted} isSubmitted={isSubmitted} type={metaConfig.pageTitle}/>
+      <Form setIsSubmitted={setIsSubmitted} isSubmitted={isSubmitted} type={metaConfig.pageTitle}  title={"Готовы жить лучше?"}
+        description={`Запишитесь на бесплатную консультацию, и я свяжусь с вами в ближайшее время.
+
+          Первая консультация 20 минут — бесплатно. 
+          
+          Подготовьте вопрос, который вас интересует, и я раскрою и решу вашу проблему, а вы уже сможете сделать вывод, обращаться ко мне в дальнейшем или нет.
+        `}/>
     </Layout>
   );
 }

@@ -168,8 +168,8 @@ export default function () {
     <Layout metaConfig={metaConfig}>
       <SecondaryPreview text={"Нейротраблшуттинг"} image={secondary_preview_7} />
       <Suggest />
-      <Helping />
-      <Warranty />
+      <Helping href={'/neurotrableshutting#message'} />
+      <Warranty href={'/neurotrableshutting#message'}/>
       <AnimatedLine />
       <VideoWidget videos={videos} />
       <Final

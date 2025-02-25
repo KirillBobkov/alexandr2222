@@ -32,9 +32,10 @@ export const Button = ({
 
   const handleTouchEnd = (e) => {
     // e.preventDefault();
+    console.log("handleTouchEnd", progress);
     if (progress >= 70) {
       // Если прогресс достиг 100%, выполнить действие
-      if (href) router.push(href, undefined, { shallow: true });
+      if (href) router.push(href, undefined);
       setProgress(20); // Сброс прогресса
     } else {
       setProgress(20); // Сброс прогресса, если не достигнут 100%
@@ -43,15 +44,16 @@ export const Button = ({
 
   return (
     <VisibilityManager
-      as="a"
-      href={href}
+      as="div"
       disabled={disabled}
       className={`${styles.button} ${className} ${
         isSubmitted ? styles.success : ""
       }`}
       onClick={(e) => {
+        e.preventDefault();
         if (href) {
-          router.push(href, undefined, { shallow: true });
+          console.log("href", href);
+          router.push(href, undefined);
         }
       }}
       onTouchStart={handleTouchStart}

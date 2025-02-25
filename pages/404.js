@@ -7,7 +7,7 @@ export default function Custom404() {
   const metaConfig = {
     title: "404 - Страница не найдена",
     pageTitle: "404",
-    description: "Страница не найдена",
+    description: "Такой страницы не существует, либо она в процессе создания",
     keywords: "",
     content: "",
     href: "/404",
@@ -18,7 +18,7 @@ export default function Custom404() {
       <div className={containerStyles.container}>
         <div className={contentStyles.centerContent}>
           <h1 className={contentStyles.title}>404</h1>
-          <p className={contentStyles.text}>Страница не найдена</p>
+          <p className={contentStyles.text}>Такой страницы не существует, либо она в процессе создания</p>
           <LinkButton href="/" >Вернуться на главную</LinkButton>
         </div>
       </div>

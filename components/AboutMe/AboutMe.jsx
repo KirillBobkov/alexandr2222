@@ -4,7 +4,7 @@ import { LineAnimation } from "../LineAnomation/LineAnimation";
 import { VisibilityManager } from "../shared/VisibilityManager";
 import { Button } from "../shared/Button/Button.jsx";
 import contentStyles from "../../styles/contentStyles.module.css";
-export const AboutMe = ({ title, titleEmpty, items, bottomText, buttonHref, buttonStatus }) => {
+export const AboutMe = ({ title, titleEmpty, items, bottomText, href, buttonStatus }) => {
   return (
     <LineAnimation>
       <div className={styles.block}>
@@ -30,8 +30,8 @@ export const AboutMe = ({ title, titleEmpty, items, bottomText, buttonHref, butt
           </VisibilityManager>
         )}
 
-        {buttonHref && buttonStatus && (
-          <Button className={styles.message} href={buttonHref} status={buttonStatus} />
+        {href && buttonStatus && (
+          <Button className={styles.message} href={href} status={buttonStatus} />
         )}
       </div>
     </LineAnimation>

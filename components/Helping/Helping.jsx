@@ -4,7 +4,7 @@ import { LineAnimation } from "../LineAnomation/LineAnimation";
 import { VisibilityManager } from "../shared/VisibilityManager";
 import { Button } from "../shared/Button/Button.jsx";
 
-export const Helping = () => {
+export const Helping = ({ href }) => {
   return (
     <LineAnimation>
       <div className={styles.container}>
@@ -49,7 +49,7 @@ export const Helping = () => {
               />
             </VisibilityManager>
           </div>
-          <Button className={styles.button} href="#message" status="Записаться" />
+          <Button className={styles.button} href={href} status="Записаться" />
         </div>
       </div>
     </LineAnimation>
