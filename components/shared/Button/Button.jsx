@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import styles from "./Button.module.css";
 import { VisibilityManager } from "../VisibilityManager";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 export const Button = ({
   isSubmitted = false,
@@ -35,10 +36,14 @@ export const Button = ({
     console.log("handleTouchEnd", progress);
     if (progress >= 70) {
       // Если прогресс достиг 100%, выполнить действие
-      if (href) router.push({
-        pathname: href.pathname,
-        hash: href.hash
-      }, undefined);
+      if (href)
+        router.push(
+          {
+            pathname: href.pathname,
+            hash: href.hash,
+          },
+          undefined
+        );
       setProgress(20); // Сброс прогресса
     } else {
       setProgress(20); // Сброс прогресса, если не достигнут 100%
@@ -48,18 +53,9 @@ export const Button = ({
   return (
     <VisibilityManager
       as="div"
-      disabled={disabled}
       className={`${styles.button} ${className} ${
         isSubmitted ? styles.success : ""
       }`}
-      onClick={(e) => {
-        if (href) {
-          router.push({
-            pathname: href.pathname,
-            hash: href.hash
-          }, undefined);
-        }
-      }}
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
@@ -67,7 +63,13 @@ export const Button = ({
         "--progress-width": `${progress}%`, // Динамическая ширина прогресса
       }}
     >
-      {status}
+      <Link
+        prefetch={false}
+        href={href.pathname + (href.hash || '')}
+        scroll={false}
+      >
+        {status}
+      </Link>
     </VisibilityManager>
   );
 };
