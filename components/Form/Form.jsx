@@ -21,23 +21,21 @@ export function Form({
       const chat_id = "-1002359699160";
       const url = `https://api.telegram.org/bot${token}/sendMessage`;
 
-      // await fetch(url, {
-      //   method: "POST",
-      //   headers: {
-      //     "Content-Type": "application/json;charset=UTF-8",
-      //   },
-      //   body: JSON.stringify({
-      //     chat_id,
-      //     parse_mode: "html",
-      //     text: `<b>Новая запись на консультацию</b>\n\n<b>Программа</b>: ${
-      //       type ?? "отсутствует"
-      //     }\n<b>Имя</b>: ${formData.name}\n<b>Номер телефона</b>: ${
-      //       formData.phone
-      //     }\n`,
-      //   }),
-      // });
-      
-      await Promise.resolve();
+      await fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json;charset=UTF-8",
+        },
+        body: JSON.stringify({
+          chat_id,
+          parse_mode: "html",
+          text: `<b>Новая запись на консультацию</b>\n\n<b>Программа</b>: ${
+            type ?? "отсутствует"
+          }\n<b>Имя</b>: ${formData.name}\n<b>Номер телефона</b>: ${
+            formData.phone
+          }\n`,
+        }),
+      });
 
       setMessage("success");
     } catch (error) {
