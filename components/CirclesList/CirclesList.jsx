@@ -24,7 +24,7 @@ export const CirclesList = ({ title, titleEmpty, items, descriptions }) => {
         {items?.length > 0 && (
           <VisibilityManager as="ul" className={styles["flex-container"]}>
             {items.map((item, index) => (
-              <TextBlock key={index} title={item.title} />
+              <CircleItem key={index} title={item.title} />
             ))}
           </VisibilityManager>
         )}
@@ -46,7 +46,7 @@ export const CirclesList = ({ title, titleEmpty, items, descriptions }) => {
   );
 };
 
-const TextBlock = ({ title }) => {
+const CircleItem = ({ title }) => {
   return (
     <li className={styles.circle}>
       <h3 className={styles.textTitle}>{title}</h3>

@@ -5,7 +5,7 @@ import styles from "./styles/ProductGrid.module.css";
 import { VisibilityManager } from "../shared/VisibilityManager";
 
 export function Products({ products }) {
-  const [selectedProduct, setSelectedProduct] = useState<any>(null);
+  // const [selectedProduct, setSelectedProduct] = useState<any>(null);
 
   return (
     <div className={styles.container} id="programs">
@@ -18,19 +18,15 @@ export function Products({ products }) {
             <ProductCard
               key={product.id}
               product={product}
-              onClick={() => {
-                setSelectedProduct(product);
-                console.log("click", product);
-              }}
             />
           ))}
         </div>
-        {
+        {/* {
           <ProductModal
             product={selectedProduct}
             onClose={() => setSelectedProduct(null)}
           />
-        }
+        } */}
       </div>
     </div>
   );

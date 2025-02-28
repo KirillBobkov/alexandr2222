@@ -5,12 +5,10 @@ import Link from "next/link";
 
 interface ProductCardProps {
   product: any;
-  onClick: () => void;
 }
 
 export const ProductCard: React.FC<ProductCardProps> = ({
   product,
-  onClick,
 }) => {
   const [loaded, setLoaded] = React.useState(false);
 
