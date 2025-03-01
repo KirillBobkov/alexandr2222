@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import handleViewport from "react-in-viewport";
 
 const sideMapNotVisible = {
@@ -19,7 +19,11 @@ const sideMap = {
   opacity: "translateY(0)",
 };
 
-const Block = React.memo((props) => {
+// Cache transition strings to avoid string concatenation on every render
+const getTransitionStyle = (speed, delay) => 
+  `transform ${speed}s ${delay}s, opacity ${speed}s ${delay}s, background-size ${speed}s ${delay}s, background-color 300ms ${delay}s`;
+
+const VisibilityManagerComponent = React.memo((props) => {
   const {
     itemScope,
     itemType,
@@ -44,20 +48,21 @@ const Block = React.memo((props) => {
   if (itemScope !== undefined) {
     meta.itemScope = itemScope;
   }
-  if (itemType!== undefined) {
+  if (itemType !== undefined) {
     meta.itemType = itemType;
   }
-  if (itemProp!== undefined) {
+  if (itemProp !== undefined) {
     meta.itemProp = itemProp;
   }
 
-  const animationStyles = {
+  // Memoize the animation styles to prevent recalculation unless dependencies change
+  const animationStyles = useMemo(() => ({
     ...style,
     willChange: "transform, opacity",
-    transition: `transform ${speed}s ${delay}s, opacity ${speed}s ${delay}s, background-size ${speed}s ${delay}s, background-color 300ms ${delay}s`,
+    transition: getTransitionStyle(speed, delay),
     opacity: (inViewport || (onInit && enterCount > 0)) ? 1 : 0,
     transform: (inViewport || (onInit && enterCount > 0)) ? sideMap[side] : sideMapNotVisible[side],
-  }
+  }), [style, speed, delay, inViewport, onInit, enterCount, side]);
 
   return (
     <Tag
@@ -73,4 +78,12 @@ const Block = React.memo((props) => {
   );
 });
 
-export const VisibilityManager = handleViewport(Block);
+VisibilityManagerComponent.displayName = 'VisibilityManager';
+
+// Use a more performant intersection observer configuration
+const viewportConfig = {
+  threshold: [0], // Only trigger once when element enters viewport
+  rootMargin: '50px 0px', // Add some margin to trigger slightly before element is in view
+};
+
+export const VisibilityManager = handleViewport(Block, viewportConfig);

@@ -90,8 +90,6 @@ export const FormValidator: React.FC<FormValidatorProps> = ({
     }
   };
 
-  console.log(formData)
-
   return children({
     formData,
     errors,
