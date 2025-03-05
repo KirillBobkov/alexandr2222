@@ -86,4 +86,4 @@ const viewportConfig = {
   rootMargin: '50px 0px', // Add some margin to trigger slightly before element is in view
 };
 
-export const VisibilityManager = handleViewport(Block, viewportConfig);
+export const VisibilityManager = handleViewport(VisibilityManagerComponent, viewportConfig);
