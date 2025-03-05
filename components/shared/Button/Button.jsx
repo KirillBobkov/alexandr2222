@@ -67,6 +67,7 @@ export const Button = ({
         prefetch={false}
         href={href.pathname + (href.hash || '')}
         scroll={false}
+        className={`${styles.inner}`}
       >
         {status}
       </Link>
