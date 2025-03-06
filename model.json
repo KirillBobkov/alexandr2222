@@ -19,5 +19,9 @@
         ":type": "line"
       }
     }
-  }
+  },
+  "Заголовок сайта" : {
+    	":type": "text",
+    	":rich.text": true
+    },
 }
