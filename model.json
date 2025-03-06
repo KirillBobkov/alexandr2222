@@ -20,8 +20,8 @@
       }
     }
   },
-  "Заголовок сайта" : {
-    	":type": "text",
-    	":rich.text": "true"
-    },
+  "description" : {
+  	":type": "text",
+  	":rich.text": true
+  },
 }
