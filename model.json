@@ -20,7 +20,7 @@
       }
     }
   },
-  "Заголовок сайта" : {
+  "Sitehead" : {
     	":type": "text",
     	":rich.text": true
     },
