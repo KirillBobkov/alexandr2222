@@ -5,9 +5,9 @@ import { useScrollToLocation } from "../../hooks/useScrollToLocation";
 import { SecondaryPreview } from "../../components/SecondaryPreview/SecondaryPreview";
 import { LineAnimation } from "../../components/LineAnomation/LineAnimation";
 import { VisibilityManager } from "../../components/shared/VisibilityManager";
-import containerStyles from "../styles/container.module.css";
-import contentStyles from "../styles/contentStyles.module.css";
-import secondary_preview_3 from '../public/images/secondary_preview_3.webp';
+import containerStyles from "../../styles/container.module.css";
+import contentStyles from "../../styles/contentStyles.module.css";
+import secondary_preview_3 from '../../public/images/secondary_preview_3.webp';
 export default function() {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
