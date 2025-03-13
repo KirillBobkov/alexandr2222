@@ -50,7 +50,8 @@
 
     .secondaryPreview {
       padding-top: 80px;
-      height: 70dvh; /* Full height of the viewport */
+      height: 60dvh; /* Full height of the viewport */
+      min-height: 300px;
     }
   
     .secondaryPreview__title {
