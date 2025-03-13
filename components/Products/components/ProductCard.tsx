@@ -12,8 +12,8 @@ export const ProductCard: React.FC<ProductCardProps> = ({
 }) => {
   const [loaded, setLoaded] = React.useState(false);
 
-  return (
-    <Link prefetch={false} href={product.href} className={styles.card + " " + (loaded ? styles.loaded : "")}>
+  const cardContent = (
+    <>
       <Image
         src={product.image}
         alt={product.title}
@@ -21,27 +21,26 @@ export const ProductCard: React.FC<ProductCardProps> = ({
         onLoad={() => setLoaded(true)}
       />
       <div 
-  
-      className={`${styles.button}`}
-    >
-      <span className={styles.text}>{product.title}</span>
-      <svg 
-        className={styles.arrow} 
-        width="24" 
-        height="24" 
-        viewBox="0 0 24 24" 
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
+        className={`${styles.button} ${product.disabled ? styles.disabled : ''}`}
       >
-        <path 
-          d="M4 12H20M20 12L14 6M20 12L14 18" 
-          stroke="currentColor" 
-          strokeWidth="2" 
-          strokeLinecap="round" 
-          strokeLinejoin="round"
-        />
-      </svg>
-    </div>
+        <span className={styles.text}>{product.title}</span>
+        <svg 
+          className={styles.arrow} 
+          width="24" 
+          height="24" 
+          viewBox="0 0 24 24" 
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path 
+            d="M4 12H20M20 12L14 6M20 12L14 18" 
+            stroke="currentColor" 
+            strokeWidth="2" 
+            strokeLinecap="round" 
+            strokeLinejoin="round"
+          />
+        </svg>
+      </div>
       <div className={styles.svgWrapper}>
         <svg
           className={styles.svg}
@@ -58,6 +57,20 @@ export const ProductCard: React.FC<ProductCardProps> = ({
           />
         </svg>
       </div>
+    </>
+  );
+
+  if (product.disabled) {
+    return (
+      <div className={`${styles.card} ${styles.disabled} ${loaded ? styles.loaded : ""}`}>
+        {cardContent}
+      </div>
+    );
+  }
+
+  return (
+    <Link prefetch={false} href={product.href} className={`${styles.card} ${loaded ? styles.loaded : ""}`}>
+      {cardContent}
     </Link>
   );
 };

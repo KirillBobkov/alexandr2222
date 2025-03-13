@@ -36,6 +36,7 @@ export default function () {
             жизни.
           </VisibilityManager>
 
+          <div style={{ height: '1px' }} />
           <VisibilityManager as="h2" className={contentStyles.title_middle}>
             Начало пути: поиски себя и борьба с трудностями
           </VisibilityManager>
@@ -70,6 +71,7 @@ export default function () {
             моего пути к здоровью и пониманию себя.
           </VisibilityManager>
 
+          <div style={{ height: '1px' }} />
           <VisibilityManager as="h2" className={contentStyles.title_middle}>
             Переломный момент: встреча с собой настоящим
           </VisibilityManager>
@@ -89,6 +91,7 @@ export default function () {
             целительству.
           </VisibilityManager>
 
+          <div style={{ height: '1px' }} />
           <VisibilityManager as="h2" className={contentStyles.title_middle}>
             Результаты: помощь людям и новая жизнь
           </VisibilityManager>
@@ -109,6 +112,7 @@ export default function () {
             ищет исцеления и перемен в жизни. Также консультирую людей онлайн.
           </VisibilityManager>
 
+          <div style={{ height: '1px' }} />
           <VisibilityManager as="h2" className={contentStyles.title_middle}>
             Что я предлагаю сегодня
           </VisibilityManager>
@@ -145,6 +149,7 @@ export default function () {
             уникален, и я всегда нахожу индивидуальный подход к своим клиентам.
           </VisibilityManager>
 
+          <div style={{ height: '1px' }} />
           <VisibilityManager as="h2" className={contentStyles.title_middle}>
             Почему мне можно доверять?
           </VisibilityManager>

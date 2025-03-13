@@ -4,7 +4,7 @@ import styles from "./Form.module.css";
 import { LineAnimation } from "../LineAnomation/LineAnimation";
 import { VisibilityManager } from "../shared/VisibilityManager";
 import { FormValidator } from "../shared/FormValidator/FormValidator";
-
+import contentStyles from "../../styles/contentStyles.module.css";
 export function Form({
   isSubmitted,
   setIsSubmitted,
@@ -47,7 +47,7 @@ export function Form({
     <LineAnimation>
       <div className={styles.form}>
         <VisibilityManager side="left" className={styles.form_content}>
-          <h3 className={styles.textTitle}>{title}</h3>
+          <h3 className={contentStyles.title_middle}>{title}</h3>
           <p className={styles.textDescription}>{description}</p>
         </VisibilityManager>
         

@@ -12,7 +12,60 @@ import { Final } from "../components/Final/Final";
 import { VideoWidget } from "../components/VideoWidget/VideoWidget";
 import { Questions } from "../components/Questions/Questions";
 
-const videos = [];
+
+const videos = [
+  {
+    link: "https://vkvideo.ru/video_ext.php?oid=290538287&id=456239200&hash=1f59e4c38e95320f",
+    thumbnailUrl:
+      "https://i.mycdn.me/getVideoPreview?id=8285454010927&idx=13&type=39&tkn=eg0RhO-KpcZbQcdGGWmyi5ks118&fn=vid_l",
+    name: 'Отзыв Айдара о Мухоморном ретрите в Казани',
+    uploadDate: new Date("March 13, 2025").toISOString(),
+  },
+  {
+    link: "https://vkvideo.ru/video_ext.php?oid=290538287&id=456239195&hash=c7ee923a88bf9b4e",
+    thumbnailUrl:
+      "https://i.mycdn.me/getVideoPreview?id=8285396077103&idx=0&type=39&tkn=SSoFVhoZ0lQOctJ6vjF6OwmE2lY&fn=vid_l",
+    name: 'Отзыв Вероники о Мухоморном ретрите в Казани',
+    uploadDate: new Date("March 13, 2025").toISOString(),
+  },
+  {
+    link: "https://vkvideo.ru/video_ext.php?oid=290538287&id=456239199&hash=16d0076dfe68de70",
+    thumbnailUrl:
+      "https://i.mycdn.me/getVideoPreview?id=8285457877551&idx=5&type=39&tkn=t4ee7KnrznQu1Xjv3VQZ5V1X0us&fn=vid_l",
+    name: 'Отзыв Кирилла о Мухоморном ретрите в Казани',
+    uploadDate: new Date("March 13, 2025").toISOString(),
+  },
+  {
+    link: "https://vkvideo.ru/video_ext.php?oid=290538287&id=456239198&hash=3d85099eca3aead0",
+    thumbnailUrl:
+      "https://i.mycdn.me/getVideoPreview?id=8285432580655&idx=7&type=39&tkn=JSqPlkPTxNZtEx7xA1YL5UUiegs&fn=vid_l",
+    name: 'Отзыв Игоря о Мухоморном ретрите в Казани',
+    uploadDate: new Date("March 13, 2025").toISOString(),
+  },
+  {
+    link: "https://vkvideo.ru/video_ext.php?oid=290538287&id=456239197&hash=20f58a9af5b24acf",
+    thumbnailUrl:
+      "https://i.mycdn.me/getVideoPreview?id=8285427599919&idx=15&type=39&tkn=rI9YJkYSMhbD588WULwlAN7EdKU&fn=vid_l",
+    name: 'Отзыв Булата о Мухоморном ретрите в Казани',
+    uploadDate: new Date("March 13, 2025").toISOString(),
+  },
+
+  {
+    link: "https://vkvideo.ru/video_ext.php?oid=290538287&id=456239194&hash=4e6c5032e0306911",
+    thumbnailUrl:
+      "https://i.mycdn.me/getVideoPreview?id=8285376285231&idx=0&type=39&tkn=Qn5Sjxdkq1-WeKVypbSloCMph4g&fn=vid_l",
+    name: 'Отзыв Андрея о Мухоморном ретрите в Казани',
+    uploadDate: new Date("March 13, 2025").toISOString(),
+  },
+  {
+    link: "https://vkvideo.ru/video_ext.php?oid=290538287&id=456239196&hash=9e93dff6cda11e19",
+    thumbnailUrl:
+      "https://i.mycdn.me/getVideoPreview?id=8285423798831&idx=10&type=39&tkn=S0XDiAMyHgOjpCL3c2nuIizK53Y&fn=vid_l",
+    name: 'Отзыв Никиты о Мухоморном ретрите в Казани',
+    uploadDate: new Date("March 13, 2025").toISOString(),
+  },
+];
+
 
 export const questionsContent = {
   blocks: [
@@ -111,6 +164,7 @@ export default function () {
             современные примеры, а также риски, связанные с мухоморным трипом.
           </VisibilityManager>
 
+          <div style={{ height: '1px' }} />
           <VisibilityManager as="h3" className={contentStyles.title_middle}>
             Польза и результаты мухоморного ретрита
           </VisibilityManager>
@@ -206,6 +260,7 @@ export default function () {
             </p>
           </VisibilityManager>
 
+          <div style={{ height: '1px' }} /> 
           <VisibilityManager as="h3" className={contentStyles.title_middle}>
             Исторические примеры
           </VisibilityManager>
@@ -254,6 +309,7 @@ export default function () {
             </p>
           </VisibilityManager>
 
+          <div style={{ height: '1px' }} /> 
           <VisibilityManager as="h3" className={contentStyles.title_middle}>
             Современные примеры
           </VisibilityManager>
@@ -291,6 +347,7 @@ export default function () {
             </p>
           </VisibilityManager>
 
+          <div style={{ height: '1px' }} /> 
           <VisibilityManager as="h3" className={contentStyles.title_middle}>
             Как это происходит
           </VisibilityManager>
@@ -340,6 +397,7 @@ export default function () {
             </p>
           </VisibilityManager>
 
+          <div style={{ height: '1px' }} /> 
           <VisibilityManager as="h3" className={contentStyles.title_middle}>
             Опасность и побочные эффекты
           </VisibilityManager>
@@ -370,6 +428,7 @@ export default function () {
             </p>
           </VisibilityManager>
 
+          <div style={{ height: '1px' }} /> 
           <VisibilityManager as="h3" className={contentStyles.title_middle}>
             Заключение
           </VisibilityManager>

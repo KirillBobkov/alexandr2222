@@ -1,13 +1,13 @@
-import Layout from "../components/Layout/Layout";
-import { Form } from "../components/Form/Form";
+import Layout from "../../components/Layout/Layout";
+import { Form } from "../../components/Form/Form";
 import { useState } from "react";
-import { useScrollToLocation } from "../hooks/useScrollToLocation";
-import { SecondaryPreview } from "../components/SecondaryPreview/SecondaryPreview";
-import { LineAnimation } from "../components/LineAnomation/LineAnimation";
-import { VisibilityManager } from "../components/shared/VisibilityManager";
-import containerStyles from "../styles/container.module.css";
-import contentStyles from "../styles/contentStyles.module.css";
-import secondary_preview_4 from '../public/images/secondary_preview_4.webp';
+import { useScrollToLocation } from "../../hooks/useScrollToLocation";
+import { SecondaryPreview } from "../../components/SecondaryPreview/SecondaryPreview";
+import { LineAnimation } from "../../components/LineAnomation/LineAnimation";
+import { VisibilityManager } from "../../components/shared/VisibilityManager";
+import containerStyles from "../../styles/container.module.css";
+import contentStyles from "../../styles/contentStyles.module.css";
+import secondary_preview_4 from '../../public/images/secondary_preview_4.webp';
 
 
 export default function() {
@@ -21,7 +21,7 @@ export default function() {
     description: "Увеличить заработок",
     keywords: "очищение интеграл ретрит грибы дурман",
     content: '',
-    href: '/grow-money'
+    href: '/programs/grow-money'
 };
 
   return (
@@ -48,6 +48,7 @@ export default function() {
             возможности и реально начать зарабатывать больше.
           </VisibilityManager>
 
+          <div style={{ height: '1px' }} />
           <VisibilityManager as="h3" className={contentStyles.title_middle}>
             Результаты, которые вы получите
           </VisibilityManager>
@@ -75,6 +76,7 @@ export default function() {
             </p>
           </VisibilityManager>
 
+          <div style={{ height: '1px' }} />
           <VisibilityManager as="h3" className={contentStyles.title_middle}>
             Представьте себе:
           </VisibilityManager>

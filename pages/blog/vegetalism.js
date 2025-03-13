@@ -1,15 +1,13 @@
-import Layout from "../components/Layout/Layout";
-import { Form } from "../components/Form/Form";
+import Layout from "../../components/Layout/Layout";
+import { Form } from "../../components/Form/Form";
 import { useState } from "react";
-import { useScrollToLocation } from "../hooks/useScrollToLocation";
-import { SecondaryPreview } from "../components/SecondaryPreview/SecondaryPreview";
-import { LineAnimation } from "../components/LineAnomation/LineAnimation";
-import { VisibilityManager } from "../components/shared/VisibilityManager";
-import containerStyles from "../styles/container.module.css";
-import contentStyles from "../styles/contentStyles.module.css";
-import secondary_preview_9 from "../public/images/secondary_preview_9.webp";
-import { Final } from "../components/Final/Final";
-
+import { useScrollToLocation } from "../../hooks/useScrollToLocation";
+import { SecondaryPreview } from "../../components/SecondaryPreview/SecondaryPreview";
+import { LineAnimation } from "../../components/LineAnomation/LineAnimation";
+import { VisibilityManager } from "../../components/shared/VisibilityManager";
+import containerStyles from "../../styles/container.module.css";
+import contentStyles from "../../styles/contentStyles.module.css";
+import secondary_preview_9 from "../../public/images/secondary_preview_9.webp";
 export default function () {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -46,6 +44,7 @@ export default function () {
             помогают исцелять тела, умы и души людей, которые ко мне обращаются.
           </VisibilityManager>
 
+          <div style={{ height: '1px' }} />
           <VisibilityManager as="h3" className={contentStyles.title_middle}>
             Что такое вегетализм?
           </VisibilityManager>
@@ -72,6 +71,7 @@ export default function () {
             </p>
           </VisibilityManager>
 
+          <div style={{ height: '1px' }} />
           <VisibilityManager as="h3" className={contentStyles.title_middle}>
             Почему вегетализм необходим?
           </VisibilityManager>
@@ -103,6 +103,7 @@ export default function () {
             </p>
           </VisibilityManager>
 
+          <div style={{ height: '1px' }} />
           <VisibilityManager as="h3" className={contentStyles.title_middle}>
             Как я использую вегетализм в своей практике?
           </VisibilityManager>

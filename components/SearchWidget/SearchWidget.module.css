@@ -1,0 +1,47 @@
+.searchWidget {
+  padding: 1.5rem;
+  position: sticky;
+  height: 200px;
+  border-radius: 20px;
+  background-color: #171717;
+  top: 2rem;
+}
+
+.header {
+  margin-bottom: 1.5rem;
+}
+
+.title {
+  color: #fff;
+  font-size: 24px;
+  line-height: 40px;
+  font-weight: 700;
+  position: relative;
+}
+
+.textSymbol {
+  color: var(--accent);
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 0.8rem;
+  border-bottom: 1px solid var(--font-color);
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  background: transparent;
+  color: var(--font-color);
+}
+
+.searchInput::placeholder {
+  color: var(--font-color);
+  opacity: 0.5;
+}
+
+.searchResults {
+  color: var(--font-color);
+  font-size: 0.9rem;
+  opacity: 0.8;
+} 

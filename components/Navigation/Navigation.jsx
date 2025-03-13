@@ -84,60 +84,58 @@ export const getNavigationTree = (pathname) => [
       value: "Обо мне",
     },
   },
-  {
-    parent: {
-      path: "/#programs",
-      value: "Программы",
-    },
-    childs: products.map((p) => {
-      return {
-        path: p.href,
-        value: p.title,
-      };
-    }).filter(value => !value.path.includes("ceremony")),
-  },
+  // {
+  //   parent: {
+  //     path: "/#programs",
+  //     value: "Программы",
+  //   },
+  //   childs: products.map((p) => {
+  //     return {
+  //       path: p.href,
+  //       value: p.title,
+  //     };
+  //   }).filter(value => !value.path.includes("ceremony")),
+  // },
   {
     parent: {
       path: "/ceremony",
       value: "Мухоморный ретрит",
     },
+    childs: [
+      {
+        path: "/ceremony#reviews",
+        value: "Отзывы",
+      },
+      {
+        path: "/ceremony#faq",
+        value: "Вопросы и ответы",
+      },
+    ],
   },
   {
     parent: {
-      path: "/neurotrableshutting",
+      path: "/neurotroubleshutting",
       value: "Нейротраблшуттинг",
     },
+    childs: [
+      {
+        path: "/neurotroubleshutting#programs",
+        value: "Программы",
+      },
+      {
+        path: "/neurotroubleshutting#reviews",
+        value: "Отзывы",
+      },
+      {
+        path: "/neurotroubleshutting#faq",
+        value: "Вопросы и ответы",
+      },
+    ],
   },
-  {
+  { 
     parent: {
-      path: "/vegetalism",
-      value: "Вегетализм",
-    },
-  },
-
-
-  pathname.includes("neurotrableshutting") && {
-    parent: {
-      path: "/neurotrableshutting#reviews",
-      value: "Отзывы",
-    },
-  },
-  pathname.includes("neurotrableshutting") && {
-    parent: {
-      path: "/neurotrableshutting#faq",
-      value: "Вопросы и ответы",
-    },
-  },
-  pathname.includes("ceremony") && {
-    parent: {
-      path: "/ceremony#reviews",
-      value: "Отзывы",
-    },
-  },
-  pathname.includes("ceremony") && {
-    parent: {
-      path: "/ceremony#faq",
-      value: "Вопросы и ответы",
+      path: "/blog",
+      value: "Блог",
     },
   },
 ].filter(Boolean);

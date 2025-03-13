@@ -1,10 +1,10 @@
-import Layout from "../components/Layout/Layout";
-import { Form } from "../components/Form/Form";
+import Layout from "../../components/Layout/Layout";
+import { Form } from "../../components/Form/Form";
 import { useState } from "react";
-import { useScrollToLocation } from "../hooks/useScrollToLocation";
-import { SecondaryPreview } from "../components/SecondaryPreview/SecondaryPreview";
-import { LineAnimation } from "../components/LineAnomation/LineAnimation";
-import { VisibilityManager } from "../components/shared/VisibilityManager";
+import { useScrollToLocation } from "../../hooks/useScrollToLocation";
+import { SecondaryPreview } from "../../components/SecondaryPreview/SecondaryPreview";
+import { LineAnimation } from "../../components/LineAnomation/LineAnimation";
+import { VisibilityManager } from "../../components/shared/VisibilityManager";
 import containerStyles from "../styles/container.module.css";
 import contentStyles from "../styles/contentStyles.module.css";
 import secondary_preview_3 from '../public/images/secondary_preview_3.webp';
@@ -41,6 +41,7 @@ export default function() {
             расслабления и внутреннего покоя.{" "}
           </VisibilityManager>
 
+          <div style={{ height: '1px' }} />
           <VisibilityManager as="h3" className={contentStyles.title_middle}>
             После сессии вы почувствуете
           </VisibilityManager>

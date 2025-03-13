@@ -42,6 +42,28 @@
   transition: opacity 1s ease-in-out;
 }
 
+.card.disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.card.disabled:hover .svgWrapper {
+  opacity: 0;
+  transform: translateY(10%);
+}
+
+.card.disabled:hover:before {
+  transform: translateX(-100%);
+}
+
+.card.disabled .button {
+  cursor: not-allowed;
+}
+
+.card.disabled .button:hover {
+  transform: none;
+}
+
 .loaded {
   opacity: 1;
 }

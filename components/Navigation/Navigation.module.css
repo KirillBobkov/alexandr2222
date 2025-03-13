@@ -17,6 +17,7 @@
     margin-top: -10px;
 }
 
+
 .logo__title {
     font-size: 30px;
     font-weight: 700;
@@ -60,6 +61,10 @@
 
 .dropdownItem.active {
     color: var(--accent);
+}
+
+.symbol {
+    margin-left: 5px;
 }
 
 .burgerButton {

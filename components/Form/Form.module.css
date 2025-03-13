@@ -20,6 +20,11 @@
 
 .form_content {
   flex-basis: 55%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1.5rem;
 }
 
 .success {

@@ -13,7 +13,7 @@ import { Questions } from "../components/Questions/Questions";
 import logo from "../public/images/logo.webp";
 import { Final } from "../components/Final/Final";
 import { Form } from "../components/Form/Form";
-
+import { products as neurotroubleshuttingProducts } from "../consts/products";
 export const questionsContent = {
   blocks: [
     {
@@ -62,46 +62,22 @@ export const questionsContent = {
   ],
 }
 
-export const products = [
-  {
-    id: 1,
-    title: "Бросить курить",
-    image: logo,
-    href: "/drop-smoking"
-  },
-  {
-    id: 2,
-    title: "Отпустить негатив",
-    image: logo,
-    href: "/remove-bad-memories"
-  },
-  {
-    id: 4,
-    title: "Увеличить заработок",
-    image: logo,
-    href: "/grow-money"
-  },
-  {
-    id: 5,
-    title: "Избавиться от фобии",
-    image: logo,
-    href: "/remove-phobia"
-  },
-  {
-    id: 6,
-    title: "Избавиться от аллергии",
-    image: logo,
-    href: "/remove-allergy"
-  },
-  {
-    id: 7,
-    title: "Избавиться от ночных кошмаров",
-    image: logo,
-    href: "/remove-nightmares"
-  },
-];
 
 const videos = [
+  {
+    link: "https://vkvideo.ru/video_ext.php?oid=290538287&id=456239192&hash=fc6f543804a18fff",
+    thumbnailUrl:
+      "https://i.mycdn.me/getVideoPreview?id=7895760833071&idx=2&type=39&tkn=M56cNKVKS2eNz_YBO5he2T9jdWM&fn=vid_l",
+    name: 'Отзыв Булата Рустамовича о проработках с Александром "Интегралом" Васильевым',
+    uploadDate: new Date("March 13, 2025").toISOString(),
+  },
+  {
+    link: "https://vkvideo.ru/video_ext.php?oid=290538287&id=456239201&hash=21fab855e5d11724",
+    thumbnailUrl:
+      "https://i.mycdn.me/getVideoPreview?id=8285451979311&idx=2&type=39&tkn=_jMrqV-BhCK-tbXnuUzkM1tM7Do&fn=vid_l",
+    name: 'Отзыв Андрея о работе с Александром "Интегралом" Васильевым',
+    uploadDate: new Date("March 13, 2025").toISOString(),
+  },
   {
     link: "https://vkvideo.ru/video_ext.php?oid=290538287&id=456239191&hash=344bfa2e09b67aa6",
     thumbnailUrl:
@@ -168,17 +144,17 @@ export default function () {
     <Layout metaConfig={metaConfig}>
       <SecondaryPreview text={"Нейротраблшуттинг"} image={secondary_preview_7} />
       <Suggest />
-      <Helping href={{ pathname: '/neurotrableshutting', hash: '#message'}} />
-      <Warranty href={{ pathname: '/neurotrableshutting', hash: '#message'}}/>
+      <Helping href={{ pathname: '/neurotroubleshutting', hash: '#message'}} />
+      <Warranty href={{ pathname: '/neurotroubleshutting', hash: '#message'}}/>
       <AnimatedLine />
       <VideoWidget videos={videos} />
       <Final
         title="Запишитесь на бесплатную консультацию"
         description="Узнайте причины своих проблем, способы их решения и возможные преграды на вашем пути к успеху!"
         buttonText="Записаться"
-        buttonHref="/neurotrableshutting#message"
+        buttonHref="/neurotroubleshutting#message"
       />
-      <Products products={products} />
+      <Products products={neurotroubleshuttingProducts} />
       <Questions questionsContent={questionsContent} />
       <div id="message" />
       <Form
