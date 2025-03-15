@@ -13,7 +13,16 @@ import { VideoWidget } from "../components/VideoWidget/VideoWidget";
 import { Questions } from "../components/Questions/Questions";
 
 
+
 const videos = [
+  {
+    link: "https://vkvideo.ru/video_ext.php?oid=290538287&id=456239202&hash=3d55b190e311b0e6",
+    thumbnailUrl:
+      "https://i.mycdn.me/getVideoPreview?id=8289797409327&idx=14&type=39&tkn=CVnXi5ILpSTIee7srOJvmd8ptIk&fn=vid_x",
+    name: 'Отзыв Алексея о мухоморном ретрите в Казани',
+    uploadDate: new Date("March 14, 2025").toISOString(),
+  },
+
   {
     link: "https://vkvideo.ru/video_ext.php?oid=290538287&id=456239200&hash=1f59e4c38e95320f",
     thumbnailUrl:
