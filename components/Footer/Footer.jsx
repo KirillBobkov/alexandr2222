@@ -14,8 +14,8 @@ export function Footer() {
               <a href="#message" className={styles.social__link}>
                 <svg
                   role="presentation"
-                  width="25px"
-                  height="25px"
+                  width="40px"
+                  height="40px"
                   viewBox="0 0 100 100"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -34,14 +34,14 @@ export function Footer() {
               <a
                 rel="nofollow"
                 aria-label="telegram"
-                href="https://t.me/Z44LP"
+                href="https://t.me/chronics44"
                 target="_blank"
                 className={styles.social__link}
               >
                 <svg
                   role="presentation"
-                  width="25px"
-                  height="25px"
+                  width="40px"
+                  height="40px"
                   viewBox="0 0 100 100"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"

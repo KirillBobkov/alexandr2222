@@ -10,10 +10,14 @@ import { SecondaryPreview } from "../components/SecondaryPreview/SecondaryPrevie
 import secondary_preview_7 from '../public/images/secondary_preview_7.webp';
 import { VideoWidget } from "../components/VideoWidget/VideoWidget";
 import { Questions } from "../components/Questions/Questions";
-import logo from "../public/images/logo.webp";
 import { Final } from "../components/Final/Final";
 import { Form } from "../components/Form/Form";
 import { products as neurotroubleshuttingProducts } from "../consts/products";
+import { LineAnimation } from "../components/LineAnomation/LineAnimation";
+import { VisibilityManager } from "../components/shared/VisibilityManager";
+import containerStyles from "../styles/container.module.css";
+import contentStyles from "../styles/contentStyles.module.css";
+
 export const questionsContent = {
   blocks: [
     {
@@ -143,6 +147,90 @@ export default function () {
   return (
     <Layout metaConfig={metaConfig}>
       <SecondaryPreview text={"Нейротраблшуттинг"} image={secondary_preview_7} />
+      <LineAnimation>
+        <div className={containerStyles.container}>
+          <VisibilityManager as="h3" className={contentStyles.title_middle}>
+            Ваш ключ к жизни без страхов, ограничений и внутренних конфликтов
+          </VisibilityManager>
+
+          <VisibilityManager as="p">
+            Устали годами бороться с проблемами, которые возвращаются снова и снова?
+          </VisibilityManager>
+
+          <VisibilityManager as="p">
+            Психологи, медитации, врачи — вы уже пробовали всё. Но что, если решение кроется не в разговорах или таблетках, а в глубинах вашего подсознания?
+          </VisibilityManager>
+
+          <VisibilityManager as="div" className={contentStyles.textBlock}>
+            <h3 className={contentStyles.title_small}>
+              <span className={contentStyles.textSymbol}>//</span>
+              {"  "}
+              Нейротраблшуттинг — это метод, который:
+            </h3>
+            <p className={contentStyles.textDescription}>
+              <span className={contentStyles.textSymbol}>●</span>
+              {"  "}
+              Находит и устраняет корень проблем — от фобий до аллергии, от ночных кошмаров до хронической усталости.
+            </p>
+            <p className={contentStyles.textDescription}>
+              <span className={contentStyles.textSymbol}>●</span>
+              {"  "}
+              Работает быстро: результат за 1-8 сессий. Не годы терапии, а фокус на решении.
+            </p>
+            <p className={contentStyles.textDescription}>
+              <span className={contentStyles.textSymbol}>●</span>
+              {"  "}
+              Сохраняет приватность: мы не разбираем ваше прошлое — мы меняем его влияние на вас здесь и сейчас.
+            </p>
+          </VisibilityManager>
+
+  
+
+          <VisibilityManager as="div" className={contentStyles.textBlock}>
+            <h3 className={contentStyles.title_middle}>
+
+              Как это работает?
+            </h3>
+
+            <p className={contentStyles.textDescription}>
+              <span className={contentStyles.textSymbol}>●</span>
+              {"  "}
+              Страхи, заложенные в детстве или даже до рождения.
+            </p>
+            <p className={contentStyles.textDescription}>
+              <span className={contentStyles.textSymbol}>●</span>
+              {"  "}
+              Психосоматические реакции (аллергии, панические атаки).
+            </p>
+            <p className={contentStyles.textDescription}>
+              <span className={contentStyles.textSymbol}>●</span>
+              {"  "}
+              Ограничивающие убеждения: «Я не достоин», «У меня не получится».
+            </p>
+          </VisibilityManager>
+          <VisibilityManager as="div" className={contentStyles.textBlock}>
+          <h3 className={contentStyles.title_middle}>
+            Ваш результат
+          </h3>
+
+            <p className={contentStyles.textDescription}>
+              <span className={contentStyles.textSymbol}>●</span>
+              {"  "}
+              Свобода от того, что годами держало вас в клетке.
+            </p>
+            <p className={contentStyles.textDescription}>
+              <span className={contentStyles.textSymbol}>●</span>
+              {"  "}
+              Гармония с собой и миром.
+            </p>
+            <p className={contentStyles.textDescription}>
+              <span className={contentStyles.textSymbol}>●</span>
+              {"  "}
+              Энергия двигаться к целям без страха и сомнений.
+            </p>
+          </VisibilityManager>
+        </div>
+      </LineAnimation>
       <Suggest />
       <Helping href={{ pathname: '/neurotroubleshutting', hash: '#message'}} />
       <Warranty href={{ pathname: '/neurotroubleshutting', hash: '#message'}}/>

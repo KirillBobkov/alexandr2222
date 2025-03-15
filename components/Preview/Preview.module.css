@@ -65,3 +65,34 @@
   }
 
 }
+
+.button_container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.telegram_button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--accent);
+  color: white;
+  padding: 14px 30px;
+  border-radius: 30px;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 600;
+  transition: opacity 0.3s ease;
+  width: fit-content;
+}
+
+.telegram_button:hover {
+  opacity: 0.8;
+}
+
+.telegram_icon {
+  width: 24px;
+  height: 24px;
+}

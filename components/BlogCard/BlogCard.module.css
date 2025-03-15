@@ -15,6 +15,7 @@
   height: 400px;
   border-radius: 30px;
   overflow: hidden;
+  margin-bottom: 10px;
 }
 
 .image {
@@ -52,6 +53,5 @@
   .imageWrapper {
     aspect-ratio: 1 / 0.7;
     height: auto;
-    margin-bottom: 10px;
   }
 }
