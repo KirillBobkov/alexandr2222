@@ -54,32 +54,33 @@ export const Dropdown = ({ text, href, childs, onClick, isActive }) => {
       <Link
         prefetch={false}
         className={styles.navigation__parent_link + ' ' + (isActive ? styles.active : "")}
-        style={{ height: "100%", display: "block" }}
         href={href}
         scroll={false}
         onClick={(e) => handleLinkClick(e, href)}
       >
-        {text}
+        <span className={styles.navigation__parent_link_text}>{text}</span>
         {childs && (
           <span 
             className={styles.symbol} 
             onClick={handleArrowClick}
           >
-            <svg
-              width="10"
-              height="10"
-              className={`${styles.svg} ${isOpen ? styles.svg_rotate : ""}`}
-              viewBox="0 0 10 10"
-            >
-              <path
-                d="M1 3.5L5 7.5L9 3.5"
-                stroke="currentColor"
-                fill="none"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
+            <span className={styles.svg_container}>
+              <svg
+                width="10"
+                height="10"
+                className={`${styles.svg} ${isOpen ? styles.svg_rotate : ""}`}
+                viewBox="0 0 10 10"
+              >
+                <path
+                  d="M1 3.5L5 7.5L9 3.5"
+                  stroke="currentColor"
+                  fill="none"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </span>
           </span>
         )}
       </Link>
