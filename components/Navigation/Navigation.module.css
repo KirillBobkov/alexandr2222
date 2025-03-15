@@ -123,6 +123,8 @@
         left: 0;
         right: 0;
         height: 100%;
+        overflow: auto;
+        scrollbar-width: none;
         padding-left: 0;
         padding-right: 0;
         z-index: 10;
