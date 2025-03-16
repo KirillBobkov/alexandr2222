@@ -15,7 +15,7 @@
 .imageWrapper {
   flex-basis: 40%; /* Устанавливаем ширину элемента на 50% */
   position: relative;
-  aspect-ratio: 2/2.3;
+  aspect-ratio: 2/2.9;
 }
 
 .image {
