@@ -14,15 +14,15 @@
     height: 50px;
     padding: 20px;
     margin-bottom: 30px;
-    background-color: #0D0D0D;
-    border: 1px solid #393939;
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
     transition: all 0.2s;
-
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
 }
 
 .input:focus {
   outline: none;
-  border-color: #281a19;
+  border-color: var(--accent);
   box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
 }
 

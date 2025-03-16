@@ -1,15 +1,16 @@
 import React, { useState } from "react";
 import styles from "./Navigation.module.css";
-import logo from "../../images/logo.webp";
+import logoLight from "../../images/logo_light.svg";
+import logoDark from "../../images/logo_dark.svg";
 import Image from "next/image.js";
-import Link from "next/link";
-import { products } from "../../pages/index";
 import { useRouter } from 'next/router';
-import { Dropdown } from './Dropdown';
-
+import { Dropdown } from './Dropdown';  
+import { useTheme } from "../../hooks/useTheme";
 export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
+
+  const { theme } = useTheme();
 
   const toggleMenu = () => setIsOpen(prev => !prev);
 
@@ -17,7 +18,7 @@ export const Navigation = () => {
     <div>
       <header className={`${styles.header} ${isOpen ? styles.header_opened : ""}`}>
         <div className={styles.header__logo_container}>
-          <Image src={logo} alt="Logo" className={styles.header__logo} id="logo" />
+          <Image src={theme === "light" ? logoLight : logoDark} alt="Logo" className={styles.header__logo} id="logo" />
           <p className={styles.logo__title}>
             <span className={styles.logo__title_colored}>ИN</span>TEGRAAL
           </p>

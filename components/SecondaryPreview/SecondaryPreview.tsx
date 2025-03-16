@@ -15,7 +15,8 @@ export const SecondaryPreview = ({ text, image }) => {
         className={styles.secondaryPreview__bg + " " + (loaded ? styles.loaded : "")}
         onLoad={() => setLoaded(true)}
       />
-      <VisibilityManager as="div" className={styles.secondaryPreview__content}>
+      <div className={styles.overlay}></div>
+      <VisibilityManager className={styles.secondaryPreview__content}>
         <h1 className={styles.secondaryPreview__title}>{text}</h1>
       </VisibilityManager>
     </section>

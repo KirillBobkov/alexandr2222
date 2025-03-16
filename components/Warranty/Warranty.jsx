@@ -3,13 +3,14 @@ import styles from "./Warranty.module.css"; // Adjust the path as necessary
 import { VisibilityManager } from "../shared/VisibilityManager";
 import { Button } from "../shared/Button/Button.jsx";
 import { LineAnimation } from "../LineAnomation/LineAnimation";
+import contentStyles from "../../styles/contentStyles.module.css";
 export const Warranty = ({ href }) => {
   return (
     <LineAnimation>
       <div className={styles.block}>
-        <VisibilityManager as="h2" side="left" className={styles.title}>
+        <VisibilityManager as="h2" side="left" className={contentStyles.title}>
           Я уверен{" "}
-          <span className={styles.title_empty}>в своей методике на </span>
+          <span className={contentStyles.title_empty}>в своей методике на </span>
           100%
         </VisibilityManager>
         <VisibilityManager delay={0.5} className={styles.description}>

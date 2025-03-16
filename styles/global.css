@@ -1,14 +1,6 @@
 :root {
   /* #ff6b61 in decimal RGB */
 
-  --base-color-1: #eeb100;
-  --base-color-2: #ffe43b;
-  --base-color-3: #7486e5;
-  --base-color-4: #63dad9;
-  --base-color-5: #14a3eb;
-  --base-color-6: #43d4d2;
-  --base-color-7: #7489f7;
-
   /* Fonts */
   --heading-1: "Arimo";
   --heading-2: "Oswald";
@@ -23,8 +15,37 @@
   --transition: 500ms all ease;
 
   --bg-color: #0d0d0d;
-  --font-color: #bac1d4;
+  --font-color: #ffffff;
+  --secondary-font-color: #a2a2a2;
   --accent: #eeb100;
+  --border-color: #1C1C1C;
+  --card-color: #181818;
+  --bg-color-opacity: #000000bb;
+}
+
+:root[theme='light'] {
+    /* #ff6b61 in decimal RGB */
+
+  /* Fonts */
+  --heading-1: "Arimo";
+  --heading-2: "Oswald";
+  --heading-3: "Jost";
+  --heading-4: "Poppins";
+  --body-font: "Arimo";
+  --transition: 500ms all ease;
+
+  /* Fonts */
+  --heading: "Nunito";
+  --body-font: "Rubik";
+  --transition: 500ms all ease;
+
+  --bg-color: #ffffff;
+  --font-color: #000000;
+  --secondary-font-color: #000000;
+  --accent: #eeb100;
+  --border-color: #e3e3e3;
+  --card-color: #f6f6f6;
+  --bg-color-opacity: #ffffffad;
 }
 
 * {
@@ -40,7 +61,7 @@ body {
   font-size: 18px;
   font-weight: 400;
   line-height: 1.5;
-  color: var(--font-color);
+  color: var(--secondary-font-color);
   position: relative;
 }
 
@@ -62,7 +83,7 @@ body {
 }
 
 *::-webkit-scrollbar-track {
-  background-color: #171717;
+  background-color: var(--bg-color);
   border-radius: 10px;
   border-radius: 10px;
 }

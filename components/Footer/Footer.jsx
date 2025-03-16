@@ -1,14 +1,17 @@
 import React from "react";
 import styles from "./Footer.module.css"; // Import your CSS module
-import logo from "../../images/logo.webp";
+import logoLight from "../../images/logo_light.svg";
+import logoDark from "../../images/logo_dark.svg";
 import Image from "next/image";
+import { useTheme } from "../../hooks/useTheme";
 
 export function Footer() {
+  const { theme } = useTheme();
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
         <div className={styles.logo__container}>
-          <Image className={styles.logo} src={logo} alt="Company Logo" />
+          <Image className={styles.logo} src={theme === "light" ? logoLight : logoDark} alt="Company Logo" />
           <ul className={styles.list}>
             <li>
               <a href="#message" className={styles.social__link}>

@@ -1,6 +1,6 @@
 .block {
     padding: 150px 30px 150px;
-    background-color: #171717;
+    background-color: var(--card-color);
 }
 
 .content {
@@ -11,13 +11,14 @@
     gap: 20px;
     max-width: 1285px;
     margin: 0 auto;
-    background-color: black;
+    background-color: var(--bg-color);
     text-align: center;
     padding: 60px;
     border-radius: 20px;
     position: relative;
     overflow: hidden;
     min-height: 600px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
 }
 
 .background {
@@ -32,7 +33,7 @@
 }
 
 .background.loaded {
-    opacity: 0.3;
+    opacity: 0.4;
 }
 
 .title {
@@ -43,7 +44,7 @@
     margin-top: 150px;
     text-align: center;
     max-width: 1000px;
-    color: #fff;
+    color: var(--font-color);
     z-index: 1;
     position: relative;
 }
@@ -66,7 +67,7 @@
     font-size: 15px;
     font-weight: 700;
     letter-spacing: 0.14em;
-    color: var(--base-color-1);
+    color: var(--accent);
     cursor: pointer;
 }
 

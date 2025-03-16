@@ -22,14 +22,15 @@
   position: relative;
   border-radius: 35px;
   letter-spacing: 0.14em;
-  color: #fff;
-  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--font-color);
+  background-color: var(--bg-color);
   text-transform: uppercase;
   visibility: visible;
   cursor: pointer;
   text-align: center;
   overflow: hidden; /* Ограничить границы прогресса */
   user-select: none;;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
 }
 
 .inner {
@@ -46,7 +47,7 @@
   height: 100%;
   position: absolute;
   border-radius: 35px;
-  background-color: var(--base-color-1);
+  background-color: var(--accent);
 }
 
 .button:disabled {
@@ -56,7 +57,7 @@
 }
 
 .success {
-  background-color: var(--base-color-1);
+  background-color: var(--accent);
   opacity: 0.5!important;
 }
 

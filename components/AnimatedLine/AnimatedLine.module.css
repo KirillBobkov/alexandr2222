@@ -28,7 +28,7 @@
     font-weight: 700;
     line-height: 92px;
     text-transform: uppercase;
-    color: #fff;
+    color: var(--font-color);
 }
   
 .logo__title_colored {
@@ -38,7 +38,7 @@
 .logo__title_empty {
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: #fff;
+    -webkit-text-stroke-color: var(--font-color);
 }
 
 .logo {

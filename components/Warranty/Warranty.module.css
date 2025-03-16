@@ -1,5 +1,5 @@
 .blockContainer {
-    background-color: #181818;
+    background-color: var(--card-color);
 }
 
 .block {
@@ -11,20 +11,6 @@
     padding: 200px 30px;
 }
 
-.title {
-    font-size: 60px;
-    font-weight: 700;
-    line-height: 72px;
-    flex-basis: 45%;
-    text-transform: uppercase;
-    color: #fff;
-}
-
-.title_empty {
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: #fff;
-}
 
 .description {
     flex-basis: 45%;
@@ -52,9 +38,4 @@
         flex-basis: 100%;
     }
 
-    .title {
-        font-size: 40px;
-        line-height: 50px;
-        flex-basis: 100%;
-    }
   }

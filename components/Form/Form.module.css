@@ -29,7 +29,7 @@
 
 .success {
   text-align: center;
-  color: #0f0f0f;
+  color: var(--font-color);
   margin-top: 1rem;
   position: absolute;
   bottom: 30px;
@@ -58,7 +58,7 @@
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  border: 2px solid #757575;
+  border: 2px solid var(--border-color);
   flex-shrink: 0;
 }
 
@@ -79,16 +79,16 @@
 }
 
 .form-checkbox__input:checked {
-  border: 1px solid var(--base-color-1);
-  background-color: var(--base-color-1);
+  border: 1px solid var(--accent);
+  background-color: var(--accent);
 }
 
 .formbutton {
   border-radius: 3px;
-  background-color: var(--base-color-1)!important;
+  background-color: var(--accent)!important;
   padding: 15px 40px;
   text-align: center;
-  color: #fff;
+  color: var(--font-color);
   cursor: pointer;
   font-weight: 600;
   letter-spacing: 0.14em;
@@ -105,7 +105,7 @@
 }
 
 .textTitle {
-  color: #fff;
+  color: var(--font-color);
     font-size: 40px;
     font-weight: 700;
     padding-bottom: 30px;

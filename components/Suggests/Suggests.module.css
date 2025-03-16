@@ -11,13 +11,13 @@
   flex-basis: 70%;
   text-transform: uppercase;
   margin-bottom: 60px;
-  color: #fff;
+  color: var(--font-color);
 }
 
 .title_empty {
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #fff;
+  -webkit-text-stroke-color: var(--font-color);
 }
 
 .description {
@@ -81,7 +81,7 @@
   font-size: 24px;
   font-weight: 700;
   line-height: 36px;
-  color: #fff;
+  color: var(--font-color);
 }
 
 .textTitle {

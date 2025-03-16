@@ -9,8 +9,8 @@ export const AboutMe = ({ title, titleEmpty, items, bottomText, href, buttonStat
     <LineAnimation>
       <div className={styles.block}>
         {(title || titleEmpty) && (
-          <VisibilityManager as="h2" side="left" className={styles.title}>
-            {titleEmpty && <span className={styles.title_empty}>{titleEmpty}</span>}
+          <VisibilityManager as="h2" side="left" className={contentStyles.title} style={{marginLeft: 0, marginRight: 0}}>
+            {titleEmpty && <span className={contentStyles.title_empty}>{titleEmpty}</span>}
            {' '}
             {title}
           </VisibilityManager>
@@ -43,7 +43,7 @@ const TextBlock = ({ title }) => {
     <li className={styles.textBlock + ' ' + styles.item}>
       <h3 className={contentStyles.title_small}>
         {" "}
-        <span className={styles.textSymbol}>// </span>
+        <span className={contentStyles.textSymbol}>// </span>
         {title}
       </h3>
     </li>

@@ -6,6 +6,7 @@ import favicon180x180 from "../../images/favicon180x180.png";
 import logo from "../../images/logo.png";
 import favicon from "../../images/logo.ico";
 import ScrollTopButton from "../ScrollTopButton/ScrollTopButton";
+import { useTheme } from "../../hooks/useTheme";
 
 import { Nunito, Rubik } from "next/font/google";
 
@@ -32,6 +33,8 @@ const rubik = Rubik({
 
 export default function Layout({ children, metaConfig, schemaOrg = '' }) {
   const { title, description, keywords } = metaConfig;
+
+  useTheme();
 
   return (
     <>

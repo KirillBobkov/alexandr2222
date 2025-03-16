@@ -19,14 +19,14 @@
     font-weight: 700;
     line-height: 40px;
     text-transform: uppercase;
-    color: #fff;
+    color: var(--font-color);
 }
 
 .title_small {
   font-size: 24px;
   font-weight: 700;
   line-height: 36px;
-  color: #fff;
+  color: var(--font-color);
 }
 
 .title {
@@ -39,13 +39,13 @@
   max-width: 1185px;
   margin: 0 auto;
   margin-bottom: 40px;
-  color: #fff;
+  color: var(--font-color);
 }
 
 .title_empty {
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #fff;
+  -webkit-text-stroke-color: var(--font-color);
 }
 
 @media screen and (max-width: 768px) {
@@ -60,7 +60,7 @@
       font-weight: 700;
       line-height: 40px;
       text-transform: uppercase;
-      color: #fff;
+      color: var(--font-color);
   }
 }
 

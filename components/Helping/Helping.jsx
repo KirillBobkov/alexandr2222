@@ -3,15 +3,15 @@ import styles from "./Helping.module.css"; // Adjust the path as necessary
 import { LineAnimation } from "../LineAnomation/LineAnimation";
 import { VisibilityManager } from "../shared/VisibilityManager";
 import { Button } from "../shared/Button/Button.jsx";
-
+import contentStyles from "../../styles/contentStyles.module.css";
 export const Helping = ({ href }) => {
   return (
     <LineAnimation>
       <div className={styles.container}>
         <div className={styles.block}>
-        <VisibilityManager as="h2" side="left" className={styles.title}>
+        <VisibilityManager as="h2" side="left" style={{ marginLeft: "0px"}} className={contentStyles.title}>
              Я помогу,
-            <span className={styles.title_empty}> если вы</span>
+            <span className={contentStyles.title_empty}> если вы</span>
         </VisibilityManager>
           <div className={styles["grid-container"]}>
    

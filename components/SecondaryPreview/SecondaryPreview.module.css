@@ -6,7 +6,7 @@
     justify-content: center;
     height: 50dvh; /* Full height of the viewport */
     min-height: 700px;
-    color: white; /* Text color */
+    color: var(--font-color); /* Text color */
     overflow: hidden;
     position: relative;
   }
@@ -14,6 +14,8 @@
   .secondaryPreview__content {
     padding: 0 30px;
     text-align: center;
+    position: relative;
+    z-index: 2;
   }
   
   .secondaryPreview__bg {
@@ -27,9 +29,21 @@
     object-fit: cover;
   }
   
-  .loaded {
-    opacity: 0.4;
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-color-opacity);
+    z-index: 1;
   }
+  
+  .loaded {
+    opacity: 1;
+  }
+
+  
   
   .secondaryPreview__title {
     font-size: 60px;

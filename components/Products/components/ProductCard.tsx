@@ -2,7 +2,9 @@ import React from "react";
 import styles from "../styles/ProductGrid.module.css";
 import Image from "next/image";
 import Link from "next/link";
-
+import logoLight from "../../../images/logo_light.svg";
+import logoDark from "../../../images/logo_dark.svg";
+import { useTheme } from "../../../hooks/useTheme"; 
 interface ProductCardProps {
   product: any;
 }
@@ -11,11 +13,12 @@ export const ProductCard: React.FC<ProductCardProps> = ({
   product,
 }) => {
   const [loaded, setLoaded] = React.useState(false);
+  const { theme } = useTheme();
 
   const cardContent = (
     <>
       <Image
-        src={product.image}
+        src={theme === "light" ? logoLight : logoDark}
         alt={product.title}
         className={styles.cardImage}
         onLoad={() => setLoaded(true)}

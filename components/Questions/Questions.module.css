@@ -6,7 +6,7 @@
 }
 
 .question__main_title {
-    color: #fff;
+    color: var(--font-color);
     font-size: 60px;
     font-weight: 700;
     line-height: 72px;
@@ -17,7 +17,7 @@
 .title_empty {
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: #fff;
+    -webkit-text-stroke-color: var(--font-color);
 }
 
 .question {
@@ -36,7 +36,7 @@
     transition:  color 500ms ease-in-out;
     white-space: pre-line;
     padding: 0;
-    color: #fff;
+    color: var(--font-color);
     font-size: 24px;
     font-weight: 700;
 }
@@ -99,7 +99,7 @@
 
     .question__title:hover {
 
-        color: #fff;
+        color: var(--font-color);
     }
     .active {
         color: var(--accent)!important;

@@ -1,12 +1,12 @@
 /* Footer.module.css */
 .footer {
-    background-color: #171717;
-    color: rgb(255, 255, 255);
+    background-color: var(--card-color);
+    color: var(--font-color);
     padding: 0 60px 60px;
 }
 
 .container {
-    border-top: 1px solid #292929;
+    border-top: 1px solid var(--border-color);
     padding-top: 60px;
     max-width: 1285px;
     margin: 0 auto;
@@ -43,7 +43,7 @@
 }
 
 .list_title {
-    color: #525252;
+    color: var(--font-color);
     margin-bottom: 14px;
     text-transform: uppercase;
     line-height: 1.35;
@@ -67,7 +67,7 @@
 }
 
 .year {
-    color: #525252;
+    color: var(--font-color);
     font-size: 12px;
     line-height: 1.5;
 }

@@ -1,5 +1,5 @@
 .container {
-  background: #181818;
+  background: var(--card-color);
 }
 
 .block {
@@ -8,23 +8,6 @@
   padding: 150px 30px 150px;
   display: flex;
   flex-direction: column;
-}
-
-.title {
-  font-size: 60px;
-  font-weight: 700;
-  line-height: 72px;
-  flex-basis: 70%;
-  text-transform: uppercase;
-  margin-bottom: 60px;
-  margin-right: 30px;
-  color: #fff;
-}
-
-.title_empty {
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #fff;
 }
 
 .accent {
@@ -68,7 +51,7 @@
   font-size: 24px;
   font-weight: 700;
   line-height: 36px;
-  color: #ffffff;
+  color: var(--font-color);
 }
 
 .textSymbol {
@@ -82,7 +65,7 @@
   object-position: center;
   transition: all 1s ease-in-out;
   opacity: 0;
-  background-color: black;
+  background-color: var(--card-color);
   border-radius: 20px;
 }
 
@@ -102,14 +85,6 @@
     flex-direction: column;
     padding: 100px 20px;
     gap: 40px;
-  }
-
-  .title {
-    font-size: 40px;
-    line-height: 50px;
-    flex-basis: 100%;
-    margin-bottom: 0;
-    margin-right: 0;
   }
 
   .grid-container {

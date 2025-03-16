@@ -4,7 +4,8 @@
   flex-direction: column;
   overflow: hidden;
   border-radius: 20px;
-  background-color: #171717;
+  background-color: var(--card-color);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 }
 
 .header {
@@ -12,7 +13,7 @@
 }
 
 .title {
-  color: #fff;
+  color: var(--font-color);
   font-size: 24px;
   line-height: 40px;
   font-weight: 700;
@@ -26,7 +27,7 @@
 }
 
 .listWrapper {
-  background-color: #171717;
+  background-color: var(--card-color);
   overflow: hidden;
 }
 
@@ -53,7 +54,7 @@
 }
 
 .selected .videoTitle {
-  color: #fff;
+  color: var(--font-color);
 }
 
 .thumbnail {
@@ -68,7 +69,7 @@
   height: 100%;
   border-radius: 10px;
   object-fit: cover;
-  background-color: #000000;
+  background-color: var(--bg-color);
 }
 
 .info {

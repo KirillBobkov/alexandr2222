@@ -1,18 +1,21 @@
 import React from "react";
 import styles from "./Preview.module.css";
 import preview_bg from "../../images/preview_bg.webp";
+import preview_bg_light from "../../images/preview_bg_light.webp";
 import Image from "next/image.js";
 import { VisibilityManager } from "../shared/VisibilityManager";
 import { LineAnimation } from "../LineAnomation/LineAnimation";
+import { useTheme } from "../../hooks/useTheme";
 
 export const Preview = () => {
   const [loaded, setLoaded] = React.useState(false);
+  const { theme } = useTheme();
   
   return (
     <LineAnimation>
     <section className={styles.preview}>
       <Image
-        src={preview_bg}
+        src={theme === "light" ? preview_bg_light : preview_bg}
         alt="заставка превью"
         className={styles.preview__bg + " " + (loaded ? styles.loaded : "")}
         onLoad={() => setLoaded(true)}
