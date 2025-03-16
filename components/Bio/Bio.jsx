@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image"; // Adjust this import based on your image handling
 import styles from "./Bio.module.css";
-import alex5 from "../../public/images/alex5.webp";
+import alex5 from "../../images/alex5.webp";
 import { VisibilityManager } from "../shared/VisibilityManager";
 import contentStyles from "../../styles/contentStyles.module.css";
 import LinkButton from "../shared/LinkButton/LinkButton";

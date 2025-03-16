@@ -3,15 +3,29 @@ import Layout from "../components/Layout/Layout";
 import { SecondaryPreview } from "../components/SecondaryPreview/SecondaryPreview";
 import { BlogCard } from "../components/BlogCard/BlogCard";
 import { SearchWidget } from "../components/SearchWidget/SearchWidget";
-import secondary_preview_9 from "../public/images/secondary_preview_9.webp";
-import secondary_preview_12 from "../public/images/secondary_preview_12.webp";
-import secondary_preview_11 from "../public/images/secondary_preview_11.webp";
-import secondary_preview_13 from "../public/images/secondary_preview_13.webp";
+import secondary_preview_9 from "../images/secondary_preview_9.webp";
+import secondary_preview_12 from "../images/secondary_preview_12.webp";
+import secondary_preview_11 from "../images/secondary_preview_11.webp";
+import secondary_preview_13 from "../images/secondary_preview_13.webp";
+import secondary_preview_17 from "../images/secondary_preview_17.webp";
 import styles from "../styles/blog.module.css";
 import contentStyles from "../styles/contentStyles.module.css";
 import { LineAnimation } from "../components/LineAnomation/LineAnimation";
 
 const articles = [
+  {
+    id: 4,
+    title: "Микродозинг Мухомора: как это работает, кому подходит и как начать безопасно",
+    description:
+      `Мухомор — один из самых загадочных грибов, веками использовавшийся шаманами для духовных практик. 
+
+        Сегодня, благодаря работам исследователя Михаила Вишневского, популяризировавшего его свойства в русскоязычном пространстве, микродозинг Мухомора набирает популярность как инструмент для улучшения ментального здоровья, креативности и эмоционального баланса. 
+
+        Что говорит наука? Чем отличаются виды Мухомора? И как интегрировать практику в повседневную жизнь? Разбираемся в деталях.`,
+    date: "16 марта 2024",
+    image: secondary_preview_17,
+    slug: "microdosing",
+  },
   {
     id: 2,
     title: "Курение как подсознательный крик души: почему мы травим себя и как это остановить",

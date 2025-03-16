@@ -7,7 +7,7 @@ import { Suggest } from "../components/Suggests/Suggests";
 import { Helping } from "../components/Helping/Helping";
 import { Products } from "../components/Products/Products";
 import { SecondaryPreview } from "../components/SecondaryPreview/SecondaryPreview";
-import secondary_preview_7 from '../public/images/secondary_preview_7.webp';
+import secondary_preview_7 from '../images/secondary_preview_7.webp';
 import { VideoWidget } from "../components/VideoWidget/VideoWidget";
 import { Questions } from "../components/Questions/Questions";
 import { Final } from "../components/Final/Final";

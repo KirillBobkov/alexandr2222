@@ -9,9 +9,9 @@ import { Final } from "../components/Final/Final";
 import { Products } from "../components/Products/Products";
 import { AboutMe } from "../components/AboutMe/AboutMe";
 import { CirclesList } from "../components/CirclesList/CirclesList";
-import enter_hole_1 from "../public/images/enter_hole_1.webp";
-import enter_hole_2 from "../public/images/enter_hole_2.webp";
-import logo from "../public/images/logo.webp";
+import enter_hole_1 from "../images/enter_hole_1.webp";
+import enter_hole_2 from "../images/enter_hole_2.webp";
+import logo from "../images/logo.webp";
 import { products as neurotroubleshuttingProducts } from "../consts/products";
 
 const schemaOrg = `

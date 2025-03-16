@@ -1,10 +1,10 @@
 import { Footer } from "../Footer/Footer";
 import { Navigation } from "../Navigation/Navigation";
 import Head from "next/head";
-import favicon32x32 from "../../public/images/favicon32x32.png";
-import favicon180x180 from "../../public/images/favicon180x180.png";
-import logo from "../../public/images/logo.png";
-import favicon from "../../public/images/logo.ico";
+import favicon32x32 from "../../images/favicon32x32.png";
+import favicon180x180 from "../../images/favicon180x180.png";
+import logo from "../../images/logo.png";
+import favicon from "../../images/logo.ico";
 import ScrollTopButton from "../ScrollTopButton/ScrollTopButton";
 
 import { Nunito, Rubik } from "next/font/google";

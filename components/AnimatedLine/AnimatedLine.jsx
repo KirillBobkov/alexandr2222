@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./AnimatedLine.module.css"; // Adjust the path as necessary
 import { LineAnimation } from "../LineAnomation/LineAnimation";
-import logo from "../../public/images/logo.webp";
+import logo from "../../images/logo.webp";
 import Image from "next/image.js";
 
 export const AnimatedLine = () => {

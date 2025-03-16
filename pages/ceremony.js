@@ -7,7 +7,7 @@ import { LineAnimation } from "../components/LineAnomation/LineAnimation";
 import { VisibilityManager } from "../components/shared/VisibilityManager";
 import containerStyles from "../styles/container.module.css";
 import contentStyles from "../styles/contentStyles.module.css";
-import secondary_preview_10 from "../public/images/secondary_preview_10.webp";
+import secondary_preview_10 from "../images/secondary_preview_10.webp";
 import { Final } from "../components/Final/Final";
 import { VideoWidget } from "../components/VideoWidget/VideoWidget";
 import { Questions } from "../components/Questions/Questions";

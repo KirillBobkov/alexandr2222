@@ -7,7 +7,7 @@ import { LineAnimation } from "../../components/LineAnomation/LineAnimation";
 import { VisibilityManager } from "../../components/shared/VisibilityManager";
 import containerStyles from "../../styles/container.module.css";
 import contentStyles from "../../styles/contentStyles.module.css";
-import secondary_preview_6 from "../../public/images/secondary_preview_6.webp";
+import secondary_preview_6 from "../../images/secondary_preview_6.webp";
 
 export default function () {
   const [isSubmitted, setIsSubmitted] = useState(false);

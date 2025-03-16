@@ -7,7 +7,7 @@ import { LineAnimation } from "../components/LineAnomation/LineAnimation";
 import { VisibilityManager } from "../components/shared/VisibilityManager";
 import containerStyles from "../styles/container.module.css";
 import contentStyles from "../styles/contentStyles.module.css";
-import secondary_preview_8 from "../public/images/secondary_preview_8.webp";
+import secondary_preview_8 from "../images/secondary_preview_8.webp";
 import { Final } from "../components/Final/Final";
 
 export default function () {
