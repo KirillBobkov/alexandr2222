@@ -49,26 +49,26 @@ export const Dropdown = ({ text, href, childs, onClick, isActive }) => {
   return (
     <li
       {...mouseEvents}
-      className={`${styles.navigation__item} ${isActive ? styles.active : ""}`}
+      className={`${styles.navigation__item} ${isActive ? styles.navigation__item_active : ""}`}
     >
       <Link
         prefetch={false}
-        className={styles.navigation__parent_link + ' ' + (isActive ? styles.active : "")}
+        className={`${styles["navigation__parent-link"]} ${isActive ? styles.navigation__item_active : ""}`}
         href={href}
         scroll={false}
         onClick={(e) => handleLinkClick(e, href)}
       >
-        <span className={styles.navigation__parent_link_text}>{text}</span>
+        <span className={styles["navigation__parent-link-text"]}>{text}</span>
         {childs && (
           <span 
-            className={styles.symbol} 
+            className={styles.navigation__arrow} 
             onClick={handleArrowClick}
           >
-            <span className={styles.svg_container}>
+            <span className={styles["navigation__arrow-container"]}>
               <svg
                 width="10"
                 height="10"
-                className={`${styles.svg} ${isOpen ? styles.svg_rotate : ""}`}
+                className={`${styles["navigation__arrow-icon"]} ${isOpen ? styles["navigation__arrow-icon_rotated"] : ""}`}
                 viewBox="0 0 10 10"
               >
                 <path
@@ -86,15 +86,15 @@ export const Dropdown = ({ text, href, childs, onClick, isActive }) => {
       </Link>
 
       {childs && (
-        <div className={`${styles.dropdown} ${isOpen ? styles.visible : ""}`}>
+        <div className={`${styles.dropdown} ${isOpen ? styles.dropdown_visible : ""}`}>
           {childs.map((child) => (
             <Link
               key={child.path}
               prefetch={false}
               href={child.path}
               onClick={(e) => handleLinkClick(e, child.path)}
-              className={`${styles.dropdownItem} ${
-                router.pathname === child.path ? styles.active : ""
+              className={`${styles.dropdown__item} ${
+                router.pathname === child.path ? styles.navigation__item_active : ""
               }`}
               scroll={false}
             >

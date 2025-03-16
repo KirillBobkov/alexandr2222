@@ -1,31 +1,68 @@
-import  { useCallback, useEffect, useState } from "react";
+import { createContext, useCallback, useContext, useEffect, useState } from "react";
 
-export function useTheme() {
-    const [theme, setTheme] = useState(undefined);
-  
-    useEffect(() => {
-      const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+// Create a context for theme
+const ThemeContext = createContext();
 
-      if (!prefersDarkScheme.matches) {
+// Provider component that wraps your app and makes theme available to any child component that calls useTheme
+export function ThemeProvider({ children }) {
+  const [theme, setTheme] = useState(undefined);
+
+  // Initial theme setup based on system preference - runs only once
+  useEffect(() => {
+    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+    
+    if (localStorage.getItem("theme")) {
+      // If user has previously set a theme preference, use that
+      const savedTheme = localStorage.getItem("theme");
+      setTheme(savedTheme);
+      if (savedTheme === "light") {
         document.documentElement.setAttribute("theme", "light");
-        setTheme("light");
       } else {
-        if (document.documentElement.hasAttribute("theme")) {
-          document.documentElement.removeAttribute("theme");
-        }
-        setTheme("dark");
+        document.documentElement.removeAttribute("theme");
       }
-    }, [theme]);
+    } else if (!prefersDarkScheme.matches) {
+      // Otherwise use system preference
+      document.documentElement.setAttribute("theme", "light");
+      setTheme("light");
+    } else {
+      document.documentElement.removeAttribute("theme");
+      setTheme("dark");
+    }
+  }, []);
+
+  // Apply theme changes when theme state changes
+  useEffect(() => {
+    if (theme === undefined) return;
+    
+    localStorage.setItem("theme", theme);
+    
+    if (theme === "light") {
+      document.documentElement.setAttribute("theme", "light");
+    } else {
+      document.documentElement.removeAttribute("theme");
+    }
+  }, [theme]);
+
+  const changeTheme = useCallback(() => {
+    if (theme === "light") {
+      setTheme("dark");
+    } else if (theme === "dark") {
+      setTheme("light");
+    }
+  }, [theme]);
+
+  // Make the theme state and changeTheme function available to any components that use useTheme
+  const value = { theme, changeTheme };
   
-    const changeTheme = useCallback(() => {
-      if (theme === "light") {
-        setTheme("dark");
-      }
-      if (theme === "dark") {
-        setTheme("light");
-      }
-    }, []);
-  
-    return { theme, changeTheme };
+  return <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>;
+}
+
+// Hook for components to get and update theme
+export function useTheme() {
+  const context = useContext(ThemeContext);
+  if (context === undefined) {
+    throw new Error("useTheme must be used within a ThemeProvider");
   }
+  return context;
+}
   

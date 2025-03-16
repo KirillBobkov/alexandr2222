@@ -11,6 +11,7 @@ export const Preview = () => {
   const [loaded, setLoaded] = React.useState(false);
   const { theme } = useTheme();
   
+  console.log(theme);
   return (
     <LineAnimation>
     <section className={styles.preview}>
