@@ -1,4 +1,4 @@
-import { createContext, useCallback, useContext, useEffect, useState } from "react";
+import { createContext, useCallback, useContext, useEffect, useState, useLayoutEffect } from "react";
 
 // Create a context for theme
 const ThemeContext = createContext();
@@ -7,10 +7,8 @@ const ThemeContext = createContext();
 export function ThemeProvider({ children }) {
   const [theme, setTheme] = useState(undefined);
 
-  // Initial theme setup based on system preference - runs only once
-  useEffect(() => {
-    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
-    
+  // Initial theme setup - runs only once
+  useLayoutEffect(() => {
     if (localStorage.getItem("theme")) {
       // If user has previously set a theme preference, use that
       const savedTheme = localStorage.getItem("theme");
@@ -20,13 +18,11 @@ export function ThemeProvider({ children }) {
       } else {
         document.documentElement.removeAttribute("theme");
       }
-    } else if (!prefersDarkScheme.matches) {
-      // Otherwise use system preference
-      document.documentElement.setAttribute("theme", "light");
-      setTheme("light");
     } else {
+      // Default to dark theme if no saved preference
       document.documentElement.removeAttribute("theme");
       setTheme("dark");
+      localStorage.setItem("theme", "dark");
     }
   }, []);
 

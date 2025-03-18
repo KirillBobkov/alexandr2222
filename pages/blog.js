@@ -8,11 +8,25 @@ import secondary_preview_12 from "../images/secondary_preview_12.webp";
 import secondary_preview_11 from "../images/secondary_preview_11.webp";
 import secondary_preview_13 from "../images/secondary_preview_13.webp";
 import secondary_preview_17 from "../images/secondary_preview_17.webp";
+import secondary_preview_18 from "../images/secondary_preview_18.webp";
 import styles from "../styles/blog.module.css";
 import contentStyles from "../styles/contentStyles.module.css";
 import { LineAnimation } from "../components/LineAnomation/LineAnimation";
 
 const articles = [
+  {
+    id: 5,
+    title: "Как нейротраблшуттинг помогает пережить измену: восстановление доверия через работу с подсознанием",
+    description:
+      `Измена — это не просто предательство партнёра. Это глубокий удар по вашей способности доверять — не только другим, но и себе. 
+
+        Большинство методов терапии фокусируются на анализе ситуации, поиске причин или попытках «простить и забыть». Но что, если корень проблемы лежит гораздо глубже — в подсознательных паттернах, сформированных ещё в детстве?  
+
+        Нейротраблшуттинг предлагает не «закрыть гештальт», а перепрограммировать саму основу ваших реакций. Рассказываем, как это работает.`,
+    date: "18 марта 2025",
+    image: secondary_preview_18,
+    slug: "infidelity",
+  },
   {
     id: 4,
     title: "Микродозинг Мухомора: как это работает, кому подходит и как начать безопасно",

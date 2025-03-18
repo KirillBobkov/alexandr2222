@@ -58,6 +58,7 @@ export default function Layout({ children, metaConfig, schemaOrg = '' }) {
           content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, user-scalable=0"
         />
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta httpEquiv="Content-Security-Policy" content="frame-ancestors 'none'; frame-src 'self'" />
         <meta name="author" content="Александр Васильев" />
         <meta name="copyright" content="Александр Васильев" />
         <meta name="keywords" content={keywords} />
@@ -86,7 +87,7 @@ export default function Layout({ children, metaConfig, schemaOrg = '' }) {
       </Head>
       <Navigation />
       <main>{children}</main>
-      <Footer />
+      <Footer />     
       <ScrollTopButton />
     </>
   );

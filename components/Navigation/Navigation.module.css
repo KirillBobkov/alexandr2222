@@ -159,8 +159,8 @@
     background-color: var(--card-color);
     border-radius: 50%;
     box-shadow: 0 0px 10px rgba(0, 0, 0, 0.2);
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     align-items: center;
     justify-content: center;
 }
@@ -290,7 +290,7 @@
         position: fixed;
         top: 15px;
         right: 15px;
-        padding: 10px;
+        padding: 8px;
         border: none;
         cursor: pointer;
         z-index: 1000;
@@ -301,15 +301,15 @@
     }
     
     .burger__line {
-        width: 30px;
-        height: 3px;
-        margin: 5px 0;
+        width: 25px;
+        height: 2px;
+        margin: 4px 0;
         background-color: var(--font-color);
         transition: all 0.3s ease;
     }
     
     .burger_opened .burger__line:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
+        transform: translateY(6px) rotate(45deg);
     }
     
     .burger_opened .burger__line:nth-child(2) {
@@ -317,7 +317,7 @@
     }
     
     .burger_opened .burger__line:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
+        transform: translateY(-6px) rotate(-45deg);
     }
 
     .theme-toggle {
