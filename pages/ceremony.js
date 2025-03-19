@@ -159,7 +159,7 @@ export default function () {
         <div className={containerStyles.container}>
           <VisibilityManager as="p">
             Мухоморный ретрит — это практика, связанная с использованием
-            Мухомора (Amanita muscaria) в духовных и терапевтических целях.
+            Мухомора в духовных и терапевтических целях.
           </VisibilityManager>
 
           <VisibilityManager as="p">
@@ -178,21 +178,6 @@ export default function () {
             Польза и результаты мухоморного ретрита
           </VisibilityManager>
 
-          <VisibilityManager as="div" className={contentStyles.textBlock}>
-            <h3 className={contentStyles.title_small}>
-              <span className={contentStyles.textSymbol}>//</span>
-              {"  "}
-              Духовное пробуждение и мистический опыт
-            </h3>
-            <p className={contentStyles.textDescription}>
-              Люди часто сообщают о глубоких духовных переживаниях, явном
-              чувстве единства со Вселенной и Высшими Силами.
-            </p>
-            <p className={contentStyles.textDescription}>
-              Такие переживания приводят к переоценке жизненных ценностей,
-              усилению чувства благодарности и осознанности.
-            </p>
-          </VisibilityManager>
 
           <VisibilityManager as="div" className={contentStyles.textBlock}>
             <h3 className={contentStyles.title_small}>
@@ -266,6 +251,22 @@ export default function () {
               Церемония проводится за городом, в комфортном, спокойном и
               безопасном месте, что позволяет человеку полноценно отдохнуть и
               прочувствовать гармонию с самим собой и Миром.
+            </p>
+          </VisibilityManager>
+
+          <VisibilityManager as="div" className={contentStyles.textBlock}>
+            <h3 className={contentStyles.title_small}>
+              <span className={contentStyles.textSymbol}>//</span>
+              {"  "}
+              Духовное пробуждение и мистический опыт
+            </h3>
+            <p className={contentStyles.textDescription}>
+              Люди часто сообщают о глубоких духовных переживаниях, явном
+              чувстве единства со Вселенной и Высшими Силами.
+            </p>
+            <p className={contentStyles.textDescription}>
+              Такие переживания приводят к переоценке жизненных ценностей,
+              усилению чувства благодарности и осознанности.
             </p>
           </VisibilityManager>
 
@@ -422,6 +423,17 @@ export default function () {
               отравление, рвоту, головокружение и даже смерть при неграмотном
               использовании. Именно поэтому, я настоятельно призываю вас не
               употреблять Мухомор самостоятельно.
+            </p>
+          </VisibilityManager>
+
+          <VisibilityManager as="div" className={contentStyles.textBlock}>
+            <h3 className={contentStyles.title_small}>
+              <span className={contentStyles.textSymbol}>//</span>
+              {"  "}
+              Десоциализация
+            </h3>
+            <p className={contentStyles.textDescription}>
+              Мухоморный трип, как и любая глубокая психоактивная практика, требует не только подготовки, но и грамотной интеграции опыта. Без осознанного подхода человек рискует столкнуться с последствиями, которые могут нарушить его социальную адаптацию, подорвать стабильность и даже привести к разрушительным жизненным сценариям.
             </p>
           </VisibilityManager>
 

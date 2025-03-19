@@ -9,11 +9,21 @@ import secondary_preview_11 from "../images/secondary_preview_11.webp";
 import secondary_preview_13 from "../images/secondary_preview_13.webp";
 import secondary_preview_17 from "../images/secondary_preview_17.webp";
 import secondary_preview_18 from "../images/secondary_preview_18.webp";
+import secondary_preview_19 from "../images/secondary_preview_19.webp";
 import styles from "../styles/blog.module.css";
 import contentStyles from "../styles/contentStyles.module.css";
 import { LineAnimation } from "../components/LineAnomation/LineAnimation";
 
 const articles = [
+  {
+    id: 6,
+    title: "Для чего нужна интеграция после мухоморного трипа?",
+    description:
+      "Как избежать десоциализации и других рисков после духовного опыта с мухомором через грамотную интеграцию полученных инсайтов",
+    date: "19 марта 2025",
+    image: secondary_preview_19,
+    slug: "integration",
+  },
   {
     id: 5,
     title: "Как нейротраблшуттинг помогает пережить измену: восстановление доверия через работу с подсознанием",
