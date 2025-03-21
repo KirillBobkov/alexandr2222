@@ -235,7 +235,7 @@ export default function () {
       />
       <Final
         title="Мухоморный ретрит в Казани"
-        description="Практика, связанная с использованием Мухомора (Amanita muscaria) в духовных и терапевтических целях"
+        description="Практика, связанная с использованием Мухомора в духовных и терапевтических целях"
         buttonText="Подробнее"
         buttonHref="/ceremony"
         image={enter_hole_1}
