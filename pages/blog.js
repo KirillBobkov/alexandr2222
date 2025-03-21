@@ -10,11 +10,22 @@ import secondary_preview_13 from "../images/secondary_preview_13.webp";
 import secondary_preview_17 from "../images/secondary_preview_17.webp";
 import secondary_preview_18 from "../images/secondary_preview_18.webp";
 import secondary_preview_19 from "../images/secondary_preview_19.webp";
+import secondary_preview_20 from "../images/secondary_preview_20.webp";
 import styles from "../styles/blog.module.css";
 import contentStyles from "../styles/contentStyles.module.css";
 import { LineAnimation } from "../components/LineAnomation/LineAnimation";
+import { VisibilityManager } from "../components/shared/VisibilityManager";
 
 const articles = [
+  {
+    id: 7,
+    title: "Как перестать быть «вечным спасателем»: нейротраблшуттинг в борьбе с созависимостью",
+    description:
+      "Созависимость — это не забота, а подсознательная ловушка, которая заставляет вас жертвовать собой ради других. Узнайте, как освободиться от роли «вечного спасателя».",
+    date: "21 марта 2025",
+    image: secondary_preview_20,
+    slug: "codependency",
+  },
   {
     id: 6,
     title: "Для чего нужна интеграция после мухоморного трипа?",
@@ -123,13 +134,13 @@ export default function Blog() {
               </div>
             )}
           </div>
-          <div className={styles.sidebar}>
+          <VisibilityManager className={styles.sidebar}>
             <SearchWidget 
               searchQuery={searchQuery}
               onSearchChange={handleSearchChange}
               resultsCount={filteredArticles.length}
             />
-          </div>
+          </VisibilityManager>
         </div>
       </LineAnimation>
     </Layout>

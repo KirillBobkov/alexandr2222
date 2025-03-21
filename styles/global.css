@@ -20,7 +20,7 @@
   --accent: #eeb100;
   --border-color: #1C1C1C;
   --card-color: #181818;
-  --bg-color-opacity: #000000bb;
+  --bg-color-opacity: #0000008e;
 }
 
 :root[theme='light'] {
@@ -45,7 +45,7 @@
   --accent: #eeb100;
   --border-color: #e3e3e3;
   --card-color: #f6f6f6;
-  --bg-color-opacity: #ffffffad;
+  --bg-color-opacity: #ffffffa1;
 }
 
 * {

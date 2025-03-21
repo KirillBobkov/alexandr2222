@@ -132,14 +132,21 @@
 
   <url>
     <loc>https://alexandrvasilev.ru/blog/infidelity</loc>
-    <lastmod>2024-03-16</lastmod>
+    <lastmod>2024-03-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url>
 
     <url>
     <loc>https://alexandrvasilev.ru/blog/integration</loc>
-    <lastmod>2024-03-16</lastmod>
+    <lastmod>2024-03-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+
+  <url>
+    <loc>https://alexandrvasilev.ru/blog/codependency</loc>
+    <lastmod>2024-03-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url>

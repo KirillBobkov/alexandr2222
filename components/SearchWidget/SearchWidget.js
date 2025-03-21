@@ -2,7 +2,7 @@ import styles from './SearchWidget.module.css';
 import { VisibilityManager } from '../shared/VisibilityManager';
 export const SearchWidget = ({ searchQuery, onSearchChange, resultsCount }) => {
   return (
-    <VisibilityManager className={styles.searchWidget}>
+    <div className={styles.searchWidget}>
       <div className={styles.header}>
         <h3 className={styles.title}>
           <span className={styles.textSymbol}>//</span> Поиск по статьям
@@ -20,6 +20,6 @@ export const SearchWidget = ({ searchQuery, onSearchChange, resultsCount }) => {
       <div className={styles.searchResults}>
         Найдено статей: {resultsCount}
       </div>
-    </VisibilityManager>
+    </div>
   );
 }; 

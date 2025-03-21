@@ -245,6 +245,26 @@ export default function () {
             <h3 className={contentStyles.title_small}>
               <span className={contentStyles.textSymbol}>//</span>
               {"  "}
+              Сексуальность
+            </h3>
+            <p className={contentStyles.textDescription}>
+              Священная церемония на Мухоморе помогает сексуально раскрепоститься через глубокое погружение в подсознание, где растворяются страхи, стыд и ограничивающие установки.
+            </p>
+            <p className={contentStyles.textDescription}>
+              В состоянии изменённого сознания участники часто переосмысливают своё отношение к телу и интимности, освобождаясь от травм или культурных табу.
+            </p>
+            <p className={contentStyles.textDescription}>
+              Мухомор мягко устраняет внутренние барьеры, открывая доступ к естественной энергии и принятию себя, что способствует гармонизации сексуальности.
+            </p>
+            <p className={contentStyles.textDescription}>
+              Однако важно, чтобы процесс проходил под руководством опытного проводника, обеспечивающего безопасность и интеграцию опыта в повседневную жизнь.
+            </p>
+          </VisibilityManager>
+
+          <VisibilityManager as="div" className={contentStyles.textBlock}>
+            <h3 className={contentStyles.title_small}>
+              <span className={contentStyles.textSymbol}>//</span>
+              {"  "}
               Связь с природой
             </h3>
             <p className={contentStyles.textDescription}>
