@@ -3,7 +3,7 @@ import { Navigation } from "../Navigation/Navigation";
 import Head from "next/head";
 import favicon32x32 from "../../images/favicon32x32.png";
 import favicon180x180 from "../../images/favicon180x180.png";
-import logo from "../../images/logo.png";
+import meta_logo from "../../images/meta_logo.webp";
 import favicon from "../../images/logo.ico";
 import ScrollTopButton from "../ScrollTopButton/ScrollTopButton";
 import { useTheme } from "../../hooks/useTheme";
@@ -66,7 +66,7 @@ export default function Layout({ children, metaConfig, schemaOrg = '' }) {
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content={logo} />
+        <meta property="og:image" content={meta_logo.src} />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta
           name="apple-mobile-web-app-status-bar-style"
