@@ -9,13 +9,14 @@ export default function MetricsCode() {
    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
-   if (ym) {
-      ym(100538373, "init", {
-          clickmap:true,
-          trackLinks:true,
-          accurateTrackBounce:true
-    });
-   }
+      if (ym) {
+        ym(100539520, "init", {
+              clickmap:true,
+              trackLinks:true,
+              accurateTrackBounce:true,
+              webvisor:true
+        });
+      }
   `}
     </Script>
   );
