@@ -2,8 +2,8 @@ import React from "react";
 import styles from "./AnimatedLine.module.css"; // Adjust the path as necessary
 import { LineAnimation } from "../LineAnomation/LineAnimation";
 import Image from "next/image.js";
-import logoLight from "../../images/logo_light.svg";
-import logoDark from "../../images/logo_dark.svg";
+import logoLight from "../../images/logo.webp";
+import logoDark from "../../images/logo_dark.webp";
 import { useTheme } from "../../hooks/useTheme";
 
 export const AnimatedLine = () => {

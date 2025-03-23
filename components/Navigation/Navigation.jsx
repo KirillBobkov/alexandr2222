@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "./Navigation.module.css";
-import logoLight from "../../images/logo_light.svg";
-import logoDark from "../../images/logo_dark.svg";
+import logoLight from "../../images/logo.webp";
+import logoDark from "../../images/logo_dark.webp";
 import Image from "next/image.js";
 import { useRouter } from 'next/router';
 import { Dropdown } from './Dropdown';  

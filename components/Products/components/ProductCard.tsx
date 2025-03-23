@@ -2,8 +2,9 @@ import React from "react";
 import styles from "../styles/ProductGrid.module.css";
 import Image from "next/image";
 import Link from "next/link";
-import logoLight from "../../../images/logo_light.svg";
-import logoDark from "../../../images/logo_dark.svg";
+import logoLight from "../../../images/logo.webp";
+import logoDark from "../../../images/logo_dark.webp";
+
 import { useTheme } from "../../../hooks/useTheme"; 
 interface ProductCardProps {
   product: any;
