@@ -11,12 +11,23 @@ import secondary_preview_17 from "../images/secondary_preview_17.webp";
 import secondary_preview_18 from "../images/secondary_preview_18.webp";
 import secondary_preview_19 from "../images/secondary_preview_19.webp";
 import secondary_preview_20 from "../images/secondary_preview_20.webp";
+import secondary_preview_21 from "../images/secondary_preview_21.webp";
 import styles from "../styles/blog.module.css";
 import contentStyles from "../styles/contentStyles.module.css";
 import { LineAnimation } from "../components/LineAnomation/LineAnimation";
 import { VisibilityManager } from "../components/shared/VisibilityManager";
+import { useScrollToLocation } from "../hooks/useScrollToLocation";
 
 const articles = [
+  {
+    id: 8,
+    title: "Мухомор и тонкая настройка восприятия: Как гриб открывает скрытые измерения реальности",
+    description:
+      "Мухоморные практики чаще всего обсуждаются в контексте исцеления, духовных переживаний и трансформации личности. Однако мало кто говорит о том, как именно этот древний союзник изменяет сам механизм восприятия, позволяя видеть мир по-новому.",
+    date: "25 марта 2025",
+    image: secondary_preview_21,
+    slug: "amanita-perception-tuning",
+  },
   {
     id: 7,
     title: "Как перестать быть «вечным спасателем»: нейротраблшуттинг в борьбе с созависимостью",
@@ -115,6 +126,8 @@ export default function Blog() {
       "Исследуйте статьи о шаманских практиках, традициях и пути к гармонии через природу",
     keywords: "шаманизм, духовные практики, мухомор, природа, гармония",
   };
+
+  useScrollToLocation();
 
   return (
     <Layout metaConfig={metaConfig}>
