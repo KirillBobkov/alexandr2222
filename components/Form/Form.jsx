@@ -29,7 +29,7 @@ export function Form({
         body: JSON.stringify({
           chat_id,
           parse_mode: "html",
-          text: `<b>Новая запись на консультацию</b>\n\n<b>Откуда: </b>: ${
+          text: `<b>Новая запись на консультацию</b>\n\n<b>Откуда</b>: ${
             type ?? "Поле отсутствует"
           }\n<b>Имя</b>: ${formData.name}\n<b>Номер телефона</b>: ${
             formData.phone
