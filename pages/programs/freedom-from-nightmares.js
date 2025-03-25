@@ -186,7 +186,7 @@ export default function () {
       <Form
         setIsSubmitted={setIsSubmitted}
         isSubmitted={isSubmitted}
-        type={metaConfig.pageTitle + " (программа)"}
+        type={'Программа: ' + metaConfig.pageTitle}
         title={"Избавьтесь от ночных кошмаров навсегда"}
         description={`Оставьте заявку, и я свяжусь с вами в ближайшее время.
         `}

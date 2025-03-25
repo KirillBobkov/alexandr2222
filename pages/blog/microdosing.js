@@ -392,7 +392,7 @@ export default function () {
       <Form
         setIsSubmitted={setIsSubmitted}
         isSubmitted={isSubmitted}
-        type="Микродозинг (статья)"
+        type="Микродозинг мухомора (статья)"
         title="Готовы начать?"
         description={`Микродозинг Мухомора — это путь к диалогу с глубинным «Я». Но помните: ключ к успеху — осознанность, умеренность и помощь проводника.  
 

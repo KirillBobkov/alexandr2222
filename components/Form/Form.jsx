@@ -20,7 +20,12 @@ export function Form({
       const token = "7733350115:AAE6tcQZc-R2bRw8ewLKwvtiS3UKHTcgV9c";
       const chat_id = "-1002359699160";
       const url = `https://api.telegram.org/bot${token}/sendMessage`;
-
+      const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        typeof window !== 'undefined' ? window.navigator.userAgent : ''
+      );
+      
+      const deviceType = isMobileDevice ? 'Смартфон' : 'Компьютер';
+      
       await fetch(url, {
         method: "POST",
         headers: {
@@ -33,7 +38,7 @@ export function Form({
             type ?? "Поле отсутствует"
           }\n<b>Имя</b>: ${formData.name}\n<b>Номер телефона</b>: ${
             formData.phone
-          }\n`,
+          }\n<b>Тип устройства</b>: ${deviceType}\n`,
         }),
       });
 

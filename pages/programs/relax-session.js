@@ -86,7 +86,7 @@ export default function () {
         description={
           "Запишитесь на бесплатную консультацию, и я свяжусь с вами в ближайшее время."
         }
-        type={metaConfig.pageTitle + " (программа)"}
+        type={'Программа: ' + metaConfig.pageTitle}
       />
     </Layout>
   );
