@@ -40,7 +40,7 @@ const VisibilityManagerComponent = React.memo((props) => {
     className,
     side = "top",
     speed = 2,
-    delay = 0.3,
+    delay = 0.1,
     onClick,
     ...restProps
   } = props;

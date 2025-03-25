@@ -65,7 +65,7 @@ export const Button = ({
     >
       <Link
         prefetch={false}
-        href={href.pathname + (href.hash || '')}
+        href={(href.pathname ?? router.pathname) + (href.hash || '')}
         scroll={false}
         className={`${styles.inner}`}
       >

@@ -8,6 +8,7 @@ import { VisibilityManager } from "../../components/shared/VisibilityManager";
 import containerStyles from "../../styles/container.module.css";
 import contentStyles from "../../styles/contentStyles.module.css";
 import secondary_preview_18 from "../../images/secondary_preview_18.webp";
+import { Button } from "../../components/shared/Button/Button";
 
 export default function () {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -110,6 +111,9 @@ export default function () {
             доверять». И когда случается измена, старые раны вскрываются, а
             страх становится невыносимым.
           </VisibilityManager>
+
+          <div style={{ height: "1px" }} />
+          <Button className={contentStyles.message} href={{ hash: "#message" }} status="Записаться" />
 
           <div style={{ height: "1px" }} />
           <VisibilityManager as="h3" className={contentStyles.title_middle}>

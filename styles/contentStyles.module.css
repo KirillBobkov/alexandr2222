@@ -48,6 +48,10 @@
   -webkit-text-stroke-color: var(--font-color);
 }
 
+.message {
+  margin: 0 auto;
+}
+
 @media screen and (max-width: 768px) {
     .title {
         font-size: 30px;

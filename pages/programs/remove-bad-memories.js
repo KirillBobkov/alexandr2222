@@ -8,6 +8,7 @@ import { VisibilityManager } from "../../components/shared/VisibilityManager";
 import containerStyles from "../../styles/container.module.css";
 import contentStyles from "../../styles/contentStyles.module.css";
 import secondary_preview_5 from '../../images/secondary_preview_5.webp';
+import { Button } from "../../components/shared/Button/Button";
 export default function() {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -57,6 +58,8 @@ export default function() {
           </VisibilityManager>
 
           <div style={{ height: '1px' }} />
+          <Button className={contentStyles.message} href={{ hash: "#message" }} status="Записаться" />
+          <div style={{ height: '1px' }} />
           <VisibilityManager as="h3" className={contentStyles.title_middle}>
             Как это работает?
           </VisibilityManager>
@@ -77,7 +80,7 @@ export default function() {
         </div>
       </LineAnimation>
       <div id="message" />
-      <Form setIsSubmitted={setIsSubmitted} isSubmitted={isSubmitted} type={metaConfig.pageTitle}  title={"Готовы жить лучше?"}
+      <Form setIsSubmitted={setIsSubmitted} isSubmitted={isSubmitted} type={metaConfig.pageTitle + " (программа)"}  title={"Готовы жить лучше?"}
         description={`Запишитесь на бесплатную консультацию, и я свяжусь с вами в ближайшее время.
 
           Первая консультация 20 минут — бесплатно. 

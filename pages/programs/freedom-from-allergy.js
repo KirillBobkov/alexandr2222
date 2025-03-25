@@ -8,7 +8,7 @@ import { VisibilityManager } from "../../components/shared/VisibilityManager";
 import containerStyles from "../../styles/container.module.css";
 import contentStyles from "../../styles/contentStyles.module.css";
 import secondary_preview_15 from "../../images/secondary_preview_15.webp"; // You might want to use a different image
-
+import { Button } from "../../components/shared/Button/Button";
 export default function () {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -124,6 +124,11 @@ export default function () {
             </p>
           </VisibilityManager>
 
+          
+          <div style={{ height: "1px" }} />
+          <Button className={contentStyles.message} href={{ hash: "#message" }} status="Записаться" />
+
+
           <div style={{ height: '1px' }} />
           <VisibilityManager as="h3" className={contentStyles.title_middle}>
             Что вы получите?
@@ -198,7 +203,7 @@ export default function () {
       <Form
         setIsSubmitted={setIsSubmitted}
         isSubmitted={isSubmitted}
-        type={metaConfig.pageTitle}
+        type={metaConfig.pageTitle + " (программа)"}
         title={"Избавьтесь от аллергии навсегда"}
         description={`Оставьте заявку, и я свяжусь с вами в ближайшее время.
         `}

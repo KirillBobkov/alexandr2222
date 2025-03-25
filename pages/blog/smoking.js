@@ -8,7 +8,7 @@ import { VisibilityManager } from "../../components/shared/VisibilityManager";
 import containerStyles from "../../styles/container.module.css";
 import contentStyles from "../../styles/contentStyles.module.css";
 import secondary_preview_12 from "../../images/secondary_preview_12.webp";
-
+import { Button } from "../../components/shared/Button/Button";
 export default function () {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -97,6 +97,10 @@ export default function () {
               Детские травмы. Эмоциональное отвержение, насилие или отсутствие поддержки в детстве формируют убеждения: «Я не достоин любви», «Я должен быть незаметным».
             </p>
           </VisibilityManager>
+
+          <div style={{ height: "1px" }} />
+          <Button className={contentStyles.message} href={{ hash: "#message" }} status="Записаться" />
+
 
           <div style={{ height: '1px' }} />
           <VisibilityManager as="h3" className={contentStyles.title_middle}>

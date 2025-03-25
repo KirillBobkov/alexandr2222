@@ -8,7 +8,7 @@ import { VisibilityManager } from "../../components/shared/VisibilityManager";
 import containerStyles from "../../styles/container.module.css";
 import contentStyles from "../../styles/contentStyles.module.css";
 import secondary_preview_19 from "../../images/secondary_preview_19.webp";
-
+import { Button } from "../../components/shared/Button/Button";
 export default function () {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -105,6 +105,10 @@ export default function () {
               Постоянные поиски «следующего откровения» через повторные трипы, медитации, ритуалы — вместо решения насущных проблем.
             </p>
           </VisibilityManager>
+
+          
+          <div style={{ height: "1px" }} />
+          <Button className={contentStyles.message} href={{ hash: "#message" }} status="Записаться" />
 
           <div style={{ height: '1px' }} />
           <VisibilityManager as="h3" className={contentStyles.title_middle}>

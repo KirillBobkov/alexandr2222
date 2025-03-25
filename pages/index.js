@@ -261,7 +261,7 @@ export default function () {
         setIsSubmitted={setIsSubmitted}
         isSubmitted={isSubmitted}
         title={"Готовы жить лучше?"}
-        type="Первая консультация"
+        type="Первая консультация (Страница: Главная)"
         description={`Запишитесь на бесплатную консультацию, и я свяжусь с вами в ближайшее время.
 
           Первая консультация 20 минут — бесплатно. 

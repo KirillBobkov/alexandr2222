@@ -11,6 +11,7 @@ import secondary_preview_10 from "../images/secondary_preview_10.webp";
 import { Final } from "../components/Final/Final";
 import { VideoWidget } from "../components/VideoWidget/VideoWidget";
 import { Questions } from "../components/Questions/Questions";
+import { Button } from "../components/shared/Button/Button";
 
 
 
@@ -289,6 +290,11 @@ export default function () {
               усилению чувства благодарности и осознанности.
             </p>
           </VisibilityManager>
+
+          
+          <div style={{ height: "1px" }} />
+          <Button className={contentStyles.message} href={{ hash: "#message" }} status="Записаться" />
+
 
           <div style={{ height: '1px' }} /> 
           <VisibilityManager as="h3" className={contentStyles.title_middle}>

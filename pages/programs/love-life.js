@@ -7,9 +7,9 @@ import { LineAnimation } from "../../components/LineAnomation/LineAnimation";
 import { VisibilityManager } from "../../components/shared/VisibilityManager";
 import containerStyles from "../../styles/container.module.css";
 import contentStyles from "../../styles/contentStyles.module.css";
-import secondary_preview_1 from '../../images/secondary_preview_1.webp';
+import secondary_preview_1 from "../../images/secondary_preview_1.webp";
 
-export default function() {
+export default function () {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   useScrollToLocation();
@@ -19,13 +19,16 @@ export default function() {
     pageTitle: "Полюбить жизнь",
     description: "Полюбить жизнь",
     keywords: "очищение интеграл ретрит грибы дурман",
-    content: '',
-    href: '/love-life',
-};
+    content: "",
+    href: "/love-life",
+  };
 
   return (
     <Layout metaConfig={metaConfig}>
-      <SecondaryPreview text={metaConfig.pageTitle} image={secondary_preview_1}/>
+      <SecondaryPreview
+        text={metaConfig.pageTitle}
+        image={secondary_preview_1}
+      />
       <LineAnimation>
         <div className={containerStyles.container}>
           <VisibilityManager as="p">
@@ -48,7 +51,7 @@ export default function() {
             благодарности.
           </VisibilityManager>
 
-          <div style={{ height: '1px' }} />
+          <div style={{ height: "1px" }} />
           <VisibilityManager as="h3" className={contentStyles.title_middle}>
             Результаты, которые вы получите
           </VisibilityManager>
@@ -75,7 +78,7 @@ export default function() {
             </p>
           </VisibilityManager>
 
-          <div style={{ height: '1px' }} />
+          <div style={{ height: "1px" }} />
           <VisibilityManager as="h3" className={contentStyles.title_middle}>
             Представьте себе:
           </VisibilityManager>
@@ -105,7 +108,15 @@ export default function() {
       </LineAnimation>
 
       <div id="message" />
-      <Form setIsSubmitted={setIsSubmitted} isSubmitted={isSubmitted} type={metaConfig.pageTitle}/>
+      <Form
+        setIsSubmitted={setIsSubmitted}
+        isSubmitted={isSubmitted}
+        title={"Готовы жить лучше?"}
+        description={
+          "Запишитесь на бесплатную консультацию, и я свяжусь с вами в ближайшее время."
+        }
+        type={metaConfig.pageTitle + " (программа)"}
+      />
     </Layout>
   );
 }

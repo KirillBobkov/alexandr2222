@@ -9,6 +9,7 @@ import containerStyles from "../styles/container.module.css";
 import contentStyles from "../styles/contentStyles.module.css";
 import secondary_preview_8 from "../images/secondary_preview_8.webp";
 import { Final } from "../components/Final/Final";
+import { Button } from "../components/shared/Button/Button";
 
 export default function () {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -112,6 +113,11 @@ export default function () {
             ищет исцеления и перемен в жизни. Также консультирую людей онлайн.
           </VisibilityManager>
 
+          
+          <div style={{ height: "1px" }} />
+          <Button className={contentStyles.message} href={{ hash: "#message" }} status="Записаться" />
+
+
           <div style={{ height: '1px' }} />
           <VisibilityManager as="h2" className={contentStyles.title_middle}>
             Что я предлагаю сегодня
@@ -168,7 +174,7 @@ export default function () {
       <Form
         setIsSubmitted={setIsSubmitted}
         isSubmitted={isSubmitted}
-        type="Первая консультация"
+        type="Первая консультация (Страница: Обо мне)"
         title={"Приглашаю вас на путь исцеления"}
         description={`Если вы чувствуете, что застряли в жизни, страдаете от болезней или просто хотите узнать своё предназначение и наконец-то обрести гармонию, то я готов стать вашим проводником. 
           
