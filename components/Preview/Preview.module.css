@@ -78,7 +78,7 @@
   align-items: center;
   gap: 10px;
   background: var(--accent);
-  color: var(--font-color);
+  color: #ffffff;
   padding: 14px 30px;
   border-radius: 30px;
   cursor: pointer;

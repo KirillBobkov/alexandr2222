@@ -54,7 +54,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
         >
           <path
             d="M6 12H18M18 12L13 7M18 12L13 17"
-            stroke="#ffd046"
+            stroke="currentColor"
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"

@@ -6,7 +6,7 @@
     justify-content: center;
     height: 50dvh; /* Full height of the viewport */
     min-height: 700px;
-    color: var(--font-color); /* Text color */
+    color: #ffffff; /* Text color */
     overflow: hidden;
     position: relative;
   }

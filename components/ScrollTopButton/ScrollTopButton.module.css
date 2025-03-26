@@ -27,7 +27,7 @@
 }
 
 .arrow-button svg path {
-    fill: var(--font-color);
+    fill: #ffffff;
 }
 
 .scroll-top-button {

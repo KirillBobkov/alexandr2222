@@ -36,7 +36,7 @@ export const Final = ({
         <VisibilityManager as="h3" className={`${styles.title} ${image ? "" : styles.title_no_image}`}>
           <span>{title}</span>
         </VisibilityManager>
-        <VisibilityManager as="p" className={styles.description}>
+        <VisibilityManager as="p" className={styles.description + " " + (image ? "" : styles.description_no_image)}>
           <span>{description}</span>
         </VisibilityManager>
         {buttonText && buttonHref && (

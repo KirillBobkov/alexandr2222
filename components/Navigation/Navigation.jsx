@@ -6,13 +6,17 @@ import Image from "next/image.js";
 import { useRouter } from 'next/router';
 import { Dropdown } from './Dropdown';  
 import { useTheme } from "../../hooks/useTheme";
-
+import { useMediaQuery } from '../../hooks/useMediaQuery';
 export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
+  const isHomePage = router.pathname === "/";
 
   const { theme, changeTheme } = useTheme();
 
+  const isMobile = useMediaQuery('(max-width: 768px)');
+
+  console.log(isMobile);
   const toggleMenu = () => setIsOpen(prev => !prev);
 
   return (
@@ -34,9 +38,9 @@ export const Navigation = () => {
         )}
       </button>
       
-      <header className={`${styles.header} ${isOpen ? styles.header_opened : ""}`}>
+      <header className={`${styles.header} ${isOpen ? styles.header_opened : ""} ${isHomePage ? styles.header_home : ""}`}>
         <div className={styles["header__logo-container"]}>
-          <Image src={theme === "light" ? logoLight : logoDark} alt="Logo" className={styles.header__logo} id="logo" />
+          <Image src={(theme === "light" && (isMobile ? true : isHomePage)) ? logoLight : logoDark} alt="Logo" className={styles.header__logo} id="logo" />
           <p className={styles.header__title}>
             <span className={styles["header__title-colored"]}>ИN</span>TEGRAAL
           </p>
