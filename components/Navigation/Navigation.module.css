@@ -267,6 +267,8 @@
     .navigation__arrow {
         padding: 10px;
         display: block;
+        border-radius: 50%;
+        box-shadow: 0 0px 10px rgba(0, 0, 0, 0.2);
     }
 
     .navigation__arrow-container {
@@ -277,6 +279,7 @@
         box-shadow: 0 0 0 10px var(--card-color);
         z-index: 1;
         display: block;
+
     }
 
     .navigation__arrow-icon {

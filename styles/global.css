@@ -22,6 +22,7 @@
   --card-color: #181818;
   --bg-color-opacity: #0000008e;
   --nav-mobile-opacity: #0000008e;
+  --button-background: #181818;
 }
 
 :root[theme='light'] {
@@ -48,6 +49,7 @@
   --card-color: #ebebeb;
   --bg-color-opacity: #2e2e2e25;
   --nav-mobile-opacity: #d8d8d8e0;
+  --button-background: #d0d0d0;
 }
 
 * {

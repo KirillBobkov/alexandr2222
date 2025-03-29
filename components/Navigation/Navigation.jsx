@@ -16,7 +16,6 @@ export const Navigation = () => {
 
   const isMobile = useMediaQuery('(max-width: 768px)');
 
-  console.log(isMobile);
   const toggleMenu = () => setIsOpen(prev => !prev);
 
   return (
