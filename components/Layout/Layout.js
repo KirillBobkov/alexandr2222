@@ -32,7 +32,7 @@ const rubik = Rubik({
 });
 
 export default function Layout({ children, metaConfig, schemaOrg = '' }) {
-  const { title, description, keywords } = metaConfig;
+  const { title, description, keywords, seoContent } = metaConfig;
 
   useTheme();
 
@@ -85,6 +85,21 @@ export default function Layout({ children, metaConfig, schemaOrg = '' }) {
       
       </Head>
       <Navigation />
+      {seoContent && (
+        <h1 style={{ 
+          visibility: 'hidden', 
+          width: '1px', 
+          height: '1px', 
+          padding: '0', 
+          margin: '-1px', 
+          overflow: 'hidden', 
+          clip: 'rect(0,0,0,0)', 
+          whiteSpace: 'nowrap', 
+          border: '0' 
+        }}>
+          {seoContent}
+        </h1>
+      )}
       <main>{children}</main>
       <Footer />     
       <ScrollTopButton />

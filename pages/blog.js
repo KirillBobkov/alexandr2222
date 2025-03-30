@@ -12,6 +12,7 @@ import secondary_preview_18 from "../images/secondary_preview_18.webp";
 import secondary_preview_19 from "../images/secondary_preview_19.webp";
 import secondary_preview_20 from "../images/secondary_preview_20.webp";
 import secondary_preview_21 from "../images/secondary_preview_21.webp";
+import secondary_preview_22 from "../images/secondary_preview_22.webp";
 import styles from "../styles/blog.module.css";
 import contentStyles from "../styles/contentStyles.module.css";
 import { LineAnimation } from "../components/LineAnomation/LineAnimation";
@@ -19,6 +20,15 @@ import { VisibilityManager } from "../components/shared/VisibilityManager";
 import { useScrollToLocation } from "../hooks/useScrollToLocation";
 
 const articles = [
+  {
+    id: 9,
+    title: "Аллергия — это не приговор: психосоматические причины и их устранение",
+    description:
+      "Аллергия воспринимается многими как неизлечимое состояние, с которым остаётся лишь смириться. Врачи предлагают таблетки, уколы, диеты — всё это помогает на время облегчить симптомы, но не устраняет саму проблему. Однако, если взглянуть глубже, становится ясно: аллергия — это не просто реакция тела, а сигнал подсознания, который можно расшифровать и устранить.",
+    date: "30 марта 2025",
+    image: secondary_preview_22,
+    slug: "allergy-psychosomatic",
+  },
   {
     id: 8,
     title: "Мухомор и тонкая настройка восприятия: Как гриб открывает скрытые измерения реальности",
@@ -121,6 +131,7 @@ export default function Blog() {
   });
 
   const metaConfig = {
+    seoContent: 'Блог о духовных практиках и природной мудрости. Исследуйте статьи о шаманских практиках, традициях и пути к гармонии через природу. Шаманизм, духовные практики, мухомор, природа, гармония.',
     title: "Блог о духовных практиках и природной мудрости",
     description:
       "Исследуйте статьи о шаманских практиках, традициях и пути к гармонии через природу",
