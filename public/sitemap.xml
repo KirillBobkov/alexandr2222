@@ -3,7 +3,7 @@
   <!-- Главная страница -->
   <url>
     <loc>https://alexandrvasilev.ru/</loc>
-    <lastmod>2024-03-30</lastmod>
+      <lastmod>2025-04-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -11,63 +11,63 @@
   <!-- Основные страницы услуг -->
   <url>
     <loc>https://alexandrvasilev.ru/programs/love-life</loc>
-    <lastmod>2024-03-26</lastmod>
+    <lastmod>2025-04-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://alexandrvasilev.ru/programs/love-myself</loc>
-    <lastmod>2024-03-26</lastmod>
+      <lastmod>2025-04-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://alexandrvasilev.ru/programs/grow-money</loc>
-    <lastmod>2024-03-26</lastmod>
+      <lastmod>2025-04-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://alexandrvasilev.ru/programs/remove-bad-memories</loc>
-    <lastmod>2024-03-26</lastmod>
+        <lastmod>2025-04-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://alexandrvasilev.ru/programs/drop-smoking</loc>
-    <lastmod>2024-03-26</lastmod>
+      <lastmod>2025-04-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://alexandrvasilev.ru/programs/relax-session</loc>
-    <lastmod>2024-03-26</lastmod>
+        <lastmod>2025-04-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://alexandrvasilev.ru/programs/freedom-from-nightmares</loc>
-    <lastmod>2024-03-26</lastmod>
+      <lastmod>2025-04-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://alexandrvasilev.ru/programs/freedom-from-allergy</loc>
-    <lastmod>2024-03-26</lastmod>
+      <lastmod>2025-04-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://alexandrvasilev.ru/programs/freedom-from-phobia</loc>
-    <lastmod>2024-03-26</lastmod>
+      <lastmod>2025-04-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -75,21 +75,21 @@
   <!-- Информационные страницы -->
   <url>
     <loc>https://alexandrvasilev.ru/about-me</loc>
-    <lastmod>2024-03-26</lastmod>
+    <lastmod>2025-04-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>https://alexandrvasilev.ru/neurotroubleshutting</loc>
-    <lastmod>2024-03-26</lastmod>
+      <lastmod>2025-04-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://alexandrvasilev.ru/ceremony</loc>
-    <lastmod>2024-03-26</lastmod>
+    <lastmod>2025-04-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -97,70 +97,77 @@
   <!-- Блог -->
   <url>
     <loc>https://alexandrvasilev.ru/blog</loc>
-    <lastmod>2024-03-26</lastmod>
+    <lastmod>2025-04-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://alexandrvasilev.ru/blog/rollback</loc>
-    <lastmod>2024-03-26</lastmod>
+    <lastmod>2025-04-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://alexandrvasilev.ru/blog/smoking</loc>
-    <lastmod>2024-03-26</lastmod>
+      <lastmod>2025-04-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://alexandrvasilev.ru/blog/vegetalism</loc>
-    <lastmod>2024-03-26</lastmod>
+      <lastmod>2025-04-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://alexandrvasilev.ru/blog/microdosing</loc>
-    <lastmod>2024-03-26</lastmod>
+      <lastmod>2025-04-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://alexandrvasilev.ru/blog/infidelity</loc>
-    <lastmod>2024-03-26</lastmod>
+    <lastmod>2025-04-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url>
 
     <url>
     <loc>https://alexandrvasilev.ru/blog/integration</loc>
-    <lastmod>2024-03-26</lastmod>
+    <lastmod>2025-04-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url>
 
   <url>
     <loc>https://alexandrvasilev.ru/blog/codependency</loc>
-    <lastmod>2024-03-26</lastmod>
+    <lastmod>2025-04-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://alexandrvasilev.ru/blog/amanita-perception-tuning</loc>
-    <lastmod>2024-03-26</lastmod>
+    <lastmod>2025-04-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://alexandrvasilev.ru/blog/allergy-psychosomatic</loc>
-    <lastmod>2024-03-30</lastmod>
+    <lastmod>2025-04-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url>  
+
+  <url>
+    <loc>https://alexandrvasilev.ru/blog/panther-mushroom-mechanisms</loc>
+    <lastmod>2025-04-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
 
 </urlset>

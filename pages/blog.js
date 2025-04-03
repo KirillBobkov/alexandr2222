@@ -13,6 +13,7 @@ import secondary_preview_19 from "../images/secondary_preview_19.webp";
 import secondary_preview_20 from "../images/secondary_preview_20.webp";
 import secondary_preview_21 from "../images/secondary_preview_21.webp";
 import secondary_preview_22 from "../images/secondary_preview_22.webp";
+import secondary_preview_23 from "../images/secondary_preview_23.webp";
 import styles from "../styles/blog.module.css";
 import contentStyles from "../styles/contentStyles.module.css";
 import { LineAnimation } from "../components/LineAnomation/LineAnimation";
@@ -20,6 +21,15 @@ import { VisibilityManager } from "../components/shared/VisibilityManager";
 import { useScrollToLocation } from "../hooks/useScrollToLocation";
 
 const articles = [
+  {
+    id: 10,
+    title: "Как работает Пантерный Мухомор?",
+    description:
+      "Пантерный Мухомор — это мощный инструмент для тех, кто готов к глубинной работе. Если вас зовёт этот путь, важно пройти его осознанно и в сопровождении опытного проводника.",
+    date: "03 апреля 2025",
+    image: secondary_preview_23,
+    slug: "panther-mushroom-mechanisms",
+  },
   {
     id: 9,
     title: "Аллергия — это не приговор: психосоматические причины и их устранение",
