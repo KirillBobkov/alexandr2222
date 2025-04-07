@@ -97,7 +97,7 @@
   <!-- Блог -->
   <url>
     <loc>https://alexandrvasilev.ru/blog</loc>
-    <lastmod>2025-04-03</lastmod>
+    <lastmod>2025-04-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -166,6 +166,13 @@
   <url>
     <loc>https://alexandrvasilev.ru/blog/panther-mushroom-mechanisms</loc>
     <lastmod>2025-04-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+
+  <url>
+    <loc>https://alexandrvasilev.ru/blog/insomnia-nightmares-solutions</loc>
+    <lastmod>2025-04-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url>
