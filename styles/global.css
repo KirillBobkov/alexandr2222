@@ -23,6 +23,8 @@
   --bg-color-opacity: #0000008e;
   --nav-mobile-opacity: #0000008e;
   --button-background: #181818;
+  --social-icon-color: #ffffff32;
+  --social-icon-color-hover: #ffffff66;
 }
 
 :root[theme='light'] {
@@ -50,6 +52,8 @@
   --bg-color-opacity: #2e2e2e25;
   --nav-mobile-opacity: #d8d8d8e0;
   --button-background: #d0d0d0;
+  --social-icon-color: #00000032;
+  --social-icon-color-hover: #00000066;
 }
 
 * {
