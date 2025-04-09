@@ -22,20 +22,21 @@ export const Preview = () => {
       />
       <VisibilityManager as="div" className={styles.preview__content}>
         <h1 className={styles.preview__title}>Благословенный <span className={styles.preview__title_empty}>портал мечты</span></h1>
-        <div className={styles.social_links}>
-        <a href="https://t.me/chronics44" className={styles.social_link} target="_blank" rel="noopener noreferrer">
-            <svg className={styles.social_icon} width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div className={styles.telegram_container}>
+          <a href="https://t.me/chronics44" className={styles.telegram_button} target="_blank" rel="noopener noreferrer">
+            <svg className={styles.telegram_icon} width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M20.665 3.717L2.93497 10.554C1.72497 11.04 1.73197 11.715 2.71297 12.016L7.26497 13.436L17.797 6.791C18.295 6.488 18.75 6.651 18.376 6.983L9.84297 14.684H9.84097L9.84297 14.685L9.52897 19.377C9.98897 19.377 10.192 19.166 10.45 18.917L12.661 16.767L17.26 20.164C18.108 20.631 18.717 20.391 18.928 19.379L21.947 5.151C22.256 3.912 21.474 3.351 20.665 3.717Z" fill="currentColor"/>
             </svg>
-            <span className={styles.social_label}>Telegram</span>
+            TELEGRAM КАНАЛ
           </a>
+        </div>
+        <div className={styles.social_links}>
           <a href="https://vk.com/chronics44" className={styles.social_link} target="_blank" rel="noopener noreferrer">
             <svg className={styles.social_icon} width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M13.0718 18C6.77376 18 3.06576 13.6587 2.92773 6.5H5.87574C5.96775 11.9012 8.23177 14.1495 10.1158 14.6732V6.5H12.8879V11.1932C14.7399 10.9832 16.6879 8.88925 17.3359 6.5H20.108C19.6039 9.44262 17.4879 11.5362 15.9599 12.3637C17.4879 13.0175 19.8639 14.8558 20.8479 18H17.8319C17.0639 15.871 15.2839 14.1622 12.8879 13.9187V18H13.0718Z" fill="currentColor"/>
             </svg>
             <span className={styles.social_label}>VK</span>
           </a>
- 
           <a href="https://www.tiktok.com/@alexandrvasilev.ru?_t=ZS-8vOVKf5Isrv&_r=1" className={styles.social_link} target="_blank" rel="noopener noreferrer">
             <svg className={styles.social_icon} width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z" fill="currentColor"/>
