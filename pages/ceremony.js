@@ -14,6 +14,28 @@ import { Questions } from "../components/Questions/Questions";
 import { Button } from "../components/shared/Button/Button";
 
 const videos = [
+    // New videos added on March 2024
+    {
+      link: "https://vkvideo.ru/video_ext.php?oid=-230061059&id=456239037&hash=0395dd995453c326",
+      thumbnailUrl:
+        "https://i.mycdn.me/getVideoPreview?id=8011482597949&idx=14&type=39&tkn=2N2-OvszIn7EgxYI2Z-GF-bu2P0&fn=vid_u",
+      name: 'Отзыв Романа о мухоморном ретрите',
+      uploadDate: new Date("April 09, 2025").toISOString(),
+    },
+    {
+      link: "https://vkvideo.ru/video_ext.php?oid=-230061059&id=456239035&hash=41d73acd4693cddf",
+      thumbnailUrl:
+        "https://i.mycdn.me/getVideoPreview?id=8024136747545&idx=1&type=39&tkn=wR32eObJAgzIULrQyKVDYp52URM&fn=vid_u",
+      name: 'Отзыв Дмитрия о мухоморном ретрите',
+      uploadDate: new Date("April 09, 2025").toISOString(),
+    },
+    {
+      link: "https://vkvideo.ru/video_ext.php?oid=-230061059&id=456239032&hash=bff15b594870bd69",
+      thumbnailUrl:
+        "https://i.mycdn.me/getVideoPreview?id=7999049697985&idx=4&type=39&tkn=Dayw1QUCYUXqC9NBc8WG1yJSzAM&fn=vid_u",
+      name: 'Отзыв Святослава мухоморном ретрите',
+      uploadDate: new Date("April 09, 2025").toISOString(),
+    },
   {
     link: "https://vkvideo.ru/video_ext.php?oid=290538287&id=456239202&hash=3d55b190e311b0e6",
     thumbnailUrl:
@@ -21,7 +43,6 @@ const videos = [
     name: 'Отзыв Алексея о мухоморном ретрите в Казани',
     uploadDate: new Date("March 14, 2025").toISOString(),
   },
-
   {
     link: "https://vkvideo.ru/video_ext.php?oid=290538287&id=456239200&hash=1f59e4c38e95320f",
     thumbnailUrl:
