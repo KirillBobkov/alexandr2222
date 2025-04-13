@@ -15,6 +15,7 @@ import secondary_preview_21 from "../images/secondary_preview_21.webp";
 import secondary_preview_22 from "../images/secondary_preview_22.webp";
 import secondary_preview_23 from "../images/secondary_preview_23.webp";
 import secondary_preview_24 from "../images/secondary_preview_24.webp";
+import secondary_preview_25 from "../images/secondary_preview_25.webp";
 import styles from "../styles/blog.module.css";
 import contentStyles from "../styles/contentStyles.module.css";
 import { LineAnimation } from "../components/LineAnomation/LineAnimation";
@@ -22,6 +23,15 @@ import { VisibilityManager } from "../components/shared/VisibilityManager";
 import { useScrollToLocation } from "../hooks/useScrollToLocation";
 
 const articles = [
+  {
+    id: 12,
+    title: "Мухомор и терапия ПТСР: исцеление травм через связь с подсознанием",
+    description:
+      "Травма не уходит с годами. Она может затаиться, стать фоном, но при определённых условиях — снова проявиться. Вспышкой агрессии. Панической атакой. Оцепенением. Ощущением, будто ты больше не принадлежишь себе. Это и есть посттравматическое стрессовое расстройство (ПТСР).",
+    date: "10 апреля 2025",
+    image: secondary_preview_25,
+    slug: "mushroom-ptsd-therapy",
+  },
   {
     id: 11,
     title: "Как избавиться от бессонницы и ночных кошмаров? Глубинный разбор причин",
