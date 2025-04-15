@@ -16,6 +16,7 @@ import secondary_preview_22 from "../images/secondary_preview_22.webp";
 import secondary_preview_23 from "../images/secondary_preview_23.webp";
 import secondary_preview_24 from "../images/secondary_preview_24.webp";
 import secondary_preview_25 from "../images/secondary_preview_25.webp";
+import secondary_preview_26 from "../images/secondary_preview_26.webp";
 import styles from "../styles/blog.module.css";
 import contentStyles from "../styles/contentStyles.module.css";
 import { LineAnimation } from "../components/LineAnomation/LineAnimation";
@@ -23,6 +24,15 @@ import { VisibilityManager } from "../components/shared/VisibilityManager";
 import { useScrollToLocation } from "../hooks/useScrollToLocation";
 
 const articles = [
+  {
+    id: 13,
+    title: "Нейротраблшуттинг для предпринимателей: преодоление внутренних блоков роста",
+    description:
+      "Выстроили воронку, собрали команду, инвестировали в рост. Всё вроде бы по плану — но есть внутренняя точка, где будто «не едет». Почему?",
+    date: "15 апреля 2025",
+    image: secondary_preview_26,
+    slug: "neurotroubleshutting-entrepreneurs",
+  },
   {
     id: 12,
     title: "Мухомор и терапия ПТСР: исцеление травм через связь с подсознанием",
