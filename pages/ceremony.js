@@ -14,68 +14,68 @@ import { Questions } from "../components/Questions/Questions";
 import { Button } from "../components/shared/Button/Button";
 
 const videos = [
-    // New videos added on March 2024
-    {
-      link: "https://vkvideo.ru/video_ext.php?oid=-230061059&id=456239037&hash=0395dd995453c326",
-      thumbnailUrl:
-        "https://i.mycdn.me/getVideoPreview?id=8011482597949&idx=14&type=39&tkn=2N2-OvszIn7EgxYI2Z-GF-bu2P0&fn=vid_u",
-      name: 'Отзыв Романа о мухоморном ретрите',
-      uploadDate: new Date("April 09, 2025").toISOString(),
-    },
-    {
-      link: "https://vkvideo.ru/video_ext.php?oid=-230061059&id=456239035&hash=41d73acd4693cddf",
-      thumbnailUrl:
-        "https://i.mycdn.me/getVideoPreview?id=8024136747545&idx=1&type=39&tkn=wR32eObJAgzIULrQyKVDYp52URM&fn=vid_u",
-      name: 'Отзыв Дмитрия о мухоморном ретрите',
-      uploadDate: new Date("April 09, 2025").toISOString(),
-    },
-    {
-      link: "https://vkvideo.ru/video_ext.php?oid=-230061059&id=456239032&hash=bff15b594870bd69",
-      thumbnailUrl:
-        "https://i.mycdn.me/getVideoPreview?id=7999049697985&idx=4&type=39&tkn=Dayw1QUCYUXqC9NBc8WG1yJSzAM&fn=vid_u",
-      name: 'Отзыв Святослава мухоморном ретрите',
-      uploadDate: new Date("April 09, 2025").toISOString(),
-    },
+  // New videos added on March 2024
+  {
+    link: "https://vkvideo.ru/video_ext.php?oid=-230061059&id=456239037&hash=0395dd995453c326",
+    thumbnailUrl:
+      "https://i.mycdn.me/getVideoPreview?id=8011482597949&idx=14&type=39&tkn=2N2-OvszIn7EgxYI2Z-GF-bu2P0&fn=vid_u",
+    name: "Отзыв Романа о мухоморном ретрите",
+    uploadDate: new Date("April 09, 2025").toISOString(),
+  },
+  {
+    link: "https://vkvideo.ru/video_ext.php?oid=-230061059&id=456239035&hash=41d73acd4693cddf",
+    thumbnailUrl:
+      "https://i.mycdn.me/getVideoPreview?id=8024136747545&idx=1&type=39&tkn=wR32eObJAgzIULrQyKVDYp52URM&fn=vid_u",
+    name: "Отзыв Дмитрия о мухоморном ретрите",
+    uploadDate: new Date("April 09, 2025").toISOString(),
+  },
+  {
+    link: "https://vkvideo.ru/video_ext.php?oid=-230061059&id=456239032&hash=bff15b594870bd69",
+    thumbnailUrl:
+      "https://i.mycdn.me/getVideoPreview?id=7999049697985&idx=4&type=39&tkn=Dayw1QUCYUXqC9NBc8WG1yJSzAM&fn=vid_u",
+    name: "Отзыв Святослава мухоморном ретрите",
+    uploadDate: new Date("April 09, 2025").toISOString(),
+  },
   {
     link: "https://vkvideo.ru/video_ext.php?oid=290538287&id=456239202&hash=3d55b190e311b0e6",
     thumbnailUrl:
       "https://i.mycdn.me/getVideoPreview?id=8289797409327&idx=14&type=39&tkn=CVnXi5ILpSTIee7srOJvmd8ptIk&fn=vid_x",
-    name: 'Отзыв Алексея о мухоморном ретрите в Казани',
+    name: "Отзыв Алексея о мухоморном ретрите в Казани",
     uploadDate: new Date("March 14, 2025").toISOString(),
   },
   {
     link: "https://vkvideo.ru/video_ext.php?oid=290538287&id=456239200&hash=1f59e4c38e95320f",
     thumbnailUrl:
       "https://i.mycdn.me/getVideoPreview?id=8285454010927&idx=13&type=39&tkn=eg0RhO-KpcZbQcdGGWmyi5ks118&fn=vid_l",
-    name: 'Отзыв Айдара о Мухоморном ретрите в Казани',
+    name: "Отзыв Айдара о Мухоморном ретрите в Казани",
     uploadDate: new Date("March 13, 2025").toISOString(),
   },
   {
     link: "https://vkvideo.ru/video_ext.php?oid=290538287&id=456239195&hash=c7ee923a88bf9b4e",
     thumbnailUrl:
       "https://i.mycdn.me/getVideoPreview?id=8285396077103&idx=0&type=39&tkn=SSoFVhoZ0lQOctJ6vjF6OwmE2lY&fn=vid_l",
-    name: 'Отзыв Вероники о Мухоморном ретрите в Казани',
+    name: "Отзыв Вероники о Мухоморном ретрите в Казани",
     uploadDate: new Date("March 13, 2025").toISOString(),
   },
   {
     link: "https://vkvideo.ru/video_ext.php?oid=290538287&id=456239199&hash=16d0076dfe68de70",
     thumbnailUrl:
       "https://i.mycdn.me/getVideoPreview?id=8285457877551&idx=5&type=39&tkn=t4ee7KnrznQu1Xjv3VQZ5V1X0us&fn=vid_l",
-    name: 'Отзыв Кирилла о Мухоморном ретрите в Казани',
+    name: "Отзыв Кирилла о Мухоморном ретрите в Казани",
     uploadDate: new Date("March 13, 2025").toISOString(),
   },
   {
     link: "https://vkvideo.ru/video_ext.php?oid=290538287&id=456239198&hash=3d85099eca3aead0",
     thumbnailUrl:
       "https://i.mycdn.me/getVideoPreview?id=8285432580655&idx=7&type=39&tkn=JSqPlkPTxNZtEx7xA1YL5UUiegs&fn=vid_l",
-    name: 'Отзыв Игоря о Мухоморном ретрите в Казани',
+    name: "Отзыв Игоря о Мухоморном ретрите в Казани",
     uploadDate: new Date("March 13, 2025").toISOString(),
   },
   {
     link: "https://vkvideo.ru/video_ext.php?oid=290538287&id=456239197&hash=20f58a9af5b24acf",
     thumbnailUrl:
       "https://i.mycdn.me/getVideoPreview?id=8285427599919&idx=15&type=39&tkn=rI9YJkYSMhbD588WULwlAN7EdKU&fn=vid_l",
-    name: 'Отзыв Булата о Мухоморном ретрите в Казани',
+    name: "Отзыв Булата о Мухоморном ретрите в Казани",
     uploadDate: new Date("March 13, 2025").toISOString(),
   },
 
@@ -83,18 +83,17 @@ const videos = [
     link: "https://vkvideo.ru/video_ext.php?oid=290538287&id=456239194&hash=4e6c5032e0306911",
     thumbnailUrl:
       "https://i.mycdn.me/getVideoPreview?id=8285376285231&idx=0&type=39&tkn=Qn5Sjxdkq1-WeKVypbSloCMph4g&fn=vid_l",
-    name: 'Отзыв Андрея о Мухоморном ретрите в Казани',
+    name: "Отзыв Андрея о Мухоморном ретрите в Казани",
     uploadDate: new Date("March 13, 2025").toISOString(),
   },
   {
     link: "https://vkvideo.ru/video_ext.php?oid=290538287&id=456239196&hash=9e93dff6cda11e19",
     thumbnailUrl:
       "https://i.mycdn.me/getVideoPreview?id=8285423798831&idx=10&type=39&tkn=S0XDiAMyHgOjpCL3c2nuIizK53Y&fn=vid_l",
-    name: 'Отзыв Никиты о Мухоморном ретрите в Казани',
+    name: "Отзыв Никиты о Мухоморном ретрите в Казани",
     uploadDate: new Date("March 13, 2025").toISOString(),
   },
 ];
-
 
 export const questionsContent = {
   blocks: [
@@ -162,7 +161,8 @@ export default function () {
   useScrollToLocation();
 
   const metaConfig = {
-    title: "Мухоморные ретриты | Шаманизм, церемонии и работа с растениями-учителями",
+    title:
+      "Мухоморные ретриты | Шаманизм, церемонии и работа с растениями-учителями",
     description:
       "Погрузитесь в мистические церемонии с мухомором под руководством шамана. Изучайте трип-репорты, избегайте бэд-трипов, практикуйте микродозинг. Духовные ретриты для исцеления души через народную медицину и психоделические практики.",
     keywords:
@@ -178,18 +178,26 @@ export default function () {
       <LineAnimation>
         <div className={containerStyles.container}>
           <VisibilityManager as="p">
-            Мухоморный ретрит — это уникальная практика, позволяющая вам погрузиться в глубины подсознания, освободиться от внутренних блоков и получить ценный духовный и терапевтический опыт.
+            Мухоморный ретрит — это уникальная практика, позволяющая вам
+            погрузиться в глубины подсознания, освободиться от внутренних блоков
+            и получить ценный духовный и терапевтический опыт.
           </VisibilityManager>
 
           <VisibilityManager as="p">
-            Пантерный Мухомор содержит мощные активные вещества (мусцимол, иботеновую кислоту, мускарин, мускаридин, скополамин, гиосциамин и другие), которые способны трансформировать восприятие реальности, открывая доступ к истинной сути вещей. Однако, его сила требует осознанного подхода и грамотного сопровождения.
+            Пантерный Мухомор содержит мощные активные вещества (мусцимол,
+            иботеновую кислоту, мускарин, мускаридин, скополамин, гиосциамин и
+            другие), которые способны трансформировать восприятие реальности,
+            открывая доступ к истинной сути вещей. Однако, его сила требует
+            осознанного подхода и грамотного сопровождения.
           </VisibilityManager>
 
           <VisibilityManager as="p">
-            Расскажу вам о пользе и результатах мухоморного ретрита, процессе его проведения, а также о важных аспектах безопасности и интеграции опыта.
+            Расскажу вам о пользе и результатах мухоморного ретрита, процессе
+            его проведения, а также о важных аспектах безопасности и интеграции
+            опыта.
           </VisibilityManager>
 
-          <div style={{ height: '1px' }} />
+          <div style={{ height: "1px" }} />
           <VisibilityManager as="h3" className={contentStyles.title_middle}>
             Преимущества моего ретрита
           </VisibilityManager>
@@ -205,7 +213,11 @@ export default function () {
               Назначен проводником непосредственно от самого Мухомора
             </h3>
             <p className={contentStyles.textDescription}>
-              Этот путь был принят мною не из любопытства или моды. Когда мне было 17 лет, отец провёл обряд посвящения, передав древние знания. А в трипе на Мухоморе, мне было прямо указано проводить людей через этот опыт, помогая им исцелиться и найти путь к себе.
+              Этот путь был принят мною не из любопытства или моды. Когда мне
+              было 17 лет, отец провёл обряд посвящения, передав древние знания.
+              А в погружении на Мухоморе, мне было прямо указано проводить людей
+              через этот опыт, помогая им восстановиться и найти путь к самим
+              себе.
             </p>
           </VisibilityManager>
 
@@ -216,7 +228,10 @@ export default function () {
               Глубокая работа с подсознанием
             </h3>
             <p className={contentStyles.textDescription}>
-              Страх, волнение или сомнения перед ретритом? Это естественно. По необходимости, провожу предварительную работу с подсознанием, помогая устранить внутреннее напряжение и настроиться на взаимодействие с Мухомором.
+              Страх, волнение или сомнения перед ретритом? Это естественно. По
+              необходимости, провожу предварительную работу с подсознанием,
+              помогая устранить внутреннее напряжение и настроиться на
+              взаимодействие с Мухомором.
             </p>
           </VisibilityManager>
 
@@ -227,7 +242,10 @@ export default function () {
               Быстрый, но эффективный формат
             </h3>
             <p className={contentStyles.textDescription}>
-              В отличие от большинства ретритных центров, где практика длится по 3–4 дня, мой ретрит занимает не более суток. Вы получаете мощный трансформационный опыт, без необходимости выпадать из жизни на несколько дней.
+              В отличие от большинства ретритных центров, где практика длится по
+              3–4 дня, мой ретрит занимает не более суток. Вы получаете мощный
+              трансформационный опыт, без необходимости выпадать из жизни на
+              несколько дней.
             </p>
           </VisibilityManager>
 
@@ -238,7 +256,9 @@ export default function () {
               Безопасность и грамотная интеграция
             </h3>
             <p className={contentStyles.textDescription}>
-              Ретрит проходит в комфортном и защищённом месте. После церемонии, помогаю участникам осознать и правильно внедрить полученный опыт в повседневную жизнь.
+              Ретрит проходит в комфортном и защищённом месте. После церемонии,
+              помогаю участникам осознать и правильно внедрить полученный опыт в
+              повседневную жизнь.
             </p>
           </VisibilityManager>
 
@@ -246,18 +266,26 @@ export default function () {
             <h3 className={contentStyles.title_small}>
               <span className={contentStyles.textSymbol}>//</span>
               {"  "}
-              Индивидуальная дозировка и перепроверка через кинезиологический тест
+              Индивидуальная дозировка и перепроверка через кинезиологический
+              тест
             </h3>
             <p className={contentStyles.textDescription}>
-              Каждому участнику подбираю дозировку Мухомора, которую дополнительно проверяю через кинезиологический тест, исключая риск передозировки и даже минимальную вероятность случайного попадания в партию Бледной Поганки. Это позволяет обеспечивать безопасность на каждом этапе.
+              Каждому участнику подбираю дозировку Мухомора, которую
+              дополнительно проверяю через кинезиологический тест, исключая риск
+              передозировки и даже минимальную вероятность случайного попадания
+              в партию Бледной Поганки. Это позволяет обеспечивать безопасность
+              на каждом этапе.
             </p>
           </VisibilityManager>
 
           <div style={{ height: "1px" }} />
-          <Button className={contentStyles.message} href={{ hash: "#message" }} status="Записаться" />
+          <Button
+            className={contentStyles.message}
+            href={{ hash: "#message" }}
+            status="Записаться"
+          />
 
-
-          <div style={{ height: '1px' }} />
+          <div style={{ height: "1px" }} />
           <VisibilityManager as="h3" className={contentStyles.title_middle}>
             Польза и результаты мухоморного ретрита
           </VisibilityManager>
@@ -269,13 +297,15 @@ export default function () {
               Эмоциональное исцеление
             </h3>
             <p className={contentStyles.textDescription}>
-              Освобождение от подавленных эмоций, травм и страхов.
+              Освобождение от внутренних зажимов, тяжёлых переживаний и
+              сдерживаемых чувств.
             </p>
             <p className={contentStyles.textDescription}>
-              Уменьшение тревожности, депрессии и посттравматического синдрома (ПТСР).
+              Снижение уровня внутреннего напряжения, преодоление последствий
+              психоэмоциональных нагрузок.
             </p>
             <p className={contentStyles.textDescription}>
-              Чувство внутреннего спокойствия и гармонии после церемонии.
+              Глубокое чувство покоя, собранности и целостности после церемонии.
             </p>
           </VisibilityManager>
 
@@ -347,7 +377,7 @@ export default function () {
             </p>
           </VisibilityManager>
 
-          <div style={{ height: '1px' }} />
+          <div style={{ height: "1px" }} />
           <VisibilityManager as="h3" className={contentStyles.title_middle}>
             Как проходит мухоморный ретрит?
           </VisibilityManager>
@@ -359,7 +389,9 @@ export default function () {
               Подготовка
             </h3>
             <p className={contentStyles.textDescription}>
-              Вы получаете рекомендации по диете и грамотную настройку на трип. Это позволяет сделать церемонию более осмысленной, безопасной и продуктивной.
+              Вы получаете рекомендации по диете и грамотную настройку на трип.
+              Это позволяет сделать церемонию более осмысленной, безопасной и
+              продуктивной.
             </p>
           </VisibilityManager>
 
@@ -373,10 +405,12 @@ export default function () {
               Подбирается индивидуальная дозировка.
             </p>
             <p className={contentStyles.textDescription}>
-              Мухомор употребляется в виде сомы, с добавлением других Растений-Учителей, разрешённых в РФ.
+              Мухомор употребляется в виде сомы, с добавлением других
+              Растений-Учителей, разрешённых в РФ.
             </p>
             <p className={contentStyles.textDescription}>
-              Проводятся очистительные и исцеляющие ритуалы, полученные мною от Высших Сил.
+              Проводятся очистительные и исцеляющие ритуалы, полученные мною от
+              Высших Сил.
             </p>
           </VisibilityManager>
 
@@ -387,11 +421,12 @@ export default function () {
               Интеграция опыта
             </h3>
             <p className={contentStyles.textDescription}>
-              После ретрита, помогу вам осознать смысл полученного опыта, дать ему верное применение в жизни и закрепить трансформацию.
+              После ретрита, помогу вам осознать смысл полученного опыта, дать
+              ему верное применение в жизни и закрепить трансформацию.
             </p>
           </VisibilityManager>
 
-          <div style={{ height: '1px' }} />
+          <div style={{ height: "1px" }} />
           <VisibilityManager as="h3" className={contentStyles.title_middle}>
             Исторические примеры использования Мухомора
           </VisibilityManager>
@@ -403,10 +438,12 @@ export default function () {
               Шаманизм и древние традиции
             </h3>
             <p className={contentStyles.textDescription}>
-              В Сибири шаманы использовали Мухомор для общения с духами, целительства и предсказаний.
+              В Сибири шаманы использовали Мухомор для общения с духами,
+              целительства и предсказаний.
             </p>
             <p className={contentStyles.textDescription}>
-              В славянской культуре его применяли охотники для повышения выносливости.
+              В славянской культуре его применяли охотники для повышения
+              выносливости.
             </p>
           </VisibilityManager>
 
@@ -417,7 +454,8 @@ export default function () {
               Воинская доблесть и обострение чувств
             </h3>
             <p className={contentStyles.textDescription}>
-              Викинги предположительно употребляли Мухоморы, чтобы войти в боевой раж и стать бесстрашными в сражении.
+              Викинги предположительно употребляли Мухоморы, чтобы войти в
+              боевой раж и стать бесстрашными в сражении.
             </p>
           </VisibilityManager>
 
@@ -428,7 +466,8 @@ export default function () {
               Духовные ритуалы индейцев
             </h3>
             <p className={contentStyles.textDescription}>
-              В ритуалах североамериканских индейцев Мухоморы использовались для очищения, исцеления и получения видений.
+              В ритуалах североамериканских индейцев Мухоморы использовались для
+              очищения, исцеления и получения видений.
             </p>
           </VisibilityManager>
 
@@ -439,11 +478,12 @@ export default function () {
               Современные исследования
             </h3>
             <p className={contentStyles.textDescription}>
-              В западной науке изучается влияние Мухомора на психику и его потенциал в терапии психических расстройств.
+              В западной науке изучается влияние Мухомора на психику и его
+              потенциал в терапии психических расстройств.
             </p>
           </VisibilityManager>
 
-          <div style={{ height: '1px' }} />
+          <div style={{ height: "1px" }} />
           <VisibilityManager as="h3" className={contentStyles.title_middle}>
             Риски и меры предосторожности
           </VisibilityManager>
@@ -455,7 +495,10 @@ export default function () {
               Токсичность и побочные эффекты
             </h3>
             <p className={contentStyles.textDescription}>
-              Мухомор содержит активные вещества, которые могут вызвать тошноту, головокружение и даже отравление при неправильном употреблении. Самостоятельное использование без опыта и знаний может быть опасным.
+              Мухомор содержит активные вещества, которые могут вызвать тошноту,
+              головокружение и даже отравление при неправильном употреблении.
+              Самостоятельное использование без опыта и знаний может быть
+              опасным.
             </p>
           </VisibilityManager>
 
@@ -466,7 +509,9 @@ export default function () {
               Риск десоциализации
             </h3>
             <p className={contentStyles.textDescription}>
-              Глубокие переживания требуют осознанной интеграции. Без поддержки проводника можно потерять связь с реальностью или столкнуться с внутренними конфликтами.
+              Глубокие переживания требуют осознанной интеграции. Без поддержки
+              проводника можно потерять связь с реальностью или столкнуться с
+              внутренними конфликтами.
             </p>
           </VisibilityManager>
 
@@ -477,45 +522,57 @@ export default function () {
               Юридические аспекты
             </h3>
             <p className={contentStyles.textDescription}>
-              В России Мухомор не запрещён и его использование абсолютно легально.
+              В России Мухомор не запрещён и его использование абсолютно
+              легально.
             </p>
           </VisibilityManager>
 
-          <div style={{ height: '1px' }} />
+          <div style={{ height: "1px" }} />
           <VisibilityManager as="h3" className={contentStyles.title_middle}>
             Заключение
           </VisibilityManager>
 
           <VisibilityManager as="p">
-            Мухомор является Величайшим источником духовного, эмоционального и физического исцеления.
+            Мухомор является Величайшим источником духовного, эмоционального и
+            физического исцеления.
           </VisibilityManager>
 
           <VisibilityManager as="p">
-            Мухомор помогает человеку раскрыться максимально, отбросить всё лишнее и прийти к счастливой благодатной жизни и изобилию.
+            Мухомор помогает человеку раскрыться максимально, отбросить всё
+            лишнее и прийти к счастливой благодатной жизни и изобилию.
           </VisibilityManager>
 
           <VisibilityManager as="p">
-            После трипа, человек испытывает «самые приятные ощущения в жизни» - прямая цитата одного из участников.
+            После трипа, человек испытывает «самые приятные ощущения в жизни» -
+            прямая цитата одного из участников.
           </VisibilityManager>
 
           <VisibilityManager as="p">
-            При этом, неграмотное взаимодействие с Мухомором сопряжено с серьёзными рисками.
+            При этом, неграмотное взаимодействие с Мухомором сопряжено с
+            серьёзными рисками.
           </VisibilityManager>
 
           <VisibilityManager as="p">
-            Успешный опыт зависит от правильной подготовки, дозировки и поддержки опытного проводника.
+            Успешный опыт зависит от правильной подготовки, дозировки и
+            поддержки опытного проводника.
           </VisibilityManager>
 
           <VisibilityManager as="p">
-            Если вы рассматриваете участие в мухоморном ретрите, важно тщательно изучить все отзывы, проконсультироваться с проводником и учитывать свои индивидуальные особенности.
+            Если вы рассматриваете участие в мухоморном ретрите, важно тщательно
+            изучить все отзывы, проконсультироваться с проводником и учитывать
+            свои индивидуальные особенности.
           </VisibilityManager>
 
           <VisibilityManager as="p">
-            Мухомор — это великий учитель и целитель, но он требует уважения и мудрости. Если вы готовы пройти этот путь, я буду вашим проводником. Будьте честны с собой и проявляйте уважение. Мухомор дарует вам силу и здоровье.
+            Мухомор — это великий учитель и целитель, но он требует уважения и
+            мудрости. Если вы готовы пройти этот путь, я буду вашим проводником.
+            Будьте честны с собой и проявляйте уважение. Мухомор дарует вам силу
+            и здоровье.
           </VisibilityManager>
 
           <VisibilityManager as="p">
-            Если вы чувствуете, что пришло время изменений, и готовы довериться процессу, я проведу вас через этот опыт.
+            Если вы чувствуете, что пришло время изменений, и готовы довериться
+            процессу, я проведу вас через этот опыт.
           </VisibilityManager>
         </div>
       </LineAnimation>
