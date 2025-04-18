@@ -153,7 +153,7 @@ export default function () {
           </VisibilityManager>
 
           <VisibilityManager as="p">
-            Но как только вы поворачиваетесь к себе — начинается настоящее исцеление.
+            Но как только вы поворачиваетесь к себе — начинается настоящее улучшение самочувствия.
           </VisibilityManager>
 
           <VisibilityManager as="p">

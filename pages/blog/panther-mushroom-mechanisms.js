@@ -159,7 +159,7 @@ export default function () {
             <p className={contentStyles.textDescription}>
               <span className={contentStyles.textSymbol}>●</span>
               {"  "}
-              Грамотная интеграция опыта. После трипа важно осознать и понять пережитое, чтобы использовать его в повседневной жизни.
+              Грамотная интеграция опыта. После погружения важно осознать и понять пережитое, чтобы использовать его в повседневной жизни.
             </p>
           </VisibilityManager>
 
