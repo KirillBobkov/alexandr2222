@@ -197,6 +197,30 @@ export default function () {
           <VisibilityManager as="p">
             Продолжайте идти вперёд, и вы увидите, как жизнь начнёт меняться к лучшему.
           </VisibilityManager>
+
+          <div style={{ height: '1px' }} />
+          <VisibilityManager as="h3" className={contentStyles.title_middle}>
+            Откаты и создание новых шаблонов реагирования
+          </VisibilityManager>
+
+          <VisibilityManager as="div">
+            <p className={contentStyles.textDescription}>
+              <span className={contentStyles.textSymbol}>●</span>
+              {"  "}
+              Создание новых, здоровых шаблонов реагирования на стресс и сложные ситуации
+            </p>
+          </VisibilityManager>
+          <p
+              style={{
+                fontSize: "12px",
+                fontStyle: "italic",
+                
+                
+              }}
+            >
+              Метод не является медицинским и не заменяет консультации
+              специалиста
+            </p>
         </div>
       </LineAnimation>
       <div id="message" />

@@ -224,6 +224,21 @@ export default function () {
           <VisibilityManager as="p">
             P.S. Истинная духовность не противоречит успеху. Она учит не бежать от мира, а менять его, начиная с себя.
           </VisibilityManager>
+
+          <VisibilityManager as="p">
+            В конечном итоге интеграция учит главному: жить не частями, а цельно. Не «должен/нельзя», а «хочу/выбираю». И в этом — истинное освобождение.
+          </VisibilityManager>
+          <p
+              style={{
+                fontSize: "12px",
+                fontStyle: "italic",
+                
+                
+              }}
+            >
+              Метод не является медицинским и не заменяет консультации
+              специалиста
+            </p>
         </div>
       </LineAnimation>
       <div id="message" />

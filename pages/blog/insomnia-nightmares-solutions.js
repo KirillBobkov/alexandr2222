@@ -165,6 +165,17 @@ export default function () {
             Позвольте себе безопасность.<br />
             Позвольте себе спать.
           </VisibilityManager>
+          <p
+              style={{
+                fontSize: "12px",
+                fontStyle: "italic",
+                
+                
+              }}
+            >
+              Метод не является медицинским и не заменяет консультации
+              специалиста
+            </p>
         </div>
       </LineAnimation>
       <div id="message" />

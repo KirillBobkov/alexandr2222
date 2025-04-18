@@ -368,6 +368,17 @@ export default function () {
             выбора: больше не бежать от любви, а встречать её с открытым
             сердцем.
           </VisibilityManager>
+          <p
+              style={{
+                fontSize: "12px",
+                fontStyle: "italic",
+                
+                
+              }}
+            >
+              Метод не является медицинским и не заменяет консультации
+              специалиста
+            </p>
         </div>
       </LineAnimation>
       <div id="message" />

@@ -180,6 +180,10 @@ export default function () {
             P.S. Ночь — это время для восстановления, а не для битвы с самим собой. 
             Позвольте себе наконец выспаться.
           </VisibilityManager>
+          
+          <p style={{ fontSize: '12px', fontStyle: 'italic', textAlign: 'center', marginBottom: '15px' }}>
+            Метод не является медицинским и не заменяет консультации специалиста
+          </p>
         </div>
       </LineAnimation>
       <div id="message" />

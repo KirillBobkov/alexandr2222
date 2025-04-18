@@ -199,6 +199,17 @@ export default function () {
           <VisibilityManager as="p">
             Нейротраблшуттинг помогает не «стать эгоистом», а вернуть себе право на жизнь. Вашу жизнь.
           </VisibilityManager>
+          <p
+              style={{
+                fontSize: "12px",
+                fontStyle: "italic",
+                
+                
+              }}
+            >
+              Метод не является медицинским и не заменяет консультации
+              специалиста
+            </p>
         </div>
       </LineAnimation>
       <div id="message" />

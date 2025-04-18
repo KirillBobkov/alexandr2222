@@ -104,9 +104,12 @@ export default function () {
               Вы видите в каждом дне новые возможности и перспективы.
             </p>
           </VisibilityManager>
+          
+          <p style={{ fontSize: '12px', fontStyle: 'italic', textAlign: 'center', marginBottom: '15px' }}>
+            Метод не является медицинским и не заменяет консультации специалиста
+          </p>
         </div>
       </LineAnimation>
-
       <div id="message" />
       <Form
         setIsSubmitted={setIsSubmitted}

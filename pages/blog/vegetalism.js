@@ -18,8 +18,7 @@ export default function () {
     title: "Вегетализм: путь к гармонии через силу растений",
     description:
       "Древняя традиция, объединяющая человека с мудростью природы через взаимодействие с растениями",
-    keywords:
-      "вегетализм, растения, духовные практики, мухомор, шаманизм",
+    keywords: "вегетализм, растения, духовные практики, мухомор, шаманизм",
   };
 
   return (
@@ -35,7 +34,7 @@ export default function () {
             Вегетализм — это древняя традиция, которая объединяет человека с
             мудростью природы через взаимодействие с растениями. Это не просто
             практика, а целое мировоззрение, основанное на уважении к силе
-            растений, их духам и их роли в исцелении и духовном росте.
+            растений, их духам и их роли в улучшении самочувствия и духовном росте.
           </VisibilityManager>
 
           <VisibilityManager as="p">
@@ -45,7 +44,7 @@ export default function () {
             помогают исцелять тела, умы и души людей, которые ко мне обращаются.
           </VisibilityManager>
 
-          <div style={{ height: '1px' }} />
+          <div style={{ height: "1px" }} />
           <VisibilityManager as="h3" className={contentStyles.title_middle}>
             Что такое вегетализм?
           </VisibilityManager>
@@ -72,12 +71,14 @@ export default function () {
             </p>
           </VisibilityManager>
 
-          
           <div style={{ height: "1px" }} />
-          <Button className={contentStyles.message} href={{ hash: "#message" }} status="Записаться" />
+          <Button
+            className={contentStyles.message}
+            href={{ hash: "#message" }}
+            status="Записаться"
+          />
 
-
-          <div style={{ height: '1px' }} />
+          <div style={{ height: "1px" }} />
           <VisibilityManager as="h3" className={contentStyles.title_middle}>
             Почему вегетализм необходим?
           </VisibilityManager>
@@ -109,7 +110,7 @@ export default function () {
             </p>
           </VisibilityManager>
 
-          <div style={{ height: '1px' }} />
+          <div style={{ height: "1px" }} />
           <VisibilityManager as="h3" className={contentStyles.title_middle}>
             Как я использую вегетализм в своей практике?
           </VisibilityManager>
@@ -135,10 +136,22 @@ export default function () {
             <p className={contentStyles.textDescription}>
               <span className={contentStyles.textSymbol}>●</span>
               {"  "}
-              Создавать индивидуальные программы исцеления, которые учитывают
+              Создавать индивидуальные программы улучшения самочувствия, которые учитывают
               уникальные потребности каждого человека.
             </p>
+        
           </VisibilityManager>
+          <p
+              style={{
+                fontSize: "12px",
+                fontStyle: "italic",
+                
+                
+              }}
+            >
+              Метод не является медицинским и не заменяет консультации
+              специалиста
+            </p>
         </div>
       </LineAnimation>
       <div id="message" />

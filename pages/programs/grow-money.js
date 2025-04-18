@@ -114,6 +114,10 @@ export default function () {
             процветать. Запишитесь на бесплатную консультацию для увеличения
             вашего дохода прямо сейчас!{" "}
           </VisibilityManager>
+          
+          <p style={{ fontSize: '12px', fontStyle: 'italic', textAlign: 'center', marginBottom: '15px' }}>
+            Метод не является медицинским и не заменяет консультации специалиста
+          </p>
         </div>
       </LineAnimation>
       <div id="message" />

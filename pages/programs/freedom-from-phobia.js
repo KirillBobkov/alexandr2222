@@ -187,6 +187,10 @@ export default function () {
               Начните жить без страха уже через несколько дней
             </p>
           </VisibilityManager>
+
+          <p style={{ fontSize: '12px', fontStyle: 'italic', textAlign: 'center', marginBottom: '15px' }}>
+            Метод не является медицинским и не заменяет консультации специалиста
+          </p>
         </div>
       </LineAnimation>
       <div id="message" />

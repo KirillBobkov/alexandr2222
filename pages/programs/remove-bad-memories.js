@@ -84,6 +84,10 @@ export default function () {
             Позвольте себе исцелиться и двигаться вперед к жизни, которую вы
             заслуживаете.{" "}
           </VisibilityManager>
+          
+          <p style={{ fontSize: '12px', fontStyle: 'italic', textAlign: 'center', marginBottom: '15px' }}>
+            Метод не является медицинским и не заменяет консультации специалиста
+          </p>
         </div>
       </LineAnimation>
       <div id="message" />

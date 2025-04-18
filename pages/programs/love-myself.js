@@ -108,6 +108,10 @@ export default function () {
             Запишитесь на бесплатную консультацию прямо сейчас и начните менять
             свою жизнь к лучшему.{" "}
           </VisibilityManager>
+          
+          <p style={{ fontSize: '12px', fontStyle: 'italic', textAlign: 'center', marginBottom: '15px' }}>
+            Метод не является медицинским и не заменяет консультации специалиста
+          </p>
         </div>
       </LineAnimation>
       <div id="message" />

@@ -15,7 +15,7 @@ export default function () {
   useScrollToLocation();
 
   const metaConfig = {
-    title: "Микродозинг Мухомора: как это работает, кому подходит и как начать безопасно",
+    title: "Микродозинг Мухомора: как это работает, кому подходит и как подойти к практике осознанно",
     description: "Научный подход к микродозингу мухомора, виды грибов, практические рекомендации и советы экспертов",
     keywords: "микродозинг, мухомор, психоделики, ментальное здоровье, духовные практики",
   };
@@ -26,366 +26,276 @@ export default function () {
       <LineAnimation>
         <div className={containerStyles.container}>
           <VisibilityManager as="h1" className={contentStyles.title_middle}>
-            Микродозинг Мухомора: как это работает, кому подходит и как начать безопасно
+            Микродозинг Мухомора: как это работает, кому подходит и как подойти к практике осознанно
           </VisibilityManager>
 
           <VisibilityManager as="p">
-            Мухомор — один из самых загадочных грибов, веками использовавшийся шаманами для духовных практик.
+            Мухомор — один из самых загадочных грибов, с древности используемый в ритуальной и целительной традиции разных народов мира.
           </VisibilityManager>
 
           <VisibilityManager as="p">
-            Сегодня, благодаря работам исследователя Михаила Вишневского, популяризировавшего его свойства в русскоязычном пространстве, микродозинг Мухомора набирает популярность как инструмент для улучшения ментального здоровья, креативности и эмоционального баланса.
+            Сегодня интерес к нему возрождается — не в контексте «грибной моды», а как поиск диалога с природой, телом и бессознательным.
+            Благодаря популяризации, начатой Михаилом Вишневским, и всё более глубокому изучению свойств Мухомора, растёт число людей, которые осознанно подходят к практике его микродозинга — как части пути самопознания, мягкой саморегуляции и расширения восприятия.
           </VisibilityManager>
 
           <VisibilityManager as="p">
-            Что говорит наука? Чем отличаются виды Мухомора? И как интегрировать практику в повседневную жизнь? Разбираемся в деталях.
+            Что известно об этом подходе? Чем отличаются виды Мухомора? И как подойти к практике так, чтобы она была безопасной и экологичной? Давайте разберёмся.
           </VisibilityManager>
 
           <div style={{ height: '1px' }} />
           <VisibilityManager as="h3" className={contentStyles.title_middle}>
-            Научные основы микродозинга: что известно?
+            Что такое микродозинг: взгляд с научной и этнографической стороны
           </VisibilityManager>
 
           <VisibilityManager as="p">
-            Микродозинг — это приём малых доз психоделических веществ (в 10–20 раз меньше стандартной «ритуальной» дозы). В случае с Мухомором речь идёт о 0,3–1 г сушёного гриба, но из-за индивидуальной чувствительности первый приём лучше начинать с 0,05 г. (размером с половину рисового зёрнышка). Если в течение 24 часов нет реакций (тошнота, головокружение), можно переходить к стандартной дозировке.
+            Микродозингом называют использование малых количеств растительных или грибных веществ — в дозах, не вызывающих выраженных изменений сознания, но затрагивающих тонкие слои восприятия, эмоционального фона и чувствительности.
           </VisibilityManager>
 
-          <VisibilityManager as="h4" className={contentStyles.title_small}>
-            Активные компоненты:
+          <VisibilityManager as="p">
+            В случае с Мухомором — это высушенный и термически обработанный гриб, содержащий биологически активные вещества, в первую очередь мусцимол и иботеновую кислоту.
+            В микроколичествах они воздействуют на глубинные процессы регуляции сна, эмоциональной адаптации и чувствительности к телесным сигналам.
           </VisibilityManager>
 
-          <VisibilityManager as="div">
-            <p className={contentStyles.textDescription}>
-              <span className={contentStyles.textSymbol}>●</span>
-              {"  "}
-              Мусцимол — отвечает за расслабление, снижение тревоги и антидепрессивный эффект.
-            </p>
-            <p className={contentStyles.textDescription}>
-              <span className={contentStyles.textSymbol}>●</span>
-              {"  "}
-              Иботеновая кислота — в малых дозах стимулирует нейропластичность, в больших — токсична.
-            </p>
-          </VisibilityManager>
-
-          <VisibilityManager as="h4" className={contentStyles.title_small}>
-            Исследования (2020–2023 гг.):
+          <VisibilityManager as="p">
+            В 2020–2023 гг. в разных странах проводились исследовательские проекты (например, при Университете Тарту), где фиксировались следующие результаты:
           </VisibilityManager>
 
           <VisibilityManager as="div">
             <p className={contentStyles.textDescription}>
               <span className={contentStyles.textSymbol}>●</span>
               {"  "}
-              Снижение тревожности на 40% (Университет Тарту).
+              улучшение субъективного качества сна и снижения тревожности;
             </p>
             <p className={contentStyles.textDescription}>
               <span className={contentStyles.textSymbol}>●</span>
               {"  "}
-              Улучшение когнитивной гибкости и креативности (журнал Psychopharmacology).
+              повышение гибкости мышления и креативности;
             </p>
+            <p className={contentStyles.textDescription}>
+              <span className={contentStyles.textSymbol}>●</span>
+              {"  "}
+              усиление осознанности в телесной и эмоциональной сфере.
+            </p>
+          </VisibilityManager>
+
+          <VisibilityManager as="p">
+            Важно подчеркнуть: речь не идёт о медикаментозном или клиническом эффекте, а о мягкой работе в зоне ощущений, внимания и внутреннего фона.
           </VisibilityManager>
 
           <div style={{ height: "1px" }} />
           <Button className={contentStyles.message} href={{ hash: "#message" }} status="Записаться" />
 
-
           <div style={{ height: '1px' }} />
           <VisibilityManager as="h3" className={contentStyles.title_middle}>
-            Виды Мухомора и различия в микродозинге
-          </VisibilityManager>
-
-          <VisibilityManager as="h4" className={contentStyles.title_small}>
-            1. Красный Мухомор (Amanita muscaria)
-          </VisibilityManager>
-
-          <VisibilityManager as="div">
-            <p className={contentStyles.textDescription}>
-              <span className={contentStyles.textSymbol}>●</span>
-              {"  "}
-              Химия: высокое содержание мусцимола, умеренное — иботеновой кислоты.
-            </p>
-            <p className={contentStyles.textDescription}>
-              <span className={contentStyles.textSymbol}>●</span>
-              {"  "}
-              Эффекты: расслабление, эмоциональный баланс, усиление сновидений.
-            </p>
-            <p className={contentStyles.textDescription}>
-              <span className={contentStyles.textSymbol}>●</span>
-              {"  "}
-              Дозировка: 0,3–0,5 г сушёного гриба.
-            </p>
-            <p className={contentStyles.textDescription}>
-              <span className={contentStyles.textSymbol}>●</span>
-              {"  "}
-              Курс: 3–4 недели с перерывом 2 месяца.
-            </p>
-          </VisibilityManager>
-
-          <VisibilityManager as="h4" className={contentStyles.title_small}>
-            2. Пантерный Мухомор (Amanita pantherina)
-          </VisibilityManager>
-
-          <VisibilityManager as="div">
-            <p className={contentStyles.textDescription}>
-              <span className={contentStyles.textSymbol}>●</span>
-              {"  "}
-              Химия: больше иботеновой кислоты, меньше мусцимола.
-            </p>
-            <p className={contentStyles.textDescription}>
-              <span className={contentStyles.textSymbol}>●</span>
-              {"  "}
-              Эффекты: энергия, фокус, лёгкая стимуляция (подходит для творчества).
-            </p>
-            <p className={contentStyles.textDescription}>
-              <span className={contentStyles.textSymbol}>●</span>
-              {"  "}
-              Дозировка: 0,1–0,3 г (выше токсичность!).
-            </p>
-            <p className={contentStyles.textDescription}>
-              <span className={contentStyles.textSymbol}>●</span>
-              {"  "}
-              Курс: не более 2 недель.
-            </p>
-          </VisibilityManager>
-
-          <VisibilityManager as="h4" className={contentStyles.title_small}>
-            3. Королевский Мухомор (Amanita regalis)
-          </VisibilityManager>
-
-          <VisibilityManager as="div">
-            <p className={contentStyles.textDescription}>
-              <span className={contentStyles.textSymbol}>●</span>
-              {"  "}
-              Химия: сбалансированное соотношение мусцимола и иботеновой кислоты.
-            </p>
-            <p className={contentStyles.textDescription}>
-              <span className={contentStyles.textSymbol}>●</span>
-              {"  "}
-              Эффекты: гармонизация тела и ума, мягкая эйфория.
-            </p>
-            <p className={contentStyles.textDescription}>
-              <span className={contentStyles.textSymbol}>●</span>
-              {"  "}
-              Дозировка: 0,3–0,7 г.
-            </p>
-            <p className={contentStyles.textDescription}>
-              <span className={contentStyles.textSymbol}>●</span>
-              {"  "}
-              Курс: до 6 недель.
-            </p>
-          </VisibilityManager>
-
-          <VisibilityManager as="h4" className={contentStyles.title_small}>
-            Можно ли смешивать виды?
+            Виды Мухомора: особенности взаимодействия
           </VisibilityManager>
 
           <VisibilityManager as="p">
-            Да, но с осторожностью. Например:
+            Каждый вид Мухомора обладает своим характером и спектром действия. Вот краткие наблюдения от тех, кто уже сталкивался с практикой:
+          </VisibilityManager>
+
+          <VisibilityManager as="h4" className={contentStyles.title_small}>
+            Красный Мухомор (Amanita muscaria)
           </VisibilityManager>
 
           <VisibilityManager as="div">
             <p className={contentStyles.textDescription}>
               <span className={contentStyles.textSymbol}>●</span>
               {"  "}
-              Красный + Королевский (1:1): для глубокой релаксации.
+              Создаёт состояние внутреннего покоя и расслабления.
             </p>
             <p className={contentStyles.textDescription}>
               <span className={contentStyles.textSymbol}>●</span>
               {"  "}
-              Красный + Пантерный (1:0,5): для баланса энергии и спокойствия.
+              Часто углубляет сны и усиливает контакт с телом.
+            </p>
+            <p className={contentStyles.textDescription}>
+              <span className={contentStyles.textSymbol}>●</span>
+              {"  "}
+              Подходит тем, кто хочет смягчить тревожность и восстановить спокойствие.
+            </p>
+          </VisibilityManager>
+
+          <VisibilityManager as="h4" className={contentStyles.title_small}>
+            Пантерный Мухомор (Amanita pantherina)
+          </VisibilityManager>
+
+          <VisibilityManager as="div">
+            <p className={contentStyles.textDescription}>
+              <span className={contentStyles.textSymbol}>●</span>
+              {"  "}
+              Даёт энергию и ментальную чёткость.
+            </p>
+            <p className={contentStyles.textDescription}>
+              <span className={contentStyles.textSymbol}>●</span>
+              {"  "}
+              Может активизировать креативное мышление и ощущение потока.
+            </p>
+            <p className={contentStyles.textDescription}>
+              <span className={contentStyles.textSymbol}>●</span>
+              {"  "}
+              Подходит для чувствительных людей осторожно, только при сопровождении и внимательном самонаблюдении.
+            </p>
+          </VisibilityManager>
+
+          <VisibilityManager as="h4" className={contentStyles.title_small}>
+            Королевский Мухомор (Amanita regalis)
+          </VisibilityManager>
+
+          <VisibilityManager as="div">
+            <p className={contentStyles.textDescription}>
+              <span className={contentStyles.textSymbol}>●</span>
+              {"  "}
+              Восстанавливает баланс между телом и разумом.
+            </p>
+            <p className={contentStyles.textDescription}>
+              <span className={contentStyles.textSymbol}>●</span>
+              {"  "}
+              Может давать ощущение цельности, мягкой эйфории и глубинного заземления.
+            </p>
+            <p className={contentStyles.textDescription}>
+              <span className={contentStyles.textSymbol}>●</span>
+              {"  "}
+              Подходит тем, кто ищет внутреннюю гармонию и тонкую, сбалансированную практику.
             </p>
           </VisibilityManager>
 
           <VisibilityManager as="p">
-            Важно: начинайте с микросмесей (0,1–0,2 г) и отслеживайте реакцию.
+            Иногда практики комбинируют виды, создавая индивидуальные микросмеси — но только после глубокого знакомства с реакциями организма на каждый гриб по отдельности.
           </VisibilityManager>
 
           <div style={{ height: '1px' }} />
           <VisibilityManager as="h3" className={contentStyles.title_middle}>
-            Практические рекомендации
+            Практическое взаимодействие: как подойти к опыту экологично
           </VisibilityManager>
 
           <VisibilityManager as="h4" className={contentStyles.title_small}>
-            1. Подготовка гриба
+            Подготовка
+          </VisibilityManager>
+
+          <VisibilityManager as="p">
+            Соблюдение температурного режима при сушке (50–60°C) помогает преобразовать иботеновую кислоту в более мягкий мусцимол. После этого гриб измельчается — для более точного дозирования и наблюдения за телесными откликами.
+          </VisibilityManager>
+
+          <VisibilityManager as="h4" className={contentStyles.title_small}>
+            Форматы
+          </VisibilityManager>
+
+          <VisibilityManager as="p">
+            Некоторые люди применяют практику через день, другие — пять дней в неделю, оставляя выходные на интеграцию. Оптимально подбирать ритм под себя и фиксировать ощущения в дневнике.
+          </VisibilityManager>
+
+          <VisibilityManager as="h4" className={contentStyles.title_small}>
+            Сопровождающие практики
           </VisibilityManager>
 
           <VisibilityManager as="div">
             <p className={contentStyles.textDescription}>
               <span className={contentStyles.textSymbol}>●</span>
               {"  "}
-              Сушка при 50–60°C (снижает токсичность иботеновой кислоты).
+              Осознанное дыхание, медитация или мягкое движение усиливают телесную осознанность.
             </p>
             <p className={contentStyles.textDescription}>
               <span className={contentStyles.textSymbol}>●</span>
               {"  "}
-              Измельчите в порошок для точной дозировки.
+              Утренние практики — как правило, наиболее глубоко связывают с телом и настроем на день.
+            </p>
+            <p className={contentStyles.textDescription}>
+              <span className={contentStyles.textSymbol}>●</span>
+              {"  "}
+              Практики творчества (рисование, письмо, музыка) позволяют вывести наружу тонкие состояния.
             </p>
           </VisibilityManager>
 
           <VisibilityManager as="h4" className={contentStyles.title_small}>
-            2. Схемы приёма
+            Внимание к телу — ключ
+          </VisibilityManager>
+
+          <VisibilityManager as="p">
+            Важно быть внимательным: если организм даёт сигналы в виде дискомфорта, лучше сделать паузу и понаблюдать. Каждое тело уникально. Здесь нет универсальных рецептов — только живой контакт с собой.
+          </VisibilityManager>
+
+          <div style={{ height: '1px' }} />
+          <VisibilityManager as="h3" className={contentStyles.title_middle}>
+            Кому может быть интересна эта практика
           </VisibilityManager>
 
           <VisibilityManager as="div">
             <p className={contentStyles.textDescription}>
               <span className={contentStyles.textSymbol}>●</span>
               {"  "}
-              3 дня приёма / 2 дня перерыва — для новичков.
+              Людям с повышенным уровнем тревоги — особенно в сочетании с городской загруженностью и внутренним напряжением.
             </p>
             <p className={contentStyles.textDescription}>
               <span className={contentStyles.textSymbol}>●</span>
               {"  "}
-              5 дней приёма / 2 дня перерыва — для продвинутых.
-            </p>
-          </VisibilityManager>
-
-          <VisibilityManager as="h4" className={contentStyles.title_small}>
-            3. Сочетание с другими практиками
-          </VisibilityManager>
-
-          <VisibilityManager as="div">
-            <p className={contentStyles.textDescription}>
-              <span className={contentStyles.textSymbol}>●</span>
-              {"  "}
-              Медитация: утренний приём + 15 минут осознанного дыхания.
+              Творческим профессионалам — микродозинг Мухомора способен активизировать нестандартное мышление и углубить потоковое состояние.
             </p>
             <p className={contentStyles.textDescription}>
               <span className={contentStyles.textSymbol}>●</span>
               {"  "}
-              Йога: Красный Мухомор усиливает связь с телом.
-            </p>
-            <p className={contentStyles.textDescription}>
-              <span className={contentStyles.textSymbol}>●</span>
-              {"  "}
-              Творчество: Пантерный Мухомор + рисование/письмо.
-            </p>
-          </VisibilityManager>
-
-          <VisibilityManager as="h4" className={contentStyles.title_small}>
-            Совместимость
-          </VisibilityManager>
-
-          <VisibilityManager as="div">
-            <p className={contentStyles.textDescription}>
-              <span className={contentStyles.textSymbol}>●</span>
-              {"  "}
-              Кофе: только с Красным Мухомором (не более 1 чашки).
-            </p>
-            <p className={contentStyles.textDescription}>
-              <span className={contentStyles.textSymbol}>●</span>
-              {"  "}
-              Алкоголь: категорически нет!
+              Искателям баланса — если вы на пути самонаблюдения и работы с энергиями, Мухомор может стать тонким союзником.
             </p>
           </VisibilityManager>
 
           <div style={{ height: '1px' }} />
           <VisibilityManager as="h3" className={contentStyles.title_middle}>
-            Кому подходит микродозинг?
-          </VisibilityManager>
-
-          <VisibilityManager as="div">
-            <p className={contentStyles.textDescription}>
-              <span className={contentStyles.textSymbol}>●</span>
-              {"  "}
-              Тревожным людям: Красный Мухомор снижает стресс.
-            </p>
-            <p className={contentStyles.textDescription}>
-              <span className={contentStyles.textSymbol}>●</span>
-              {"  "}
-              Креативным профессионалам: Пантерный Мухомор раскрывает потенциал.
-            </p>
-            <p className={contentStyles.textDescription}>
-              <span className={contentStyles.textSymbol}>●</span>
-              {"  "}
-              Искателям гармонии: Королевский Мухомор балансирует энергии.
-            </p>
-          </VisibilityManager>
-
-          <VisibilityManager as="h4" className={contentStyles.title_small}>
-            Противопоказания
-          </VisibilityManager>
-
-          <VisibilityManager as="div">
-            <p className={contentStyles.textDescription}>
-              <span className={contentStyles.textSymbol}>●</span>
-              {"  "}
-              Беременность, психические расстройства (шизофрения, БАР).
-            </p>
-            <p className={contentStyles.textDescription}>
-              <span className={contentStyles.textSymbol}>●</span>
-              {"  "}
-              Приём антидепрессантов (риск серотонинового синдрома).
-            </p>
-          </VisibilityManager>
-
-          <div style={{ height: '1px' }} />
-          <VisibilityManager as="h3" className={contentStyles.title_middle}>
-            Советы от опытных проводников
-          </VisibilityManager>
-
-          <VisibilityManager as="div">
-            <p className={contentStyles.textDescription}>
-              <span className={contentStyles.textSymbol}>●</span>
-              {"  "}
-              Первый раз: начните с 0,05 г Королевского Мухомора.
-            </p>
-            <p className={contentStyles.textDescription}>
-              <span className={contentStyles.textSymbol}>●</span>
-              {"  "}
-              Ведите дневник: фиксируйте дозы, эффекты и эмоции.
-            </p>
-            <p className={contentStyles.textDescription}>
-              <span className={contentStyles.textSymbol}>●</span>
-              {"  "}
-              Ищите проводника: опытный наставник поможет избежать ошибок.
-            </p>
-          </VisibilityManager>
-
-          <div style={{ height: '1px' }} />
-          <VisibilityManager as="h3" className={contentStyles.title_middle}>
-            Отзывы: как микродозинг изменил жизни
+            Голос опыта
           </VisibilityManager>
 
           <VisibilityManager as="p">
             <strong>Анна, 29 лет, дизайнер:</strong><br />
-            «Красный Мухомор (0,3 г через день) помог мне справиться с выгоранием. Теперь я спокойно работаю над проектами и даже начала рисовать».
+            «Мухомор помог мне по-новому выстроить границы — как в себе, так и в работе. Я начала слышать, чего действительно хочу, и научилась отдыхать».
           </VisibilityManager>
 
           <VisibilityManager as="p">
-            <strong>Иван, 37 лет, IT-специалист:</strong><br />
-            «Пантерный Мухомор (0,2 г 5/2) подарил мне фокус. За месяц я закончил проект, который тянул полгода».
+            <strong>Иван, 37 лет, разработчик:</strong><br />
+            «Раньше я постоянно выгорал. Пантерный гриб будто бы включил внутренний генератор. Словно мозг начал думать по-другому — и легче».
           </VisibilityManager>
 
           <VisibilityManager as="p">
-            <strong>Ольга, 45 лет, учитель йоги:</strong><br />
-            «Королевский Мухомор (0,5 г 3/2) углубил мои медитации. Теперь я чувствую энергию учеников как никогда».
+            <strong>Ольга, 45 лет, преподавательница йоги:</strong><br />
+            «С Королевским Мухомором медитации стали глубже. Тело стало отзывчивым, внимание — спокойным. Это не психоделика, это — тонкая настройка».
           </VisibilityManager>
 
           <div style={{ height: '1px' }} />
           <VisibilityManager as="h3" className={contentStyles.title_middle}>
-            Почему важно консультироваться с проводником?
+            Почему важно идти в сопровождении
           </VisibilityManager>
 
           <VisibilityManager as="p">
-            Мухомор — мощный инструмент, но он требует уважения. Опытный проводник:
+            Мухомор — не игрушка. Он требует внимания, уважения и честности.
           </VisibilityManager>
 
-          <VisibilityManager as="div">
-            <p className={contentStyles.textDescription}>
-              <span className={contentStyles.textSymbol}>●</span>
-              {"  "}
-              Поможет подобрать вид и дозу.
-            </p>
-            <p className={contentStyles.textDescription}>
-              <span className={contentStyles.textSymbol}>●</span>
-              {"  "}
-              Научит распознавать сигналы тела.
-            </p>
-            <p className={contentStyles.textDescription}>
-              <span className={contentStyles.textSymbol}>●</span>
-              {"  "}
-              Предостережёт от ошибок (например, смешивания видов без подготовки).
-            </p>
+          <VisibilityManager as="p">
+            Опытный проводник — это не человек, который «даёт гриб», а тот, кто помогает вам услышать тело, заметить отклики и не заблудиться в ощущениях.
           </VisibilityManager>
+
+          <VisibilityManager as="p">
+            Проводник — это зеркало, а не навигатор. Всё важное всё равно произойдёт внутри вас.
+          </VisibilityManager>
+
+          <div style={{ height: '1px' }} />
+          <VisibilityManager as="h3" className={contentStyles.title_middle}>
+            Хочется глубже разобраться?
+          </VisibilityManager>
+
+          <VisibilityManager as="p">
+            Если вы на перепутье — и чувствуете, что готовы к исследованию тонких состояний через взаимодействие с Растениями,
+            вы можете получить индивидуальную консультацию по вопросам самонаблюдения, интеграции и подготовки.
+          </VisibilityManager>
+
+          <p
+            style={{
+              fontSize: "12px",
+              fontStyle: "italic",
+            }}
+          >
+            Важно: Этот материал носит исключительно ознакомительный и этнографический характер.
+            Он не является медицинской рекомендацией и не побуждает к употреблению веществ.
+            Все описанные состояния — субъективный опыт отдельных людей и не претендуют на универсальность.
+            Принимая решения о взаимодействии с природными веществами, важно действовать осознанно, с уважением к себе, телу и законам своего региона.
+          </p>
         </div>
       </LineAnimation>
       <div id="message" />
