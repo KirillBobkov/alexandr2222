@@ -10,6 +10,40 @@ import contentStyles from "../../styles/contentStyles.module.css";
 import secondary_preview_6 from "../../images/secondary_preview_6.webp";
 import { Button } from "../../components/shared/Button/Button";
 
+const schemaOrg = `
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Программа по избавлению от курения",
+  "description": "Быстрое и эффективное избавление от никотиновой зависимости с помощью нейротраблшуттинга - метода работы с подсознанием, устраняющего глубинные причины курения",
+  "url": "https://alexandrvasilev.ru/programs/drop-smoking",
+  "provider": {
+    "@type": "Person",
+    "name": "Александр Васильев",
+    "description": "Нейротраблшуттер, специалист по работе с подсознанием и зависимостями",
+    "url": "https://alexandrvasilev.ru/#about"
+  },
+  "areaServed": "Казань и онлайн",
+  "serviceType": "Нейротраблшуттинг зависимостей",
+  "offers": {
+    "@type": "Offer",
+    "price": "По запросу",
+    "priceCurrency": "RUB",
+    "availability": "https://schema.org/InStock",
+    "url": "https://alexandrvasilev.ru/programs/drop-smoking#message"
+  },
+  "serviceOutput": {
+    "@type": "Thing",
+    "name": "Результаты программы",
+    "description": "Снижение или полное отсутствие тяги к сигаретам, легкое и естественное отвыкание от курения, улучшение здоровья, повышение качества жизни"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://alexandrvasilev.ru/programs/drop-smoking"
+  }
+}
+`;
+
 export default function () {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -18,14 +52,14 @@ export default function () {
   const metaConfig = {
     title: 'Бросить курить - Александр "Интеграл" Васильев',
     pageTitle: "Бросить курить",
-    description: "Бросить курить",
-    keywords: "очищение интеграл ретрит грибы дурман",
+    description: "Эффективное избавление от никотиновой зависимости методом нейротраблшуттинга",
+    keywords: "бросить курить, никотиновая зависимость, нейротраблшуттинг, избавление от курения",
     content: "",
     href: "/programs/drop-smoking",
   };
 
   return (
-    <Layout metaConfig={metaConfig}>
+    <Layout metaConfig={metaConfig} schemaOrg={schemaOrg}>
       <SecondaryPreview text={metaConfig.pageTitle} image={secondary_preview_6} />
       <LineAnimation>
         <div className={containerStyles.container}>

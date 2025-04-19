@@ -10,6 +10,62 @@ import contentStyles from "../../styles/contentStyles.module.css";
 import secondary_preview_23 from "../../images/secondary_preview_23.webp";
 import { Button } from "../../components/shared/Button/Button";
 
+const schemaOrg = `
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Как работает Пантерный Мухомор? Глубинные механизмы влияния на психику и тело",
+  "description": "Научный и духовный взгляд на действие активных веществ и их влияние на подсознание",
+  "image": "/_next/static/media/secondary_preview_23.webp",
+  "url": "https://alexandrvasilev.ru/blog/panther-mushroom-mechanisms",
+  "inLanguage": "ru",
+  "datePublished": "2025-04-03",
+  "publisher": {
+    "@type": "Organization",
+    "name": "INTEGRAAL",
+    "url": "https://alexandrvasilev.ru",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "/_next/static/media/logo.ab1a421b.webp",
+      "width": 378,
+      "height": 400
+    }
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Александр Васильев",
+    "url": "https://alexandrvasilev.ru/#about",
+    "description": "Нейротраблшуттер, специалист по работе с подсознанием и проводник по практикам с мухомором",
+    "jobTitle": "Нейротраблшуттер, специалист по работе с подсознанием"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://alexandrvasilev.ru/blog/panther-mushroom-mechanisms"
+  },
+  "keywords": "пантерный мухомор, психика, тело, трансформация, подсознание, проводник, терапия",
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "Пантерный Мухомор",
+      "description": "Уникальные механизмы воздействия Пантерного Мухомора на психику и тело человека"
+    },
+    {
+      "@type": "Thing",
+      "name": "Психотерапия",
+      "description": "Использование природных веществ для глубинной трансформации и работы с подсознанием"
+    }
+  ],
+  "offers": {
+    "@type": "Offer",
+    "price": "Бесплатная первая консультация",
+    "priceCurrency": "RUB",
+    "availability": "https://schema.org/InStock",
+    "url": "https://alexandrvasilev.ru/blog/panther-mushroom-mechanisms#message",
+    "description": "Запишитесь на консультацию, чтобы узнать больше о безопасной работе с Пантерным Мухомором."
+  }
+}
+`;
+
 export default function () {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -24,7 +80,7 @@ export default function () {
   };
 
   return (
-    <Layout metaConfig={metaConfig}>
+    <Layout metaConfig={metaConfig} schemaOrg={schemaOrg}>
       <SecondaryPreview 
         text="Как работает Пантерный Мухомор?" 
         image={secondary_preview_23} 

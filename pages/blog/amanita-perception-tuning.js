@@ -10,6 +10,62 @@ import contentStyles from "../../styles/contentStyles.module.css";
 import secondary_preview_21 from "../../images/secondary_preview_21.webp";
 import { Button } from "../../components/shared/Button/Button";
 
+const schemaOrg = `
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Мухомор и тонкая настройка восприятия: Как гриб открывает скрытые измерения реальности",
+  "description": "Глубокий анализ влияния мухомора на механизмы восприятия и его роль в расширении сознания и улучшении качества жизни",
+  "image": "/_next/static/media/secondary_preview_21.webp",
+  "url": "https://alexandrvasilev.ru/blog/amanita-perception-tuning",
+  "inLanguage": "ru",
+  "datePublished": "2025-03-25",
+  "publisher": {
+    "@type": "Organization",
+    "name": "INTEGRAAL",
+    "url": "https://alexandrvasilev.ru",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "/_next/static/media/logo.ab1a421b.webp",
+      "width": 378,
+      "height": 400
+    }
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Александр Васильев",
+    "url": "https://alexandrvasilev.ru/#about",
+    "description": "Нейротраблшуттер, специалист по работе с подсознанием и расширению восприятия",
+    "jobTitle": "Нейротраблшуттер, специалист по работе с подсознанием"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://alexandrvasilev.ru/blog/amanita-perception-tuning"
+  },
+  "keywords": "мухомор, восприятие, сознание, психология, трансформация, осознанность, микродозинг",
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "Механизмы восприятия",
+      "description": "Как мухомор влияет на паттерны восприятия и помогает увидеть мир по-новому"
+    },
+    {
+      "@type": "Thing",
+      "name": "Расширение сознания",
+      "description": "Практические аспекты работы с восприятием для улучшения качества жизни"
+    }
+  ],
+  "offers": {
+    "@type": "Offer",
+    "price": "Бесплатная первая консультация",
+    "priceCurrency": "RUB",
+    "availability": "https://schema.org/InStock",
+    "url": "https://alexandrvasilev.ru/blog/amanita-perception-tuning#message",
+    "description": "Запишитесь на консультацию, чтобы узнать больше о тонкой настройке восприятия с помощью мухомора."
+  }
+}
+`;
+
 export default function () {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -24,7 +80,7 @@ export default function () {
   };
 
   return (
-    <Layout metaConfig={metaConfig}>
+    <Layout metaConfig={metaConfig} schemaOrg={schemaOrg}>
       <SecondaryPreview 
         text="Мухомор и тонкая настройка восприятия" 
         image={secondary_preview_21} 

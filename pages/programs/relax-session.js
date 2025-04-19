@@ -8,22 +8,58 @@ import { VisibilityManager } from "../../components/shared/VisibilityManager";
 import containerStyles from "../../styles/container.module.css";
 import contentStyles from "../../styles/contentStyles.module.css";
 import secondary_preview_3 from "../../images/secondary_preview_3.webp";
+import { Button } from "../../components/shared/Button/Button";
+
+const schemaOrg = `
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Сеанс релаксации",
+  "description": "Глубокая релаксация и восстановление энергии с применением нейротраблшуттинга, вегетализма и других методик для снятия стресса и напряжения",
+  "url": "https://alexandrvasilev.ru/programs/relax-session",
+  "provider": {
+    "@type": "Person",
+    "name": "Александр Васильев",
+    "description": "Нейротраблшуттер, специалист по работе с подсознанием и техникам релаксации",
+    "url": "https://alexandrvasilev.ru/#about"
+  },
+  "areaServed": "Казань и онлайн",
+  "serviceType": "Нейротраблшуттинг стрессовых состояний",
+  "offers": {
+    "@type": "Offer",
+    "price": "По запросу",
+    "priceCurrency": "RUB",
+    "availability": "https://schema.org/InStock",
+    "url": "https://alexandrvasilev.ru/programs/relax-session#message"
+  },
+  "serviceOutput": {
+    "@type": "Thing",
+    "name": "Результаты сеанса",
+    "description": "Глубокая релаксация, снятие напряжения, восстановление энергии, улучшение сна, снижение тревожности, внутреннее спокойствие"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://alexandrvasilev.ru/programs/relax-session"
+  }
+}
+`;
+
 export default function () {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   useScrollToLocation();
 
   const metaConfig = {
-    title: 'Сессия релаксации - Александр "Интеграл" Васильев',
-    pageTitle: "Сессия релаксации",
-    description: "Сессия релаксации",
-    keywords: "очищение интеграл ретрит грибы дурман",
+    title: 'Сеанс релаксации - Александр "Интеграл" Васильев',
+    pageTitle: "Сеанс релаксации",
+    description: "Глубокая релаксация и восстановление энергии с применением нейротраблшуттинга и вегетализма",
+    keywords: "релаксация, снятие стресса, нейротраблшуттинг, вегетализм, восстановление энергии",
     content: "",
-    href: "/drop-smoking",
+    href: "/programs/relax-session",
   };
 
   return (
-    <Layout metaConfig={metaConfig}>
+    <Layout metaConfig={metaConfig} schemaOrg={schemaOrg}>
       <SecondaryPreview
         text={metaConfig.pageTitle}
         image={secondary_preview_3}

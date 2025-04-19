@@ -10,6 +10,62 @@ import contentStyles from "../../styles/contentStyles.module.css";
 import secondary_preview_20 from "../../images/secondary_preview_20.webp";
 import { Button } from "../../components/shared/Button/Button";
 
+const schemaOrg = `
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Как перестать быть «вечным спасателем»: нейротраблшуттинг в борьбе с созависимостью",
+  "description": "Созависимость — это не забота, а подсознательная ловушка, которая заставляет вас жертвовать собой ради других. Узнайте, как освободиться от роли «вечного спасателя».",
+  "image": "/_next/static/media/secondary_preview_20.webp",
+  "url": "https://alexandrvasilev.ru/blog/codependency",
+  "inLanguage": "ru",
+  "datePublished": "2025-03-21",
+  "publisher": {
+    "@type": "Organization",
+    "name": "INTEGRAAL",
+    "url": "https://alexandrvasilev.ru",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "/_next/static/media/logo.ab1a421b.webp",
+      "width": 378,
+      "height": 400
+    }
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Александр Васильев",
+    "url": "https://alexandrvasilev.ru/#about",
+    "description": "Нейротраблшуттер, специалист по работе с подсознанием и психологическими травмами",
+    "jobTitle": "Нейротраблшуттер, специалист по работе с подсознанием"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://alexandrvasilev.ru/blog/codependency"
+  },
+  "keywords": "созависимость, нейротраблшуттинг, психология, отношения, спасатель, травмы",
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "Созависимость",
+      "description": "Психологический паттерн поведения, при котором человек жертвует собственными интересами ради других и строит самооценку на помощи окружающим"
+    },
+    {
+      "@type": "Thing",
+      "name": "Нейротраблшуттинг в психологии",
+      "description": "Метод работы с подсознательными травмами, формирующими созависимое поведение и роль «спасателя»"
+    }
+  ],
+  "offers": {
+    "@type": "Offer",
+    "price": "Бесплатная первая консультация",
+    "priceCurrency": "RUB",
+    "availability": "https://schema.org/InStock",
+    "url": "https://alexandrvasilev.ru/blog/codependency#message",
+    "description": "Запишитесь на консультацию, чтобы узнать, как освободиться от созависимых отношений и вернуть право на собственную жизнь."
+  }
+}
+`;
+
 export default function () {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -22,7 +78,7 @@ export default function () {
   };
 
   return (
-    <Layout metaConfig={metaConfig}>
+    <Layout metaConfig={metaConfig} schemaOrg={schemaOrg}>
       <SecondaryPreview 
         text="Как перестать быть «вечным спасателем»" 
         image={secondary_preview_20} 

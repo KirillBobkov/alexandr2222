@@ -10,6 +10,40 @@ import contentStyles from "../../styles/contentStyles.module.css";
 import secondary_preview_4 from "../../images/secondary_preview_4.webp";
 import { Button } from "../../components/shared/Button/Button";
 
+const schemaOrg = `
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Программа по финансовому росту",
+  "description": "Устранение подсознательных блоков и установок, мешающих финансовому росту и успеху, с помощью нейротраблшуттинга",
+  "url": "https://alexandrvasilev.ru/programs/grow-money",
+  "provider": {
+    "@type": "Person",
+    "name": "Александр Васильев",
+    "description": "Нейротраблшуттер, специалист по работе с подсознанием и финансовыми блоками",
+    "url": "https://alexandrvasilev.ru/#about"
+  },
+  "areaServed": "Казань и онлайн",
+  "serviceType": "Нейротраблшуттинг финансовых блоков",
+  "offers": {
+    "@type": "Offer",
+    "price": "По запросу",
+    "priceCurrency": "RUB",
+    "availability": "https://schema.org/InStock",
+    "url": "https://alexandrvasilev.ru/programs/grow-money#message"
+  },
+  "serviceOutput": {
+    "@type": "Thing",
+    "name": "Результаты программы",
+    "description": "Устранение финансовых блоков, повышение дохода, появление новых возможностей заработка, улучшение отношений с деньгами, финансовая свобода"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://alexandrvasilev.ru/programs/grow-money"
+  }
+}
+`;
+
 export default function () {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -25,7 +59,7 @@ export default function () {
   };
 
   return (
-    <Layout metaConfig={metaConfig}>
+    <Layout metaConfig={metaConfig} schemaOrg={schemaOrg}>
       <SecondaryPreview
         text={metaConfig.pageTitle}
         image={secondary_preview_4}

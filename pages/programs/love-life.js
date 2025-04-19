@@ -8,6 +8,42 @@ import { VisibilityManager } from "../../components/shared/VisibilityManager";
 import containerStyles from "../../styles/container.module.css";
 import contentStyles from "../../styles/contentStyles.module.css";
 import secondary_preview_1 from "../../images/secondary_preview_1.webp";
+import secondary_preview_20 from "../../images/secondary_preview_20.webp";
+import { Button } from "../../components/shared/Button/Button";
+
+const schemaOrg = `
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Программа «Полюби жизнь»",
+  "description": "Преодоление апатии, уныния, депрессивных состояний и обретение радости жизни с помощью нейротраблшуттинга - метода работы с подсознанием",
+  "url": "https://alexandrvasilev.ru/programs/love-life",
+  "provider": {
+    "@type": "Person",
+    "name": "Александр Васильев",
+    "description": "Нейротраблшуттер, специалист по работе с подсознанием и эмоциональными состояниями",
+    "url": "https://alexandrvasilev.ru/#about"
+  },
+  "areaServed": "Казань и онлайн",
+  "serviceType": "Нейротраблшуттинг эмоциональных состояний",
+  "offers": {
+    "@type": "Offer",
+    "price": "По запросу",
+    "priceCurrency": "RUB",
+    "availability": "https://schema.org/InStock",
+    "url": "https://alexandrvasilev.ru/programs/love-life#message"
+  },
+  "serviceOutput": {
+    "@type": "Thing",
+    "name": "Результаты программы",
+    "description": "Избавление от апатии и депрессивных состояний, обретение смысла и радости жизни, повышение энергии и мотивации, внутренняя гармония"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://alexandrvasilev.ru/programs/love-life"
+  }
+}
+`;
 
 export default function () {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -15,16 +51,16 @@ export default function () {
   useScrollToLocation();
 
   const metaConfig = {
-    title: 'Полюбить жизнь - Александр "Интеграл" Васильев',
-    pageTitle: "Полюбить жизнь",
-    description: "Полюбить жизнь",
-    keywords: "очищение интеграл ретрит грибы дурман",
+    title: 'Программа «Полюби жизнь» - Александр "Интеграл" Васильев',
+    pageTitle: "Программа «Полюби жизнь»",
+    description: "Преодоление апатии, уныния, депрессивных состояний с помощью нейротраблшуттинга",
+    keywords: "апатия, депрессия, полюбить жизнь, нейротраблшуттинг, радость жизни, эмоциональные состояния",
     content: "",
-    href: "/love-life",
+    href: "/programs/love-life",
   };
 
   return (
-    <Layout metaConfig={metaConfig}>
+    <Layout metaConfig={metaConfig} schemaOrg={schemaOrg}>
       <SecondaryPreview
         text={metaConfig.pageTitle}
         image={secondary_preview_1}

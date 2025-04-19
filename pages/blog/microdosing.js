@@ -9,6 +9,63 @@ import containerStyles from "../../styles/container.module.css";
 import contentStyles from "../../styles/contentStyles.module.css";
 import secondary_preview_17 from "../../images/secondary_preview_17.webp";
 import { Button } from "../../components/shared/Button/Button";
+
+const schemaOrg = `
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Микродозинг Мухомора: как это работает, кому подходит и как подойти к практике осознанно",
+  "description": "Научный подход к микродозингу мухомора, виды грибов, практические рекомендации и советы экспертов",
+  "image": "/_next/static/media/secondary_preview_17.webp",
+  "url": "https://alexandrvasilev.ru/blog/microdosing",
+  "inLanguage": "ru",
+  "datePublished": "2025-03-16",
+  "publisher": {
+    "@type": "Organization",
+    "name": "INTEGRAAL",
+    "url": "https://alexandrvasilev.ru",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "/_next/static/media/logo.ab1a421b.webp",
+      "width": 378,
+      "height": 400
+    }
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Александр Васильев",
+    "url": "https://alexandrvasilev.ru/#about",
+    "description": "Нейротраблшуттер, специалист по работе с подсознанием и грибной терапии",
+    "jobTitle": "Нейротраблшуттер, специалист по работе с подсознанием"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://alexandrvasilev.ru/blog/microdosing"
+  },
+  "keywords": "микродозинг, мухомор, психоделики, ментальное здоровье, духовные практики",
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "Микродозинг",
+      "description": "Использование малых количеств растительных или грибных веществ для улучшения психологического и физического состояния"
+    },
+    {
+      "@type": "Thing",
+      "name": "Виды мухоморов",
+      "description": "Красный Мухомор (Amanita muscaria), Пантерный Мухомор (Amanita pantherina), Королевский Мухомор (Amanita regalis)"
+    }
+  ],
+  "offers": {
+    "@type": "Offer",
+    "price": "Бесплатная первая консультация",
+    "priceCurrency": "RUB",
+    "availability": "https://schema.org/InStock",
+    "url": "https://alexandrvasilev.ru/blog/microdosing#message",
+    "description": "Запишитесь на консультацию, чтобы узнать больше о практике микродозинга."
+  }
+}
+`;
+
 export default function () {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -21,7 +78,7 @@ export default function () {
   };
 
   return (
-    <Layout metaConfig={metaConfig}>
+    <Layout metaConfig={metaConfig} schemaOrg={schemaOrg}>
       <SecondaryPreview text="Микродозинг" image={secondary_preview_17} />
       <LineAnimation>
         <div className={containerStyles.container}>

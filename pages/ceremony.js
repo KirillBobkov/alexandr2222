@@ -155,6 +155,64 @@ export const questionsContent = {
   ],
 };
 
+const schemaOrg = `
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Мухоморные ретриты в Казани",
+  "description": "Уникальная практика погружения в глубины подсознания через мухоморный ретрит под руководством опытного проводника Александра Васильева",
+  "url": "https://alexandrvasilev.ru/ceremony",
+  "provider": {
+    "@type": "Person",
+    "name": "Александр Васильев",
+    "url": "https://alexandrvasilev.ru/#about",
+    "description": "Нейротраблшуттер, специалист по работе с подсознанием и проводник мухоморных ретритов",
+    "jobTitle": "Нейротраблшуттер, проводник практик с растениями-учителями"
+  },
+  "serviceType": "Трансформационный ретрит",
+  "areaServed": "Казань",
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "RUB",
+    "availability": "https://schema.org/InStock",
+    "url": "https://alexandrvasilev.ru/ceremony#message",
+    "description": "Запишитесь на мухоморный ретрит для глубокой трансформации, освобождения от внутренних блоков и улучшения качества жизни"
+  },
+  "serviceOutput": {
+    "@type": "Thing",
+    "name": "Результаты мухоморного ретрита",
+    "description": "Гармонизация эмоций, физическое восстановление, личностный рост, осознание предназначения, глубинная связь с природой"
+  },
+  "potentialAction": {
+    "@type": "ReserveAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://alexandrvasilev.ru/ceremony#message"
+    },
+    "result": {
+      "@type": "Reservation",
+      "name": "Запись на мухоморный ретрит"
+    }
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "author": {"@type": "Person", "name": "Участники ретрита"},
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "reviewBody": "После погружения, человек испытывает «самые приятные ощущения в жизни»"
+    }
+  ],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://alexandrvasilev.ru/ceremony"
+  }
+}
+`;
+
 export default function () {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -170,7 +228,7 @@ export default function () {
   };
 
   return (
-    <Layout metaConfig={metaConfig}>
+    <Layout metaConfig={metaConfig} schemaOrg={schemaOrg}>
       <SecondaryPreview
         text="Мухоморный ретрит в Казани"
         image={secondary_preview_10}

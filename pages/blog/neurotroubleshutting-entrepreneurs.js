@@ -10,6 +10,62 @@ import contentStyles from "../../styles/contentStyles.module.css";
 import secondary_preview_26 from "../../images/secondary_preview_26.webp";
 import { Button } from "../../components/shared/Button/Button";
 
+const schemaOrg = `
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Нейротраблшуттинг для предпринимателей: преодоление внутренних блоков роста",
+  "description": "Как нейротраблшуттинг помогает предпринимателям устранить подсознательные блоки, мешающие масштабированию бизнеса и личностному росту",
+  "image": "/_next/static/media/secondary_preview_26.webp",
+  "url": "https://alexandrvasilev.ru/blog/neurotroubleshutting-entrepreneurs",
+  "inLanguage": "ru",
+  "datePublished": "2025-04-15",
+  "publisher": {
+    "@type": "Organization",
+    "name": "INTEGRAAL",
+    "url": "https://alexandrvasilev.ru",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "/_next/static/media/logo.ab1a421b.webp",
+      "width": 378,
+      "height": 400
+    }
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Александр Васильев",
+    "url": "https://alexandrvasilev.ru/#about",
+    "description": "Нейротраблшуттер, специалист по работе с подсознанием и развитию бизнеса",
+    "jobTitle": "Нейротраблшуттер, специалист по работе с подсознанием"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://alexandrvasilev.ru/blog/neurotroubleshutting-entrepreneurs"
+  },
+  "keywords": "нейротраблшуттинг, предприниматели, бизнес, подсознание, внутренние блоки, рост, масштабирование, саботаж",
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "Нейротраблшуттинг",
+      "description": "Метод точечной перезагрузки мышления через работу с подсознанием и устранение внутренних блоков"
+    },
+    {
+      "@type": "Thing",
+      "name": "Бизнес-психология",
+      "description": "Работа с психологическими барьерами, которые мешают предпринимателям масштабировать бизнес"
+    }
+  ],
+  "offers": {
+    "@type": "Offer",
+    "price": "Бесплатная первая консультация",
+    "priceCurrency": "RUB",
+    "availability": "https://schema.org/InStock",
+    "url": "https://alexandrvasilev.ru/blog/neurotroubleshutting-entrepreneurs#message",
+    "description": "Запишитесь на консультацию, чтобы узнать, как нейротраблшуттинг может помочь преодолеть внутренние блоки и ускорить рост вашего бизнеса."
+  }
+}
+`;
+
 export default function () {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -24,7 +80,7 @@ export default function () {
   };
 
   return (
-    <Layout metaConfig={metaConfig}>
+    <Layout metaConfig={metaConfig} schemaOrg={schemaOrg}>
       <SecondaryPreview 
         text="Нейротраблшуттинг для предпринимателей" 
         image={secondary_preview_26} 

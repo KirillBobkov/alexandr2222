@@ -7,8 +7,64 @@ import { LineAnimation } from "../../components/LineAnomation/LineAnimation";
 import { VisibilityManager } from "../../components/shared/VisibilityManager";
 import containerStyles from "../../styles/container.module.css";
 import contentStyles from "../../styles/contentStyles.module.css";
-import secondary_preview_24 from "../../images/secondary_preview_24.webp";
+import secondary_preview_25 from "../../images/secondary_preview_25.webp";
 import { Button } from "../../components/shared/Button/Button";
+
+const schemaOrg = `
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Бессонница и кошмары: что скрывается в глубинах подсознания?",
+  "description": "Как нейротраблшуттинг помогает решить проблемы со сном: избавиться от бессонницы и ночных кошмаров через работу с подсознательными конфликтами",
+  "image": "/_next/static/media/secondary_preview_25.webp",
+  "url": "https://alexandrvasilev.ru/blog/insomnia-nightmares-solutions",
+  "inLanguage": "ru",
+  "datePublished": "2025-04-10",
+  "publisher": {
+    "@type": "Organization",
+    "name": "INTEGRAAL",
+    "url": "https://alexandrvasilev.ru",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "/_next/static/media/logo.ab1a421b.webp",
+      "width": 378,
+      "height": 400
+    }
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Александр Васильев",
+    "url": "https://alexandrvasilev.ru/#about",
+    "description": "Нейротраблшуттер, специалист по работе с подсознанием и расстройствами сна",
+    "jobTitle": "Нейротраблшуттер, специалист по работе с подсознанием"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://alexandrvasilev.ru/blog/insomnia-nightmares-solutions"
+  },
+  "keywords": "бессонница, кошмары, нейротраблшуттинг, расстройства сна, подсознание, психология сна, ночные страхи",
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "Психология сна",
+      "description": "Связь проблем со сном с подсознательными конфликтами и неразрешенными внутренними противоречиями"
+    },
+    {
+      "@type": "Thing",
+      "name": "Нейротраблшуттинг для решения проблем со сном",
+      "description": "Метод работы с подсознанием для устранения первопричин бессонницы и ночных кошмаров"
+    }
+  ],
+  "offers": {
+    "@type": "Offer",
+    "price": "Бесплатная первая консультация",
+    "priceCurrency": "RUB",
+    "availability": "https://schema.org/InStock",
+    "url": "https://alexandrvasilev.ru/blog/insomnia-nightmares-solutions#message",
+    "description": "Запишитесь на консультацию, чтобы узнать, как нейротраблшуттинг может помочь вам нормализовать сон и избавиться от кошмаров."
+  }
+}
+`;
 
 export default function () {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -16,18 +72,19 @@ export default function () {
   useScrollToLocation();
 
   const metaConfig = {
-    title: "Как избавиться от бессонницы и ночных кошмаров? Глубинный разбор причин",
+    title: "Бессонница и кошмары: что скрывается в глубинах подсознания?",
     description:
-      "Связь сна с подсознательными программами и методы их устранения",
+      "Как нейротраблшуттинг помогает решить проблемы со сном: избавиться от бессонницы и ночных кошмаров через работу с подсознательными конфликтами",
     keywords:
-      "бессонница, кошмары, сон, психика, подсознание, нейротраблшуттинг, терапия",
+      "бессонница, кошмары, сон, нейротраблшуттинг, ночные страхи, осознанные сновидения, расстройства сна, психотерапия, психосоматика",
+    seoContent: "Бессонница, кошмары и другие проблемы со сном: как нейротраблшуттинг помогает решить их через работу с подсознанием",
   };
 
   return (
-    <Layout metaConfig={metaConfig}>
-      <SecondaryPreview 
-        text="Как избавиться от бессонницы и ночных кошмаров?" 
-        image={secondary_preview_24} 
+    <Layout metaConfig={metaConfig} schemaOrg={schemaOrg}>
+      <SecondaryPreview
+        text={"Бессонница и кошмары: что скрывается в глубинах подсознания?"}
+        image={secondary_preview_25}
       />
       <LineAnimation>
         <div className={containerStyles.container}>

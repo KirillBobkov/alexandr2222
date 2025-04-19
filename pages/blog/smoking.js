@@ -9,6 +9,63 @@ import containerStyles from "../../styles/container.module.css";
 import contentStyles from "../../styles/contentStyles.module.css";
 import secondary_preview_12 from "../../images/secondary_preview_12.webp";
 import { Button } from "../../components/shared/Button/Button";
+
+const schemaOrg = `
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Курение как подсознательный крик души: почему мы травим себя и как это остановить",
+  "description": "Глубокий анализ психологических причин курения и методов избавления от зависимости через работу с подсознательными травмами",
+  "image": "/_next/static/media/secondary_preview_12.webp",
+  "url": "https://alexandrvasilev.ru/blog/smoking",
+  "inLanguage": "ru",
+  "datePublished": "2025-03-05",
+  "publisher": {
+    "@type": "Organization",
+    "name": "INTEGRAAL",
+    "url": "https://alexandrvasilev.ru",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "/_next/static/media/logo.ab1a421b.webp",
+      "width": 378,
+      "height": 400
+    }
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Александр Васильев",
+    "url": "https://alexandrvasilev.ru/#about",
+    "description": "Нейротраблшуттер, специалист по работе с подсознанием и зависимостями",
+    "jobTitle": "Нейротраблшуттер, специалист по работе с подсознанием"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://alexandrvasilev.ru/blog/smoking"
+  },
+  "keywords": "курение, зависимость, психология, нейротраблшуттинг, травмы, подсознание",
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "Психология зависимости",
+      "description": "Глубинные психологические механизмы, стоящие за никотиновой зависимостью"
+    },
+    {
+      "@type": "Thing",
+      "name": "Нейротраблшуттинг при зависимостях",
+      "description": "Метод работы с подсознательными травмами для избавления от курения"
+    }
+  ],
+  "offers": {
+    "@type": "Offer",
+    "price": "Бесплатная первая консультация",
+    "priceCurrency": "RUB",
+    "availability": "https://schema.org/InStock",
+    "url": "https://alexandrvasilev.ru/blog/smoking#message",
+    "description": "Запишитесь на консультацию, чтобы узнать, как нейротраблшуттинг поможет вам избавиться от курения."
+  }
+}
+`;
+
 export default function () {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -23,7 +80,7 @@ export default function () {
   };
 
   return (
-    <Layout metaConfig={metaConfig}>
+    <Layout metaConfig={metaConfig} schemaOrg={schemaOrg}>
       <SecondaryPreview text="Курение как подсознательный крик души" image={secondary_preview_12} />
       <LineAnimation>
         <div className={containerStyles.container}>

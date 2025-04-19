@@ -9,22 +9,57 @@ import containerStyles from "../../styles/container.module.css";
 import contentStyles from "../../styles/contentStyles.module.css";
 import secondary_preview_5 from "../../images/secondary_preview_5.webp";
 import { Button } from "../../components/shared/Button/Button";
+
+const schemaOrg = `
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Удаление негативных воспоминаний",
+  "description": "Эффективная методика нейротраблшуттинга для нейтрализации травмирующих воспоминаний и их эмоционального заряда, восстановление психологического благополучия",
+  "url": "https://alexandrvasilev.ru/programs/remove-bad-memories",
+  "provider": {
+    "@type": "Person",
+    "name": "Александр Васильев",
+    "description": "Нейротраблшуттер, специалист по работе с подсознанием и травматическими воспоминаниями",
+    "url": "https://alexandrvasilev.ru/#about"
+  },
+  "areaServed": "Казань и онлайн",
+  "serviceType": "Нейротраблшуттинг травматических воспоминаний",
+  "offers": {
+    "@type": "Offer",
+    "price": "По запросу",
+    "priceCurrency": "RUB",
+    "availability": "https://schema.org/InStock",
+    "url": "https://alexandrvasilev.ru/programs/remove-bad-memories#message"
+  },
+  "serviceOutput": {
+    "@type": "Thing",
+    "name": "Результаты программы",
+    "description": "Нейтрализация эмоциональной реакции на травмирующие воспоминания, освобождение от навязчивых мыслей, восстановление психологического благополучия, внутренний покой"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://alexandrvasilev.ru/programs/remove-bad-memories"
+  }
+}
+`;
+
 export default function () {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   useScrollToLocation();
 
   const metaConfig = {
-    title: 'Отпустить негатив - Александр "Интеграл" Васильев',
-    pageTitle: "Отпустить негатив",
-    description: "Удалить плохие воспоминания",
-    keywords: "очищение интеграл ретрит грибы дурман",
+    title: 'Удаление негативных воспоминаний - Александр "Интеграл" Васильев',
+    pageTitle: "Удаление негативных воспоминаний",
+    description: "Нейтрализация травмирующих воспоминаний и их эмоционального заряда с помощью нейротраблшуттинга",
+    keywords: "травматические воспоминания, психологические травмы, нейротраблшуттинг, избавление от травм, эмоциональная свобода",
     content: "",
-    href: "/remove-bad-memories",
+    href: "/programs/remove-bad-memories",
   };
 
   return (
-    <Layout metaConfig={metaConfig}>
+    <Layout metaConfig={metaConfig} schemaOrg={schemaOrg}>
       <SecondaryPreview
         text={metaConfig.pageTitle}
         image={secondary_preview_5}

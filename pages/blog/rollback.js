@@ -9,6 +9,63 @@ import containerStyles from "../../styles/container.module.css";
 import contentStyles from "../../styles/contentStyles.module.css";
 import secondary_preview_13 from "../../images/secondary_preview_13.webp";
 import { Button } from "../../components/shared/Button/Button";
+
+const schemaOrg = `
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Что такое откаты и как с ними работать?",
+  "description": "Глубокий анализ явления откатов в процессе личностного роста, их причин и методов эффективной работы с ними",
+  "image": "/_next/static/media/secondary_preview_13.webp",
+  "url": "https://alexandrvasilev.ru/blog/rollback",
+  "inLanguage": "ru",
+  "datePublished": "2025-03-10",
+  "publisher": {
+    "@type": "Organization",
+    "name": "INTEGRAAL",
+    "url": "https://alexandrvasilev.ru",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "/_next/static/media/logo.ab1a421b.webp",
+      "width": 378,
+      "height": 400
+    }
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Александр Васильев",
+    "url": "https://alexandrvasilev.ru/#about",
+    "description": "Нейротраблшуттер, специалист по работе с подсознанием и личностному росту",
+    "jobTitle": "Нейротраблшуттер, специалист по работе с подсознанием"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://alexandrvasilev.ru/blog/rollback"
+  },
+  "keywords": "откаты, личностный рост, трансформация, психология, саморазвитие, нейротраблшуттинг",
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "Откаты в личностном росте",
+      "description": "Психологический феномен временного ухудшения состояния в процессе трансформации личности"
+    },
+    {
+      "@type": "Thing",
+      "name": "Работа с подсознанием",
+      "description": "Методы преодоления внутренних сопротивлений и интеграции новых состояний"
+    }
+  ],
+  "offers": {
+    "@type": "Offer",
+    "price": "Бесплатная первая консультация",
+    "priceCurrency": "RUB",
+    "availability": "https://schema.org/InStock",
+    "url": "https://alexandrvasilev.ru/blog/rollback#message",
+    "description": "Запишитесь на консультацию, чтобы узнать, как превратить откаты в ступеньки к вашему развитию."
+  }
+}
+`;
+
 export default function () {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -23,7 +80,7 @@ export default function () {
   };
 
   return (
-    <Layout metaConfig={metaConfig}>
+    <Layout metaConfig={metaConfig} schemaOrg={schemaOrg}>
       <SecondaryPreview text="Что такое откаты и как с ними работать?" image={secondary_preview_13} />
       <LineAnimation>
         <div className={containerStyles.container}>

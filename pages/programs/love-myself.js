@@ -7,8 +7,43 @@ import { LineAnimation } from "../../components/LineAnomation/LineAnimation";
 import { VisibilityManager } from "../../components/shared/VisibilityManager";
 import containerStyles from "../../styles/container.module.css";
 import contentStyles from "../../styles/contentStyles.module.css";
-
 import secondary_preview_2 from "../../images/secondary_preview_2.webp";
+import secondary_preview_19 from "../../images/secondary_preview_19.webp";
+import { Button } from "../../components/shared/Button/Button";
+
+const schemaOrg = `
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Программа «Полюби себя»",
+  "description": "Устранение подсознательных блоков, мешающих полюбить себя, повышение самооценки и уверенности в себе с помощью нейротраблшуттинга",
+  "url": "https://alexandrvasilev.ru/programs/love-myself",
+  "provider": {
+    "@type": "Person",
+    "name": "Александр Васильев",
+    "description": "Нейротраблшуттер, специалист по работе с подсознанием и личностным ростом",
+    "url": "https://alexandrvasilev.ru/#about"
+  },
+  "areaServed": "Казань и онлайн",
+  "serviceType": "Нейротраблшуттинг личностного роста",
+  "offers": {
+    "@type": "Offer",
+    "price": "По запросу",
+    "priceCurrency": "RUB",
+    "availability": "https://schema.org/InStock",
+    "url": "https://alexandrvasilev.ru/programs/love-myself#message"
+  },
+  "serviceOutput": {
+    "@type": "Thing",
+    "name": "Результаты программы",
+    "description": "Повышение самооценки, обретение уверенности в себе, принятие себя, улучшение отношений с окружающими, внутренняя гармония"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://alexandrvasilev.ru/programs/love-myself"
+  }
+}
+`;
 
 export default function () {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -16,16 +51,16 @@ export default function () {
   useScrollToLocation();
 
   const metaConfig = {
-    title: 'Полюбить себя - Александр "Интеграл" Васильев',
-    pageTitle: "Полюбить себя",
-    description: "Полюбить себя",
-    keywords: "очищение интеграл ретрит грибы дурман",
+    title: 'Программа «Полюби себя» - Александр "Интеграл" Васильев',
+    pageTitle: "Программа «Полюби себя»",
+    description: "Повышение самооценки и уверенности в себе методом нейротраблшуттинга",
+    keywords: "самооценка, уверенность в себе, любовь к себе, нейротраблшуттинг, личностный рост",
     content: "",
-    href: "love-myself",
+    href: "/programs/love-myself",
   };
 
   return (
-    <Layout metaConfig={metaConfig}>
+    <Layout metaConfig={metaConfig} schemaOrg={schemaOrg}>
       <SecondaryPreview
         text={metaConfig.pageTitle}
         image={secondary_preview_2}

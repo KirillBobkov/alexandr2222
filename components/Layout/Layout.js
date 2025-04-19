@@ -48,11 +48,13 @@ export default function Layout({ children, metaConfig, schemaOrg = '' }) {
 
         <title>{title}</title>
         <meta name="description" content={description} />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: schemaOrg }}
-        />
-        <meta name="zen-verification" content="64eucrYFCJaCNtgwG4Muk04Lm2AHb6jI2Fn5qpLpdFcBatzEmtjpCQjXRWbCk6Fb" />
+        {schemaOrg && (
+          <script
+            key="schema-org"
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: schemaOrg }}
+          />
+        )}
         <meta charSet="utf-8" />
         <meta
           name="viewport"

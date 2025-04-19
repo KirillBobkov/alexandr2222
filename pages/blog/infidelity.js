@@ -10,6 +10,62 @@ import contentStyles from "../../styles/contentStyles.module.css";
 import secondary_preview_18 from "../../images/secondary_preview_18.webp";
 import { Button } from "../../components/shared/Button/Button";
 
+const schemaOrg = `
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Как нейротраблшуттинг помогает пережить измену: восстановление доверия через работу с подсознанием",
+  "description": "Глубокий анализ психологических последствий измены и методов восстановления способности доверять через работу с подсознательными паттернами",
+  "image": "/_next/static/media/secondary_preview_18.webp",
+  "url": "https://alexandrvasilev.ru/blog/infidelity",
+  "inLanguage": "ru",
+  "datePublished": "2025-03-18",
+  "publisher": {
+    "@type": "Organization",
+    "name": "INTEGRAAL",
+    "url": "https://alexandrvasilev.ru",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "/_next/static/media/logo.ab1a421b.webp",
+      "width": 378,
+      "height": 400
+    }
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Александр Васильев",
+    "url": "https://alexandrvasilev.ru/#about",
+    "description": "Нейротраблшуттер, специалист по работе с подсознанием и восстановлению после психологических травм",
+    "jobTitle": "Нейротраблшуттер, специалист по работе с подсознанием"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://alexandrvasilev.ru/blog/infidelity"
+  },
+  "keywords": "измена, доверие, психология, нейротраблшуттинг, травмы, отношения",
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "Психологические последствия измены",
+      "description": "Глубокие травмы доверия и самооценки, возникающие после измены, и их связь с детскими сценариями"
+    },
+    {
+      "@type": "Thing",
+      "name": "Нейротраблшуттинг в терапии доверия",
+      "description": "Метод работы с подсознанием для перепрограммирования травматических реакций и восстановления способности доверять"
+    }
+  ],
+  "offers": {
+    "@type": "Offer",
+    "price": "Бесплатная первая консультация",
+    "priceCurrency": "RUB",
+    "availability": "https://schema.org/InStock",
+    "url": "https://alexandrvasilev.ru/blog/infidelity#message",
+    "description": "Запишитесь на консультацию, чтобы узнать, как нейротраблшуттинг может помочь вам пережить измену и восстановить способность доверять."
+  }
+}
+`;
+
 export default function () {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -25,7 +81,7 @@ export default function () {
   };
 
   return (
-    <Layout metaConfig={metaConfig}>
+    <Layout metaConfig={metaConfig} schemaOrg={schemaOrg}>
       <SecondaryPreview
         text="Как нейротраблшуттинг помогает пережить измену"
         image={secondary_preview_18}

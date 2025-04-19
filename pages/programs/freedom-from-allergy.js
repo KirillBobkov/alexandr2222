@@ -9,22 +9,57 @@ import containerStyles from "../../styles/container.module.css";
 import contentStyles from "../../styles/contentStyles.module.css";
 import secondary_preview_15 from "../../images/secondary_preview_15.webp"; // You might want to use a different image
 import { Button } from "../../components/shared/Button/Button";
+
+const schemaOrg = `
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Избавление от аллергии",
+  "description": "Избавьтесь от аллергии любого типа за 1-5 сессий с помощью нейротраблшуттинга - метода работы с подсознанием, устраняющего психосоматические причины аллергических реакций",
+  "url": "https://alexandrvasilev.ru/programs/freedom-from-allergy",
+  "provider": {
+    "@type": "Person",
+    "name": "Александр Васильев",
+    "description": "Нейротраблшуттер, специалист по работе с психосоматикой и аллергиями",
+    "url": "https://alexandrvasilev.ru/#about"
+  },
+  "areaServed": "Казань и онлайн",
+  "serviceType": "Нейротраблшуттинг психосоматических состояний",
+  "offers": {
+    "@type": "Offer",
+    "price": "По запросу",
+    "priceCurrency": "RUB",
+    "availability": "https://schema.org/InStock",
+    "url": "https://alexandrvasilev.ru/programs/freedom-from-allergy#message"
+  },
+  "serviceOutput": {
+    "@type": "Thing",
+    "name": "Результаты избавления от аллергии",
+    "description": "Полное или значительное снижение аллергических реакций, свобода в питании и образе жизни, улучшение самочувствия и качества жизни"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://alexandrvasilev.ru/programs/freedom-from-allergy"
+  }
+}
+`;
+
 export default function () {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   useScrollToLocation();
 
   const metaConfig = {
-    title: 'Свобода от аллергии - Александр "Интеграл" Васильев',
-    pageTitle: "Свобода от аллергии",
-    description: "Жизнь без ограничений за 1-8 сессий",
-    keywords: "аллергия, снижение аллергических реакций, нейротраблшуттинг, психосоматика, избавление от аллергии",
+    title: 'Избавьтесь от аллергии за 1-5 сессий - Александр "Интеграл" Васильев',
+    pageTitle: "Избавление от аллергии",
+    description: "Избавьтесь от аллергии за 1-5 сессий методом нейротраблшуттинга",
+    keywords: "аллергия, психосоматика, нейротраблшуттинг, лечение аллергии, избавление от аллергии",
     content: "",
     href: "/programs/freedom-from-allergy",
   };
 
   return (
-    <Layout metaConfig={metaConfig}>
+    <Layout metaConfig={metaConfig} schemaOrg={schemaOrg}>
       <SecondaryPreview text={metaConfig.pageTitle} image={secondary_preview_15} />
       <LineAnimation>
         <div className={containerStyles.container}>

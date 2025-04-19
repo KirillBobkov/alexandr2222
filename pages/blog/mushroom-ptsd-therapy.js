@@ -10,6 +10,55 @@ import contentStyles from "../../styles/contentStyles.module.css";
 import secondary_preview_25 from "../../images/secondary_preview_25.webp";
 import { Button } from "../../components/shared/Button/Button";
 
+const schemaOrg = `
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Мухомор и терапия ПТСР: улучшение самочувствия через связь с подсознанием",
+  "description": "Травма не уходит с годами. Она может затаиться, стать фоном, но при определённых условиях — снова проявиться. Вспышкой агрессии. Панической атакой. Оцепенением.",
+  "image": "/_next/static/media/secondary_preview_25.webp",
+  "url": "https://alexandrvasilev.ru/blog/mushroom-ptsd-therapy",
+  "inLanguage": "ru",
+  "datePublished": "2025-04-10",
+  "publisher": {
+    "@type": "Organization",
+    "name": "INTEGRAAL",
+    "url": "https://alexandrvasilev.ru",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "/_next/static/media/logo.ab1a421b.webp",
+      "width": 378,
+      "height": 400
+    }
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Александр Васильев",
+    "url": "https://alexandrvasilev.ru/#about",
+    "description": "Нейротраблшуттер, специалист по работе с подсознанием и преодолению травм",
+    "jobTitle": "Нейротраблшуттер, специалист по работе с подсознанием" 
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://alexandrvasilev.ru/blog/mushroom-ptsd-therapy"
+  },
+  "keywords": "ПТСР, посттравматическое стрессовое расстройство, мухомор, психологическая травма, терапия травмы, подсознание",
+  "about": {
+    "@type": "Thing",
+    "name": "Уменьшение ПТСР",
+    "description": "Посттравматическое стрессовое расстройство и подходы к его уменьшению с использованием растительных веществ"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "Бесплатная первая консультация",
+    "priceCurrency": "RUB",
+    "availability": "https://schema.org/InStock",
+    "url": "https://alexandrvasilev.ru/blog/mushroom-ptsd-therapy#message",
+    "description": "Запишитесь на консультацию, чтобы узнать больше о терапии психологических травм."
+  }
+}
+`;
+
 export default function () {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -18,13 +67,13 @@ export default function () {
   const metaConfig = {
     title: "МУХОМОР И ТЕРАПИЯ ПТСР: Улучшение самочувствия ЧЕРЕЗ СВЯЗЬ С ПОДСОЗНАНИЕМ",
     description:
-      "Как Мухомор помогает в лечении ПТСР и работе с травмами через глубинную связь с подсознанием",
+      "Как Мухомор помогает в устранении ПТСР и работе с травмами через глубинную связь с подсознанием",
     keywords:
       "мухомор, ПТСР, травма, подсознание, терапия, психика, проводник",
   };
 
   return (
-    <Layout metaConfig={metaConfig}>
+    <Layout metaConfig={metaConfig} schemaOrg={schemaOrg}>
       <SecondaryPreview 
         text="Мухомор и терапия ПТСР" 
         image={secondary_preview_25} 

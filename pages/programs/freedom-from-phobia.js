@@ -10,22 +10,56 @@ import contentStyles from "../../styles/contentStyles.module.css";
 import secondary_preview_14 from "../../images/secondary_preview_14.webp"; // You might want to use a different image
 import { Button } from "../../components/shared/Button/Button";
 
+const schemaOrg = `
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Избавление от фобий",
+  "description": "Избавьтесь от любых фобий и страхов за 1-8 сессий с помощью нейротраблшуттинга - метода, устраняющего глубинные психологические причины фобий",
+  "url": "https://alexandrvasilev.ru/programs/freedom-from-phobia",
+  "provider": {
+    "@type": "Person",
+    "name": "Александр Васильев",
+    "description": "Нейротраблшуттер, специалист по работе с подсознанием и фобиями",
+    "url": "https://alexandrvasilev.ru/#about"
+  },
+  "areaServed": "Казань и онлайн",
+  "serviceType": "Нейротраблшуттинг",
+  "offers": {
+    "@type": "Offer",
+    "price": "По запросу",
+    "priceCurrency": "RUB",
+    "availability": "https://schema.org/InStock",
+    "url": "https://alexandrvasilev.ru/programs/freedom-from-phobia#message"
+  },
+  "serviceOutput": {
+    "@type": "Thing",
+    "name": "Результаты избавления от фобий",
+    "description": "Полное или значительное снижение фобий и страхов, свобода действий, повышение качества жизни, возможность заниматься любимыми делами без страха"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://alexandrvasilev.ru/programs/freedom-from-phobia"
+  }
+}
+`;
+
 export default function () {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   useScrollToLocation();
 
   const metaConfig = {
-    title: 'Свобода от фобии - Александр "Интеграл" Васильев',
-    pageTitle: "Свобода от фобии",
-    description: "Жизнь без страха за 1-8 сессий",
-    keywords: "фобия, страх, нейротраблшуттинг, психотерапия, устранение фобий",
+    title: 'Избавьтесь от фобий за 1-8 сессий - Александр "Интеграл" Васильев',
+    pageTitle: "Избавление от фобий",
+    description: "Избавьтесь от фобий за 1-8 сессий",
+    keywords: "фобии, страхи, тревоги, нейротраблшуттинг, психотерапия",
     content: "",
     href: "/programs/freedom-from-phobia",
   };
 
   return (
-    <Layout metaConfig={metaConfig}>
+    <Layout metaConfig={metaConfig} schemaOrg={schemaOrg}>
       <SecondaryPreview text={metaConfig.pageTitle} image={secondary_preview_14} />
       <LineAnimation>
         <div className={containerStyles.container}>

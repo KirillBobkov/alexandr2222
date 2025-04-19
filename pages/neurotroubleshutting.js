@@ -147,6 +147,45 @@ const videos = [
   },
 ];
 
+const schemaOrg = `
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Нейротраблшуттинг",
+  "description": "Проработка подсознательных блоков: тревожность, депрессия, фобии, психосоматика.",
+  "url": "https://alexandrvasilev.ru/neurotroubleshutting",
+  "provider": {
+    "@type": "Person",
+    "name": "Александр Васильев",
+    "url": "https://alexandrvasilev.ru/#about",
+    "description": "Нейротраблшуттер, специалист по работе с подсознанием",
+    "jobTitle": "Нейротраблшуттер, специалист по работе с подсознанием"
+  },
+  "serviceType": "Нейротраблшуттинг",
+  "offers": {
+    "@type": "Offer",
+    "price": "Бесплатная первая консультация",
+    "priceCurrency": "RUB",
+    "availability": "https://schema.org/InStock",
+    "url": "https://alexandrvasilev.ru/neurotroubleshutting#message",
+    "description": "Запишитесь на бесплатную консультацию, чтобы узнать причины своих проблем и способы их решения."
+  },
+  "areaServed": "Worldwide",
+  "keywords": "нейротраблшуттинг, гипнотерапия, гипнотерапевт, НЛП, психосоматика, депрессия, тревожность, проработка страхов, экзорцизм, психология, гипноз, подсознательные блоки",
+  "potentialAction": {
+    "@type": "ReserveAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://alexandrvasilev.ru/neurotroubleshutting#message"
+    },
+    "result": {
+      "@type": "Reservation",
+      "name": "Запись на бесплатную консультацию"
+    }
+  }
+}
+`;
+
 export default function () {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -159,7 +198,7 @@ export default function () {
   };
 
   return (
-    <Layout metaConfig={metaConfig}>
+    <Layout metaConfig={metaConfig} schemaOrg={schemaOrg}>
       <SecondaryPreview text={"Нейротраблшуттинг"} image={secondary_preview_7} />
       <LineAnimation>
         <div className={containerStyles.container}>

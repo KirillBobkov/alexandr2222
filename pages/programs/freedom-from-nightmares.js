@@ -9,6 +9,41 @@ import containerStyles from "../../styles/container.module.css";
 import contentStyles from "../../styles/contentStyles.module.css";
 import secondary_preview_16 from "../../images/secondary_preview_16.webp"; // You might want to use a different image
 import { Button } from "../../components/shared/Button/Button";
+
+const schemaOrg = `
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Избавление от ночных кошмаров",
+  "description": "Избавьтесь от ночных кошмаров за 1-8 сессий с помощью нейротраблшуттинга - метода работы с подсознанием, устраняющего глубинные причины кошмаров",
+  "url": "https://alexandrvasilev.ru/programs/freedom-from-nightmares",
+  "provider": {
+    "@type": "Person",
+    "name": "Александр Васильев",
+    "description": "Нейротраблшуттер, специалист по работе с подсознанием",
+    "url": "https://alexandrvasilev.ru/#about"
+  },
+  "areaServed": "Казань и онлайн",
+  "serviceType": "Нейротраблшуттинг",
+  "offers": {
+    "@type": "Offer",
+    "price": "По запросу",
+    "priceCurrency": "RUB",
+    "availability": "https://schema.org/InStock",
+    "url": "https://alexandrvasilev.ru/programs/freedom-from-nightmares#message"
+  },
+  "serviceOutput": {
+    "@type": "Thing",
+    "name": "Результаты услуги",
+    "description": "Глубокий восстанавливающий сон, отсутствие ночных кошмаров, повышение энергии и чувство безопасности"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://alexandrvasilev.ru/programs/freedom-from-nightmares"
+  }
+}
+`;
+
 export default function () {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -24,7 +59,7 @@ export default function () {
   };
 
   return (
-    <Layout metaConfig={metaConfig}>
+    <Layout metaConfig={metaConfig} schemaOrg={schemaOrg}>
       <SecondaryPreview text={metaConfig.pageTitle} image={secondary_preview_16} />
       <LineAnimation>
         <div className={containerStyles.container}>

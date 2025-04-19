@@ -9,6 +9,63 @@ import containerStyles from "../../styles/container.module.css";
 import contentStyles from "../../styles/contentStyles.module.css";
 import secondary_preview_19 from "../../images/secondary_preview_19.webp";
 import { Button } from "../../components/shared/Button/Button";
+
+const schemaOrg = `
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Для чего нужна интеграция после мухоморного погружения?",
+  "description": "Как избежать десоциализации и других рисков после духовного опыта с мухомором через грамотную интеграцию полученных инсайтов",
+  "image": "/_next/static/media/secondary_preview_19.webp",
+  "url": "https://alexandrvasilev.ru/blog/integration",
+  "inLanguage": "ru",
+  "datePublished": "2025-03-19",
+  "publisher": {
+    "@type": "Organization",
+    "name": "INTEGRAAL",
+    "url": "https://alexandrvasilev.ru",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "/_next/static/media/logo.ab1a421b.webp",
+      "width": 378,
+      "height": 400
+    }
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Александр Васильев",
+    "url": "https://alexandrvasilev.ru/#about",
+    "description": "Нейротраблшуттер, специалист по работе с подсознанием и интеграции духовного опыта",
+    "jobTitle": "Нейротраблшуттер, специалист по работе с подсознанием"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://alexandrvasilev.ru/blog/integration"
+  },
+  "keywords": "мухомор, интеграция, трип, духовный опыт, десоциализация, эзотерика, осознанность",
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "Интеграция духовного опыта",
+      "description": "Процесс осмысления и внедрения духовных инсайтов в повседневную жизнь после мухоморного погружения"
+    },
+    {
+      "@type": "Thing",
+      "name": "Психологические риски",
+      "description": "Потенциальные риски десоциализации, дереализации и психологической нестабильности при неправильной интеграции опыта"
+    }
+  ],
+  "offers": {
+    "@type": "Offer",
+    "price": "Бесплатная первая консультация",
+    "priceCurrency": "RUB",
+    "availability": "https://schema.org/InStock",
+    "url": "https://alexandrvasilev.ru/blog/integration#message",
+    "description": "Запишитесь на консультацию, чтобы узнать больше о правильной интеграции духовного опыта в повседневную жизнь."
+  }
+}
+`;
+
 export default function () {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -23,7 +80,7 @@ export default function () {
   };
 
   return (
-    <Layout metaConfig={metaConfig}>
+    <Layout metaConfig={metaConfig} schemaOrg={schemaOrg}>
       <SecondaryPreview text="Интеграция после мухоморного погружения" image={secondary_preview_19} />
       <LineAnimation>
         <div className={containerStyles.container}>
