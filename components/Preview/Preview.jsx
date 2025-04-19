@@ -31,12 +31,28 @@ export const Preview = () => {
           </a>
         </div>
         <div className={styles.social_links}>
-          <a href="https://vk.com/chronics44" className={styles.social_link} target="_blank" rel="noopener noreferrer">
+          <span className={styles.social_link} style={{ position: 'relative', cursor: 'not-allowed' }}>
             <svg className={styles.social_icon} width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M13.0718 18C6.77376 18 3.06576 13.6587 2.92773 6.5H5.87574C5.96775 11.9012 8.23177 14.1495 10.1158 14.6732V6.5H12.8879V11.1932C14.7399 10.9832 16.6879 8.88925 17.3359 6.5H20.108C19.6039 9.44262 17.4879 11.5362 15.9599 12.3637C17.4879 13.0175 19.8639 14.8558 20.8479 18H17.8319C17.0639 15.871 15.2839 14.1622 12.8879 13.9187V18H13.0718Z" fill="currentColor"/>
             </svg>
+            <div style={{
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              width: '100%',
+              height: '100%',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              pointerEvents: 'none'
+            }}>
+              <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ position: 'absolute' }}>
+                <path d="M19 5L5 19" stroke="red" strokeWidth="2.5" strokeLinecap="round"/>
+                <path d="M5 5L19 19" stroke="red" strokeWidth="2.5" strokeLinecap="round"/>
+              </svg>
+            </div>
             <span className={styles.social_label}>VK</span>
-          </a>
+          </span>
           <a href="https://www.tiktok.com/@alexandrvasilev.ru?_t=ZS-8vOVKf5Isrv&_r=1" className={styles.social_link} target="_blank" rel="noopener noreferrer">
             <svg className={styles.social_icon} width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z" fill="currentColor"/>

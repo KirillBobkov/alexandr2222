@@ -14,11 +14,27 @@ export function Footer() {
           <Image className={styles.logo} src={theme === "light" ? logoLight : logoDark} alt="Company Logo" />
           <ul className={styles.social__list}>
             <li>
-              <a href="https://vk.com/chronics44" target="_blank" rel="noopener noreferrer" className={styles.social__link}>
+              <span className={styles.social__link} style={{ position: 'relative', cursor: 'not-allowed' }}>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M13.0718 18C6.77376 18 3.06576 13.6587 2.92773 6.5H5.87574C5.96775 11.9012 8.23177 14.1495 10.1158 14.6732V6.5H12.8879V11.1932C14.7399 10.9832 16.6879 8.88925 17.3359 6.5H20.108C19.6039 9.44262 17.4879 11.5362 15.9599 12.3637C17.4879 13.0175 19.8639 14.8558 20.8479 18H17.8319C17.0639 15.871 15.2839 14.1622 12.8879 13.9187V18H13.0718Z" fill="currentColor"/>
                 </svg>
-              </a>
+                <div style={{
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  width: '100%',
+                  height: '100%',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  pointerEvents: 'none'
+                }}>
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ position: 'absolute' }}>
+                    <path d="M19 5L5 19" stroke="red" strokeWidth="2.5" strokeLinecap="round"/>
+                    <path d="M5 5L19 19" stroke="red" strokeWidth="2.5" strokeLinecap="round"/>
+                  </svg>
+                </div>
+              </span>
             </li>
             <li>
               <a href="https://t.me/chronics44" target="_blank" rel="noopener noreferrer" className={styles.social__link}>
