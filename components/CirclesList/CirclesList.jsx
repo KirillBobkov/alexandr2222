@@ -13,6 +13,7 @@ export const CirclesList = ({ title, titleEmpty, items, descriptions }) => {
             as="h2"
             side="left"
             className={contentStyles.title}
+            style={{marginLeft: 0, marginRight: 0}}
           >
             {title}
             {titleEmpty && (
