@@ -20,19 +20,19 @@ export const products = [
     },
     {
       id: 5,
-      title: "Свобода от фобии: Жизнь без страха за 1-8 сессий",
+      title: "Преодоление фобий",
       href: "/programs/freedom-from-phobia",
       disabled: false,
     },
     {
       id: 6,
-      title: "Свобода от аллергии: Жизнь без ограничений за 1-8 сессий",
+      title: "Свобода от аллергии",
       href: "/programs/freedom-from-allergy",
       disabled: false,
     },
     {
       id: 7,
-      title: "Избавьтесь от ночных кошмаров за 1-8 сессий",
+      title: "Спокойный сон",
       href: "/programs/freedom-from-nightmares",
       disabled: false,
     },

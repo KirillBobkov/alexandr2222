@@ -50,9 +50,9 @@ export default function () {
   useScrollToLocation();
 
   const metaConfig = {
-    title: 'Избавьтесь от фобий за 1-8 сессий - Александр "Интеграл" Васильев',
-    pageTitle: "Избавление от фобий",
-    description: "Избавьтесь от фобий за 1-8 сессий",
+    title: 'Преодоление фобий - Александр "Интеграл" Васильев',
+    pageTitle: "Преодоление фобий",
+    description: "Преодоление фобий методом нейротраблшуттинга",
     keywords: "фобии, страхи, тревоги, нейротраблшуттинг, психотерапия",
     content: "",
     href: "/programs/freedom-from-phobia",
