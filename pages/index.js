@@ -6,12 +6,10 @@ import { useScrollToLocation } from "../hooks/useScrollToLocation";
 import { Preview } from "../components/Preview/Preview";
 import { AnimatedLine } from "../components/AnimatedLine/AnimatedLine";
 import { Final } from "../components/Final/Final";
-import { Products } from "../components/Products/Products";
 import { AboutMe } from "../components/AboutMe/AboutMe";
 import { CirclesList } from "../components/CirclesList/CirclesList";
 import { InnerSatisfaction } from "../components/InnerSatisfaction";
 import { InnerQuestions } from "../components/InnerQuestions";
-import { InnerCracking } from "../components/InnerCracking";
 import enter_hole_1 from "../images/enter_hole_1.webp";
 import enter_hole_2 from "../images/enter_hole_2.webp";
 import logo from "../images/logo.webp";
@@ -63,6 +61,21 @@ const schemaOrg = `
     ]
   },
   "about": [
+    {
+      "@type": "Thing",
+      "name": "Внутреннее удовлетворение",
+      "description": "Когда внешний успех не приносит внутреннего удовлетворения: в повседневной суете легко потерять связь с собой, ощущая тревогу, одиночество и усталость от существования."
+    },
+    {
+      "@type": "Thing",
+      "name": "Внутренние вопросы",
+      "description": "Внутренний голос всё чаще задаёт вопросы о подлинной сути, смысле жизни и истинном счастье. Ваш кризис — это зов вернуться к самим себе."
+    },
+    {
+      "@type": "Thing",
+      "name": "Жизненные трудности",
+      "description": "Почему жизнь начинает трещать по швам: потеря энергии, ясности, появление ссор, тревоги и усталости происходят, когда вы отдаляетесь от своего истинного пути."
+    },
     {
       "@type": "Thing",
       "name": "Услуги помощи",
@@ -117,7 +130,12 @@ const schemaOrg = `
             "@type": "Service",
             "name": "Мухоморный ретрит в Казани",
             "url": "https://alexandrvasilev.ru/ceremony",
-            "description": "Практика, связанная с использованием Мухомора в духовных и терапевтических целях"
+            "description": "Путь исцеления и самопознания, открывающий доступ к встрече с Высшими Силами, позволяет наладить связь с Творцом и раскрыть своё предназначение.",
+            "offers": {
+              "@type": "Offer",
+              "price": "300000",
+              "priceCurrency": "RUB"
+            }
           }
         },
         {
@@ -127,7 +145,12 @@ const schemaOrg = `
             "@type": "Service",
             "name": "Нейротраблшуттинг",
             "url": "https://alexandrvasilev.ru/neurotroubleshutting",
-            "description": "Эффективный способ работы с подсознанием для переработки травмирующих событий и освобождения от ограничивающих убеждений"
+            "description": "Точечное и быстрое устранение первопричин блоков, страхов, зависимостей и ограничений через глубинную работу с подсознанием.",
+            "offers": {
+              "@type": "Offer",
+              "price": "125000",
+              "priceCurrency": "RUB"
+            }
           }
         }
       ]
@@ -168,15 +191,25 @@ const schemaOrg = `
       }
     ]
   },
+  "mainContentOfPage": {
+    "@type": "WebPageElement",
+    "isPartOf": {
+      "@id": "https://alexandrvasilev.ru/"
+    },
+    "speakable": {
+      "@type": "SpeakableSpecification",
+      "cssSelector": [".title", ".paragraph"]
+    }
+  },
   "offers": {
     "@type": "Offer",
     "price": "Бесплатная первая консультация",
     "priceCurrency": "RUB",
     "availability": "https://schema.org/InStock",
     "url": "https://alexandrvasilev.ru/#message",
-    "description": "Запишитесь на бесплатную консультацию, и я свяжусь с вами в ближайшее время. Первая консультация 20 минут — бесплатно."
+    "description": "Запишитесь на бесплатную консультацию, и я свяжусь с вами в ближайшее время. Первая консультация — бесплатно."
   },
-  "keywords": "очищение интеграл ретрит грибы дурман нейротраблшуттинг мухоморный ретрит вегетализм кинезиология"
+  "keywords": "очищение интеграл ретрит грибы дурман нейротраблшуттинг мухоморный ретрит вегетализм кинезиология внутреннее удовлетворение жизненный кризис предназначение"
 }
 `;
 
@@ -221,7 +254,7 @@ export default function () {
           items: [
             { title: "вы теряете энергию" },
             { title: "теряется ясность" },
-            { title: "появляются ссоры, усталость, тревога" },
+            { title: "ссоры, усталость, тревога" },
             { title: "тело слабеет" },
             { title: "деньги приходят, но не радуют" },
             { title: "в зеркале — не вы" },
@@ -230,8 +263,8 @@ export default function () {
             "И всё вокруг словно гаснет. Не потому, что кто-то наказывает. А потому, что вы отдаляетесь от себя.",
             "Если продолжать так жить, можно остаться у разбитого корыта — в одиночестве, усталости, с болью внутри.",
             "Потому что сила, которая была дана вам, будет передана другому — тому, кто готов её понести. Кто идёт честно, глубоко, по-настоящему.",
-            "Но если вы читаете эти строки — у вас ещё есть выбор. Всё можно вернуть. Только для этого нужно решиться: заглянуть внутрь и вспомнить, кто вы."
-          ]
+            "Но если вы читаете эти строки — у вас ещё есть выбор. Всё можно вернуть. Только для этого нужно решиться: заглянуть внутрь и вспомнить, кто вы.",
+          ],
         }}
       />
 
@@ -240,8 +273,8 @@ export default function () {
           title: "могу вам помочь",
           titleEmpty: "Чем я",
           items: [
-            { title: "Зависимости" },
             { title: "Усталость" },
+            { title: "Зависимости" },
             { title: "Психосоматика" },
             { title: "Ночные кошмары" },
             { title: "Психические травмы" },
@@ -299,7 +332,7 @@ export default function () {
         buttonText="Подробнее"
         buttonHref="/neurotroubleshutting"
         image={enter_hole_2}
-        price="150 000 ₽"
+        price="125 000 ₽"
       />
       <AnimatedLine />
       <Final
@@ -308,19 +341,21 @@ export default function () {
         buttonText="Записаться"
         buttonHref="#message"
       />
-      <Products products={products} />
       <div id="message" />
       <Form
         setIsSubmitted={setIsSubmitted}
         isSubmitted={isSubmitted}
-        title={"Готовы жить лучше?"}
+        title={"ГОТОВЫ ОТКРЫТЬ ДЛЯ СЕБЯ НОВЫЕ ГОРИЗОНТЫ?"}
         type="Первая консультация (Страница: Главная)"
-        description={`Запишитесь на бесплатную консультацию, и я свяжусь с вами в ближайшее время.
-
-          Первая консультация 20 минут — бесплатно. 
+        description={
+          `Запишитесь на бесплатную консультацию, и я свяжусь с вами в ближайшее время. 
           
-          Подготовьте вопрос, который вас интересует, и я раскрою и решу вашу проблему, а вы уже сможете сделать вывод, обращаться ко мне в дальнейшем или нет.
-        `}
+          Первая консультация — бесплатно. 
+          
+          Подготовьте вопрос, который вас действительно беспокоит, и я помогу вам разобраться, раскрыть возможные причины и предложу решение. 
+          
+          На основе этого вы сможете понять, стоит ли продолжить работу со мной для достижения значимых изменений в вашей жизни.`
+        }
       />
     </Layout>
   );
