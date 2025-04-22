@@ -132,6 +132,38 @@ const teamMembers = [
     title: "Джефф Безос",
     description: "Основатель Amazon",
   },
+  {
+    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Howard_Schultz_by_Gage_Skidmore.jpg/640px-Howard_Schultz_by_Gage_Skidmore.jpg",
+    title: "Говард Шульц",
+    description: "Основатель Starbucks",
+  },
+  {
+    img: "https://notednames.com/ImgProfile/valo_Barbara%20Corcoran.jpg",
+    title: "Барбара Коркоран",
+    description: "Основательница The Corcoran Group",
+  },
+
+
+
+
+  {
+    img: "https://pub-c2c1d9230f0b4abb9b0d2d95e06fd4ef.r2.dev/sites/427/2014/02/20140205_01_1000x734.jpg",
+    title: "Сатья Наделла",
+    description: "CEO Microsoft",
+  },
+
+
+  {
+    img: "https://sun9-52.userapi.com/impf/c624731/v624731649/25611/q3Uh3tvHeyE.jpg?size=480x720&quality=96&sign=e81df9fb5c50544089879d7ec8780229&c_uniq_tag=P8rOb_dnqnnSPuWHVJ8FOJDjLFoeskz3E9NxvMZOYjQ&type=album",
+    title: "Шерил Сэндберг",
+    description: "COO Facebook",
+  },
+  {
+    img: "https://yaffa-cdn.s3.amazonaws.com/adnews/live/images/dmImage/StandardImage/angus-keene-acting-managing-director-twitter-australia-new-zealand2.jpg",
+    title: "Питер Тиль",
+    description: "Сооснователь PayPal и Palantir Technologies",
+  },
+  
 ];
 
 export const questionsContent = {
