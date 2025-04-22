@@ -124,7 +124,7 @@ export default function () {
               {"  "}
               Вы чувствуете искреннюю радость от простых вещей.
             </p>
-            <p className={contentStyles.textDescription}>
+            <p className={contentStyles.textDescription}> 
               <span className={contentStyles.textSymbol}>●</span>
               {"  "}
               Вы смотрите на мир с оптимизмом и энтузиазмом.
@@ -141,7 +141,7 @@ export default function () {
             </p>
           </VisibilityManager>
           
-          <p style={{ fontSize: '12px', fontStyle: 'italic', textAlign: 'center', marginBottom: '15px' }}>
+          <p style={{ fontSize: '12px', fontStyle: 'italic', marginBottom: '15px' }}>
             Метод не является медицинским и не заменяет консультации специалиста
           </p>
         </div>

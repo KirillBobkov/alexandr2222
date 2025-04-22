@@ -39,7 +39,7 @@ const schemaOrg = `
     "description": "Повышение самооценки, обретение уверенности в себе, принятие себя, улучшение отношений с окружающими, внутренняя гармония"
   },
   "mainEntityOfPage": {
-    "@type": "WebPage",
+    "@type": "WebPage", 
     "@id": "https://alexandrvasilev.ru/programs/love-myself"
   }
 }
@@ -144,7 +144,7 @@ export default function () {
             свою жизнь к лучшему.{" "}
           </VisibilityManager>
           
-          <p style={{ fontSize: '12px', fontStyle: 'italic', textAlign: 'center', marginBottom: '15px' }}>
+          <p style={{ fontSize: '12px', fontStyle: 'italic', marginBottom: '15px' }}>
             Метод не является медицинским и не заменяет консультации специалиста
           </p>
         </div>

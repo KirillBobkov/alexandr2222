@@ -438,7 +438,7 @@ export default function () {
             бесплатную консультацию прямо сейчас!
           </VisibilityManager>
           
-          <p style={{ fontSize: '12px', fontStyle: 'italic', textAlign: 'center', marginBottom: '15px' }}>
+          <p style={{ fontSize: '12px', fontStyle: 'italic', marginBottom: '15px' }}>
             Метод не является медицинским и не заменяет консультации специалиста
           </p>
         </div>

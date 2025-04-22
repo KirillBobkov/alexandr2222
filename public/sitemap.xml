@@ -186,9 +186,16 @@
 
   <url>
     <loc>https://alexandrvasilev.ru/blog/neurotroubleshutting-entrepreneurs</loc>
-    <lastmod>2025-04-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1</priority>
-  </url>
+      <lastmod>2025-04-20</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>1</priority>
+    </url>
+
+  <url>
+    <loc>https://alexandrvasilev.ru/blog/discipline</loc>
+      <lastmod>2025-04-22</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>1</priority>
+    </url>
 
 </urlset>

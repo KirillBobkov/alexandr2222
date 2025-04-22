@@ -17,6 +17,7 @@ import secondary_preview_23 from "../images/secondary_preview_23.webp";
 import secondary_preview_24 from "../images/secondary_preview_24.webp";
 import secondary_preview_25 from "../images/secondary_preview_25.webp";
 import secondary_preview_26 from "../images/secondary_preview_26.webp";
+import secondary_preview_27 from "../images/secondary_preview_27.webp";
 import styles from "../styles/blog.module.css";
 import contentStyles from "../styles/contentStyles.module.css";
 import { LineAnimation } from "../components/LineAnomation/LineAnimation";
@@ -24,6 +25,15 @@ import { VisibilityManager } from "../components/shared/VisibilityManager";
 import { useScrollToLocation } from "../hooks/useScrollToLocation";
 
 const articles = [
+  {
+    id: 14,
+    title: "Почему не получается держать дисциплину — и как это изменить",
+    description:
+      "Вы точно знаете, что вам нужно делать. Ставите цели, пишете списки, начинаете и… снова срываетесь. День проходит — и всё не так. Но это — не лень. И не слабая воля.",
+    date: "22 апреля 2025",
+    image: secondary_preview_27,
+    slug: "discipline",
+  },
   {
     id: 13,
     title: "Нейротраблшуттинг для предпринимателей: преодоление внутренних блоков роста",
