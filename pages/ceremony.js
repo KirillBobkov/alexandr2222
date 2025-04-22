@@ -12,6 +12,7 @@ import { Final } from "../components/Final/Final";
 import { VideoWidget } from "../components/VideoWidget/VideoWidget";
 import { Questions } from "../components/Questions/Questions";
 import { Button } from "../components/shared/Button/Button";
+import { PhotoGrid } from "../components/PhotoGrid/PhotoGrid";
 
 const videos = [
   // New videos added on March 2024
@@ -92,6 +93,44 @@ const videos = [
       "https://i.mycdn.me/getVideoPreview?id=8285423798831&idx=10&type=39&tkn=S0XDiAMyHgOjpCL3c2nuIizK53Y&fn=vid_l",
     name: "Отзыв Никиты о Мухоморном ретрите в Казани",
     uploadDate: new Date("March 13, 2025").toISOString(),
+  },
+];
+
+const teamMembers = [
+  {
+    img: "https://sun9-23.userapi.com/s/v1/ig2/ROaBSLdjpq0-0cXn2NXqAlr4kidrh1qOwuiSfW8tdUodqxUzGWSmHiGRyGIvL1eH4gBiqBhOFTMnVmy_g5oQx657.jpg?quality=95&as=32x34,48x50,72x76,108x114,160x168,240x252,360x379,480x505,540x568,640x673,720x757,1080x1136,1217x1280&from=bu&u=cJAXLOZAOol1k26Z7uYlzCHGvIGvswRHIafkX5RXJ5E&cs=574x604",
+    title: "Ричард Брэнсон",
+    description: "Основатель Virgin Group",
+  },
+  {
+    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Elon_Musk_Royal_Society_crop.jpg/800px-Elon_Musk_Royal_Society_crop.jpg", 
+    title: "Илон Маск",
+    description: "Основатель Tesla, SpaceX, Neuralink",
+  },
+  {
+    img: "https://static.life.ru/posts/2017/05/1006612/29d3c5bdf20e45cc66aa1793b63975b5.jpg",
+    title: "Тим Кук",
+    description: "CEO Apple",
+  },
+  {
+    img: "https://static01.nyt.com/images/2010/09/24/nyregion/NEWARK/NEWARK-jumbo.jpg?quality=75&auto=webp&disable=upscale",
+    title: "Марк Цукерберг",
+    description: "Основатель Facebook",
+  },
+  {
+    img: "https://sun1-55.userapi.com/s/v1/ig2/j6hgWxWW-vXf31iM4C5HZgAGKfHfA5wbHc8DX00zc48hk3FX3Q9n4LWasMqEEFfn0GsrWd8hlnOe6WuiRTRRbbTt.jpg?quality=95&as=32x43,48x64,72x96,108x144,160x213,240x320,360x480,480x640,540x719,640x853,680x906&from=bu&u=mmfBuzCQFaMD0vlJcECkLl9PTWD2swXZKXKac6BJlnI&cs=453x604",
+    title: "Рэй Далио",
+    description: "Основатель Bridgewater Associates",
+  },
+  {
+    img: "https://avatars.mds.yandex.net/i?id=0f2326794b11b99baac28b490635aaec-5303267-images-thumbs&n=13",
+    title: "Мелинда Гейтс",
+    description: "Соучредитель Bill & Melinda Gates Foundation",
+  },
+  {
+    img: "https://m.media-amazon.com/images/M/MV5BNWI4ZTJiZmUtZGI5MC00NTk4LTk2OTYtNDU3NTJiM2QxNzM0XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+    title: "Джефф Безос",
+    description: "Основатель Amazon",
   },
 ];
 
@@ -236,35 +275,40 @@ export default function () {
       <LineAnimation>
         <div className={containerStyles.container}>
           <VisibilityManager as="p">
-            Вы достигли многого, но всё равно чувствуете пустоту? 
+            Вы достигли многого, но всё равно чувствуете пустоту?
           </VisibilityManager>
 
           <VisibilityManager as="p">
-            Внешний успех не приносит радости, а внутренний дискомфорт и сомнения не дают покоя?  
+            Внешний успех не приносит радости, а внутренний дискомфорт и
+            сомнения не дают покоя?
           </VisibilityManager>
 
           <VisibilityManager as="p">
-            Почему, несмотря на всё, вы не чувствуете себя на своём месте? 
+            Почему, несмотря на всё, вы не чувствуете себя на своём месте?
           </VisibilityManager>
 
           <VisibilityManager as="p">
-            Почему не хватает гармонии, хотя внешне всё кажется идеальным?  
+            Почему не хватает гармонии, хотя внешне всё кажется идеальным?
           </VisibilityManager>
 
           <VisibilityManager as="p">
-            Что мешает вам быть тем, кем вы на самом деле хотите быть?  
+            Что мешает вам быть тем, кем вы на самом деле хотите быть?
           </VisibilityManager>
 
           <VisibilityManager as="p">
-            Мухоморный ретрит — это возможность встретиться с самим собой настоящим, избавиться от ограничений и раскрыть свой истинный потенциал.  
+            Мухоморный ретрит — это возможность встретиться с самим собой
+            настоящим, избавиться от ограничений и раскрыть свой истинный
+            потенциал.
           </VisibilityManager>
 
           <VisibilityManager as="p">
-            Здесь вы сможете наладить связь с Высшими Силами и понять своё предназначение. 
+            Здесь вы сможете наладить связь с Высшими Силами и понять своё
+            предназначение.
           </VisibilityManager>
 
           <VisibilityManager as="p">
-            Это шанс выйти за пределы старых программ и вернуть радость от жизни, ощутив себя на своём пути.
+            Это шанс выйти за пределы старых программ и вернуть радость от
+            жизни, ощутив себя на своём пути.
           </VisibilityManager>
 
           <div style={{ height: "1px" }} />
@@ -389,10 +433,12 @@ export default function () {
               Уходит тяжесть из тела, появляется лёгкость и свобода движений.
             </p>
             <p className={contentStyles.textDescription}>
-              Становится проще засыпать, просыпаться и чувствовать себя в ресурсе.
+              Становится проще засыпать, просыпаться и чувствовать себя в
+              ресурсе.
             </p>
             <p className={contentStyles.textDescription}>
-              Запускаются процессы, которые ощущаются как глубокое восстановление.
+              Запускаются процессы, которые ощущаются как глубокое
+              восстановление.
             </p>
           </VisibilityManager>
 
@@ -459,9 +505,9 @@ export default function () {
               Подготовка
             </h3>
             <p className={contentStyles.textDescription}>
-              Вы получаете рекомендации по диете и грамотную настройку на погружение.
-              Это позволяет сделать церемонию более осмысленной, безопасной и
-              продуктивной.
+              Вы получаете рекомендации по диете и грамотную настройку на
+              погружение. Это позволяет сделать церемонию более осмысленной,
+              безопасной и продуктивной.
             </p>
           </VisibilityManager>
 
@@ -552,7 +598,40 @@ export default function () {
               потенциал в терапии психических расстройств.
             </p>
           </VisibilityManager>
+        </div>
+      </LineAnimation>
 
+      <LineAnimation>
+        <div className={containerStyles.container}>
+          <VisibilityManager as="h3" className={contentStyles.title_middle}>
+            Пример успешных людей, которые использовали шаманские практики для
+            раскрытия своего потенциала
+          </VisibilityManager>
+          <VisibilityManager as="p">
+            Множество выдающихся личностей, достигших невероятных высот в
+            различных областях, использовали шаманские ритуалы и духовные
+            практики для расширения восприятия, глубокого самопознания и
+            раскрытия своего истинного потенциала. Эти практики помогли им
+            соединиться с Высшими Силами, получить вдохновение и ясность, а
+            также направить свою энергию в творческое русло.
+          </VisibilityManager>
+          <PhotoGrid photos={teamMembers} />
+          <VisibilityManager as="p">
+            Эти выдающиеся люди понимают, что истинный успех начинается с
+            гармонии внутри себя и взаимодействия с Высшими Силами.
+          </VisibilityManager>
+          <VisibilityManager as="p">
+            Вы также можете раскрыть свой потенциал через Мухоморный Ретрит,
+            который поможет вам войти в глубокую гармонию с собой, осознать
+            своё предназначение и получить мощное Благословение от Высших
+            Сил. Не упустите шанс стать частью этого пути и трансформировать
+            свою жизнь.
+          </VisibilityManager>
+        </div>
+      </LineAnimation>
+
+      <LineAnimation>
+        <div className={containerStyles.container}>
           <div style={{ height: "1px" }} />
           <VisibilityManager as="h3" className={contentStyles.title_middle}>
             Риски и меры предосторожности
@@ -603,7 +682,8 @@ export default function () {
           </VisibilityManager>
 
           <VisibilityManager as="p">
-            Мухомор — это Величайший источник трансформации на уровне духа, эмоций и тела.
+            Мухомор — это Величайший источник трансформации на уровне духа,
+            эмоций и тела.
           </VisibilityManager>
 
           <VisibilityManager as="p">
@@ -612,8 +692,8 @@ export default function () {
           </VisibilityManager>
 
           <VisibilityManager as="p">
-            После погружения, человек испытывает «самые приятные ощущения в жизни» -
-            прямая цитата одного из участников.
+            После погружения, человек испытывает «самые приятные ощущения в
+            жизни» - прямая цитата одного из участников.
           </VisibilityManager>
 
           <VisibilityManager as="p">
