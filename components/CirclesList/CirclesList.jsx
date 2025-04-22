@@ -4,7 +4,7 @@ import { LineAnimation } from "../LineAnomation/LineAnimation";
 import { VisibilityManager } from "../shared/VisibilityManager";
 import contentStyles from "../../styles/contentStyles.module.css";
 
-export const CirclesList = ({ title, titleEmpty, items, descriptions }) => {
+export const CirclesList = ({ title, titleEmpty, items, descriptions, underTitle }) => {
   return (
     <LineAnimation>
       <div className={styles.block}>
@@ -13,12 +13,18 @@ export const CirclesList = ({ title, titleEmpty, items, descriptions }) => {
             as="h2"
             side="left"
             className={contentStyles.title}
-            style={{marginLeft: 0, marginRight: 0}}
+            style={{marginLeft: 0, marginRight: 0, marginBottom: 0}}
           >
             {title}
             {titleEmpty && (
               <span className={contentStyles.title_empty}>{titleEmpty}</span>
             )}
+          </VisibilityManager>
+        )}
+
+        {underTitle?.length > 0 && (
+          <VisibilityManager as="p" className={styles.description}>
+            {underTitle}
           </VisibilityManager>
         )}
 

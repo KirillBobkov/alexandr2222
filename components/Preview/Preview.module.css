@@ -6,6 +6,8 @@
   height: 100dvh; /* Full height of the viewport */
   min-height: 500px;
   color: var(--font-color);
+  overflow: hidden;
+  
 }
 
 .preview__content {

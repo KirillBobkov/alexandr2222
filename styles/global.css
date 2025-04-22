@@ -18,11 +18,12 @@
   --font-color: #ffffff;
   --secondary-font-color: #a2a2a2;
   --accent: #eeb100;
+  --accent-rgb: 238, 177, 0;
   --border-color: #1C1C1C;
   --card-color: #181818;
   --bg-color-opacity: #0000008e;
   --nav-mobile-opacity: #0000008e;
-  --button-background: #181818;
+  --button-background: #262626;
   --social-icon-color: #4c4c4c;
   --social-icon-color-hover: #1f1f1f;
 }
@@ -47,6 +48,7 @@
   --font-color: #828282;
   --secondary-font-color: #6f6f6f;
   --accent: #3467ff;
+  --accent-rgb: 52, 103, 255;
   --border-color: #ebebeb;
   --card-color: #ebebeb;
   --bg-color-opacity: #2e2e2e25;

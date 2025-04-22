@@ -66,6 +66,13 @@
       text-transform: uppercase;
       color: var(--font-color);
   }
+
+  .title_small {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+    color: var(--font-color);
+  }
 }
 
 .centerContent {

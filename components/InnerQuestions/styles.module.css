@@ -1,0 +1,65 @@
+.container {
+    background-color: var(--card-color);
+}
+
+.block {
+    max-width: 1285px;
+    margin: 0 auto;
+    padding: 150px 30px 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    max-width: 1000px;
+    padding: 0;
+    list-style: none;
+}
+
+.textBlock {
+    position: relative;
+    display: flex;
+}
+
+.item {
+}
+
+
+@media (max-width: 768px) {
+    .gridContainer {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 20px;
+      margin-bottom: 0;
+    }
+    
+    .block {
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      padding: 100px 20px;
+    }
+  
+    .description {
+      flex-basis: 100%;
+    }
+  
+    .image {
+      aspect-ratio: 1 /1;
+    }
+  
+    .textContent {
+      margin-bottom: 0;
+    }
+  }

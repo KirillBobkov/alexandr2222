@@ -9,6 +9,9 @@ import { Final } from "../components/Final/Final";
 import { Products } from "../components/Products/Products";
 import { AboutMe } from "../components/AboutMe/AboutMe";
 import { CirclesList } from "../components/CirclesList/CirclesList";
+import { InnerSatisfaction } from "../components/InnerSatisfaction";
+import { InnerQuestions } from "../components/InnerQuestions";
+import { InnerCracking } from "../components/InnerCracking";
 import enter_hole_1 from "../images/enter_hole_1.webp";
 import enter_hole_2 from "../images/enter_hole_2.webp";
 import logo from "../images/logo.webp";
@@ -205,7 +208,33 @@ export default function () {
   return (
     <Layout metaConfig={metaConfig} schemaOrg={schemaOrg}>
       <Preview />
-      <Bio />
+      <InnerSatisfaction />
+      <InnerQuestions />
+      {/* <InnerCracking /> */}
+
+      <CirclesList
+        {...{
+          title: "Почему жизнь начинает ",
+          titleEmpty: "трещать по швам?",
+          underTitle:
+            "Потому что изначально вам был дан ресурс. Не просто шанс, а живая сила — как знак доверия от самой Жизни. Когда вы идёте по своему пути, она поддерживает, питает, направляет. Но если свернуть — если начать жить не своей жизнью, пытаться угодить чужим ожиданиям, гнаться за иллюзиями — эта поддержка начинает ускользать.",
+          items: [
+            { title: "вы теряете энергию" },
+            { title: "теряется ясность" },
+            { title: "появляются ссоры, усталость, тревога" },
+            { title: "тело слабеет" },
+            { title: "деньги приходят, но не радуют" },
+            { title: "в зеркале — не вы" },
+          ],
+          descriptions: [
+            "И всё вокруг словно гаснет. Не потому, что кто-то наказывает. А потому, что вы отдаляетесь от себя.",
+            "Если продолжать так жить, можно остаться у разбитого корыта — в одиночестве, усталости, с болью внутри.",
+            "Потому что сила, которая была дана вам, будет передана другому — тому, кто готов её понести. Кто идёт честно, глубоко, по-настоящему.",
+            "Но если вы читаете эти строки — у вас ещё есть выбор. Всё можно вернуть. Только для этого нужно решиться: заглянуть внутрь и вспомнить, кто вы."
+          ]
+        }}
+      />
+
       <AboutMe
         {...{
           title: "могу вам помочь",
@@ -229,13 +258,18 @@ export default function () {
       />
 
       <LineAnimation>
-        <VisibilityManager as="section" className={containerStyles.container} style={{ maxWidth: '1285px!important' }}>
-          <div className={contentStyles.title} style={{ margin: '0',  }}>
+        <VisibilityManager
+          as="section"
+          className={containerStyles.container}
+          style={{ maxWidth: "1285px!important" }}
+        >
+          <div className={contentStyles.title} style={{ margin: "0" }}>
             <span>Результат с </span>
             <span className={contentStyles.title_empty}>1-ой сессии</span>
           </div>
         </VisibilityManager>
       </LineAnimation>
+      <Bio />
 
       <CirclesList
         {...{
@@ -252,18 +286,20 @@ export default function () {
 
       <Final
         title="Мухоморный ретрит в Казани"
-        description="Практика, связанная с использованием Мухомора в духовных и терапевтических целях"
+        description="Путь исцеления и самопознания, открывающий доступ к встрече с Высшими Силами, позволяет наладить связь с Творцом и раскрыть своё предназначение."
         buttonText="Подробнее"
         buttonHref="/ceremony"
         image={enter_hole_1}
+        price="300 000 ₽"
       />
       <AnimatedLine />
       <Final
         title="Нейротраблшуттинг"
-        description="Эффективный способ работы с подсознанием для переработки травмирующих событий и освобождения от ограничивающих убеждений"
+        description="Точечное и быстрое устранение первопричин блоков, страхов, зависимостей и ограничений через глубинную работу с подсознанием."
         buttonText="Подробнее"
         buttonHref="/neurotroubleshutting"
         image={enter_hole_2}
+        price="150 000 ₽"
       />
       <AnimatedLine />
       <Final

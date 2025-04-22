@@ -9,7 +9,8 @@ export const Final = ({
   description,
   buttonText,
   buttonHref,
-  image
+  image,
+  price
 }) => {
   const [loaded, setLoaded] = React.useState(false);
 
@@ -34,11 +35,21 @@ export const Final = ({
           </>
         )}
         <VisibilityManager as="h3" className={`${styles.title} ${image ? "" : styles.title_no_image}`}>
-          <span>{title}</span>
+          {title}
         </VisibilityManager>
+
+        {price && (
+          <VisibilityManager as="div" className={styles.price}>
+            {price}
+          </VisibilityManager>
+        )}
+
+
         <VisibilityManager as="p" className={styles.description + " " + (image ? "" : styles.description_no_image)}>
-          <span>{description}</span>
+          {description}
         </VisibilityManager>
+
+
         {buttonText && buttonHref && (
           <VisibilityManager as="div" style={{zIndex: "4"}}>
             <LinkButton href={buttonHref}>{buttonText}</LinkButton>
