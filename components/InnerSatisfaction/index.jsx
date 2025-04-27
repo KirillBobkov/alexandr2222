@@ -2,11 +2,9 @@ import React from "react";
 import styles from "./InnerSatisfaction.module.css";
 import { VisibilityManager } from "../shared/VisibilityManager";
 import contentStyles from "../../styles/contentStyles.module.css";
-import { LineAnimation } from "../LineAnomation/LineAnimation";
 
 export const InnerSatisfaction = () => {
   return (
-    <LineAnimation>
       <div className={styles.container}>
         <div className={styles.block}>
           <VisibilityManager
@@ -32,6 +30,5 @@ export const InnerSatisfaction = () => {
           </VisibilityManager>
         </div>
       </div>
-    </LineAnimation>
   );
 };

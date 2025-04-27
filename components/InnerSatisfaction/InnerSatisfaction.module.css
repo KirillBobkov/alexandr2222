@@ -1,11 +1,11 @@
 .container {
-
+  background-color: var(--card-color);
 }
 
 .block {
   max-width: 1285px;
   margin: 0 auto;
-  padding: 150px 30px 100px;
+  padding: 150px 30px 150px;
   display: flex;
   flex-direction: column;
   gap: 60px;
