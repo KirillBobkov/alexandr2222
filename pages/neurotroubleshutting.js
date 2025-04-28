@@ -147,12 +147,11 @@ const videos = [
   },
 ];
 
-const schemaOrg = `
-{
+const schemaOrg = {
   "@context": "https://schema.org",
-  "@type": "Service",
+  "@type": "ProfessionalService",
   "name": "Нейротраблшуттинг",
-  "description": "Проработка подсознательных блоков: тревожность, депрессия, фобии, психосоматика.",
+  "description": "Проработка подсознательных блоков: тревожность, депрессия, фобии, психосоматика. Быстрое решение проблем за 1-8 сессий.",
   "url": "https://alexandrvasilev.ru/neurotroubleshutting",
   "provider": {
     "@type": "Person",
@@ -164,13 +163,21 @@ const schemaOrg = `
   "serviceType": "Нейротраблшуттинг",
   "offers": {
     "@type": "Offer",
-    "price": "Бесплатная первая консультация",
+    "price": "0",
     "priceCurrency": "RUB",
     "availability": "https://schema.org/InStock",
     "url": "https://alexandrvasilev.ru/neurotroubleshutting#message",
     "description": "Запишитесь на бесплатную консультацию, чтобы узнать причины своих проблем и способы их решения."
   },
-  "areaServed": "Worldwide",
+  "areaServed": {
+    "@type": "GeoCircle",
+    "geoMidpoint": {
+      "@type": "GeoCoordinates",
+      "latitude": "55.7558",
+      "longitude": "37.6173"
+    },
+    "geoRadius": "10000000"
+  },
   "keywords": "нейротраблшуттинг, гипнотерапия, гипнотерапевт, НЛП, психосоматика, депрессия, тревожность, проработка страхов, экзорцизм, психология, гипноз, подсознательные блоки",
   "potentialAction": {
     "@type": "ReserveAction",
@@ -182,9 +189,254 @@ const schemaOrg = `
       "@type": "Reservation",
       "name": "Запись на бесплатную консультацию"
     }
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Услуги нейротраблшуттинга",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Проработка страхов и фобий",
+          "description": "Устранение глубинных страхов и фобий, заложенных в детстве или до рождения"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Работа с психосоматикой",
+          "description": "Решение психосоматических реакций, включая аллергии и панические атаки"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Коррекция ограничивающих убеждений",
+          "description": "Устранение негативных установок, мешающих достижению целей"
+        }
+      }
+    ]
+  },
+  "serviceOutput": {
+    "@type": "Thing",
+    "name": "Результаты нейротраблшуттинга",
+    "description": "Свобода от ограничений, гармония с собой и миром, энергия для достижения целей"
+  },
+  "serviceAudience": {
+    "@type": "Audience",
+    "audienceType": "Люди, страдающие от тревожности, депрессии, фобий и психосоматических расстройств"
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Александра"
+      },
+      "datePublished": "2025-04-09",
+      "reviewBody": "Отзыв о проработке с Александром Васильевым",
+      "itemReviewed": {
+        "@type": "ProfessionalService",
+        "name": "Нейротраблшуттинг"
+      }
+    },
+    {
+      "@type": "Review",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Виктория"
+      },
+      "datePublished": "2025-04-09",
+      "reviewBody": "Отзыв о проработке с Александром Васильевым",
+      "itemReviewed": {
+        "@type": "ProfessionalService",
+        "name": "Нейротраблшуттинг"
+      }
+    },
+    {
+      "@type": "Review",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Булат Рустамович"
+      },
+      "datePublished": "2025-03-13",
+      "reviewBody": "Отзыв о проработках с Александром 'Интегралом' Васильевым",
+      "itemReviewed": {
+        "@type": "ProfessionalService",
+        "name": "Нейротраблшуттинг"
+      }
+    },
+    {
+      "@type": "Review",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Андрей"
+      },
+      "datePublished": "2025-03-13",
+      "reviewBody": "Отзыв о работе с Александром 'Интегралом' Васильевым",
+      "itemReviewed": {
+        "@type": "ProfessionalService",
+        "name": "Нейротраблшуттинг"
+      }
+    },
+    {
+      "@type": "Review",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Тина"
+      },
+      "datePublished": "2024-11-14",
+      "reviewBody": "Отзыв о проработке с Александром 'Интегралом' Васильевым",
+      "itemReviewed": {
+        "@type": "ProfessionalService",
+        "name": "Нейротраблшуттинг"
+      }
+    },
+    {
+      "@type": "Review",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Александр Дворянинов"
+      },
+      "datePublished": "2024-11-30",
+      "reviewBody": "Отзыв о работе с Александром 'Интегралом' Васильевым",
+      "itemReviewed": {
+        "@type": "ProfessionalService",
+        "name": "Нейротраблшуттинг"
+      }
+    },
+    {
+      "@type": "Review",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Дмитрий Афанасьев"
+      },
+      "datePublished": "2024-11-30",
+      "reviewBody": "Отзыв о работе с Александром 'Интегралом' Васильевым",
+      "itemReviewed": {
+        "@type": "ProfessionalService",
+        "name": "Нейротраблшуттинг"
+      }
+    },
+    {
+      "@type": "Review",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Сергей Хан"
+      },
+      "datePublished": "2024-11-30",
+      "reviewBody": "Отзыв о работе с Александром 'Интегралом' Васильевым",
+      "itemReviewed": {
+        "@type": "ProfessionalService",
+        "name": "Нейротраблшуттинг"
+      }
+    },
+    {
+      "@type": "Review",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Кирилл Бобков"
+      },
+      "datePublished": "2024-11-30",
+      "reviewBody": "Отзыв о работе Александра 'Интеграла' Васильева",
+      "itemReviewed": {
+        "@type": "ProfessionalService",
+        "name": "Нейротраблшуттинг"
+      }
+    },
+    {
+      "@type": "Review",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Никита Цыпленков"
+      },
+      "datePublished": "2024-11-30",
+      "reviewBody": "Отзыв о работе с Александром 'Интегралом' Васильевым",
+      "itemReviewed": {
+        "@type": "ProfessionalService",
+        "name": "Нейротраблшуттинг"
+      }
+    },
+    {
+      "@type": "Review",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Ксения"
+      },
+      "datePublished": "2024-11-30",
+      "reviewBody": "Отзыв о работе с Александром 'Интегралом' Васильевым",
+      "itemReviewed": {
+        "@type": "ProfessionalService",
+        "name": "Нейротраблшуттинг"
+      }
+    }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "reviewCount": "11",
+    "bestRating": "5",
+    "worstRating": "1"
   }
-}
-`;
+};
 
 export default function () {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -236,7 +488,6 @@ export default function () {
               Сохраняет приватность: мы не разбираем ваше прошлое — мы меняем его влияние на вас здесь и сейчас.
             </p>
           </VisibilityManager>
-
   
 
           <VisibilityManager as="div" className={contentStyles.textBlock}>

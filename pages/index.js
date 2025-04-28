@@ -19,8 +19,7 @@ import containerStyles from "../styles/container.module.css";
 import { LineAnimation } from "../components/LineAnomation/LineAnimation";
 import { VisibilityManager } from "../components/shared/VisibilityManager";
 
-const schemaOrg = `
-{
+const schemaOrg = {
   "@context": "https://schema.org",
   "@type": "WebPage",
   "name": "Александр \"Интеграл\" Васильев — Нейротраблшуттер",
@@ -210,8 +209,7 @@ const schemaOrg = `
     "description": "Запишитесь на бесплатную консультацию, и я свяжусь с вами в ближайшее время. Первая консультация — бесплатно."
   },
   "keywords": "очищение интеграл ретрит грибы дурман нейротраблшуттинг мухоморный ретрит вегетализм кинезиология внутреннее удовлетворение жизненный кризис предназначение"
-}
-`;
+};
 
 export const products = [
   ...neurotroubleshuttingProducts,

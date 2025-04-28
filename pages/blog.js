@@ -188,10 +188,36 @@ export default function Blog() {
     keywords: "шаманизм, духовные практики, мухомор, природа, гармония",
   };
 
+  const schemaOrg = {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Блог о духовных практиках и природной мудрости",
+    "description": "Исследуйте статьи о шаманских практиках, традициях и пути к гармонии через природу",
+    "url": "https://alexandrvasilev.ru/blog",
+    "publisher": {
+      "@type": "Person",
+      "name": "Александр Васильев",
+      "url": "https://alexandrvasilev.ru/#about",
+      "description": "Нейротраблшуттер, специалист по работе с подсознанием",
+      "jobTitle": "Нейротраблшуттер, специалист по работе с подсознанием"
+    },
+    "blogPost": articles.map(article => ({
+      "@type": "BlogPosting",
+      "headline": article.title,
+      "description": article.description,
+      "datePublished": article.date,
+      "url": `https://alexandrvasilev.ru/blog/${article.slug}`
+    })),
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://alexandrvasilev.ru/blog"
+    }
+  };
+
   useScrollToLocation();
 
   return (
-    <Layout metaConfig={metaConfig}>
+    <Layout metaConfig={metaConfig} schemaOrg={schemaOrg}>
       <SecondaryPreview text="Блог" image={secondary_preview_11} />
       <LineAnimation>
         <div className={styles.blogContainer}>

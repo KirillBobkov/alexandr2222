@@ -1,6 +1,7 @@
 import { Footer } from "../Footer/Footer";
 import { Navigation } from "../Navigation/Navigation";
 import Head from "next/head";
+import Script from "next/script";
 import favicon32x32 from "../../images/favicon32x32.png";
 import favicon180x180 from "../../images/favicon180x180.png";
 import meta_logo from "../../images/meta_logo.webp";
@@ -48,13 +49,6 @@ export default function Layout({ children, metaConfig, schemaOrg = '' }) {
 
         <title>{title}</title>
         <meta name="description" content={description} />
-        {schemaOrg && (
-          <script
-            key="schema-org"
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: schemaOrg }}
-          />
-        )}
         <meta charSet="utf-8" />
         <meta
           name="viewport"
@@ -87,6 +81,15 @@ export default function Layout({ children, metaConfig, schemaOrg = '' }) {
         <link rel="apple-touch-startup-image" href={favicon32x32.src} />
       
       </Head>
+      {schemaOrg && (
+        <Script
+          id="schema-org"
+          type="application/ld+json"
+          strategy="beforeInteractive"
+        >
+          {JSON.stringify(schemaOrg)}
+        </Script>
+      )}
       <Navigation />
       {seoContent && (
         <h1 style={{ 
