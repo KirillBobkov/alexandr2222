@@ -10,8 +10,7 @@ import contentStyles from "../../styles/contentStyles.module.css";
 import secondary_preview_27 from "../../images/secondary_preview_27.webp";
 import { Button } from "../../components/shared/Button/Button";
 
-const schemaOrg = `
-{
+const schemaOrg = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
   "headline": "Почему не получается держать дисциплину — и как это изменить",
@@ -63,8 +62,7 @@ const schemaOrg = `
     "url": "https://alexandrvasilev.ru/blog/discipline#message",
     "description": "Запишитесь на консультацию, чтобы узнать истинную причину отсутствия дисциплины в вашей жизни."
   }
-}
-`;
+};
 
 export default function () {
   const [isSubmitted, setIsSubmitted] = useState(false);

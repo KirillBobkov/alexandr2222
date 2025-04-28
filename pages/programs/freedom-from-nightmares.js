@@ -10,8 +10,7 @@ import contentStyles from "../../styles/contentStyles.module.css";
 import secondary_preview_16 from "../../images/secondary_preview_16.webp"; // You might want to use a different image
 import { Button } from "../../components/shared/Button/Button";
 
-const schemaOrg = `
-{
+const schemaOrg = {
   "@context": "https://schema.org",
   "@type": "Service",
   "name": "Избавление от ночных кошмаров",
@@ -41,8 +40,7 @@ const schemaOrg = `
     "@type": "WebPage",
     "@id": "https://alexandrvasilev.ru/programs/freedom-from-nightmares"
   }
-}
-`;
+};
 
 export default function () {
   const [isSubmitted, setIsSubmitted] = useState(false);

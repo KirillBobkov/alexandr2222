@@ -10,8 +10,7 @@ import contentStyles from "../../styles/contentStyles.module.css";
 import secondary_preview_12 from "../../images/secondary_preview_12.webp";
 import { Button } from "../../components/shared/Button/Button";
 
-const schemaOrg = `
-{
+const schemaOrg = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
   "headline": "Курение как подсознательный крик души: почему мы травим себя и как это остановить",
@@ -63,8 +62,7 @@ const schemaOrg = `
     "url": "https://alexandrvasilev.ru/blog/smoking#message",
     "description": "Запишитесь на консультацию, чтобы узнать, как нейротраблшуттинг поможет вам избавиться от курения."
   }
-}
-`;
+};
 
 export default function () {
   const [isSubmitted, setIsSubmitted] = useState(false);

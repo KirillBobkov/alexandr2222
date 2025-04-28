@@ -10,8 +10,7 @@ import contentStyles from "../../styles/contentStyles.module.css";
 import secondary_preview_9 from "../../images/secondary_preview_9.webp";
 import { Button } from "../../components/shared/Button/Button";
 
-const schemaOrg = `
-{
+const schemaOrg = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
   "headline": "Вегетализм: путь к гармонии через силу растений",
@@ -56,8 +55,7 @@ const schemaOrg = `
     "url": "https://alexandrvasilev.ru/blog/vegetalism#message",
     "description": "Приглашаю вас на путь вегетализма. Запишитесь на консультацию, чтобы узнать больше."
   }
-}
-`;
+};
 
 export default function () {
   const [isSubmitted, setIsSubmitted] = useState(false);

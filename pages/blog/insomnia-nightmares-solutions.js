@@ -10,8 +10,7 @@ import contentStyles from "../../styles/contentStyles.module.css";
 import secondary_preview_25 from "../../images/secondary_preview_25.webp";
 import { Button } from "../../components/shared/Button/Button";
 
-const schemaOrg = `
-{
+const schemaOrg = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
   "headline": "Бессонница и кошмары: что скрывается в глубинах подсознания?",
@@ -63,8 +62,7 @@ const schemaOrg = `
     "url": "https://alexandrvasilev.ru/blog/insomnia-nightmares-solutions#message",
     "description": "Запишитесь на консультацию, чтобы узнать, как нейротраблшуттинг может помочь вам нормализовать сон и избавиться от кошмаров."
   }
-}
-`;
+};
 
 export default function () {
   const [isSubmitted, setIsSubmitted] = useState(false);

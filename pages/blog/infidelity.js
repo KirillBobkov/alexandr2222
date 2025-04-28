@@ -10,8 +10,7 @@ import contentStyles from "../../styles/contentStyles.module.css";
 import secondary_preview_18 from "../../images/secondary_preview_18.webp";
 import { Button } from "../../components/shared/Button/Button";
 
-const schemaOrg = `
-{
+const schemaOrg = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
   "headline": "Как нейротраблшуттинг помогает пережить измену: восстановление доверия через работу с подсознанием",
@@ -63,8 +62,7 @@ const schemaOrg = `
     "url": "https://alexandrvasilev.ru/blog/infidelity#message",
     "description": "Запишитесь на консультацию, чтобы узнать, как нейротраблшуттинг может помочь вам пережить измену и восстановить способность доверять."
   }
-}
-`;
+};
 
 export default function () {
   const [isSubmitted, setIsSubmitted] = useState(false);

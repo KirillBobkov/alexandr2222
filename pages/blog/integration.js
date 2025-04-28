@@ -10,8 +10,7 @@ import contentStyles from "../../styles/contentStyles.module.css";
 import secondary_preview_19 from "../../images/secondary_preview_19.webp";
 import { Button } from "../../components/shared/Button/Button";
 
-const schemaOrg = `
-{
+const schemaOrg = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
   "headline": "Для чего нужна интеграция после мухоморного погружения?",
@@ -63,8 +62,7 @@ const schemaOrg = `
     "url": "https://alexandrvasilev.ru/blog/integration#message",
     "description": "Запишитесь на консультацию, чтобы узнать больше о правильной интеграции духовного опыта в повседневную жизнь."
   }
-}
-`;
+};
 
 export default function () {
   const [isSubmitted, setIsSubmitted] = useState(false);

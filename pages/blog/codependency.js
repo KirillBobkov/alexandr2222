@@ -10,8 +10,7 @@ import contentStyles from "../../styles/contentStyles.module.css";
 import secondary_preview_20 from "../../images/secondary_preview_20.webp";
 import { Button } from "../../components/shared/Button/Button";
 
-const schemaOrg = `
-{
+const schemaOrg = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
   "headline": "Как перестать быть «вечным спасателем»: нейротраблшуттинг в борьбе с созависимостью",
@@ -63,8 +62,7 @@ const schemaOrg = `
     "url": "https://alexandrvasilev.ru/blog/codependency#message",
     "description": "Запишитесь на консультацию, чтобы узнать, как освободиться от созависимых отношений и вернуть право на собственную жизнь."
   }
-}
-`;
+};
 
 export default function () {
   const [isSubmitted, setIsSubmitted] = useState(false);

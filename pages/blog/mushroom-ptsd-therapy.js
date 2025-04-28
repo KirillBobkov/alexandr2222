@@ -10,8 +10,7 @@ import contentStyles from "../../styles/contentStyles.module.css";
 import secondary_preview_25 from "../../images/secondary_preview_25.webp";
 import { Button } from "../../components/shared/Button/Button";
 
-const schemaOrg = `
-{
+const schemaOrg = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
   "headline": "Мухомор и терапия ПТСР: улучшение самочувствия через связь с подсознанием",
@@ -56,8 +55,7 @@ const schemaOrg = `
     "url": "https://alexandrvasilev.ru/blog/mushroom-ptsd-therapy#message",
     "description": "Запишитесь на консультацию, чтобы узнать больше о терапии психологических травм."
   }
-}
-`;
+};
 
 export default function () {
   const [isSubmitted, setIsSubmitted] = useState(false);

@@ -10,8 +10,7 @@ import contentStyles from "../../styles/contentStyles.module.css";
 import secondary_preview_5 from "../../images/secondary_preview_5.webp";
 import { Button } from "../../components/shared/Button/Button";
 
-const schemaOrg = `
-{
+const schemaOrg = {
   "@context": "https://schema.org",
   "@type": "Service",
   "name": "Удаление негативных воспоминаний",
@@ -41,8 +40,7 @@ const schemaOrg = `
     "@type": "WebPage",
     "@id": "https://alexandrvasilev.ru/programs/remove-bad-memories"
   }
-}
-`;
+};
 
 export default function () {
   const [isSubmitted, setIsSubmitted] = useState(false);

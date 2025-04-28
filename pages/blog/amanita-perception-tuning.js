@@ -10,8 +10,7 @@ import contentStyles from "../../styles/contentStyles.module.css";
 import secondary_preview_21 from "../../images/secondary_preview_21.webp";
 import { Button } from "../../components/shared/Button/Button";
 
-const schemaOrg = `
-{
+const schemaOrg = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
   "headline": "Мухомор и тонкая настройка восприятия: Как гриб открывает скрытые измерения реальности",
@@ -63,8 +62,7 @@ const schemaOrg = `
     "url": "https://alexandrvasilev.ru/blog/amanita-perception-tuning#message",
     "description": "Запишитесь на консультацию, чтобы узнать больше о тонкой настройке восприятия с помощью мухомора."
   }
-}
-`;
+};
 
 export default function () {
   const [isSubmitted, setIsSubmitted] = useState(false);

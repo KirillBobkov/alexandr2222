@@ -10,8 +10,7 @@ import contentStyles from "../../styles/contentStyles.module.css";
 import secondary_preview_23 from "../../images/secondary_preview_23.webp";
 import { Button } from "../../components/shared/Button/Button";
 
-const schemaOrg = `
-{
+const schemaOrg = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
   "headline": "Как работает Пантерный Мухомор? Глубинные механизмы влияния на психику и тело",
@@ -63,8 +62,7 @@ const schemaOrg = `
     "url": "https://alexandrvasilev.ru/blog/panther-mushroom-mechanisms#message",
     "description": "Запишитесь на консультацию, чтобы узнать больше о безопасной работе с Пантерным Мухомором."
   }
-}
-`;
+};
 
 export default function () {
   const [isSubmitted, setIsSubmitted] = useState(false);

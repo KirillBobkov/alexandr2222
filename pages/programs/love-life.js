@@ -11,8 +11,7 @@ import secondary_preview_1 from "../../images/secondary_preview_1.webp";
 import secondary_preview_20 from "../../images/secondary_preview_20.webp";
 import { Button } from "../../components/shared/Button/Button";
 
-const schemaOrg = `
-{
+const schemaOrg = {
   "@context": "https://schema.org",
   "@type": "Service",
   "name": "Программа «Полюби жизнь»",
@@ -42,8 +41,7 @@ const schemaOrg = `
     "@type": "WebPage",
     "@id": "https://alexandrvasilev.ru/programs/love-life"
   }
-}
-`;
+};
 
 export default function () {
   const [isSubmitted, setIsSubmitted] = useState(false);
