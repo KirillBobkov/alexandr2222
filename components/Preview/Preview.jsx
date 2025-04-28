@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./Preview.module.css";
 import preview_bg from "../../images/preview_bg.webp";
 import preview_bg_light from "../../images/preview_bg_light.webp";
+import vadgra from "../../images/vadgra.webp";
 import Image from "next/image.js";
 import { VisibilityManager } from "../shared/VisibilityManager";
 import { LineAnimation } from "../LineAnomation/LineAnimation";
@@ -51,11 +52,12 @@ export const Preview = () => {
           <div className={styles.social_links}>
             <span
               className={styles.social_link}
-              style={{ position: "relative", cursor: "not-allowed" }}
+              style={{ position: "relative", cursor: "not-allowed", background: "transparent", boxShadow: "none" }}
             >
               <svg
                 className={styles.social_icon}
                 width="24"
+      
                 height="24"
                 viewBox="0 0 24 24"
                 fill="none"
@@ -79,27 +81,13 @@ export const Preview = () => {
                   pointerEvents: "none",
                 }}
               >
-                <svg
-                  width="60"
-                  height="60"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
+                <Image
+                  src={vadgra}
+                  alt="overlay"
+                  width={50}
+                  height={50}
                   style={{ position: "absolute" }}
-                >
-                  <path
-                    d="M19 5L5 19"
-                    stroke="red"
-                    strokeWidth="2.5"
-                    strokeLinecap="round"
-                  />
-                  <path
-                    d="M5 5L19 19"
-                    stroke="red"
-                    strokeWidth="2.5"
-                    strokeLinecap="round"
-                  />
-                </svg>
+                />
               </div>
               <span className={styles.social_label}>VK</span>
             </span>
@@ -147,7 +135,7 @@ export const Preview = () => {
             </a>
             <span
               className={styles.social_link}
-              style={{ position: "relative", cursor: "not-allowed" }}
+              style={{ position: "relative", cursor: "not-allowed", background: "transparent", boxShadow: "none" }}
             >
               <svg
                 className={styles.social_icon}
@@ -175,27 +163,13 @@ export const Preview = () => {
                   pointerEvents: "none",
                 }}
               >
-                <svg
-                  width="60"
-                  height="60"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
+                <Image
+                  src={vadgra}
+                  alt="overlay"
+                  width={50}
+                  height={50}
                   style={{ position: "absolute" }}
-                >
-                  <path
-                    d="M19 5L5 19"
-                    stroke="red"
-                    strokeWidth="2.5"
-                    strokeLinecap="round"
-                  />
-                  <path
-                    d="M5 5L19 19"
-                    stroke="red"
-                    strokeWidth="2.5"
-                    strokeLinecap="round"
-                  />
-                </svg>
+                />
               </div>
               <span className={styles.social_label}>Дзен</span>
             </span>

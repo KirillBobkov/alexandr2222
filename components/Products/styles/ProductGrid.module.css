@@ -40,7 +40,6 @@
   background: linear-gradient(-45deg, var(--accent) 16%, var(--bg-color) 53%, var(--bg-color) 83%);
   opacity: 0;
   transition: opacity 1s ease-in-out;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
 }
 
 .card.disabled {

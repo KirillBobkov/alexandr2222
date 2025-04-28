@@ -1,16 +1,17 @@
 import React, { useState } from "react";
 
 import styles from "./Questions.module.css";
+
 import { VisibilityManager } from "../shared/VisibilityManager";
 import { LineAnimation } from "../LineAnomation/LineAnimation.jsx";
-
+import contentStyles from "../../styles/contentStyles.module.css";
 export const Questions = ({ questionsContent }) => {
   return (
     <LineAnimation>
       <div>
         <VisibilityManager className={`${styles.container}`} id="faq">
-          <h2 className={styles.question__main_title}>
-            <span className={styles.title_empty}> Вопросы и </span> ответы
+          <h2 className={contentStyles.title}>
+            <span className={contentStyles.title_empty}> Вопросы и </span> ответы
           </h2>
           <ul>
             {questionsContent.blocks.map((q) => {

@@ -4,6 +4,7 @@ import { LineAnimation } from "../LineAnomation/LineAnimation";
 import { VisibilityManager } from "../shared/VisibilityManager";
 import chart from "../../images/chart.webp";
 import Image from "next/image";
+import contentStyles from "../../styles/contentStyles.module.css";
 
 export const Suggest = () => {
   const [loaded, setLoaded] = React.useState(false);
@@ -11,8 +12,8 @@ export const Suggest = () => {
   return (
     <LineAnimation>
       <div className={styles.block}>
-        <VisibilityManager as="h2" side="left" className={styles.title}>
-          <span className={styles.title_empty}>Что я </span>
+        <VisibilityManager as="h2" side="left" className={contentStyles.title}>
+          <span className={contentStyles.title_empty}>Что я </span>
           предлагаю вам?
         </VisibilityManager>
 

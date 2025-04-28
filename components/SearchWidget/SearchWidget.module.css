@@ -4,7 +4,6 @@
   height: 200px;
   border-radius: 20px;
   background-color: var(--card-color);
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
   top: 2rem;
 }
 
