@@ -66,7 +66,6 @@ body {
   font-family: var(--body-font);
   font-weight: 300;
   margin: 0;
-  background-color: var(--bg-color);
   font-family: "Open Sans", sans-serif;
   font-size: 18px;
   font-weight: 400;
@@ -79,6 +78,7 @@ html,
 body {
   overflow-x: hidden;
   height: 100%;
+  background-color: var(--bg-color);
   white-space: pre-line;
 }
 

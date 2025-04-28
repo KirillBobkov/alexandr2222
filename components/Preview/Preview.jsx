@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./Preview.module.css";
 import preview_bg from "../../images/preview_bg.webp";
 import preview_bg_light from "../../images/preview_bg_light.webp";
+
 import vadgra from "../../images/vadgra.webp";
 import Image from "next/image.js";
 import { VisibilityManager } from "../shared/VisibilityManager";

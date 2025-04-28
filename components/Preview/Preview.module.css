@@ -29,10 +29,10 @@
 
 .preview__bg {
   position: absolute;
-  bottom: -50%;
+  bottom: -60%;
   width: auto;
-  height: 100%;
-  z-index: -1; /* Send the image to the back */
+  height: 120%;
+  z-index: 0; /* Send the image to the back */
   animation: rotate-right 120s linear infinite;
   opacity: 0;
   transition: opacity 1s ease-in-out;
