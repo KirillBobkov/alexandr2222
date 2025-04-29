@@ -48,7 +48,6 @@ export const Helping = ({ href }) => {
               />
             </VisibilityManager>
           </div>
-          <Button className={styles.button} href={href} status="Записаться" />
         </div>
       </div>
   );

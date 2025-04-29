@@ -662,13 +662,6 @@ export default function () {
           </VisibilityManager>
 
           <div style={{ height: "1px" }} />
-          <Button
-            className={contentStyles.message}
-            href={{ hash: "#message" }}
-            status="Записаться"
-          />
-
-          <div style={{ height: "1px" }} />
           <VisibilityManager as="h3" className={contentStyles.title_middle}>
             Польза и результаты мухоморного ретрита
           </VisibilityManager>
@@ -867,6 +860,36 @@ export default function () {
               потенциал в терапии психических расстройств.
             </p>
           </VisibilityManager>
+
+          <div style={{ height: "1px" }} />
+          <div
+            style={{
+              textAlign: "center",
+              margin: "0rem 0",
+              textTransform: "uppercase",
+              fontWeight: "bold",
+              color: "var(--font-color)"
+            }}
+          >
+            Стоимость церемонии
+          </div>
+          <div
+            style={{
+              textAlign: "center",
+              margin: "0rem 0",
+              color: "var(--accent)",
+              fontSize: "3rem",
+              fontWeight: "bold",
+            }}
+          >
+            300 000₽
+          </div>
+          <div style={{ height: "1px" }} />
+          <Button
+            className={contentStyles.message}
+            href={{ hash: "#message" }}
+            status="Записаться"
+          />
         </div>
       </LineAnimation>
 

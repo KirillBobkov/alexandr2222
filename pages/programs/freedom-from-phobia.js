@@ -149,6 +149,41 @@ export default function () {
           </VisibilityManager>
 
           <div style={{ height: '1px' }} />
+
+          <div
+            style={{
+              textAlign: "center",
+              margin: "0rem 0",
+              textTransform: "uppercase",
+              fontWeight: "bold",
+              color: "var(--font-color)"
+            }}
+          >
+            Стоимость при достижении результата
+          </div>
+          <div
+            style={{
+              textAlign: "center",
+              margin: "0rem 0",
+              color: "var(--accent)",
+              fontSize: "3rem",
+              fontWeight: "bold",
+            }}
+          >
+            125 000₽
+          </div>
+          <div
+            style={{
+              textAlign: "center",
+              margin: "0rem 0",
+              textTransform: "uppercase",
+              fontWeight: "bold",
+              color: "var(--font-color)"
+            }}
+          >          
+          Возврат 100% денег при отсутствии эффекта
+          </div>
+
           <Button className={contentStyles.message} href={{ hash: "#message" }} status="Записаться" />
 
           <div style={{ height: '1px' }} />

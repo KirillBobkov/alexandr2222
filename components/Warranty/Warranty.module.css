@@ -2,13 +2,21 @@
     background-color: var(--card-color);
 }
 
+.warranty {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 20px 100px;
+    margin: 0 auto;
+}
+
 .block {
     max-width: 1285px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 200px 30px;
+    padding: 150px 30px 150px 30px;
 }
 
 
