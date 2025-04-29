@@ -582,87 +582,6 @@ export default function () {
 
           <div style={{ height: "1px" }} />
           <VisibilityManager as="h3" className={contentStyles.title_middle}>
-            Преимущества моего ретрита
-          </VisibilityManager>
-
-          <VisibilityManager as="p">
-            Почему вам стоит выбрать именно этот путь?
-          </VisibilityManager>
-
-          <VisibilityManager as="div" className={contentStyles.textBlock}>
-            <h3 className={contentStyles.title_small}>
-              <span className={contentStyles.textSymbol}>//</span>
-              {"  "}
-              Назначен проводником непосредственно от самого Мухомора
-            </h3>
-            <p className={contentStyles.textDescription}>
-              Этот путь был принят мною не из любопытства или моды. Когда мне
-              было 17 лет, отец провёл обряд посвящения, передав древние знания.
-              А в погружении на Мухоморе, мне было прямо указано проводить людей
-              через этот опыт, помогая им восстановиться и найти путь к самим
-              себе.
-            </p>
-          </VisibilityManager>
-
-          <VisibilityManager as="div" className={contentStyles.textBlock}>
-            <h3 className={contentStyles.title_small}>
-              <span className={contentStyles.textSymbol}>//</span>
-              {"  "}
-              Глубокая работа с подсознанием
-            </h3>
-            <p className={contentStyles.textDescription}>
-              Страх, волнение или сомнения перед ретритом? Это естественно. По
-              необходимости, провожу предварительную работу с подсознанием,
-              помогая устранить внутреннее напряжение и настроиться на
-              взаимодействие с Мухомором.
-            </p>
-          </VisibilityManager>
-
-          <VisibilityManager as="div" className={contentStyles.textBlock}>
-            <h3 className={contentStyles.title_small}>
-              <span className={contentStyles.textSymbol}>//</span>
-              {"  "}
-              Быстрый, но эффективный формат
-            </h3>
-            <p className={contentStyles.textDescription}>
-              В отличие от большинства ретритных центров, где практика длится по
-              3–4 дня, мой ретрит занимает не более суток. Вы получаете мощный
-              трансформационный опыт, без необходимости выпадать из жизни на
-              несколько дней.
-            </p>
-          </VisibilityManager>
-
-          <VisibilityManager as="div" className={contentStyles.textBlock}>
-            <h3 className={contentStyles.title_small}>
-              <span className={contentStyles.textSymbol}>//</span>
-              {"  "}
-              Безопасность и грамотная интеграция
-            </h3>
-            <p className={contentStyles.textDescription}>
-              Ретрит проходит в комфортном и защищённом месте. После церемонии,
-              помогаю участникам осознать и правильно внедрить полученный опыт в
-              повседневную жизнь.
-            </p>
-          </VisibilityManager>
-
-          <VisibilityManager as="div" className={contentStyles.textBlock}>
-            <h3 className={contentStyles.title_small}>
-              <span className={contentStyles.textSymbol}>//</span>
-              {"  "}
-              Индивидуальная дозировка и перепроверка через кинезиологический
-              тест
-            </h3>
-            <p className={contentStyles.textDescription}>
-              Каждому участнику подбираю дозировку Мухомора, которую
-              дополнительно проверяю через кинезиологический тест, исключая риск
-              передозировки и даже минимальную вероятность случайного попадания
-              в партию Бледной Поганки. Это позволяет обеспечивать безопасность
-              на каждом этапе.
-            </p>
-          </VisibilityManager>
-
-          <div style={{ height: "1px" }} />
-          <VisibilityManager as="h3" className={contentStyles.title_middle}>
             Польза и результаты мухоморного ретрита
           </VisibilityManager>
 
@@ -757,55 +676,6 @@ export default function () {
 
           <div style={{ height: "1px" }} />
           <VisibilityManager as="h3" className={contentStyles.title_middle}>
-            Как проходит мухоморный ретрит?
-          </VisibilityManager>
-
-          <VisibilityManager as="div" className={contentStyles.textBlock}>
-            <h3 className={contentStyles.title_small}>
-              <span className={contentStyles.textSymbol}>//</span>
-              {"  "}
-              Подготовка
-            </h3>
-            <p className={contentStyles.textDescription}>
-              Вы получаете рекомендации по диете и грамотную настройку на
-              погружение. Это позволяет сделать церемонию более осмысленной,
-              безопасной и продуктивной.
-            </p>
-          </VisibilityManager>
-
-          <VisibilityManager as="div" className={contentStyles.textBlock}>
-            <h3 className={contentStyles.title_small}>
-              <span className={contentStyles.textSymbol}>//</span>
-              {"  "}
-              Священная церемония
-            </h3>
-            <p className={contentStyles.textDescription}>
-              Подбирается индивидуальная дозировка.
-            </p>
-            <p className={contentStyles.textDescription}>
-              Мухомор употребляется в виде сомы, с добавлением других
-              Растений-Учителей, разрешённых в РФ.
-            </p>
-            <p className={contentStyles.textDescription}>
-              Проводятся очистительные и исцеляющие ритуалы, полученные мною от
-              Высших Сил.
-            </p>
-          </VisibilityManager>
-
-          <VisibilityManager as="div" className={contentStyles.textBlock}>
-            <h3 className={contentStyles.title_small}>
-              <span className={contentStyles.textSymbol}>//</span>
-              {"  "}
-              Интеграция опыта
-            </h3>
-            <p className={contentStyles.textDescription}>
-              После ретрита, помогу вам осознать смысл полученного опыта, дать
-              ему верное применение в жизни и закрепить трансформацию.
-            </p>
-          </VisibilityManager>
-
-          <div style={{ height: "1px" }} />
-          <VisibilityManager as="h3" className={contentStyles.title_middle}>
             Исторические примеры использования Мухомора
           </VisibilityManager>
 
@@ -860,36 +730,6 @@ export default function () {
               потенциал в терапии психических расстройств.
             </p>
           </VisibilityManager>
-
-          <div style={{ height: "1px" }} />
-          <div
-            style={{
-              textAlign: "center",
-              margin: "0rem 0",
-              textTransform: "uppercase",
-              fontWeight: "bold",
-              color: "var(--font-color)"
-            }}
-          >
-            Стоимость церемонии
-          </div>
-          <div
-            style={{
-              textAlign: "center",
-              margin: "0rem 0",
-              color: "var(--accent)",
-              fontSize: "3rem",
-              fontWeight: "bold",
-            }}
-          >
-            300 000₽
-          </div>
-          <div style={{ height: "1px" }} />
-          <Button
-            className={contentStyles.message}
-            href={{ hash: "#message" }}
-            status="Записаться"
-          />
         </div>
       </LineAnimation>
 
@@ -923,6 +763,142 @@ export default function () {
 
       <LineAnimation>
         <div className={containerStyles.container}>
+          <div style={{ height: "1px" }} />
+          <VisibilityManager as="h3" className={contentStyles.title_middle}>
+            Преимущества моего ретрита
+          </VisibilityManager>
+
+          <VisibilityManager as="p">
+            Почему вам стоит выбрать именно этот путь?
+          </VisibilityManager>
+
+          <VisibilityManager as="div" className={contentStyles.textBlock}>
+            <h3 className={contentStyles.title_small}>
+              <span className={contentStyles.textSymbol}>//</span>
+              {"  "}
+              Назначен проводником непосредственно от самого Мухомора
+            </h3>
+            <p className={contentStyles.textDescription}>
+              Этот путь был принят мною не из любопытства или моды. Когда мне
+              было 17 лет, отец провёл обряд посвящения, передав древние знания.
+              А в погружении на Мухоморе, мне было прямо указано проводить людей
+              через этот опыт, помогая им восстановиться и найти путь к самим
+              себе.
+            </p>
+          </VisibilityManager>
+
+          <VisibilityManager as="div" className={contentStyles.textBlock}>
+            <h3 className={contentStyles.title_small}>
+              <span className={contentStyles.textSymbol}>//</span>
+              {"  "}
+              Глубокая работа с подсознанием
+            </h3>
+            <p className={contentStyles.textDescription}>
+              Страх, волнение или сомнения перед ретритом? Это естественно. По
+              необходимости, провожу предварительную работу с подсознанием,
+              помогая устранить внутреннее напряжение и настроиться на
+              взаимодействие с Мухомором.
+            </p>
+          </VisibilityManager>
+
+          <VisibilityManager as="div" className={contentStyles.textBlock}>
+            <h3 className={contentStyles.title_small}>
+              <span className={contentStyles.textSymbol}>//</span>
+              {"  "}
+              Быстрый, но эффективный формат
+            </h3>
+            <p className={contentStyles.textDescription}>
+              В отличие от большинства ретритных центров, где практика длится по
+              3–4 дня, мой ретрит занимает не более суток. Вы получаете мощный
+              трансформационный опыт, без необходимости выпадать из жизни на
+              несколько дней.
+            </p>
+          </VisibilityManager>
+
+          <VisibilityManager as="div" className={contentStyles.textBlock}>
+            <h3 className={contentStyles.title_small}>
+              <span className={contentStyles.textSymbol}>//</span>
+              {"  "}
+              Безопасность и грамотная интеграция
+            </h3>
+            <p className={contentStyles.textDescription}>
+              Ретрит проходит в комфортном и защищённом месте. После церемонии,
+              помогаю участникам осознать и правильно внедрить полученный опыт в
+              повседневную жизнь.
+            </p>
+          </VisibilityManager>
+
+          <VisibilityManager as="div" className={contentStyles.textBlock}>
+            <h3 className={contentStyles.title_small}>
+              <span className={contentStyles.textSymbol}>//</span>
+              {"  "}
+              Индивидуальная дозировка и перепроверка через кинезиологический
+              тест
+            </h3>
+            <p className={contentStyles.textDescription}>
+              Каждому участнику подбираю дозировку Мухомора, которую
+              дополнительно проверяю через кинезиологический тест, исключая риск
+              передозировки и даже минимальную вероятность случайного попадания
+              в партию Бледной Поганки. Это позволяет обеспечивать безопасность
+              на каждом этапе.
+            </p>
+          </VisibilityManager>
+        </div>
+      </LineAnimation>
+
+      <VideoWidget videos={videos} />
+
+      <LineAnimation>
+        <div className={containerStyles.container}>
+          <div style={{ height: "1px" }} />
+          <VisibilityManager as="h3" className={contentStyles.title_middle}>
+            Как проходит мухоморный ретрит?
+          </VisibilityManager>
+
+          <VisibilityManager as="div" className={contentStyles.textBlock}>
+            <h3 className={contentStyles.title_small}>
+              <span className={contentStyles.textSymbol}>//</span>
+              {"  "}
+              Подготовка
+            </h3>
+            <p className={contentStyles.textDescription}>
+              Вы получаете рекомендации по диете и грамотную настройку на
+              погружение. Это позволяет сделать церемонию более осмысленной,
+              безопасной и продуктивной.
+            </p>
+          </VisibilityManager>
+
+          <VisibilityManager as="div" className={contentStyles.textBlock}>
+            <h3 className={contentStyles.title_small}>
+              <span className={contentStyles.textSymbol}>//</span>
+              {"  "}
+              Священная церемония
+            </h3>
+            <p className={contentStyles.textDescription}>
+              Подбирается индивидуальная дозировка.
+            </p>
+            <p className={contentStyles.textDescription}>
+              Мухомор употребляется в виде сомы, с добавлением других
+              Растений-Учителей, разрешённых в РФ.
+            </p>
+            <p className={contentStyles.textDescription}>
+              Проводятся очистительные и исцеляющие ритуалы, полученные мною от
+              Высших Сил.
+            </p>
+          </VisibilityManager>
+
+          <VisibilityManager as="div" className={contentStyles.textBlock}>
+            <h3 className={contentStyles.title_small}>
+              <span className={contentStyles.textSymbol}>//</span>
+              {"  "}
+              Интеграция опыта
+            </h3>
+            <p className={contentStyles.textDescription}>
+              После ретрита, помогу вам осознать смысл полученного опыта, дать
+              ему верное применение в жизни и закрепить трансформацию.
+            </p>
+          </VisibilityManager>
+
           <div style={{ height: "1px" }} />
           <VisibilityManager as="h3" className={contentStyles.title_middle}>
             Риски и меры предосторожности
@@ -1014,9 +990,39 @@ export default function () {
             Если вы чувствуете, что пришло время изменений, и готовы довериться
             процессу, я проведу вас через этот опыт.
           </VisibilityManager>
+
+          <div style={{ height: "1px" }} />
+          <div
+            style={{
+              textAlign: "center",
+              margin: "0rem 0",
+              textTransform: "uppercase",
+              fontWeight: "bold",
+              color: "var(--font-color)",
+            }}
+          >
+            Стоимость церемонии
+          </div>
+          <div
+            style={{
+              textAlign: "center",
+              margin: "0rem 0",
+              color: "var(--accent)",
+              fontSize: "3rem",
+              fontWeight: "bold",
+            }}
+          >
+            300 000₽
+          </div>
+          <div style={{ height: "1px" }} />
+          <Button
+            className={contentStyles.message}
+            href={{ hash: "#message" }}
+            status="Записаться"
+          />
         </div>
       </LineAnimation>
-      <VideoWidget videos={videos} />
+
       <Questions questionsContent={questionsContent} />
       <div id="message" />
       <Form
