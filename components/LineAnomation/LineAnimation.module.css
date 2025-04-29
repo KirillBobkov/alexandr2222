@@ -1,4 +1,3 @@
-
 @keyframes line_animation {
 	0% {
 		top: 0px;
@@ -26,7 +25,9 @@
 		opacity: 1;
 	} 
 }
+
 .line_animation {
+	position: absolute;
 	top: 0px;
 	left: 50%;
 	z-index: 0;
@@ -37,7 +38,6 @@
 	-webkit-transform: translateX(-50%);
 	-ms-transform: translateX(-50%);
 	transform: translateX(-50%);
-
 }
 
 .line_area {
@@ -59,11 +59,34 @@
     background-image: linear-gradient(0deg, var(--font-color), transparent);
 }
 
-.line_animation .line_area:nth-child(even):before {
-	-webkit-animation: line_animation 20s ease-out infinite;
+.line_animation .line_area:nth-child(1):before {
 	animation: line_animation 20s ease-out infinite;
 }
-.line_animation .line_area:nth-child(odd):before {
-	-webkit-animation: line_animation_2 20s ease-out infinite;
-	animation: line_animation_2 20s ease-out infinite;
+
+.line_animation .line_area:nth-child(2):before {
+	animation: line_animation_2 22s ease-out infinite;
+}
+
+.line_animation .line_area:nth-child(3):before {
+	animation: line_animation 24s ease-out infinite;
+}
+
+.line_animation .line_area:nth-child(4):before {
+	animation: line_animation_2 26s ease-out infinite;
+}
+
+.line_animation .line_area:nth-child(5):before {
+	animation: line_animation 28s ease-out infinite;
+}
+
+.line_animation .line_area:nth-child(6):before {
+	animation: line_animation_2 30s ease-out infinite;
+}
+
+.line_animation .line_area:nth-child(7):before {
+	animation: line_animation 32s ease-out infinite;
+}
+
+.line_animation .line_area:nth-child(8):before {
+	animation: line_animation_2 34s ease-out infinite;
 }
