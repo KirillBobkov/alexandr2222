@@ -1,7 +1,7 @@
 .block {
   background-color: var(--card-color);
   gap: 30px;
-  padding: 150px 30px 150px;
+  padding: 80px 30px 150px;
 }
 
 .block__container {

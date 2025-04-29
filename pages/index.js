@@ -22,193 +22,201 @@ import { VisibilityManager } from "../components/shared/VisibilityManager";
 const schemaOrg = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "name": "Александр \"Интеграл\" Васильев — Нейротраблшуттер",
-  "description": "Благословенный портал мечты, созданный для помощи людям в преодолении сложностей, улучшении жизни и устранении страданий с использованием различных методик.",
-  "url": "https://alexandrvasilev.ru",
-  "inLanguage": "ru",
-  "publisher": {
+  name: 'Александр "Интеграл" Васильев — Нейротраблшуттер',
+  description:
+    "Благословенный портал мечты, созданный для помощи людям в преодолении сложностей, улучшении жизни и устранении страданий с использованием различных методик.",
+  url: "https://alexandrvasilev.ru",
+  inLanguage: "ru",
+  publisher: {
     "@type": "Organization",
-    "name": "INTEGRAAL",
-    "url": "https://alexandrvasilev.ru",
-    "logo": {
+    name: "INTEGRAAL",
+    url: "https://alexandrvasilev.ru",
+    logo: {
       "@type": "ImageObject",
-      "url": "/_next/static/media/logo.ab1a421b.webp",
-      "width": 378,
-      "height": 400
-    }
+      url: "/_next/static/media/logo.ab1a421b.webp",
+      width: 378,
+      height: 400,
+    },
   },
-  "author": {
+  author: {
     "@type": "Person",
-    "name": "Александр Васильев",
-    "url": "https://alexandrvasilev.ru/#about",
-    "description": "Я устраняю причины ваших страданий навсегда, помогая вам достичь гармонии и счастья.",
-    "image": {
+    name: "Александр Васильев",
+    url: "https://alexandrvasilev.ru/#about",
+    description:
+      "Я устраняю причины ваших страданий навсегда, помогая вам достичь гармонии и счастья.",
+    image: {
       "@type": "ImageObject",
-      "url": "/_next/static/media/alex3.57d8e42f.webp",
-      "width": 2561,
-      "height": 1728
+      url: "/_next/static/media/alex3.57d8e42f.webp",
+      width: 2561,
+      height: 1728,
     },
-    "jobTitle": "Нейротраблшуттер, специалист по работе с подсознанием"
+    jobTitle: "Нейротраблшуттер, специалист по работе с подсознанием",
   },
-  "mainEntity": {
+  mainEntity: {
     "@type": "Person",
-    "name": "Александр Васильев",
-    "description": "Нейротраблшуттер, устраняющий причины страданий с использованием авторских методик, работы с подсознанием, вегетализма и кинезиологии.",
-    "sameAs": [
-      "https://alexandrvasilev.ru",
-      "https://alexandrvasilev.ru/#about"
-    ]
+    name: "Александр Васильев",
+    description:
+      "Нейротраблшуттер, устраняющий причины страданий с использованием авторских методик, работы с подсознанием, вегетализма и кинезиологии.",
+    sameAs: ["https://alexandrvasilev.ru", "https://alexandrvasilev.ru/#about"],
   },
-  "about": [
+  about: [
     {
       "@type": "Thing",
-      "name": "Внутреннее удовлетворение",
-      "description": "Когда внешний успех не приносит внутреннего удовлетворения: в повседневной суете легко потерять связь с собой, ощущая тревогу, одиночество и усталость от существования."
+      name: "Внутреннее удовлетворение",
+      description:
+        "Когда внешний успех не приносит внутреннего удовлетворения: в повседневной суете легко потерять связь с собой, ощущая тревогу, одиночество и усталость от существования.",
     },
     {
       "@type": "Thing",
-      "name": "Внутренние вопросы",
-      "description": "Внутренний голос всё чаще задаёт вопросы о подлинной сути, смысле жизни и истинном счастье. Ваш кризис — это зов вернуться к самим себе."
+      name: "Внутренние вопросы",
+      description:
+        "Внутренний голос всё чаще задаёт вопросы о подлинной сути, смысле жизни и истинном счастье. Ваш кризис — это зов вернуться к самим себе.",
     },
     {
       "@type": "Thing",
-      "name": "Жизненные трудности",
-      "description": "Почему жизнь начинает трещать по швам: потеря энергии, ясности, появление ссор, тревоги и усталости происходят, когда вы отдаляетесь от своего истинного пути."
+      name: "Жизненные трудности",
+      description:
+        "Почему жизнь начинает трещать по швам: потеря энергии, ясности, появление ссор, тревоги и усталости происходят, когда вы отдаляетесь от своего истинного пути.",
     },
     {
       "@type": "Thing",
-      "name": "Услуги помощи",
-      "description": "Помощь в устранении зависимостей, усталости, психосоматики, ночных кошмаров, психических травм, управления эмоциями, поиска предназначения, подавленного состояния и ментальных ограничений."
+      name: "Услуги помощи",
+      description:
+        "Помощь в устранении зависимостей, усталости, психосоматики, ночных кошмаров, психических травм, управления эмоциями, поиска предназначения, подавленного состояния и ментальных ограничений.",
     },
     {
       "@type": "ItemList",
-      "name": "Инструменты",
-      "itemListElement": [
+      name: "Инструменты",
+      itemListElement: [
         {
           "@type": "ListItem",
-          "position": 1,
-          "item": {
+          position: 1,
+          item: {
             "@type": "Thing",
-            "name": "Вегетализм"
-          }
+            name: "Вегетализм",
+          },
         },
         {
           "@type": "ListItem",
-          "position": 2,
-          "item": {
+          position: 2,
+          item: {
             "@type": "Thing",
-            "name": "Кинезиология"
-          }
+            name: "Кинезиология",
+          },
         },
         {
           "@type": "ListItem",
-          "position": 3,
-          "item": {
+          position: 3,
+          item: {
             "@type": "Thing",
-            "name": "Работа с подсознанием"
-          }
+            name: "Работа с подсознанием",
+          },
         },
         {
           "@type": "ListItem",
-          "position": 4,
-          "item": {
+          position: 4,
+          item: {
             "@type": "Thing",
-            "name": "Авторские методики"
-          }
-        }
-      ]
+            name: "Авторские методики",
+          },
+        },
+      ],
     },
     {
       "@type": "ItemList",
-      "name": "Услуги",
-      "itemListElement": [
+      name: "Услуги",
+      itemListElement: [
         {
           "@type": "ListItem",
-          "position": 1,
-          "item": {
+          position: 1,
+          item: {
             "@type": "Service",
-            "name": "Мухоморный ретрит в Казани",
-            "url": "https://alexandrvasilev.ru/ceremony",
-            "description": "Путь исцеления и самопознания, открывающий доступ к встрече с Высшими Силами, позволяет наладить связь с Творцом и раскрыть своё предназначение.",
-            "offers": {
+            name: "Мухоморный ретрит в Казани",
+            url: "https://alexandrvasilev.ru/ceremony",
+            description:
+              "Путь исцеления и самопознания, открывающий доступ к встрече с Высшими Силами, позволяет наладить связь с Творцом и раскрыть своё предназначение.",
+            offers: {
               "@type": "Offer",
-              "price": "300000",
-              "priceCurrency": "RUB"
-            }
-          }
+              price: "300000",
+              priceCurrency: "RUB",
+            },
+          },
         },
         {
           "@type": "ListItem",
-          "position": 2,
-          "item": {
+          position: 2,
+          item: {
             "@type": "Service",
-            "name": "Нейротраблшуттинг",
-            "url": "https://alexandrvasilev.ru/neurotroubleshutting",
-            "description": "Точечное и быстрое устранение первопричин блоков, страхов, зависимостей и ограничений через глубинную работу с подсознанием.",
-            "offers": {
+            name: "Нейротраблшуттинг",
+            url: "https://alexandrvasilev.ru/neurotroubleshutting",
+            description:
+              "Точечное и быстрое устранение первопричин блоков, страхов, зависимостей и ограничений через глубинную работу с подсознанием.",
+            offers: {
               "@type": "Offer",
-              "price": "125000",
-              "priceCurrency": "RUB"
-            }
-          }
-        }
-      ]
-    }
+              price: "125000",
+              priceCurrency: "RUB",
+            },
+          },
+        },
+      ],
+    },
   ],
-  "breadcrumb": {
+  breadcrumb: {
     "@type": "BreadcrumbList",
-    "itemListElement": [
+    itemListElement: [
       {
         "@type": "ListItem",
-        "position": 1,
-        "name": "Главная",
-        "item": "https://alexandrvasilev.ru/"
+        position: 1,
+        name: "Главная",
+        item: "https://alexandrvasilev.ru/",
       },
       {
         "@type": "ListItem",
-        "position": 2,
-        "name": "Программы",
-        "item": "https://alexandrvasilev.ru/#programs"
+        position: 2,
+        name: "Программы",
+        item: "https://alexandrvasilev.ru/#programs",
       },
       {
         "@type": "ListItem",
-        "position": 3,
-        "name": "Обо мне",
-        "item": "https://alexandrvasilev.ru/#about"
+        position: 3,
+        name: "Обо мне",
+        item: "https://alexandrvasilev.ru/#about",
       },
       {
         "@type": "ListItem",
-        "position": 4,
-        "name": "Отзывы",
-        "item": "https://alexandrvasilev.ru/#reviews"
+        position: 4,
+        name: "Отзывы",
+        item: "https://alexandrvasilev.ru/#reviews",
       },
       {
         "@type": "ListItem",
-        "position": 5,
-        "name": "Вопросы и ответы",
-        "item": "https://alexandrvasilev.ru/#faq"
-      }
-    ]
+        position: 5,
+        name: "Вопросы и ответы",
+        item: "https://alexandrvasilev.ru/#faq",
+      },
+    ],
   },
-  "mainContentOfPage": {
+  mainContentOfPage: {
     "@type": "WebPageElement",
-    "isPartOf": {
-      "@id": "https://alexandrvasilev.ru/"
+    isPartOf: {
+      "@id": "https://alexandrvasilev.ru/",
     },
-    "speakable": {
+    speakable: {
       "@type": "SpeakableSpecification",
-      "cssSelector": [".title", ".paragraph"]
-    }
+      cssSelector: [".title", ".paragraph"],
+    },
   },
-  "offers": {
+  offers: {
     "@type": "Offer",
-    "price": "Бесплатная первая консультация",
-    "priceCurrency": "RUB",
-    "availability": "https://schema.org/InStock",
-    "url": "https://alexandrvasilev.ru/#message",
-    "description": "Запишитесь на бесплатную консультацию, и я свяжусь с вами в ближайшее время. Первая консультация — бесплатно."
+    price: "Бесплатная первая консультация",
+    priceCurrency: "RUB",
+    availability: "https://schema.org/InStock",
+    url: "https://alexandrvasilev.ru/#message",
+    description:
+      "Запишитесь на бесплатную консультацию, и я свяжусь с вами в ближайшее время. Первая консультация — бесплатно.",
   },
-  "keywords": "очищение интеграл ретрит грибы дурман нейротраблшуттинг мухоморный ретрит вегетализм кинезиология внутреннее удовлетворение жизненный кризис предназначение"
+  keywords:
+    "очищение интеграл ретрит грибы дурман нейротраблшуттинг мухоморный ретрит вегетализм кинезиология внутреннее удовлетворение жизненный кризис предназначение",
 };
 
 export const products = [
@@ -289,18 +297,19 @@ export default function () {
         }}
       />
 
-      <LineAnimation>
+      <div style={{ backgroundColor: "var(--card-color)" }}>
         <VisibilityManager
           as="section"
           className={containerStyles.container}
-          style={{ maxWidth: "1285px!important" }}
+          style={{ maxWidth: "1285px!important",  paddingBottom: "20px" }}
         >
           <div className={contentStyles.title} style={{ margin: "0" }}>
             <span>Результат с </span>
             <span className={contentStyles.title_empty}>1-ой сессии</span>
           </div>
         </VisibilityManager>
-      </LineAnimation>
+      </div>
+
       <Bio />
 
       <CirclesList
@@ -351,15 +360,13 @@ export default function () {
         isSubmitted={isSubmitted}
         title={"ГОТОВЫ ОТКРЫТЬ ДЛЯ СЕБЯ НОВЫЕ ГОРИЗОНТЫ?"}
         type="Первая консультация (Страница: Главная)"
-        description={
-          `Запишитесь на бесплатную консультацию, и я свяжусь с вами в ближайшее время. 
+        description={`Запишитесь на бесплатную консультацию, и я свяжусь с вами в ближайшее время. 
           
           Первая консультация — бесплатно. 
           
           Подготовьте вопрос, который вас действительно беспокоит, и я помогу вам разобраться, раскрыть возможные причины и предложу решение. 
           
-          На основе этого вы сможете понять, стоит ли продолжить работу со мной для достижения значимых изменений в вашей жизни.`
-        }
+          На основе этого вы сможете понять, стоит ли продолжить работу со мной для достижения значимых изменений в вашей жизни.`}
       />
     </Layout>
   );
