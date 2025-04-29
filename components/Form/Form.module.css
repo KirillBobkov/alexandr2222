@@ -62,7 +62,7 @@
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  border: 2px solid var(--border-color);
+  border: 2px solid var(--accent);
   flex-shrink: 0;
 }
 
