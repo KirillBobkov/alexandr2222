@@ -146,7 +146,7 @@
 }
 
 .line_animation .line_area:nth-child(1):before {
-	animation: line_animation 20s ease-out infinite;
+	animation: line_animation 8s ease-out infinite;
 }
 
 .line_animation .line_area:nth-child(2):before {
@@ -154,11 +154,11 @@
 }
 
 .line_animation .line_area:nth-child(3):before {
-	animation: line_animation 24s ease-out infinite;
+	animation: line_animation 16s ease-out infinite;
 }
 
 .line_animation .line_area:nth-child(4):before {
-	animation: line_animation_2 26s ease-out infinite;
+	animation: line_animation_2 8s ease-out infinite;
 }
 
 .line_animation .line_area:nth-child(5):before {
@@ -166,11 +166,11 @@
 }
 
 .line_animation .line_area:nth-child(6):before {
-	animation: line_animation_2 30s ease-out infinite;
+	animation: line_animation_2 10s ease-out infinite;
 }
 
 .line_animation .line_area:nth-child(7):before {
-	animation: line_animation 32s ease-out infinite;
+	animation: line_animation 22s ease-out infinite;
 }
 
 .line_animation .line_area:nth-child(8):before {
