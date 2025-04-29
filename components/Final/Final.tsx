@@ -11,6 +11,7 @@ export const Final = ({
   buttonHref,
   image,
   price,
+  online,
   animation
 }) => {
   const [loaded, setLoaded] = React.useState(false);
@@ -39,12 +40,18 @@ export const Final = ({
           {title}
         </VisibilityManager>
 
+        {online && (
+          <VisibilityManager as="div" className={styles.online}>
+            <span className={styles.blink}>●</span> Онлайн
+          </VisibilityManager>
+        )}
+
+
         {price && (
           <VisibilityManager as="div" className={styles.price}>
             {price}
           </VisibilityManager>
         )}
-
 
         <VisibilityManager as="p" className={styles.description + " " + (image ? "" : styles.description_no_image)}>
           {description}

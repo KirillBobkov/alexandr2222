@@ -80,6 +80,11 @@ body {
   height: 100%;
   background-color: var(--bg-color);
   white-space: pre-line;
+  position: relative;
+}
+
+body {
+  background-color: transparent;
 }
 
 .no-scroll-page {
