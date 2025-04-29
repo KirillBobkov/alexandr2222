@@ -545,6 +545,7 @@ export default function () {
         description="Узнайте причины своих проблем, способы их решения и возможные преграды на вашем пути к успеху!"
         buttonText="Записаться"
         buttonHref="/neurotroubleshutting#message"
+        animation
       />
       <Products products={neurotroubleshuttingProducts} />
       <Questions questionsContent={questionsContent} />

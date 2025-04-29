@@ -1,6 +1,5 @@
 /* Footer.module.css */
 .footer {
-    background-color: var(--card-color);
     color: var(--font-color);
     padding: 0 60px 60px;
 }

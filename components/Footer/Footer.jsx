@@ -5,13 +5,15 @@ import logoDark from "../../images/logo_dark.webp";
 import Image from "next/image";
 import vadgra from "../../images/vadgra.webp";
 import { useTheme } from "../../hooks/useTheme";
+import { LineAnimation } from "../LineAnomation/LineAnimation";
 
 export function Footer() {
   const { theme } = useTheme();
   return (
-    <footer className={styles.footer}>
-      <div className={styles.container}>
-        <div className={styles.logo__container}>
+    <LineAnimation>
+      <footer className={styles.footer}>
+        <div className={styles.container}>
+          <div className={styles.logo__container}>
           <Image
             className={styles.logo}
             src={theme === "light" ? logoLight : logoDark}
@@ -169,5 +171,6 @@ export function Footer() {
         </div>
       </div>
     </footer>
+    </LineAnimation>
   );
 }

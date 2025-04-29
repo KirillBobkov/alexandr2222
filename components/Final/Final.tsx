@@ -3,18 +3,19 @@ import styles from "./Final.module.css"; // Adjust the path as necessary
 import { VisibilityManager } from "../shared/VisibilityManager";
 import LinkButton from "../shared/LinkButton/LinkButton";
 import Image from "next/image";
-
+import { LineAnimation } from "../LineAnomation/LineAnimation";
 export const Final = ({ 
   title,
   description,
   buttonText,
   buttonHref,
   image,
-  price
+  price,
+  animation
 }) => {
   const [loaded, setLoaded] = React.useState(false);
 
-  return (
+  const content = (
     <section className={styles.block}>
       <div className={`${styles.content}`}>
         {image ? (
@@ -57,5 +58,11 @@ export const Final = ({
         )}
       </div>
     </section>
+  );
+
+  return animation ? (
+    <LineAnimation>{content}</LineAnimation>
+  ) : (
+    <div className={styles.container}>{content}</div>
   );
 };

@@ -1,3 +1,6 @@
+.container {
+    background-color: var(--card-color);
+}
 .block {
     max-width: 1285px;
     margin: 0 auto;

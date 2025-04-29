@@ -6,7 +6,6 @@ import { Button } from "../shared/Button/Button.jsx";
 import contentStyles from "../../styles/contentStyles.module.css";
 export const Helping = ({ href }) => {
   return (
-    <LineAnimation>
       <div className={styles.container}>
         <div className={styles.block}>
         <VisibilityManager as="h2" side="left" style={{ marginLeft: "0px"}} className={contentStyles.title}>
@@ -52,7 +51,6 @@ export const Helping = ({ href }) => {
           <Button className={styles.button} href={href} status="Записаться" />
         </div>
       </div>
-    </LineAnimation>
   );
 };
 

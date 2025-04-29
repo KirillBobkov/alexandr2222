@@ -6,7 +6,7 @@ import { Button } from "../shared/Button/Button.jsx";
 import contentStyles from "../../styles/contentStyles.module.css";
 export const AboutMe = ({ title, titleEmpty, items, bottomText, href, buttonStatus }) => {
   return (
-    <div className={styles.container}>
+    <LineAnimation>
       <div className={styles.block}>
         {(title || titleEmpty) && (
           <VisibilityManager as="h2" side="left" className={contentStyles.title} style={{marginLeft: 0, marginRight: 0, marginBottom: 0}}>
@@ -34,7 +34,7 @@ export const AboutMe = ({ title, titleEmpty, items, bottomText, href, buttonStat
           <Button className={styles.message} href={href} status={buttonStatus} />
         )}
       </div>
-    </div>
+    </LineAnimation>
   );
 };
 

@@ -245,6 +245,7 @@ export default function () {
 
       <CirclesList
         {...{
+          animation: false,
           title: "Почему жизнь начинает ",
           titleEmpty: "трещать по швам?",
           underTitle:
@@ -304,6 +305,7 @@ export default function () {
 
       <CirclesList
         {...{
+          animation: true,
           title: "Арсенал ",
           titleEmpty: " применяемых мною инструментов",
           items: [
@@ -322,6 +324,7 @@ export default function () {
         buttonHref="/ceremony"
         image={enter_hole_1}
         price="300 000 ₽"
+        animation
       />
       <AnimatedLine />
       <Final
@@ -331,6 +334,7 @@ export default function () {
         buttonHref="/neurotroubleshutting"
         image={enter_hole_2}
         price="125 000 ₽"
+        animation
       />
       <AnimatedLine />
       <Final
@@ -338,6 +342,7 @@ export default function () {
         description="Узнайте причины своих проблем, способы их решения и возможные преграды на вашем пути к успеху!"
         buttonText="Записаться"
         buttonHref="#message"
+        animation
       />
       <div id="message" />
       <Form
