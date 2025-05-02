@@ -113,49 +113,61 @@ const teamMembers = [
     description: "CEO Apple",
   },
   {
-    img: "https://static01.nyt.com/images/2010/09/24/nyregion/NEWARK/NEWARK-jumbo.jpg?quality=75&auto=webp&disable=upscale",
-    title: "Марк Цукерберг",
-    description: "Основатель Facebook",
-  },
-  {
-    img: "https://sun1-55.userapi.com/s/v1/ig2/j6hgWxWW-vXf31iM4C5HZgAGKfHfA5wbHc8DX00zc48hk3FX3Q9n4LWasMqEEFfn0GsrWd8hlnOe6WuiRTRRbbTt.jpg?quality=95&as=32x43,48x64,72x96,108x144,160x213,240x320,360x480,480x640,540x719,640x853,680x906&from=bu&u=mmfBuzCQFaMD0vlJcECkLl9PTWD2swXZKXKac6BJlnI&cs=453x604",
-    title: "Рэй Далио",
-    description: "Основатель Bridgewater Associates",
-  },
-  {
-    img: "https://avatars.mds.yandex.net/i?id=0f2326794b11b99baac28b490635aaec-5303267-images-thumbs&n=13",
-    title: "Мелинда Гейтс",
-    description: "Соучредитель Bill & Melinda Gates Foundation",
-  },
-  {
-    img: "https://m.media-amazon.com/images/M/MV5BNWI4ZTJiZmUtZGI5MC00NTk4LTk2OTYtNDU3NTJiM2QxNzM0XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-    title: "Джефф Безос",
-    description: "Основатель Amazon",
-  },
-  {
-    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Howard_Schultz_by_Gage_Skidmore.jpg/640px-Howard_Schultz_by_Gage_Skidmore.jpg",
-    title: "Говард Шульц",
-    description: "Основатель Starbucks",
-  },
-  {
-    img: "https://notednames.com/ImgProfile/valo_Barbara%20Corcoran.jpg",
-    title: "Барбара Коркоран",
-    description: "Основательница The Corcoran Group",
-  },
-  {
-    img: "https://pub-c2c1d9230f0b4abb9b0d2d95e06fd4ef.r2.dev/sites/427/2014/02/20140205_01_1000x734.jpg",
-    title: "Сатья Наделла",
-    description: "CEO Microsoft",
-  },
-  {
-    img: "https://sun9-52.userapi.com/impf/c624731/v624731649/25611/q3Uh3tvHeyE.jpg?size=480x720&quality=96&sign=e81df9fb5c50544089879d7ec8780229&c_uniq_tag=P8rOb_dnqnnSPuWHVJ8FOJDjLFoeskz3E9NxvMZOYjQ&type=album",
-    title: "Шерил Сэндберг",
-    description: "COO Facebook",
-  },
-  {
     img: "https://yaffa-cdn.s3.amazonaws.com/adnews/live/images/dmImage/StandardImage/angus-keene-acting-managing-director-twitter-australia-new-zealand2.jpg",
     title: "Питер Тиль",
     description: "Сооснователь PayPal и Palantir Technologies",
+  },
+
+
+  {
+    img: "https://floraluo90.wordpress.com/wp-content/uploads/2014/10/20100501170555_93490.jpg",
+    title: "Стюарт Брэнд",
+    description: "Основатель Whole Earth Catalog",
+  },
+  {
+    img: "https://appraf.com/media/credits/cast/6745ed39284f4d55971c0f2e1f83a5e1.jpeg",
+    title: "Джеймс Фадиман",
+    description: "Психолог, автор 'Психоделического опыта'",
+  },
+  {
+    img: "https://cdn.images.express.co.uk/img/dynamic/1/590x/mouse-412546.jpg?r=1686998680160",
+    title: "Дуг Энгельбарт",
+    description: "Изобретатель компьютерной мыши, пионер человеко-компьютерного взаимодействия",
+  },
+  {
+    img: "https://im.motiomovie.xyz/film-header/34509.webp",
+    title: "Джордж Карлин",
+    description: "Легендарный комик, философ, критик общества",
+  },
+  {
+    img: "https://cc.cz/wp-content/uploads/2020/05/joerogan.jpg",
+    title: "Джо Роган",
+    description: "Ведущий подкаста The Joe Rogan Experience, комик, комментатор UFC",
+  },
+  {
+    img: "https://www.kino-teatr.ru/news/28866/257349.jpg",
+    title: "Майк Тайсон",
+    description: "Легендарный боксер, чемпион мира в тяжелом весе",
+  },
+  {
+    img: "https://sun9-78.userapi.com/s/v1/if1/YaMSH5bzFpMBGPRAeY61l0Jcq0THjHSkOGiZkitKiTRH8hcvoT9mWhXgtSWrJfE8Q263OKdm.jpg?quality=96&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720,1000x1000&from=bu&cs=320x320",
+    title: "Джек Николсон",
+    description: "Легендарный актер, обладатель трех премий Оскар",
+  },
+  {
+    img: "https://revistapurgante.com/wp-content/uploads/2024/01/JODO.jpg",
+    title: "Алехандро Ходоровски",
+    description: "Режиссер, писатель, духовный учитель, создатель психомагии",
+  },
+  {
+    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Duncan_Trussell_on_VICELAND%27S_Party_Legends.png/800px-Duncan_Trussell_on_VICELAND%27S_Party_Legends.png",
+    title: "Дункан Трасселл",
+    description: "Комедиант, подкастер, исследователь сознания",
+  },
+  {
+    img: "https://fazanmag.com/media/k2/items/cache/22f8149d30db4895b7f3ed99ae79f326_XL.jpg?t=20220920_132003",
+    title: "Дита фон Тиз",
+    description: "Актриса, модель, королева Бурлеска",
   },
 ];
 

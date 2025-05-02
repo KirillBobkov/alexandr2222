@@ -11,41 +11,22 @@ export const validateName = (name: string): string => {
 
 export const validatePhone = (phone: string): string => {
   const digitsOnly = phone.replace(/\D/g, '');
-  if (digitsOnly.length !== 11) {
-    return 'Номер телефона не заполнен до конца';
+  if (digitsOnly.length < 6) {
+    return 'Номер телефона слишком короткий';
+  }
+  if (digitsOnly.length > 20) {
+    return 'Номер телефона слишком длинный';
   }
   return '';
 };
 
-export const formatPhoneNumber = (value: string): string => {
-  // Keep only digits and limit to 11
-  const digits = value.replace(/\D/g, '').slice(0, 11);
-  
-  // Return empty if no digits
-  if (!digits.length) return '';
-  
-  // Format as x (xxx) xxx-xx-xx
-  let result = digits[0];
-  
-  if (digits.length > 1) {
-    result += ' (';
-    result += digits.slice(1, 4);
-    
-    if (digits.length > 4) {
-      result += ') ';
-      result += digits.slice(4, 7);
-      
-      if (digits.length > 7) {
-        result += '-';
-        result += digits.slice(7, 9);
-        
-        if (digits.length > 9) {
-          result += '-';
-          result += digits.slice(9, 11);
-        }
-      }
-    }
-  }
-  
-  return result;
-};
+export function formatPhoneNumber(input: string): string {
+  if (!input) return '';
+
+  // Remove all non-digit characters
+  const digits = input.replace(/\D/g, '');
+  if (!digits) return '';
+
+  // For unknown country codes, just add + prefix without formatting
+  return digits;
+}
