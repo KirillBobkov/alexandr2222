@@ -132,7 +132,7 @@ const teamMembers = [
   {
     img: "https://cdn.images.express.co.uk/img/dynamic/1/590x/mouse-412546.jpg?r=1686998680160",
     title: "Дуг Энгельбарт",
-    description: "Изобретатель компьютерной мыши, пионер человеко-компьютерного взаимодействия",
+    description: "Изобретатель компьютерной мыши",
   },
   {
     img: "https://im.motiomovie.xyz/film-header/34509.webp",
@@ -155,9 +155,9 @@ const teamMembers = [
     description: "Легендарный актер, обладатель трех премий Оскар",
   },
   {
-    img: "https://revistapurgante.com/wp-content/uploads/2024/01/JODO.jpg",
+    img: "https://sun9-55.userapi.com/impf/VOKbtdjV_6BGhW9-pz_oGGGuQ6Uk8pD8TQO9pQ/42nYS5VAYaE.jpg?size=604x441&quality=96&sign=29fdbffcd17036c7aa2b34ba79a5cce8&type=album",
     title: "Алехандро Ходоровски",
-    description: "Режиссер, писатель, духовный учитель, создатель психомагии",
+    description: "Режиссер, писатель, создатель психомагии",
   },
   {
     img: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Duncan_Trussell_on_VICELAND%27S_Party_Legends.png/800px-Duncan_Trussell_on_VICELAND%27S_Party_Legends.png",

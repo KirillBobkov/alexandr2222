@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "build": "test && next build",
+    "build": "next build",
     "dev": "next dev",
     "start": "next start",
     "clean": "rmdir /s docs",
