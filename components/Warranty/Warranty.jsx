@@ -8,7 +8,7 @@ export const Warranty = ({ href }) => {
   return (
     <LineAnimation>
       <div className={styles.block}>
-        <VisibilityManager as="h2" side="left" className={contentStyles.title}>
+        <VisibilityManager as="h2" side="left" className={contentStyles.title} style={{ marginBottom: 0 }}>
           Я уверен{" "}
           <span className={contentStyles.title_empty}>
             в своей методике на{" "}

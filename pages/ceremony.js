@@ -557,27 +557,13 @@ export default function () {
         text="Мухоморный ретрит в Казани"
         image={secondary_preview_10}
       />
-      <LineAnimation>
+
+      <div style={{ background: "var(--card-color)" }}>
         <div className={containerStyles.container}>
           <VisibilityManager as="p">
-            Вы достигли многого, но всё равно чувствуете пустоту?
-          </VisibilityManager>
-
-          <VisibilityManager as="p">
-            Внешний успех не приносит радости, а внутренний дискомфорт и
-            сомнения не дают покоя?
-          </VisibilityManager>
-
-          <VisibilityManager as="p">
-            Почему, несмотря на всё, вы не чувствуете себя на своём месте?
-          </VisibilityManager>
-
-          <VisibilityManager as="p">
-            Почему не хватает гармонии, хотя внешне всё кажется идеальным?
-          </VisibilityManager>
-
-          <VisibilityManager as="p">
-            Что мешает вам быть тем, кем вы на самом деле хотите быть?
+            Сегодня всё больше умных, сильных и уважаемых людей — тех, кто
+            многое сделал и многого достиг — сталкиваются с ощущением внутренней
+            пустоты.
           </VisibilityManager>
 
           <VisibilityManager as="p">
@@ -595,8 +581,11 @@ export default function () {
             Это шанс выйти за пределы старых программ и вернуть радость от
             жизни, ощутив себя на своём пути.
           </VisibilityManager>
+        </div>
+      </div>
 
-          <div style={{ height: "1px" }} />
+      <LineAnimation>
+        <div className={containerStyles.container}>
           <VisibilityManager as="h3" className={contentStyles.title_middle}>
             Польза и результаты мухоморного ретрита
           </VisibilityManager>
@@ -691,11 +680,8 @@ export default function () {
           </VisibilityManager>
 
           <div style={{ height: "1px" }} />
-          
-          <VisibilityManager
-            as="h3"
-            className={contentStyles.title_middle}
-          >
+
+          <VisibilityManager as="h3" className={contentStyles.title_middle}>
             Исторические примеры использования Мухомора
           </VisibilityManager>
 
@@ -713,12 +699,9 @@ export default function () {
                   Шаманизм и древние традиции
                 </h3>
                 <p className={contentStyles.textDescription}>
-                  В Сибири шаманы использовали Мухомор для общения с духами,
-                  целительства и предсказаний.
-                </p>
-                <p className={contentStyles.textDescription}>
-                  В славянской культуре его применяли охотники для повышения
-                  выносливости.
+                  В славянской культуре шаманы использовали Мухомор для общения
+                  с духами, целительства и предсказаний, а охотники — для
+                  повышения выносливости.
                 </p>
               </VisibilityManager>
             </div>
@@ -759,8 +742,8 @@ export default function () {
                   Духовные ритуалы индейцев
                 </h3>
                 <p className={contentStyles.textDescription}>
-                  В ритуалах североамериканских индейцев Мухоморы использовались для
-                  очищения, улучшения самочувствия и получения видений.
+                  В ритуалах североамериканских индейцев Мухоморы использовались
+                  для очищения, улучшения самочувствия и получения видений.
                 </p>
               </VisibilityManager>
             </div>
@@ -819,7 +802,6 @@ export default function () {
 
       <LineAnimation>
         <div className={containerStyles.container}>
-          <div style={{ height: "1px" }} />
           <VisibilityManager as="h3" className={contentStyles.title_middle}>
             Преимущества моего ретрита
           </VisibilityManager>
@@ -906,7 +888,6 @@ export default function () {
 
       <LineAnimation>
         <div className={containerStyles.container}>
-          <div style={{ height: "1px" }} />
           <VisibilityManager as="h3" className={contentStyles.title_middle}>
             Как проходит мухоморный ретрит?
           </VisibilityManager>
