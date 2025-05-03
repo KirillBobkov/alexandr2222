@@ -52,6 +52,21 @@
   margin: 0 auto;
 }
 
+.fullWidthImageContainer {
+  width: 100%;
+  margin: 0;
+  position: relative;
+  height: 0;
+  padding-bottom: 50%; /* 2:1 aspect ratio */
+  overflow: hidden;
+  border-radius: 30px;
+}
+
+.fullWidthImage {
+  object-fit: cover;
+  object-position: center;
+}
+
 @media screen and (max-width: 768px) {
     .title {
         font-size: 30px;
@@ -84,3 +99,43 @@
   text-align: center;
   gap: 20px;
 }
+
+.imageContainer {
+  position: relative;
+  background-color: var(--bg-color-opacity);
+  border-radius: 24px;
+}
+
+.imageOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 35%;
+  z-index: -1;
+  border-radius: 24px;
+}
+
+.imageContent {
+  position: relative;
+  z-index: 1;
+  padding: 40px 20px;
+}
+
+.imageContent .title_small {
+  color: #ffffff;
+}
+
+.imageContent .textDescription {
+  color: #ffffff;
+}
+
+@media screen and (max-width: 768px) {
+  .imageContent {
+    padding: 20px 15px;
+  }
+}
+
+

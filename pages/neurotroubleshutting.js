@@ -451,13 +451,9 @@ export default function () {
 
   return (
     <Layout metaConfig={metaConfig} schemaOrg={schemaOrg}>
-      <SecondaryPreview text={"Нейротраблшуттинг"} image={secondary_preview_7} />
-      <LineAnimation>
+      <SecondaryPreview text={"Нейротраблшуттинг"} subtext={'Ваш ключ к жизни без страхов, ограничений и внутренних конфликтов'} image={secondary_preview_7} />
+      <div style={{ background: 'var(--card-color)'}}>
         <div className={containerStyles.container}>
-          <VisibilityManager as="h3" className={contentStyles.title_middle}>
-            Ваш ключ к жизни без страхов, ограничений и внутренних конфликтов
-          </VisibilityManager>
-
           <VisibilityManager as="p">
             Устали годами бороться с проблемами, которые возвращаются снова и снова?
           </VisibilityManager>
@@ -467,9 +463,7 @@ export default function () {
           </VisibilityManager>
 
           <VisibilityManager as="div" className={contentStyles.textBlock}>
-            <h3 className={contentStyles.title_small}>
-              <span className={contentStyles.textSymbol}>//</span>
-              {"  "}
+            <h3 className={contentStyles.title_middle}>
               Нейротраблшуттинг — это метод, который:
             </h3>
             <p className={contentStyles.textDescription}>
@@ -534,7 +528,7 @@ export default function () {
             </p>
           </VisibilityManager>
         </div>
-      </LineAnimation>
+      </div>
       <Suggest />
       <Helping href={{ pathname: '/neurotroubleshutting', hash: '#message'}} />
       <Warranty href={{ pathname: '/neurotroubleshutting', hash: '#message'}}/>

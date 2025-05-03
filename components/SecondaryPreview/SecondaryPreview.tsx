@@ -2,9 +2,8 @@ import React from "react";
 import styles from "./SecondaryPreview.module.css";
 import Image from "next/image.js";
 import { VisibilityManager } from "../shared/VisibilityManager";
-import { LineAnimation } from "../LineAnomation/LineAnimation";
 
-export const SecondaryPreview = ({ text, image }) => {
+export const SecondaryPreview = ({ text, subtext, image }) => {
   const [loaded, setLoaded] = React.useState(false);
   
   return (
@@ -16,9 +15,13 @@ export const SecondaryPreview = ({ text, image }) => {
         onLoad={() => setLoaded(true)}
       />
       <div className={styles.overlay}></div>
-      <VisibilityManager className={styles.secondaryPreview__content}>
+      {text && <VisibilityManager className={styles.secondaryPreview__content}>
         <h1 className={styles.secondaryPreview__title}>{text}</h1>
-      </VisibilityManager>
+      </VisibilityManager>}
+
+      {subtext && <VisibilityManager className={styles.secondaryPreview__content}>
+        <h1 className={styles.secondaryPreview__subtitle}>{subtext}</h1>
+      </VisibilityManager>}
     </section>
   );
 };

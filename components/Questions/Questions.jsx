@@ -10,7 +10,7 @@ export const Questions = ({ questionsContent }) => {
     <LineAnimation>
       <div>
         <VisibilityManager className={`${styles.container}`} id="faq">
-          <h2 className={contentStyles.title}>
+          <h2 className={contentStyles.title} style={{ marginLeft: 0 }}>
             <span className={contentStyles.title_empty}> Вопросы и </span> ответы
           </h2>
           <ul>

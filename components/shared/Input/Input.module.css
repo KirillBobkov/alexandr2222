@@ -17,6 +17,7 @@
     background-color: var(--bg-color);
     border: 1px solid var(--card-color);
     transition: all 0.2s;
+    border-radius: 24px;
 }
 
 .input:focus {

@@ -96,6 +96,7 @@
   cursor: pointer;
   font-weight: 600;
   letter-spacing: 0.14em;
+  border-radius: 30px;
   text-transform: uppercase;
 }
 

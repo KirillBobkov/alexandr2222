@@ -72,6 +72,15 @@
     padding-bottom: 12px;
   }
 
+  .secondaryPreview__subtitle {
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 700;
+    max-width: 1000px;
+    line-height: 52px;
+    padding-bottom: 12px;
+  }
+
   /* Responsive styles */
   @media (max-width: 768px) {
     .secondaryPreview__bg {
@@ -89,6 +98,12 @@
     .secondaryPreview__title {
       font-size: 60px; /* Smaller title size for mobile */
       line-height: 72px;
+      padding: 10px;
+    }
+
+    .secondaryPreview__subtitle {
+      font-size: 20px;
+      line-height: 26px;
       padding: 10px;
     }
   }
