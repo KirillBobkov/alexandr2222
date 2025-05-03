@@ -100,75 +100,73 @@ const teamMembers = [
   {
     img: "https://sun9-23.userapi.com/s/v1/ig2/ROaBSLdjpq0-0cXn2NXqAlr4kidrh1qOwuiSfW8tdUodqxUzGWSmHiGRyGIvL1eH4gBiqBhOFTMnVmy_g5oQx657.jpg?quality=95&as=32x34,48x50,72x76,108x114,160x168,240x252,360x379,480x505,540x568,640x673,720x757,1080x1136,1217x1280&from=bu&u=cJAXLOZAOol1k26Z7uYlzCHGvIGvswRHIafkX5RXJ5E&cs=574x604",
     title: "Ричард Брэнсон",
-    description: "Основатель Virgin Group",
+    description: "Основатель Virgin Group"
   },
   {
     img: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Elon_Musk_Royal_Society_crop.jpg/800px-Elon_Musk_Royal_Society_crop.jpg",
     title: "Илон Маск",
-    description: "Основатель Tesla, SpaceX, Neuralink",
+    description: "Основатель Tesla, SpaceX, Neuralink"
   },
   {
     img: "https://static.life.ru/posts/2017/05/1006612/29d3c5bdf20e45cc66aa1793b63975b5.jpg",
     title: "Тим Кук",
-    description: "CEO Apple",
+    description: "CEO Apple"
   },
   {
     img: "https://yaffa-cdn.s3.amazonaws.com/adnews/live/images/dmImage/StandardImage/angus-keene-acting-managing-director-twitter-australia-new-zealand2.jpg",
     title: "Питер Тиль",
-    description: "Сооснователь PayPal и Palantir Technologies",
+    description: "Сооснователь PayPal и Palantir Technologies"
   },
-
-
   {
     img: "https://floraluo90.wordpress.com/wp-content/uploads/2014/10/20100501170555_93490.jpg",
     title: "Стюарт Брэнд",
-    description: "Основатель Whole Earth Catalog",
+    description: "Основатель Whole Earth Catalog"
   },
   {
     img: "https://appraf.com/media/credits/cast/6745ed39284f4d55971c0f2e1f83a5e1.jpeg",
     title: "Джеймс Фадиман",
-    description: "Психолог, автор 'Психоделического опыта'",
+    description: "Психолог, автор книги 'Психоделический опыт'"
   },
   {
-    img: "https://cdn.images.express.co.uk/img/dynamic/1/590x/mouse-412546.jpg?r=1686998680160",
+    img: "https://multiurok.ru/img/113508/image_5c8e125fd547f.jpg",
     title: "Дуг Энгельбарт",
-    description: "Изобретатель компьютерной мыши",
+    description: "Изобретатель компьютерной мыши"
   },
   {
-    img: "https://im.motiomovie.xyz/film-header/34509.webp",
+    img: "https://avatars.mds.yandex.net/get-kinopoisk-image/1600647/8b5c8c98-5a0c-47a3-9ca4-ac52b3fec797/3840x",
     title: "Джордж Карлин",
-    description: "Легендарный комик, философ, критик общества",
+    description: "Легендарный комик, философ, критик общества"
   },
   {
-    img: "https://cc.cz/wp-content/uploads/2020/05/joerogan.jpg",
+    img: "https://www.uncut.co.uk/wp-content/uploads/2022/02/Joe-Rogan-2019@1400x1050-800x600.jpg",
     title: "Джо Роган",
-    description: "Ведущий подкаста The Joe Rogan Experience, комик, комментатор UFC",
+    description: "Ведущий подкаста The Joe Rogan Experience, комик, комментатор UFC"
   },
   {
     img: "https://www.kino-teatr.ru/news/28866/257349.jpg",
     title: "Майк Тайсон",
-    description: "Легендарный боксер, чемпион мира в тяжелом весе",
+    description: "Легендарный боксёр, чемпион мира в тяжёлом весе"
   },
   {
     img: "https://sun9-78.userapi.com/s/v1/if1/YaMSH5bzFpMBGPRAeY61l0Jcq0THjHSkOGiZkitKiTRH8hcvoT9mWhXgtSWrJfE8Q263OKdm.jpg?quality=96&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720,1000x1000&from=bu&cs=320x320",
     title: "Джек Николсон",
-    description: "Легендарный актер, обладатель трех премий Оскар",
+    description: "Легендарный актёр, обладатель трёх премий Оскар"
   },
   {
     img: "https://sun9-55.userapi.com/impf/VOKbtdjV_6BGhW9-pz_oGGGuQ6Uk8pD8TQO9pQ/42nYS5VAYaE.jpg?size=604x441&quality=96&sign=29fdbffcd17036c7aa2b34ba79a5cce8&type=album",
     title: "Алехандро Ходоровски",
-    description: "Режиссер, писатель, создатель психомагии",
+    description: "Режиссёр, писатель, создатель психомагии"
   },
   {
     img: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Duncan_Trussell_on_VICELAND%27S_Party_Legends.png/800px-Duncan_Trussell_on_VICELAND%27S_Party_Legends.png",
     title: "Дункан Трасселл",
-    description: "Комедиант, подкастер, исследователь сознания",
+    description: "Комедиант, подкастер, исследователь сознания"
   },
   {
     img: "https://fazanmag.com/media/k2/items/cache/22f8149d30db4895b7f3ed99ae79f326_XL.jpg?t=20220920_132003",
     title: "Дита фон Тиз",
-    description: "Актриса, модель, королева Бурлеска",
-  },
+    description: "Актриса, модель, королева бурлеска"
+  }
 ];
 
 export const questionsContent = {
