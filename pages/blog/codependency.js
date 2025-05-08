@@ -13,7 +13,7 @@ import { Button } from "../../components/shared/Button/Button";
 const schemaOrg = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "Как перестать быть «вечным спасателем»: нейротраблшуттинг в борьбе с созависимостью",
+  "headline": "Как перестать быть «вечным спасателем»: нейротраблшутинг в борьбе с созависимостью",
   "description": "Созависимость — это не забота, а подсознательная ловушка, которая заставляет вас жертвовать собой ради других. Узнайте, как освободиться от роли «вечного спасателя».",
   "image": "/_next/static/media/secondary_preview_20.webp",
   "url": "https://alexandrvasilev.ru/blog/codependency",
@@ -34,14 +34,14 @@ const schemaOrg = {
     "@type": "Person",
     "name": "Александр Васильев",
     "url": "https://alexandrvasilev.ru/#about",
-    "description": "Нейротраблшуттер, специалист по работе с подсознанием и психологическими травмами",
-    "jobTitle": "Нейротраблшуттер, специалист по работе с подсознанием"
+    "description": "Нейротраблшутер, специалист по работе с подсознанием и психологическими травмами",
+    "jobTitle": "Нейротраблшутер, специалист по работе с подсознанием"
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "https://alexandrvasilev.ru/blog/codependency"
   },
-  "keywords": "созависимость, нейротраблшуттинг, психология, отношения, спасатель, травмы",
+  "keywords": "созависимость, нейротраблшутинг, психология, отношения, спасатель, травмы",
   "about": [
     {
       "@type": "Thing",
@@ -50,7 +50,7 @@ const schemaOrg = {
     },
     {
       "@type": "Thing",
-      "name": "Нейротраблшуттинг в психологии",
+      "name": "Нейротраблшутинг в психологии",
       "description": "Метод работы с подсознательными травмами, формирующими созависимое поведение и роль «спасателя»"
     }
   ],
@@ -70,9 +70,9 @@ export default function () {
   useScrollToLocation();
 
   const metaConfig = {
-    title: "Как перестать быть «вечным спасателем»: нейротраблшуттинг в борьбе с созависимостью",
+    title: "Как перестать быть «вечным спасателем»: нейротраблшутинг в борьбе с созависимостью",
     description: "Созависимость — это не забота, а подсознательная ловушка, которая заставляет вас жертвовать собой ради других. Узнайте, как освободиться от роли «вечного спасателя».",
-    keywords: "созависимость, нейротраблшуттинг, психология, отношения, спасатель, травмы",
+    keywords: "созависимость, нейротраблшутинг, психология, отношения, спасатель, травмы",
   };
 
   return (
@@ -84,7 +84,7 @@ export default function () {
       <LineAnimation>
         <div className={containerStyles.container}>
           <VisibilityManager as="h1" className={contentStyles.title_middle}>
-            Как перестать быть «вечным спасателем»: нейротраблшуттинг в борьбе с созависимостью
+            Как перестать быть «вечным спасателем»: нейротраблшутинг в борьбе с созависимостью
           </VisibilityManager>
 
           <VisibilityManager as="p">
@@ -136,7 +136,7 @@ export default function () {
 
           <div style={{ height: "1px" }} />
           <VisibilityManager as="h3" className={contentStyles.title_middle}>
-            Как нейротраблшуттинг ломает шаблон «спасателя»?
+            Как нейротраблшутинг ломает шаблон «спасателя»?
           </VisibilityManager>
 
           <VisibilityManager as="p">
@@ -220,7 +220,7 @@ export default function () {
 
           <div style={{ height: "1px" }} />
           <VisibilityManager as="h3" className={contentStyles.title_middle}>
-            Когда нейротраблшуттинг необходим?
+            Когда нейротраблшутинг необходим?
           </VisibilityManager>
 
           <VisibilityManager as="div">
@@ -251,7 +251,7 @@ export default function () {
           </VisibilityManager>
 
           <VisibilityManager as="p">
-            Нейротраблшуттинг помогает не «стать эгоистом», а вернуть себе право на жизнь. Вашу жизнь.
+            Нейротраблшутинг помогает не «стать эгоистом», а вернуть себе право на жизнь. Вашу жизнь.
           </VisibilityManager>
           <p
               style={{

@@ -22,7 +22,7 @@ export const questionsContent = {
   blocks: [
     {
       title: "Как это отличается от всего того, что я до этого видел?",
-      answer: `Нейротраблшуттинг – это абсолютно новое направление, которое безопасно и быстро обеспечивает ощутимый результат. 
+      answer: `Нейротраблшутинг – это абсолютно новое направление, которое безопасно и быстро обеспечивает ощутимый результат. 
           Зачастую, достаточно всего одной сессии, чтобы вы стали лучшей версией себя. 
           При этом, а вам не нужно рассказывать о своём прошлом, то есть сохраняется приватность. 
           В случае отсутствия результата, я возвращаю вам 100% денег.`,
@@ -150,17 +150,17 @@ const videos = [
 const schemaOrg = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
-  "name": "Нейротраблшуттинг",
+  "name": "Нейротраблшутинг",
   "description": "Проработка подсознательных блоков: тревожность, депрессия, фобии, психосоматика. Быстрое решение проблем за 1-8 сессий.",
   "url": "https://alexandrvasilev.ru/neurotroubleshutting",
   "provider": {
     "@type": "Person",
     "name": "Александр Васильев",
     "url": "https://alexandrvasilev.ru/#about",
-    "description": "Нейротраблшуттер, специалист по работе с подсознанием",
-    "jobTitle": "Нейротраблшуттер, специалист по работе с подсознанием"
+    "description": "Нейротраблшутер, специалист по работе с подсознанием",
+    "jobTitle": "Нейротраблшутер, специалист по работе с подсознанием"
   },
-  "serviceType": "Нейротраблшуттинг",
+  "serviceType": "Нейротраблшутинг",
   "offers": {
     "@type": "Offer",
     "price": "0",
@@ -178,7 +178,7 @@ const schemaOrg = {
     },
     "geoRadius": "10000000"
   },
-  "keywords": "нейротраблшуттинг, гипнотерапия, гипнотерапевт, НЛП, психосоматика, депрессия, тревожность, проработка страхов, экзорцизм, психология, гипноз, подсознательные блоки",
+  "keywords": "нейротраблшутинг, гипнотерапия, гипнотерапевт, НЛП, психосоматика, депрессия, тревожность, проработка страхов, экзорцизм, психология, гипноз, подсознательные блоки",
   "potentialAction": {
     "@type": "ReserveAction",
     "target": {
@@ -192,7 +192,7 @@ const schemaOrg = {
   },
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
-    "name": "Услуги нейротраблшуттинга",
+    "name": "Услуги нейротраблшутинга",
     "itemListElement": [
       {
         "@type": "Offer",
@@ -222,7 +222,7 @@ const schemaOrg = {
   },
   "serviceOutput": {
     "@type": "Thing",
-    "name": "Результаты нейротраблшуттинга",
+    "name": "Результаты нейротраблшутинга",
     "description": "Свобода от ограничений, гармония с собой и миром, энергия для достижения целей"
   },
   "serviceAudience": {
@@ -245,7 +245,7 @@ const schemaOrg = {
       "reviewBody": "Отзыв о проработке с Александром Васильевым",
       "itemReviewed": {
         "@type": "ProfessionalService",
-        "name": "Нейротраблшуттинг"
+        "name": "Нейротраблшутинг"
       }
     },
     {
@@ -263,7 +263,7 @@ const schemaOrg = {
       "reviewBody": "Отзыв о проработке с Александром Васильевым",
       "itemReviewed": {
         "@type": "ProfessionalService",
-        "name": "Нейротраблшуттинг"
+        "name": "Нейротраблшутинг"
       }
     },
     {
@@ -281,7 +281,7 @@ const schemaOrg = {
       "reviewBody": "Отзыв о проработках с Александром 'Интегралом' Васильевым",
       "itemReviewed": {
         "@type": "ProfessionalService",
-        "name": "Нейротраблшуттинг"
+        "name": "Нейротраблшутинг"
       }
     },
     {
@@ -299,7 +299,7 @@ const schemaOrg = {
       "reviewBody": "Отзыв о работе с Александром 'Интегралом' Васильевым",
       "itemReviewed": {
         "@type": "ProfessionalService",
-        "name": "Нейротраблшуттинг"
+        "name": "Нейротраблшутинг"
       }
     },
     {
@@ -317,7 +317,7 @@ const schemaOrg = {
       "reviewBody": "Отзыв о проработке с Александром 'Интегралом' Васильевым",
       "itemReviewed": {
         "@type": "ProfessionalService",
-        "name": "Нейротраблшуттинг"
+        "name": "Нейротраблшутинг"
       }
     },
     {
@@ -335,7 +335,7 @@ const schemaOrg = {
       "reviewBody": "Отзыв о работе с Александром 'Интегралом' Васильевым",
       "itemReviewed": {
         "@type": "ProfessionalService",
-        "name": "Нейротраблшуттинг"
+        "name": "Нейротраблшутинг"
       }
     },
     {
@@ -353,7 +353,7 @@ const schemaOrg = {
       "reviewBody": "Отзыв о работе с Александром 'Интегралом' Васильевым",
       "itemReviewed": {
         "@type": "ProfessionalService",
-        "name": "Нейротраблшуттинг"
+        "name": "Нейротраблшутинг"
       }
     },
     {
@@ -371,7 +371,7 @@ const schemaOrg = {
       "reviewBody": "Отзыв о работе с Александром 'Интегралом' Васильевым",
       "itemReviewed": {
         "@type": "ProfessionalService",
-        "name": "Нейротраблшуттинг"
+        "name": "Нейротраблшутинг"
       }
     },
     {
@@ -389,7 +389,7 @@ const schemaOrg = {
       "reviewBody": "Отзыв о работе Александра 'Интеграла' Васильева",
       "itemReviewed": {
         "@type": "ProfessionalService",
-        "name": "Нейротраблшуттинг"
+        "name": "Нейротраблшутинг"
       }
     },
     {
@@ -407,7 +407,7 @@ const schemaOrg = {
       "reviewBody": "Отзыв о работе с Александром 'Интегралом' Васильевым",
       "itemReviewed": {
         "@type": "ProfessionalService",
-        "name": "Нейротраблшуттинг"
+        "name": "Нейротраблшутинг"
       }
     },
     {
@@ -425,7 +425,7 @@ const schemaOrg = {
       "reviewBody": "Отзыв о работе с Александром 'Интегралом' Васильевым",
       "itemReviewed": {
         "@type": "ProfessionalService",
-        "name": "Нейротраблшуттинг"
+        "name": "Нейротраблшутинг"
       }
     }
   ],
@@ -444,14 +444,14 @@ export default function () {
   useScrollToLocation();
 
   const metaConfig = {
-    title: 'Нейротраблшуттинг | Устранение тревоги, депрессии и психосоматики',
+    title: 'Нейротраблшутинг | Устранение тревоги, депрессии и психосоматики',
     description: "Проработка подсознательных блоков: тревожность, депрессия, фобии, психосоматика.",
-    keywords: "нейротраблшуттинг, гипнотерапия, гипнотерапевт, НЛП, психосоматика, депрессия, тревожность, проработка страхов, экзорцизм, психология, гипноз, подсознательные блоки",
+    keywords: "нейротраблшутинг, гипнотерапия, гипнотерапевт, НЛП, психосоматика, депрессия, тревожность, проработка страхов, экзорцизм, психология, гипноз, подсознательные блоки",
   };
 
   return (
     <Layout metaConfig={metaConfig} schemaOrg={schemaOrg}>
-      <SecondaryPreview text={"Нейротраблшуттинг"} subtext={'Ваш ключ к жизни без страхов, ограничений и внутренних конфликтов'} image={secondary_preview_7} />
+      <SecondaryPreview text={"Нейротраблшутинг"} subtext={'Ваш ключ к жизни без страхов, ограничений и внутренних конфликтов'} image={secondary_preview_7} />
       <div style={{ background: 'var(--card-color)'}}>
         <div className={containerStyles.container}>
           <VisibilityManager as="p">
@@ -464,7 +464,7 @@ export default function () {
 
           <VisibilityManager as="div" className={contentStyles.textBlock}>
             <h3 className={contentStyles.title_middle}>
-              Нейротраблшуттинг — это метод, который:
+              Нейротраблшутинг — это метод, который:
             </h3>
             <p className={contentStyles.textDescription}>
               <span className={contentStyles.textSymbol}>●</span>
@@ -548,7 +548,7 @@ export default function () {
         setIsSubmitted={setIsSubmitted}
         isSubmitted={isSubmitted}
         title={"ГОТОВЫ ОТКРЫТЬ ДЛЯ СЕБЯ НОВЫЕ ГОРИЗОНТЫ?"}
-        type="Первая консультация (Страница: Нейротраблшуттинг)"
+        type="Первая консультация (Страница: Нейротраблшутинг)"
         description={`Запишитесь на бесплатную консультацию, и я свяжусь с вами в ближайшее время.
 
           Первая консультация — бесплатно. 

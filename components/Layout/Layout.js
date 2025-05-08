@@ -10,6 +10,7 @@ import ScrollTopButton from "../ScrollTopButton/ScrollTopButton";
 import { useTheme } from "../../hooks/useTheme";
 
 import { Nunito, Rubik } from "next/font/google";
+import { Html } from "next/document";
 
 const nunito = Nunito({
   weight: ["400", "700"],
@@ -55,6 +56,7 @@ export default function Layout({ children, metaConfig, schemaOrg = '' }) {
           content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, user-scalable=0"
         />
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta httpEquiv="Content-Language" content="ru" />
         <meta name="author" content="Александр Васильев" />
         <meta name="copyright" content="Александр Васильев" />
         <meta name="keywords" content={keywords} />
@@ -64,6 +66,7 @@ export default function Layout({ children, metaConfig, schemaOrg = '' }) {
         <meta property="og:description" content={description} />
         <meta property="og:type" content="website" />
         <meta property="og:image" content={meta_logo.src} />
+        <meta property="og:locale" content="ru_RU" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta
           name="apple-mobile-web-app-status-bar-style"

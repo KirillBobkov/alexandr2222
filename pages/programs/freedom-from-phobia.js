@@ -14,16 +14,16 @@ const schemaOrg = {
   "@context": "https://schema.org",
   "@type": "Service",
   "name": "Избавление от фобий",
-  "description": "Избавьтесь от любых фобий и страхов за 1-8 сессий с помощью нейротраблшуттинга - метода, устраняющего глубинные психологические причины фобий",
+  "description": "Избавьтесь от любых фобий и страхов за 1-8 сессий с помощью нейротраблшутинга - метода, устраняющего глубинные психологические причины фобий",
   "url": "https://alexandrvasilev.ru/programs/freedom-from-phobia",
   "provider": {
     "@type": "Person",
     "name": "Александр Васильев",
-    "description": "Нейротраблшуттер, специалист по работе с подсознанием и фобиями",
+    "description": "Нейротраблшутер, специалист по работе с подсознанием и фобиями",
     "url": "https://alexandrvasilev.ru/#about"
   },
   "areaServed": "Казань и онлайн",
-  "serviceType": "Нейротраблшуттинг",
+  "serviceType": "Нейротраблшутинг",
   "offers": {
     "@type": "Offer",
     "price": "По запросу",
@@ -50,8 +50,8 @@ export default function () {
   const metaConfig = {
     title: 'Преодоление фобий - Александр "Интеграл" Васильев',
     pageTitle: "Преодоление фобий",
-    description: "Преодоление фобий методом нейротраблшуттинга",
-    keywords: "фобии, страхи, тревоги, нейротраблшуттинг, психотерапия",
+    description: "Преодоление фобий методом нейротраблшутинга",
+    keywords: "фобии, страхи, тревоги, нейротраблшутинг, психотерапия",
     content: "",
     href: "/programs/freedom-from-phobia",
   };
@@ -106,7 +106,7 @@ export default function () {
 
           <div style={{ height: '1px' }} />
           <VisibilityManager as="h3" className={contentStyles.title_middle}>
-            Как работает нейротраблшуттинг?
+            Как работает нейротраблшутинг?
           </VisibilityManager>
 
           <VisibilityManager as="p">

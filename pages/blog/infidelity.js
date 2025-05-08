@@ -13,7 +13,7 @@ import { Button } from "../../components/shared/Button/Button";
 const schemaOrg = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "Как нейротраблшуттинг помогает пережить измену: восстановление доверия через работу с подсознанием",
+  "headline": "Как нейротраблшутинг помогает пережить измену: восстановление доверия через работу с подсознанием",
   "description": "Глубокий анализ психологических последствий измены и методов восстановления способности доверять через работу с подсознательными паттернами",
   "image": "/_next/static/media/secondary_preview_18.webp",
   "url": "https://alexandrvasilev.ru/blog/infidelity",
@@ -34,14 +34,14 @@ const schemaOrg = {
     "@type": "Person",
     "name": "Александр Васильев",
     "url": "https://alexandrvasilev.ru/#about",
-    "description": "Нейротраблшуттер, специалист по работе с подсознанием и восстановлению после психологических травм",
-    "jobTitle": "Нейротраблшуттер, специалист по работе с подсознанием"
+    "description": "Нейротраблшутер, специалист по работе с подсознанием и восстановлению после психологических травм",
+    "jobTitle": "Нейротраблшутер, специалист по работе с подсознанием"
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "https://alexandrvasilev.ru/blog/infidelity"
   },
-  "keywords": "измена, доверие, психология, нейротраблшуттинг, травмы, отношения",
+  "keywords": "измена, доверие, психология, нейротраблшутинг, травмы, отношения",
   "about": [
     {
       "@type": "Thing",
@@ -50,7 +50,7 @@ const schemaOrg = {
     },
     {
       "@type": "Thing",
-      "name": "Нейротраблшуттинг в терапии доверия",
+      "name": "Нейротраблшутинг в терапии доверия",
       "description": "Метод работы с подсознанием для перепрограммирования травматических реакций и восстановления способности доверять"
     }
   ],
@@ -60,7 +60,7 @@ const schemaOrg = {
     "priceCurrency": "RUB",
     "availability": "https://schema.org/InStock",
     "url": "https://alexandrvasilev.ru/blog/infidelity#message",
-    "description": "Запишитесь на консультацию, чтобы узнать, как нейротраблшуттинг может помочь вам пережить измену и восстановить способность доверять."
+    "description": "Запишитесь на консультацию, чтобы узнать, как нейротраблшутинг может помочь вам пережить измену и восстановить способность доверять."
   }
 };
 
@@ -71,23 +71,23 @@ export default function () {
 
   const metaConfig = {
     title:
-      "Как нейротраблшуттинг помогает пережить измену: восстановление доверия через работу с подсознанием",
+      "Как нейротраблшутинг помогает пережить измену: восстановление доверия через работу с подсознанием",
     description:
       "Глубокий анализ психологических последствий измены и методов восстановления способности доверять через работу с подсознательными паттернами",
     keywords:
-      "измена, доверие, психология, нейротраблшуттинг, травмы, отношения",
+      "измена, доверие, психология, нейротраблшутинг, травмы, отношения",
   };
 
   return (
     <Layout metaConfig={metaConfig} schemaOrg={schemaOrg}>
       <SecondaryPreview
-        text="Как нейротраблшуттинг помогает пережить измену"
+        text="Как нейротраблшутинг помогает пережить измену"
         image={secondary_preview_18}
       />
       <LineAnimation>
         <div className={containerStyles.container}>
           <VisibilityManager as="h1" className={contentStyles.title_middle}>
-            Как нейротраблшуттинг помогает пережить измену: восстановление
+            Как нейротраблшутинг помогает пережить измену: восстановление
             доверия через работу с подсознанием
           </VisibilityManager>
 
@@ -104,7 +104,7 @@ export default function () {
           </VisibilityManager>
 
           <VisibilityManager as="p">
-            Нейротраблшуттинг предлагает не «закрыть гештальт», а
+            Нейротраблшутинг предлагает не «закрыть гештальт», а
             перепрограммировать саму основу ваших реакций. Рассказываем, как это
             работает.
           </VisibilityManager>
@@ -171,7 +171,7 @@ export default function () {
 
           <div style={{ height: "1px" }} />
           <VisibilityManager as="h3" className={contentStyles.title_middle}>
-            Как нейротраблшуттинг «перезаписывает» травму предательства?
+            Как нейротраблшутинг «перезаписывает» травму предательства?
           </VisibilityManager>
 
           <VisibilityManager as="p">
@@ -341,7 +341,7 @@ export default function () {
           </VisibilityManager>
 
           <VisibilityManager as="p">
-            Нейротраблшуттинг не стирает память, но меняет эмоциональный код
+            Нейротраблшутинг не стирает память, но меняет эмоциональный код
             этих воспоминаний. Вы помните событие, но оно больше не управляет
             вами.
           </VisibilityManager>
@@ -379,7 +379,7 @@ export default function () {
 
           <div style={{ height: "1px" }} />
           <VisibilityManager as="h3" className={contentStyles.title_middle}>
-            Когда нейротраблшуттинг необходим?
+            Когда нейротраблшутинг необходим?
           </VisibilityManager>
 
           <VisibilityManager as="div">
@@ -418,7 +418,7 @@ export default function () {
           </VisibilityManager>
 
           <VisibilityManager as="p">
-            Нейротраблшуттинг не вернёт прошлые отношения, но подарит свободу
+            Нейротраблшутинг не вернёт прошлые отношения, но подарит свободу
             выбора: больше не бежать от любви, а встречать её с открытым
             сердцем.
           </VisibilityManager>

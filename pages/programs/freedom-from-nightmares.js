@@ -14,16 +14,16 @@ const schemaOrg = {
   "@context": "https://schema.org",
   "@type": "Service",
   "name": "Избавление от ночных кошмаров",
-  "description": "Избавьтесь от ночных кошмаров за 1-8 сессий с помощью нейротраблшуттинга - метода работы с подсознанием, устраняющего глубинные причины кошмаров",
+  "description": "Избавьтесь от ночных кошмаров за 1-8 сессий с помощью нейротраблшутинга - метода работы с подсознанием, устраняющего глубинные причины кошмаров",
   "url": "https://alexandrvasilev.ru/programs/freedom-from-nightmares",
   "provider": {
     "@type": "Person",
     "name": "Александр Васильев",
-    "description": "Нейротраблшуттер, специалист по работе с подсознанием",
+    "description": "Нейротраблшутер, специалист по работе с подсознанием",
     "url": "https://alexandrvasilev.ru/#about"
   },
   "areaServed": "Казань и онлайн",
-  "serviceType": "Нейротраблшуттинг",
+  "serviceType": "Нейротраблшутинг",
   "offers": {
     "@type": "Offer",
     "price": "По запросу",
@@ -50,8 +50,8 @@ export default function () {
   const metaConfig = {
     title: 'Спокойный сон - Александр "Интеграл" Васильев',
     pageTitle: "Спокойный сон",
-    description: "Спокойный сон методом нейротраблшуттинга",
-    keywords: "ночные кошмары, плохие сны, нейротраблшуттинг, психотерапия, уменьшение кошмаров",
+    description: "Спокойный сон методом нейротраблшутинга",
+    keywords: "ночные кошмары, плохие сны, нейротраблшутинг, психотерапия, уменьшение кошмаров",
     content: "",
     href: "/programs/freedom-from-nightmares",
   };
@@ -92,7 +92,7 @@ export default function () {
 
           <div style={{ height: '1px' }} />
           <VisibilityManager as="h3" className={contentStyles.title_middle}>
-            Как работает нейротраблшуттинг?
+            Как работает нейротраблшутинг?
           </VisibilityManager>
 
           <VisibilityManager as="p">
