@@ -486,24 +486,40 @@ export default function () {
 
           <VisibilityManager as="div" className={contentStyles.textBlock}>
             <h3 className={contentStyles.title_middle}>
-
-              Как это работает?
+              Как это работает
             </h3>
 
             <p className={contentStyles.textDescription}>
-              <span className={contentStyles.textSymbol}>●</span>
-              {"  "}
-              Страхи, заложенные в детстве или даже до рождения.
+              Сначала проводим бесплатную диагностику, на которой выявляем, где именно в подсознании прячется решение вашей задачи, а вы сами принимаете решение, идти дальше или нет.
+            </p>
+            <p className={contentStyles.textDescription}>
+              Работа идёт в состоянии альфа-ритма, когда сознание остаётся активным, но доступ к подсознанию открыт. Это полностью осознанный и безопасный процесс, в котором вы сами видите скрытые причинно-следственные связи.
+            </p>
+            <p className={contentStyles.textDescription}>
+              В ходе дальнейшей работы, мы вместе:
             </p>
             <p className={contentStyles.textDescription}>
               <span className={contentStyles.textSymbol}>●</span>
               {"  "}
-              Психосоматические реакции (аллергии, панические атаки).
+              выходим к корневому эпизоду (чаще всего детскому или вытесненному);
             </p>
             <p className={contentStyles.textDescription}>
               <span className={contentStyles.textSymbol}>●</span>
               {"  "}
-              Ограничивающие убеждения: «Я не достоин», «У меня не получится».
+              «размораживаем» застрявшие эмоции и блоки;
+            </p>
+            <p className={contentStyles.textDescription}>
+              <span className={contentStyles.textSymbol}>●</span>
+              {"  "}
+              переписываем внутреннюю структуру восприятия;
+            </p>
+            <p className={contentStyles.textDescription}>
+              <span className={contentStyles.textSymbol}>●</span>
+              {"  "}
+              закрепляем результат на уровне ощущений, поведения и решений.
+            </p>
+            <p className={contentStyles.textDescription}>
+              Эффект вы чувствуете сразу. Меняется состояние, уходят внутренние зажимы, возвращается ясность, вы получаете желаемый результат быстро и комфортно, максимум за 9 сессий.
             </p>
           </VisibilityManager>
           <VisibilityManager as="div" className={contentStyles.textBlock}>
