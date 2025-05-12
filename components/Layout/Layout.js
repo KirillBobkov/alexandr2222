@@ -55,6 +55,7 @@ export default function Layout({ children, metaConfig, schemaOrg = '' }) {
           name="viewport"
           content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, user-scalable=0"
         />
+        <meta name="yandex-verification" content="70b474c1ec62cdcd" />
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
         <meta httpEquiv="Content-Language" content="ru" />
         <meta name="author" content="Александр Васильев" />
