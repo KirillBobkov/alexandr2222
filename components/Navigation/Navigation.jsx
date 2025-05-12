@@ -19,7 +19,7 @@ export const Navigation = () => {
   const toggleMenu = () => setIsOpen(prev => !prev);
 
   return (
-    <div>
+    <>
       <button 
         className={styles["theme-toggle_mobile"]} 
         onClick={changeTheme}
@@ -92,7 +92,7 @@ export const Navigation = () => {
           <div key={i} className={styles.burger__line} />
         ))}
       </button>
-    </div>
+    </>
   );
 };
 
