@@ -277,8 +277,8 @@ export default function () {
 
       <AboutMe
         {...{
+          titleEmpty: "Где я",
           title: "могу вам помочь",
-          titleEmpty: "Чем я",
           items: [
             { title: "Усталость" },
             { title: "Зависимости" },
