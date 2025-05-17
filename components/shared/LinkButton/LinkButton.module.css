@@ -9,7 +9,7 @@
     transition: all 0.2s ease;
     text-transform: uppercase;
     cursor: pointer;
-
+    z-index: 0;
     font-size: 16px;
     font-weight: 800;
     -ms-flex-wrap: nowrap;

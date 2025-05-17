@@ -7,39 +7,44 @@ import { LineAnimation } from "../../components/LineAnomation/LineAnimation";
 import { VisibilityManager } from "../../components/shared/VisibilityManager";
 import containerStyles from "../../styles/container.module.css";
 import contentStyles from "../../styles/contentStyles.module.css";
+import finalStyles from "../../styles/finalContent.module.css";
 import secondary_preview_6 from "../../images/secondary_preview_6.webp";
 import { Button } from "../../components/shared/Button/Button";
+import { Final } from "../../components/Final/Final";
 
 const schemaOrg = {
   "@context": "https://schema.org",
   "@type": "Service",
-  "name": "Программа по избавлению от курения",
-  "description": "Быстрое и эффективное избавление от никотиновой зависимости с помощью нейротраблшутинга - метода работы с подсознанием, устраняющего глубинные причины курения",
-  "url": "https://alexandrvasilev.ru/programs/drop-smoking",
-  "provider": {
+  name: "Программа по избавлению от курения",
+  description:
+    "Быстрое и эффективное избавление от никотиновой зависимости с помощью нейротраблшутинга - метода работы с подсознанием, устраняющего глубинные причины курения",
+  url: "https://alexandrvasilev.ru/programs/drop-smoking",
+  provider: {
     "@type": "Person",
-    "name": "Александр Васильев",
-    "description": "Нейротраблшутер, специалист по работе с подсознанием и зависимостями",
-    "url": "https://alexandrvasilev.ru/#about"
+    name: "Александр Васильев",
+    description:
+      "Нейротраблшутер, специалист по работе с подсознанием и зависимостями",
+    url: "https://alexandrvasilev.ru/#about",
   },
-  "areaServed": "Казань и онлайн",
-  "serviceType": "Нейротраблшутинг зависимостей",
-  "offers": {
+  areaServed: "Казань и онлайн",
+  serviceType: "Нейротраблшутинг зависимостей",
+  offers: {
     "@type": "Offer",
-    "price": "По запросу",
-    "priceCurrency": "RUB",
-    "availability": "https://schema.org/InStock",
-    "url": "https://alexandrvasilev.ru/programs/drop-smoking#message"
+    price: "По запросу",
+    priceCurrency: "RUB",
+    availability: "https://schema.org/InStock",
+    url: "https://alexandrvasilev.ru/programs/drop-smoking#message",
   },
-  "serviceOutput": {
+  serviceOutput: {
     "@type": "Thing",
-    "name": "Результаты программы",
-    "description": "Снижение или полное отсутствие тяги к сигаретам, легкое и естественное отвыкание от курения, улучшение здоровья, повышение качества жизни"
+    name: "Результаты программы",
+    description:
+      "Снижение или полное отсутствие тяги к сигаретам, легкое и естественное отвыкание от курения, улучшение здоровья, повышение качества жизни",
   },
-  "mainEntityOfPage": {
+  mainEntityOfPage: {
     "@type": "WebPage",
-    "@id": "https://alexandrvasilev.ru/programs/drop-smoking"
-  }
+    "@id": "https://alexandrvasilev.ru/programs/drop-smoking",
+  },
 };
 
 export default function () {
@@ -50,15 +55,20 @@ export default function () {
   const metaConfig = {
     title: 'Бросить курить - Александр "Интеграл" Васильев',
     pageTitle: "Бросить курить",
-    description: "Эффективное избавление от никотиновой зависимости методом нейротраблшутинга",
-    keywords: "бросить курить, никотиновая зависимость, нейротраблшутинг, избавление от курения",
+    description:
+      "Эффективное избавление от никотиновой зависимости методом нейротраблшутинга",
+    keywords:
+      "бросить курить, никотиновая зависимость, нейротраблшутинг, избавление от курения",
     content: "",
     href: "/programs/drop-smoking",
   };
 
   return (
     <Layout metaConfig={metaConfig} schemaOrg={schemaOrg}>
-      <SecondaryPreview text={metaConfig.pageTitle} image={secondary_preview_6} />
+      <SecondaryPreview
+        text={metaConfig.pageTitle}
+        image={secondary_preview_6}
+      />
       <LineAnimation>
         <div className={containerStyles.container}>
           <VisibilityManager as="p">
@@ -79,7 +89,7 @@ export default function () {
             которые сейчас поддерживают вашу зависимость.
           </VisibilityManager>
 
-          <div style={{ height: '1px' }} />
+          <div style={{ height: "1px" }} />
           <VisibilityManager as="h3" className={contentStyles.title_middle}>
             Результаты, которые вы получите
           </VisibilityManager>
@@ -107,7 +117,7 @@ export default function () {
             и финансовые аспекты жизни.
           </VisibilityManager>
 
-          <div style={{ height: '1px' }} />
+          <div style={{ height: "1px" }} />
           <VisibilityManager as="h3" className={contentStyles.title_middle}>
             Физическое здоровье
           </VisibilityManager>
@@ -219,50 +229,23 @@ export default function () {
             </p>
           </VisibilityManager>
 
-          <div style={{ height: '1px' }} />
+          <div style={{ height: "1px" }} />
+          <Final animation customStyles={{ padding: "0 " }}>
+            <h2 className={finalStyles.title} style={{ marginTop: "0" }}>
+              Стоимость при достижении результата
+            </h2>
+            <div className={finalStyles.price}>125 000 ₽</div>
+            <div className={finalStyles.description}>
+              Возврат 100% денег при отсутствии эффекта
+            </div>
+            <Button
+              className={contentStyles.message}
+              href={{ hash: "#message" }}
+              status="Записаться"
+            />
+          </Final>
+          <div style={{ height: "1px" }} />
 
-          <div
-            style={{
-              textAlign: "center",
-              margin: "0rem 0",
-              textTransform: "uppercase",
-              fontWeight: "bold",
-              color: "var(--font-color)"
-            }}
-          >
-            Стоимость при достижении результата
-          </div>
-          <div
-            style={{
-              textAlign: "center",
-              margin: "0rem 0",
-              color: "var(--accent)",
-              fontSize: "3rem",
-              fontWeight: "bold",
-            }}
-          >
-            125 000₽
-          </div>
-          <div
-            style={{
-              textAlign: "center",
-              margin: "0rem 0",
-              textTransform: "uppercase",
-              fontWeight: "bold",
-              color: "var(--font-color)"
-            }}
-          >          
-          Возврат 100% денег при отсутствии эффекта
-          </div>
-
-          <Button
-            className={contentStyles.message}
-            href={{ hash: "#message" }}
-            status="Записаться"
-          />
-
-
-          <div style={{ height: '1px' }} />
           <VisibilityManager as="h3" className={contentStyles.title_middle}>
             Психологическое здоровье
           </VisibilityManager>
@@ -472,8 +455,14 @@ export default function () {
             Забудьте о курении и начните дышать полной грудью. Запишитесь на
             бесплатную консультацию прямо сейчас!
           </VisibilityManager>
-          
-          <p style={{ fontSize: '12px', fontStyle: 'italic', marginBottom: '15px' }}>
+
+          <p
+            style={{
+              fontSize: "12px",
+              fontStyle: "italic",
+              marginBottom: "15px",
+            }}
+          >
             Метод не является медицинским и не заменяет консультации специалиста
           </p>
         </div>
@@ -482,7 +471,7 @@ export default function () {
       <Form
         setIsSubmitted={setIsSubmitted}
         isSubmitted={isSubmitted}
-        type={'Программа: ' + metaConfig.pageTitle}
+        type={"Программа: " + metaConfig.pageTitle}
         title={"Готовы жить лучше?"}
         description={`Запишитесь на бесплатную консультацию, и я свяжусь с вами в ближайшее время.
 

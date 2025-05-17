@@ -16,8 +16,10 @@ import logo from "../images/logo.webp";
 import { products as neurotroubleshuttingProducts } from "../consts/products";
 import contentStyles from "../styles/contentStyles.module.css";
 import containerStyles from "../styles/container.module.css";
+import finalStyles from "../styles/finalContent.module.css";
 import { LineAnimation } from "../components/LineAnomation/LineAnimation";
 import { VisibilityManager } from "../components/shared/VisibilityManager";
+import LinkButton from "../components/shared/LinkButton/LinkButton";
 
 const schemaOrg = {
   "@context": "https://schema.org",
@@ -327,33 +329,42 @@ export default function () {
       />
 
       <Final
-        title="Мухоморный ретрит в Казани"
-        description="Путь исцеления и самопознания, открывающий доступ к встрече с Высшими Силами, позволяет наладить связь с Творцом и раскрыть своё предназначение."
-        buttonText="Подробнее"
-        buttonHref="/ceremony"
         image={enter_hole_1}
-        price="300 000 ₽"
         animation
-      />
+      >
+        <h2 className={finalStyles.title}>Мухоморный ретрит в Казани</h2>
+        <p className={finalStyles.price}>300 000 ₽</p>
+        <p className={finalStyles.description}>Путь исцеления и самопознания, открывающий доступ к встрече с Высшими Силами, позволяет наладить связь с Творцом и раскрыть своё предназначение.</p>
+        <LinkButton href="/ceremony">
+          <span>Подробнее</span>
+        </LinkButton>
+      </Final>
       <AnimatedLine />
       <Final
-        title="Нейротраблшутинг"
-        description="Точечное и быстрое устранение первопричин блоков, страхов, зависимостей и ограничений через глубинную работу с подсознанием."
-        buttonText="Подробнее"
-        buttonHref="/neurotroubleshutting"
         image={enter_hole_2}
-        price="125 000 ₽"
         animation
-        online
-      />
+      >
+        <h2 className={finalStyles.title}>Нейротраблшутинг</h2>
+        <p className={finalStyles.price}>125 000 ₽</p>
+        <p className={finalStyles.description}>Точечное и быстрое устранение первопричин блоков, страхов, зависимостей и ограничений через глубинную работу с подсознанием.</p>
+        <div className={finalStyles.online}>
+          <span className={finalStyles.blink}>●</span>
+          <span>Онлайн</span>
+        </div>
+        <LinkButton href="/neurotroubleshutting">
+          <span>Подробнее</span>
+        </LinkButton>
+      </Final>
       <AnimatedLine />
       <Final
-        title="Запишитесь на бесплатную консультацию"
-        description="Узнайте причины своих проблем, способы их решения и возможные преграды на вашем пути к успеху!"
-        buttonText="Записаться"
-        buttonHref="#message"
         animation
-      />
+      >
+        <h2 className={finalStyles.title} style={{ marginTop: "0" }}>Запишитесь на бесплатную консультацию</h2>
+        <p className={finalStyles.description}>Узнайте причины своих проблем, способы их решения и возможные преграды на вашем пути к успеху!</p>
+        <LinkButton href="#message">
+          <span>Записаться</span>
+        </LinkButton>
+      </Final>
       <div id="message" />
       <Form
         setIsSubmitted={setIsSubmitted}

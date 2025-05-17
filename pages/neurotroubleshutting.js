@@ -7,16 +7,18 @@ import { Suggest } from "../components/Suggests/Suggests";
 import { Helping } from "../components/Helping/Helping";
 import { Products } from "../components/Products/Products";
 import { SecondaryPreview } from "../components/SecondaryPreview/SecondaryPreview";
-import secondary_preview_7 from '../images/secondary_preview_7.webp';
+import secondary_preview_7 from "../images/secondary_preview_7.webp";
 import { VideoWidget } from "../components/VideoWidget/VideoWidget";
 import { Questions } from "../components/Questions/Questions";
 import { Final } from "../components/Final/Final";
 import { Form } from "../components/Form/Form";
 import { products as neurotroubleshuttingProducts } from "../consts/products";
-import { LineAnimation } from "../components/LineAnomation/LineAnimation";
 import { VisibilityManager } from "../components/shared/VisibilityManager";
 import containerStyles from "../styles/container.module.css";
 import contentStyles from "../styles/contentStyles.module.css";
+import finalStyles from "../styles/finalContent.module.css";
+import LinkButton from "../components/shared/LinkButton/LinkButton";
+import { Button } from "../components/shared/Button/Button";
 
 export const questionsContent = {
   blocks: [
@@ -64,22 +66,22 @@ export const questionsContent = {
       answer: `К сожалению, в таком случае вы потеряете возможность избавиться от своих проблем и продолжите дальше страдать. Что это если не предательство себя?`,
     },
   ],
-}
+};
 
 const videos = [
   // New videos added on March 2024
-  { 
+  {
     link: "https://vkvideo.ru/video_ext.php?oid=-230061059&id=456239034&hash=0035901b2a8621d8",
     thumbnailUrl:
       "https://i.mycdn.me/getVideoPreview?id=7836443740675&idx=9&type=39&tkn=lrWBd6X8RCZrONsyuINlb_MXcCA&fn=vid_u",
-    name: 'Отзыв Александры о проработке',
+    name: "Отзыв Александры о проработке",
     uploadDate: new Date("April 09, 2025").toISOString(),
   },
   {
     link: "https://vkvideo.ru/video_ext.php?oid=-230061059&id=456239033&hash=943c42d877b77217",
     thumbnailUrl:
       "https://i.mycdn.me/getVideoPreview?id=8081892903674&idx=4&type=39&tkn=DVITmcvAa4N91syX1BBqeNibyic&fn=vid_u",
-    name: 'Отзыв Виктории о проработке',
+    name: "Отзыв Виктории о проработке",
     uploadDate: new Date("April 09, 2025").toISOString(),
   },
   {
@@ -88,20 +90,6 @@ const videos = [
       "https://i.mycdn.me/getVideoPreview?id=7895760833071&idx=2&type=39&tkn=M56cNKVKS2eNz_YBO5he2T9jdWM&fn=vid_l",
     name: 'Отзыв Булата Рустамовича о проработках с Александром "Интегралом" Васильевым',
     uploadDate: new Date("March 13, 2025").toISOString(),
-  },
-  {
-    link: "https://vkvideo.ru/video_ext.php?oid=290538287&id=456239201&hash=21fab855e5d11724",
-    thumbnailUrl:
-      "https://i.mycdn.me/getVideoPreview?id=8285451979311&idx=2&type=39&tkn=_jMrqV-BhCK-tbXnuUzkM1tM7Do&fn=vid_l",
-    name: 'Отзыв Андрея о работе с Александром "Интегралом" Васильевым',
-    uploadDate: new Date("March 13, 2025").toISOString(),
-  },
-  {
-    link: "https://vkvideo.ru/video_ext.php?oid=290538287&id=456239191&hash=344bfa2e09b67aa6",
-    thumbnailUrl:
-      "https://i.mycdn.me/getVideoPreview?id=7749927766575&idx=12&type=39&tkn=wU7VVedkp7QlCuStZ29SMqQSNt0&fn=vid_x",
-    name: 'Отзыв Тины о проработке с Александром "Интегралом" Васильевым',
-    uploadDate: new Date("November 14, 2024").toISOString(),
   },
   {
     link: "https://vkvideo.ru/video_ext.php?oid=290538287&id=456239188&hash=8a160ed8a99c6834",
@@ -150,292 +138,300 @@ const videos = [
 const schemaOrg = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
-  "name": "Нейротраблшутинг",
-  "description": "Проработка подсознательных блоков: тревожность, депрессия, фобии, психосоматика. Быстрое решение проблем за 1-8 сессий.",
-  "url": "https://alexandrvasilev.ru/neurotroubleshutting",
-  "provider": {
+  name: "Нейротраблшутинг",
+  description:
+    "Проработка подсознательных блоков: тревожность, депрессия, фобии, психосоматика. Быстрое решение проблем за 1-8 сессий.",
+  url: "https://alexandrvasilev.ru/neurotroubleshutting",
+  provider: {
     "@type": "Person",
-    "name": "Александр Васильев",
-    "url": "https://alexandrvasilev.ru/#about",
-    "description": "Нейротраблшутер, специалист по работе с подсознанием",
-    "jobTitle": "Нейротраблшутер, специалист по работе с подсознанием"
+    name: "Александр Васильев",
+    url: "https://alexandrvasilev.ru/#about",
+    description: "Нейротраблшутер, специалист по работе с подсознанием",
+    jobTitle: "Нейротраблшутер, специалист по работе с подсознанием",
   },
-  "serviceType": "Нейротраблшутинг",
-  "offers": {
+  serviceType: "Нейротраблшутинг",
+  offers: {
     "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "RUB",
-    "availability": "https://schema.org/InStock",
-    "url": "https://alexandrvasilev.ru/neurotroubleshutting#message",
-    "description": "Запишитесь на бесплатную консультацию, чтобы узнать причины своих проблем и способы их решения."
+    price: "0",
+    priceCurrency: "RUB",
+    availability: "https://schema.org/InStock",
+    url: "https://alexandrvasilev.ru/neurotroubleshutting#message",
+    description:
+      "Запишитесь на бесплатную консультацию, чтобы узнать причины своих проблем и способы их решения.",
   },
-  "areaServed": {
+  areaServed: {
     "@type": "GeoCircle",
-    "geoMidpoint": {
+    geoMidpoint: {
       "@type": "GeoCoordinates",
-      "latitude": "55.7558",
-      "longitude": "37.6173"
+      latitude: "55.7558",
+      longitude: "37.6173",
     },
-    "geoRadius": "10000000"
+    geoRadius: "10000000",
   },
-  "keywords": "нейротраблшутинг, гипнотерапия, гипнотерапевт, НЛП, психосоматика, депрессия, тревожность, проработка страхов, экзорцизм, психология, гипноз, подсознательные блоки",
-  "potentialAction": {
+  keywords:
+    "нейротраблшутинг, гипнотерапия, гипнотерапевт, НЛП, психосоматика, депрессия, тревожность, проработка страхов, экзорцизм, психология, гипноз, подсознательные блоки",
+  potentialAction: {
     "@type": "ReserveAction",
-    "target": {
+    target: {
       "@type": "EntryPoint",
-      "urlTemplate": "https://alexandrvasilev.ru/neurotroubleshutting#message"
+      urlTemplate: "https://alexandrvasilev.ru/neurotroubleshutting#message",
     },
-    "result": {
+    result: {
       "@type": "Reservation",
-      "name": "Запись на бесплатную консультацию"
-    }
+      name: "Запись на бесплатную консультацию",
+    },
   },
-  "hasOfferCatalog": {
+  hasOfferCatalog: {
     "@type": "OfferCatalog",
-    "name": "Услуги нейротраблшутинга",
-    "itemListElement": [
+    name: "Услуги нейротраблшутинга",
+    itemListElement: [
       {
         "@type": "Offer",
-        "itemOffered": {
+        itemOffered: {
           "@type": "Service",
-          "name": "Проработка страхов и фобий",
-          "description": "Устранение глубинных страхов и фобий, заложенных в детстве или до рождения"
-        }
+          name: "Проработка страхов и фобий",
+          description:
+            "Устранение глубинных страхов и фобий, заложенных в детстве или до рождения",
+        },
       },
       {
         "@type": "Offer",
-        "itemOffered": {
+        itemOffered: {
           "@type": "Service",
-          "name": "Работа с психосоматикой",
-          "description": "Решение психосоматических реакций, включая аллергии и панические атаки"
-        }
+          name: "Работа с психосоматикой",
+          description:
+            "Решение психосоматических реакций, включая аллергии и панические атаки",
+        },
       },
       {
         "@type": "Offer",
-        "itemOffered": {
+        itemOffered: {
           "@type": "Service",
-          "name": "Коррекция ограничивающих убеждений",
-          "description": "Устранение негативных установок, мешающих достижению целей"
-        }
-      }
-    ]
+          name: "Коррекция ограничивающих убеждений",
+          description:
+            "Устранение негативных установок, мешающих достижению целей",
+        },
+      },
+    ],
   },
-  "serviceOutput": {
+  serviceOutput: {
     "@type": "Thing",
-    "name": "Результаты нейротраблшутинга",
-    "description": "Свобода от ограничений, гармония с собой и миром, энергия для достижения целей"
+    name: "Результаты нейротраблшутинга",
+    description:
+      "Свобода от ограничений, гармония с собой и миром, энергия для достижения целей",
   },
-  "serviceAudience": {
+  serviceAudience: {
     "@type": "Audience",
-    "audienceType": "Люди, страдающие от тревожности, депрессии, фобий и психосоматических расстройств"
+    audienceType:
+      "Люди, страдающие от тревожности, депрессии, фобий и психосоматических расстройств",
   },
-  "review": [
+  review: [
     {
       "@type": "Review",
-      "reviewRating": {
+      reviewRating: {
         "@type": "Rating",
-        "ratingValue": "5",
-        "bestRating": "5"
+        ratingValue: "5",
+        bestRating: "5",
       },
-      "author": {
+      author: {
         "@type": "Person",
-        "name": "Александра"
+        name: "Александра",
       },
-      "datePublished": "2025-04-09",
-      "reviewBody": "Отзыв о проработке с Александром Васильевым",
-      "itemReviewed": {
+      datePublished: "2025-04-09",
+      reviewBody: "Отзыв о проработке с Александром Васильевым",
+      itemReviewed: {
         "@type": "ProfessionalService",
-        "name": "Нейротраблшутинг"
-      }
+        name: "Нейротраблшутинг",
+      },
     },
     {
       "@type": "Review",
-      "reviewRating": {
+      reviewRating: {
         "@type": "Rating",
-        "ratingValue": "5",
-        "bestRating": "5"
+        ratingValue: "5",
+        bestRating: "5",
       },
-      "author": {
+      author: {
         "@type": "Person",
-        "name": "Виктория"
+        name: "Виктория",
       },
-      "datePublished": "2025-04-09",
-      "reviewBody": "Отзыв о проработке с Александром Васильевым",
-      "itemReviewed": {
+      datePublished: "2025-04-09",
+      reviewBody: "Отзыв о проработке с Александром Васильевым",
+      itemReviewed: {
         "@type": "ProfessionalService",
-        "name": "Нейротраблшутинг"
-      }
+        name: "Нейротраблшутинг",
+      },
     },
     {
       "@type": "Review",
-      "reviewRating": {
+      reviewRating: {
         "@type": "Rating",
-        "ratingValue": "5",
-        "bestRating": "5"
+        ratingValue: "5",
+        bestRating: "5",
       },
-      "author": {
+      author: {
         "@type": "Person",
-        "name": "Булат Рустамович"
+        name: "Булат Рустамович",
       },
-      "datePublished": "2025-03-13",
-      "reviewBody": "Отзыв о проработках с Александром 'Интегралом' Васильевым",
-      "itemReviewed": {
+      datePublished: "2025-03-13",
+      reviewBody: "Отзыв о проработках с Александром 'Интегралом' Васильевым",
+      itemReviewed: {
         "@type": "ProfessionalService",
-        "name": "Нейротраблшутинг"
-      }
+        name: "Нейротраблшутинг",
+      },
     },
     {
       "@type": "Review",
-      "reviewRating": {
+      reviewRating: {
         "@type": "Rating",
-        "ratingValue": "5",
-        "bestRating": "5"
+        ratingValue: "5",
+        bestRating: "5",
       },
-      "author": {
+      author: {
         "@type": "Person",
-        "name": "Андрей"
+        name: "Андрей",
       },
-      "datePublished": "2025-03-13",
-      "reviewBody": "Отзыв о работе с Александром 'Интегралом' Васильевым",
-      "itemReviewed": {
+      datePublished: "2025-03-13",
+      reviewBody: "Отзыв о работе с Александром 'Интегралом' Васильевым",
+      itemReviewed: {
         "@type": "ProfessionalService",
-        "name": "Нейротраблшутинг"
-      }
+        name: "Нейротраблшутинг",
+      },
     },
     {
       "@type": "Review",
-      "reviewRating": {
+      reviewRating: {
         "@type": "Rating",
-        "ratingValue": "5",
-        "bestRating": "5"
+        ratingValue: "5",
+        bestRating: "5",
       },
-      "author": {
+      author: {
         "@type": "Person",
-        "name": "Тина"
+        name: "Тина",
       },
-      "datePublished": "2024-11-14",
-      "reviewBody": "Отзыв о проработке с Александром 'Интегралом' Васильевым",
-      "itemReviewed": {
+      datePublished: "2024-11-14",
+      reviewBody: "Отзыв о проработке с Александром 'Интегралом' Васильевым",
+      itemReviewed: {
         "@type": "ProfessionalService",
-        "name": "Нейротраблшутинг"
-      }
+        name: "Нейротраблшутинг",
+      },
     },
     {
       "@type": "Review",
-      "reviewRating": {
+      reviewRating: {
         "@type": "Rating",
-        "ratingValue": "5",
-        "bestRating": "5"
+        ratingValue: "5",
+        bestRating: "5",
       },
-      "author": {
+      author: {
         "@type": "Person",
-        "name": "Александр Дворянинов"
+        name: "Александр Дворянинов",
       },
-      "datePublished": "2024-11-30",
-      "reviewBody": "Отзыв о работе с Александром 'Интегралом' Васильевым",
-      "itemReviewed": {
+      datePublished: "2024-11-30",
+      reviewBody: "Отзыв о работе с Александром 'Интегралом' Васильевым",
+      itemReviewed: {
         "@type": "ProfessionalService",
-        "name": "Нейротраблшутинг"
-      }
+        name: "Нейротраблшутинг",
+      },
     },
     {
       "@type": "Review",
-      "reviewRating": {
+      reviewRating: {
         "@type": "Rating",
-        "ratingValue": "5",
-        "bestRating": "5"
+        ratingValue: "5",
+        bestRating: "5",
       },
-      "author": {
+      author: {
         "@type": "Person",
-        "name": "Дмитрий Афанасьев"
+        name: "Дмитрий Афанасьев",
       },
-      "datePublished": "2024-11-30",
-      "reviewBody": "Отзыв о работе с Александром 'Интегралом' Васильевым",
-      "itemReviewed": {
+      datePublished: "2024-11-30",
+      reviewBody: "Отзыв о работе с Александром 'Интегралом' Васильевым",
+      itemReviewed: {
         "@type": "ProfessionalService",
-        "name": "Нейротраблшутинг"
-      }
+        name: "Нейротраблшутинг",
+      },
     },
     {
       "@type": "Review",
-      "reviewRating": {
+      reviewRating: {
         "@type": "Rating",
-        "ratingValue": "5",
-        "bestRating": "5"
+        ratingValue: "5",
+        bestRating: "5",
       },
-      "author": {
+      author: {
         "@type": "Person",
-        "name": "Сергей Хан"
+        name: "Сергей Хан",
       },
-      "datePublished": "2024-11-30",
-      "reviewBody": "Отзыв о работе с Александром 'Интегралом' Васильевым",
-      "itemReviewed": {
+      datePublished: "2024-11-30",
+      reviewBody: "Отзыв о работе с Александром 'Интегралом' Васильевым",
+      itemReviewed: {
         "@type": "ProfessionalService",
-        "name": "Нейротраблшутинг"
-      }
+        name: "Нейротраблшутинг",
+      },
     },
     {
       "@type": "Review",
-      "reviewRating": {
+      reviewRating: {
         "@type": "Rating",
-        "ratingValue": "5",
-        "bestRating": "5"
+        ratingValue: "5",
+        bestRating: "5",
       },
-      "author": {
+      author: {
         "@type": "Person",
-        "name": "Кирилл Бобков"
+        name: "Кирилл Бобков",
       },
-      "datePublished": "2024-11-30",
-      "reviewBody": "Отзыв о работе Александра 'Интеграла' Васильева",
-      "itemReviewed": {
+      datePublished: "2024-11-30",
+      reviewBody: "Отзыв о работе Александра 'Интеграла' Васильева",
+      itemReviewed: {
         "@type": "ProfessionalService",
-        "name": "Нейротраблшутинг"
-      }
+        name: "Нейротраблшутинг",
+      },
     },
     {
       "@type": "Review",
-      "reviewRating": {
+      reviewRating: {
         "@type": "Rating",
-        "ratingValue": "5",
-        "bestRating": "5"
+        ratingValue: "5",
+        bestRating: "5",
       },
-      "author": {
+      author: {
         "@type": "Person",
-        "name": "Никита Цыпленков"
+        name: "Никита Цыпленков",
       },
-      "datePublished": "2024-11-30",
-      "reviewBody": "Отзыв о работе с Александром 'Интегралом' Васильевым",
-      "itemReviewed": {
+      datePublished: "2024-11-30",
+      reviewBody: "Отзыв о работе с Александром 'Интегралом' Васильевым",
+      itemReviewed: {
         "@type": "ProfessionalService",
-        "name": "Нейротраблшутинг"
-      }
+        name: "Нейротраблшутинг",
+      },
     },
     {
       "@type": "Review",
-      "reviewRating": {
+      reviewRating: {
         "@type": "Rating",
-        "ratingValue": "5",
-        "bestRating": "5"
+        ratingValue: "5",
+        bestRating: "5",
       },
-      "author": {
+      author: {
         "@type": "Person",
-        "name": "Ксения"
+        name: "Ксения",
       },
-      "datePublished": "2024-11-30",
-      "reviewBody": "Отзыв о работе с Александром 'Интегралом' Васильевым",
-      "itemReviewed": {
+      datePublished: "2024-11-30",
+      reviewBody: "Отзыв о работе с Александром 'Интегралом' Васильевым",
+      itemReviewed: {
         "@type": "ProfessionalService",
-        "name": "Нейротраблшутинг"
-      }
-    }
+        name: "Нейротраблшутинг",
+      },
+    },
   ],
-  "aggregateRating": {
+  aggregateRating: {
     "@type": "AggregateRating",
-    "ratingValue": "5",
-    "reviewCount": "11",
-    "bestRating": "5",
-    "worstRating": "1"
-  }
+    ratingValue: "5",
+    reviewCount: "11",
+    bestRating: "5",
+    worstRating: "1",
+  },
 };
 
 export default function () {
@@ -444,22 +440,33 @@ export default function () {
   useScrollToLocation();
 
   const metaConfig = {
-    title: 'Нейротраблшутинг | Устранение тревоги, депрессии и психосоматики',
-    description: "Проработка подсознательных блоков: тревожность, депрессия, фобии, психосоматика.",
-    keywords: "нейротраблшутинг, гипнотерапия, гипнотерапевт, НЛП, психосоматика, депрессия, тревожность, проработка страхов, экзорцизм, психология, гипноз, подсознательные блоки",
+    title: "Нейротраблшутинг | Устранение тревоги, депрессии и психосоматики",
+    description:
+      "Проработка подсознательных блоков: тревожность, депрессия, фобии, психосоматика.",
+    keywords:
+      "нейротраблшутинг, гипнотерапия, гипнотерапевт, НЛП, психосоматика, депрессия, тревожность, проработка страхов, экзорцизм, психология, гипноз, подсознательные блоки",
   };
 
   return (
     <Layout metaConfig={metaConfig} schemaOrg={schemaOrg}>
-      <SecondaryPreview text={"Нейротраблшутинг"} subtext={'Ваш ключ к жизни без страхов, ограничений и внутренних конфликтов'} image={secondary_preview_7} />
-      <div style={{ background: 'var(--card-color)'}}>
+      <SecondaryPreview
+        text={"Нейротраблшутинг"}
+        subtext={
+          "Ваш ключ к жизни без страхов, ограничений и внутренних конфликтов"
+        }
+        image={secondary_preview_7}
+      />
+      <div style={{ background: "var(--card-color)" }}>
         <div className={containerStyles.container}>
           <VisibilityManager as="p">
-            Устали годами бороться с проблемами, которые возвращаются снова и снова?
+            Устали годами бороться с проблемами, которые возвращаются снова и
+            снова?
           </VisibilityManager>
 
           <VisibilityManager as="p">
-            Психологи, медитации, врачи — вы уже пробовали всё. Но что, если решение кроется не в разговорах или таблетках, а в глубинах вашего подсознания?
+            Психологи, медитации, врачи — вы уже пробовали всё. Но что, если
+            решение кроется не в разговорах или таблетках, а в глубинах вашего
+            подсознания?
           </VisibilityManager>
 
           <VisibilityManager as="div" className={contentStyles.textBlock}>
@@ -469,31 +476,36 @@ export default function () {
             <p className={contentStyles.textDescription}>
               <span className={contentStyles.textSymbol}>●</span>
               {"  "}
-              Находит и устраняет корень проблем — от фобий до аллергии, от ночных кошмаров до хронической усталости.
+              Находит и устраняет корень проблем — от фобий до аллергии, от
+              ночных кошмаров до хронической усталости.
             </p>
             <p className={contentStyles.textDescription}>
               <span className={contentStyles.textSymbol}>●</span>
               {"  "}
-              Работает быстро: результат за 1-8 сессий. Не годы терапии, а фокус на решении.
+              Работает быстро: результат за 1-8 сессий. Не годы терапии, а фокус
+              на решении.
             </p>
             <p className={contentStyles.textDescription}>
               <span className={contentStyles.textSymbol}>●</span>
               {"  "}
-              Сохраняет приватность: мы не разбираем ваше прошлое — мы меняем его влияние на вас здесь и сейчас.
+              Сохраняет приватность: мы не разбираем ваше прошлое — мы меняем
+              его влияние на вас здесь и сейчас.
             </p>
           </VisibilityManager>
-  
 
           <VisibilityManager as="div" className={contentStyles.textBlock}>
-            <h3 className={contentStyles.title_middle}>
-              Как это работает
-            </h3>
+            <h3 className={contentStyles.title_middle}>Как это работает</h3>
 
             <p className={contentStyles.textDescription}>
-              Сначала проводим бесплатную диагностику, на которой выявляем, где именно в подсознании прячется решение вашей задачи, а вы сами принимаете решение, идти дальше или нет.
+              Сначала проводим бесплатную диагностику, на которой выявляем, где
+              именно в подсознании прячется решение вашей задачи, а вы сами
+              принимаете решение, идти дальше или нет.
             </p>
             <p className={contentStyles.textDescription}>
-              Работа идёт в состоянии альфа-ритма, когда сознание остаётся активным, но доступ к подсознанию открыт. Это полностью осознанный и безопасный процесс, в котором вы сами видите скрытые причинно-следственные связи.
+              Работа идёт в состоянии альфа-ритма, когда сознание остаётся
+              активным, но доступ к подсознанию открыт. Это полностью осознанный
+              и безопасный процесс, в котором вы сами видите скрытые
+              причинно-следственные связи.
             </p>
             <p className={contentStyles.textDescription}>
               В ходе дальнейшей работы, мы вместе:
@@ -501,7 +513,8 @@ export default function () {
             <p className={contentStyles.textDescription}>
               <span className={contentStyles.textSymbol}>●</span>
               {"  "}
-              выходим к корневому эпизоду (чаще всего детскому или вытесненному);
+              выходим к корневому эпизоду (чаще всего детскому или
+              вытесненному);
             </p>
             <p className={contentStyles.textDescription}>
               <span className={contentStyles.textSymbol}>●</span>
@@ -519,13 +532,13 @@ export default function () {
               закрепляем результат на уровне ощущений, поведения и решений.
             </p>
             <p className={contentStyles.textDescription}>
-              Эффект вы чувствуете сразу. Меняется состояние, уходят внутренние зажимы, возвращается ясность, вы получаете желаемый результат быстро и комфортно, максимум за 9 сессий.
+              Эффект вы чувствуете сразу. Меняется состояние, уходят внутренние
+              зажимы, возвращается ясность, вы получаете желаемый результат
+              быстро и комфортно, максимум за 9 сессий.
             </p>
           </VisibilityManager>
           <VisibilityManager as="div" className={contentStyles.textBlock}>
-          <h3 className={contentStyles.title_middle}>
-            Ваш результат
-          </h3>
+            <h3 className={contentStyles.title_middle}>Ваш результат</h3>
 
             <p className={contentStyles.textDescription}>
               <span className={contentStyles.textSymbol}>●</span>
@@ -546,17 +559,40 @@ export default function () {
         </div>
       </div>
       <Suggest />
-      <Helping href={{ pathname: '/neurotroubleshutting', hash: '#message'}} />
-      <Warranty href={{ pathname: '/neurotroubleshutting', hash: '#message'}}/>
+      <Helping href={{ pathname: "/neurotroubleshutting", hash: "#message" }} />
+      <Warranty
+        href={{ pathname: "/neurotroubleshutting", hash: "#message" }}
+      />
+
+      <Final animation>
+        <h2 className={finalStyles.title} style={{ marginTop: "0" }}>
+          Стоимость при достижении результата
+        </h2>
+        <div className={finalStyles.price}>125 000 ₽</div>
+        <div className={finalStyles.description}>
+          Возврат 100% денег при отсутствии эффекта
+        </div>
+        <Button
+          className={contentStyles.message}
+          href={{ pathname: "/neurotroubleshutting", hash: "#message" }}
+          status="Записаться"
+        />
+      </Final>
+
       <AnimatedLine />
       <VideoWidget videos={videos} />
-      <Final
-        title="Запишитесь на бесплатную консультацию"
-        description="Узнайте причины своих проблем, способы их решения и возможные преграды на вашем пути к успеху!"
-        buttonText="Записаться"
-        buttonHref="/neurotroubleshutting#message"
-        animation
-      />
+      <Final animation>
+        <h2 className={finalStyles.title} style={{ marginTop: "0" }}>
+          Запишитесь на бесплатную консультацию
+        </h2>
+        <p className={finalStyles.description}>
+          Узнайте причины своих проблем, способы их решения и возможные преграды
+          на вашем пути к успеху!
+        </p>
+        <LinkButton href="/neurotroubleshutting#message">
+          <span>Записаться</span>
+        </LinkButton>
+      </Final>
       <Products products={neurotroubleshuttingProducts} />
       <Questions questionsContent={questionsContent} />
       <div id="message" />

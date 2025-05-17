@@ -17,6 +17,7 @@ import ceremony_image_1 from "../images/ceremony_image_1.webp";
 import ceremony_image_2 from "../images/ceremony_image_2.webp";
 import ceremony_image_3 from "../images/ceremony_image_3.webp";
 import ceremony_image_4 from "../images/ceremony_image_4.webp";
+import finalStyles from "../styles/finalContent.module.css";
 
 import Image from "next/image";
 const videos = [
@@ -1029,34 +1030,18 @@ export default function () {
           </VisibilityManager>
 
           <div style={{ height: "1px" }} />
-          <div
-            style={{
-              textAlign: "center",
-              margin: "0rem 0",
-              textTransform: "uppercase",
-              fontWeight: "bold",
-              color: "var(--font-color)",
-            }}
-          >
-            Стоимость церемонии
-          </div>
-          <div
-            style={{
-              textAlign: "center",
-              margin: "0rem 0",
-              color: "var(--accent)",
-              fontSize: "3rem",
-              fontWeight: "bold",
-            }}
-          >
-            300 000₽
-          </div>
-          <div style={{ height: "1px" }} />
-          <Button
-            className={contentStyles.message}
-            href={{ hash: "#message" }}
-            status="Записаться"
-          />
+
+          <Final animation customStyles={{ padding: "0" }}>
+            <h2 className={finalStyles.title} style={{ marginTop: "0" }}>
+              Стоимость церемонии
+            </h2>
+            <div className={finalStyles.price}>300 000 ₽</div>
+            <Button
+              className={contentStyles.message}
+              href={{ hash: "#message" }}
+              status="Записаться"
+            />
+          </Final>
         </div>
       </LineAnimation>
 

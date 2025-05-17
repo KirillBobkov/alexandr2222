@@ -4,20 +4,17 @@ import { VisibilityManager } from "../shared/VisibilityManager";
 import LinkButton from "../shared/LinkButton/LinkButton";
 import Image from "next/image";
 import { LineAnimation } from "../LineAnomation/LineAnimation";
+
 export const Final = ({ 
-  title,
-  description,
-  buttonText,
-  buttonHref,
   image,
-  price,
-  online,
-  animation
+  animation,
+  children,
+  customStyles = {},
 }) => {
   const [loaded, setLoaded] = React.useState(false);
 
   const content = (
-    <section className={styles.block}>
+    <VisibilityManager as="section" className={styles.block} style={customStyles}>
       <div className={`${styles.content}`}>
         {image ? (
           <Image
@@ -36,35 +33,9 @@ export const Final = ({
             <span className={styles.move + " " + styles.moving3}>ИN</span>
           </>
         )}
-        <VisibilityManager as="h3" className={`${styles.title} ${image ? "" : styles.title_no_image}`}>
-          {title}
-        </VisibilityManager>
-
-        {online && (
-          <VisibilityManager as="div" className={styles.online}>
-            <span className={styles.blink}>●</span> Онлайн
-          </VisibilityManager>
-        )}
-
-
-        {price && (
-          <VisibilityManager as="div" className={styles.price}>
-            {price}
-          </VisibilityManager>
-        )}
-
-        <VisibilityManager as="p" className={styles.description + " " + (image ? "" : styles.description_no_image)}>
-          {description}
-        </VisibilityManager>
-
-
-        {buttonText && buttonHref && (
-          <VisibilityManager as="div" style={{zIndex: "4"}}>
-            <LinkButton href={buttonHref}>{buttonText}</LinkButton>
-          </VisibilityManager>
-        )}
+        {children}
       </div>
-    </section>
+    </VisibilityManager>
   );
 
   return animation ? (

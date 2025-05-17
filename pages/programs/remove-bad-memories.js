@@ -9,6 +9,8 @@ import containerStyles from "../../styles/container.module.css";
 import contentStyles from "../../styles/contentStyles.module.css";
 import secondary_preview_5 from "../../images/secondary_preview_5.webp";
 import { Button } from "../../components/shared/Button/Button";
+import { Final } from "../../components/Final/Final";
+import finalStyles from "../../styles/finalContent.module.css";
 
 const schemaOrg = {
   "@context": "https://schema.org",
@@ -93,47 +95,8 @@ export default function () {
             </p>
           </VisibilityManager>
 
-          <div style={{ height: "1px" }} />
 
-          <div
-            style={{
-              textAlign: "center",
-              margin: "0rem 0",
-              textTransform: "uppercase",
-              fontWeight: "bold",
-              color: "var(--font-color)"
-            }}
-          >
-            Стоимость при достижении результата
-          </div>
-          <div
-            style={{
-              textAlign: "center",
-              margin: "0rem 0",
-              color: "var(--accent)",
-              fontSize: "3rem",
-              fontWeight: "bold",
-            }}
-          >
-            125 000₽
-          </div>
-          <div
-            style={{
-              textAlign: "center",
-              margin: "0rem 0",
-              textTransform: "uppercase",
-              fontWeight: "bold",
-              color: "var(--font-color)"
-            }}
-          >          
-          Возврат 100% денег при отсутствии эффекта
-          </div>
 
-          <Button
-            className={contentStyles.message}
-            href={{ hash: "#message" }}
-            status="Записаться"
-          />
           <div style={{ height: "1px" }} />
           <VisibilityManager as="h3" className={contentStyles.title_middle}>
             Как это работает?
@@ -152,6 +115,24 @@ export default function () {
             Позвольте себе исцелиться и двигаться вперед к жизни, которую вы
             заслуживаете.{" "}
           </VisibilityManager>
+
+          
+          <div style={{ height: "1px" }} />
+          <Final animation customStyles={{ padding: "0 " }}>
+            <h2 className={finalStyles.title} style={{ marginTop: "0" }}>
+              Стоимость при достижении результата
+            </h2>
+            <div className={finalStyles.price}>125 000 ₽</div>
+            <div className={finalStyles.description}>
+              Возврат 100% денег при отсутствии эффекта
+            </div>
+            <Button
+              className={contentStyles.message}
+              href={{ hash: "#message" }}
+              status="Записаться"
+            />
+          </Final>
+          <div style={{ height: "1px" }} />
           
           <p style={{ fontSize: '12px', fontStyle: 'italic', marginBottom: '15px' }}>
             Метод не является медицинским и не заменяет консультации специалиста

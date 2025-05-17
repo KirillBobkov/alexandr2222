@@ -10,6 +10,8 @@ import contentStyles from "../../styles/contentStyles.module.css";
 import secondary_preview_2 from "../../images/secondary_preview_2.webp";
 import secondary_preview_19 from "../../images/secondary_preview_19.webp";
 import { Button } from "../../components/shared/Button/Button";
+import { Final } from "../../components/Final/Final";
+import finalStyles from "../../styles/finalContent.module.css";
 
 const schemaOrg = {
   "@context": "https://schema.org",
@@ -146,48 +148,25 @@ export default function () {
             Метод не является медицинским и не заменяет консультации специалиста
           </p>
 
+     
+          <div style={{ height: "1px" }} />
+          <Final animation customStyles={{ padding: "0 " }}>
+            <h2 className={finalStyles.title} style={{ marginTop: "0" }}>
+              Стоимость при достижении результата
+            </h2>
+            <div className={finalStyles.price}>125 000 ₽</div>
+            <div className={finalStyles.description}>
+              Возврат 100% денег при отсутствии эффекта
+            </div>
+            <Button
+              className={contentStyles.message}
+              href={{ hash: "#message" }}
+              status="Записаться"
+            />
+          </Final>
           <div style={{ height: "1px" }} />
 
-          <div
-            style={{
-              textAlign: "center",
-              margin: "0rem 0",
-              textTransform: "uppercase",
-              fontWeight: "bold",
-              color: "var(--font-color)"
-            }}
-          >
-            Стоимость при достижении результата
-          </div>
-          <div
-            style={{
-              textAlign: "center",
-              margin: "0rem 0",
-              color: "var(--accent)",
-              fontSize: "3rem",
-              fontWeight: "bold",
-            }}
-          >
-            125 000₽
-          </div>
-          <div
-            style={{
-              textAlign: "center",
-              margin: "0rem 0",
-              textTransform: "uppercase",
-              fontWeight: "bold",
-              color: "var(--font-color)"
-            }}
-          >          
-          Возврат 100% денег при отсутствии эффекта
-          </div>
-
-          <Button
-            className={contentStyles.message}
-            href={{ hash: "#message" }}
-            status="Записаться"
-          />
-        </div>
+        </div>  
       </LineAnimation>
       <div id="message" />
       <Form

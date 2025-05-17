@@ -3,7 +3,7 @@
 }
 
 .block {
-    padding: 150px 30px 150px;
+    padding: 100px 30px 100px;
 }
 
 .content {
@@ -16,12 +16,12 @@
     margin: 0 auto;
     background-color: var(--card-color);
     text-align: center;
-    padding: 60px;
+    padding: 100px 60px;
     border-radius: 20px;
     position: relative;
     color: #ffffff;
     overflow: hidden;
-    min-height: 600px;
+    min-height: 400px;
 }
 
 .background {
