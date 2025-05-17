@@ -346,11 +346,11 @@ export default function () {
       >
         <h2 className={finalStyles.title}>Нейротраблшутинг</h2>
         <p className={finalStyles.price}>125 000 ₽</p>
-        <p className={finalStyles.description}>Точечное и быстрое устранение первопричин блоков, страхов, зависимостей и ограничений через глубинную работу с подсознанием.</p>
         <div className={finalStyles.online}>
           <span className={finalStyles.blink}>●</span>
           <span>Онлайн</span>
         </div>
+        <p className={finalStyles.description}>Точечное и быстрое устранение первопричин блоков, страхов, зависимостей и ограничений через глубинную работу с подсознанием.</p>
         <LinkButton href="/neurotroubleshutting">
           <span>Подробнее</span>
         </LinkButton>

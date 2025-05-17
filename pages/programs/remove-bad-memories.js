@@ -126,6 +126,7 @@ export default function () {
             <div className={finalStyles.description}>
               Возврат 100% денег при отсутствии эффекта
             </div>
+            <div style={{ height: "1px" }} />
             <Button
               className={contentStyles.message}
               href={{ hash: "#message" }}
