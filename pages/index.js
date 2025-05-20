@@ -25,7 +25,7 @@ const schemaOrg = {
   "@type": "WebPage",
   name: 'Александр Васильев — Нейротраблшутер',
   description:
-    "Портал для преодоления сложностей и устранения страданий с помощью вегетализма, кинезиологии и работы с подсознанием.",
+    "Портал для преодоления сложностей и устранения страданий с помощью вегетализма, кинезиологии, работы с подсознанием и авторских методик. Бесплатная консультация, гарантия возврата денег, индивидуальные программы и ретриты.",
   url: "https://alexandrvasilev.ru",
   inLanguage: "ru",
   publisher: {
@@ -44,7 +44,7 @@ const schemaOrg = {
     name: "Александр Васильев",
     url: "https://alexandrvasilev.ru/#about",
     description:
-      "Я устраняю причины ваших страданий навсегда, помогая вам достичь гармонии и счастья.",
+      "Я устраняю причины ваших страданий навсегда, помогая вам достичь гармонии и счастья. Нейротраблшутер, специалист по работе с подсознанием, провожу ретриты и индивидуальные сессии.",
     image: {
       "@type": "ImageObject",
       url: "/_next/static/media/alex3.57d8e42f.webp",
@@ -52,13 +52,26 @@ const schemaOrg = {
       height: 1728,
     },
     jobTitle: "Нейротраблшутер, специалист по работе с подсознанием",
+    sameAs: [
+      "https://t.me/chronics44",
+      "https://www.tiktok.com/@alexandrvasilev.ru?_t=ZS-8vOVKf5Isrv&_r=1",
+      "https://youtube.com/@alexandrvasilev_ru?si=h6JxlRRBXkh8Oxln",
+      "https://alexandrvasilev.ru/",
+      "https://alexandrvasilev.ru/#about"
+    ]
   },
   mainEntity: {
     "@type": "Person",
     name: "Александр Васильев",
     description:
       "Нейротраблшутер, устраняющий причины страданий с использованием авторских методик, работы с подсознанием, вегетализма и кинезиологии.",
-    sameAs: ["https://alexandrvasilev.ru", "https://alexandrvasilev.ru/#about"],
+    sameAs: [
+      "https://t.me/chronics44",
+      "https://www.tiktok.com/@alexandrvasilev.ru?_t=ZS-8vOVKf5Isrv&_r=1",
+      "https://youtube.com/@alexandrvasilev_ru?si=h6JxlRRBXkh8Oxln",
+      "https://alexandrvasilev.ru/",
+      "https://alexandrvasilev.ru/#about"
+    ]
   },
   about: [
     {
@@ -74,134 +87,99 @@ const schemaOrg = {
         "Внутренний голос всё чаще задаёт вопросы о подлинной сути, смысле жизни и истинном счастье. Ваш кризис — это зов вернуться к самим себе.",
     },
     {
-      "@type": "Thing",
-      name: "Жизненные трудности",
-      description:
-        "Почему жизнь начинает трещать по швам: потеря энергии, ясности, появление ссор, тревоги и усталости происходят, когда вы отдаляетесь от своего истинного пути.",
-    },
-    {
-      "@type": "Thing",
-      name: "Услуги помощи",
-      description:
-        "Помощь в устранении зависимостей, усталости, психосоматики, ночных кошмаров, психических травм, управления эмоциями, поиска предназначения, подавленного состояния и ментальных ограничений.",
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "Почему у других получается, а у меня нет?",
+          acceptedAnswer: { "@type": "Answer", text: "Это связано с внутренними блоками и неосознанными ограничениями, которые можно устранить через работу с подсознанием." }
+        },
+        {
+          "@type": "Question",
+          name: "Тем ли делом я занимаюсь?",
+          acceptedAnswer: { "@type": "Answer", text: "Ответ на этот вопрос приходит через глубокое самопознание и устранение внутренних конфликтов." }
+        },
+        {
+          "@type": "Question",
+          name: "Почему я постоянно разочаровываюсь в людях?",
+          acceptedAnswer: { "@type": "Answer", text: "Причина часто кроется в неразрешённых психотравмах и ожиданиях, которые можно проработать." }
+        },
+        {
+          "@type": "Question",
+          name: "Сколько будут длиться эти страдания?",
+          acceptedAnswer: { "@type": "Answer", text: "Страдания заканчиваются, когда устраняются их коренные причины." }
+        },
+        {
+          "@type": "Question",
+          name: "Из-за чего то, что должно вызывать радость в жизни, становится обузой?",
+          acceptedAnswer: { "@type": "Answer", text: "Это сигнал о внутреннем конфликте, который можно устранить с помощью нейротраблшутинга." }
+        },
+        {
+          "@type": "Question",
+          name: "Неужели жизнь действительно не имеет смысла?",
+          acceptedAnswer: { "@type": "Answer", text: "Смысл жизни можно найти, наладив контакт с собой и устранив внутренние блоки." }
+        },
+        {
+          "@type": "Question",
+          name: "Отчего я постоянно хочу уйти из жизни?",
+          acceptedAnswer: { "@type": "Answer", text: "Это признак тяжёлых психотравм, которые поддаются коррекции через работу с подсознанием." }
+        }
+      ]
     },
     {
       "@type": "ItemList",
       name: "Инструменты",
       itemListElement: [
-        {
-          "@type": "ListItem",
-          position: 1,
-          item: {
-            "@type": "Thing",
-            name: "Вегетализм",
-          },
-        },
-        {
-          "@type": "ListItem",
-          position: 2,
-          item: {
-            "@type": "Thing",
-            name: "Кинезиология",
-          },
-        },
-        {
-          "@type": "ListItem",
-          position: 3,
-          item: {
-            "@type": "Thing",
-            name: "Работа с подсознанием",
-          },
-        },
-        {
-          "@type": "ListItem",
-          position: 4,
-          item: {
-            "@type": "Thing",
-            name: "Авторские методики",
-          },
-        },
+        { "@type": "ListItem", position: 1, item: { "@type": "Thing", name: "Вегетализм" } },
+        { "@type": "ListItem", position: 2, item: { "@type": "Thing", name: "Кинезиология" } },
+        { "@type": "ListItem", position: 3, item: { "@type": "Thing", name: "Работа с подсознанием" } },
+        { "@type": "ListItem", position: 4, item: { "@type": "Thing", name: "Авторские методики" } },
       ],
     },
     {
       "@type": "ItemList",
       name: "Услуги",
       itemListElement: [
-        {
-          "@type": "ListItem",
-          position: 1,
-          item: {
-            "@type": "Service",
-            name: "Мухоморный ретрит в Казани",
-            url: "https://alexandrvasilev.ru/ceremony",
-            description:
-              "Путь исцеления и самопознания, открывающий доступ к встрече с Высшими Силами, позволяет наладить связь с Творцом и раскрыть своё предназначение.",
-            offers: {
-              "@type": "Offer",
-              price: "300000",
-              priceCurrency: "RUB",
-            },
-          },
-        },
-        {
-          "@type": "ListItem",
-          position: 2,
-          item: {
-            "@type": "Service",
-            name: "Нейротраблшутинг",
-            url: "https://alexandrvasilev.ru/neurotroubleshutting",
-            description:
-              "Точечное и быстрое устранение первопричин блоков, страхов, зависимостей и ограничений через глубинную работу с подсознанием.",
-            offers: {
-              "@type": "Offer",
-              price: "125000",
-              priceCurrency: "RUB",
-            },
-          },
-        },
+        { "@type": "ListItem", position: 1, item: { "@type": "Service", name: "Мухоморный ретрит в Казани", url: "https://alexandrvasilev.ru/ceremony", description: "Путь исцеления и самопознания, открывающий доступ к встрече с Высшими Силами, позволяет наладить связь с Творцом и раскрыть своё предназначение.", offers: { "@type": "Offer", price: "300000", priceCurrency: "RUB" } } },
+        { "@type": "ListItem", position: 2, item: { "@type": "Service", name: "Нейротраблшутинг", url: "https://alexandrvasilev.ru/neurotroubleshutting", description: "Точечное и быстрое устранение первопричин блоков, страхов, зависимостей и ограничений через глубинную работу с подсознанием.", offers: { "@type": "Offer", price: "125000", priceCurrency: "RUB" } } },
+        { "@type": "ListItem", position: 3, item: { "@type": "Service", name: "Бросить курить", url: "https://alexandrvasilev.ru/programs/drop-smoking", description: "Индивидуальная программа по избавлению от никотиновой зависимости." } },
+        { "@type": "ListItem", position: 4, item: { "@type": "Service", name: "Отпустить негатив", url: "https://alexandrvasilev.ru/programs/remove-bad-memories", description: "Программа по освобождению от негативных воспоминаний и эмоций." } },
+        { "@type": "ListItem", position: 5, item: { "@type": "Service", name: "Увеличить заработок", url: "https://alexandrvasilev.ru/programs/grow-money", description: "Программа по снятию внутренних ограничений, мешающих финансовому росту." } },
+        { "@type": "ListItem", position: 6, item: { "@type": "Service", name: "Преодоление фобий", url: "https://alexandrvasilev.ru/programs/freedom-from-phobia", description: "Программа по работе с фобиями и страхами." } },
+        { "@type": "ListItem", position: 7, item: { "@type": "Service", name: "Свобода от аллергии", url: "https://alexandrvasilev.ru/programs/freedom-from-allergy", description: "Программа по устранению аллергических реакций через работу с подсознанием." } },
+        { "@type": "ListItem", position: 8, item: { "@type": "Service", name: "Спокойный сон", url: "https://alexandrvasilev.ru/programs/freedom-from-nightmares", description: "Программа по устранению ночных кошмаров и улучшению качества сна." } },
       ],
     },
+    {
+      "@type": "OfferCatalog",
+      name: "Проблемы, с которыми я работаю",
+      itemListElement: [
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Эмоциональное выгорание" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Поиск жизненного предназначения" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Комплексы и страхи" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Зависимости" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Заниженная самооценка" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Раздражительность" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Психические травмы" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Ночные кошмары" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Взаимодействие с людьми" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Суицидальные мысли" } },
+      ]
+    }
   ],
   breadcrumb: {
     "@type": "BreadcrumbList",
     itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Главная",
-        item: "https://alexandrvasilev.ru/",
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: "Программы",
-        item: "https://alexandrvasilev.ru/#programs",
-      },
-      {
-        "@type": "ListItem",
-        position: 3,
-        name: "Обо мне",
-        item: "https://alexandrvasilev.ru/#about",
-      },
-      {
-        "@type": "ListItem",
-        position: 4,
-        name: "Отзывы",
-        item: "https://alexandrvasilev.ru/#reviews",
-      },
-      {
-        "@type": "ListItem",
-        position: 5,
-        name: "Вопросы и ответы",
-        item: "https://alexandrvasilev.ru/#faq",
-      },
+      { "@type": "ListItem", position: 1, name: "Главная", item: "https://alexandrvasilev.ru/" },
+      { "@type": "ListItem", position: 2, name: "Программы", item: "https://alexandrvasilev.ru/#programs" },
+      { "@type": "ListItem", position: 3, name: "Обо мне", item: "https://alexandrvasilev.ru/#about" },
+      { "@type": "ListItem", position: 4, name: "Отзывы", item: "https://alexandrvasilev.ru/#reviews" },
+      { "@type": "ListItem", position: 5, name: "Вопросы и ответы", item: "https://alexandrvasilev.ru/#faq" },
     ],
   },
   mainContentOfPage: {
     "@type": "WebPageElement",
-    isPartOf: {
-      "@id": "https://alexandrvasilev.ru/",
-    },
+    isPartOf: { "@id": "https://alexandrvasilev.ru/" },
     speakable: {
       "@type": "SpeakableSpecification",
       cssSelector: [".title", ".paragraph"],
@@ -214,10 +192,17 @@ const schemaOrg = {
     availability: "https://schema.org/InStock",
     url: "https://alexandrvasilev.ru/#message",
     description:
-      "Запишитесь на бесплатную консультацию, и я свяжусь с вами в ближайшее время. Первая консультация — бесплатно.",
+      "Запишитесь на бесплатную консультацию, и я свяжусь с вами в ближайшее время. Первая консультация — бесплатно. Гарантия возврата денег при отсутствии результата.",
+  },
+  contactPoint: {
+    "@type": "ContactPoint",
+    contactType: "Запись на консультацию",
+    url: "https://alexandrvasilev.ru/#message",
+    availableLanguage: ["Russian"],
+    areaServed: "RU",
   },
   keywords:
-    "очищение интеграл ретрит грибы дурман нейротраблшутинг мухоморный ретрит вегетализм кинезиология внутреннее удовлетворение жизненный кризис предназначение",
+    "очищение интеграл ретрит грибы дурман нейротраблшутинг мухоморный ретрит вегетализм кинезиология внутреннее удовлетворение жизненный кризис предназначение консультация возврат денег TikTok YouTube Telegram VK Дзен",
 };
 
 export const products = [
