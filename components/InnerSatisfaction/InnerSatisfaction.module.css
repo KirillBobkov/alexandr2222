@@ -32,30 +32,6 @@
   color: var(--accent);
 }
 
-.questionsList {
-  list-style: none;
-  padding-left: 20px;
-  margin-bottom: 30px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.questionsList li {
-  font-size: 18px;
-  line-height: 1.8;
-  position: relative;
-  padding-left: 25px;
-  color: var(--font-color);
-}
-
-.questionsList li:before {
-  content: "•";
-  position: absolute;
-  left: 0;
-  color: var(--accent);
-}
-
 .grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
@@ -88,19 +64,6 @@
   .block {
     padding: 100px 20px;
     gap: 40px;
-  }
-  
-  .paragraph {
-    font-size: 16px;
-  }
-  
-  .questionsList {
-    gap: 10px;
-  }
-  
-  .questionsList li {
-    font-size: 16px;
-    line-height: 1.6;
   }
   
   .grid-container {
