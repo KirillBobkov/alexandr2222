@@ -3,7 +3,13 @@
     <priority>1.0</priority>
   </url>
 
-  <!-- Основные страницы услуг -->
+  <url>
+    <loc>https://alexandrvasilev.ru</loc>
+    <lastmod>2025-05-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
   <url>
     <loc>https://alexandrvasilev.ru/programs/love-life</loc>
     <lastmod>2025-05-17</lastmod>
