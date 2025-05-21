@@ -103,12 +103,12 @@ export const getNavigationTree = (pathname) => [
       value: "Главная",
     },
   },
-  {
-    parent: {
-      path: "/about-me",
-      value: "Обо мне",
-    },
-  },
+  // {
+  //   parent: {
+  //     path: "/about-me",
+  //     value: "Обо мне",
+  //   },
+  // },
   // {
   //   parent: {
   //     path: "/#programs",
