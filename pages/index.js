@@ -300,13 +300,13 @@ export default function () {
         image={enter_hole_2}
         animation
       >
-        <h2 className={finalStyles.title}>Нейротраблшутинг</h2>
+        <h2 className={finalStyles.title}style={{ color: "#fff" }}>Нейротраблшутинг</h2>
         <p className={finalStyles.price}>125 000 ₽</p>
         <div className={finalStyles.online}>
           <span className={finalStyles.blink}>●</span>
           <span>Онлайн</span>
         </div>
-        <p className={finalStyles.description}>Точечное и быстрое устранение первопричин блоков, страхов, зависимостей и ограничений через глубинную работу с подсознанием.</p>
+        <p className={finalStyles.description} style={{ color: "#fff" }}>Точечное и быстрое устранение первопричин блоков, страхов, зависимостей и ограничений через глубинную работу с подсознанием.</p>
         <LinkButton href="/neurotroubleshutting">
           <span>Подробнее</span>
         </LinkButton>
@@ -319,9 +319,9 @@ export default function () {
           marginBottom: "100px",
         }}
       >
-        <h2 className={finalStyles.title}>Мухоморный ретрит в Казани</h2>
+        <h2 className={finalStyles.title} style={{ color: "#fff" }}>Мухоморный ретрит в Казани</h2>
         <p className={finalStyles.price}>300 000 ₽</p>
-        <p className={finalStyles.description}>Путь исцеления и самопознания, открывающий доступ к встрече с Высшими Силами, позволяет наладить связь с Творцом и раскрыть своё предназначение.</p>
+        <p className={finalStyles.description} style={{ color: "#fff" }}>Путь исцеления и самопознания, открывающий доступ к встрече с Высшими Силами, позволяет наладить связь с Творцом и раскрыть своё предназначение.</p>
         <LinkButton href="/ceremony">
           <span>Подробнее</span>
         </LinkButton>
