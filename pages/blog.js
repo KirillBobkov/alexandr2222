@@ -18,6 +18,7 @@ import secondary_preview_24 from "../images/secondary_preview_24.webp";
 import secondary_preview_25 from "../images/secondary_preview_25.webp";
 import secondary_preview_26 from "../images/secondary_preview_26.webp";
 import secondary_preview_27 from "../images/secondary_preview_27.webp";
+import secondary_preview_28 from "../images/secondary_preview_28.webp";
 import styles from "../styles/blog.module.css";
 import contentStyles from "../styles/contentStyles.module.css";
 import { LineAnimation } from "../components/LineAnomation/LineAnimation";
@@ -25,6 +26,15 @@ import { VisibilityManager } from "../components/shared/VisibilityManager";
 import { useScrollToLocation } from "../hooks/useScrollToLocation";
 
 const articles = [
+  {
+    id: 15,
+    title: "Трагедия в Сочи: как ошибка с дозировкой Мухомора стала фатальной",
+    description:
+      "Недавно в Сочи на одном из ретритов скончался молодой IT-специалист. Причиной смерти стала неправильно подобранная дозировка Мухомора. Этот случай всколыхнул сообщество и напомнил о том, насколько серьёзным и тонким процессом является работа с Мухомором.",
+    date: "21 мая 2025",
+    image: secondary_preview_28,
+    slug: "fatal-mushroom-dosage-error-sochi",
+  },
   {
     id: 14,
     title: "Почему не получается держать дисциплину — и как это изменить",
