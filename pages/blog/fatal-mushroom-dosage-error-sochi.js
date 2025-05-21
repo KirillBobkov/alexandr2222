@@ -138,7 +138,7 @@ export default function FatalMushroomDosageErrorSochiPage() {
 
           <div style={{ height: '1px' }} />
           <VisibilityManager as="h3" className={contentStyles.title_middle}>
-            ОПАСНОСТЬ ОТРОВЛЕНИЯ: ДЕЛО НЕ ТОЛЬКО В ДОЗИРОВКЕ
+            ОПАСНОСТЬ ОТРАВЛЕНИЯ: ДЕЛО НЕ ТОЛЬКО В ДОЗИРОВКЕ
           </VisibilityManager>
 
           <VisibilityManager as="p">
