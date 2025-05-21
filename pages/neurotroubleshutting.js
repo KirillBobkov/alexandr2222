@@ -106,7 +106,7 @@ const videos = [
     uploadDate: new Date("November 30, 2024").toISOString(),
   },
   {
-    link: "https://vkvideo.ru/video_ext.php?oid=290538287&id=456239187&hash=6a6e9fc7449f1510",
+    link: "https://vkvideo.ru/video_ext.php?oid=290538287&id=456239203&hash=715fb2a11dbae2a6",
     thumbnailUrl:
       "https://i.mycdn.me/getVideoPreview?id=7673156012591&idx=6&type=39&tkn=m9S6n3h5E9xZhBraLacW2jnP_Tg&fn=vid_x",
     name: 'Отзыв Сергея Хана о работе с Александром "Интегралом" Васильевым',

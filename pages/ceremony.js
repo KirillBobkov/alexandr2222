@@ -46,35 +46,35 @@ const videos = [
   {
     link: "https://vkvideo.ru/video_ext.php?oid=290538287&id=456239202&hash=3d55b190e311b0e6",
     thumbnailUrl:
-      "https://i.mycdn.me/getVideoPreview?id=8289797409327&idx=14&type=39&tkn=CVnXi5ILpSTIee7srOJvmd8ptIk&fn=vid_x",
+      "https://i.mycdn.me/getVideoPreview?id=8056083778201&idx=14&type=39&tkn=4JdkUPhvBebSj-QxD2Wfyoilyk4&fn=vid_x",
     name: "Отзыв Алексея о мухоморном ретрите в Казани",
     uploadDate: new Date("March 14, 2025").toISOString(),
   },
   {
     link: "https://vkvideo.ru/video_ext.php?oid=290538287&id=456239200&hash=1f59e4c38e95320f",
     thumbnailUrl:
-      "https://i.mycdn.me/getVideoPreview?id=8285454010927&idx=13&type=39&tkn=eg0RhO-KpcZbQcdGGWmyi5ks118&fn=vid_l",
+      "https://i.mycdn.me/getVideoPreview?id=8375863872019&idx=13&type=39&tkn=ts_mfAwsPcPUBbtRqm36goN2p4E&fn=vid_x",
     name: "Отзыв Айдара о Мухоморном ретрите в Казани",
     uploadDate: new Date("March 13, 2025").toISOString(),
   },
   {
     link: "https://vkvideo.ru/video_ext.php?oid=290538287&id=456239195&hash=c7ee923a88bf9b4e",
     thumbnailUrl:
-      "https://i.mycdn.me/getVideoPreview?id=8285396077103&idx=0&type=39&tkn=SSoFVhoZ0lQOctJ6vjF6OwmE2lY&fn=vid_l",
+      "https://i.mycdn.me/getVideoPreview?id=8079521942120&idx=0&type=39&tkn=jtyTeLZdk1m7h2aPiy06vcL6gFU&fn=vid_x",
     name: "Отзыв Вероники о Мухоморном ретрите в Казани",
     uploadDate: new Date("March 13, 2025").toISOString(),
   },
   {
     link: "https://vkvideo.ru/video_ext.php?oid=290538287&id=456239199&hash=16d0076dfe68de70",
     thumbnailUrl:
-      "https://i.mycdn.me/getVideoPreview?id=8285457877551&idx=5&type=39&tkn=t4ee7KnrznQu1Xjv3VQZ5V1X0us&fn=vid_l",
+      "https://i.mycdn.me/getVideoPreview?id=7825874291202&idx=5&type=39&tkn=KMEXkKjkAaE1uCoCA53YPllvx5w&fn=vid_x",
     name: "Отзыв Кирилла о Мухоморном ретрите в Казани",
     uploadDate: new Date("March 13, 2025").toISOString(),
   },
   {
     link: "https://vkvideo.ru/video_ext.php?oid=290538287&id=456239198&hash=3d85099eca3aead0",
     thumbnailUrl:
-      "https://i.mycdn.me/getVideoPreview?id=8285432580655&idx=7&type=39&tkn=JSqPlkPTxNZtEx7xA1YL5UUiegs&fn=vid_l",
+      "https://i.mycdn.me/getVideoPreview?id=8306987961037&idx=7&type=39&tkn=mREkNCJHPc3T3-8TumsPyZwwzVE&fn=vid_x",
     name: "Отзыв Игоря о Мухоморном ретрите в Казани",
     uploadDate: new Date("March 13, 2025").toISOString(),
   },
