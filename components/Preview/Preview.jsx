@@ -58,7 +58,7 @@ export const Preview = () => {
               <svg
                 className={styles.social_icon}
                 width="24"
-      
+                style={{ color: "var(--icons-opacity)" }}
                 height="24"
                 viewBox="0 0 24 24"
                 fill="none"
@@ -140,6 +140,7 @@ export const Preview = () => {
             >
               <svg
                 className={styles.social_icon}
+                style={{ color: "var(--icons-opacity)" }}
                 width="24"
                 height="24"
                 viewBox="0 0 50 50"

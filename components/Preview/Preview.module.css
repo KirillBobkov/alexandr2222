@@ -127,7 +127,7 @@
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: var(--button-opacity);
+  background-color: var(--icons-opacity);
   transition: all 0.2s ease-in-out;
   cursor: pointer;
   text-decoration: none;
