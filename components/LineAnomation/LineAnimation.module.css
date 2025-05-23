@@ -41,6 +41,30 @@
 		opacity: 0; 
 	} 
 }
+
+@keyframes line_animation_3 {
+	0% {
+		top: 40%;
+		opacity: 0; 
+	}
+
+	10% {
+		top: 35%;
+		opacity: 1; 
+	} 
+
+	90% {
+		top: -5%;
+		opacity: 1; 
+	} 
+
+	100% {
+		top: -10%;
+		opacity: 0; 
+	} 
+}
+
+
 .line_animation {
 	top: 0px;
 	left: 50%;
@@ -78,8 +102,12 @@
 	animation: line_animation 10s linear infinite;
 }
 
-.line_animation .line_area:nth-child(4n+2):before,
-.line_animation .line_area:nth-child(4n+4):before {
+.line_animation .line_area:nth-child(4n+2):before {
 	-webkit-animation: line_animation_2 10s linear infinite;
 	animation: line_animation_2 10s linear infinite;
+}
+
+.line_animation .line_area:nth-child(4n+4):before {
+	-webkit-animation: line_animation_3 10s linear infinite;
+	animation: line_animation_3 10s linear infinite;
 }

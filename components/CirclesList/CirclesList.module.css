@@ -31,6 +31,15 @@
     opacity: 1;
 }
 
+@keyframes gradientRotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 .circle {
     display: flex;
     flex-direction: column;
@@ -41,9 +50,31 @@
     text-align: center;
     width: 250px;
     height: 250px;
-    border: 5px solid var(--accent);
+    position: relative;
+    background-color: var(--card-color);
+    z-index: 1;
+    overflow: hidden;
 }
 
+.circle::before {
+    content: "";
+    position: absolute;
+    inset: -5px;
+    border-radius: 50%;
+    background: conic-gradient(var(--accent), transparent 60%, var(--accent));
+    z-index: -1;
+    animation: gradientRotation 10s infinite linear;
+}
+
+.circle::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: var(--card-color);
+    z-index: -1;
+    margin: 5px;
+}
 
 .textTitle {
     font-size: 22px;

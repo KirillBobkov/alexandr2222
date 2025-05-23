@@ -17,15 +17,19 @@
   --bg-color: #000000;
   --font-color: #ffffff;
   --secondary-font-color: #a2a2a2;
+
+
   --accent: #EDB834;
-  --accent-rgb: 238, 177, 0;
+  --accent-opacity: #edb834b2;
+
+
   --border-color: #1C1C1C;
   --card-color: #181818;
   --bg-color-opacity: #0000008e;
   --nav-mobile-opacity: #0000008e;
-  --button-background: #262626;
-  --social-icon-color: #4c4c4c;
-  --social-icon-color-hover: #1f1f1f;
+
+  --button-opacity: #4c4c4c86;
+  --button-opacity-hover: #4c4c4cd1;
 }
 
 :root[theme='light'] {
@@ -48,14 +52,15 @@
   --font-color: #828282;
   --secondary-font-color: #6f6f6f;
   --accent: #9c6aff;
+
   --accent-rgb: 52, 103, 255;
   --border-color: #ffffff;
   --card-color: #ebebeb;
   --bg-color-opacity: #0000005b;
-  --nav-mobile-opacity: #d8d8d8e0;
-  --button-background: #d0d0d0;
-  --social-icon-color: #ffffff;
-  --social-icon-color-hover: #e2e2e2;
+  --nav-mobile-opacity: #d8d8d886;
+
+  --button-opacity: #dfdfdf;
+  --button-opacity-hover: #ffffff;
 }
 
 * {

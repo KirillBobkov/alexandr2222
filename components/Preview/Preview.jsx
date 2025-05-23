@@ -85,8 +85,8 @@ export const Preview = () => {
                 <Image
                   src={vadgra}
                   alt="overlay"
-                  width={50}
-                  height={50}
+                  width={45}
+                  height={45}
                   style={{ position: "absolute" }}
                 />
               </div>
@@ -167,8 +167,8 @@ export const Preview = () => {
                 <Image
                   src={vadgra}
                   alt="overlay"
-                  width={50}
-                  height={50}
+                  width={45}
+                  height={45}
                   style={{ position: "absolute" }}
                 />
               </div>

@@ -1,4 +1,3 @@
-
 @keyframes fadeInRight {
   0% {
     opacity: 0;
@@ -14,6 +13,19 @@
     transform: translateX(0);
   }
 }
+
+@keyframes pulseWidth {
+  0% {
+    transform: translateX(0%);
+  }
+  50% {
+    transform: translateX(-17%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
 .button {
   z-index: 1;
   font-size: 14px;
@@ -23,13 +35,13 @@
   border-radius: 35px;
   letter-spacing: 0.14em;
   color: #ffffff;
-  background-color: var(--button-background);
+  background-color: var(--button-opacity);
   text-transform: uppercase;
   visibility: visible;
   cursor: pointer;
   text-align: center;
   overflow: hidden; /* Ограничить границы прогресса */
-  user-select: none;;
+  user-select: none;
 }
 
 .inner {
@@ -37,7 +49,20 @@
   padding: 20px 45px;
 }
 
-.button:after {
+.button.pulsing:after {
+  top: 0;
+  left: 0;
+  z-index: -1;
+  content: "";
+  height: 100%;
+  width: 25%;
+  position: absolute;
+  border-radius: 35px;
+  background-color: var(--accent);
+  animation: pulseWidth 1.5s ease-in-out infinite alternate;
+}
+
+.button.not_pulsing:after {
   top: 0;
   left: 0;
   z-index: -1;
@@ -73,8 +98,8 @@
     animation-name: fadeInRight;
     -webkit-animation-name: fadeInRight;
   }
-  
-  .button::after {
+
+  .button.pulsing:after {
     width: 70px;
     -webkit-transition: 500ms all ease;
     transition: 500ms all ease;
@@ -82,5 +107,7 @@
   
   .button:hover:after {
     width: 100%;
+    transform: translateX(0%)!important;
   }
+
 }

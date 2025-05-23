@@ -8,15 +8,15 @@
     cursor: pointer;
     transition: background-color 100ms;
     border-radius: 50%;
-    color: var(--font-color);
-    fill:  var(--font-color);
-    background-color: var(--accent);
+    color: var(--accent);
+    fill:  var(--accent);
+    background-color: var(--button-opacity);
     transition: all 500ms ease-out;
     z-index: 100;
 }
 
 .arrow-button:hover {
-    opacity: 0.8;
+    background-color: var(--button-opacity-hover);
 }
 
 .arrow-button svg {
@@ -27,7 +27,7 @@
 }
 
 .arrow-button svg path {
-    fill: #ffffff;
+    fill: var(--accent);
 }
 
 .scroll-top-button {
@@ -46,13 +46,13 @@
 
 @media screen and (max-width: 768px) {
     .arrow-button {
-        height: 50px;
-        width: 50px;
+        height: 40px;
+        width: 40px;
         bottom: 15px;
         right: 15px;
     }
 
     .arrow-button svg {
-        padding: 5px;
+        padding: 2px;
     }
 }

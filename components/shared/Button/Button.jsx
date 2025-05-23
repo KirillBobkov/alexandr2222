@@ -53,7 +53,7 @@ export const Button = ({
   return (
     <VisibilityManager
       as="div"
-      className={`${styles.button} ${className} ${
+      className={`${styles.button} ${progress <= 20 ? styles.pulsing : styles.not_pulsing} ${className} ${
         isSubmitted ? styles.success : ""
       }`}
       onTouchStart={handleTouchStart}
