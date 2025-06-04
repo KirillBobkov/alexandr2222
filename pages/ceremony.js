@@ -835,8 +835,8 @@ export default function () {
             <p className={contentStyles.textDescription}>
               Страх, волнение или сомнения перед ретритом? Это естественно. По
               необходимости, провожу предварительную работу с подсознанием,
-              помогая устранить внутреннее напряжение и настроиться на
-              взаимодействие с Мухомором.
+              помогая устранить внутреннее напряжение, беспокойство и помогаю
+              настроиться на взаимодействие с Мухомором.
             </p>
           </VisibilityManager>
 
@@ -871,8 +871,7 @@ export default function () {
             <h3 className={contentStyles.title_small}>
               <span className={contentStyles.textSymbol}>//</span>
               {"  "}
-              Индивидуальная дозировка и перепроверка через кинезиологический
-              тест
+              Индивидуальная дозировка и перепроверка через кинезиологический тест
             </h3>
             <p className={contentStyles.textDescription}>
               Каждому участнику подбираю дозировку Мухомора, которую
@@ -882,9 +881,22 @@ export default function () {
               на каждом этапе.
             </p>
           </VisibilityManager>
+          <Final animation customStyles={{ padding: "0" }}>
+            <div
+              className={finalStyles.price}
+              style={{ marginTop: "0", textTransform: "uppercase" }}
+            >
+              {" "}
+              Сделай героический шаг!{" "}
+            </div>
+            <Button
+              className={contentStyles.message}
+              href={{ hash: "#message" }}
+              status="Записаться"
+            />
+          </Final>
         </div>
       </LineAnimation>
-
       <VideoWidget videos={videos} />
 
       <LineAnimation>

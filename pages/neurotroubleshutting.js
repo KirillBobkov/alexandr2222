@@ -471,13 +471,13 @@ export default function () {
 
           <VisibilityManager as="div" className={contentStyles.textBlock}>
             <h3 className={contentStyles.title_middle}>
-              Нейротраблшутинг — это метод, который:
+              НЕЙРОТРАБЛШУТИНГ — ЭТО МЕТОД, КОТОРЫЙ:
             </h3>
             <p className={contentStyles.textDescription}>
               <span className={contentStyles.textSymbol}>●</span>
               {"  "}
-              Находит и устраняет корень проблем — от фобий до аллергии, от
-              ночных кошмаров до хронической усталости.
+              Помогает найти и устранить корень проблем — от фобий до аллергии,
+              от ночных кошмаров до хронической усталости.
             </p>
             <p className={contentStyles.textDescription}>
               <span className={contentStyles.textSymbol}>●</span>
@@ -488,14 +488,13 @@ export default function () {
             <p className={contentStyles.textDescription}>
               <span className={contentStyles.textSymbol}>●</span>
               {"  "}
-              Сохраняет приватность: мы не разбираем ваше прошлое — мы меняем
-              его влияние на вас здесь и сейчас.
+              Позволяет сохранить приватность: мы не разбираем ваше прошлое — мы
+              меняем его влияние на вас здесь и сейчас.
             </p>
           </VisibilityManager>
 
           <VisibilityManager as="div" className={contentStyles.textBlock}>
-            <h3 className={contentStyles.title_middle}>Как это работает</h3>
-
+            <h3 className={contentStyles.title_middle}>КАК ЭТО РАБОТАЕТ</h3>
             <p className={contentStyles.textDescription}>
               Сначала проводим бесплатную диагностику, на которой выявляем, где
               именно в подсознании прячется решение вашей задачи, а вы сами
