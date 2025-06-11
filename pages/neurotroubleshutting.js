@@ -71,6 +71,13 @@ export const questionsContent = {
 const videos = [
   // New videos added on March 2024
   {
+    link: "https://vk.com/video_ext.php?oid=643721177&id=456239018&hash=21090df415acc25b",
+    thumbnailUrl:
+      "https://i.mycdn.me/getVideoPreview?id=8427497392857&idx=5&type=39&tkn=GlEU4u6PxO4ufRM8uL06LGlpeHc&fn=vid_x",
+    name: "Отзыв Алексея о проработке",
+    uploadDate: new Date("June 11, 2025").toISOString(),
+  },
+  {
     link: "https://vkvideo.ru/video_ext.php?oid=-230061059&id=456239034&hash=0035901b2a8621d8",
     thumbnailUrl:
       "https://i.mycdn.me/getVideoPreview?id=7836443740675&idx=9&type=39&tkn=lrWBd6X8RCZrONsyuINlb_MXcCA&fn=vid_u",

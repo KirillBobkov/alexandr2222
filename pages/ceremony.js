@@ -21,6 +21,13 @@ import finalStyles from "../styles/finalContent.module.css";
 
 import Image from "next/image";
 const videos = [
+  {
+    link: "https://vkvideo.ru/video_ext.php?oid=643721177&id=456239017&hash=0b13034ee75b5f53",
+    thumbnailUrl:
+      "https://i.mycdn.me/getVideoPreview?id=8427488283353&idx=11&type=39&tkn=nSK_GsbWR58NRHOQbw37UyFKChQ&fn=vid_x",
+    name: "Отзыв Артёма о мухоморном ретрите",
+    uploadDate: new Date("June 11, 2025").toISOString(),
+  },
   // New videos added on March 2024
   {
     link: "https://vkvideo.ru/video_ext.php?oid=-230061059&id=456239037&hash=0395dd995453c326",
