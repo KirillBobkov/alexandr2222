@@ -73,13 +73,14 @@
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  background-color: var(--card-color);
+  background-color: var(--icons-opacity);
   transition: all 0.3s ease;
   color: var(--accent);
+  cursor: pointer;
 }
 
 .social__link:hover {
-  background-color: var(--card-color);
+  background-color: var(--icons-opacity-hover);
   transform: translateY(-2px);
 }
 

@@ -29,8 +29,9 @@
   --nav-mobile-opacity: #0000008e;
 
   --button-opacity: #3e3e3e86;
-  --icons-opacity: #10101086;
+  --icons-opacity: #3e3e3e86;
   --button-opacity-hover: #4c4c4cd1;
+  --icons-opacity-hover: #4c4c4cd1;
 }
 
 :root[theme='light'] {
@@ -62,6 +63,10 @@
 
   --button-opacity: #dfdfdf;
   --button-opacity-hover: #ffffff;
+
+  --icons-opacity: #ffffff;
+  --icons-opacity-hover: #ffffff;
+
 }
 
 * {

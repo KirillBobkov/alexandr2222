@@ -5,12 +5,16 @@
 .form {
   display: flex;
   align-items: flex-start;
-  justify-content: space-between;
+  justify-content: center;
   min-height: 350px;
   padding: 150px 30px;
   width: 100%;
   max-width: 1285px;
   margin: 0 auto;
+}
+
+.form--two-items {
+  justify-content: space-between;
 }
 
 .form__item {

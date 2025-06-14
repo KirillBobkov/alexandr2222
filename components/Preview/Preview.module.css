@@ -137,7 +137,7 @@
 }
 
 .social_link:hover {
-  background-color: var(--button-opacity-hover);
+  background-color: var(--icons-opacity-hover);
   transform: scale(1.2) translateY(-2px);
 }
 

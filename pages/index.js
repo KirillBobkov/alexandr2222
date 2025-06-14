@@ -25,13 +25,16 @@ const schemaOrg = {
   "@type": "WebPage",
   name: 'Александр Васильев — Нейротраблшутер',
   description:
-    "Портал для преодоления сложностей и устранения страданий с помощью вегетализма, кинезиологии, работы с подсознанием и авторских методик. Бесплатная консультация, гарантия возврата денег, индивидуальные программы и ретриты.",
+    "Профессиональный нейротраблшутер в Казани. Комплексная работа с подсознанием для устранения психотравм, страхов и ограничений. Мухоморные ретриты, индивидуальные программы, гарантия результата. Более 1000 успешных случаев преодоления жизненных кризисов.",
   url: "https://alexandrvasilev.ru",
   inLanguage: "ru",
+  dateModified: new Date().toISOString(),
+  lastReviewed: new Date().toISOString(),
   publisher: {
     "@type": "Organization",
     name: "INTEGRAAL",
     url: "https://alexandrvasilev.ru",
+    foundingDate: "2020-01-01",
     logo: {
       "@type": "ImageObject",
       url: "/_next/static/media/logo.ab1a421b.webp",
@@ -44,14 +47,16 @@ const schemaOrg = {
     name: "Александр Васильев",
     url: "https://alexandrvasilev.ru/#about",
     description:
-      "Я устраняю причины ваших страданий навсегда, помогая вам достичь гармонии и счастья. Нейротраблшутер, специалист по работе с подсознанием, провожу ретриты и индивидуальные сессии.",
+      "Ведущий нейротраблшутер России с 8-летним опытом. Специализируется на глубинной работе с подсознанием, устранении психотравм и проведении трансформационных мухоморных ретритов. Автор уникальных методик исцеления и самопознания.",
     image: {
       "@type": "ImageObject",
       url: "/_next/static/media/alex3.57d8e42f.webp",
       width: 2561,
       height: 1728,
     },
-    jobTitle: "Нейротраблшутер, специалист по работе с подсознанием",
+    jobTitle: "Нейротраблшутер, специалист по работе с подсознанием, проводник мухоморных ретритов",
+    knowsAbout: ["Нейротраблшутинг", "Работа с подсознанием", "Мухоморные ретриты", "Вегетализм", "Кинезиология"],
+    hasCredential: "8 лет опыта, более 1000 успешных случаев",
     sameAs: [
       "https://t.me/chronics44",
       "https://www.tiktok.com/@alexandrvasilev.ru?_t=ZS-8vOVKf5Isrv&_r=1",
@@ -185,24 +190,78 @@ const schemaOrg = {
       cssSelector: [".title", ".paragraph"],
     },
   },
-  offers: {
-    "@type": "Offer",
-    price: "Бесплатная первая консультация",
-    priceCurrency: "RUB",
-    availability: "https://schema.org/InStock",
-    url: "https://alexandrvasilev.ru/#message",
-    description:
-      "Запишитесь на бесплатную консультацию, и я свяжусь с вами в ближайшее время. Первая консультация — бесплатно. Гарантия возврата денег при отсутствии результата.",
-  },
+  significantLink: [
+    "https://alexandrvasilev.ru/neurotroubleshutting",
+    "https://alexandrvasilev.ru/ceremony", 
+    "https://alexandrvasilev.ru/#about",
+    "https://alexandrvasilev.ru/#reviews"
+  ],
+  relatedLink: [
+    "https://t.me/chronics44",
+    "https://youtube.com/@alexandrvasilev_ru"
+  ],
+  offers: [
+    {
+      "@type": "Offer",
+      name: "Бесплатная консультация нейротраблшутера",
+      price: "0",
+      priceCurrency: "RUB",
+      availability: "https://schema.org/InStock",
+      url: "https://alexandrvasilev.ru/#message",
+      description:
+        "Бесплатная консультация с ведущим нейротраблшутером России. Диагностика проблем, определение путей решения, составление индивидуального плана работы.",
+      validFrom: new Date().toISOString(),
+    },
+    {
+      "@type": "Offer", 
+      name: "Мухоморный ретрит в Казани",
+      price: "300000",
+      priceCurrency: "RUB",
+      availability: "https://schema.org/InStock",
+      url: "https://alexandrvasilev.ru/ceremony",
+      description: "Профессиональный мухоморный ретрит с опытным проводником. Безопасная трансформационная практика."
+    },
+    {
+      "@type": "Offer",
+      name: "Курс нейротраблшутинга", 
+      price: "125000",
+      priceCurrency: "RUB",
+      availability: "https://schema.org/InStock",
+      url: "https://alexandrvasilev.ru/neurotroubleshutting",
+      description: "Полный курс нейротраблшутинга для устранения психологических блоков и травм."
+    }
+  ],
   contactPoint: {
     "@type": "ContactPoint",
     contactType: "Запись на консультацию",
     url: "https://alexandrvasilev.ru/#message",
     availableLanguage: ["Russian"],
     areaServed: "RU",
+    hoursAvailable: {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      opens: "09:00",
+      closes: "21:00"
+    }
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: "55.7958",
+    longitude: "49.1098",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Казань",
+      addressRegion: "Республика Татарстан",
+      addressCountry: "RU"
+    }
   },
   keywords:
-    "очищение интеграл ретрит грибы дурман нейротраблшутинг мухоморный ретрит вегетализм кинезиология внутреннее удовлетворение жизненный кризис предназначение консультация возврат денег TikTok YouTube Telegram VK Дзен",
+    "нейротраблшутер Казань психолог подсознание психотравмы фобии страхи мухоморный ретрит церемония вегетализм кинезиология депрессия тревожность панические атаки психосоматика исцеление трансформация сознания духовные практики самопознание",
+  temporalCoverage: "2020/..",
+  audience: {
+    "@type": "Audience",
+    audienceType: "Люди, страдающие от психологических проблем, депрессии, тревожности, фобий"
+  },
 };
 
 export const products = [

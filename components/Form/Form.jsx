@@ -51,11 +51,13 @@ export function Form({
   };
 
   const content = (
-    <div className={styles.form}>
-      <VisibilityManager side="left" className={styles.form_content}>
-        <h3 className={contentStyles.title_middle}>{title}</h3>
-        <p className={styles.textDescription}>{description}</p>
-      </VisibilityManager>
+    <div className={styles.form + ((title || description) ? " " + styles['form--two-items'] : "")}>
+      {(title || description) ? (
+        <VisibilityManager side="left" className={styles.form_content}>
+          <h3 className={contentStyles.title_middle}>{title}</h3>
+          <p className={styles.textDescription}>{description}</p>
+        </VisibilityManager>
+      ) : null}
 
       <FormValidator
         isSubmitted={isSubmitted}
