@@ -120,7 +120,7 @@ export default function NonverbalProgramming() {
         </div>
         <Button
           className={contentStyles.message}
-          href={{ pathname: "/neurotroubleshutting", hash: "#message" }}
+          href={{ pathname: "/nonverbal-programming", hash: "#message" }}
           status="Приобрести курс"
         />
       </Final>
