@@ -3,16 +3,15 @@ import { InnerSatisfaction } from "../components/InnerSatisfaction";
 import { CirclesList } from "../components/CirclesList/CirclesList";
 import { AboutMe } from "../components/AboutMe/AboutMe";
 import { Final } from "../components/Final/Final";
-import enter_hole_1 from "../images/enter_hole_1.webp";
 import finalStyles from "../styles/finalContent.module.css";
-import Link from "next/link";
 import contentStyles from "../styles/contentStyles.module.css";
 import { SecondaryPreview } from "../components/SecondaryPreview/SecondaryPreview";
-import secondary_preview_7 from "../images/secondary_preview_7.webp";
+import secondary_preview_29 from "../images/secondary_preview_29.webp";
 import { Helping } from "../components/Helping/Helping";
 import { Button } from "../components/shared/Button/Button";
 import { Form } from "../components/Form/Form";
 import { useState } from "react";
+import { AnimatedLine } from "../components/AnimatedLine/AnimatedLine";
 
 export default function NonverbalProgramming() {
     const [isSubmitted, setIsSubmitted] = useState(false);
@@ -29,8 +28,8 @@ export default function NonverbalProgramming() {
     <Layout metaConfig={metaConfig}>
       <SecondaryPreview
         text={"Невербальное программирование"}
-        subtext={"Управляй эмоциями через тело."}
-        image={secondary_preview_7}
+        subtext={"Управляй эмоциями через тело"}
+        image={secondary_preview_29}
       />
 
       <InnerSatisfaction
@@ -124,6 +123,7 @@ export default function NonverbalProgramming() {
           status="Приобрести курс"
         />
       </Final>
+      <AnimatedLine />
       <Form
         setIsSubmitted={setIsSubmitted}
         isSubmitted={isSubmitted}
