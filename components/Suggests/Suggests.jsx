@@ -12,7 +12,12 @@ export const Suggest = () => {
   return (
     <LineAnimation>
       <div className={styles.block}>
-        <VisibilityManager as="h2" side="left" className={contentStyles.title}>
+        <VisibilityManager
+          as="h2"
+          side="left"
+          className={contentStyles.title}
+          style={{ marginLeft: "0", marginRight: "0" }}
+        >
           <span className={contentStyles.title_empty}>Что я </span>
           предлагаю вам?
         </VisibilityManager>

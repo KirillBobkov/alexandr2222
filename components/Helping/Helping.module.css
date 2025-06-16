@@ -18,7 +18,7 @@
   display: grid;
   grid-template-areas:
     "text1 text4"
-    "text2 text3";
+    "text3 text2";
   gap: 80px 120px;
   grid-auto-columns: 1fr;
 }

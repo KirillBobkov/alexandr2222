@@ -4,52 +4,38 @@ import { LineAnimation } from "../LineAnomation/LineAnimation";
 import { VisibilityManager } from "../shared/VisibilityManager";
 import { Button } from "../shared/Button/Button.jsx";
 import contentStyles from "../../styles/contentStyles.module.css";
-export const Helping = ({ href }) => {
-  return (
-      <div className={styles.container}>
-        <div className={styles.block}>
-        <VisibilityManager as="h2" side="left" style={{ marginLeft: "0px"}} className={contentStyles.title}>
-             Я помогу,
-            <span className={contentStyles.title_empty}> если вы</span>
-        </VisibilityManager>
-          <div className={styles["grid-container"]}>
-   
 
-            <VisibilityManager className={styles.item2}>
-              <TextBlock
-                title={"Мечтаете о большем"}
-                desc={
-                  "Я могу помочь вам легко преодолеть внутренние барьеры и быстрее добиться желанных результатов."
-                }
-              />
+
+export const Helping = ({
+  blocks,
+  title = "Я помогу,",
+  titleEmpty = " если вы",
+  href,
+}) => {
+  return (
+    <div className={styles.container}>
+      <div className={styles.block}>
+        <VisibilityManager
+          as="h2"
+          side="left"
+          style={{ marginLeft: "0px" }}
+          className={contentStyles.title}
+        >
+          {title}
+          <span className={contentStyles.title_empty}>{titleEmpty}</span>
+        </VisibilityManager>
+        <div className={styles["grid-container"]}>
+          {blocks.map((block) => (
+            <VisibilityManager
+              key={block.id}
+              className={styles[block.className]}
+            >
+              <TextBlock title={block.title} desc={block.desc} />
             </VisibilityManager>
-            <VisibilityManager className={styles.item5}>
-              <TextBlock
-                title={"Желаете наслаждаться отношениями"}
-                desc={
-                  "Хотите создать гармоничные и глубокие связи? Я решаю такие задачи, с доведением до результата."
-                }
-              />
-            </VisibilityManager>
-            <VisibilityManager className={styles.item4}>
-              <TextBlock
-                title={"Хотели бы позаботиться о своём здоровье"}
-                desc={
-                  "Известно, что большинство проблем со здоровьем «идут от головы», нейротраблшутинг даёт возможность устранять причины таких проблем."
-                }
-              />
-            </VisibilityManager>
-            <VisibilityManager className={styles.item3}>
-              <TextBlock
-                title={"Цените своё время"}
-                desc={
-                  "Вам нужен результат сейчас. Безопасно и эффективно, а главное - сразу. Я предлагаю вам практический мгновенный результат."
-                }
-              />
-            </VisibilityManager>
-          </div>
+          ))}
         </div>
       </div>
+    </div>
   );
 };
 
