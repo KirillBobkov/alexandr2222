@@ -18,6 +18,7 @@ import LinkButton from "../components/shared/LinkButton/LinkButton";
 
 export default function NonverbalProgramming() {
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isOfferAccepted, setIsOfferAccepted] = useState(false);
 
   const metaConfig = {
     title: "Невербальное программирование — Управляй эмоциями через тело",
@@ -128,18 +129,72 @@ export default function NonverbalProgramming() {
             display: "flex",
             flexDirection: "column",
             gap: "10px",
-            paddingLeft: "20px",
+            paddingLeft: "22px",
             textAlign: "left",
           }}
         >
           <li>Доступ к курсу навсегда — никакой спешки: возвращайтесь к урокам в любое время</li>
           <li>Всего 6000₽ за полный курс вместо многомесячных программ или консультаций</li>
           <li>Поддержка возможна, но не обязательна — курс самодостаточный и завершённый</li>
+          <li>Материалы курса будут отправлены на почту или в Telegram в течение 24 часов после оплаты.</li>
         </ul>
+        
+        <div style={{
+          display: "flex",
+          alignItems: "center",
+          gap: "10px",
+          marginBottom: "20px",
+          cursor: "pointer"
+        }}>
+          <input
+            type="checkbox"
+            id="offer-checkbox"
+            checked={isOfferAccepted}
+            onChange={(e) => setIsOfferAccepted(e.target.checked)}
+            style={{
+              width: "15px",
+              height: "15px",
+              borderRadius: "50%",
+              border: "2px solid var(--accent)",
+              flexShrink: 0,
+              backgroundColor: isOfferAccepted ? "var(--accent)" : "transparent"
+            }}
+          />
+          <label 
+            htmlFor="offer-checkbox"
+            style={{
+              fontSize: "13px",
+              lineHeight: "16px",
+              color: "var(--font-color)",
+              cursor: "pointer",
+              textAlign: "left"
+            }}
+          >
+            Подтверждаю, что ознакомлен с{" "}
+            <a
+              href="/oferta.txt"
+              target="_blank"
+              style={{
+                cursor: "pointer",
+                color: "var(--accent)",
+                fontWeight: "bold",
+                textDecoration: "none"
+              }}
+            >
+              офертой
+            </a>
+          </label>
+        </div>
   
-        <LinkButton href="https://yookassa.ru/">
-          <span>Приобрести курс</span>
-        </LinkButton>
+        <div style={{ 
+          opacity: isOfferAccepted ? 1 : 0.5,
+          pointerEvents: isOfferAccepted ? "auto" : "none",
+          transition: "opacity 0.3s ease"
+        }}>
+          <LinkButton href="https://yookassa.ru/">
+            <span>Приобрести курс</span>
+          </LinkButton>
+        </div>
       </Final>
       <AnimatedLine />
       <div id="message" />
