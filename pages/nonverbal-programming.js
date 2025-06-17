@@ -12,6 +12,8 @@ import { Button } from "../components/shared/Button/Button";
 import { Form } from "../components/Form/Form";
 import { useState } from "react";
 import { AnimatedLine } from "../components/AnimatedLine/AnimatedLine";
+import { CourseContent } from "../components/CourseContent/CourseContent";
+import { ReasonCards } from "../components/ReasonCards/ReasonCards";
 
 export default function NonverbalProgramming() {
     const [isSubmitted, setIsSubmitted] = useState(false);
@@ -93,6 +95,11 @@ export default function NonverbalProgramming() {
           },
         ]}
       />
+     <AnimatedLine />
+      <CourseContent />
+
+
+      <ReasonCards />
 
       <CirclesList
         {...{
@@ -125,12 +132,13 @@ export default function NonverbalProgramming() {
         />
       </Final>
       <AnimatedLine />
+      <div id="message" />
       <Form
         setIsSubmitted={setIsSubmitted}
         isSubmitted={isSubmitted}
         title={"Хочешь дополнительную поддержку?"}
         type="Курс по невербальному программированию"
-        description={`Напиши в Telegram — обсудим индивидуальный формат и доведение до
+        description={`Оставь свои контакты, и мы обсудим индивидуальный формат и доведение до
           результата`}
       />
     </Layout>
