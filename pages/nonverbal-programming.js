@@ -116,10 +116,9 @@ export default function NonverbalProgramming() {
           ],
         }}
       />
-
       <Final animation>
         <h2 className={finalStyles.title} style={{ marginTop: "0" }}>
-          Сколько стоит?
+          Стоимость курса
         </h2>
         <div className={finalStyles.price}>6 000 ₽</div>
         <ul
@@ -133,11 +132,11 @@ export default function NonverbalProgramming() {
             textAlign: "left",
           }}
         >
-          <li>Доступ ко всем урокам без ограничений по времени</li>
-          <li>Всегда на связи с вами в мессенджере</li>
-          <li>Удобная форма оплаты</li>
+          <li>Доступ к курсу навсегда — никакой спешки: возвращайтесь к урокам в любое время</li>
+          <li>Всего 6000₽ за полный курс вместо многомесячных программ или консультаций</li>
+          <li>Поддержка возможна, но не обязательна — курс самодостаточный и завершённый</li>
         </ul>
-        <br />
+  
         <LinkButton href="https://yookassa.ru/">
           <span>Приобрести курс</span>
         </LinkButton>
