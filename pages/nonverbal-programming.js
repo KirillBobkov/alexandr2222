@@ -14,9 +14,10 @@ import { useState } from "react";
 import { AnimatedLine } from "../components/AnimatedLine/AnimatedLine";
 import { CourseContent } from "../components/CourseContent/CourseContent";
 import { ReasonCards } from "../components/ReasonCards/ReasonCards";
+import LinkButton from "../components/shared/LinkButton/LinkButton";
 
 export default function NonverbalProgramming() {
-    const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const metaConfig = {
     title: "Невербальное программирование — Управляй эмоциями через тело",
@@ -95,9 +96,8 @@ export default function NonverbalProgramming() {
           },
         ]}
       />
-     <AnimatedLine />
+      <AnimatedLine />
       <CourseContent />
-
 
       <ReasonCards />
 
@@ -119,17 +119,28 @@ export default function NonverbalProgramming() {
 
       <Final animation>
         <h2 className={finalStyles.title} style={{ marginTop: "0" }}>
-        Сколько стоит?
+          Сколько стоит?
         </h2>
         <div className={finalStyles.price}>6 000 ₽</div>
-        <div className={finalStyles.description}>
-        Доступ ко всем урокам без ограничений по времени.
-        </div>
-        <Button
-          className={contentStyles.message}
-          href={{ pathname: "/nonverbal-programming", hash: "#message" }}
-          status="Приобрести курс"
-        />
+        <ul
+          className={finalStyles.description}
+          style={{
+            listStyle: "disc",
+            display: "flex",
+            flexDirection: "column",
+            gap: "10px",
+            paddingLeft: "20px",
+            textAlign: "left",
+          }}
+        >
+          <li>Доступ ко всем урокам без ограничений по времени</li>
+          <li>Всегда на связи с вами в мессенджере</li>
+          <li>Удобная форма оплаты</li>
+        </ul>
+        <br />
+        <LinkButton href="https://yookassa.ru/">
+          <span>Приобрести курс</span>
+        </LinkButton>
       </Final>
       <AnimatedLine />
       <div id="message" />
