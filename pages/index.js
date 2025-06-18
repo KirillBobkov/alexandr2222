@@ -611,9 +611,6 @@ export default function () {
       <Final
         image={enter_hole_1}
         animation
-        customStyles={{
-          marginBottom: "100px",
-        }}
       >
         <h2 className={finalStyles.title} style={{ color: "#fff" }}>
           Мухоморный ретрит в Казани

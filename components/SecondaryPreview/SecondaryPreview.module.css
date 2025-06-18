@@ -4,7 +4,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 50dvh; /* Full height of the viewport */
+    height: 100dvh; /* Full height of the viewport */
     min-height: 700px;
     color: #ffffff; /* Text color */
     overflow: hidden;
@@ -91,7 +91,7 @@
 
     .secondaryPreview {
       padding-top: 80px;
-      height: 90dvh; /* Full height of the viewport */
+      height: 100dvh; /* Full height of the viewport */
       min-height: 300px;
     }
   

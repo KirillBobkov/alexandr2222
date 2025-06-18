@@ -35,7 +35,7 @@ export const ReasonCards = () => {
             as="h2"
             side="left"
             className={contentStyles.title}
-            style={{ marginLeft: 0, marginRight: 0, marginBottom: 60 }}
+            style={{ marginLeft: 0, marginRight: 0, marginBottom: 0 }}
           >
             <span>
               <span className={contentStyles.title_empty}>Почему вам нужен</span>
