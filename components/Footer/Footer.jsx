@@ -6,9 +6,11 @@ import Image from "next/image";
 import vadgra from "../../images/vadgra.webp";
 import { useTheme } from "../../hooks/useTheme";
 import { LineAnimation } from "../LineAnomation/LineAnimation";
+import { useRouter } from "next/router";
 
 export function Footer() {
   const { theme } = useTheme();
+  const router = useRouter();
   return (
     <LineAnimation>
       <footer className={styles.footer}>
@@ -173,17 +175,18 @@ export function Footer() {
                 </span>
               </li>
             </ul>
-            <p className={styles.year}>
-              Telegram: @z44lp
-              <br />
-              ИНН: 164705996614
-              <br />
-              Email: z44lp.hero@ya.ru
-              <br />
-              Адрес: г. Казань, ул. Туфана Миннуллина, 10А
-              <br />
-            
-            </p>
+            {router.pathname === "/nonverbal-programming" && (
+              <p className={styles.year}>
+                Telegram: @z44lp
+                <br />
+                ИНН: 164705996614
+                <br />
+                Email: z44lp.hero@ya.ru
+                <br />
+                Адрес: г. Казань, ул. Туфана Миннуллина, 10А
+                <br />
+              </p>
+            )}
           </div>
         </div>
       </footer>
