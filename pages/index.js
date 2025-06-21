@@ -558,9 +558,9 @@ export default function () {
       />
       <AboutMe
         {...{
-          titleEmpty: "могу помочь",
+          titleEmpty: "я могу помочь",
           order: 2,
-          title: "Где я ",
+          title: "Где ",
           items: [
             { title: "Эмоциональное выгорание" },
 
