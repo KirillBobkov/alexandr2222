@@ -25,11 +25,11 @@
 .price {
     font-size: 40px;
     font-weight: 700;
-    color: var(--accent);
+    color: #ca0147;
     margin: 0;
     position: relative;
     z-index: 1;
-    text-shadow: 0 0 5px var(--bg-color-opacity);
+    text-shadow: 0 0 3px var(--bg-color-opacity);
 }
 
 .title_no_image,

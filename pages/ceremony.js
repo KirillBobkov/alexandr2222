@@ -927,7 +927,7 @@ export default function () {
               на каждом этапе.
             </p>
           </VisibilityManager>
-          <Final animation customStyles={{ padding: "0" }}>
+          <Final flyletters={false} animation customStyles={{ padding: "0" }}>
             <div
               className={finalStyles.price}
               style={{ marginTop: "0", textTransform: "uppercase" }}
@@ -1089,7 +1089,7 @@ export default function () {
 
           <div style={{ height: "1px" }} />
 
-          <Final animation customStyles={{ padding: "0" }}>
+          <Final animation flyletters={false} customStyles={{ padding: "0" }}>
             <h2 className={finalStyles.title} style={{ marginTop: "0" }}>
               Стоимость церемонии
             </h2>

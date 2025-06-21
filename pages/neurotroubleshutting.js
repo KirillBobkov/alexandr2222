@@ -656,7 +656,7 @@ export default function () {
         href={{ pathname: "/neurotroubleshutting", hash: "#message" }}
       />
 
-      <Final animation>
+      <Final animation flyletters={false}>
         <h2 className={finalStyles.title} style={{ marginTop: "0" }}>
           Стоимость при достижении результата
         </h2>
@@ -673,7 +673,7 @@ export default function () {
 
       <AnimatedLine />
       <VideoWidget videos={videos} />
-      <Final animation>
+      <Final animation flyletters={false}>
         <h2 className={finalStyles.title} style={{ marginTop: "0" }}>
           Запишитесь на бесплатную консультацию
         </h2>

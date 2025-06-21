@@ -8,6 +8,7 @@ import { LineAnimation } from "../LineAnomation/LineAnimation";
 export const Final = ({ 
   image,
   animation,
+  flyletters = true,
   children,
   customStyles = {},
 }) => {
@@ -27,12 +28,16 @@ export const Final = ({
             style={{ objectFit: 'cover' }}
           />
         ) : (
+          (flyletters ? 
           <>
             <span className={styles.move + " " + styles.moving1}>ИN</span>
             <span className={styles.move + " " + styles.moving2}>ИN</span>
             <span className={styles.move + " " + styles.moving3}>ИN</span>
           </>
-        )}
+          :
+          <>
+          </>
+        ))}
         {children}
       </div>
     </VisibilityManager>

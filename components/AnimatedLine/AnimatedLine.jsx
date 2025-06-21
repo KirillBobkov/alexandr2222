@@ -9,7 +9,7 @@ import { useTheme } from "../../hooks/useTheme";
 export const AnimatedLine = () => {
   const { theme } = useTheme();
   return (
-    <LineAnimation>
+      <LineAnimation>
       <div className={styles.block}>
         <div className={styles.moving}>
           <Image src={theme === "light" ? logoLight : logoDark} alt="" className={styles.logo} id="logo" />
