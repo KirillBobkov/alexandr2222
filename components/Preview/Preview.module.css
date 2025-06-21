@@ -52,7 +52,7 @@
 .preview__title_empty {
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: var(--font-color);
+  -webkit-text-stroke-color: #be2bff;
   /* color: var(--accent); */
 }
 
@@ -144,7 +144,7 @@
 .social_icon {
   width: 30px;
   height: 30px;
-  color: #be2bff;
+  color: #ffffff;
 }
 
 .social_label {

@@ -483,8 +483,9 @@ export default function () {
     <Layout metaConfig={metaConfig} schemaOrg={schemaOrg}>
       <Preview />
       <InnerSatisfaction
-        titlePrefix="ЧТО"
-        titleSuffix="Я ПРЕДЛАГАЮ?"
+        titlePrefix="Я ПРЕДЛАГАЮ?"
+        titleSuffix="ЧТО"
+        order={2}
         description={
           <>
             Если вы чего-то достигли, но потеряли смысл жизни, разочаровались в
@@ -557,8 +558,9 @@ export default function () {
       />
       <AboutMe
         {...{
-          titleEmpty: "Где я",
-          title: "могу помочь",
+          titleEmpty: "могу помочь",
+          order: 2,
+          title: "Где я ",
           items: [
             { title: "Эмоциональное выгорание" },
 
@@ -580,8 +582,8 @@ export default function () {
       />
       <CirclesList
         {...{
-          title: "Арсенал ",
-          titleEmpty: " применяемых мною инструментов",
+          title: "Арсенал применяемых мною ",
+          titleEmpty: "инструментов",
           items: [
             { title: "Вегетализм" },
             { title: "Кинезиология" },

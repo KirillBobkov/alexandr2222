@@ -7,6 +7,7 @@ export const InnerSatisfaction = ({
   titlePrefix,
   titleSuffix,
   description,
+  order = 1,
 }) => {
   return (
     <div className={styles.container}>
@@ -18,8 +19,10 @@ export const InnerSatisfaction = ({
           style={{ marginLeft: 0, marginRight: 0, marginBottom: 0 }}
         >
           <span>
-            <span className={contentStyles.title_empty}>{titlePrefix} </span>
+            {order === 1 ? <span className={contentStyles.title_empty}>{titlePrefix} </span> : null}
             {titleSuffix}
+            {' '}
+            {order === 2 ? <span className={contentStyles.title_empty}>{titlePrefix} </span> : null}
           </span>
         </VisibilityManager>
 

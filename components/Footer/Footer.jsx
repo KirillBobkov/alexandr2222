@@ -112,6 +112,7 @@ export function Footer() {
                 <a
                   href="https://youtube.com/@alexandrvasilev_ru?si=h6JxlRRBXkh8Oxln"
                   target="_blank"
+                  style={{ color: "red" }}
                   rel="noopener noreferrer"
                   className={styles.social__link}
                 >
@@ -132,6 +133,7 @@ export function Footer() {
               <li>
                 <span
                   className={styles.social__link}
+
                   style={{
                     position: "relative",
                     cursor: "not-allowed",

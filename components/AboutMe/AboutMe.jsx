@@ -4,15 +4,30 @@ import { LineAnimation } from "../LineAnomation/LineAnimation";
 import { VisibilityManager } from "../shared/VisibilityManager";
 import { Button } from "../shared/Button/Button.jsx";
 import contentStyles from "../../styles/contentStyles.module.css";
-export const AboutMe = ({ title, titleEmpty, items, bottomText, href, buttonStatus }) => {
+export const AboutMe = ({
+  title,
+  titleEmpty,
+  items,
+  bottomText,
+  href,
+  buttonStatus,
+  order = 1,
+}) => {
   return (
     <LineAnimation>
       <div className={styles.block}>
         {(title || titleEmpty) && (
-          <VisibilityManager as="h2" side="left" className={contentStyles.title} style={{marginLeft: 0, marginRight: 0, marginBottom: 0}}>
-            {titleEmpty && <span className={contentStyles.title_empty}>{titleEmpty}</span>}
-           {' '}
-            {title}
+          <VisibilityManager
+            as="h2"
+            side="left"
+            className={contentStyles.title}
+            style={{ marginLeft: 0, marginRight: 0, marginBottom: 0 }}
+          >
+            {order === 2 ? title : null}
+            {titleEmpty && (
+              <span className={contentStyles.title_empty}>{titleEmpty}</span>
+            )}
+            {order === 1 ? title : null}
           </VisibilityManager>
         )}
 
@@ -31,7 +46,11 @@ export const AboutMe = ({ title, titleEmpty, items, bottomText, href, buttonStat
         )}
 
         {href && buttonStatus && (
-          <Button className={styles.message} href={href} status={buttonStatus} />
+          <Button
+            className={styles.message}
+            href={href}
+            status={buttonStatus}
+          />
         )}
       </div>
     </LineAnimation>
@@ -40,7 +59,7 @@ export const AboutMe = ({ title, titleEmpty, items, bottomText, href, buttonStat
 
 const TextBlock = ({ title }) => {
   return title ? (
-    <li className={styles.textBlock + ' ' + styles.item}>
+    <li className={styles.textBlock + " " + styles.item}>
       <h3 className={contentStyles.title_small}>
         {" "}
         <span className={contentStyles.textSymbol}>// </span>

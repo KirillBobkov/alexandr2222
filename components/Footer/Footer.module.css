@@ -75,7 +75,7 @@
   border-radius: 50%;
   background-color: var(--icons-opacity);
   transition: all 0.3s ease;
-  color: var(--accent);
+  color: var(--font-color);
   cursor: pointer;
 }
 

@@ -28,7 +28,7 @@
     font-weight: 700;
     line-height: 92px;
     text-transform: uppercase;
-    color: #be2bff;
+    color: var(--font-color);
 }
   
 .logo__title_colored {

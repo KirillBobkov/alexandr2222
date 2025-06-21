@@ -35,7 +35,7 @@
     font-size: 30px;
     font-weight: 700;
     line-height: 40px;
-    color: #be2bff;
+    color: var(--font-color);
 }
 
 .header__title-colored {
@@ -147,7 +147,7 @@
 }
 
 .theme-toggle__button:hover {
-    color: #be2bff;
+    color: var(--accent);
     transform: rotate(-30deg);
 }
 
@@ -156,7 +156,7 @@
     background: none;
     border: none;
     cursor: pointer;
-    color: #be2bff;
+    color: var(--accent);
     padding: 8px;
     position: absolute;
     top: 15px;
@@ -314,12 +314,13 @@
         width: 25px;
         height: 2px;
         margin: 4px 0;
-        background-color: #be2bff;
+        background-color: var(--accent);
         transition: all 0.3s ease;
     }
     
     .burger_opened .burger__line:nth-child(1) {
         transform: translateY(6px) rotate(45deg);
+        background-color: #be2bff;
     }
     
     .burger_opened .burger__line:nth-child(2) {
@@ -328,6 +329,7 @@
     
     .burger_opened .burger__line:nth-child(3) {
         transform: translateY(-6px) rotate(-45deg);
+        background-color: #be2bff;
     }
 
     .theme-toggle {
