@@ -104,7 +104,6 @@ export const PurchaseCard = ({ onPaymentSubmit }) => {
             <Image
               src={purchaseCardImage}
               alt=""
-              fill
               className={styles.backgroundImage}
               priority
             />
