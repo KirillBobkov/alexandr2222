@@ -10,7 +10,6 @@ import ScrollTopButton from "../ScrollTopButton/ScrollTopButton";
 import { useTheme } from "../../hooks/useTheme";
 
 import { Nunito, Rubik } from "next/font/google";
-import { Html } from "next/document";
 
 const nunito = Nunito({
   weight: ["400", "700"],
