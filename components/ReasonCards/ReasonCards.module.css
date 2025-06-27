@@ -65,8 +65,6 @@
 
 .cardDescription {
   color: var(--secondary-font-color);
-  font-size: 16px;
-  line-height: 1.6;
   margin: 0;
   flex-grow: 1;
 }
@@ -85,10 +83,6 @@
   .card {
     padding: 30px 20px;
     gap: 15px;
-  }
-
-  .cardDescription {
-    font-size: 15px;
   }
 
   .card:hover {
