@@ -55,7 +55,7 @@
 
 .badgeNumber {
     display: block;
-    font-size: 40px;
+    font-size: 60px;
     font-weight: 900;
     line-height: 1;
     margin-bottom: 8px;
@@ -130,6 +130,10 @@
 
     .listItem:hover {
         transform: none;
+    }
+
+    .list {
+        gap: 20px;
     }
 
 }

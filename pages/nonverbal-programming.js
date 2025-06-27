@@ -2,21 +2,21 @@ import Layout from "../components/Layout/Layout";
 import { InnerSatisfaction } from "../components/InnerSatisfaction";
 import { CirclesList } from "../components/CirclesList/CirclesList";
 import { AboutMe } from "../components/AboutMe/AboutMe";
-import { Final } from "../components/Final/Final";
-import finalStyles from "../styles/finalContent.module.css";
+import { PurchaseCard } from "../components/PurchaseCard/PurchaseCard";
 import { SecondaryPreview } from "../components/SecondaryPreview/SecondaryPreview";
 import secondary_preview_29 from "../images/secondary_preview_29.webp";
 import { Helping } from "../components/Helping/Helping";
 import { Form } from "../components/Form/Form";
 import { useState } from "react";
+import { useRouter } from "next/router";
 import { AnimatedLine } from "../components/AnimatedLine/AnimatedLine";
 import { CourseContent } from "../components/CourseContent/CourseContent";
 import { ReasonCards } from "../components/ReasonCards/ReasonCards";
-import LinkButton from "../components/shared/LinkButton/LinkButton";
+import { PurchaseSuccessWidget } from "../components/PurchaseSuccessWidget/PurchaseSuccessWidget";
 
 export default function NonverbalProgramming() {
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [isOfferAccepted, setIsOfferAccepted] = useState(false);
+  const router = useRouter();
 
   const metaConfig = {
     title: "Невербальное программирование — Управляй эмоциями через тело",
@@ -28,6 +28,7 @@ export default function NonverbalProgramming() {
 
   return (
     <Layout metaConfig={metaConfig}>
+      <PurchaseSuccessWidget />
       <SecondaryPreview
         text={"Освой невербальное программирование"}
         subtext={"Управляй эмоциями через тело легко"}
@@ -115,94 +116,16 @@ export default function NonverbalProgramming() {
           ],
         }}
       />
-      <Final animation>
-        <h2 className={finalStyles.title} style={{ marginTop: "0" }}>
-          Стоимость курса
-        </h2>
-        <div className={finalStyles.price}>6 000 ₽</div>
-        <ul
-          className={finalStyles.description}
-          style={{
-            listStyle: "disc",
-            display: "flex",
-            flexDirection: "column",
-            gap: "10px",
-            paddingLeft: "22px",
-            textAlign: "left",
-          }}
-        >
-          <li>Доступ к курсу навсегда — никакой спешки: возвращайтесь к урокам в любое время</li>
-          <li>Всего 6000₽ за полный курс вместо многомесячных программ или консультаций</li>
-          <li>Поддержка возможна, но не обязательна — курс самодостаточный и завершённый</li>
-          <li>Материалы курса будут отправлены на почту или в Telegram в течение 24 часов после оплаты.</li>
-        </ul>
-        
-        <div style={{
-          display: "flex",
-          alignItems: "center",
-          gap: "10px",
-          marginBottom: "20px",
-          cursor: "pointer"
-        }}>
-          <input
-            type="checkbox"
-            id="offer-checkbox"
-            checked={isOfferAccepted}
-            onChange={(e) => setIsOfferAccepted(e.target.checked)}
-            style={{
-              width: "15px",
-              height: "15px",
-              borderRadius: "50%",
-              border: "2px solid var(--accent)",
-              flexShrink: 0,
-              backgroundColor: isOfferAccepted ? "var(--accent)" : "transparent"
-            }}
-          />
-          <label 
-            htmlFor="offer-checkbox"
-            style={{
-              fontSize: "13px",
-              lineHeight: "16px",
-              color: "var(--font-color)",
-              cursor: "pointer",
-              textAlign: "left"
-            }}
-          >
-            Подтверждаю, что ознакомлен с{" "}
-            <a
-              href="/oferta.txt"
-              target="_blank"
-              style={{
-                cursor: "pointer",
-                color: "var(--accent)",
-                fontWeight: "bold",
-                textDecoration: "none"
-              }}
-            >
-              офертой
-            </a>
-          </label>
-        </div>
-  
-        <div style={{ 
-          opacity: isOfferAccepted ? 1 : 0.5,
-          pointerEvents: isOfferAccepted ? "auto" : "none",
-          transition: "opacity 0.3s ease"
-        }}>
-          <LinkButton href="https://yookassa.ru/">
-            <span>Приобрести курс</span>
-          </LinkButton>
-        </div>
-      </Final>
+       <div id="message" />
+      <PurchaseCard />
       <AnimatedLine />
-      <div id="message" />
+     
       <Form
         setIsSubmitted={setIsSubmitted}
         isSubmitted={isSubmitted}
         title={"Хочешь дополнительную поддержку?"}
         type="Курс по невербальному программированию"
-        description={`Оставь свои контакты, и мы обсудим индивидуальный формат и доведение до
-          результата`}
+        description={`Оставь свои контакты, и мы обсудим индивидуальный формат и доведение до результата`}
       />
     </Layout>
   );

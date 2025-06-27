@@ -20,6 +20,17 @@ export const validatePhone = (phone: string): string => {
   return '';
 };
 
+export const validateEmail = (email: string): string => {
+  if (!email.trim()) {
+    return 'Email обязателен для заполнения';
+  }
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email.trim())) {
+    return 'Введите корректный email';
+  }
+  return '';
+};
+
 export function formatPhoneNumber(input: string): string {
   if (!input) return '';
 

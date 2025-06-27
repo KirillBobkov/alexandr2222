@@ -5,6 +5,7 @@ import { FormValidator } from "../../shared/FormValidator/FormValidator";
 import { Button } from "../../shared/Button/Button.jsx";
 import { Input } from "../../shared/Input/Input";
 import Image from "next/image";
+import { validateName, validatePhone } from "../../../utils/validation";
 
 interface ProductModalProps {
   product: any;

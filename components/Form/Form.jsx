@@ -5,6 +5,8 @@ import { LineAnimation } from "../LineAnomation/LineAnimation";
 import { VisibilityManager } from "../shared/VisibilityManager";
 import { FormValidator } from "../shared/FormValidator/FormValidator";
 import contentStyles from "../../styles/contentStyles.module.css";
+import { validateName, validatePhone } from "../../utils/validation";
+
 export function Form({
   isSubmitted,
   setIsSubmitted,
@@ -15,6 +17,27 @@ export function Form({
 }) {
   const [message, setMessage] = useState("");
   const id = type;
+
+  const fieldsConfig = [
+    {
+      name: 'name',
+      type: 'text',
+      required: true,
+      validator: validateName
+    },
+    {
+      name: 'phone',
+      type: 'phone', 
+      required: true,
+      validator: validatePhone
+    },
+    {
+      name: 'checkbox',
+      type: 'checkbox',
+      required: true,
+      defaultValue: false
+    }
+  ];
 
   const handleSend = async (formData) => {
     try {
@@ -36,11 +59,13 @@ export function Form({
         body: JSON.stringify({
           chat_id,
           parse_mode: "html",
-          text: `<b>Новая запись на консультацию</b>\n\n<b>Откуда</b>: ${
-            type ?? "Поле отсутствует"
-          }\n<b>Имя</b>: ${formData.name}\n<b>Номер телефона</b>: ${
-            formData.phone
-          }\n<b>Тип устройства</b>: ${deviceType}\n`,
+          text: `📋 <b>НОВАЯ ЗАПИСЬ НА КОНСУЛЬТАЦИЮ</b>
+
+📍 <b>Откуда</b>: ${type ?? "Поле отсутствует"}
+👤 <b>Имя</b>: ${formData.name}
+📞 <b>Телефон</b>: ${formData.phone}
+💻 <b>Тип устройства</b>: ${deviceType}
+⏰ <b>Время</b>: ${new Date().toLocaleString('ru-RU')}`,
         }),
       });
 
@@ -60,6 +85,7 @@ export function Form({
       ) : null}
 
       <FormValidator
+        fields={fieldsConfig}
         isSubmitted={isSubmitted}
         setIsSubmitted={setIsSubmitted}
         onSubmit={handleSend}
@@ -101,7 +127,7 @@ export function Form({
                 as="button"
                 type="submit"
                 className={styles.formbutton}
-                disabled={isSubmitted}
+                disabled={isSubmitted || errors.name || errors.phone || errors.checkbox}
               >
                 {"Записаться"}
               </VisibilityManager>
@@ -115,9 +141,7 @@ export function Form({
                   id={id}
                   disabled={isSubmitted}
                   onChange={(e) => {
-                    handleChange({
-                      target: { name: "checkbox", value: e.target.checked },
-                    });
+                    handleChange(e);
                   }}
                   checked={formData.checkbox}
                 />
@@ -138,7 +162,7 @@ export function Form({
                 </label>
               </VisibilityManager>
               {message ? (
-                <VisibilityManager style={{ marginTop: 20 }}>
+                <VisibilityManager style={{ marginTop: 0 }}>
                   {message === "error" ? (
                     <p>
                       Что-то пошло не так. Свяжитесь, пожалуйста, со мной в

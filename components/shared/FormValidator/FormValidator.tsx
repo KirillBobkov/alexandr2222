@@ -1,19 +1,20 @@
 import React, { useState } from 'react';
 import { validateName, validatePhone, formatPhoneNumber } from '../../../utils/validation';
 
-interface FormState {
+interface FieldConfig {
   name: string;
-  phone: string;
-  checkbox: boolean;
+  type: 'text' | 'phone' | 'checkbox';
+  validator?: (value: any) => string;
+  formatter?: (value: string) => string;
+  required?: boolean;
+  defaultValue?: any;
 }
 
-interface FormErrors {
-  name: string;
-  phone: string;
-  checkbox: boolean;
-}
+type FormState = Record<string, any>;
+type FormErrors = Record<string, string | boolean>;
 
 interface FormValidatorProps {
+  fields: FieldConfig[];
   onSubmit: (formData: FormState) => void;
   children: (props: {
     formData: FormState;
@@ -27,66 +28,95 @@ interface FormValidatorProps {
 }
 
 export const FormValidator: React.FC<FormValidatorProps> = ({
+  fields,
   children,
   onSubmit,
   isSubmitted = false,
   setIsSubmitted
 }) => {
-  const [formData, setFormData] = useState<FormState>({
-    name: '',
-    phone: '',
-    checkbox: false
-  });
+  const initialFormData = fields.reduce((acc, field) => {
+    acc[field.name] = field.defaultValue ?? (field.type === 'checkbox' ? false : '');
+    return acc;
+  }, {} as FormState);
 
-  const [errors, setErrors] = useState<FormErrors>({
-    name: '',
-    phone: '',
-    checkbox: false
-  });
+  const initialErrors = fields.reduce((acc, field) => {
+    acc[field.name] = field.type === 'checkbox' ? false : '';
+    return acc;
+  }, {} as FormErrors);
+
+  const [formData, setFormData] = useState<FormState>(initialFormData);
+  const [errors, setErrors] = useState<FormErrors>(initialErrors);
+
+  const getFieldConfig = (fieldName: string): FieldConfig | undefined => {
+    return fields.find(field => field.name === fieldName);
+  };
+
+  const getDefaultValidator = (type: string) => {
+    switch (type) {
+      case 'phone':
+        return validatePhone;
+      case 'text':
+        return validateName;
+      default:
+        return () => '';
+    }
+  };
 
   const handleChange = (e: any) => {
     const { name, value, type } = e.target;
+    const fieldConfig = getFieldConfig(name);
+    
+    if (!fieldConfig) return;
 
-    if (name === "checkbox") {
-      setFormData((prev) => ({ ...prev, [name]: e.target.value }));
-      setErrors((prev) => ({ ...prev, [name]: !e.target.value }));
+    if (fieldConfig.type === "checkbox") {
+      setFormData((prev) => ({ ...prev, [name]: e.target.checked }));
+      setErrors((prev) => ({ ...prev, [name]: fieldConfig.required ? !e.target.checked : false }));
       return;
     }
 
-    if (name === 'phone') {
-      const formattedPhone = formatPhoneNumber(value);
-      setFormData(prev => ({ ...prev, [name]: formattedPhone }));
-      setErrors(prev => ({ ...prev, [name]: validatePhone(formattedPhone) }));
-    } 
+    let processedValue = value;
     
-    if (name === 'name') {
-      setFormData(prev => ({ ...prev, [name]: value }));
-      setErrors(prev => ({ ...prev, [name]: validateName(value) }));
+    // Apply formatter if exists
+    if (fieldConfig.formatter) {
+      processedValue = fieldConfig.formatter(value);
+    } else if (fieldConfig.type === 'phone') {
+      processedValue = formatPhoneNumber(value);
     }
+
+    setFormData(prev => ({ ...prev, [name]: processedValue }));
+
+    // Apply validation
+    const validator = fieldConfig.validator || getDefaultValidator(fieldConfig.type);
+    const error = validator(processedValue);
+    setErrors(prev => ({ ...prev, [name]: error }));
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    const nameError = validateName(formData.name);
-    const phoneError = validatePhone(formData.phone);
+    const newErrors: FormErrors = {};
+    let hasErrors = false;
 
-    setErrors(prev => ({
-      ...prev,
-      name: nameError,
-      phone: phoneError,
-      checkbox: !formData.checkbox
-    }));
+    fields.forEach(field => {
+      if (field.type === 'checkbox') {
+        const error = field.required ? !formData[field.name] : false;
+        newErrors[field.name] = error;
+        if (error) hasErrors = true;
+      } else {
+        const validator = field.validator || getDefaultValidator(field.type);
+        const error = validator(formData[field.name]);
+        newErrors[field.name] = error;
+        if (error) hasErrors = true;
+      }
+    });
 
-    if (!nameError && !phoneError && formData.checkbox) {
+    setErrors(newErrors);
+
+    if (!hasErrors) {
       onSubmit(formData);
       setIsSubmitted?.(true);
       // Reset form
-      setFormData({
-        name: '',
-        phone: '',
-        checkbox: false
-      });
+      setFormData(initialFormData);
     }
   };
 

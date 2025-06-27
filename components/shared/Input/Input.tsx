@@ -10,7 +10,8 @@ interface InputProps {
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   disabled?: boolean;
   error?: string;
-}
+  animated?: boolean;
+  }
 
 export function Input({
   type,
@@ -19,7 +20,8 @@ export function Input({
   value,
   onChange,
   disabled,
-  error
+  error,
+  animated = true
 }: InputProps) {
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if ([8, 46, 9, 27, 13].indexOf(e.keyCode) !== -1 ||
@@ -33,20 +35,10 @@ export function Input({
     }
   };
 
-  const getAutoComplete = () => {
-    switch (name) {
-      case 'name':
-        return 'name';
-      case 'phone':
-        return 'tel';
-      default:
-        return 'off';
-    }
-  };
-
   return (
-    <VisibilityManager className={`${styles.inputGroup} ${error ? styles.error : ''}`}>
-
+    <>
+    {animated ? (
+      <VisibilityManager className={`${styles.inputGroup} ${error ? styles.error : ''}`}>
       <div className={styles.inputWrapper}>
         <input
           type={type}
@@ -57,10 +49,27 @@ export function Input({
           onKeyDown={handleKeyDown}
           disabled={disabled}
           className={styles.input}
-          autoComplete={getAutoComplete()}
+          autoComplete="off"
         />
       </div>
       {error && <p className={styles.errorMessage}>{error}</p>}
     </VisibilityManager>
+    ) : (
+    <div className={`${styles.inputGroup} ${error ? styles.error : ''}`}>
+      <input
+        type={type}
+        name={name}
+        placeholder={placeholder}
+        value={value}
+        onChange={onChange}
+        onKeyDown={handleKeyDown}
+        disabled={disabled}
+        className={styles.input}
+        autoComplete="off"
+      />
+        {error && <p className={styles.errorMessage}>{error}</p>}
+    </div>
+    )}
+    </>
   );
 }
