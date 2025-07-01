@@ -610,10 +610,7 @@ export default function () {
         </LinkButton>
       </Final>
       <AnimatedLine />
-      <Final
-        image={enter_hole_1}
-        animation
-      >
+      <Final image={enter_hole_1} animation>
         <h2 className={finalStyles.title} style={{ color: "#fff" }}>
           Мухоморный ретрит в Казани
         </h2>

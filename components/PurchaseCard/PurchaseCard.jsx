@@ -21,6 +21,7 @@ export const PurchaseCard = ({ onPaymentSubmit }) => {
 
   const handlePayment = async (formData) => {
     const { email, phone, name } = formData;
+    setIsRedirecting(true);
     try {
       const res = await fetch("https://absurdly-natty-puffin.cloudpub.ru/api/payment", {
         method: "POST",
@@ -41,13 +42,15 @@ export const PurchaseCard = ({ onPaymentSubmit }) => {
       const data = await res.json();
       console.log(data);
       if (data?.payment?.confirmation?.confirmation_url) {
-        setIsRedirecting(true);
-        window.location.href = data.payment.confirmation.confirmation_url;
+        setTimeout(() => {
+          window.location.href = data.payment.confirmation.confirmation_url;
+        }, 0);
       } else {
         throw new Error(`Confirmation URL not found in response`);
       }
     } catch (error) {
       console.error("Failed to process payment:", error);
+      setIsRedirecting(false);
       setMessage("error");
     }
   };
@@ -282,11 +285,10 @@ export const PurchaseCard = ({ onPaymentSubmit }) => {
                         </VisibilityManager>
                       ) : null}
                       {message ? (
-                        <VisibilityManager style={{ marginTop: 0 }}>
+                        <VisibilityManager  style={{ marginTop: 0 }}>
                           {message === "error" ? (
-                            <p>
-                              Что-то пошло не так. Свяжитесь, пожалуйста, со
-                              мной в Телеграм по{" "}
+                            <p className={styles.errorMessage}>
+                              Какие-то технические неполадки. Свяжитесь, пожалуйста, со мной в Телеграм по{" "}
                               <a
                                 target="_blank"
                                 href="https://t.me/Z44LP"
