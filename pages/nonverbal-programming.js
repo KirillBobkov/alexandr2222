@@ -14,6 +14,7 @@ import { CourseContent } from "../components/CourseContent/CourseContent";
 import { ReasonCards } from "../components/ReasonCards/ReasonCards";
 import { PurchaseSuccessWidget } from "../components/PurchaseSuccessWidget/PurchaseSuccessWidget";
 import { VideoBlock } from "../components/VideoBlock/VideoBlock";
+import { Warranty } from "../components/Warranty/Warranty";
 
 export default function NonverbalProgramming() {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -208,6 +209,12 @@ export default function NonverbalProgramming() {
       />
       <div id="message" />
       <PurchaseCard />
+
+      <Warranty
+        title="Гарантия"
+        description="Возврат 100% денег в течение первых 14-ти дней по любой причине, либо спустя 2 месяца если не будет результата."
+      />
+
       <AnimatedLine />
       <Form
         setIsSubmitted={setIsSubmitted}

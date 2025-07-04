@@ -653,7 +653,9 @@ export default function () {
         ]}
       />
       <Warranty
-        href={{ pathname: "/neurotroubleshutting", hash: "#message" }}
+        title="Я уверен "
+        titleEmpty="в своей методике на 100%"
+        description="Если после работы со мной, вы не почувствуете улучшения, я верну вам все деньги. Моя цель – сделать так, чтобы вы были довольны и рекомендовали меня своим близким."
       />
 
       <Final animation flyletters={false}>
