@@ -1,0 +1,61 @@
+.container {
+
+}
+
+.block {
+  max-width: 1285px;
+  margin: 0 auto;
+  padding: 100px 30px 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.videoContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.videoWrapper {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+}
+
+.videoIframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 20px;
+}
+
+@media (max-width: 768px) {
+  .block {
+    padding: 60px 20px;
+    gap: 30px;
+  }
+  
+  .videoWrapper {
+    width: 100%;
+    aspect-ratio: 9 / 13;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+
+  .videoIframe {
+    border-radius: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .block {
+    padding: 40px 15px;
+  }
+    
+  .videoIframe {
+    border-radius: 10px;
+  }
+} 

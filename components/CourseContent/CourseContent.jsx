@@ -6,13 +6,22 @@ import { Button } from "../shared/Button/Button";
 
 export const CourseContent = () => {
   const courseItems = [
-    'Как мгновенно снимать тревогу, раздражение, обиду и другие состояния',
-    'Какие невербальные паттерны в теле запускают нужные эмоции',
-    'Как включать ресурсные состояния: концентрацию, терпение, смирение, устойчивость',
-    'Как подавлять голод, страх, суету и сомнения — с помощью простых микродвижений',
-    'Как использовать приёмы незаметно для окружающих',
-    'Почему невербальные сигналы работают быстрее и глубже, чем разговорные методы',
-    'Как интегрировать методику в повседневную жизнь'
+    'Вступительный урок',
+    '1 приём: убираем суету',
+    '2 приём: отключаем стыд',
+    '3 приём: отпускаем обиды',
+    '4 приём: нивелируем гнев',
+    '5 приём: гасим похоть',
+    '6 приём: сдерживаем смех',
+    '7 приём: сбрасываем стресс',
+    '8 приём: нейтрализуем тревожность',
+    '9 приём: отбиваемся от уныния',
+    '10 приём: отбрасываем сомнения',
+    '11 приём: отключаем страх',
+    '12 приём: избавляемся от раздражительности',
+    '13 приём: включаем режим антистресс+концентрация',
+    '14 приём: активируем терпение',
+    'Заключительный урок: используем техники незаметно'
   ];
 
   return (
@@ -26,14 +35,14 @@ export const CourseContent = () => {
           style={{ marginLeft: 0, marginRight: 0, marginBottom: 0 }}
         >
           <span>
-            <span className={contentStyles.title_empty}>Что узнаем</span>
-            <span className={contentStyles.title_accent}> на курсе?</span>
+            <span className={contentStyles.title_empty}>Программа</span>
+            <span className={contentStyles.title_accent}> курса</span>
           </span>
         </VisibilityManager>
         
         <VisibilityManager className={styles.listContainer}>
           <div className={styles.badge}>
-            <span className={styles.badgeNumber}>12</span>
+            <span className={styles.badgeNumber}>16</span>
             <span className={styles.badgeText}>видеоуроков</span>
           </div>
           

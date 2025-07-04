@@ -73,12 +73,13 @@
   }
 
   .secondaryPreview__subtitle {
-    font-size: 30px;
+    font-size: 20px;
     text-transform: uppercase;
-    font-weight: 700;
+    font-weight: 400;
     max-width: 1000px;
-    line-height: 52px;
+    line-height: 30px;
     padding-bottom: 12px;
+    color: var(--secondary-font-color);
   }
 
   /* Responsive styles */
@@ -94,24 +95,18 @@
       height: 100dvh; /* Full height of the viewport */
       min-height: 300px;
     }
-  
-    .secondaryPreview__title {
-      font-size: 60px; /* Smaller title size for mobile */
-      line-height: 72px;
-      padding: 10px;
-    }
-
-    .secondaryPreview__subtitle {
-      font-size: 20px;
-      line-height: 26px;
-      padding: 10px;
-    }
-  }
-  
-  @media (max-width: 480px) {
     .secondaryPreview__title {
       font-size: 30px; /* Even smaller title size for very small screens */
       line-height: 40px;
     }
+
+    .secondaryPreview__subtitle {
+      font-size: 14px;
+      line-height: 20px;
+      padding: 10px;
+      color: var(--secondary-font-color);
+    }
   }
+  
+
   

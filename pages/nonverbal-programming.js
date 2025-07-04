@@ -13,6 +13,7 @@ import { AnimatedLine } from "../components/AnimatedLine/AnimatedLine";
 import { CourseContent } from "../components/CourseContent/CourseContent";
 import { ReasonCards } from "../components/ReasonCards/ReasonCards";
 import { PurchaseSuccessWidget } from "../components/PurchaseSuccessWidget/PurchaseSuccessWidget";
+import { VideoBlock } from "../components/VideoBlock/VideoBlock";
 
 export default function NonverbalProgramming() {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -30,8 +31,12 @@ export default function NonverbalProgramming() {
     <Layout metaConfig={metaConfig}>
       <PurchaseSuccessWidget />
       <SecondaryPreview
-        text={"Освой невербальное программирование"}
-        subtext={"Управляй эмоциями через тело легко"}
+        text={"УПРАВЛЯЙ ЖИЗНЬЮ ЧЕРЕЗ ЭМОЦИИ И ДОСТИГАЙ БОЛЬШЕГО"}
+        subtext={
+          `14 техник. 
+          Мгновенный эффект.
+          Быстрые движения вместо долгой терапии`
+        }
         image={secondary_preview_29}
       />
 
@@ -50,7 +55,77 @@ export default function NonverbalProgramming() {
         }
       />
 
-      <AboutMe
+      <ReasonCards
+        reasonCards={[
+          {
+            description:
+              "Коллега/начальник/подчинённый несёт чушь, ваша челюсть сжимается, хочется сорваться.",
+          },
+          {
+            description:
+              "Важные переговоры, вы волнуетесь, спина становится мокрой, голос дрожит.",
+          },
+          {
+            description:
+              "Попали в неловкую ситуацию, лицо краснеет, хочется «провалиться сквозь землю».",
+          },
+          {
+            description:
+              "Сроки горят, вы начинаете суетиться и терять фокус, страдает качество работы.",
+          },
+          {
+            description:
+              "Кто-то задел вас, сделал больно, вы злитесь и раз за разом прокручиваете в голове как надо было поступить.",
+          },
+          {
+            description:
+              "Внезапно наступает сексуальное возбуждение и отвлекает вас от работы.",
+          },
+          {
+            description:
+              "Кто-то другой попал в неловкую ситуацию, и вы не можете сдержать смех, хотя в моменте это некрасиво.",
+          },
+          {
+            description:
+              "Копится стресс и становится тяжело работать и отдыхать.",
+          },
+          {
+            description:
+              "Всё идёт не совсем гладко, появляется уныние, и вы начинаете терять уверенность.",
+          },
+          {
+            description:
+              "Вам нужно действовать, но в ключевой момент приходят сомнения и мешают вам двигаться вперёд.",
+          },
+          {
+            description:
+              "Пришло время сделать что-то, что поможет вам подняться на следующий уровень, но вас парализует страх.",
+          },
+          { 
+            description: "Вам нужно выполнить задачу, но что-то вас отвлекает.",
+          },
+          {
+            description: "Вы долго стоите в очереди и теряете терпение.",
+          },
+          {
+            description: "Знаете, что постоянный стресс = болезни (давление, иммунитет, ЖКТ), но не можете его выключить?",
+          },
+          {
+            description: "Ваше тело КРИЧИТ от дискомфорта? Пора дать ему простые команды и расслабиться.",
+          },
+        ]}
+        title="вам это пригодится?"
+        titleEmpty="Когда"
+      />
+
+      <VideoBlock
+        title="Пример техники "
+        titleEmpty="из курса"
+        videoSrc="https://vkvideo.ru/video_ext.php?oid=-231430175&id=456239017&hd=2"
+        videoTitle="Невербальное программирование - Бесплатные уроки"
+      />
+
+      {/* <AboutMe
         {...{
           title: "трансформируем?",
           titleEmpty: "Какие состояния мы ",
@@ -70,56 +145,70 @@ export default function NonverbalProgramming() {
             { title: "избавиться от обиды" },
           ],
         }}
-      />
+      /> */}
 
       <Helping
-        title="Что внутри "
-        titleEmpty="курса?"
+        title="Как проходит "
+        titleEmpty="обучение"
         blocks={[
           {
             id: 1,
             className: "item2",
-            title: "Вводный урок",
-            desc: "Объясняет суть методики и подход к её освоению",
+            title: "Короткие видео (+- 1 минута)",
+            desc: "Автор показывает приёмы без лишней теории – только «как делать»",
           },
           {
             id: 2,
             className: "item5",
-            title: "12 видеоупражнений",
-            desc: "YouTube, доступ по закрытым ссылкам",
+            title: "Вы делаете упражнения во время просмотра уроков",
+            desc: "Повторяете перед зеркалом и доводите до автоматизма",
           },
           {
             id: 3,
             className: "item4",
-            title: "Финальный урок — чит-код",
-            desc: "как применять движения в жизни, чтобы никто не заметил",
+            title: "Используете памятку в формате PDF",
+            desc: "С описанием техник для быстрого доступа в критический момент",
+          },
+          {
+            id: 4,
+            className: "item3",
+            title: "Закрытый чат в телеграм",
+            desc: "Задаёте вопросы и обмениваетесь опытом с другими участниками",
+          },
+          {
+            id: 5,
+            className: "item6",
+            title: "Личная работа с автором курса",
+            desc: "По системе нейротраблшутинга для успешного освоения методики",
+          },
+          {
+            id: 6,
+            className: "item1",
+            title: "Доступ 24/7",
+            desc: "Ваша «аптечка» всегда под рукой в телефоне",
           },
         ]}
       />
+
       <AnimatedLine />
       <CourseContent />
-
-      <ReasonCards />
-
+      
       <CirclesList
         {...{
           animation: true,
-          title: "Курс для всех ",
-          titleEmpty: "кто хочет",
+          title: "Курс для тех ",
+          titleEmpty: "кому важно",
           items: [
-            { title: "Быстро управлять своим состоянием" },
-            { title: "Не зависеть от внешних обстоятельств" },
-            { title: "Работать с эмоциями без слов и «разборов»" },
-            { title: "Перестать бояться, раздражаться, суетиться" },
-            { title: "Укрепить внутренний стержень и устойчивость" },
-            { title: "Взять контроль над собой" },
+            { title: "Управлять своими эмоциями" },
+            { title: "Быть независимым от внешних обстоятельств" },
+            { title: "Достигать высоких результатов без перенапряжения" },
+            { title: "Иметь преимущество над другими" },
           ],
         }}
       />
-       <div id="message" />
+      <div id="message" />
       <PurchaseCard />
       <AnimatedLine />
-     
       <Form
         setIsSubmitted={setIsSubmitted}
         isSubmitted={isSubmitted}

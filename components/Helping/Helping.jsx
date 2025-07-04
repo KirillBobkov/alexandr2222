@@ -5,7 +5,6 @@ import { VisibilityManager } from "../shared/VisibilityManager";
 import { Button } from "../shared/Button/Button.jsx";
 import contentStyles from "../../styles/contentStyles.module.css";
 
-
 export const Helping = ({
   blocks,
   title = "Я помогу,",
@@ -42,11 +41,13 @@ export const Helping = ({
 const TextBlock = ({ title, desc }) => {
   return (
     <div className={styles.textBlock}>
-      <h3 className={styles.textTitle}>
-      <span className={styles.textSymbol}>//</span> 
-        {'  '}
-        {title}
-      </h3>
+      {title ? (
+        <h3 className={styles.textTitle}>
+          <span className={styles.textSymbol}>//</span>
+          {"  "}
+          {title}
+        </h3>
+      ) : null}
       <p className={styles.textDescription}>{desc}</p>
     </div>
   );

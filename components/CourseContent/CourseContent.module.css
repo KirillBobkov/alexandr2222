@@ -73,8 +73,8 @@
     padding: 0;
     margin: 0;
     display: flex;
-    flex-direction: column;
-    gap: 40px;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 .listItem {
@@ -82,6 +82,9 @@
     align-items: center;
     gap: 16px;
     padding: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 45%;
     transition: all 0.3s ease;
 }
 
@@ -127,13 +130,17 @@
         position: static;
     }
 
+    .listItem {
+        flex-basis: 100%;
+    }
+
 
     .listItem:hover {
         transform: none;
     }
 
     .list {
-        gap: 20px;
+        gap: 15px;
     }
 
 }
