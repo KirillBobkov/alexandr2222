@@ -38,7 +38,7 @@ export const TarifModal = ({
     setTimeout(() => {
       onClose();
       setClosing(false);
-    }, 1000);
+    }, 100);
   };
 
   const handleOverlayClick = (e: any) => {
