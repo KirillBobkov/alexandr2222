@@ -32,32 +32,13 @@ export const TarifModal = ({
     }
      }, [isOpen]);
 
-  // Закрытие модального окна по клавише ESC
-  useEffect(() => {
-    const handleEscKey = (event: any) => {
-      if (event.key === 'Escape' && isOpen) {
-        setClosing(true);
-        setTimeout(() => {
-          onClose();
-          setClosing(false);
-        }, 600);
-      }
-    };
-
-    if (isOpen) {
-      document.addEventListener('keydown', handleEscKey);
-      return () => {
-        document.removeEventListener('keydown', handleEscKey);
-      };
-    }
-  }, [isOpen, onClose]);
 
   const handleClose = () => {
     setClosing(true);
     setTimeout(() => {
       onClose();
       setClosing(false);
-    }, 600);
+    }, 1000);
   };
 
   const handleOverlayClick = (e: any) => {
