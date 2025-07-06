@@ -21,7 +21,7 @@ import secondary_preview_27 from "../images/secondary_preview_27.webp";
 import secondary_preview_28 from "../images/secondary_preview_28.webp";
 import styles from "../styles/blog.module.css";
 import contentStyles from "../styles/contentStyles.module.css";
-import { LineAnimation } from "../components/LineAnomation/LineAnimation";
+import { LineAnimation } from "../components/LineAnimation/LineAnimation";
 import { VisibilityManager } from "../components/shared/VisibilityManager";
 import { useScrollToLocation } from "../hooks/useScrollToLocation";
 

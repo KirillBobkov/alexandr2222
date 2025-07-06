@@ -1,24 +1,23 @@
 import Layout from "../components/Layout/Layout";
 import { InnerSatisfaction } from "../components/InnerSatisfaction";
 import { CirclesList } from "../components/CirclesList/CirclesList";
-import { AboutMe } from "../components/AboutMe/AboutMe";
-import { PurchaseCard } from "../components/PurchaseCard/PurchaseCard";
 import { SecondaryPreview } from "../components/SecondaryPreview/SecondaryPreview";
 import secondary_preview_29 from "../images/secondary_preview_29.webp";
 import { Helping } from "../components/Helping/Helping";
 import { Form } from "../components/Form/Form";
 import { useState } from "react";
-import { useRouter } from "next/router";
 import { AnimatedLine } from "../components/AnimatedLine/AnimatedLine";
 import { CourseContent } from "../components/CourseContent/CourseContent";
 import { ReasonCards } from "../components/ReasonCards/ReasonCards";
+import { ReasonCard } from "../components/ReasonCard/ReasonCard";
+import { TarifCard } from "../components/TarifCard/TarifCard";
 import { PurchaseSuccessWidget } from "../components/PurchaseSuccessWidget/PurchaseSuccessWidget";
 import { VideoBlock } from "../components/VideoBlock/VideoBlock";
 import { Warranty } from "../components/Warranty/Warranty";
+import { TextReviews } from "../components/TextReviews/TextReviews";
 
 export default function NonverbalProgramming() {
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const router = useRouter();
 
   const metaConfig = {
     title: "Невербальное программирование — Управляй эмоциями через тело",
@@ -33,11 +32,9 @@ export default function NonverbalProgramming() {
       <PurchaseSuccessWidget />
       <SecondaryPreview
         text={"УПРАВЛЯЙ ЖИЗНЬЮ ЧЕРЕЗ ЭМОЦИИ И ДОСТИГАЙ БОЛЬШЕГО"}
-        subtext={
-          `14 техник. 
+        subtext={`14 техник. 
           Мгновенный эффект.
-          Быстрые движения вместо долгой терапии`
-        }
+          Быстрые движения вместо долгой терапии`}
         image={secondary_preview_29}
       />
 
@@ -102,21 +99,26 @@ export default function NonverbalProgramming() {
             description:
               "Пришло время сделать что-то, что поможет вам подняться на следующий уровень, но вас парализует страх.",
           },
-          { 
+          {
             description: "Вам нужно выполнить задачу, но что-то вас отвлекает.",
           },
           {
             description: "Вы долго стоите в очереди и теряете терпение.",
           },
           {
-            description: "Знаете, что постоянный стресс = болезни (давление, иммунитет, ЖКТ), но не можете его выключить?",
+            description:
+              "Знаете, что постоянный стресс = болезни (давление, иммунитет, ЖКТ), но не можете его выключить?",
           },
           {
-            description: "Ваше тело КРИЧИТ от дискомфорта? Пора дать ему простые команды и расслабиться.",
+            description:
+              "Ваше тело КРИЧИТ от дискомфорта? Пора дать ему простые команды и расслабиться.",
           },
         ]}
         title="вам это пригодится?"
         titleEmpty="Когда"
+        renderCard={({ card, index }) => (
+          <ReasonCard key={index} card={card} index={index} />
+        )}
       />
 
       <VideoBlock
@@ -125,28 +127,6 @@ export default function NonverbalProgramming() {
         videoSrc="https://vkvideo.ru/video_ext.php?oid=-231430175&id=456239017&hd=2"
         videoTitle="Невербальное программирование - Бесплатные уроки"
       />
-
-      {/* <AboutMe
-        {...{
-          title: "трансформируем?",
-          titleEmpty: "Какие состояния мы ",
-          items: [
-            { title: "снять тревожность" },
-            { title: "включить терпение" },
-            { title: "убрать голод" },
-            { title: "выключить раздражительность" },
-            { title: "активировать концентрацию" },
-            { title: "повысить стрессоустойчивость" },
-            { title: "победить страх" },
-            { title: "убрать суету" },
-            { title: "отбросить сомнения" },
-            { title: "отбиться от уныния" },
-            { title: "отключить стыд" },
-            { title: "включить смирение" },
-            { title: "избавиться от обиды" },
-          ],
-        }}
-      /> */}
 
       <Helping
         title="Как проходит "
@@ -193,7 +173,7 @@ export default function NonverbalProgramming() {
 
       <AnimatedLine />
       <CourseContent />
-      
+
       <CirclesList
         {...{
           animation: true,
@@ -207,8 +187,54 @@ export default function NonverbalProgramming() {
           ],
         }}
       />
+
+      <TextReviews />
+
       <div id="message" />
-      <PurchaseCard />
+      <ReasonCards
+        reasonCards={[
+          {
+            title: "Базовый",
+            tariff: "base",
+            price: "4 990₽",
+            features: [
+              "Бессрочный доступ к урокам и обновлениям",
+              "Памятка в формате PDF",
+              "Авторская релакс аудиомедитация в подарок"
+            ],
+            description: "Подходит для людей с высоким уровнем дисциплины и желанием развиваться самостоятельно."
+          },
+          {
+            title: "Оптимальный",
+            tariff: "optimal",
+            price: "13 990₽",
+            features: [
+              "Бессрочный доступ к урокам и обновлениям",
+              "Поддержка и обмен опытом в групповом чате",
+              "Памятка в формате PDF",
+              "3 авторские аудиомедитации (релакс, мотивация, уверенность) в подарок"
+            ],
+            description: "Если вам интересно развиваться в сообществе единомышленников, иметь возможность задавать вопросы и делиться опытом — этот тариф для вас."
+          },
+          {
+            title: "Премиум",
+            tariff: "premium",
+            price: "99 990₽",
+            features: [
+              "Бессрочный доступ к урокам и обновлениям",
+              "Поддержка и обмен опытом в групповом чате",
+              "8 персональных онлайн-сессий с автором. Через работу с познанием устраним корни проблем (травмы/блоки) и настроим ваше тело на применение методики в любой ситуации",
+              "3 авторские аудиомедитации (релакс, мотивация, уверенность) + 1 одна под запрос в подарок"
+            ],
+            description: "Для VIP клиентов, которым важен индивидуальный подход и максимально быстрый результат."
+          }
+        ]}
+        title="Тарифы"
+        renderCard={({ card, index }) => (
+          <TarifCard key={index} card={card} index={index} />
+        )}
+      />
+
 
       <Warranty
         title="Гарантия"

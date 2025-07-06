@@ -3,7 +3,7 @@ import styles from "./Final.module.css"; // Adjust the path as necessary
 import { VisibilityManager } from "../shared/VisibilityManager";
 import LinkButton from "../shared/LinkButton/LinkButton";
 import Image from "next/image";
-import { LineAnimation } from "../LineAnomation/LineAnimation";
+import { LineAnimation } from "../LineAnimation/LineAnimation";
 
 export const Final = ({ 
   image,

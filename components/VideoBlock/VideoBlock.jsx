@@ -3,7 +3,7 @@ import styles from "./VideoBlock.module.css";
 import { VisibilityManager } from "../shared/VisibilityManager";
 import contentStyles from "../../styles/contentStyles.module.css";
 import { VideoPlayer } from "../VideoPlayer/VideoPlayer";
-import { LineAnimation } from "../LineAnomation/LineAnimation";
+import { LineAnimation } from "../LineAnimation/LineAnimation";
 
 export const VideoBlock = ({ title, titleEmpty, videoSrc, videoTitle }) => {
   return (

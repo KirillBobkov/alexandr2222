@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styles from "./VideoWidget.module.css";
 import { VideoPlayer } from "../VideoPlayer/VideoPlayer";
 import { VideoList } from "../VideoList/VideoList";
-import { LineAnimation } from "../LineAnomation/LineAnimation";
+import { LineAnimation } from "../LineAnimation/LineAnimation";
 import { VisibilityManager } from "../shared/VisibilityManager";
 
 export interface Video {

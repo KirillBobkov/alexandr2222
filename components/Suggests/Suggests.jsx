@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Suggests.module.css"; // Adjust the path as necessary
-import { LineAnimation } from "../LineAnomation/LineAnimation";
+import { LineAnimation } from "../LineAnimation/LineAnimation";
 import { VisibilityManager } from "../shared/VisibilityManager";
 import chart from "../../images/chart.webp";
 import Image from "next/image";

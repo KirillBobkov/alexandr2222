@@ -1,7 +1,7 @@
 import styles from './CourseContent.module.css';
 import { VisibilityManager } from "../shared/VisibilityManager";
 import contentStyles from "../../styles/contentStyles.module.css";
-import { LineAnimation } from "../LineAnomation/LineAnimation";
+import { LineAnimation } from "../LineAnimation/LineAnimation";
 import { Button } from "../shared/Button/Button";
 
 export const CourseContent = () => {

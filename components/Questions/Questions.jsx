@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import styles from "./Questions.module.css";
 
 import { VisibilityManager } from "../shared/VisibilityManager";
-import { LineAnimation } from "../LineAnomation/LineAnimation.jsx";
+import { LineAnimation } from "../LineAnimation/LineAnimation.jsx";
 import contentStyles from "../../styles/contentStyles.module.css";
 export const Questions = ({ questionsContent }) => {
   return (

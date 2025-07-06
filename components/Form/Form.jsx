@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Input } from "../shared/Input/Input";
 import styles from "./Form.module.css";
-import { LineAnimation } from "../LineAnomation/LineAnimation";
+import { LineAnimation } from "../LineAnimation/LineAnimation";
 import { VisibilityManager } from "../shared/VisibilityManager";
 import { FormValidator } from "../shared/FormValidator/FormValidator";
 import contentStyles from "../../styles/contentStyles.module.css";

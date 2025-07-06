@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./styles.module.css";
 import contentStyles from "../../styles/contentStyles.module.css";
 import { VisibilityManager } from "../shared/VisibilityManager";
-import { LineAnimation } from "../LineAnomation/LineAnimation";
+import { LineAnimation } from "../LineAnimation/LineAnimation";
 
 export const InnerQuestions = ({
   title,

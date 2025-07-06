@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./AnimatedLine.module.css"; // Adjust the path as necessary
-import { LineAnimation } from "../LineAnomation/LineAnimation";
+import { LineAnimation } from "../LineAnimation/LineAnimation";
 import Image from "next/image.js";
 import logoLight from "../../images/logo.webp";
 import logoDark from "../../images/logo_dark.webp";

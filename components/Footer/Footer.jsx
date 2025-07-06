@@ -5,7 +5,7 @@ import logoDark from "../../images/logo_dark.webp";
 import Image from "next/image";
 import vadgra from "../../images/vadgra.webp";
 import { useTheme } from "../../hooks/useTheme";
-import { LineAnimation } from "../LineAnomation/LineAnimation";
+import { LineAnimation } from "../LineAnimation/LineAnimation";
 import { useRouter } from "next/router";
 
 export function Footer() {

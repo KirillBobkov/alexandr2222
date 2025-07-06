@@ -1,6 +1,7 @@
 import styles from "./TextReviews.module.css";
 import Image from "next/image.js";
 import React, { useState } from "react";
+import { LineAnimation } from "../LineAnimation/LineAnimation";
 
 interface Testimonial {
   id: number;
@@ -13,33 +14,33 @@ interface Testimonial {
 const testimonials: Testimonial[] = [
   {
     id: 1,
-    name: "?????",
-    role: "",
+    name: "Никита",
+    role: "полицейский",
     content:
-    "Прошел страх езды на машине! Села сама за руль, сама поехала, сама покаталась)",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=200&h=200",
+    "Это помогает мне быть расслабленным там, где раньше сдавали нервы.",
+    image: "https://avatars.mds.yandex.net/get-yapic/36689/jpEOFu1rpHoHeltF6WA5fbdV7sg-1/orig",
   },
   {
     id: 2,
-    name: "Никита",
-    role: "",
+    name: "Александр",
+    role: "менеджер по продажам",
     content:
-    "Создалась такая ситуация в которой испытывал тяжелые эмоции, которые блокировали полностью мысли, эмоции стресса, ревности какой-то непонятной, от потери человека. Мешали двигаться, мешали думать, оценивать других людей, полностью пришибленное состояние. После того как мы созвонились с Александром, мы выявлили какие эмоции я испытываю, мы их проработали, отпустили и стало гораздо легче. Мозг как будто проснулся! Стал работать на созидательной энергии. Спасибо, Александр Игоревичь, за помощь.",
+    "З@&бись! Продавать стало легче!))",
     image:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=200&h=200",
+      "https://avatars.mds.yandex.net/get-yapic/36689/jpEOFu1rpHoHeltF6WA5fbdV7sg-1/orig",
   },
   {
     id: 3,
-    name: "Emma Thompson",
-    role: "Product Manager",
+    name: "Булат",
+    role: "организатор мероприятий",
     content:
-      "The level of customer support and continuous improvement is outstanding. It's rare to find a company so dedicated to user success and product excellence.",
+      "Вот эта тема с отключением суеты хорошо зашла, постоянно пользуюсь",
     image:
-      "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=200&h=200",
+      "https://avatars.mds.yandex.net/get-yapic/36689/jpEOFu1rpHoHeltF6WA5fbdV7sg-1/orig",
   },
 ];
 
-export const TextReviews: React.FC = () => {
+export const TextReviews = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextSlide = () => {
@@ -55,6 +56,7 @@ export const TextReviews: React.FC = () => {
   };
 
   return (
+    <LineAnimation>
     <div className={styles.container}>
       <div className={styles.slider}>
         {testimonials.map((testimonial, index) => (
@@ -117,5 +119,6 @@ export const TextReviews: React.FC = () => {
         </svg>
       </button>
     </div>
+    </LineAnimation>
   );
 };

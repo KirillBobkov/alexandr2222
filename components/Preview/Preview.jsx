@@ -6,7 +6,7 @@ import preview_bg_light from "../../images/preview_bg_light.webp";
 import vadgra from "../../images/vadgra.webp";
 import Image from "next/image.js";
 import { VisibilityManager } from "../shared/VisibilityManager";
-import { LineAnimation } from "../LineAnomation/LineAnimation";
+import { LineAnimation } from "../LineAnimation/LineAnimation";
 import { useTheme } from "../../hooks/useTheme";
 
 export const Preview = () => {

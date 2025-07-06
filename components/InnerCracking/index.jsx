@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./InnerCracking.module.css";
 import { VisibilityManager } from "../shared/VisibilityManager";
 import contentStyles from "../../styles/contentStyles.module.css";
-import { LineAnimation } from "../LineAnomation/LineAnimation";
+import { LineAnimation } from "../LineAnimation/LineAnimation";
 
 export const InnerCracking = () => {
   const challenges = [

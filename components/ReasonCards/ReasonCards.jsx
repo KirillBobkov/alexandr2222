@@ -1,11 +1,19 @@
 import styles from './ReasonCards.module.css';
 import { VisibilityManager } from "../shared/VisibilityManager";
 import contentStyles from "../../styles/contentStyles.module.css";
-import { LineAnimation } from "../LineAnomation/LineAnimation";
+import { LineAnimation } from "../LineAnimation/LineAnimation";
+import { ReasonCard } from "../ReasonCard/ReasonCard";
 
-export const ReasonCards = ({reasonCards, title, titleEmpty}) => {
-
-
+export const ReasonCards = ({
+  reasonCards, 
+  title, 
+  titleEmpty,
+  renderCard,
+  children
+}) => {
+  // Render prop может быть передан как renderCard prop или как children функция
+  const cardRenderer = renderCard || (typeof children === 'function' ? children : null);
+  
   return (
     <LineAnimation>
       <section className={styles.container}>
@@ -23,15 +31,14 @@ export const ReasonCards = ({reasonCards, title, titleEmpty}) => {
           </VisibilityManager>
           
           <VisibilityManager className={styles.cardsGrid}>
-            {reasonCards.map((card, index) => (
-              <div key={index} className={styles.card}>
-                <div className={styles.cardHeader}>
-                  <span className={styles.cardNumber}>{String(index + 1).padStart(2, '0')}</span>
-                </div>
-                {card.title ? <h3 className={styles.cardTitle}>{card.title}</h3> : null}
-                {card.description ? <p className={styles.cardDescription}>{card.description}</p> : null}
-              </div>
-            ))}
+            {reasonCards.map((card, index) => {
+              // Если есть render prop, используем его
+              if (cardRenderer) {
+                return cardRenderer({ card, index, key: index });
+              }
+              // Иначе используем дефолтный ReasonCard
+              return <ReasonCard key={index} card={card} index={index} />;
+            })}
           </VisibilityManager>
         </div>
       </section>
