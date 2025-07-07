@@ -234,14 +234,6 @@ export default function NonverbalProgramming() {
           <TarifCard key={index} card={card} index={index} />
         )}
       />
-
-
-      <Warranty
-        title="Гарантия"
-        description="Возврат 100% денег в течение первых 14-ти дней по любой причине, либо спустя 2 месяца если не будет результата."
-      />
-
-      <AnimatedLine />
       <Form
         setIsSubmitted={setIsSubmitted}
         isSubmitted={isSubmitted}

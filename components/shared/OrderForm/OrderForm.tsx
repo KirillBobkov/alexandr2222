@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Input } from "../Input/Input";
 import { FormValidator } from "../FormValidator/FormValidator";
 import { VisibilityManager } from "../VisibilityManager";
@@ -17,12 +17,11 @@ interface OrderFormProps {
   tariff?: string;
 }
 
-export const OrderForm = ({ 
-  onPaymentSubmit, 
+export const OrderForm = ({
   title = "Оформление заказа",
   price = "4990₽",
   tariff = "base",
-  description = "Оставьте контакты для отправки материалов курса. Они будут отправлены на почту в течение 24 часов после оплаты."
+  description = "Оставьте контакты для отправки материалов курса. Они будут отправлены на почту в течение 24 часов после оплаты.",
 }: OrderFormProps) => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [message, setMessage] = useState("");
@@ -32,25 +31,27 @@ export const OrderForm = ({
     const { email, phone, name } = formData;
     setIsRedirecting(true);
     try {
-      const res = await fetch("https://absurdly-natty-puffin.cloudpub.ru/api/payment", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          email: email,
-          phone: phone,
-          name: name,
-          tariff,
-        }),
-      });
+      const res = await fetch(
+        "https://absurdly-natty-puffin.cloudpub.ru/api/payment",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            email,
+            phone,
+            name,
+            tariff,
+          }),
+        }
+      );
 
       if (!res.ok) {
         throw new Error(`HTTP error! status: ${res.status}`);
       }
 
       const data = await res.json();
-      console.log(data);
       if (data?.payment?.confirmation?.confirmation_url) {
         setTimeout(() => {
           window.location.href = data.payment.confirmation.confirmation_url;
@@ -102,9 +103,7 @@ export const OrderForm = ({
       <div className={styles.orderFormHeader}>
         <h2 className={styles.orderFormTitle}>{title}</h2>
         <p className={styles.orderFormPrice}>{price}</p>
-        <div className={styles.orderFormDescription}>
-          {description}
-        </div>
+        <div className={styles.orderFormDescription}>{description}</div>
       </div>
 
       <div className={styles.orderFormContent}>
@@ -114,13 +113,7 @@ export const OrderForm = ({
           setIsSubmitted={setIsSubmitted}
           onSubmit={handleSubmit}
         >
-          {({
-            formData,
-            errors,
-            handleChange,
-            handleSubmit,
-            isSubmitted,
-          }) => (
+          {({ formData, errors, handleChange, handleSubmit, isSubmitted }) => (
             <form onSubmit={handleSubmit} className={styles.orderForm}>
               <div className={styles.orderFormInput}>
                 <Input
@@ -160,7 +153,7 @@ export const OrderForm = ({
               </div>
               <div
                 style={{
-                  opacity: formData.agreement ? 1 : 0.5,
+                  opacity: formData.agreement ? 1 : 0.7,
                   pointerEvents: formData.agreement ? "auto" : "none",
                   transition: "opacity 0.3s ease",
                   width: "100%",
@@ -172,7 +165,12 @@ export const OrderForm = ({
                   disabled={!formData.agreement || isSubmitted}
                   className={styles.submitOrderButton}
                 >
-                  <span>Оплатить</span>
+                  {isRedirecting && <div className={styles.loader}></div>}
+                  <span>
+                    {isRedirecting
+                      ? "На страницу оплаты..."
+                      : "Оплатить"}
+                  </span>
                 </button>
               </div>
               <div className={styles.agreementCheckbox}>
@@ -202,17 +200,12 @@ export const OrderForm = ({
                   </a>
                 </label>
               </div>
-              {isRedirecting ? (
-                <VisibilityManager side="bottom" className={styles.redirectingLoader}>
-                  <div className={styles.spinner}></div>
-                  <p>Переходим на страницу оплаты...</p>
-                </VisibilityManager>
-              ) : null}
               {message ? (
                 <VisibilityManager style={{ marginTop: 0 }}>
                   {message === "error" ? (
                     <p className={styles.errorMessage}>
-                      Какие-то технические неполадки. Свяжитесь, пожалуйста, со мной в Телеграм по{" "}
+                      Какие-то технические неполадки. Свяжитесь, пожалуйста, со
+                      мной в Телеграм по{" "}
                       <a
                         target="_blank"
                         href="https://t.me/Z44LP"
@@ -234,4 +227,4 @@ export const OrderForm = ({
       </div>
     </div>
   );
-}; 
+};
