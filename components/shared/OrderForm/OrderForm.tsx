@@ -31,7 +31,7 @@ export const OrderForm = ({
     const { email, phone, name } = formData;
     setIsRedirecting(true);
     try {
-      const res = await fetch(
+      const fetchPromise = fetch(
         "https://absurdly-natty-puffin.cloudpub.ru/api/payment",
         {
           method: "POST",
@@ -46,6 +46,15 @@ export const OrderForm = ({
           }),
         }
       );
+
+      const timeoutPromise = new Promise<never>((_, reject) =>
+        setTimeout(
+          () => reject(new Error("Request timed out after 20 seconds")),
+          20000
+        )
+      );
+
+      const res = await Promise.race([fetchPromise, timeoutPromise]);
 
       if (!res.ok) {
         throw new Error(`HTTP error! status: ${res.status}`);
