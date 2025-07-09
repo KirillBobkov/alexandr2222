@@ -32,8 +32,8 @@ export default function NonverbalProgramming() {
       <PurchaseSuccessWidget />
       <SecondaryPreview
         text={"УПРАВЛЯЙ ЖИЗНЬЮ ЧЕРЕЗ ЭМОЦИИ И ДОСТИГАЙ БОЛЬШЕГО"}
-        subtext={`14 техник. 
-          Мгновенный эффект.
+        subtext={`14 техник 
+          Мгновенный эффект
           Быстрые движения вместо долгой терапии`}
         image={secondary_preview_29}
       />
