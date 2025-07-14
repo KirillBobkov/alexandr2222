@@ -32,7 +32,7 @@ export const OrderForm = ({
     setIsRedirecting(true);
     try {
       const fetchPromise = fetch(
-        "https://absurdly-natty-puffin.cloudpub.ru/api/payment",
+        "https://6ce8d736a9b6.vps.myjino.ru/api/payment",
         {
           method: "POST",
           headers: {
