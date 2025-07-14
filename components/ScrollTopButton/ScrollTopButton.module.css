@@ -8,8 +8,8 @@
     cursor: pointer;
     transition: background-color 100ms;
     border-radius: 50%;
-    color: #be2bff;
-    fill:  #be2bff;
+    color: var(--accent-2);
+    fill:  var(--accent-2);
     background-color: var(--button-opacity);
     transition: all 500ms ease-out;
     z-index: 100;
@@ -27,7 +27,7 @@
 }
 
 .arrow-button svg path {
-    fill: #be2bff;
+    fill: var(--accent-2);
 }
 
 .scroll-top-button {

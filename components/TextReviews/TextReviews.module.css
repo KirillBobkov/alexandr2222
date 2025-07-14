@@ -103,7 +103,7 @@
 .icon {
   width: 24px;
   height: 24px;
-  color: #be2bff;
+  color: var(--accent-2);
 }
 
 @media (max-width: 768px) {

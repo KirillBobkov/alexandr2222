@@ -76,7 +76,7 @@
   cursor: pointer;
   color: inherit;
   font-weight: bold;
-  color: #be2bff;
+  color: var(--accent-2);
 }
 
 .form-checkbox__label {
