@@ -13,14 +13,14 @@ interface OrderFormProps {
   onPaymentSubmit?: (formData: any) => void;
   title?: string;
   description?: string;
-  price?: string;
-  tariff?: string;
+  price: string;
+  tariff: string;
 }
 
 export const OrderForm = ({
   title = "Оформление заказа",
-  price = "4990₽",
-  tariff = "base",
+  price,
+  tariff,
   description = "Оставьте контакты для отправки материалов курса. Они будут отправлены на почту в течение 24 часов после оплаты.",
 }: OrderFormProps) => {
   const [isSubmitted, setIsSubmitted] = useState(false);
