@@ -188,7 +188,7 @@ export default function NonverbalProgramming() {
         }}
       />
 
-      <TextReviews />
+      {/* <TextReviews /> */}
 
       <div id="message" />
       <ReasonCards
@@ -238,9 +238,9 @@ export default function NonverbalProgramming() {
       <Form
         setIsSubmitted={setIsSubmitted}
         isSubmitted={isSubmitted}
-        title={"Хочешь дополнительную поддержку?"}
+        title={"ОСТАЛИСЬ ВОПРОСЫ?"}
         type="Курс по невербальному программированию"
-        description={`Оставь свои контакты, и мы обсудим индивидуальный формат и доведение до результата`}
+        description={`Запишитесь на индивидуальную консультацию.`}
       />
     </Layout>
   );
