@@ -177,7 +177,7 @@ export function Footer() {
                 </span>
               </li>
             </ul>
-            {router.pathname === "/nonverbal-programming" && (
+            {/* {router.pathname === "/nonverbal-programming" && (
               <p className={styles.year}>
                 Telegram: @z44lp
                 <br />
@@ -188,7 +188,7 @@ export function Footer() {
                 Адрес: г. Казань, ул. Туфана Миннуллина, 10А
                 <br />
               </p>
-            )}
+            )} */}
           </div>
         </div>
       </footer>

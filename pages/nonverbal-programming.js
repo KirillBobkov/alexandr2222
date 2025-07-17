@@ -13,8 +13,7 @@ import { ReasonCard } from "../components/ReasonCard/ReasonCard";
 import { TarifCard } from "../components/TarifCard/TarifCard";
 import { PurchaseSuccessWidget } from "../components/PurchaseSuccessWidget/PurchaseSuccessWidget";
 import { VideoBlock } from "../components/VideoBlock/VideoBlock";
-import { Warranty } from "../components/Warranty/Warranty";
-import { TextReviews } from "../components/TextReviews/TextReviews";
+import teaserVideo from "../images/teaser.mp4";
 
 export default function NonverbalProgramming() {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -124,8 +123,11 @@ export default function NonverbalProgramming() {
       <VideoBlock
         title="Пример техники "
         titleEmpty="из курса"
-        videoSrc="https://vkvideo.ru/video_ext.php?oid=-231430175&id=456239017&hd=2"
+        videoSrc={teaserVideo}
         videoTitle="Невербальное программирование - Бесплатные уроки"
+        directVideo={true}
+        controls={true}
+        muted={false}
       />
 
       <Helping
@@ -202,7 +204,8 @@ export default function NonverbalProgramming() {
               "Памятка по всем урокам, в текстовом формате",
               // "Авторская релакс аудиомедитация в подарок"
             ],
-            description: "Подходит для людей с высоким уровнем дисциплины и желанием развиваться самостоятельно."
+            description:
+              "Подходит для людей с высоким уровнем дисциплины и желанием развиваться самостоятельно.",
           },
           {
             title: "Оптимальный",
@@ -214,7 +217,8 @@ export default function NonverbalProgramming() {
               "Памятка по всем урокам, в текстовом формате",
               // "3 авторские аудиомедитации (релакс, мотивация, уверенность) в подарок"
             ],
-            description: "Если вам интересно развиваться в сообществе единомышленников, иметь возможность задавать вопросы и делиться опытом — этот тариф для вас."
+            description:
+              "Если вам интересно развиваться в сообществе единомышленников, иметь возможность задавать вопросы и делиться опытом — этот тариф для вас.",
           },
           {
             title: "Премиум",
@@ -227,8 +231,9 @@ export default function NonverbalProgramming() {
               "8 персональных онлайн-сессий с автором. Через работу с познанием устраним корни проблем (травмы/блоки) и настроим ваше тело на применение методики в любой ситуации",
               // "3 авторские аудиомедитации (релакс, мотивация, уверенность) + 1 одна под запрос в подарок"
             ],
-            description: "Для VIP клиентов, которым важен индивидуальный подход и максимально быстрый результат."
-          }
+            description:
+              "Для VIP клиентов, которым важен индивидуальный подход и максимально быстрый результат.",
+          },
         ]}
         title="Тарифы"
         renderCard={({ card, index }) => (
