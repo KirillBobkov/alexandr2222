@@ -28,7 +28,7 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-left: 30px;
+    margin-left: 10px;
 }
 
 .header__title {
@@ -209,6 +209,10 @@
         line-height: 30px;
     }
 
+    .header__logo-container {
+        margin-left: 30px;
+    }
+
     /* Mobile Navigation */
     .navigation {
         flex-direction: column;
@@ -255,9 +259,6 @@
         height: 100%;
     }
 
-    .navigation__parent-link-text {
-        flex-shrink: 0;
-    }
 
     .dropdown_visible {
         height: auto;
