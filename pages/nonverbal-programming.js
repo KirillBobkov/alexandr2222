@@ -14,9 +14,13 @@ import { TarifCard } from "../components/TarifCard/TarifCard";
 import { PurchaseSuccessWidget } from "../components/PurchaseSuccessWidget/PurchaseSuccessWidget";
 import { VideoBlock } from "../components/VideoBlock/VideoBlock";
 import teaserVideo from "../images/teaser.mp4";
+import { useScrollToLocation } from "../hooks/useScrollToLocation";
 
 export default function NonverbalProgramming() {
   const [isSubmitted, setIsSubmitted] = useState(false);
+
+  
+  useScrollToLocation();
 
   const metaConfig = {
     title: "Невербальное программирование — Управляй эмоциями через тело",

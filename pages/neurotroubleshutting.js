@@ -660,9 +660,8 @@ export default function () {
 
       <Final animation flyletters={false}>
         <h2 className={finalStyles.title} style={{ marginTop: "0" }}>
-          Стоимость при достижении результата
+          Стоимость индивидуальная для каждого случая
         </h2>
-        <div className={finalStyles.price}>125 000 ₽</div>
         <div className={finalStyles.description}>
           Возврат 100% денег при отсутствии эффекта
         </div>

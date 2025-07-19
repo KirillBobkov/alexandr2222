@@ -19,6 +19,7 @@ import secondary_preview_25 from "../images/secondary_preview_25.webp";
 import secondary_preview_26 from "../images/secondary_preview_26.webp";
 import secondary_preview_27 from "../images/secondary_preview_27.webp";
 import secondary_preview_28 from "../images/secondary_preview_28.webp";
+import secondary_preview_30 from "../images/secondary_preview_30.webp";
 import styles from "../styles/blog.module.css";
 import contentStyles from "../styles/contentStyles.module.css";
 import { LineAnimation } from "../components/LineAnimation/LineAnimation";
@@ -26,6 +27,15 @@ import { VisibilityManager } from "../components/shared/VisibilityManager";
 import { useScrollToLocation } from "../hooks/useScrollToLocation";
 
 const articles = [
+  {
+    id: 16,
+    title: "Невербальное программирование: как управлять эмоциями через тело",
+    description:
+      "Долгое время считалось, что эмоции рождаются в мозге, а тело лишь реагирует. Но современные исследования доказывают: связь работает в обе стороны.",
+    date: "19 июля 2025",
+    image: secondary_preview_30,
+    slug: "nonverbal-programming",
+  },
   {
     id: 15,
     title: "Трагедия в Сочи: как ошибка с дозировкой Мухомора стала фатальной",
