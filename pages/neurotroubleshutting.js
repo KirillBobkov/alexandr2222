@@ -79,7 +79,13 @@ export const questionsContent = {
 };
 
 const videos = [
-  // New videos added on March 2024
+  {
+    link: "https://vkvideo.ru/video_ext.php?oid=643721177&id=456239020&hash=6432ae2c703424ae",
+    thumbnailUrl:
+      "https://i.mycdn.me/getVideoPreview?id=8588980652761&idx=4&type=39&tkn=FOeAFn0t4WgZzuJoTeg9xs9_FKM&fn=vid_x",
+    name: "Отзыв Алексея о проработке по избавлению от кандидоза",
+    uploadDate: new Date("July 19, 2025").toISOString(),
+  },
   {
     link: "https://vk.com/video_ext.php?oid=643721177&id=456239018&hash=21090df415acc25b",
     thumbnailUrl:
