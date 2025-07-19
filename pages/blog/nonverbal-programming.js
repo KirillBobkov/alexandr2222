@@ -113,18 +113,22 @@ export default function () {
               Изменение мимики (даже искусственная улыбка) снижает уровень
               стресса.
             </p>
+            <br />
             <p className={contentStyles.textDescription}>
               <span className={contentStyles.textSymbol}>●</span>
               {"  "}
               «Позы силы» (power posing) меняют гормональный баланс, повышая
               уверенность.
             </p>
+            <br />
             <p className={contentStyles.textDescription}>
               <span className={contentStyles.textSymbol}>●</span>
               {"  "}
               Дыхательные паттерны напрямую влияют на тревожность.
             </p>
           </VisibilityManager>
+
+          <div style={{ height: "1px" }} />
 
           <VisibilityManager as="p">
             Но невербальное программирование идёт дальше: это не просто
@@ -176,27 +180,32 @@ export default function () {
               {"  "}
               Мгновенное управление состоянием без многочасовых медитаций.
             </p>
+            <br />
             <p className={contentStyles.textDescription}>
               2.
               {"  "}
               Коррекция подсознательных блоков через телесную память.
             </p>
+            <br />
             <p className={contentStyles.textDescription}>
               3.
               {"  "}
               Прокачка харизмы — ведь 93% коммуникации невербальны.
             </p>
+            <br />
             <p className={contentStyles.textDescription}>
               4.
               {"  "}
               Повышение личной эффективности.
             </p>
+            <br />
             <p className={contentStyles.textDescription}>
               5.
               {"  "}
               Сохранение здоровья нервной системы и организма в целом.
             </p>
           </VisibilityManager>
+          <div style={{ height: "1px" }} />
 
           <VisibilityManager as="p">
             Это не «волшебная таблетка», а инструмент — такой же, как спорт для
@@ -217,11 +226,13 @@ export default function () {
               {"  "}
               14 приёмов для разных эмоциональных состояний.
             </p>
+            <br />
             <p className={contentStyles.textDescription}>
               <span className={contentStyles.textSymbol}>●</span>
               {"  "}
               Общение и обмен опытом с единомышленниками.
             </p>
+            <br />
             <p className={contentStyles.textDescription}>
               <span className={contentStyles.textSymbol}>●</span>
               {"  "}
@@ -230,6 +241,7 @@ export default function () {
             </p>
           </VisibilityManager>
 
+          <div style={{ height: "1px" }} />
           <VisibilityManager as="p">
             Главное преимущество — универсальность. Техники работают одинаково
             хорошо как для борьбы с паническими атаками, так и для подготовки к
@@ -248,9 +260,8 @@ export default function () {
           </VisibilityManager>
 
           <VisibilityManager as="p">
-            Если для вас это актуально, запишитесь на консультацию прямо сейчас
-            и узнайте, как освоить невербальное программирование для управления
-            своими эмоциями.
+            Если для вас это актуально, прямо сейчас переходите по ссылке внизу
+            и выберите подходящий вариант обучения.
           </VisibilityManager>
 
           <LinkButton href={"/nonverbal-programming"}>

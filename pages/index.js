@@ -596,7 +596,6 @@ export default function () {
         <h2 className={finalStyles.title} style={{ color: "#fff" }}>
           Нейротраблшутинг
         </h2>
-        <p className={finalStyles.price}>Индивидуально</p>
         <div className={finalStyles.online}>
           <span className={finalStyles.blink}>●</span>
           <span>Онлайн</span>
