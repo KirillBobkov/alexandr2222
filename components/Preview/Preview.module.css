@@ -50,8 +50,9 @@
 }
 
 .preview__title_empty {
-  color: var(--accent-2);
-  /* color: var(--accent); */
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: var(--accent-2);
 }
 
 /* Responsive styles */

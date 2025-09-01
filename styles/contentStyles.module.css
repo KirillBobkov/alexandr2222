@@ -39,11 +39,12 @@
   margin: 0 auto;
   margin-bottom: 40px;
   color: var(--font-color);
-  /* color: var(--accent-2); */
 }
 
 .title_empty {
-  color:  var(--accent-2);
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: var(--accent-2);
 }
 
 .message {
