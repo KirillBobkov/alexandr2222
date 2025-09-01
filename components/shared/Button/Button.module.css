@@ -58,7 +58,7 @@
   width: 25%;
   position: absolute;
   border-radius: 35px;
-  background-color: #8500bf;
+  background-color: var(--accent-2);
   animation: pulseWidth 1.5s ease-in-out infinite alternate;
 }
 
@@ -71,7 +71,7 @@
   height: 100%;
   position: absolute;
   border-radius: 35px;
-  background-color: #8500bf;
+  background-color: var(--accent-2);
 }
 
 .button:disabled {
@@ -81,7 +81,7 @@
 }
 
 .success {
-  background-color: #8500bf;
+  background-color: var(--accent-2);
   opacity: 0.5!important;
 }
 
