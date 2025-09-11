@@ -1,24 +1,15 @@
 import Layout from "../components/Layout/Layout";
-import { useState } from "react";
-import { useScrollToLocation } from "../hooks/useScrollToLocation";
-import { Warranty } from "../components/Warranty/Warranty";
 import { AnimatedLine } from "../components/AnimatedLine/AnimatedLine";
-import { Suggest } from "../components/Suggests/Suggests";
-import { Helping } from "../components/Helping/Helping";
-import { Products } from "../components/Products/Products";
 import { SecondaryPreview } from "../components/SecondaryPreview/SecondaryPreview";
 import secondary_preview_7 from "../images/secondary_preview_7.webp";
 import { VideoWidget } from "../components/VideoWidget/VideoWidget";
-import { Questions } from "../components/Questions/Questions";
-import { Final } from "../components/Final/Final";
 import { Form } from "../components/Form/Form";
-import { products as neurotroubleshuttingProducts } from "../consts/products";
-import { VisibilityManager } from "../components/shared/VisibilityManager";
-import containerStyles from "../styles/container.module.css";
-import contentStyles from "../styles/contentStyles.module.css";
-import finalStyles from "../styles/finalContent.module.css";
-import LinkButton from "../components/shared/LinkButton/LinkButton";
-import { Button } from "../components/shared/Button/Button";
+import { InnerSatisfaction } from "../components/InnerSatisfaction";
+import { AboutMe } from "../components/AboutMe/AboutMe";
+import { CirclesList } from "../components/CirclesList/CirclesList";
+import { InnerQuestions } from "../components/InnerQuestions";
+import { useState } from "react";
+import { useScrollToLocation } from "../hooks/useScrollToLocation";
 
 export const questionsContent = {
   blocks: [
@@ -171,10 +162,17 @@ const schemaOrg = {
     "@type": "Person",
     name: "Александр Васильев",
     url: "https://alexandrvasilev.ru/#about",
-    description: "Ведущий нейротраблшутер России с 8-летним опытом. Автор революционных методик работы с подсознанием. Более 1000 успешно решенных случаев различной сложности.",
+    description:
+      "Ведущий нейротраблшутер России с 8-летним опытом. Автор революционных методик работы с подсознанием. Более 1000 успешно решенных случаев различной сложности.",
     jobTitle: "Нейротраблшутер, эксперт по работе с подсознанием",
     hasCredential: "8 лет практики, более 1000 успешных случаев",
-    knowsAbout: ["Нейротраблшутинг", "Гипнотерапия", "НЛП", "Работа с подсознанием", "Психосоматика"],
+    knowsAbout: [
+      "Нейротраблшутинг",
+      "Гипнотерапия",
+      "НЛП",
+      "Работа с подсознанием",
+      "Психосоматика",
+    ],
   },
   serviceType: "Нейротраблшутинг",
   offers: [
@@ -195,13 +193,14 @@ const schemaOrg = {
       price: "125000",
       priceCurrency: "RUB",
       availability: "https://schema.org/InStock",
-      description: "Полный курс нейротраблшутинга с гарантией результата или возврат 100% денег",
+      description:
+        "Полный курс нейротраблшутинга с гарантией результата или возврат 100% денег",
       additionalProperty: {
         "@type": "PropertyValue",
         name: "Гарантия",
-        value: "100% возврат денег при отсутствии результата"
-      }
-    }
+        value: "100% возврат денег при отсутствии результата",
+      },
+    },
   ],
   areaServed: {
     "@type": "GeoCircle",
@@ -217,7 +216,8 @@ const schemaOrg = {
   temporalCoverage: "2020/..",
   audience: {
     "@type": "Audience",
-    audienceType: "Люди с психологическими проблемами, депрессией, тревожностью, фобиями"
+    audienceType:
+      "Люди с психологическими проблемами, депрессией, тревожностью, фобиями",
   },
   potentialAction: {
     "@type": "ReserveAction",
@@ -485,18 +485,20 @@ const schemaOrg = {
     {
       "@type": "PropertyValue",
       name: "Успешность",
-      value: "Более 1000 успешно решенных случаев за 8 лет практики"
+      value: "Более 1000 успешно решенных случаев за 8 лет практики",
     },
     {
-      "@type": "PropertyValue", 
+      "@type": "PropertyValue",
       name: "Методы работы",
-      value: "Работа с подсознанием в альфа-ритме, кинезиология, авторские техники"
+      value:
+        "Работа с подсознанием в альфа-ритме, кинезиология, авторские техники",
     },
     {
       "@type": "PropertyValue",
       name: "Специализация",
-      value: "Фобии, депрессия, тревожность, психосоматика, травмы, ограничивающие убеждения"
-    }
+      value:
+        "Фобии, депрессия, тревожность, психосоматика, травмы, ограничивающие убеждения",
+    },
   ],
 };
 
@@ -511,204 +513,127 @@ export default function () {
       "Программа по устранению тревожности, депрессии, фобий, психосоматики и внутренних блоков через работу с подсознанием. Гарантия результата.",
     keywords:
       "нейротраблшутинг, гипнотерапия, гипнотерапевт, НЛП, психосоматика, депрессия, тревожность, проработка страхов, экзорцизм, психология, гипноз, подсознательные блоки",
-    seoContent: "Нейротраблшутинг — инновационная система ликвидации тревожных расстройств, депрессивных состояний, фобических реакций, психосоматических проявлений, панических эпизодов и подсознательных ограничений. Александр Васильев — лидирующий нейротраблшутер России, свыше 1000 результативных кейсов, 8-летний опыт практики. Обеспечиваю гарантию результата или полный возврат инвестиций. Глубинная терапия подсознания, персонализированная методология, стремительный эффект за 4-8 терапевтических встреч. Безоплатная первичная диагностика, консультация, авторские технологии, защищенная трансформация. Ключевые слова: нейротраблшутинг Казань, ликвидация тревожности, депрессивных состояний, фобических реакций, психосоматических расстройств, гипнотерапевтические методы, терапия подсознания, освобождение от страхов, персональные сессии, быстродействующий результат, гарантированный эффект, консультация нейротраблшутера.",
+    seoContent:
+      "Нейротраблшутинг — инновационная система ликвидации тревожных расстройств, депрессивных состояний, фобических реакций, психосоматических проявлений, панических эпизодов и подсознательных ограничений. Александр Васильев — лидирующий нейротраблшутер России, свыше 1000 результативных кейсов, 8-летний опыт практики. Обеспечиваю гарантию результата или полный возврат инвестиций. Глубинная терапия подсознания, персонализированная методология, стремительный эффект за 4-8 терапевтических встреч. Безоплатная первичная диагностика, консультация, авторские технологии, защищенная трансформация. Ключевые слова: нейротраблшутинг Казань, ликвидация тревожности, депрессивных состояний, фобических реакций, психосоматических расстройств, гипнотерапевтические методы, терапия подсознания, освобождение от страхов, персональные сессии, быстродействующий результат, гарантированный эффект, консультация нейротраблшутера.",
   };
 
   return (
     <Layout metaConfig={metaConfig} schemaOrg={schemaOrg}>
       <SecondaryPreview
         text={"Нейротраблшутинг"}
-        subtext={
-          "Ваш ключ к жизни без страхов, ограничений и внутренних конфликтов"
-        }
+        subtext={"ЧТОБЫ ПОМЕНЯТЬ РЕАЛЬНОСТЬ — НУЖНО ИЗМЕНИТЬ МЫШЛЕНИЕ "}
         image={secondary_preview_7}
       />
-      <div style={{ background: "var(--card-color)" }}>
-        <div className={containerStyles.container}>
-          <VisibilityManager as="p">
-            Устали годами бороться с проблемами, которые возвращаются снова и
-            снова?
-          </VisibilityManager>
-
-          <VisibilityManager as="p">
-            Психологи, медитации, врачи — вы уже пробовали всё. Но что, если
-            решение кроется не в разговорах или таблетках, а в глубинах вашего
-            подсознания?
-          </VisibilityManager>
-
-          <VisibilityManager as="div" className={contentStyles.textBlock}>
-            <h3 className={contentStyles.title_middle}>
-              НЕЙРОТРАБЛШУТИНГ — ЭТО МЕТОД, КОТОРЫЙ:
-            </h3>
-            <p className={contentStyles.textDescription}>
-              <span className={contentStyles.textSymbol}>●</span>
-              {"  "}
-              Помогает найти и устранить корень проблем — от фобий до аллергии,
-              от ночных кошмаров до хронической усталости.
-            </p>
-            <p className={contentStyles.textDescription}>
-              <span className={contentStyles.textSymbol}>●</span>
-              {"  "}
-              Работает быстро: результат за 4-8 сессий. Не годы терапии, а фокус
-              на решении.
-            </p>
-            <p className={contentStyles.textDescription}>
-              <span className={contentStyles.textSymbol}>●</span>
-              {"  "}
-              Позволяет сохранить приватность: мы не разбираем ваше прошлое — мы
-              меняем его влияние на вас здесь и сейчас.
-            </p>
-          </VisibilityManager>
-
-          <VisibilityManager as="div" className={contentStyles.textBlock}>
-            <h3 className={contentStyles.title_middle}>КАК ЭТО РАБОТАЕТ</h3>
-            <p className={contentStyles.textDescription}>
-              Сначала проводим бесплатную диагностику, на которой выявляем, где
-              именно в подсознании прячется решение вашей задачи, а вы сами
-              принимаете решение, идти дальше или нет.
-            </p>
-            <p className={contentStyles.textDescription}>
-              Работа идёт в состоянии, когда сознание остаётся
-              активным, но доступ к подсознанию открыт. Это полностью осознанный
-              и безопасный процесс, в котором вы сами видите скрытые
-              причинно-следственные связи.
-            </p>
-            <hr />
-            <hr />
-            <p className={contentStyles.textDescription}>
-              В ходе дальнейшей работы, мы вместе:
-            </p>
-            <p className={contentStyles.textDescription}>
-              <span className={contentStyles.textSymbol}>●</span>
-              {"  "}
-              выходим к корневому эпизоду (чаще всего детскому или
-              вытесненному);
-            </p>
-            <p className={contentStyles.textDescription}>
-              <span className={contentStyles.textSymbol}>●</span>
-              {"  "}
-              «размораживаем» застрявшие эмоции и блоки;
-            </p>
-            <p className={contentStyles.textDescription}>
-              <span className={contentStyles.textSymbol}>●</span>
-              {"  "}
-              переписываем внутреннюю структуру восприятия;
-            </p>
-            <p className={contentStyles.textDescription}>
-              <span className={contentStyles.textSymbol}>●</span>
-              {"  "}
-              закрепляем результат на уровне ощущений, решений и действий.
-            </p>
-            <hr />
-            <hr />
-            <p className={contentStyles.textDescription}>
-              Эффект вы чувствуете сразу. Меняется состояние, уходят внутренние
-              зажимы, возвращается ясность, вы получаете желаемый результат
-              быстро и комфортно, максимум за 9 сессий.
-            </p>
-          </VisibilityManager>
-          <VisibilityManager as="div" className={contentStyles.textBlock}>
-            <h3 className={contentStyles.title_middle}>Ваш результат</h3>
-
-            <p className={contentStyles.textDescription}>
-              <span className={contentStyles.textSymbol}>●</span>
-              {"  "}
-              Свобода от того, что годами держало вас в клетке.
-            </p>
-            <p className={contentStyles.textDescription}>
-              <span className={contentStyles.textSymbol}>●</span>
-              {"  "}
-              Гармония с собой и миром.
-            </p>
-            <p className={contentStyles.textDescription}>
-              <span className={contentStyles.textSymbol}>●</span>
-              {"  "}
-              Энергия двигаться к целям без страха и сомнений.
-            </p>
-          </VisibilityManager>
-        </div>
-      </div>
-      <Suggest />
-      <Helping 
-        title="Я помогу"
-        titleEmpty=", если вы"
-        blocks={[
-          {
-            id: 1,
-            className: "item2",
-            title: "Мечтаете о большем",
-            desc: "Я могу помочь вам легко преодолеть внутренние барьеры и быстрее добиться желанных результатов.",
-          },
-          {
-            id: 2,
-            className: "item5",
-            title: "Желаете наслаждаться отношениями",
-            desc: "Хотите создать гармоничные и глубокие связи? Я решаю такие задачи, с доведением до результата.",
-          },
-          {
-            id: 3,
-            className: "item4",
-            title: "Хотели бы позаботиться о своём здоровье",
-            desc: "Известно, что большинство проблем со здоровьем «идут от головы», нейротраблшутинг даёт возможность устранять причины таких проблем.",
-          },
-          {
-            id: 4,
-            className: "item3",
-            title: "Цените своё время",
-            desc: "Вам нужен результат сейчас. Безопасно и эффективно, а главное - сразу. Я предлагаю вам практический мгновенный результат.",
-          },
-        ]}
+      <InnerSatisfaction
+        animation={true}
+        titleSuffix="Как?"
+        order={2}
+        description={
+          <>
+            Сначала проводим бесплатную диагностику, на которой выявляем, где
+            именно в подсознании прячется решение вашей задачи, а вы сами
+            принимаете решение, идти дальше или нет.
+            <br />
+            <br />
+            Работа идёт в состоянии, когда сознание остаётся активным, но доступ
+            к подсознанию открыт. Это полностью осознанный и безопасный процесс,
+            в котором вы сами видите скрытые причинно-следственные связи.
+          </>
+        }
       />
-      <Warranty
-        title="Я уверен "
-        titleEmpty="в своей методике на 100%"
-        description="Если после работы со мной, вы не почувствуете улучшения, я верну вам все деньги. Моя цель – сделать так, чтобы вы были довольны и рекомендовали меня своим близким."
+      <CirclesList
+        {...{
+          animation: false,
+          title: "В ходе дальнейшей работы, ",
+          titleEmpty: "мы вместе",
+          items: [
+            { title: "выходим к корневому эпизоду" },
+            { title: "«размораживаем» застрявшие эмоции" },
+            { title: "переписываем внутреннюю структуру" },
+            { title: "закрепляем результат на уровне ощущений" },
+          ],
+          descriptions: [
+            "Эффект вы чувствуете сразу. Меняется состояние, уходят внутренние зажимы, возвращается ясность, налаживается ваш контакт с самим собой.",
+          ],
+        }}
       />
-
-      <Final animation flyletters={false}>
-        <h2 className={finalStyles.title} style={{ marginTop: "0" }}>
-          Стоимость индивидуальная для каждого случая
-        </h2>
-        <div className={finalStyles.description}>
-          Возврат 100% денег при отсутствии эффекта
-        </div>
-        <Button
-          className={contentStyles.message}
-          href={{ pathname: "/neurotroubleshutting", hash: "#message" }}
-          status="Записаться"
-        />
-      </Final>
-
-      <AnimatedLine />
+      <AboutMe
+        {...{
+          title: "В ЧЁМ ",
+          titleEmpty: "Я МОГУ ВАМ ПОМОЧЬ?",
+          order: 2,
+          items: [
+            { title: "Физические недуги" },
+            { title: "Эмоциональное выгорание" },
+            { title: "Поиск жизненного предназначения" },
+            { title: "Комплексы и страхи" },
+            { title: "Зависимости" },
+            { title: "Заниженная самооценка" },
+            { title: "Раздражительность" },
+            { title: "Психические травмы" },
+            { title: "Ночные кошмары" },
+            { title: "Взаимодействие с людьми" },
+            { title: "Суицидальные мысли" },
+          ],
+          bottomText:
+            "Возможно, ваша проблема не вошла в этот список, поэтому, напишите свой запрос, и я подумаю, смогу ли вам помочь.",
+          href: { pathname: "/", hash: "#message" },
+          buttonStatus: "Записаться",
+        }}
+      />
       <VideoWidget videos={videos} />
-      <Final animation flyletters={false}>
-        <h2 className={finalStyles.title} style={{ marginTop: "0" }}>
-          Запишитесь на бесплатную консультацию
-        </h2>
-        <p className={finalStyles.description}>
-          Узнайте причины своих проблем, способы их решения и возможные преграды
-          на вашем пути к успеху!
-        </p>
-        <LinkButton href="/neurotroubleshutting#message">
-          <span>Записаться</span>
-        </LinkButton>
-      </Final>
-      <Products products={neurotroubleshuttingProducts} />
-      <Questions questionsContent={questionsContent} />
+      <InnerQuestions
+        title="ЕСЛИ ВАШ"
+        subtitle="ВНУТРЕННИЙ ГОЛОС ВСЁ ЧАЩЕ ЗАДАЁТ ВОПРОСЫ"
+        questions={[
+          "Почему у других получается, а у меня нет?",
+          "Тем ли делом я занимаюсь?",
+          "Почему я постоянно разочаровываюсь в людях?",
+          "Сколько будут длиться эти страдания?",
+          "Из-за чего то, что должно вызывать радость в жизни, становится обузой?",
+          "Неужели жизнь действительно не имеет смысла?",
+          "Отчего я постоянно хочу уйти из жизни?",
+        ]}
+        description={
+          <>
+            Это говорит о том, что пришло время основательно разобраться в самом
+            себе. Не в образе себя, не в роли, а именно в подлинной сути.
+            <br />
+            <br />
+            Спокойно, без суеты, устранить психотравмы, которые тяжёлым грузом
+            тянут вас вниз, и, в первую очередь, наладить контакт с самим собой,
+            а потом уже со всеми окружающими.
+          </>
+        }
+      />
+      <CirclesList
+        {...{
+          animation: false,
+          title: "Почему жизнь начинает ",
+          titleEmpty: "трещать по швам?",
+          underTitle:
+            "В первую очередь потому, что вы не умеете прислушиваться к своим ощущениям. Зачастую идёте против самих себя и удивляетесь, почему получаете не тот результат, который ожидаете.",
+          items: [
+            { title: "отсутствие энергии" },
+            { title: "потеря радости в жизни" },
+            { title: "ощущение нереализованности" },
+            { title: "желание уйти от реальности" },
+            { title: "ощущение, что жизнь ускользает" },
+            { title: "зависть" },
+            { title: "опустошение" },
+            { title: "презрение к самому себе" },
+          ],
+          descriptions: [
+            "Самый лучший ваш друг — это вы сам, и только тогда, когда вы сможете сосуществовать с самим собой в гармонии, вас ничто не сможет свернуть с истинного пути.",
+          ],
+        }}
+      />
+      <AnimatedLine />
       <div id="message" />
       <Form
         setIsSubmitted={setIsSubmitted}
         isSubmitted={isSubmitted}
-        // title={"ГОТОВЫ ОТКРЫТЬ ДЛЯ СЕБЯ НОВЫЕ ГОРИЗОНТЫ?"}
         type="Первая консультация (Страница: Нейротраблшутинг)"
-        // description={`Запишитесь на бесплатную консультацию, и я свяжусь с вами в ближайшее время.
-
-        //   Первая консультация — бесплатно. 
-          
-        //   Подготовьте вопрос, который вас действительно беспокоит, и я помогу вам разобраться, раскрыть возможные причины и предложу решение. 
-          
-        //   На основе этого вы сможете понять, стоит ли продолжить работу со мной для достижения значимых изменений в вашей жизни.
-        // `}
       />
     </Layout>
   );

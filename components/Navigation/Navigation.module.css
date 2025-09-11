@@ -312,14 +312,29 @@
     }
     
     .burger__line {
-        width: 25px;
         height: 2px;
-        margin: 4px 0;
         background-color: var(--accent);
         transition: all 0.3s ease;
+        border-radius: 1px;
+    }
+    
+    .burger__line:nth-child(1) {
+        width: 6px;
+        margin: 4px auto;
+    }
+    
+    .burger__line:nth-child(2) {
+        width: 15px;
+        margin: 4px auto;
+    }
+    
+    .burger__line:nth-child(3) {
+        width: 25px;
+        margin: 4px auto;
     }
     
     .burger_opened .burger__line:nth-child(1) {
+        width: 25px;
         transform: translateY(6px) rotate(45deg);
         background-color: var(--accent-2);
     }
@@ -329,6 +344,7 @@
     }
     
     .burger_opened .burger__line:nth-child(3) {
+        width: 25px;
         transform: translateY(-6px) rotate(-45deg);
         background-color: var(--accent-2);
     }

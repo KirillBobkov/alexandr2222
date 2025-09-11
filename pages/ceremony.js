@@ -1090,7 +1090,7 @@ export default function () {
 
           <div style={{ height: "1px" }} />
 
-          <Final animation flyletters={false} customStyles={{ padding: "0" }}>
+          {/* <Final animation flyletters={false} customStyles={{ padding: "0" }}>
             <h2 className={finalStyles.title} style={{ marginTop: "0" }}>
               Стоимость церемонии
             </h2>
@@ -1100,7 +1100,7 @@ export default function () {
               href={{ hash: "#message" }}
               status="Записаться"
             />
-          </Final>
+          </Final> */}
         </div>
       </LineAnimation>
 

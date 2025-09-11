@@ -510,7 +510,7 @@ export default function () {
           </>
         }
       />
-      <InnerQuestions
+      {/* <InnerQuestions
         title="Внутренний голос"
         subtitle="всё чаще задаёт вопросы"
         questions={[
@@ -591,7 +591,7 @@ export default function () {
             { title: "Авторские методики" },
           ],
         }}
-      />
+      /> */}
       <Final image={enter_hole_2} animation>
         <h2 className={finalStyles.title} style={{ color: "#fff" }}>
           Нейротраблшутинг
@@ -613,7 +613,6 @@ export default function () {
         <h2 className={finalStyles.title} style={{ color: "#fff" }}>
           Мухоморный ретрит в Казани
         </h2>
-        <p className={finalStyles.price}>300 000 ₽</p>
         <p className={finalStyles.description} style={{ color: "#fff" }}>
           Путь исцеления и самопознания, открывающий доступ к встрече с Высшими
           Силами, позволяет наладить связь с Творцом и раскрыть своё
@@ -627,9 +626,9 @@ export default function () {
       <Form
         setIsSubmitted={setIsSubmitted}
         isSubmitted={isSubmitted}
-        title={"Запишитесь на бесплатную консультацию"}
+        title={"БЕСПЛАТНАЯ КОНСУЛЬТАЦИЯ"}
         type="Первая консультация (Страница: Главная)"
-        description={`Узнайте причины своих проблем, способы их решения и возможные преграды на вашем пути к успеху!`}
+        // description={`Узнайте причины своих проблем, способы их решения и возможные преграды на вашем пути к успеху!`}
       />
     </Layout>
   );
