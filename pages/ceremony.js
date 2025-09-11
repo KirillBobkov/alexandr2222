@@ -1087,35 +1087,14 @@ export default function () {
             Если вы чувствуете, что пришло время изменений, и готовы довериться
             процессу, я проведу вас через этот опыт.
           </VisibilityManager>
-
-          <div style={{ height: "1px" }} />
-
-          {/* <Final animation flyletters={false} customStyles={{ padding: "0" }}>
-            <h2 className={finalStyles.title} style={{ marginTop: "0" }}>
-              Стоимость церемонии
-            </h2>
-            <div className={finalStyles.price}>300 000 ₽</div>
-            <Button
-              className={contentStyles.message}
-              href={{ hash: "#message" }}
-              status="Записаться"
-            />
-          </Final> */}
         </div>
       </LineAnimation>
-
-      <Questions questionsContent={questionsContent} />
       <div id="message" />
       <Form
         setIsSubmitted={setIsSubmitted}
         isSubmitted={isSubmitted}
         type="Мухоморный ретрит в Казани (Страница: Церемония)"
-        title={"Приглашаю вас на мухоморный ретрит в Казани"}
-        description={`
-          Если вы чувствуете готовность к глубокой трансформации, я помогу вам безопасно пройти этот путь.
-
-          Свяжитесь со мной, чтобы узнать больше или записаться на консультацию. Ваше путешествие начинается здесь.
-        `}
+        title={"Бесплатная консультация"}
       />
     </Layout>
   );
