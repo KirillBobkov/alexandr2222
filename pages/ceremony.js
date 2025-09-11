@@ -10,7 +10,6 @@ import contentStyles from "../styles/contentStyles.module.css";
 import secondary_preview_10 from "../images/secondary_preview_10.webp";
 import { Final } from "../components/Final/Final";
 import { VideoWidget } from "../components/VideoWidget/VideoWidget";
-import { Questions } from "../components/Questions/Questions";
 import { Button } from "../components/shared/Button/Button";
 import { PhotoGrid } from "../components/PhotoGrid/PhotoGrid";
 import ceremony_image_1 from "../images/ceremony_image_1.webp";

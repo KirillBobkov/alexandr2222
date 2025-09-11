@@ -137,10 +137,10 @@ export const getNavigationTree = (pathname) => [
         path: "/ceremony#reviews",
         value: "Отзывы",
       },
-      {
-        path: "/ceremony#faq",
-        value: "Вопросы и ответы",
-      },
+      // {
+      //   path: "/ceremony#faq",
+      //   value: "Вопросы и ответы",
+      // },
     ],
   },
   {
@@ -149,18 +149,18 @@ export const getNavigationTree = (pathname) => [
       value: "Нейротраблшутинг",
     },
     childs: [
-      {
-        path: "/neurotroubleshutting#programs",
-        value: "Программы",
-      },
+      // {
+      //   path: "/neurotroubleshutting#programs",
+      //   value: "Программы",
+      // },
       {
         path: "/neurotroubleshutting#reviews",
         value: "Отзывы",
       },
-      {
-        path: "/neurotroubleshutting#faq",
-        value: "Вопросы и ответы",
-      },
+      // {
+      //   path: "/neurotroubleshutting#faq",
+      //   value: "Вопросы и ответы",
+      // },
     ],
   },
   { 
