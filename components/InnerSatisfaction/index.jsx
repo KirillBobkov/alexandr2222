@@ -10,6 +10,8 @@ export const InnerSatisfaction = ({
   description,
   order = 1,
   animation = false,
+  titleStyles = {},
+  emptyTitle = true,
 }) => {
   const content = (
     <div className={styles.block}>
@@ -17,15 +19,15 @@ export const InnerSatisfaction = ({
         as="h2"
         side="left"
         className={contentStyles.title}
-        style={{ marginLeft: 0, marginRight: 0, marginBottom: 0 }}
+        style={{ marginLeft: 0, marginRight: 0, marginBottom: 0, ...titleStyles }}
       >
         <span>
           {order === 1 ? (
-            <span className={contentStyles.title_empty}>{titlePrefix} </span>
+            <span className={emptyTitle ?  contentStyles.title_empty : ''}>{titlePrefix} </span>
           ) : null}
           {titleSuffix}{" "}
           {order === 2 ? (
-            <span className={contentStyles.title_empty}>{titlePrefix} </span>
+            <span className={emptyTitle ? contentStyles.title_empty : ''}>{titlePrefix} </span>
           ) : null}
         </span>
       </VisibilityManager>

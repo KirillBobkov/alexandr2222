@@ -18,8 +18,8 @@ export const Suggest = () => {
           className={contentStyles.title}
           style={{ marginLeft: "0", marginRight: "0" }}
         >
-          <span className={contentStyles.title_empty}>Что я </span>
-          предлагаю вам?
+          <span className={contentStyles.title_empty}>Что </span>
+          здесь?
         </VisibilityManager>
 
         <div className={styles["grid-container"]}>

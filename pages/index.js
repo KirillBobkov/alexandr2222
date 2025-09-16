@@ -483,9 +483,11 @@ export default function () {
     <Layout metaConfig={metaConfig} schemaOrg={schemaOrg}>
       <Preview />
       <InnerSatisfaction
-        titlePrefix="Я ПРЕДЛАГАЮ?"
+        titlePrefix="здесь?"
         titleSuffix="ЧТО"
+        titleStyles={{ color: '#EDB834' }}
         order={2}
+        emptyTitle={false}
         description={
           <>
             Если вы чего-то достигли, но потеряли смысл жизни, разочаровались в
