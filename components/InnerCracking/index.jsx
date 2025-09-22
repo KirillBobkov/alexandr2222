@@ -24,10 +24,7 @@ export const InnerCracking = () => {
             className={contentStyles.title}
             style={{marginLeft: 0, marginRight: 0}}
           >
-            <span>Почему жизнь начинает </span>
-            <span className={contentStyles.title_empty}>
-              трещать по швам?
-            </span>
+            Почему жизнь начинает трещать по швам?
           </VisibilityManager>
 
           <VisibilityManager>

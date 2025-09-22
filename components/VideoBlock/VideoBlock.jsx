@@ -109,8 +109,7 @@ export const VideoBlock = ({
             style={{ marginLeft: "0px", marginBottom: "0px" }}
             className={contentStyles.title}
           >
-            {title}
-            <span className={contentStyles.title_empty}>{titleEmpty}</span>
+            {title}{titleEmpty}
           </VisibilityManager>
 
           <div className={styles.videoContainer}>

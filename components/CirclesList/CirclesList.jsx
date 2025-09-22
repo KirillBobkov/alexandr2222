@@ -21,10 +21,7 @@ export const CirclesList = ({
           className={contentStyles.title}
           style={{ marginLeft: 0, marginRight: 0, marginBottom: 0 }}
         >
-          {title}
-          {titleEmpty && (
-            <span className={contentStyles.title_empty}>{titleEmpty}</span>
-          )}
+          {title}{titleEmpty}
         </VisibilityManager>
       )}
 

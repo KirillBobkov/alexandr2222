@@ -19,8 +19,7 @@ export const InnerQuestions = ({
             className={contentStyles.title}
             style={{ marginLeft: 0, marginRight: 0, marginBottom: 0 }}
           >
-            <span>{title} </span>
-            <span className={contentStyles.title_empty}>{subtitle}</span>
+            {title} {subtitle}
           </VisibilityManager>
 
           <VisibilityManager as="ul" className={styles.gridContainer}>

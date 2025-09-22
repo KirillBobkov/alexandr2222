@@ -22,11 +22,7 @@ export const Bio = () => {
         <div className={styles.textContainer}>
           <div className={styles.textWrapper}>
             <VisibilityManager as="h3" className={contentStyles.title_middle}>
-              Моя история:
-              <span className={contentStyles.title_empty}>
-                {" "}
-                от личных испытаний к истинному призванию
-              </span>
+              Моя история: от личных испытаний к истинному призванию
             </VisibilityManager>
 
             <VisibilityManager delay={0.5} className={styles.description}>

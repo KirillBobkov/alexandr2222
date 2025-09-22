@@ -485,7 +485,6 @@ export default function () {
       <InnerSatisfaction
         titlePrefix="здесь?"
         titleSuffix="ЧТО"
-        titleStyles={{ color: '#EDB834' }}
         order={2}
         emptyTitle={false}
         description={

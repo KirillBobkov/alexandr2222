@@ -20,8 +20,7 @@ export const Helping = ({
           style={{ marginLeft: "0px", marginBottom: "0px" }}
           className={contentStyles.title}
         >
-          {title}
-          <span className={contentStyles.title_empty}>{titleEmpty}</span>
+          {title}{titleEmpty}
         </VisibilityManager>
         <div className={styles["grid-container"]}>
           {blocks.map((block) => (

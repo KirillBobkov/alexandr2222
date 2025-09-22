@@ -49,12 +49,6 @@
   text-transform: uppercase;
 }
 
-.preview__title_empty {
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: var(--accent-2);
-}
-
 /* Responsive styles */
 @media (max-width: 768px) {
   .preview {

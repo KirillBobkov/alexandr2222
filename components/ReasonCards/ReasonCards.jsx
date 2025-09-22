@@ -24,10 +24,7 @@ export const ReasonCards = ({
             className={contentStyles.title}
             style={{ marginLeft: 0, marginRight: 0, marginBottom: 0 }}
           >
-            <span>
-              <span className={contentStyles.title_empty}>{titleEmpty}</span>
-              <span className={contentStyles.title_accent}> {title}</span>
-            </span>
+            {titleEmpty} {title}
           </VisibilityManager>
           
           <VisibilityManager className={styles.cardsGrid}>

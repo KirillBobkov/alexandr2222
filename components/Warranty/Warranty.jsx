@@ -10,11 +10,7 @@ export const Warranty = ({ title, titleEmpty, description }) => {
     <LineAnimation>
       <div className={styles.block}>
         <VisibilityManager as="h2" side="left" className={contentStyles.title} style={{ marginLeft: 0,marginBottom: 0 }}>
-          {title}
-          <span className={contentStyles.title_empty}>
-            {titleEmpty}
-          </span>
- 
+          {title}{titleEmpty}
         </VisibilityManager>
         <VisibilityManager delay={0.5} className={styles.description}>
           <p>

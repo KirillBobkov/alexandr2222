@@ -24,9 +24,7 @@ export const AboutMe = ({
             style={{ marginLeft: 0, marginRight: 0, marginBottom: 0 }}
           >
             {order === 2 ? title : null}
-            {titleEmpty && (
-              <span className={contentStyles.title_empty}>{titleEmpty}</span>
-            )}
+            {titleEmpty}
             {order === 1 ? title : null}
           </VisibilityManager>
         )}

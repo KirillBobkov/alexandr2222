@@ -5,8 +5,8 @@ import { VisibilityManager } from "../shared/VisibilityManager";
 import { LineAnimation } from "../LineAnimation/LineAnimation";
 
 export const InnerSatisfaction = ({
-  titlePrefix,
-  titleSuffix,
+  titlePrefix = '',
+  titleSuffix = '',
   description,
   order = 1,
   animation = false,
@@ -21,15 +21,9 @@ export const InnerSatisfaction = ({
         className={contentStyles.title}
         style={{ marginLeft: 0, marginRight: 0, marginBottom: 0, ...titleStyles }}
       >
-        <span>
-          {order === 1 ? (
-            <span className={emptyTitle ?  contentStyles.title_empty : ''}>{titlePrefix} </span>
-          ) : null}
-          {titleSuffix}{" "}
-          {order === 2 ? (
-            <span className={emptyTitle ? contentStyles.title_empty : ''}>{titlePrefix} </span>
-          ) : null}
-        </span>
+        {order === 1 ? `${titlePrefix} ` : null}
+        {titleSuffix}
+        {order === 2 ? ` ${titlePrefix}` : null}
       </VisibilityManager>
 
       <VisibilityManager>

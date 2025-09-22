@@ -26,7 +26,7 @@ export const Preview = () => {
           <h1 className={styles.preview__title}>
             Благословенный{" "}
             <br/>
-            <span className={styles.preview__title_empty}>портал мечты</span>
+            портал мечты
           </h1>
           <div className={styles.telegram_container}>
             <a

@@ -28,16 +28,13 @@ export const CourseContent = () => {
 
     <section className={styles.container}>
       <div className={styles.content}>
-      <VisibilityManager
+        <VisibilityManager
           as="h2"
           side="left"
           className={contentStyles.title}
           style={{ marginLeft: 0, marginRight: 0, marginBottom: 0 }}
         >
-          <span>
-            <span className={contentStyles.title_empty}>Программа</span>
-            <span className={contentStyles.title_accent}> курса</span>
-          </span>
+          Программа курса
         </VisibilityManager>
         
         <VisibilityManager className={styles.listContainer}>

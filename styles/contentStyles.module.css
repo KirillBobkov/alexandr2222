@@ -38,13 +38,7 @@
   max-width: 1185px;
   margin: 0 auto;
   margin-bottom: 40px;
-  color: var(--font-color);
-}
-
-.title_empty {
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: var(--accent-2);
+  color: #556B30;
 }
 
 .message {
