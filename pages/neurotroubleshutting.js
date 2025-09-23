@@ -526,7 +526,7 @@ export default function () {
       />
       <InnerSatisfaction
         animation={false}
-        titleSuffix="Как?"
+        titleSuffix="Методика"
         order={2}
         description={
           <>
