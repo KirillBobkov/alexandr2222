@@ -38,7 +38,8 @@
   max-width: 1185px;
   margin: 0 auto;
   margin-bottom: 40px;
-  color: #556B30;
+
+  color: var(--font-color);
 }
 
 .message {

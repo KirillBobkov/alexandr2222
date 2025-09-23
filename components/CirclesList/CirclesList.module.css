@@ -1,6 +1,11 @@
 .container {
     background-color: var(--card-color);
 }
+
+.container .title {
+    color: #556B30;
+}
+
 .block {
     max-width: 1285px;
     margin: 0 auto;
@@ -124,12 +129,6 @@
         flex-basis: 100%;
     }
 
-    .title {
-        font-size: 40px;
-        line-height: 50px;
-        flex-basis: 100%;
-        margin-bottom: 0;
-    }
 
     .textTitle {
         font-size: 14px;

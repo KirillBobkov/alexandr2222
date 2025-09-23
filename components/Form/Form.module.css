@@ -17,6 +17,11 @@
   justify-content: space-between;
 }
 
+.form_title {
+  color: #556B30;
+}
+
+
 .form__item {
   flex: 0 1 35%;
   display: flex;
@@ -120,7 +125,6 @@
 }
 
 .textTitle {
-  color: var(--font-color);
     font-size: 40px;
     font-weight: 700;
     padding-bottom: 30px;

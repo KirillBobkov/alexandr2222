@@ -18,7 +18,7 @@ export const InnerSatisfaction = ({
       <VisibilityManager
         as="h2"
         side="left"
-        className={contentStyles.title}
+        className={contentStyles.title + " " + styles.title}
         style={{ marginLeft: 0, marginRight: 0, marginBottom: 0, ...titleStyles }}
       >
         {order === 1 ? `${titlePrefix} ` : null}

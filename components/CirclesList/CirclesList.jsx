@@ -18,7 +18,7 @@ export const CirclesList = ({
         <VisibilityManager
           as="h2"
           side="left"
-          className={contentStyles.title}
+          className={contentStyles.title + " " + styles.title}
           style={{ marginLeft: 0, marginRight: 0, marginBottom: 0 }}
         >
           {title}{titleEmpty}

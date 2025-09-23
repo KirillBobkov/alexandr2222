@@ -17,22 +17,14 @@
     gap: 60px;
 }
 
-.title {
-    font-size: 48px;
-    font-weight: 700;
-    color: #ffffff;
-    margin-bottom: 60px;
-    text-align: left;
-    line-height: 1.2;
-}
-
-.titlePrefix {
-    color: #ffffff;
-}
-
 .titleAccent {
     color: var(--accent);
 }
+
+.title {
+    color: #556B30;
+}
+
 
 .listContainer {
     display: grid;

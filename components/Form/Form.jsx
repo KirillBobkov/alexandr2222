@@ -79,7 +79,7 @@ export function Form({
     <div className={styles.form + ((title || description) ? " " + styles['form--two-items'] : "")}>
       {(title || description) ? (
         <VisibilityManager side="left" className={styles.form_content}>
-          {title ? <h3 className={contentStyles.title_middle}>{title}</h3> : null}  
+          {title ? <h3 className={contentStyles.title_middle + " " + styles.form_title}>{title}</h3> : null}  
           {description ?  <p className={styles.textDescription}>{description}</p> : null}
         </VisibilityManager>
       ) : null}

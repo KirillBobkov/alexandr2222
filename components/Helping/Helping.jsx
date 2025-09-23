@@ -18,7 +18,7 @@ export const Helping = ({
           as="h2"
           side="left"
           style={{ marginLeft: "0px", marginBottom: "0px" }}
-          className={contentStyles.title}
+          className={contentStyles.title + " " + styles.title}
         >
           {title}{titleEmpty}
         </VisibilityManager>
