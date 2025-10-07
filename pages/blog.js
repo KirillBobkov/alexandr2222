@@ -21,6 +21,7 @@ import secondary_preview_27 from "../images/secondary_preview_27.webp";
 import secondary_preview_28 from "../images/secondary_preview_28.webp";
 import secondary_preview_30 from "../images/secondary_preview_30.webp";
 import secondary_preview_31 from "../images/secondary_preview_31.webp";
+import secondary_preview_32 from "../images/secondary_preview_32.webp";
 import styles from "../styles/blog.module.css";
 import contentStyles from "../styles/contentStyles.module.css";
 import { LineAnimation } from "../components/LineAnimation/LineAnimation";
@@ -28,6 +29,15 @@ import { VisibilityManager } from "../components/shared/VisibilityManager";
 import { useScrollToLocation } from "../hooks/useScrollToLocation";
 
 const articles = [
+  {
+    id: 18,
+    title: "Фуфломицелий: почему мицелий Ежовика бесполезен и что действительно работает",
+    description:
+      "Ежовик Гребенчатый улучшает память и ясность ума, но работает только в форме плодовых тел. Почему мицелий — это пустая трата денег, и как правильно принимать гриб, чтобы получить эффект.",
+    date: "07 октября 2025",
+    image: secondary_preview_32,
+    slug: "fuflomiceliy",
+  },
   {
     id: 17,
     title: "179 встреч с Пантерным Мухомором: опыт и наблюдения из церемоний",
