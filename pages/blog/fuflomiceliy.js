@@ -93,8 +93,7 @@ export default function () {
       <LineAnimation>
         <div className={containerStyles.container}>
           <VisibilityManager as="h1" className={contentStyles.title_middle}>
-            ФУФЛОМИЦЕЛИЙ: ПОЧЕМУ МИЦЕЛИЙ ЕЖОВИКА БЕСПОЛЕЗЕН И ЧТО РЕАЛЬНО
-            РАБОТАЕТ
+            ФУФЛОМИЦЕЛИЙ
           </VisibilityManager>
 
           <VisibilityManager as="p">
