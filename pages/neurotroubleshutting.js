@@ -112,13 +112,13 @@ const videos = [
     name: 'Отзыв Александра Дворянинова о работе с Александром "Интегралом" Васильевым',
     uploadDate: new Date("November 30, 2024").toISOString(),
   },
-  {
-    link: "https://vkvideo.ru/video_ext.php?oid=290538287&id=456239186&hash=04dd114246320d37",
-    thumbnailUrl:
-      "https://i.mycdn.me/getVideoPreview?id=7673155488303&idx=8&type=39&tkn=o9JorSfWjRpqk_VYHE3jw9nU0_I&fn=vid_x",
-    name: 'Отзыв Дмитрия Афанасьева о работе с Александром "Интегралом" Васильевым',
-    uploadDate: new Date("November 30, 2024").toISOString(),
-  },
+  // {
+  //   link: "https://vkvideo.ru/video_ext.php?oid=290538287&id=456239186&hash=04dd114246320d37",
+  //   thumbnailUrl:
+  //     "https://i.mycdn.me/getVideoPreview?id=7673155488303&idx=8&type=39&tkn=o9JorSfWjRpqk_VYHE3jw9nU0_I&fn=vid_x",
+  //   name: 'Отзыв Дмитрия Афанасьева о работе с Александром "Интегралом" Васильевым',
+  //   uploadDate: new Date("November 30, 2024").toISOString(),
+  // },
   {
     link: "https://vkvideo.ru/video_ext.php?oid=290538287&id=456239203&hash=715fb2a11dbae2a6",
     thumbnailUrl:

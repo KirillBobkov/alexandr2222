@@ -35,13 +35,13 @@ const videos = [
     name: "Отзыв Романа о мухоморном ретрите",
     uploadDate: new Date("April 09, 2025").toISOString(),
   },
-  {
-    link: "https://vkvideo.ru/video_ext.php?oid=-230061059&id=456239035&hash=41d73acd4693cddf",
-    thumbnailUrl:
-      "https://i.mycdn.me/getVideoPreview?id=8024136747545&idx=1&type=39&tkn=wR32eObJAgzIULrQyKVDYp52URM&fn=vid_u",
-    name: "Отзыв Дмитрия о мухоморном ретрите",
-    uploadDate: new Date("April 09, 2025").toISOString(),
-  },
+  // {
+  //   link: "https://vkvideo.ru/video_ext.php?oid=-230061059&id=456239035&hash=41d73acd4693cddf",
+  //   thumbnailUrl:
+  //     "https://i.mycdn.me/getVideoPreview?id=8024136747545&idx=1&type=39&tkn=wR32eObJAgzIULrQyKVDYp52URM&fn=vid_u",
+  //   name: "Отзыв Дмитрия о мухоморном ретрите",
+  //   uploadDate: new Date("April 09, 2025").toISOString(),
+  // },
   {
     link: "https://vkvideo.ru/video_ext.php?oid=-230061059&id=456239032&hash=bff15b594870bd69",
     thumbnailUrl:
