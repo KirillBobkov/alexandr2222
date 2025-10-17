@@ -87,7 +87,7 @@ const videos = [
   {
     link: "https://vkvideo.ru/video_ext.php?oid=290538287&id=456239197&hash=20f58a9af5b24acf",
     thumbnailUrl:
-      "https://i.mycdn.me/getVideoPreview?id=8285427599919&idx=15&type=39&tkn=rI9YJkYSMhbD588WULwlAN7EdKU&fn=vid_l",
+      "https://i.mycdn.me/getVideoPreview?id=8101251648120&idx=15&type=39&tkn=bSVhZ7x-QwXJ-kGqSvxd-F3I75M&fn=vid_u",
     name: "Отзыв Булата о Мухоморном ретрите в Казани",
     uploadDate: new Date("March 13, 2025").toISOString(),
   },
@@ -95,14 +95,14 @@ const videos = [
   {
     link: "https://vkvideo.ru/video_ext.php?oid=290538287&id=456239194&hash=4e6c5032e0306911",
     thumbnailUrl:
-      "https://i.mycdn.me/getVideoPreview?id=8285376285231&idx=0&type=39&tkn=Qn5Sjxdkq1-WeKVypbSloCMph4g&fn=vid_l",
+      "https://i.mycdn.me/getVideoPreview?id=7980227168806&idx=0&type=39&tkn=3trOuPsM_QG_haLATKsUt5kpSsA&fn=vid_u",
     name: "Отзыв Андрея о Мухоморном ретрите в Казани",
     uploadDate: new Date("March 13, 2025").toISOString(),
   },
   {
     link: "https://vkvideo.ru/video_ext.php?oid=290538287&id=456239196&hash=9e93dff6cda11e19",
     thumbnailUrl:
-      "https://i.mycdn.me/getVideoPreview?id=8285423798831&idx=10&type=39&tkn=S0XDiAMyHgOjpCL3c2nuIizK53Y&fn=vid_l",
+      "https://i.mycdn.me/getVideoPreview?id=8011423943229&idx=10&type=39&tkn=639JwTN2gKMTOA3C9BmkO8OIXKI&fn=vid_u",
     name: "Отзыв Никиты о Мухоморном ретрите в Казани",
     uploadDate: new Date("March 13, 2025").toISOString(),
   },

@@ -108,7 +108,7 @@ const videos = [
   {
     link: "https://vkvideo.ru/video_ext.php?oid=290538287&id=456239188&hash=8a160ed8a99c6834",
     thumbnailUrl:
-      "https://i.mycdn.me/getVideoPreview?id=7673156733487&idx=13&type=39&tkn=Q8JRpXn2Vz83D9N5E57aw5QCUIQ&fn=vid_x",
+      "https://i.mycdn.me/getVideoPreview?id=7888258468546&idx=13&type=39&tkn=-p1NeEtLfKt8cuzsyS9VmzPXDNI&fn=vid_u",
     name: 'Отзыв Александра Дворянинова о работе с Александром "Интегралом" Васильевым',
     uploadDate: new Date("November 30, 2024").toISOString(),
   },
