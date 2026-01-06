@@ -40,7 +40,7 @@ export const TarifCard = ({ card, index }) => {
             className={`${styles.buyButton}`}
             onClick={handleOpenModal}
           >
-            Выбрать тариф
+            Приобрести
           </button>
         </div>
       </div>
