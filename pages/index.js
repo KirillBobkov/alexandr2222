@@ -481,15 +481,11 @@ export default function () {
     <Layout metaConfig={metaConfig} schemaOrg={schemaOrg}>
       <Preview />
       <InnerSatisfaction
-        titlePrefix="здесь?"
-        titleSuffix="ЧТО"
+        titleSuffix="ПРЕДИСЛОВИЕ"
         order={2}
         emptyTitle={false}
         description={
           <>
-            <strong>ПРЕДИСЛОВИЕ</strong>
-            <br />
-            <br />
             Если вы чего-то достигли, но потеряли смысл жизни, разочаровались в
             людях, регулярно испытываете нервозность, апатию или суицидальные
             мысли, не переживайте. Не всё потеряно.
