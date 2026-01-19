@@ -81,15 +81,12 @@
 }
 
 .price {
-  color: #FF3900;
+  color: var(--font-color);;
   font-size: 36px;
   font-weight: 700;
   margin: 0;
 }
 
-.optimal .price {
-  color: var(--accent);
-}
 
 .description {
   color: var(--secondary-font-color);
@@ -100,7 +97,7 @@
 
 .buyButton {
     text-align: center;
-    background: var(--accent);
+    background: var(--accent-3);
   color: var(--font-color);
   border: none;
   border-radius: 30px;
@@ -117,16 +114,7 @@
   transform: translateY(-2px);
 }
 
-.buyButtonOptimal {
-  background: var(--accent);
-  color: var(--card-color);
-}
 
-.buyButtonOptimal:hover {
-  background: var(--accent);
-  color: var(--card-color);
-  transform: translateY(-2px);
-}
 
 @media (max-width: 768px) {
   .card {
@@ -138,9 +126,6 @@
     transform: none;
   }
   
-  .optimal:hover {
-    transform: none;
-  }
   
   .cardTitle {
     font-size: 20px;

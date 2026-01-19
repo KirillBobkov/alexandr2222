@@ -9,7 +9,7 @@
 .moving {
     display: flex;
     align-items: center;
-    gap: 50px;
+    gap: 3px;
     flex-wrap: nowrap;
     animation: move 20s linear infinite;
 }
@@ -36,6 +36,6 @@
 }
 
 .logo {
-        height: 100px;
+        height: 70px;
         width: auto;
 }

@@ -12,7 +12,7 @@
 }
 
 .title {
-  color: #556B30;
+  color: var(--accent-2);;
   font-size: 24px;
   line-height: 40px;
   font-weight: 700;
@@ -37,7 +37,7 @@
 
 .item {
   width: 100%;
-  padding: 20px 30px;
+  padding: 20px 20px;
   display: flex;
   align-items: center;
   gap: 20px;
@@ -91,10 +91,10 @@
   }
 
   .item {
-    padding: 20px;
+    padding: 15px 20px;
   }
 
   .header {
-    padding: 30px 20px;
+    padding: 20px 20px 10px;
   }
 }

@@ -41,7 +41,7 @@ export const Navigation = () => {
         <div className={styles["header__logo-container"]}>
           <Image src={(theme === "light" && (isMobile ? true : isHomePage)) ? logoLight : logoDark} alt="Logo" className={styles.header__logo} id="logo" />
           <p className={styles.header__title}>
-            <span className={styles["header__title-colored"]}>ИN</span>TEGRAAL
+            TEGRAAL
           </p>
         </div>
 

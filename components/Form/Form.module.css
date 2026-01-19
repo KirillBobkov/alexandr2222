@@ -18,7 +18,7 @@
 }
 
 .form_title {
-  color: #556B30 !important;
+  color: var(--accent-2) !important;
 }
 
 
@@ -69,12 +69,12 @@
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  border: 2px solid var(--accent);
+  border: 2px solid var(--font-color);
   flex-shrink: 0;
 }
 
 .form-checkbox__input--error {
-  border: 2px solid red;
+  border: 2px solid var(--accent-3);
 }
 
 .form-doc {
@@ -98,13 +98,13 @@
 }
 
 .form-checkbox__input:checked {
-  border: 1px solid var(--accent);
-  background-color: var(--accent);
+  border: 1px solid var(--font-color);
+  background-color: var(--font-color);
 }
 
 .formbutton {
   border-radius: 3px;
-  background-color: var(--accent)!important;
+  background-color: var(--accent-3)!important;
   padding: 15px 40px;
   text-align: center;
   color: #ffffff;

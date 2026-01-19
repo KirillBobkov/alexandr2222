@@ -5,9 +5,8 @@
   align-items: center;
   height: 100dvh; /* Full height of the viewport */
   min-height: 500px;
-  color: var(--font-color);
+  color: var(--accent-2);
   overflow: hidden;
-  
 }
 
 .preview__content {
@@ -29,14 +28,16 @@
 
 .preview__bg {
   position: absolute;
-  bottom: -60%;
+  bottom: 0%;
   width: auto;
   height: 120%;
   z-index: 0; /* Send the image to the back */
-  animation: rotate-right 120s linear infinite;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
+  /* animation: rotate-right 120s linear infinite; */
+  opacity: 1;
+  /* transition: opacity 1s ease-in-out; */
 }
+
+
 
 .loaded {
   opacity: 1;

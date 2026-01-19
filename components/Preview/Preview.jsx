@@ -13,15 +13,17 @@ export const Preview = () => {
   const [loaded, setLoaded] = React.useState(false);
   const { theme } = useTheme();
 
+
   return (
     <LineAnimation>
-      <section className={styles.preview}>
-        <Image
+      <section className={styles.preview} id="lol">
+        {/* <Image
           src={theme === "light" ? preview_bg_light : preview_bg}
           alt="заставка превью"
           className={styles.preview__bg + " " + (loaded ? styles.loaded : "")}
           onLoad={() => setLoaded(true)}
-        />
+        /> */}
+
         <VisibilityManager as="div" className={styles.preview__content}>
           <h1 className={styles.preview__title}>
             Благословенный{" "}

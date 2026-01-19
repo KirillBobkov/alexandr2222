@@ -14,19 +14,19 @@ export const AnimatedLine = () => {
         <div className={styles.moving}>
           <Image src={theme === "light" ? logoLight : logoDark} alt="" className={styles.logo} id="logo" />
           <p className={styles.logo__title}>
-            <span className={styles.logo__title_colored}>ИN</span>TEGRAAL
+            TEGRAAL
           </p>  
         </div>
         <div className={styles.moving}>
           <Image src={theme === "light" ? logoLight : logoDark } alt="" className={styles.logo} id="logo" />
           <p className={styles.logo__title}>
-            <span className={styles.logo__title_colored}>ИN</span>TEGRAAL
+            TEGRAAL
           </p>  
         </div>
         <div className={styles.moving}>
           <Image src={theme === "light" ? logoLight : logoDark} alt="" className={styles.logo} id="logo" />
           <p className={styles.logo__title}>
-            <span className={styles.logo__title_colored}>ИN</span>TEGRAAL
+           TEGRAAL
           </p>  
         </div>
       </div>

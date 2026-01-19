@@ -3,7 +3,7 @@
 }
 
 .container .title {
-  color: #556B30;
+  color: var(--accent-2);;
 }
 
 .block {

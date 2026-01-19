@@ -5,7 +5,7 @@ export const SearchWidget = ({ searchQuery, onSearchChange, resultsCount }) => {
     <div className={styles.searchWidget}>
       <div className={styles.header}>
         <h3 className={styles.title}>
-          <span className={styles.textSymbol}>//</span> Поиск по статьям
+          Поиск по статьям
         </h3>
       </div>
 
