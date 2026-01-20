@@ -3,7 +3,6 @@ import { Form } from "../components/Form/Form";
 import { useState } from "react";
 import { useScrollToLocation } from "../hooks/useScrollToLocation";
 import { SecondaryPreview } from "../components/SecondaryPreview/SecondaryPreview";
-import { LineAnimation } from "../components/LineAnimation/LineAnimation";
 import { VisibilityManager } from "../components/shared/VisibilityManager";
 import containerStyles from "../styles/container.module.css";
 import contentStyles from "../styles/contentStyles.module.css";
@@ -631,7 +630,6 @@ export default function () {
         </div>
       </div>
 
-      <LineAnimation>
         <div className={containerStyles.container}>
           <VisibilityManager as="h3" className={contentStyles.title_middle}>
             Польза и результаты мухоморного ретрита
@@ -817,9 +815,7 @@ export default function () {
             </div>
           </div>
         </div>
-      </LineAnimation>
 
-      <LineAnimation>
         <div className={containerStyles.container}>
           <VisibilityManager as="h3" className={contentStyles.title_middle}>
             Пример успешных людей, которые использовали шаманские практики для
@@ -845,9 +841,7 @@ export default function () {
             упустите шанс стать частью этого пути и трансформировать свою жизнь.
           </VisibilityManager>
         </div>
-      </LineAnimation>
 
-      <LineAnimation>
         <div className={containerStyles.container}>
           <VisibilityManager as="h3" className={contentStyles.title_middle}>
             Преимущества моего ретрита
@@ -942,10 +936,7 @@ export default function () {
             />
           </Final>
         </div>
-      </LineAnimation>
       <VideoWidget videos={videos} />
-
-      <LineAnimation>
         <div className={containerStyles.container}>
           <VisibilityManager as="h3" className={contentStyles.title_middle}>
             Как проходит мухоморный ретрит?
@@ -1087,7 +1078,6 @@ export default function () {
             процессу, я проведу вас через этот опыт.
           </VisibilityManager>
         </div>
-      </LineAnimation>
       <div id="message" />
       <Form
         setIsSubmitted={setIsSubmitted}

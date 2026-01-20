@@ -3,7 +3,6 @@ import { Form } from "../../components/Form/Form";
 import { useState } from "react";
 import { useScrollToLocation } from "../../hooks/useScrollToLocation";
 import { SecondaryPreview } from "../../components/SecondaryPreview/SecondaryPreview";
-import { LineAnimation } from "../../components/LineAnimation/LineAnimation";
 import { VisibilityManager } from "../../components/shared/VisibilityManager";
 import containerStyles from "../../styles/container.module.css";
 import contentStyles from "../../styles/contentStyles.module.css";
@@ -67,7 +66,6 @@ export default function () {
         text={metaConfig.pageTitle}
         image={secondary_preview_6}
       />
-      <LineAnimation>
         <div className={containerStyles.container}>
           <VisibilityManager as="p">
             Устали от сигарет? Хотите покончить с курением раз и навсегда? Я
@@ -465,7 +463,6 @@ export default function () {
             Метод не является медицинским и не заменяет консультации специалиста
           </p>
         </div>
-      </LineAnimation>
       <div id="message" />
       <Form
         setIsSubmitted={setIsSubmitted}

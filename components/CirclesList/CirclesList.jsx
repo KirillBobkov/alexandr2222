@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./CirclesList.module.css";
-import { LineAnimation } from "../LineAnimation/LineAnimation";
 import { VisibilityManager } from "../shared/VisibilityManager";
 import contentStyles from "../../styles/contentStyles.module.css";
 
@@ -54,11 +53,7 @@ export const CirclesList = ({
     </div>
   );
 
-  return animation ? (
-    <LineAnimation>{content}</LineAnimation>
-  ) : (
-    <div className={styles.container}>{content}</div>
-  );
+  return animation ? content : <div className={styles.container}>{content}</div>;
 };
 
 const CircleItem = ({ title }) => {

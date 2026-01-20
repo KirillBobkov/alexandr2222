@@ -2,7 +2,6 @@ import React from "react";
 import styles from "./InnerSatisfaction.module.css";
 import contentStyles from "../../styles/contentStyles.module.css";
 import { VisibilityManager } from "../shared/VisibilityManager";
-import { LineAnimation } from "../LineAnimation/LineAnimation";
 
 export const InnerSatisfaction = ({
   titlePrefix = '',
@@ -34,13 +33,5 @@ export const InnerSatisfaction = ({
     </div>
   );
 
-  return (
-    <>
-      {animation ? (
-        <LineAnimation>{content}</LineAnimation>
-      ) : (
-        <div className={styles.container}>{content}</div>
-      )}
-    </>
-  );
+  return <div className={styles.container}>{content}</div>;
 };

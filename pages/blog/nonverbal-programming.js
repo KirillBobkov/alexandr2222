@@ -2,7 +2,6 @@ import Layout from "../../components/Layout/Layout";
 import { useState } from "react";
 import { useScrollToLocation } from "../../hooks/useScrollToLocation";
 import { SecondaryPreview } from "../../components/SecondaryPreview/SecondaryPreview";
-import { LineAnimation } from "../../components/LineAnimation/LineAnimation";
 import { VisibilityManager } from "../../components/shared/VisibilityManager";
 import containerStyles from "../../styles/container.module.css";
 import contentStyles from "../../styles/contentStyles.module.css";
@@ -86,7 +85,6 @@ export default function () {
         text="Невербальное программирование"
         image={secondary_preview_30}
       />
-      <LineAnimation>
         <div className={containerStyles.container}>
           <VisibilityManager as="h1" className={contentStyles.title_middle}>
             НЕВЕРБАЛЬНОЕ ПРОГРАММИРОВАНИЕ: КАК УПРАВЛЯТЬ ЭМОЦИЯМИ ЧЕРЕЗ ТЕЛО
@@ -264,7 +262,7 @@ export default function () {
             ХОЧУ УПРАВЛЯТЬ ЭМОЦИЯМИ
           </LinkButton>
         </div>
-      </LineAnimation>
+      
     </Layout>
   );
 }

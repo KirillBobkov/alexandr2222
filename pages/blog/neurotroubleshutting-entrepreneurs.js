@@ -3,7 +3,6 @@ import { Form } from "../../components/Form/Form";
 import { useState } from "react";
 import { useScrollToLocation } from "../../hooks/useScrollToLocation";
 import { SecondaryPreview } from "../../components/SecondaryPreview/SecondaryPreview";
-import { LineAnimation } from "../../components/LineAnimation/LineAnimation";
 import { VisibilityManager } from "../../components/shared/VisibilityManager";
 import containerStyles from "../../styles/container.module.css";
 import contentStyles from "../../styles/contentStyles.module.css";
@@ -82,7 +81,6 @@ export default function () {
         text="Нейротраблшутинг для предпринимателей" 
         image={secondary_preview_26} 
       />
-      <LineAnimation>
         <div className={containerStyles.container}>
           <VisibilityManager as="h1" className={contentStyles.title_middle}>
             Нейротраблшутинг для предпринимателей: преодоление внутренних блоков роста
@@ -225,7 +223,6 @@ export default function () {
               специалиста
             </p>
         </div>
-      </LineAnimation>
       <div id="message" />
       <Form
         setIsSubmitted={setIsSubmitted}

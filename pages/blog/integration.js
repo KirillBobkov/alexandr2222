@@ -3,7 +3,6 @@ import { Form } from "../../components/Form/Form";
 import { useState } from "react";
 import { useScrollToLocation } from "../../hooks/useScrollToLocation";
 import { SecondaryPreview } from "../../components/SecondaryPreview/SecondaryPreview";
-import { LineAnimation } from "../../components/LineAnimation/LineAnimation";
 import { VisibilityManager } from "../../components/shared/VisibilityManager";
 import containerStyles from "../../styles/container.module.css";
 import contentStyles from "../../styles/contentStyles.module.css";
@@ -79,7 +78,6 @@ export default function () {
   return (
     <Layout metaConfig={metaConfig} schemaOrg={schemaOrg}>
       <SecondaryPreview text="Интеграция после мухоморного погружения" image={secondary_preview_19} />
-      <LineAnimation>
         <div className={containerStyles.container}>
           <VisibilityManager as="h1" className={contentStyles.title_middle}>
             Для чего нужна интеграция после Мухоморного погружения?
@@ -294,7 +292,6 @@ export default function () {
               специалиста
             </p>
         </div>
-      </LineAnimation>
       <div id="message" />
       <Form
         setIsSubmitted={setIsSubmitted}

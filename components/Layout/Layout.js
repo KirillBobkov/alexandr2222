@@ -10,6 +10,7 @@ import ScrollTopButton from "../ScrollTopButton/ScrollTopButton";
 import { useTheme } from "../../hooks/useTheme";
 
 import { Nunito, Rubik } from "next/font/google";
+import StarsBackground from "../Canvas/Canvas";
 
 const nunito = Nunito({
   weight: ["400", "700"],
@@ -83,7 +84,7 @@ export default function Layout({ children, metaConfig, schemaOrg = '' }) {
           href={favicon180x180.src}
         />
         <link rel="apple-touch-startup-image" href={favicon32x32.src} />
-      
+
       </Head>
       {schemaOrg && (
         <Script
@@ -96,22 +97,25 @@ export default function Layout({ children, metaConfig, schemaOrg = '' }) {
       )}
       <Navigation />
       {seoContent && (
-        <h1 style={{ 
-          visibility: 'hidden', 
-          width: '1px', 
-          height: '1px', 
-          padding: '0', 
-          margin: '-1px', 
-          overflow: 'hidden', 
-          clip: 'rect(0,0,0,0)', 
-          whiteSpace: 'nowrap', 
-          border: '0' 
+        <h1 style={{
+          visibility: 'hidden',
+          width: '1px',
+          height: '1px',
+          padding: '0',
+          margin: '-1px',
+          overflow: 'hidden',
+          clip: 'rect(0,0,0,0)',
+          whiteSpace: 'nowrap',
+          border: '0'
         }}>
           {seoContent}
         </h1>
       )}
-      <main>{children}</main>
-      <Footer />     
+      <main>
+        <StarsBackground />
+        {children}
+      </main>
+      <Footer />
       <ScrollTopButton />
     </>
   );

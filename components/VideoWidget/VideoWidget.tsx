@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import styles from "./VideoWidget.module.css";
 import { VideoPlayer } from "../VideoPlayer/VideoPlayer";
 import { VideoList } from "../VideoList/VideoList";
-import { LineAnimation } from "../LineAnimation/LineAnimation";
 import { VisibilityManager } from "../shared/VisibilityManager";
 
 export interface Video {
@@ -16,7 +15,6 @@ export const VideoWidget: React.FC = ({ videos }: any) => {
   const [selectedVideo, setSelectedVideo] = useState<Video>(videos[0]);
 
   return (
-    <LineAnimation>
       <div className={styles.container} id="reviews">
         <div className={styles.content}>
           <div className={styles.listSection}>
@@ -31,6 +29,5 @@ export const VideoWidget: React.FC = ({ videos }: any) => {
           </VisibilityManager>
         </div>
       </div>
-    </LineAnimation>
   );
 };

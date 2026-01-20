@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./Helping.module.css"; // Adjust the path as necessary
-import { LineAnimation } from "../LineAnimation/LineAnimation.jsx";
 import { VisibilityManager } from "../shared/VisibilityManager";
 import { Button } from "../shared/Button/Button.jsx";
 import contentStyles from "../../styles/contentStyles.module.css";

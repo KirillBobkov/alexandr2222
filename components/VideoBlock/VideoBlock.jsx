@@ -3,7 +3,6 @@ import styles from "./VideoBlock.module.css";
 import { VisibilityManager } from "../shared/VisibilityManager";
 import contentStyles from "../../styles/contentStyles.module.css";
 import { VideoPlayer } from "../VideoPlayer/VideoPlayer";
-import { LineAnimation } from "../LineAnimation/LineAnimation";
 
 export const VideoBlock = ({
   title,
@@ -100,23 +99,21 @@ export const VideoBlock = ({
   };
 
   return (
-    <LineAnimation>
-      <div className={styles.container}>
-        <div className={styles.block}>
-          <VisibilityManager
-            as="h2"
-            side="left"
-            style={{ marginLeft: "0px", marginBottom: "0px" }}
-            className={contentStyles.title}
-          >
-            {title}{titleEmpty}
-          </VisibilityManager>
+    <div className={styles.container}>
+      <div className={styles.block}>
+        <VisibilityManager
+          as="h2"
+          side="left"
+          style={{ marginLeft: "0px", marginBottom: "0px" }}
+          className={contentStyles.title}
+        >
+          {title}{titleEmpty}
+        </VisibilityManager>
 
-          <div className={styles.videoContainer}>
-            <div className={styles.videoWrapper}>{renderVideo()}</div>
-          </div>
+        <div className={styles.videoContainer}>
+          <div className={styles.videoWrapper}>{renderVideo()}</div>
         </div>
       </div>
-    </LineAnimation>
+    </div>
   );
 };

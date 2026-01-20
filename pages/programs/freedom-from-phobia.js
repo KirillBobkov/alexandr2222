@@ -3,7 +3,6 @@ import { Form } from "../../components/Form/Form";
 import { useState } from "react";
 import { useScrollToLocation } from "../../hooks/useScrollToLocation";
 import { SecondaryPreview } from "../../components/SecondaryPreview/SecondaryPreview";
-import { LineAnimation } from "../../components/LineAnimation/LineAnimation";
 import { VisibilityManager } from "../../components/shared/VisibilityManager";
 import containerStyles from "../../styles/container.module.css";
 import contentStyles from "../../styles/contentStyles.module.css";
@@ -61,7 +60,6 @@ export default function () {
   return (
     <Layout metaConfig={metaConfig} schemaOrg={schemaOrg}>
       <SecondaryPreview text={metaConfig.pageTitle} image={secondary_preview_14} />
-      <LineAnimation>
         <div className={containerStyles.container}>
           <VisibilityManager as="p">
             Представьте, что завтра вы сможете делать то, что сегодня кажется невозможным.
@@ -241,7 +239,6 @@ export default function () {
             Метод не является медицинским и не заменяет консультации специалиста
           </p>
         </div>
-      </LineAnimation>
       <div id="message" />
       <Form
         setIsSubmitted={setIsSubmitted}

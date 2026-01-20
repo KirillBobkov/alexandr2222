@@ -6,8 +6,9 @@ import preview_bg_light from "../../images/preview_bg_light.webp";
 import vadgra from "../../images/vadgra.webp";
 import Image from "next/image.js";
 import { VisibilityManager } from "../shared/VisibilityManager";
-import { LineAnimation } from "../LineAnimation/LineAnimation";
 import { useTheme } from "../../hooks/useTheme";
+
+import StarsBackground from "../StarsBackground/StarsBackground.tsx";
 
 export const Preview = () => {
   const [loaded, setLoaded] = React.useState(false);
@@ -15,7 +16,6 @@ export const Preview = () => {
 
 
   return (
-    <LineAnimation>
       <section className={styles.preview} id="lol">
         {/* <Image
           src={theme === "light" ? preview_bg_light : preview_bg}
@@ -23,6 +23,7 @@ export const Preview = () => {
           className={styles.preview__bg + " " + (loaded ? styles.loaded : "")}
           onLoad={() => setLoaded(true)}
         /> */}
+    
 
         <VisibilityManager as="div" className={styles.preview__content}>
           <h1 className={styles.preview__title}>
@@ -194,6 +195,5 @@ export const Preview = () => {
           </div>
         </VisibilityManager>
       </section>
-    </LineAnimation>
   );
 };

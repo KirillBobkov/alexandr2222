@@ -3,7 +3,6 @@ import { Form } from "../../components/Form/Form";
 import { useState } from "react";
 import { useScrollToLocation } from "../../hooks/useScrollToLocation";
 import { SecondaryPreview } from "../../components/SecondaryPreview/SecondaryPreview";
-import { LineAnimation } from "../../components/LineAnimation/LineAnimation";
 import { VisibilityManager } from "../../components/shared/VisibilityManager";
 import containerStyles from "../../styles/container.module.css";
 import contentStyles from "../../styles/contentStyles.module.css";
@@ -79,7 +78,6 @@ export default function () {
   return (
     <Layout metaConfig={metaConfig} schemaOrg={schemaOrg}>
       <SecondaryPreview text="Курение как подсознательный крик души" image={secondary_preview_12} />
-      <LineAnimation>
         <div className={containerStyles.container}>
           <VisibilityManager as="h1" className={contentStyles.title_middle}>
             Курение как подсознательный крик души: почему мы травим себя и как это остановить
@@ -296,7 +294,7 @@ export default function () {
             Если вы готовы разобраться с истинными причинами зависимости, освободиться от груза прошлых травм и научиться принимать жизнь без страха и саботажа, я готов стать вашим проводником на этом пути.
           </VisibilityManager>
         </div>
-      </LineAnimation>
+      
       <div id="message" />
       <Form
         setIsSubmitted={setIsSubmitted}

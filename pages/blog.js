@@ -24,7 +24,6 @@ import secondary_preview_31 from "../images/secondary_preview_31.webp";
 import secondary_preview_32 from "../images/secondary_preview_32.webp";
 import styles from "../styles/blog.module.css";
 import contentStyles from "../styles/contentStyles.module.css";
-import { LineAnimation } from "../components/LineAnimation/LineAnimation";
 import { VisibilityManager } from "../components/shared/VisibilityManager";
 import { useScrollToLocation } from "../hooks/useScrollToLocation";
 
@@ -259,7 +258,6 @@ export default function Blog() {
   return (
     <Layout metaConfig={metaConfig} schemaOrg={schemaOrg}>
       <SecondaryPreview text="Блог" image={secondary_preview_11} />
-      <LineAnimation>
         <div className={styles.blogContainer}>
           <div className={styles.articlesColumn}>
             {filteredArticles.length > 0 ? (
@@ -282,7 +280,6 @@ export default function Blog() {
             />
           </VisibilityManager>
         </div>
-      </LineAnimation>
     </Layout>
   );
 }

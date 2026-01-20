@@ -3,7 +3,6 @@ import { Form } from "../../components/Form/Form";
 import { useState } from "react";
 import { useScrollToLocation } from "../../hooks/useScrollToLocation";
 import { SecondaryPreview } from "../../components/SecondaryPreview/SecondaryPreview";
-import { LineAnimation } from "../../components/LineAnimation/LineAnimation";
 import { VisibilityManager } from "../../components/shared/VisibilityManager";
 import containerStyles from "../../styles/container.module.css";
 import contentStyles from "../../styles/contentStyles.module.css";
@@ -79,7 +78,6 @@ export default function () {
   return (
     <Layout metaConfig={metaConfig} schemaOrg={schemaOrg}>
       <SecondaryPreview text="Микродозинг" image={secondary_preview_17} />
-      <LineAnimation>
         <div className={containerStyles.container}>
           <VisibilityManager as="h1" className={contentStyles.title_middle}>
             Микродозинг Мухомора: как это работает, кому подходит и как подойти к практике осознанно
@@ -353,7 +351,7 @@ export default function () {
             Принимая решения о взаимодействии с природными веществами, важно действовать осознанно, с уважением к себе, телу и законам своего региона.
           </p>
         </div>
-      </LineAnimation>
+      
       <div id="message" />
       <Form
         setIsSubmitted={setIsSubmitted}

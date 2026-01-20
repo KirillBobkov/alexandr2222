@@ -1,7 +1,6 @@
 import styles from "./TextReviews.module.css";
 import Image from "next/image.js";
 import React, { useState } from "react";
-import { LineAnimation } from "../LineAnimation/LineAnimation";
 
 interface Testimonial {
   id: number;
@@ -56,7 +55,6 @@ export const TextReviews = () => {
   };
 
   return (
-    <LineAnimation>
     <div className={styles.container}>
       <div className={styles.slider}>
         {testimonials.map((testimonial, index) => (
@@ -119,6 +117,5 @@ export const TextReviews = () => {
         </svg>
       </button>
     </div>
-    </LineAnimation>
   );
 };

@@ -3,7 +3,6 @@ import { Form } from "../../components/Form/Form";
 import { useState } from "react";
 import { useScrollToLocation } from "../../hooks/useScrollToLocation";
 import { SecondaryPreview } from "../../components/SecondaryPreview/SecondaryPreview";
-import { LineAnimation } from "../../components/LineAnimation/LineAnimation";
 import { VisibilityManager } from "../../components/shared/VisibilityManager";
 import containerStyles from "../../styles/container.module.css";
 import contentStyles from "../../styles/contentStyles.module.css";
@@ -84,7 +83,6 @@ export default function () {
         text="Аллергия — это не приговор" 
         image={secondary_preview_22} 
       />
-      <LineAnimation>
         <div className={containerStyles.container}>
           <VisibilityManager as="h1" className={contentStyles.title_middle}>
             Аллергия — это не приговор: психосоматические причины и их устранение
@@ -187,7 +185,7 @@ export default function () {
             Если вы устали жить с ограничениями и хотите освободиться от аллергии, это возможно. Позвольте себе шагнуть в жизнь, где ваше тело больше не сопротивляется, а живёт в гармонии с окружающим миром.
           </VisibilityManager>
         </div>
-      </LineAnimation>
+      
       <div id="message" />
       <Form
         setIsSubmitted={setIsSubmitted}

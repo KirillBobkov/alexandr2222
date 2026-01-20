@@ -5,14 +5,12 @@ import logoDark from "../../images/logo_dark.webp";
 import Image from "next/image";
 import vadgra from "../../images/vadgra.webp";
 import { useTheme } from "../../hooks/useTheme";
-import { LineAnimation } from "../LineAnimation/LineAnimation";
 import { useRouter } from "next/router";
 
 export function Footer() {
   const { theme } = useTheme();
   const router = useRouter();
   return (
-    <LineAnimation>
       <footer className={styles.footer}>
         <div className={styles.container}>
           <div className={styles.logo__container}>
@@ -192,6 +190,5 @@ export function Footer() {
           </div>
         </div>
       </footer>
-    </LineAnimation>
   );
 }

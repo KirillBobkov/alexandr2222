@@ -3,7 +3,6 @@ import styles from "./Final.module.css"; // Adjust the path as necessary
 import { VisibilityManager } from "../shared/VisibilityManager";
 import LinkButton from "../shared/LinkButton/LinkButton";
 import Image from "next/image";
-import { LineAnimation } from "../LineAnimation/LineAnimation";
 
 export const Final = ({ 
   image,
@@ -43,9 +42,5 @@ export const Final = ({
     </VisibilityManager>
   );
 
-  return animation ? (
-    <LineAnimation>{content}</LineAnimation>
-  ) : (
-    <div className={styles.container}>{content}</div>
-  );
+  return <div className={styles.container}>{content}</div>;
 };

@@ -3,7 +3,6 @@ import { Form } from "../components/Form/Form";
 import { useState } from "react";
 import { useScrollToLocation } from "../hooks/useScrollToLocation";
 import { SecondaryPreview } from "../components/SecondaryPreview/SecondaryPreview";
-import { LineAnimation } from "../components/LineAnimation/LineAnimation";
 import { VisibilityManager } from "../components/shared/VisibilityManager";
 import containerStyles from "../styles/container.module.css";
 import contentStyles from "../styles/contentStyles.module.css";
@@ -41,7 +40,6 @@ export default function () {
   return (
     <Layout metaConfig={metaConfig} schemaOrg={schemaOrg}>
       <SecondaryPreview text={"Обо мне"} image={secondary_preview_8} />
-      <LineAnimation>
         <div className={containerStyles.container}>
           <VisibilityManager as="h1" className={contentStyles.title_middle}>
             МОЯ ИСТОРИЯ: ОТ ЛИЧНЫХ ИСПЫТАНИЙ К ИСТИННОМУ ПРИЗВАНИЮ
@@ -169,7 +167,6 @@ export default function () {
             Знаю, каково это — чувствовать себя потерянным, больным и несчастным, и знаю, как вернуть себе здоровье, радость и смысл жизни.
           </VisibilityManager>
         </div>
-      </LineAnimation>
       <div id="message" />
       <Form
         setIsSubmitted={setIsSubmitted}

@@ -3,7 +3,6 @@ import { Form } from "../../components/Form/Form";
 import { useState } from "react";
 import { useScrollToLocation } from "../../hooks/useScrollToLocation";
 import { SecondaryPreview } from "../../components/SecondaryPreview/SecondaryPreview";
-import { LineAnimation } from "../../components/LineAnimation/LineAnimation";
 import { VisibilityManager } from "../../components/shared/VisibilityManager";
 import containerStyles from "../../styles/container.module.css";
 import contentStyles from "../../styles/contentStyles.module.css";
@@ -65,7 +64,6 @@ export default function () {
         text={metaConfig.pageTitle}
         image={secondary_preview_3}
       />
-      <LineAnimation>
         <div className={containerStyles.container}>
           <VisibilityManager as="p">
             Современный мир требует от нас постоянной активности, что приводит к
@@ -136,9 +134,7 @@ export default function () {
             />
           </Final>
           <div style={{ height: "1px" }} />
-
         </div>
-      </LineAnimation>
       <div id="message" />
       <Form
         setIsSubmitted={setIsSubmitted}
