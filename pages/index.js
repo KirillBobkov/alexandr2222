@@ -15,7 +15,6 @@ import logo from "../images/logo.webp";
 import { products as neurotroubleshuttingProducts } from "../consts/products";
 import finalStyles from "../styles/finalContent.module.css";
 import LinkButton from "../components/shared/LinkButton/LinkButton";
-import ParticlesCanvas from "../components/Canvas/Canvas.tsx";
 
 const schemaOrg = {
   "@context": "https://schema.org",

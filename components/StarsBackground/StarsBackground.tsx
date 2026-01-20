@@ -1,5 +1,5 @@
 import React, { useMemo } from "react";
-import styles from "./Canvas.module.css";
+import styles from "./StarsBackground.module.css";
 
 
 function generateBoxShadow(count: number, max = 2000) {

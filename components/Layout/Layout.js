@@ -10,7 +10,7 @@ import ScrollTopButton from "../ScrollTopButton/ScrollTopButton";
 import { useTheme } from "../../hooks/useTheme";
 
 import { Nunito, Rubik } from "next/font/google";
-import StarsBackground from "../Canvas/Canvas";
+import StarsBackground from "../StarsBackground/StarsBackground";
 
 const nunito = Nunito({
   weight: ["400", "700"],
