@@ -8,7 +8,7 @@ import Image from "next/image.js";
 import { VisibilityManager } from "../shared/VisibilityManager";
 import { useTheme } from "../../hooks/useTheme";
 
-import StarsBackground from "../StarsBackground/StarsBackground.tsx";
+import Wave from '../FractalTunnel/FractalTunnel.tsx';
 
 export const Preview = () => {
   const [loaded, setLoaded] = React.useState(false);
@@ -24,6 +24,7 @@ export const Preview = () => {
           onLoad={() => setLoaded(true)}
         /> */}
     
+          <Wave />
 
         <VisibilityManager as="div" className={styles.preview__content}>
           <h1 className={styles.preview__title}>

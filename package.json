@@ -13,7 +13,9 @@
     "react-dom": "18.3.1",
     "react-in-viewport": "^1.0.0-alpha.30",
     "react-input-mask": "^2.0.4",
-    "react-responsive-carousel": "^3.2.23"
+    "react-responsive-carousel": "^3.2.23",
+    "react-shaders": "^0.0.4",
+    "three": "^0.161.0"
   },
   "engines": {
     "node": ">=18"
