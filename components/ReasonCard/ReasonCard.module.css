@@ -30,11 +30,22 @@
   line-height: 1;
 }
 
+.cardBadge {
+  background: var(--accent);
+  color: var(--card-color);
+  font-size: 14px;
+  font-weight: 900;
+  padding: 8px 12px;
+  border-radius: 12px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
 .cardTitle {
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 36px;
-    color: var(--font-color);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: var(--secondary-font-color);
 }
 
 .cardDescription {
@@ -46,7 +57,7 @@
 /* Mobile styles */
 @media (max-width: 768px) {
   .card {
-    padding: 20px 20px;
+    padding: 20px 10px;
     gap: 15px;
   }
 

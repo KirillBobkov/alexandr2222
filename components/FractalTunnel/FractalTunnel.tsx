@@ -84,7 +84,7 @@ const FractalTunnel = () => {
     controls.minDistance = 10
     controls.maxDistance = 260
 
-    const baseColor = new THREE.Color('#edb834')
+    const baseColor = new THREE.Color('#edac34')
     const COLORS = {
       core: baseColor,
       shell: baseColor,

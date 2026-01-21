@@ -1,9 +1,3 @@
-.container {
-
-    background: var(--card-color);
-
-}
-
 .content {
     width: 100%;
     position: relative;
@@ -28,7 +22,7 @@
 
 .listContainer {
     display: grid;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: 1fr;
     gap: 60px;
     align-items: start;
 }
@@ -60,37 +54,107 @@
     text-transform: uppercase;
 }
 
-.list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
+.tree {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: 48px;
+    row-gap: 0;
+    padding: 10px 0 40px;
+    --tree-gap: 96px;
+    --tree-row-gap: 80px;
+    grid-auto-rows: minmax(160px, auto);
 }
 
-.listItem {
+.nodeCell {
+    position: relative;
     display: flex;
     align-items: center;
-    gap: 16px;
-    padding: 0;
-    flex-grow: 0;
-    flex-shrink: 0;
-    flex-basis: 45%;
-    transition: all 0.3s ease;
+    justify-content: center;
+    height: 100%;
 }
 
-.listItem:hover {
-    transform: translateX(10px);
+.connector {
+    position: absolute;
+    background: var(--card-color);
+    border-radius: 999px;
+    opacity: 1;
+    z-index: 0;
+    display: none;
 }
 
+.nodeCardWrap {
+    position: relative;
+    width: min(360px, 100%);
+    z-index: 1;
+    --course-card-radius: 24px;
+}
 
-.bullet {
-    color: var(--accent);
-    font-size: 30px;
-    font-weight: 900;
-    line-height: 30px;
-    flex-shrink: 0;
+.courseCard {
+    height: 100%;
+}
+
+.connectorRight {
+    top: 50%;
+    left: 50%;
+    width: calc(100% + var(--tree-gap));
+    height: 2px;
+    transform: translateY(-50%);
+}
+
+.connectorLeft {
+    top: 50%;
+    right: 50%;
+    width: calc(100% + var(--tree-gap));
+    height: 2px;
+    transform: translateY(-50%);
+}
+
+.connectorDown {
+    top: 50%;
+    left: 50%;
+    width: 2px;
+    height: calc(100% + var(--tree-row-gap));
+    transform: translateX(-50%);
+}
+
+.directionLeft .nodeCardWrap::after,
+.directionRight .nodeCardWrap::after,
+.directionDownLeft .nodeCardWrap::before,
+.directionDownRight .nodeCardWrap::before {
+    content: "";
+    position: absolute;
+    background: var(--card-color);
+    pointer-events: none;
+    display: none;
+}
+
+.directionLeft .nodeCardWrap::after {
+    right: calc(100% - var(--course-card-radius));
+    bottom: 0;
+    width: calc(var(--tree-gap) + var(--course-card-radius));
+    height: 6px;
+}
+
+.directionRight .nodeCardWrap::after {
+    left: calc(100% - var(--course-card-radius));
+    bottom: 0;
+    width: calc(var(--tree-gap) + var(--course-card-radius));
+    height: 6px;
+}
+
+.directionDownLeft .nodeCardWrap::before {
+    left: 0;
+    top: calc(100% - var(--course-card-radius));
+    width: 6px;
+    height: calc(var(--tree-row-gap) + var(--course-card-radius) + 12px);
+}
+
+.directionDownRight .nodeCardWrap::before {
+    right: 0;
+    top: calc(100% - var(--course-card-radius));
+    width: 6px;
+    height: calc(var(--tree-row-gap) + var(--course-card-radius) + 12px);
 }
 
 .message {
@@ -122,17 +186,71 @@
         position: static;
     }
 
-    .listItem {
-        flex-basis: 100%;
+    .tree {
+        position: relative;
+        grid-template-columns: 1fr;
+        column-gap: 10px;
+        row-gap: 10px;
+        padding-left: 0;
+        --tree-gap: 0px;
+        --tree-row-gap: 10px;
+        grid-auto-rows: minmax(120px, auto);
     }
 
-
-    .listItem:hover {
-        transform: none;
+    .nodeCell {
+        justify-content: flex-start;
+        align-items: flex-start;
+        grid-column: 1 / -1 !important;
+        grid-row: auto !important;
     }
 
-    .list {
-        gap: 15px;
+    .nodeCell:nth-child(even) {
+        justify-content: flex-end;
     }
 
+    .nodeCardWrap {
+        width: fit-content;
+        max-width: 100%;
+        margin: 0;
+        height: auto;
+    }
+
+    .connectorRight,
+    .connectorLeft,
+    .connectorDown {
+        display: none;
+    }
+
+    .nodeCell::after {
+        content: "";
+        position: absolute;
+        width: 80%;
+        height: 36px;
+        bottom: -18px;
+        background-repeat: no-repeat;
+        background-size: 6px 100%, 100% 6px;
+        pointer-events: none;
+    }
+
+    .nodeCell:not(:last-child)::after {
+        background-image: linear-gradient(var(--card-color), var(--card-color)),
+          linear-gradient(var(--card-color), var(--card-color));
+    }
+
+    .nodeCell:nth-child(odd)::after {
+        left: 0;
+        background-position: 0 0, 0 100%;
+    }
+
+    .nodeCell:nth-child(even)::after {
+        right: 0;
+        background-position: 100% 0, 0 100%;
+    }
+
+    .directionLeft .nodeCardWrap::after,
+    .directionRight .nodeCardWrap::after,
+    .directionDownLeft .nodeCardWrap::before,
+    .directionDownRight .nodeCardWrap::before {
+        display: none;
+    }
 }

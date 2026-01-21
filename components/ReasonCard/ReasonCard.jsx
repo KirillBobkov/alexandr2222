@@ -1,10 +1,14 @@
 import styles from './ReasonCard.module.css';
 
-export const ReasonCard = ({ card, index }) => {
+export const ReasonCard = ({ card, index, badgeText, className }) => {
   return (
-    <div className={styles.card}>
+    <div className={`${styles.card} ${className || ''}`}>
       <div className={styles.cardHeader}>
-        <span className={styles.cardNumber}>{String(index + 1).padStart(2, '0')}</span>
+        {badgeText ? (
+          <span className={styles.cardBadge}>{badgeText}</span>
+        ) : (
+          <span className={styles.cardNumber}>{String(index + 1).padStart(2, '0')}</span>
+        )}
       </div>
       {card.title ? <h3 className={styles.cardTitle}>{card.title}</h3> : null}
       {card.description ? <p className={styles.cardDescription}>{card.description}</p> : null}

@@ -6,7 +6,6 @@ import secondary_preview_29 from "../images/secondary_preview_29.webp";
 import { Helping } from "../components/Helping/Helping";
 import { Form } from "../components/Form/Form";
 import { useState } from "react";
-import { AnimatedLine } from "../components/AnimatedLine/AnimatedLine";
 import { CourseContent } from "../components/CourseContent/CourseContent";
 import { ReasonCards } from "../components/ReasonCards/ReasonCards";
 import { ReasonCard } from "../components/ReasonCard/ReasonCard";
@@ -192,7 +191,7 @@ export default function NonverbalProgramming() {
         ]}
       />
 
-      <AnimatedLine />
+
       <CourseContent />
 
       <CirclesList
