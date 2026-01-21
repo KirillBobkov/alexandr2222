@@ -436,8 +436,8 @@ const FractalTunnel = () => {
     const clock = new THREE.Clock()
     const animate = () => {
       frameRef.current = requestAnimationFrame(animate)
-      const delta = clock.getDelta()
-      const time = clock.getElapsedTime()
+      const delta = clock.getDelta() / 3
+      const time = clock.getElapsedTime() / 3
       starMaterial.uniforms.time.value = time
       shellMaterial.uniforms.time.value = time
       diskMat.uniforms.time.value = time
