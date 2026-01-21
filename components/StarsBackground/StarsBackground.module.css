@@ -26,7 +26,8 @@
 .stars-small::after {
   content: "";
   position: absolute;
-  top: 2000px;
+  top: -2000px;
+  left: 2000px;
   width: 1px;
   height: 1px;
   box-shadow: inherit;
@@ -42,7 +43,8 @@
 .stars-medium::after {
   content: "";
   position: absolute;
-  top: 2000px;
+  top: -2000px;
+  left: 2000px;
   width: 2px;
   height: 2px;
   box-shadow: inherit;
@@ -58,7 +60,8 @@
 .stars-big::after {
   content: "";
   position: absolute;
-  top: 2000px;
+  top: -2000px;
+  left: 2000px;
   width: 3px;
   height: 3px;
   box-shadow: inherit;
@@ -67,10 +70,10 @@
 /* Анимация */
 @keyframes animStar {
   from {
-    transform: translateY(0);
+    transform: translate(0, 0);
   }
   to {
-    transform: translateY(-2000px);
+    transform: translate(-2000px, 2000px);
   }
 }
 
