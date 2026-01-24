@@ -1,7 +1,7 @@
 .container {
   width: 100%;
   position: relative;
-  background-color: var(--card-color);
+  background: var(--card-color);
   height: 100%;
   display: flex;
   justify-content: center;

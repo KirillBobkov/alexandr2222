@@ -11,11 +11,10 @@ import { Final } from "../components/Final/Final";
 import { VideoWidget } from "../components/VideoWidget/VideoWidget";
 import { Button } from "../components/shared/Button/Button";
 import { PhotoGrid } from "../components/PhotoGrid/PhotoGrid";
-import ceremony_image_1 from "../images/ceremony_image_1.webp";
-import ceremony_image_2 from "../images/ceremony_image_2.webp";
-import ceremony_image_3 from "../images/ceremony_image_3.webp";
-import ceremony_image_4 from "../images/ceremony_image_4.webp";
+import { Collapsible, CollapsibleSection } from "../components/Collapsible/Collapsible";
+
 import finalStyles from "../styles/finalContent.module.css";
+import point from "../images/point.webp";
 
 import Image from "next/image";
 const videos = [
@@ -637,7 +636,7 @@ export default function () {
 
           <VisibilityManager as="div" className={contentStyles.textBlock}>
             <h3 className={contentStyles.title_small}>
-              <span className={contentStyles.textSymbol}>//</span>
+              <img src={point.src} alt="" className={contentStyles.textSymbol} />
               {"  "}
               Гармонизация эмоций
             </h3>
@@ -656,7 +655,7 @@ export default function () {
 
           <VisibilityManager as="div" className={contentStyles.textBlock}>
             <h3 className={contentStyles.title_small}>
-              <span className={contentStyles.textSymbol}>//</span>
+              <img src={point.src} alt="" className={contentStyles.textSymbol} />
               {"  "}
               Физическое восстановление
             </h3>
@@ -675,7 +674,7 @@ export default function () {
 
           <VisibilityManager as="div" className={contentStyles.textBlock}>
             <h3 className={contentStyles.title_small}>
-              <span className={contentStyles.textSymbol}>//</span>
+              <img src={point.src} alt="" className={contentStyles.textSymbol} />
               {"  "}
               Личностный рост и осознание предназначения
             </h3>
@@ -692,7 +691,7 @@ export default function () {
 
           <VisibilityManager as="div" className={contentStyles.textBlock}>
             <h3 className={contentStyles.title_small}>
-              <span className={contentStyles.textSymbol}>//</span>
+              <img src={point.src} alt="" className={contentStyles.textSymbol} />
               {"  "}
               Прокачка сексуальности
             </h3>
@@ -709,7 +708,7 @@ export default function () {
 
           <VisibilityManager as="div" className={contentStyles.textBlock}>
             <h3 className={contentStyles.title_small}>
-              <span className={contentStyles.textSymbol}>//</span>
+              <img src={point.src} alt="" className={contentStyles.textSymbol} />
               {"  "}
               Глубинная связь с природой и Высшими Силами
             </h3>
@@ -727,93 +726,57 @@ export default function () {
           <div style={{ height: "1px" }} />
 
           <VisibilityManager as="h3" className={contentStyles.title_middle}>
-            Исторические примеры использования Мухомора
+            Исторические примеры 
           </VisibilityManager>
 
-          <div className={contentStyles.imageContainer}>
-            <Image
-              src={ceremony_image_1}
-              alt="Мухоморный ретрит в Казани"
-              className={contentStyles.imageOverlay}
-            />
-            <div className={contentStyles.imageContent}>
-              <VisibilityManager as="div" className={contentStyles.textBlock}>
-                <h3 className={contentStyles.title_small}>
-                  <span className={contentStyles.textSymbol}>//</span>
-                  {"  "}
-                  Шаманизм и древние традиции
-                </h3>
-                <p className={contentStyles.textDescription}>
-                  В славянской культуре шаманы использовали Мухомор для общения
-                  с духами, целительства и предсказаний, а охотники — для
-                  повышения выносливости.
-                </p>
-              </VisibilityManager>
-            </div>
-          </div>
+          <VisibilityManager as="div" className={contentStyles.textBlock}>
+            <h3 className={contentStyles.title_small}>
+              <img src={point.src} alt="" className={contentStyles.textSymbol} />
+              {"  "}
+              Шаманизм и древние традиции
+            </h3>
+            <p className={contentStyles.textDescription}>
+              В славянской культуре шаманы использовали Мухомор для общения
+              с духами, целительства и предсказаний, а охотники — для
+              повышения выносливости.
+            </p>
+          </VisibilityManager>
 
-          <div className={contentStyles.imageContainer}>
-            <Image
-              src={ceremony_image_2}
-              alt="Мухоморный ретрит в Казани"
-              className={contentStyles.imageOverlay}
-            />
-            <div className={contentStyles.imageContent}>
-              <VisibilityManager as="div" className={contentStyles.textBlock}>
-                <h3 className={contentStyles.title_small}>
-                  <span className={contentStyles.textSymbol}>//</span>
-                  {"  "}
-                  Воинская доблесть и обострение чувств
-                </h3>
-                <p className={contentStyles.textDescription}>
-                  Викинги предположительно употребляли мухоморы, чтобы войти в
-                  боевой раж и стать бесстрашными в сражении.
-                </p>
-              </VisibilityManager>
-            </div>
-          </div>
+          <VisibilityManager as="div" className={contentStyles.textBlock}>
+            <h3 className={contentStyles.title_small}>
+              <img src={point.src} alt="" className={contentStyles.textSymbol} />
+              {"  "}
+              Воинская доблесть и обострение чувств
+            </h3>
+            <p className={contentStyles.textDescription}>
+              Викинги предположительно употребляли мухоморы, чтобы войти в
+              боевой раж и стать бесстрашными в сражении.
+            </p>
+          </VisibilityManager>
 
-          <div className={contentStyles.imageContainer}>
-            <Image
-              src={ceremony_image_3}
-              alt="Мухоморный ретрит в Казани"
-              className={contentStyles.imageOverlay}
-            />
-            <div className={contentStyles.imageContent}>
-              <VisibilityManager as="div" className={contentStyles.textBlock}>
-                <h3 className={contentStyles.title_small}>
-                  <span className={contentStyles.textSymbol}>//</span>
-                  {"  "}
-                  Духовные ритуалы индейцев
-                </h3>
-                <p className={contentStyles.textDescription}>
-                  В ритуалах североамериканских индейцев мухоморы использовались
-                  для очищения, улучшения самочувствия и получения видений.
-                </p>
-              </VisibilityManager>
-            </div>
-          </div>
+          <VisibilityManager as="div" className={contentStyles.textBlock}>
+            <h3 className={contentStyles.title_small}>
+              <img src={point.src} alt="" className={contentStyles.textSymbol} />
+              {"  "}
+              Духовные ритуалы индейцев
+            </h3>
+            <p className={contentStyles.textDescription}>
+              В ритуалах североамериканских индейцев мухоморы использовались
+              для очищения, улучшения самочувствия и получения видений.
+            </p>
+          </VisibilityManager>
 
-          <div className={contentStyles.imageContainer}>
-            <Image
-              src={ceremony_image_4}
-              alt="Мухоморный ретрит в Казани"
-              className={contentStyles.imageOverlay}
-            />
-            <div className={contentStyles.imageContent}>
-              <VisibilityManager as="div" className={contentStyles.textBlock}>
-                <h3 className={contentStyles.title_small}>
-                  <span className={contentStyles.textSymbol}>//</span>
-                  {"  "}
-                  Современные исследования
-                </h3>
-                <p className={contentStyles.textDescription}>
-                  В западной науке изучается влияние Мухомора на психику и его
-                  потенциал в терапии психических расстройств.
-                </p>
-              </VisibilityManager>
-            </div>
-          </div>
+          <VisibilityManager as="div" className={contentStyles.textBlock}>
+            <h3 className={contentStyles.title_small}>
+              <img src={point.src} alt="" className={contentStyles.textSymbol} />
+              {"  "}
+              Современные исследования
+            </h3>
+            <p className={contentStyles.textDescription}>
+              В западной науке изучается влияние Мухомора на психику и его
+              потенциал в терапии психических расстройств.
+            </p>
+          </VisibilityManager>
         </div>
 
         <div className={containerStyles.container}>
@@ -853,7 +816,7 @@ export default function () {
 
           <VisibilityManager as="div" className={contentStyles.textBlock}>
             <h3 className={contentStyles.title_small}>
-              <span className={contentStyles.textSymbol}>//</span>
+              <img src={point.src} alt="" className={contentStyles.textSymbol} />
               {"  "}
               Назначен проводником непосредственно от самого Мухомора (пояснение)
             </h3>
@@ -868,7 +831,7 @@ export default function () {
 
           <VisibilityManager as="div" className={contentStyles.textBlock}>
             <h3 className={contentStyles.title_small}>
-              <span className={contentStyles.textSymbol}>//</span>
+              <img src={point.src} alt="" className={contentStyles.textSymbol} />
               {"  "}
               Глубокая работа с подсознанием
             </h3>
@@ -882,7 +845,7 @@ export default function () {
 
           <VisibilityManager as="div" className={contentStyles.textBlock}>
             <h3 className={contentStyles.title_small}>
-              <span className={contentStyles.textSymbol}>//</span>
+              <img src={point.src} alt="" className={contentStyles.textSymbol} />
               {"  "}
               Быстрый, но эффективный формат
             </h3>
@@ -896,7 +859,7 @@ export default function () {
 
           <VisibilityManager as="div" className={contentStyles.textBlock}>
             <h3 className={contentStyles.title_small}>
-              <span className={contentStyles.textSymbol}>//</span>
+              <img src={point.src} alt="" className={contentStyles.textSymbol} />
               {"  "}
               Безопасность и грамотная интеграция
             </h3>
@@ -909,7 +872,7 @@ export default function () {
 
           <VisibilityManager as="div" className={contentStyles.textBlock}>
             <h3 className={contentStyles.title_small}>
-              <span className={contentStyles.textSymbol}>//</span>
+              <img src={point.src} alt="" className={contentStyles.textSymbol} />
               {"  "}
               Индивидуальная дозировка и перепроверка через кинезиологический тест
             </h3>
@@ -938,53 +901,122 @@ export default function () {
         </div>
       <VideoWidget videos={videos} />
         <div className={containerStyles.container}>
-          <VisibilityManager as="h3" className={contentStyles.title_middle}>
-            Как проходит мухоморный ретрит?
-          </VisibilityManager>
+          <Collapsible title="Программа ретрита" defaultOpen={false}>
+            <CollapsibleSection title="Подготовка">
+              <p className={contentStyles.textDescription}>
+                 • Мы с вами знакомимся, уточняем намерение, причину обращения,
+                пробовали ли вы мухоморы ранее, употребляете ли алкоголь,
+                наркотики и другие психоактивные вещества. Конфиденциально.
+              </p>
+              <p className={contentStyles.textDescription}>
+                 • По необходимости заменяем некоторые синтетические препараты на
+                растительные.
+              </p>
+              <p className={contentStyles.textDescription}>
+                 • Корректируем диету с учётом индивидуальных особенностей.
+                Проводим сессию работы с подсознанием для настройки на
+                взаимодействие с мухомором.
+              </p>
+              <p className={contentStyles.textDescription}>
+                 • Составляем дополнительные рекомендации для получения наиболее
+                качественного опыта.
+              </p>
+              <p className={contentStyles.textDescription}>
+                 • Уточняем готовность вашего организма к трипу при помощи
+                кинезиологического теста.
+              </p>
+            </CollapsibleSection>
 
-          <VisibilityManager as="div" className={contentStyles.textBlock}>
-            <h3 className={contentStyles.title_small}>
-              <span className={contentStyles.textSymbol}>//</span>
-              {"  "}
-              Подготовка
-            </h3>
-            <p className={contentStyles.textDescription}>
-              Вы получаете рекомендации по диете и грамотную настройку на
-              погружение. Это позволяет сделать церемонию более осмысленной,
-              безопасной и продуктивной.
-            </p>
-          </VisibilityManager>
+            <CollapsibleSection title="Встреча">
+              <p className={contentStyles.textDescription}>
+                 • По прибытии, вас ждёт трансфер. В загородном доме вас встречают
+                наши люди и котик по имени «Кайдзи». 😼 Кстати, если вы страдаете
+                от аллергии на кошек, то через работу с подсознанием я
+                заблаговременно избавляю вас от этой проблемы — в подарок.
+              </p>
+              <p className={contentStyles.textDescription}>
+                 • Определяем вашу идеальную дозировку пантерных мухоморов и дважды
+                перепроверяем точность через мышечное тестирование.
+              </p>
+              <p className={contentStyles.textDescription}>
+                 • Пока готовится «сома», проводим для вас финальный инструктаж
+                перед трипом.
+              </p>
+              <p className={contentStyles.textDescription}> • Выпиваете отвар.</p>
+              <p className={contentStyles.textDescription}>
+                 • Надеваем специальное снаряжение и помогаем надёжно
+                зафиксироваться для максимальной безопасности во время
+                путешествия.
+              </p>
+              <p className={contentStyles.textDescription}>
+                 • Включаем гармоничное звуковое сопровождение.
+              </p>
+            </CollapsibleSection>
 
-          <VisibilityManager as="div" className={contentStyles.textBlock}>
-            <h3 className={contentStyles.title_small}>
-              <span className={contentStyles.textSymbol}>//</span>
-              {"  "}
-              Священная церемония
-            </h3>
-            <p className={contentStyles.textDescription}>
-              Подбирается индивидуальная дозировка.
-            </p>
-            <p className={contentStyles.textDescription}>
-              Мухомор употребляется в виде сомы, с добавлением других
-              Растений-Учителей, разрешённых в РФ.
-            </p>
-            <p className={contentStyles.textDescription}>
-              Проводятся очистительные и исцеляющие ритуалы, полученные мною от
-              Высших Сил.
-            </p>
-          </VisibilityManager>
+            <CollapsibleSection title="Мистерия">
+              <p className={contentStyles.textDescription}>
+                 • В начале церемонии, я провожу традиционный дымовой обряд с
+                использованием датуры, можжевельника и калифорнийского шалфея.
+              </p>
+              <p className={contentStyles.textDescription}>
+                 • Погружение происходит в спокойном состоянии умиротворения,
+                зачастую человек как бы засыпает, отправляясь в путешествие.
+              </p>
+              <p className={contentStyles.textDescription}>
+                Грибы проводят «операцию» по исцелению и, как правило, вводят
+                человека в своего рода анестезию, которая может сопровождаться
+                мистическим опытом.
+              </p>
+              <p className={contentStyles.textDescription}>
+                Даже если внутренние переживания в трипе проходят
+                затруднительно, человек потом зачастую этого просто не помнит.
+              </p>
+              <p className={contentStyles.textDescription}>
+                Имея опыт проведения более 300 трипов за один только 2025-й год,
+                наш коллектив непрерывно обеспечивает вам максимальную поддержку
+                на всех уровнях.
+              </p>
+              <p className={contentStyles.textDescription}>
+                Вы постоянно находитесь под присмотром. В случае необходимости,
+                я совершаю разного рода ритуалы, направленные на улучшение
+                вашего состояния.
+              </p>
+              <p className={contentStyles.textDescription}>
+                Сам сюжет путешествия — это всегда эксклюзив. Мухомор даёт людям
+                лучшее, что нужно на данном этапе жизненного пути.
+              </p>
+            </CollapsibleSection>
 
-          <VisibilityManager as="div" className={contentStyles.textBlock}>
-            <h3 className={contentStyles.title_small}>
-              <span className={contentStyles.textSymbol}>//</span>
-              {"  "}
-              Интеграция опыта
-            </h3>
-            <p className={contentStyles.textDescription}>
-              После ретрита, помогу вам осознать смысл полученного опыта, дать
-              ему верное применение в жизни и закрепить трансформацию.
-            </p>
-          </VisibilityManager>
+            <CollapsibleSection title="Долёживание">
+              <p className={contentStyles.textDescription}>
+                В какой-то момент, вы возвращаетесь в сознание, но трип ещё может
+                продолжаться, поэтому важно дождаться полностью адекватного
+                состояния.
+              </p>
+            </CollapsibleSection>
+
+            <CollapsibleSection title="Интеграция">
+              <p className={contentStyles.textDescription}>
+                Следуя специальному протоколу, мы убеждаемся в том, что вы пришли
+                в себя. По таймингу, в определённой последовательности,
+                освобождаем вас от фиксаторов.
+              </p>
+              <p className={contentStyles.textDescription}>
+                Теперь вы можете комфортно принять душ и вкусный ужин из полезных
+                продуктов.
+              </p>
+              <p className={contentStyles.textDescription}>
+                 •  В течение следующих трёх месяцев, вы получаете ежедневную
+                персональную программу микродозинга мухоморов, рекомендации по
+                другим натуральным средствам и еженедельные проработки подсознания
+                по запросам.
+              </p>
+
+                  <p className={contentStyles.textDescription}>
+                 Если не знаешь что делать, тебе точно к нам.
+              </p>
+            </CollapsibleSection>
+          </Collapsible>
 
           <div style={{ height: "1px" }} />
           <VisibilityManager as="h3" className={contentStyles.title_middle}>
@@ -993,7 +1025,7 @@ export default function () {
 
           <VisibilityManager as="div" className={contentStyles.textBlock}>
             <h3 className={contentStyles.title_small}>
-              <span className={contentStyles.textSymbol}>//</span>
+              <img src={point.src} alt="" className={contentStyles.textSymbol} />
               {"  "}
               Токсичность и побочные эффекты
             </h3>
@@ -1007,7 +1039,7 @@ export default function () {
 
           <VisibilityManager as="div" className={contentStyles.textBlock}>
             <h3 className={contentStyles.title_small}>
-              <span className={contentStyles.textSymbol}>//</span>
+              <img src={point.src} alt="" className={contentStyles.textSymbol} />
               {"  "}
               Риск десоциализации
             </h3>
@@ -1020,7 +1052,7 @@ export default function () {
 
           <VisibilityManager as="div" className={contentStyles.textBlock}>
             <h3 className={contentStyles.title_small}>
-              <span className={contentStyles.textSymbol}>//</span>
+              <img src={point.src} alt="" className={contentStyles.textSymbol} />
               {"  "}
               Юридические аспекты
             </h3>

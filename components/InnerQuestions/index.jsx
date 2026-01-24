@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./styles.module.css";
 import contentStyles from "../../styles/contentStyles.module.css";
 import { VisibilityManager } from "../shared/VisibilityManager";
+import point from "../../images/point.webp";
 
 export const InnerQuestions = ({
   title,
@@ -42,7 +43,7 @@ export const QuestionItem = ({ title }) => {
     return title ? (
       <li className={styles.textBlock + ' ' + styles.item}>
         <h3 className={contentStyles.title_small}>
-          <span className={contentStyles.textSymbol}>// </span>
+          <img src={point.src} alt="" className={contentStyles.textSymbol} />
           {title}
         </h3>
       </li>

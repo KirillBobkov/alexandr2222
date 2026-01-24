@@ -6,9 +6,10 @@
 
 
 .textSymbol {
-  color: var(--accent);
+  height: 20px;
+  width: auto;
   margin-right: 5px;
-
+  vertical-align: middle;
 }
 
 .title_middle {
@@ -16,7 +17,10 @@
   font-weight: 700;
   line-height: 40px;
   text-transform: uppercase;
-  color: var(--accent-2);
+
+  background: var(--accent-22);
+    color: transparent;
+    background-clip: text;
 }
 
 .title_small {
@@ -36,7 +40,11 @@
   max-width: 1185px;
   margin: 0 auto;
   margin-bottom: 40px;
-  color: var(--accent-2);
+
+  background: var(--accent-22);
+    color: transparent;
+    background-clip: text;
+
 }
 
 .message {

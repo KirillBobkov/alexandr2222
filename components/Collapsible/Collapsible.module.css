@@ -1,0 +1,88 @@
+.collapsible {
+  border-radius: 30px;
+  margin-bottom: 20px;
+  background: var(--card-color);
+  padding: 0 30px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 20px 0;
+  transition: color 500ms ease-in-out;
+  gap: 20px;
+}
+
+.header:hover {
+  color: var(--accent);
+}
+
+.icon {
+  font-size: 32px;
+  font-weight: 300;
+  color: var(--accent);
+  min-width: 30px;
+  text-align: center;
+}
+
+.content {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 600ms ease-in-out;
+}
+
+.visible {
+  max-height: 5000px;
+}
+
+.inner {
+  padding-bottom: 20px;
+}
+
+.section {
+  border-radius: 20px;
+  margin-bottom: 20px;
+  transition: all 300ms ease-in-out;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  cursor: pointer;
+  gap: 15px;
+  transition: color 300ms ease-in-out;
+}
+
+.sectionIcon {
+  font-size: 24px;
+  font-weight: 300;
+  min-width: 24px;
+  text-align: center;
+}
+
+.symbol {
+  margin-right: 13px;
+}
+
+.sectionContent {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 500ms ease-in-out;
+}
+
+.sectionVisible {
+  max-height: 3000px;
+}
+
+.sectionVisible p {
+  padding-top: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .collapsible {
+    padding: 0 20px;
+  }
+}

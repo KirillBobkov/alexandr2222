@@ -35,7 +35,7 @@
   border-radius: 35px;
   letter-spacing: 0.14em;
   color: #ffffff;
-  background-color: var(--button-opacity);
+  background: var(--card-color);
   text-transform: uppercase;
   visibility: visible;
   cursor: pointer;
@@ -58,7 +58,7 @@
   width: 25%;
   position: absolute;
   border-radius: 35px;
-  background-color: var(--accent-3);
+  background: var(--accent-33);
   animation: pulseWidth 1.5s ease-in-out infinite alternate;
 }
 
@@ -71,7 +71,7 @@
   height: 100%;
   position: absolute;
   border-radius: 35px;
-  background-color: var(--accent-3);
+  background: var(--accent-33);
 }
 
 .button:disabled {
@@ -81,7 +81,7 @@
 }
 
 .success {
-  background-color: var(--accent-3);
+  background: var(--accent-33);
   opacity: 0.5!important;
 }
 

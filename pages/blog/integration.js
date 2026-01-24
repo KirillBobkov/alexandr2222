@@ -8,6 +8,7 @@ import containerStyles from "../../styles/container.module.css";
 import contentStyles from "../../styles/contentStyles.module.css";
 import secondary_preview_19 from "../../images/secondary_preview_19.webp";
 import { Button } from "../../components/shared/Button/Button";
+import point from "../../images/point.webp";
 
 const schemaOrg = {
   "@context": "https://schema.org",
@@ -127,7 +128,7 @@ export default function () {
 
           <VisibilityManager as="div" className={contentStyles.textBlock}>
             <h3 className={contentStyles.title_small}>
-              <span className={contentStyles.textSymbol}>//</span>
+              <img src={point.src} alt="" className={contentStyles.textSymbol} />
               {"  "}
               «Духовный бомж»
             </h3>
@@ -138,7 +139,7 @@ export default function () {
 
           <VisibilityManager as="div" className={contentStyles.textBlock}>
             <h3 className={contentStyles.title_small}>
-              <span className={contentStyles.textSymbol}>//</span>
+              <img src={point.src} alt="" className={contentStyles.textSymbol} />
               {"  "}
               Конфликт с реальностью
             </h3>
@@ -149,7 +150,7 @@ export default function () {
 
           <VisibilityManager as="div" className={contentStyles.textBlock}>
             <h3 className={contentStyles.title_small}>
-              <span className={contentStyles.textSymbol}>//</span>
+              <img src={point.src} alt="" className={contentStyles.textSymbol} />
               {"  "}
               Зависимость от духовных практик
             </h3>
@@ -169,7 +170,7 @@ export default function () {
 
           <VisibilityManager as="div" className={contentStyles.textBlock}>
             <h3 className={contentStyles.title_small}>
-              <span className={contentStyles.textSymbol}>//</span>
+              <img src={point.src} alt="" className={contentStyles.textSymbol} />
               {"  "}
               Дереализация/деперсонализация
             </h3>
@@ -180,7 +181,7 @@ export default function () {
 
           <VisibilityManager as="div" className={contentStyles.textBlock}>
             <h3 className={contentStyles.title_small}>
-              <span className={contentStyles.textSymbol}>//</span>
+              <img src={point.src} alt="" className={contentStyles.textSymbol} />
               {"  "}
               Паранойя или мания избранности
             </h3>
@@ -191,7 +192,7 @@ export default function () {
 
           <VisibilityManager as="div" className={contentStyles.textBlock}>
             <h3 className={contentStyles.title_small}>
-              <span className={contentStyles.textSymbol}>//</span>
+              <img src={point.src} alt="" className={contentStyles.textSymbol} />
               {"  "}
               Эмоциональная нестабильность
             </h3>
@@ -207,7 +208,7 @@ export default function () {
 
           <VisibilityManager as="div" className={contentStyles.textBlock}>
             <h3 className={contentStyles.title_small}>
-              <span className={contentStyles.textSymbol}>//</span>
+              <img src={point.src} alt="" className={contentStyles.textSymbol} />
               {"  "}
               Работа с проводником
             </h3>
@@ -218,7 +219,7 @@ export default function () {
 
           <VisibilityManager as="div" className={contentStyles.textBlock}>
             <h3 className={contentStyles.title_small}>
-              <span className={contentStyles.textSymbol}>//</span>
+              <img src={point.src} alt="" className={contentStyles.textSymbol} />
               {"  "}
               Постепенное внедрение изменений
             </h3>
@@ -229,7 +230,7 @@ export default function () {
 
           <VisibilityManager as="div" className={contentStyles.textBlock}>
             <h3 className={contentStyles.title_small}>
-              <span className={contentStyles.textSymbol}>//</span>
+              <img src={point.src} alt="" className={contentStyles.textSymbol} />
               {"  "}
               Баланс духовного и материального
             </h3>
@@ -240,7 +241,7 @@ export default function () {
 
           <VisibilityManager as="div" className={contentStyles.textBlock}>
             <h3 className={contentStyles.title_small}>
-              <span className={contentStyles.textSymbol}>//</span>
+              <img src={point.src} alt="" className={contentStyles.textSymbol} />
               {"  "}
               Поддержка социума
             </h3>
@@ -251,7 +252,7 @@ export default function () {
 
           <VisibilityManager as="div" className={contentStyles.textBlock}>
             <h3 className={contentStyles.title_small}>
-              <span className={contentStyles.textSymbol}>//</span>
+              <img src={point.src} alt="" className={contentStyles.textSymbol} />
               {"  "}
               Отказ от повторных погружений без интеграции
             </h3>

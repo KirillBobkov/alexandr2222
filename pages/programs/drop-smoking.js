@@ -10,6 +10,7 @@ import finalStyles from "../../styles/finalContent.module.css";
 import secondary_preview_6 from "../../images/secondary_preview_6.webp";
 import { Button } from "../../components/shared/Button/Button";
 import { Final } from "../../components/Final/Final";
+import point from "../../images/point.webp";
 
 const schemaOrg = {
   "@context": "https://schema.org",
@@ -120,7 +121,7 @@ export default function () {
 
           <VisibilityManager as="div" className={contentStyles.textBlock}>
             <h3 className={contentStyles.title_small}>
-              <span className={contentStyles.textSymbol}>//</span>
+              <img src={point.src} alt="" className={contentStyles.textSymbol} />
               {"  "}
               {"Снижение риска развития рака"}
             </h3>
@@ -133,7 +134,7 @@ export default function () {
 
           <VisibilityManager as="div" className={contentStyles.textBlock}>
             <h3 className={contentStyles.title_small}>
-              <span className={contentStyles.textSymbol}>//</span>
+              <img src={point.src} alt="" className={contentStyles.textSymbol} />
               {"  "}
               {"Улучшение работы сердечно-сосудистой системы"}
             </h3>
@@ -146,7 +147,7 @@ export default function () {
 
           <VisibilityManager as="div" className={contentStyles.textBlock}>
             <h3 className={contentStyles.title_small}>
-              <span className={contentStyles.textSymbol}>//</span>
+              <img src={point.src} alt="" className={contentStyles.textSymbol} />
               {"  "}
               {"Улучшение функции легких"}
             </h3>
@@ -159,7 +160,7 @@ export default function () {
 
           <VisibilityManager as="div" className={contentStyles.textBlock}>
             <h3 className={contentStyles.title_small}>
-              <span className={contentStyles.textSymbol}>//</span>
+              <img src={point.src} alt="" className={contentStyles.textSymbol} />
               {"  "}
               {"Снижение риска респираторных заболеваний"}
             </h3>
@@ -171,7 +172,7 @@ export default function () {
 
           <VisibilityManager as="div" className={contentStyles.textBlock}>
             <h3 className={contentStyles.title_small}>
-              <span className={contentStyles.textSymbol}>//</span>
+              <img src={point.src} alt="" className={contentStyles.textSymbol} />
               {"  "}
               {"Улучшение иммунитета"}
             </h3>
@@ -182,7 +183,7 @@ export default function () {
 
           <VisibilityManager as="div" className={contentStyles.textBlock}>
             <h3 className={contentStyles.title_small}>
-              <span className={contentStyles.textSymbol}>//</span>
+              <img src={point.src} alt="" className={contentStyles.textSymbol} />
               {"  "}
               {"Снижение риска развития диабета 2 типа"}
             </h3>
@@ -194,7 +195,7 @@ export default function () {
 
           <VisibilityManager as="div" className={contentStyles.textBlock}>
             <h3 className={contentStyles.title_small}>
-              <span className={contentStyles.textSymbol}>//</span>
+              <img src={point.src} alt="" className={contentStyles.textSymbol} />
               {"  "}
               {"Улучшение фертильности"}
             </h3>
@@ -205,7 +206,7 @@ export default function () {
 
           <VisibilityManager as="div" className={contentStyles.textBlock}>
             <h3 className={contentStyles.title_small}>
-              <span className={contentStyles.textSymbol}>//</span>
+              <img src={point.src} alt="" className={contentStyles.textSymbol} />
               {"  "}
               {"Улучшение состояния кожи, волос и зубов"}
             </h3>
@@ -216,7 +217,7 @@ export default function () {
           </VisibilityManager>
           <VisibilityManager as="div" className={contentStyles.textBlock}>
             <h3 className={contentStyles.title_small}>
-              <span className={contentStyles.textSymbol}>//</span>
+              <img src={point.src} alt="" className={contentStyles.textSymbol} />
               {"  "}
               {"Увеличение продолжительности жизни"}
             </h3>
@@ -249,7 +250,7 @@ export default function () {
 
           <VisibilityManager as="div" className={contentStyles.textBlock}>
             <h3 className={contentStyles.title_small}>
-              <span className={contentStyles.textSymbol}>//</span>
+              <img src={point.src} alt="" className={contentStyles.textSymbol} />
               {"  "}
               {"Повышение уверенности в себе"}
             </h3>
@@ -261,7 +262,7 @@ export default function () {
 
           <VisibilityManager as="div" className={contentStyles.textBlock}>
             <h3 className={contentStyles.title_small}>
-              <span className={contentStyles.textSymbol}>//</span>
+              <img src={point.src} alt="" className={contentStyles.textSymbol} />
               {"  "}
               {"Снижение уровня стресса и тревоги"}
             </h3>
@@ -274,7 +275,7 @@ export default function () {
 
           <VisibilityManager as="div" className={contentStyles.textBlock}>
             <h3 className={contentStyles.title_small}>
-              <span className={contentStyles.textSymbol}>//</span>
+              <img src={point.src} alt="" className={contentStyles.textSymbol} />
               {"  "}
               {"Улучшение настроения"}
             </h3>
@@ -286,7 +287,7 @@ export default function () {
 
           <VisibilityManager as="div" className={contentStyles.textBlock}>
             <h3 className={contentStyles.title_small}>
-              <span className={contentStyles.textSymbol}>//</span>
+              <img src={point.src} alt="" className={contentStyles.textSymbol} />
               {"  "}
               {"Снижение риска депрессии"}
             </h3>
@@ -298,7 +299,7 @@ export default function () {
 
           <VisibilityManager as="div" className={contentStyles.textBlock}>
             <h3 className={contentStyles.title_small}>
-              <span className={contentStyles.textSymbol}>//</span>
+              <img src={point.src} alt="" className={contentStyles.textSymbol} />
               {"  "}
               {"Повышение когнитивных функций"}
             </h3>
@@ -312,7 +313,7 @@ export default function () {
           </VisibilityManager>
           <VisibilityManager as="div" className={contentStyles.textBlock}>
             <h3 className={contentStyles.title_small}>
-              <span className={contentStyles.textSymbol}>//</span>
+              <img src={point.src} alt="" className={contentStyles.textSymbol} />
               {"  "}
               {"Улучшение отношений с окружающими"}
             </h3>
@@ -325,7 +326,7 @@ export default function () {
 
           <VisibilityManager as="div" className={contentStyles.textBlock}>
             <h3 className={contentStyles.title_small}>
-              <span className={contentStyles.textSymbol}>//</span>
+              <img src={point.src} alt="" className={contentStyles.textSymbol} />
               {"  "}
               {"Избавление от неприятного запаха"}
             </h3>
@@ -337,7 +338,7 @@ export default function () {
 
           <VisibilityManager as="div" className={contentStyles.textBlock}>
             <h3 className={contentStyles.title_small}>
-              <span className={contentStyles.textSymbol}>//</span>
+              <img src={point.src} alt="" className={contentStyles.textSymbol} />
               {"  "}
               {"Пример для подражания"}
             </h3>
@@ -348,7 +349,7 @@ export default function () {
 
           <VisibilityManager as="div" className={contentStyles.textBlock}>
             <h3 className={contentStyles.title_small}>
-              <span className={contentStyles.textSymbol}>//</span>
+              <img src={point.src} alt="" className={contentStyles.textSymbol} />
               {"  "}
               {"Повышение социальной активности"}
             </h3>
@@ -364,7 +365,7 @@ export default function () {
 
           <VisibilityManager as="div" className={contentStyles.textBlock}>
             <h3 className={contentStyles.title_small}>
-              <span className={contentStyles.textSymbol}>//</span>
+              <img src={point.src} alt="" className={contentStyles.textSymbol} />
               {"  "}
               {"Экономия денег"}
             </h3>
@@ -376,7 +377,7 @@ export default function () {
 
           <VisibilityManager as="div" className={contentStyles.textBlock}>
             <h3 className={contentStyles.title_small}>
-              <span className={contentStyles.textSymbol}>//</span>
+              <img src={point.src} alt="" className={contentStyles.textSymbol} />
               {"  "}
               {"Меньшие затраты на медицинское обслуживание"}
             </h3>
@@ -388,7 +389,7 @@ export default function () {
 
           <VisibilityManager as="div" className={contentStyles.textBlock}>
             <h3 className={contentStyles.title_small}>
-              <span className={contentStyles.textSymbol}>//</span>
+              <img src={point.src} alt="" className={contentStyles.textSymbol} />
               {"  "}
               {
                 "Возможность использовать сэкономленные деньги на что-то приятное"
@@ -405,7 +406,7 @@ export default function () {
 
           <VisibilityManager as="div" className={contentStyles.textBlock}>
             <h3 className={contentStyles.title_small}>
-              <span className={contentStyles.textSymbol}>//</span>
+              <img src={point.src} alt="" className={contentStyles.textSymbol} />
               {"  "}
               {"Улучшение вкусовых ощущений"}
             </h3>
@@ -416,7 +417,7 @@ export default function () {
 
           <VisibilityManager as="div" className={contentStyles.textBlock}>
             <h3 className={contentStyles.title_small}>
-              <span className={contentStyles.textSymbol}>//</span>
+              <img src={point.src} alt="" className={contentStyles.textSymbol} />
               {"  "}
               {"Улучшение обоняния"}
             </h3>
@@ -427,7 +428,7 @@ export default function () {
 
           <VisibilityManager as="div" className={contentStyles.textBlock}>
             <h3 className={contentStyles.title_small}>
-              <span className={contentStyles.textSymbol}>//</span>
+              <img src={point.src} alt="" className={contentStyles.textSymbol} />
               {"  "}
               {"Общее улучшение качества жизни"}
             </h3>

@@ -10,6 +10,7 @@ import secondary_preview_15 from "../../images/secondary_preview_15.webp"; // Yo
 import { Button } from "../../components/shared/Button/Button";
 import { Final } from "../../components/Final/Final";
 import finalStyles from "../../styles/finalContent.module.css";
+import point from "../../images/point.webp";
 
 const schemaOrg = {
   "@context": "https://schema.org",
@@ -126,7 +127,7 @@ export default function () {
 
           <VisibilityManager as="div" className={contentStyles.textBlock}>
             <h3 className={contentStyles.title_small}>
-              <span className={contentStyles.textSymbol}>//</span>
+              <img src={point.src} alt="" className={contentStyles.textSymbol} />
               {"  "}
               {"Диагностика"}
             </h3>
@@ -137,7 +138,7 @@ export default function () {
 
           <VisibilityManager as="div" className={contentStyles.textBlock}>
             <h3 className={contentStyles.title_small}>
-              <span className={contentStyles.textSymbol}>//</span>
+              <img src={point.src} alt="" className={contentStyles.textSymbol} />
               {"  "}
               {"Проработка на глубинном уровне"}
             </h3>
@@ -149,7 +150,7 @@ export default function () {
 
           <VisibilityManager as="div" className={contentStyles.textBlock}>
             <h3 className={contentStyles.title_small}>
-              <span className={contentStyles.textSymbol}>//</span>
+              <img src={point.src} alt="" className={contentStyles.textSymbol} />
               {"  "}
               {"Результат: ваше тело становится союзником"}
             </h3>

@@ -7,7 +7,7 @@ export const ReasonCard = ({ card, index, badgeText, className }) => {
         {badgeText ? (
           <span className={styles.cardBadge}>{badgeText}</span>
         ) : (
-          <span className={styles.cardNumber}>{String(index + 1).padStart(2, '0')}</span>
+          <span className={styles.cardNumber}>{String(index + 1)}</span>
         )}
       </div>
       {card.title ? <h3 className={styles.cardTitle}>{card.title}</h3> : null}

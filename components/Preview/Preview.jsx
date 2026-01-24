@@ -32,7 +32,7 @@ export const Preview = () => {
             <br/>
             портал мечты
           </h1>
-          <div className={styles.telegram_container}>
+          <div className={styles.telegram_container }>
             <a
               href="https://t.me/chronics44"
               className={styles.telegram_button}

@@ -4,6 +4,7 @@ import { VisibilityManager } from "../shared/VisibilityManager";
 import chart from "../../images/chart.webp";
 import Image from "next/image";
 import contentStyles from "../../styles/contentStyles.module.css";
+import point from "../../images/point.webp";
 
 export const Suggest = () => {
   const [loaded, setLoaded] = React.useState(false);
@@ -63,7 +64,7 @@ const TextBlock = ({ title, desc }) => {
     <div className={styles.textBlock}>
       <h3 className={styles.textTitle}>
         {" "}
-        <span className={styles.textSymbol}>// </span>
+        <img src={point.src} alt="" className={styles.textSymbol} />
         {title}
       </h3>
       <p className={styles.textDescription}>{desc}</p>

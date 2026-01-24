@@ -10,6 +10,7 @@ import secondary_preview_14 from "../../images/secondary_preview_14.webp"; // Yo
 import { Button } from "../../components/shared/Button/Button";
 import { Final } from "../../components/Final/Final";
 import finalStyles from "../../styles/finalContent.module.css";
+import point from "../../images/point.webp";
 const schemaOrg = {
   "@context": "https://schema.org",
   "@type": "Service",
@@ -115,7 +116,7 @@ export default function () {
 
           <VisibilityManager as="div" className={contentStyles.textBlock}>
             <h3 className={contentStyles.title_small}>
-              <span className={contentStyles.textSymbol}>//</span>
+              <img src={point.src} alt="" className={contentStyles.textSymbol} />
               {"  "}
               {"Диагностика за 1 сессию"}
             </h3>
@@ -127,7 +128,7 @@ export default function () {
 
           <VisibilityManager as="div" className={contentStyles.textBlock}>
             <h3 className={contentStyles.title_small}>
-              <span className={contentStyles.textSymbol}>//</span>
+              <img src={point.src} alt="" className={contentStyles.textSymbol} />
               {"  "}
               {"Проработка на уровне подсознания"}
             </h3>
@@ -139,7 +140,7 @@ export default function () {
 
           <VisibilityManager as="div" className={contentStyles.textBlock}>
             <h3 className={contentStyles.title_small}>
-              <span className={contentStyles.textSymbol}>//</span>
+              <img src={point.src} alt="" className={contentStyles.textSymbol} />
               {"  "}
               {"Результат: жизнь без ограничений"}
             </h3>

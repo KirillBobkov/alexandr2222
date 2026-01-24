@@ -3,6 +3,7 @@ import styles from "./Helping.module.css"; // Adjust the path as necessary
 import { VisibilityManager } from "../shared/VisibilityManager";
 import { Button } from "../shared/Button/Button.jsx";
 import contentStyles from "../../styles/contentStyles.module.css";
+import point from "../../images/point.webp";
 
 export const Helping = ({
   blocks,
@@ -41,7 +42,7 @@ const TextBlock = ({ title, desc }) => {
     <div className={styles.textBlock}>
       {title ? (
         <h3 className={styles.textTitle}>
-          <span className={styles.textSymbol}>//</span>
+          <img src={point.src} alt="" className={styles.textSymbol} />
           {"  "}
           {title}
         </h3>

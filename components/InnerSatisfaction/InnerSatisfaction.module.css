@@ -1,10 +1,7 @@
 .container {
-  background-color: var(--card-color);
+  background: var(--card-color);
 }
 
-.container .title {
-  color: var(--accent-2);;
-}
 
 .block {
   max-width: 1285px;
@@ -14,8 +11,6 @@
   flex-direction: column;
   gap: 60px;
 }
-
-
 
 .content {
   display: flex;

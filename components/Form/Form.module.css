@@ -1,5 +1,5 @@
 .container {
-  background-color: var(--card-color);
+  background: var(--card-color);
 }
 
 .form {
@@ -15,10 +15,6 @@
 
 .form--two-items {
   justify-content: space-between;
-}
-
-.form_title {
-  color: var(--accent-2) !important;
 }
 
 
@@ -81,7 +77,7 @@
   cursor: pointer;
   color: inherit;
   font-weight: bold;
-  color: var(--accent-2);
+  color: var(--accent);
 }
 
 .form-checkbox__label {

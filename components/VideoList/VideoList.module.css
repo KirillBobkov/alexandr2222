@@ -4,7 +4,7 @@
   flex-direction: column;
   overflow: hidden;
   border-radius: 20px;
-  background-color: var(--card-color);
+  background: var(--card-color);
 }
 
 .header {
@@ -12,11 +12,12 @@
 }
 
 .title {
-  color: var(--accent-2);;
+
   font-size: 24px;
   line-height: 40px;
   font-weight: 700;
   position: relative;
+  margin-bottom: 0;
 }
 
 .textSymbol {
@@ -26,7 +27,7 @@
 }
 
 .listWrapper {
-  background-color: var(--card-color);
+  background: var(--card-color);
   overflow: hidden;
 }
 
