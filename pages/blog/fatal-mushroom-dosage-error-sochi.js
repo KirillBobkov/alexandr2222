@@ -12,8 +12,8 @@ import { Button } from "../../components/shared/Button/Button";
 const schemaOrg = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "Трагедия в Сочи: как ошибка с дозировкой Мухомора стала фатальной",
-  "description": "Недавно в Сочи на одном из ретритов скончался молодой IT-специалист. Причиной смерти стала неправильно подобранная дозировка Мухомора.",
+"headline": "Сочинская трагедия: анализ фатальной ошибки дозировки Мухомора и предупреждения",
+  "description": "Последнее время участились случаи серьезных осложнений при不当使用 мухомора. Недавно в Сочи на трансформационном ретрите произошла трагедия — скончался молодой IT-специалист в результате критической ошибки в дозировке Мухомора. Проведем детальный анализ причин случившегося и сформулируем четкие рекомендации по безопасному применению.",
   "image": "/images/secondary_preview_28.webp", // Update if Next.js mangles names, e.g., /_next/static/media/secondary_preview_tragedy.webp
   "url": "https://alexandrvasilev.ru/blog/fatal-mushroom-dosage-error-sochi",
   "inLanguage": "ru",
