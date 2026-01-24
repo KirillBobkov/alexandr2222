@@ -637,7 +637,6 @@ export default function () {
           <VisibilityManager as="div" className={contentStyles.textBlock}>
             <h3 className={contentStyles.title_small}>
               <img src={point.src} alt="" className={contentStyles.textSymbol} />
-              {"  "}
               Гармонизация эмоций
             </h3>
             <p className={contentStyles.textDescription}>
@@ -656,7 +655,6 @@ export default function () {
           <VisibilityManager as="div" className={contentStyles.textBlock}>
             <h3 className={contentStyles.title_small}>
               <img src={point.src} alt="" className={contentStyles.textSymbol} />
-              {"  "}
               Физическое восстановление
             </h3>
             <p className={contentStyles.textDescription}>
@@ -675,7 +673,6 @@ export default function () {
           <VisibilityManager as="div" className={contentStyles.textBlock}>
             <h3 className={contentStyles.title_small}>
               <img src={point.src} alt="" className={contentStyles.textSymbol} />
-              {"  "}
               Личностный рост и осознание предназначения
             </h3>
             <p className={contentStyles.textDescription}>
@@ -692,7 +689,6 @@ export default function () {
           <VisibilityManager as="div" className={contentStyles.textBlock}>
             <h3 className={contentStyles.title_small}>
               <img src={point.src} alt="" className={contentStyles.textSymbol} />
-              {"  "}
               Прокачка сексуальности
             </h3>
             <p className={contentStyles.textDescription}>
@@ -709,7 +705,6 @@ export default function () {
           <VisibilityManager as="div" className={contentStyles.textBlock}>
             <h3 className={contentStyles.title_small}>
               <img src={point.src} alt="" className={contentStyles.textSymbol} />
-              {"  "}
               Глубинная связь с природой и Высшими Силами
             </h3>
             <p className={contentStyles.textDescription}>
@@ -732,7 +727,6 @@ export default function () {
           <VisibilityManager as="div" className={contentStyles.textBlock}>
             <h3 className={contentStyles.title_small}>
               <img src={point.src} alt="" className={contentStyles.textSymbol} />
-              {"  "}
               Шаманизм и древние традиции
             </h3>
             <p className={contentStyles.textDescription}>
@@ -745,7 +739,6 @@ export default function () {
           <VisibilityManager as="div" className={contentStyles.textBlock}>
             <h3 className={contentStyles.title_small}>
               <img src={point.src} alt="" className={contentStyles.textSymbol} />
-              {"  "}
               Воинская доблесть и обострение чувств
             </h3>
             <p className={contentStyles.textDescription}>
@@ -757,7 +750,6 @@ export default function () {
           <VisibilityManager as="div" className={contentStyles.textBlock}>
             <h3 className={contentStyles.title_small}>
               <img src={point.src} alt="" className={contentStyles.textSymbol} />
-              {"  "}
               Духовные ритуалы индейцев
             </h3>
             <p className={contentStyles.textDescription}>
@@ -769,7 +761,6 @@ export default function () {
           <VisibilityManager as="div" className={contentStyles.textBlock}>
             <h3 className={contentStyles.title_small}>
               <img src={point.src} alt="" className={contentStyles.textSymbol} />
-              {"  "}
               Современные исследования
             </h3>
             <p className={contentStyles.textDescription}>
@@ -817,7 +808,6 @@ export default function () {
           <VisibilityManager as="div" className={contentStyles.textBlock}>
             <h3 className={contentStyles.title_small}>
               <img src={point.src} alt="" className={contentStyles.textSymbol} />
-              {"  "}
               Назначен проводником непосредственно от самого Мухомора (пояснение)
             </h3>
             <p className={contentStyles.textDescription}>
@@ -832,7 +822,7 @@ export default function () {
           <VisibilityManager as="div" className={contentStyles.textBlock}>
             <h3 className={contentStyles.title_small}>
               <img src={point.src} alt="" className={contentStyles.textSymbol} />
-              {"  "}
+              
               Глубокая работа с подсознанием
             </h3>
             <p className={contentStyles.textDescription}>
@@ -846,7 +836,7 @@ export default function () {
           <VisibilityManager as="div" className={contentStyles.textBlock}>
             <h3 className={contentStyles.title_small}>
               <img src={point.src} alt="" className={contentStyles.textSymbol} />
-              {"  "}
+              
               Быстрый, но эффективный формат
             </h3>
             <p className={contentStyles.textDescription}>
@@ -860,7 +850,7 @@ export default function () {
           <VisibilityManager as="div" className={contentStyles.textBlock}>
             <h3 className={contentStyles.title_small}>
               <img src={point.src} alt="" className={contentStyles.textSymbol} />
-              {"  "}
+              
               Безопасность и грамотная интеграция
             </h3>
             <p className={contentStyles.textDescription}>
@@ -873,7 +863,7 @@ export default function () {
           <VisibilityManager as="div" className={contentStyles.textBlock}>
             <h3 className={contentStyles.title_small}>
               <img src={point.src} alt="" className={contentStyles.textSymbol} />
-              {"  "}
+              
               Индивидуальная дозировка и перепроверка через кинезиологический тест
             </h3>
             <p className={contentStyles.textDescription}>
@@ -1026,7 +1016,7 @@ export default function () {
           <VisibilityManager as="div" className={contentStyles.textBlock}>
             <h3 className={contentStyles.title_small}>
               <img src={point.src} alt="" className={contentStyles.textSymbol} />
-              {"  "}
+              
               Токсичность и побочные эффекты
             </h3>
             <p className={contentStyles.textDescription}>
@@ -1040,7 +1030,7 @@ export default function () {
           <VisibilityManager as="div" className={contentStyles.textBlock}>
             <h3 className={contentStyles.title_small}>
               <img src={point.src} alt="" className={contentStyles.textSymbol} />
-              {"  "}
+              
               Риск десоциализации
             </h3>
             <p className={contentStyles.textDescription}>
@@ -1053,7 +1043,7 @@ export default function () {
           <VisibilityManager as="div" className={contentStyles.textBlock}>
             <h3 className={contentStyles.title_small}>
               <img src={point.src} alt="" className={contentStyles.textSymbol} />
-              {"  "}
+              
               Юридические аспекты
             </h3>
             <p className={contentStyles.textDescription}>

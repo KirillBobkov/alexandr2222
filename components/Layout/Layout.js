@@ -2,10 +2,9 @@ import { Footer } from "../Footer/Footer";
 import { Navigation } from "../Navigation/Navigation";
 import Head from "next/head";
 import Script from "next/script";
-import favicon32x32 from "../../images/favicon32x32.png";
 import favicon180x180 from "../../images/favicon180x180.png";
-import meta_logo from "../../images/meta_logo.webp";
-import favicon from "../../images/logo.ico";
+import logo_dark from "../../images/logo_dark.webp";
+import favicon from "../../images/logo_dark.ico";
 import ScrollTopButton from "../ScrollTopButton/ScrollTopButton";
 import { useTheme } from "../../hooks/useTheme";
 
@@ -67,7 +66,7 @@ export default function Layout({ children, metaConfig, schemaOrg = '' }) {
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content={meta_logo.src} />
+        <meta property="og:image" content={logo_dark.src} />
         <meta property="og:locale" content="ru_RU" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta
@@ -76,14 +75,11 @@ export default function Layout({ children, metaConfig, schemaOrg = '' }) {
         />
 
         <link rel="icon" href={favicon.src} />
-        <link rel="apple-touch-icon" href={favicon32x32.src} />
-        <link rel="apple-touch-icon" sizes="32x32" href={favicon32x32.src} />
         <link
           rel="apple-touch-icon"
           sizes="180x180"
           href={favicon180x180.src}
         />
-        <link rel="apple-touch-startup-image" href={favicon32x32.src} />
 
       </Head>
       {schemaOrg && (

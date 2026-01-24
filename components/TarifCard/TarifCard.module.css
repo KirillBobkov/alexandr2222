@@ -4,7 +4,6 @@
   padding: 20px 20px 40px;
   position: relative;
   transition: all 0.3s ease;
-  border: 5px solid transparent;
   display: flex;
   flex-direction: column;
   gap: 20px;

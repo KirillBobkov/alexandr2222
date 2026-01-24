@@ -1,6 +1,9 @@
 import { useState } from 'react';
 import { TarifModal } from './TarifModal';
 import styles from './TarifCard.module.css';
+import point from "../../images/point.webp";
+import contentStyles from '../../styles/contentStyles.module.css'
+
 
 export const TarifCard = ({ card, index }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -24,7 +27,7 @@ export const TarifCard = ({ card, index }) => {
           <ul className={styles.featuresList}>
             {card.features.map((feature, idx) => (
               <li key={idx} className={styles.feature}>
-                <span className={styles.checkmark}>✓</span>
+                <img src={point.src} alt="" className={contentStyles.textSymbol} />
                 {feature}
               </li>
             ))}
