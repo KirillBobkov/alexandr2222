@@ -5,9 +5,11 @@ import MetricsCode from "../components/MetricsCode";
 
 export default function({ Component, pageProps }) {
   return (
+    <>
     <ThemeProvider>
       <Component {...pageProps} />
       <MetricsCode />
     </ThemeProvider>
+     </>
   );
 }

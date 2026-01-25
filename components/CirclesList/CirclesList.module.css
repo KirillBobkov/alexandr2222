@@ -2,9 +2,6 @@
     background-color: var(--card-color);
 }
 
-.container .title {
-    color: var(--accent-2);;
-}
 
 .block {
     max-width: 1285px;

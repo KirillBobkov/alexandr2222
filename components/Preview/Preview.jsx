@@ -27,7 +27,7 @@ export const Preview = () => {
           <Wave />
 
         <VisibilityManager as="div" className={styles.preview__content}>
-          <h1 className={styles.preview__title}>
+          <h1 className={styles.preview__title }>
             Благословенный{" "}
             <br/>
             портал мечты
