@@ -890,7 +890,7 @@ export default function () {
           </Final>
         </div>
       <VideoWidget videos={videos} />
-        <div className={containerStyles.container}>
+        <div id="program" className={containerStyles.container}>
           <Collapsible title="Программа ретрита" defaultOpen={false}>
             <CollapsibleSection title="Подготовка">
               <p className={contentStyles.textDescription}>

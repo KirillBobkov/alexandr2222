@@ -183,9 +183,6 @@ export default function () {
           </VisibilityManager>
 
           <div style={{ height: '1px' }} />
-          <Button className={contentStyles.message} href={{ hash: "#message" }} status="Записаться" />
-
-          <div style={{ height: '1px' }} />
           <VisibilityManager as="h3" className={contentStyles.title_middle}>
             РАБОТА С ПОДСОЗНАНИЕМ
           </VisibilityManager>

@@ -134,6 +134,10 @@ export const getNavigationTree = (pathname) => [
     },
     childs: [
       {
+        path: "/ceremony#program",
+        value: "Программа",
+      },
+      {
         path: "/ceremony#reviews",
         value: "Отзывы",
       },
