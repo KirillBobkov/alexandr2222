@@ -22,6 +22,7 @@ import secondary_preview_28 from "../images/secondary_preview_28.webp";
 import secondary_preview_30 from "../images/secondary_preview_30.webp";
 import secondary_preview_31 from "../images/secondary_preview_31.webp";
 import secondary_preview_32 from "../images/secondary_preview_32.webp";
+import secondary_preview_33 from "../images/secondary_preview_33.webp";
 import styles from "../styles/blog.module.css";
 import contentStyles from "../styles/contentStyles.module.css";
 import { VisibilityManager } from "../components/shared/VisibilityManager";
@@ -34,7 +35,7 @@ const articles = [
     description:
       "Обсессивно-компульсивное расстройство (ОКР) проявляется через специфические «петли»: навязчивая мысль вызывает тревогу, которую временно снижает ритуал. Работа с подсознанием позволяет обратиться к глубинным причинам напрямую.",
     date: "25 января 2025",
-    image: secondary_preview_24,
+    image: secondary_preview_33,
     slug: "ocd-subconscious",
   },
   {
