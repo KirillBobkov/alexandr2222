@@ -1,28 +1,25 @@
-import React, { useRef, useState, useCallback } from "react";
-import styles from "./VideoBlock.module.css";
+import { useCallback, useRef, useState } from "react";
 import { VisibilityManager } from "../shared/VisibilityManager";
 import contentStyles from "../../styles/contentStyles.module.css";
-import { VideoPlayer } from "../VideoPlayer/VideoPlayer";
+import styles from "./VideoBlock.module.css";
 
 export const VideoBlock = ({
+  autoPlay = false,
+  controls = true,
+  directVideo = false,
+  loop = false,
+  muted = true,
+  poster,
   title,
   titleEmpty,
   videoSrc,
   videoTitle,
-  directVideo = false,
-  poster,
-  autoPlay = false,
-  muted = true,
-  controls = true,
-  loop = false,
 }) => {
   const videoRef = useRef(null);
   const [isLoading, setIsLoading] = useState(false);
   const [hasError, setHasError] = useState(false);
 
-  const handleLoadStart = useCallback(() => {
-    setIsLoading(true);
-  }, []);
+  const handleLoadStart = useCallback(() => setIsLoading(true), []);
 
   const handleLoadedData = useCallback(() => {
     setIsLoading(false);
@@ -94,7 +91,7 @@ export const VideoBlock = ({
         allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;"
         allowFullScreen
         title={videoTitle}
-      ></iframe>
+      />
     );
   };
 
@@ -107,7 +104,8 @@ export const VideoBlock = ({
           style={{ marginLeft: "0px", marginBottom: "0px" }}
           className={contentStyles.title}
         >
-          {title}{titleEmpty}
+          {title}
+          {titleEmpty}
         </VisibilityManager>
 
         <div className={styles.videoContainer}>

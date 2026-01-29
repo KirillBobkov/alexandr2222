@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import { useMemo } from "react";
 import styles from "./StarsBackground.module.css";
 
 const TILE_SIZE = 2000;
@@ -28,7 +28,7 @@ export default function StarsBackground() {
     TILE_OFFSETS.map((offset, index) => (
       <div
         key={`${sizeClass}-${index}`}
-        className={styles["stars"] + " " + sizeClass}
+        className={`${styles.stars} ${sizeClass}`}
         style={{
           boxShadow,
           left: `${offset.x}px`,

@@ -1,10 +1,10 @@
-import React, { useState } from "react";
-import styles from "./Collapsible.module.css";
+import { useState } from "react";
 import { VisibilityManager } from "../shared/VisibilityManager";
 import contentStyles from "../../styles/contentStyles.module.css";
 import point from "../../images/point.webp";
+import styles from "./Collapsible.module.css";
 
-export const Collapsible = ({ title, children, defaultOpen = false }) => {
+export const Collapsible = ({ children, defaultOpen = false, title }) => {
   const [isOpen, setIsOpen] = useState(defaultOpen);
 
   return (
@@ -13,7 +13,7 @@ export const Collapsible = ({ title, children, defaultOpen = false }) => {
     >
       <div
         className={`${styles.header} ${isOpen ? styles.open : ""}`}
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={() => setIsOpen((prev) => !prev)}
       >
         <h3 className={contentStyles.title_middle}>{title}</h3>
         <span className={styles.icon}>{isOpen ? "−" : "+"}</span>
@@ -25,17 +25,21 @@ export const Collapsible = ({ title, children, defaultOpen = false }) => {
   );
 };
 
-export const CollapsibleSection = ({ title, children }) => {
+export const CollapsibleSection = ({ children, title }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className={`${styles.section} ${isOpen ? styles.open : ""}`}>
       <div
         className={`${styles.sectionHeader} ${isOpen ? styles.sectionOpen : ""}`}
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={() => setIsOpen((prev) => !prev)}
       >
-        <h4 className={styles.sectionTitle + ' ' + contentStyles.title_small}>
-          <img src={point.src} alt="" className={contentStyles.textSymbol + ' ' + styles.symbol} />
+        <h4 className={`${styles.sectionTitle} ${contentStyles.title_small}`}>
+          <img
+            src={point.src}
+            alt=""
+            className={`${contentStyles.textSymbol} ${styles.symbol}`}
+          />
           {title}
         </h4>
         <span className={styles.sectionIcon}>{isOpen ? "−" : "+"}</span>

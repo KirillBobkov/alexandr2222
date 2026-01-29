@@ -1,73 +1,62 @@
-import React, { useRef, useState } from "react";
-import styles from "./Button.module.css";
-import { VisibilityManager } from "../VisibilityManager";
-import { useRouter } from "next/router";
+import { useRef, useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/router";
+import { VisibilityManager } from "../VisibilityManager";
+import styles from "./Button.module.css";
 
 export const Button = ({
-  isSubmitted = false,
   disabled = false,
-  status,
   href = "",
+  isSubmitted = false,
+  status,
   className = "",
 }) => {
   const touchStartX = useRef(0);
-  const [progress, setProgress] = useState(20); // Процент заполнения кнопки
+  const [progress, setProgress] = useState(20);
   const router = useRouter();
 
-  // Обработчики для свайпа на мобильных устройствах
   const handleTouchStart = (e) => {
-    // e.preventDefault();
     touchStartX.current = e.touches[0].clientX;
-    setProgress(20); // Сброс прогресса
+    setProgress(20);
   };
 
   const handleTouchMove = (e) => {
-    // e.preventDefault();
     const touchEndX = e.touches[0].clientX;
-    const distance = Math.max(0, touchEndX - touchStartX.current); // Расстояние свайпа
-    const buttonWidth = e.target.offsetWidth * 0.8; // Ширина кнопки
-    const swipeProgress = Math.min((distance / buttonWidth) * 100, 100); // Рассчитать процент
-    setProgress(20 + swipeProgress); // Установить прогресс
+    const distance = Math.max(0, touchEndX - touchStartX.current);
+    const buttonWidth = e.target.offsetWidth * 0.8;
+    const swipeProgress = Math.min((distance / buttonWidth) * 100, 100);
+    setProgress(20 + swipeProgress);
   };
 
-  const handleTouchEnd = (e) => {
-    // e.preventDefault();
-    console.log("handleTouchEnd", progress);
-    if (progress >= 70) {
-      // Если прогресс достиг 100%, выполнить действие
-      if (href)
-        router.push(
-          {
-            pathname: href.pathname,
-            hash: href.hash,
-          },
-          undefined
-        );
-      setProgress(20); // Сброс прогресса
-    } else {
-      setProgress(20); // Сброс прогресса, если не достигнут 100%
+  const handleTouchEnd = () => {
+    if (progress >= 70 && href) {
+      router.push(
+        {
+          pathname: href.pathname,
+          hash: href.hash,
+        },
+        undefined,
+      );
     }
+    setProgress(20);
   };
 
   return (
     <VisibilityManager
       as="div"
-      className={`${styles.button} ${progress <= 20 ? styles.pulsing : styles.not_pulsing} ${className} ${
-        isSubmitted ? styles.success : ""
-      }`}
+      className={`${styles.button} ${
+        progress <= 20 ? styles.pulsing : styles.not_pulsing
+      } ${className} ${isSubmitted ? styles.success : ""}`}
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
-      style={{
-        "--progress-width": `${progress}%`, // Динамическая ширина прогресса
-      }}
+      style={{ "--progress-width": `${progress}%` }}
     >
       <Link
         prefetch={false}
-        href={(href.pathname ?? router.pathname) + (href.hash || '')}
+        href={(href.pathname ?? router.pathname) + (href.hash || "")}
         scroll={false}
-        className={`${styles.inner}`}
+        className={styles.inner}
       >
         {status}
       </Link>

@@ -1,16 +1,12 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Input } from "../Input/Input";
 import { FormValidator } from "../FormValidator/FormValidator";
 import { VisibilityManager } from "../VisibilityManager";
-import {
-  validateName,
-  validatePhone,
-  validateEmail,
-} from "../../../utils/validation";
+import { validateEmail, validateName, validatePhone } from "../../../utils/validation";
 import styles from "./OrderForm.module.css";
 
 interface OrderFormProps {
-  onPaymentSubmit?: (formData: any) => void;
+  onPaymentSubmit?: (formData: unknown) => void;
   title?: string;
   description?: string;
   price: string;
@@ -27,46 +23,39 @@ export const OrderForm = ({
   const [message, setMessage] = useState("");
   const [isRedirecting, setIsRedirecting] = useState(false);
 
-  const handlePayment = async (formData: any) => {
-    const { email, phone, name } = formData;
+  const handlePayment = async (formData: unknown) => {
+    const data = formData as { email: string; phone: string; name: string };
     setIsRedirecting(true);
+
     try {
-      const fetchPromise = fetch(
-        "https://6ce8d736a9b6.vps.myjino.ru/api/payment",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            email,
-            phone,
-            name,
-            tariff,
-          }),
-        }
-      );
+      const fetchPromise = fetch("https://6ce8d736a9b6.vps.myjino.ru/api/payment", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email: data.email,
+          phone: data.phone,
+          name: data.name,
+          tariff,
+        }),
+      });
 
       const timeoutPromise = new Promise<never>((_, reject) =>
-        setTimeout(
-          () => reject(new Error("Request timed out after 20 seconds")),
-          20000
-        )
+        setTimeout(() => reject(new Error("Request timed out after 20 seconds")), 20000),
       );
 
-      const res = await Promise.race([fetchPromise, timeoutPromise]);
+      const res = (await Promise.race([fetchPromise, timeoutPromise])) as Response;
 
       if (!res.ok) {
         throw new Error(`HTTP error! status: ${res.status}`);
       }
 
-      const data = await res.json();
-      if (data?.payment?.confirmation?.confirmation_url) {
-        setTimeout(() => {
-          window.location.href = data.payment.confirmation.confirmation_url;
-        }, 0);
+      const responseData = await res.json();
+      if (responseData?.payment?.confirmation?.confirmation_url) {
+        window.location.href = responseData.payment.confirmation.confirmation_url;
       } else {
-        throw new Error(`Confirmation URL not found in response`);
+        throw new Error("Confirmation URL not found in response");
       }
     } catch (error) {
       console.error("Failed to process payment:", error);
@@ -76,35 +65,29 @@ export const OrderForm = ({
   };
 
   const fieldsConfig = [
-    {
-      name: "name",
-      type: "text",
-      required: true,
-      validator: validateName,
-    },
-    {
-      name: "email",
-      type: "text",
-      required: true,
-      validator: validateEmail,
-    },
-    {
-      name: "phone",
-      type: "phone",
-      required: true,
-      validator: validatePhone,
-    },
-    {
-      name: "agreement",
-      type: "checkbox",
-      required: true,
-      defaultValue: false,
-    },
+    { name: "name", type: "text" as const, required: true, validator: validateName },
+    { name: "email", type: "text" as const, required: true, validator: validateEmail },
+    { name: "phone", type: "phone" as const, required: true, validator: validatePhone },
+    { name: "agreement", type: "checkbox" as const, required: true, defaultValue: false },
   ];
 
-  const handleSubmit = (formData: any) => {
+  const handleSubmit = (formData: unknown) => {
     handlePayment(formData);
     setIsSubmitted(true);
+  };
+
+  const buttonContainerStyle = {
+    opacity: 0.7,
+    pointerEvents: "none" as const,
+    transition: "opacity 0.3s ease",
+    width: "100%",
+    flex: "1 0 100%",
+  };
+
+  const linkStyle = {
+    color: "var(--accent)",
+    fontWeight: "bold",
+    cursor: "pointer",
   };
 
   return (
@@ -122,7 +105,7 @@ export const OrderForm = ({
           setIsSubmitted={setIsSubmitted}
           onSubmit={handleSubmit}
         >
-          {({ formData, errors, handleChange, handleSubmit, isSubmitted }) => (
+          {({ formData, errors, handleChange, handleSubmit, isSubmitted: formSubmitted }) => (
             <form onSubmit={handleSubmit} className={styles.orderForm}>
               <div className={styles.orderFormInput}>
                 <Input
@@ -133,7 +116,7 @@ export const OrderForm = ({
                   placeholder="Имя"
                   animated={false}
                   error={errors.name}
-                  disabled={isSubmitted}
+                  disabled={formSubmitted}
                 />
               </div>
               <div className={styles.orderFormInput}>
@@ -145,7 +128,7 @@ export const OrderForm = ({
                   placeholder="Email"
                   animated={false}
                   error={errors.email}
-                  disabled={isSubmitted}
+                  disabled={formSubmitted}
                 />
               </div>
               <div className={styles.orderFormInput}>
@@ -157,29 +140,23 @@ export const OrderForm = ({
                   placeholder="Номер телефона"
                   animated={false}
                   error={errors.phone}
-                  disabled={isSubmitted}
+                  disabled={formSubmitted}
                 />
               </div>
               <div
                 style={{
+                  ...buttonContainerStyle,
                   opacity: formData.agreement ? 1 : 0.7,
                   pointerEvents: formData.agreement ? "auto" : "none",
-                  transition: "opacity 0.3s ease",
-                  width: "100%",
-                  flex: "1 0 100%",
                 }}
               >
                 <button
                   type="submit"
-                  disabled={!formData.agreement || isSubmitted}
+                  disabled={!formData.agreement || formSubmitted}
                   className={styles.submitOrderButton}
                 >
-                  {isRedirecting && <div className={styles.loader}></div>}
-                  <span>
-                    {isRedirecting
-                      ? "На страницу оплаты..."
-                      : "Оплатить"}
-                  </span>
+                  {isRedirecting && <div className={styles.loader} />}
+                  <span>{isRedirecting ? "На страницу оплаты..." : "Оплатить"}</span>
                 </button>
               </div>
               <div className={styles.agreementCheckbox}>
@@ -192,44 +169,30 @@ export const OrderForm = ({
                   className={`${styles.agreementCheckboxInput} ${
                     errors.agreement ? styles.agreementCheckboxError : ""
                   }`}
-                  disabled={isSubmitted}
+                  disabled={formSubmitted}
                 />
                 <label
                   htmlFor="offer-checkbox-orderform"
                   className={styles.agreementCheckboxLabel}
-                  style={{ opacity: isSubmitted ? 0.5 : 1 }}
+                  style={{ opacity: formSubmitted ? 0.5 : 1 }}
                 >
                   Подтверждаю, что ознакомлен с{" "}
-                  <a
-                    href="/oferta.txt"
-                    target="_blank"
-                    className={styles.termsOfferLink}
-                  >
+                  <a href="/oferta.txt" target="_blank" className={styles.termsOfferLink}>
                     офертой
                   </a>
                 </label>
               </div>
-              {message ? (
+              {message === "error" && (
                 <VisibilityManager style={{ marginTop: 0 }}>
-                  {message === "error" ? (
-                    <p className={styles.errorMessage}>
-                      Какие-то технические неполадки. Свяжитесь, пожалуйста, со
-                      мной в Телеграм по{" "}
-                      <a
-                        target="_blank"
-                        href="https://t.me/Z44LP"
-                        style={{
-                          color: "var(--accent)",
-                          fontWeight: "bold",
-                          cursor: "pointer",
-                        }}
-                      >
-                        ссылке
-                      </a>
-                    </p>
-                  ) : null}
+                  <p className={styles.errorMessage}>
+                    Какие-то технические неполадки. Свяжитесь, пожалуйста, со мной в
+                    Телеграм по{" "}
+                    <a target="_blank" href="https://t.me/Z44LP" style={linkStyle}>
+                      ссылке
+                    </a>
+                  </p>
                 </VisibilityManager>
-              ) : null}
+              )}
             </form>
           )}
         </FormValidator>

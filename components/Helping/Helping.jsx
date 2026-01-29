@@ -1,16 +1,9 @@
-import React from "react";
-import styles from "./Helping.module.css"; // Adjust the path as necessary
 import { VisibilityManager } from "../shared/VisibilityManager";
-import { Button } from "../shared/Button/Button.jsx";
 import contentStyles from "../../styles/contentStyles.module.css";
 import point from "../../images/point.webp";
+import styles from "./Helping.module.css";
 
-export const Helping = ({
-  blocks,
-  title = "Я помогу,",
-  titleEmpty = " если вы",
-  href,
-}) => {
+export const Helping = ({ blocks, href, title = "Я помогу,", titleEmpty = " если вы" }) => {
   return (
     <div className={styles.container}>
       <div className={styles.block}>
@@ -18,17 +11,15 @@ export const Helping = ({
           as="h2"
           side="left"
           style={{ marginLeft: "0px", marginBottom: "0px" }}
-          className={contentStyles.title + " " + styles.title}
+          className={`${contentStyles.title} ${styles.title}`}
         >
-          {title}{titleEmpty}
+          {title}
+          {titleEmpty}
         </VisibilityManager>
         <div className={styles["grid-container"]}>
           {blocks.map((block) => (
-            <VisibilityManager
-              key={block.id}
-              className={styles[block.className]}
-            >
-              <TextBlock title={block.title} desc={block.desc} />
+            <VisibilityManager key={block.id} className={styles[block.className]}>
+              <TextBlock desc={block.desc} title={block.title} />
             </VisibilityManager>
           ))}
         </div>
@@ -37,7 +28,7 @@ export const Helping = ({
   );
 };
 
-const TextBlock = ({ title, desc }) => {
+const TextBlock = ({ desc, title }) => {
   return (
     <div className={styles.textBlock}>
       {title ? (

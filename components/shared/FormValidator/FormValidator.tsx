@@ -1,16 +1,16 @@
-import React, { useState } from 'react';
-import { validateName, validatePhone, formatPhoneNumber } from '../../../utils/validation';
+import { useState } from "react";
+import { formatPhoneNumber, validateName, validatePhone } from "../../../utils/validation";
 
 interface FieldConfig {
   name: string;
-  type: 'text' | 'phone' | 'checkbox';
-  validator?: (value: any) => string;
+  type: "text" | "phone" | "checkbox";
+  validator?: (value: unknown) => string;
   formatter?: (value: string) => string;
   required?: boolean;
-  defaultValue?: any;
+  defaultValue?: unknown;
 }
 
-type FormState = Record<string, any>;
+type FormState = Record<string, unknown>;
 type FormErrors = Record<string, string | boolean>;
 
 interface FormValidatorProps {
@@ -32,15 +32,15 @@ export const FormValidator: React.FC<FormValidatorProps> = ({
   children,
   onSubmit,
   isSubmitted = false,
-  setIsSubmitted
+  setIsSubmitted,
 }) => {
   const initialFormData = fields.reduce((acc, field) => {
-    acc[field.name] = field.defaultValue ?? (field.type === 'checkbox' ? false : '');
+    acc[field.name] = field.defaultValue ?? (field.type === "checkbox" ? false : "");
     return acc;
   }, {} as FormState);
 
   const initialErrors = fields.reduce((acc, field) => {
-    acc[field.name] = field.type === 'checkbox' ? false : '';
+    acc[field.name] = field.type === "checkbox" ? false : "";
     return acc;
   }, {} as FormErrors);
 
@@ -48,47 +48,45 @@ export const FormValidator: React.FC<FormValidatorProps> = ({
   const [errors, setErrors] = useState<FormErrors>(initialErrors);
 
   const getFieldConfig = (fieldName: string): FieldConfig | undefined => {
-    return fields.find(field => field.name === fieldName);
+    return fields.find((field) => field.name === fieldName);
   };
 
   const getDefaultValidator = (type: string) => {
     switch (type) {
-      case 'phone':
+      case "phone":
         return validatePhone;
-      case 'text':
+      case "text":
         return validateName;
       default:
-        return () => '';
+        return () => "";
     }
   };
 
-  const handleChange = (e: any) => {
-    const { name, value, type } = e.target;
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value, checked, type } = e.target;
     const fieldConfig = getFieldConfig(name);
-    
+
     if (!fieldConfig) return;
 
     if (fieldConfig.type === "checkbox") {
-      setFormData((prev) => ({ ...prev, [name]: e.target.checked }));
-      setErrors((prev) => ({ ...prev, [name]: fieldConfig.required ? !e.target.checked : false }));
+      setFormData((prev) => ({ ...prev, [name]: checked }));
+      setErrors((prev) => ({ ...prev, [name]: fieldConfig.required ? !checked : false }));
       return;
     }
 
     let processedValue = value;
-    
-    // Apply formatter if exists
+
     if (fieldConfig.formatter) {
       processedValue = fieldConfig.formatter(value);
-    } else if (fieldConfig.type === 'phone') {
+    } else if (fieldConfig.type === "phone") {
       processedValue = formatPhoneNumber(value);
     }
 
-    setFormData(prev => ({ ...prev, [name]: processedValue }));
+    setFormData((prev) => ({ ...prev, [name]: processedValue }));
 
-    // Apply validation
     const validator = fieldConfig.validator || getDefaultValidator(fieldConfig.type);
     const error = validator(processedValue);
-    setErrors(prev => ({ ...prev, [name]: error }));
+    setErrors((prev) => ({ ...prev, [name]: error }));
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -97,8 +95,8 @@ export const FormValidator: React.FC<FormValidatorProps> = ({
     const newErrors: FormErrors = {};
     let hasErrors = false;
 
-    fields.forEach(field => {
-      if (field.type === 'checkbox') {
+    fields.forEach((field) => {
+      if (field.type === "checkbox") {
         const error = field.required ? !formData[field.name] : false;
         newErrors[field.name] = error;
         if (error) hasErrors = true;
@@ -115,7 +113,6 @@ export const FormValidator: React.FC<FormValidatorProps> = ({
     if (!hasErrors) {
       onSubmit(formData);
       setIsSubmitted?.(true);
-      // Reset form
       setFormData(initialFormData);
     }
   };
@@ -125,6 +122,6 @@ export const FormValidator: React.FC<FormValidatorProps> = ({
     errors,
     handleChange,
     handleSubmit,
-    isSubmitted
+    isSubmitted,
   });
 }; 

@@ -1,42 +1,44 @@
-import styles from './CourseContent.module.css';
 import { VisibilityManager } from "../shared/VisibilityManager";
-import contentStyles from "../../styles/contentStyles.module.css";
 import { Button } from "../shared/Button/Button";
 import { ReasonCard } from "../ReasonCard/ReasonCard";
+import contentStyles from "../../styles/contentStyles.module.css";
+import styles from "./CourseContent.module.css";
 
 export const CourseContent = () => {
   const courseItems = [
-    { title: 'Вступительный урок', badgeText: 'Знакомство с курсом' },
-    { title: 'Убираем суету', badgeText: '1 прием' },
-    { title: 'Отключаем стыд', badgeText: '2 прием' },
-    { title: 'Отпускаем обиды', badgeText: '3 прием' },
-    { title: 'Нивелируем гнев', badgeText: '4 прием' },
-    { title: 'Гасим похоть', badgeText: '5 прием' },
-    { title: 'Сдерживаем смех', badgeText: '6 прием' },
-    { title: 'Сбрасываем стресс', badgeText: '7 прием' },
-    { title: 'Нейтрализуем тревожность', badgeText: '8 прием' },
-    { title: 'Отбиваемся от уныния', badgeText: '9 прием' },
-    { title: 'Отбрасываем сомнения', badgeText: '10 прием' },
-    { title: 'Отключаем страх', badgeText: '11 прием' },
-    { title: 'Избавляемся от раздражительности', badgeText: '12 прием' },
-    { title: 'Включаем режим антистресс+концентрация', badgeText: '13 прием' },
-    { title: 'Активируем терпение', badgeText: '14 прием' },
-    { title: 'Используем техники незаметно', badgeText: 'Заключительный урок' }
+    { title: "Вступительный урок", badgeText: "Знакомство с курсом" },
+    { title: "Убираем суету", badgeText: "1 прием" },
+    { title: "Отключаем стыд", badgeText: "2 прием" },
+    { title: "Отпускаем обиды", badgeText: "3 прием" },
+    { title: "Нивелируем гнев", badgeText: "4 прием" },
+    { title: "Гасим похоть", badgeText: "5 прием" },
+    { title: "Сдерживаем смех", badgeText: "6 прием" },
+    { title: "Сбрасываем стресс", badgeText: "7 прием" },
+    { title: "Нейтрализуем тревожность", badgeText: "8 прием" },
+    { title: "Отбиваемся от уныния", badgeText: "9 прием" },
+    { title: "Отбрасываем сомнения", badgeText: "10 прием" },
+    { title: "Отключаем страх", badgeText: "11 прием" },
+    { title: "Избавляемся от раздражительности", badgeText: "12 прием" },
+    { title: "Включаем режим антистресс+концентрация", badgeText: "13 прием" },
+    { title: "Активируем терпение", badgeText: "14 прием" },
+    {
+      title: "Используем техники незаметно",
+      badgeText: "Заключительный урок",
+    },
   ];
 
   return (
-
     <section className={styles.container}>
       <div className={styles.content}>
         <VisibilityManager
           as="h2"
           side="left"
-          className={contentStyles.title + " " + styles.title}
+          className={`${contentStyles.title} ${styles.title}`}
           style={{ marginLeft: 0, marginRight: 0, marginBottom: 0 }}
         >
           Программа курса
         </VisibilityManager>
-        
+
         <VisibilityManager className={styles.listContainer}>
           <div
             className={styles.tree}
@@ -48,13 +50,9 @@ export const CourseContent = () => {
               const row = Math.floor(index / gridColumns);
               const positionInRow = index % gridColumns;
               const isEvenRow = row % 2 === 0;
-              const column = isEvenRow
-                ? positionInRow
-                : gridColumns - 1 - positionInRow;
+              const column = isEvenRow ? positionInRow : gridColumns - 1 - positionInRow;
               const hasNext = index < courseItems.length - 1;
-              const nextRow = hasNext
-                ? Math.floor((index + 1) / gridColumns)
-                : null;
+              const nextRow = hasNext ? Math.floor((index + 1) / gridColumns) : null;
               const nextPositionInRow = hasNext ? (index + 1) % gridColumns : null;
               const nextIsEvenRow = hasNext ? nextRow % 2 === 0 : null;
               const nextColumn = hasNext
@@ -65,22 +63,21 @@ export const CourseContent = () => {
               const direction = hasNext
                 ? nextRow === row
                   ? nextColumn > column
-                    ? 'right'
-                    : 'left'
-                  : 'down'
+                    ? "right"
+                    : "left"
+                  : "down"
                 : null;
-              const badgeText = item.badgeText;
-              const isDown = direction === 'down';
+              const isDown = direction === "down";
               const directionClass =
-                direction === 'right'
+                direction === "right"
                   ? styles.directionRight
-                  : direction === 'left'
+                  : direction === "left"
                     ? styles.directionLeft
                     : isDown
                       ? column === 0
                         ? styles.directionDownLeft
                         : styles.directionDownRight
-                      : '';
+                      : "";
 
               return (
                 <div
@@ -93,9 +90,9 @@ export const CourseContent = () => {
                   {direction ? (
                     <span
                       className={`${styles.connector} ${
-                        direction === 'right'
+                        direction === "right"
                           ? styles.connectorRight
-                          : direction === 'left'
+                          : direction === "left"
                             ? styles.connectorLeft
                             : styles.connectorDown
                       }`}
@@ -106,7 +103,7 @@ export const CourseContent = () => {
                     <ReasonCard
                       card={{ title: item.title }}
                       index={index}
-                      badgeText={badgeText}
+                      badgeText={item.badgeText}
                       className={styles.courseCard}
                     />
                   </div>
@@ -117,12 +114,11 @@ export const CourseContent = () => {
         </VisibilityManager>
         <Button
           className={contentStyles.message}
-          style={{ alignSelf: 'flex-start' }}
+          style={{ alignSelf: "flex-start" }}
           href={{ pathname: "/nonverbal-programming", hash: "#message" }}
           status="Приобрести курс"
         />
       </div>
     </section>
-
   );
-}; 
+};

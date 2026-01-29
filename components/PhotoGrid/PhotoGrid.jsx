@@ -1,32 +1,29 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Image from "next/image";
-import styles from "./PhotoGrid.module.css";
 import { VisibilityManager } from "../shared/VisibilityManager";
+import styles from "./PhotoGrid.module.css";
 
-/**
- * PhotoGrid component that displays a grid of photos with hover effect
- * @param {Array} photos - Array of photo objects with img, title, and description properties
- */
 export const PhotoGrid = ({ photos }) => {
   return (
     <div className={styles.photoGrid}>
-      {photos && photos.map((photo, index) => (
-        <VisibilityManager key={index} className={styles.photoItem}>
-          <PhotoItem 
-            img={photo.img} 
-            title={photo.title} 
-            description={photo.description} 
-          />
-        </VisibilityManager>
-      ))}
+      {photos &&
+        photos.map((photo, index) => (
+          <VisibilityManager key={index} className={styles.photoItem}>
+            <PhotoItem
+              description={photo.description}
+              img={photo.img}
+              title={photo.title}
+            />
+          </VisibilityManager>
+        ))}
     </div>
   );
 };
 
-const PhotoItem = ({ img, title, description }) => {
+const PhotoItem = ({ description, img, title }) => {
   const [loaded, setLoaded] = useState(false);
   const [error, setError] = useState(false);
-  
+
   return (
     <div className={styles.photoWrapper}>
       <div className={styles.photoContainer}>
@@ -40,10 +37,10 @@ const PhotoItem = ({ img, title, description }) => {
             width={600}
             height={400}
             sizes="(max-width: 768px) 100vw, 25vw"
-            style={{ objectFit: 'cover', width: '100%', height: '100%' }}
+            style={{ objectFit: "cover", width: "100%", height: "100%" }}
           />
         ) : (
-          <div className={styles.placeholderBg}></div>
+          <div className={styles.placeholderBg} />
         )}
         <div className={styles.overlay}>
           <div className={styles.photoInfo}>
@@ -54,4 +51,4 @@ const PhotoItem = ({ img, title, description }) => {
       </div>
     </div>
   );
-}; 
+};

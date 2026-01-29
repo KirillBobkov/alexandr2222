@@ -1,7 +1,7 @@
-import React, { useMemo } from "react";
+import { memo, useMemo } from "react";
 import handleViewport from "react-in-viewport";
 
-const sideMapNotVisible = {
+const SIDE_MAP_NOT_VISIBLE = {
   left: "translateX(-20px)",
   right: "translateX(20px)",
   bottom: "translateY(-20px)",
@@ -10,7 +10,7 @@ const sideMapNotVisible = {
   opacity: "translateY(0)",
 };
 
-const sideMap = {
+const SIDE_MAP = {
   left: "translateX(0)",
   right: "translateX(0)",
   bottom: "translateY(0)",
@@ -19,50 +19,43 @@ const sideMap = {
   opacity: "translateY(0)",
 };
 
-// Cache transition strings to avoid string concatenation on every render
-const getTransitionStyle = (speed, delay) => 
+const getTransitionStyle = (speed, delay) =>
   `transform ${speed}s ${delay}s, opacity ${speed}s ${delay}s, background-size ${speed}s ${delay}s, background-color 300ms ${delay}s`;
 
-const VisibilityManagerComponent = React.memo((props) => {
+const VisibilityManagerComponent = memo((props) => {
   const {
-    itemScope,
-    itemType,
-    itemProp,
-    onInit = true,
-    id,
     as: Tag = "section",
-    inViewport,
-    style,
-    enterCount,
-    leaveCount,
-    forwardedRef,
     children,
     className,
+    delay = 0.1,
+    enterCount,
+    forwardedRef,
+    id,
+    inViewport,
+    itemProp,
+    itemScope,
+    itemType,
+    leaveCount,
+    onInit = true,
+    onClick,
     side = "top",
     speed = 2,
-    delay = 0.1,
-    onClick,
+    style,
     ...restProps
   } = props;
 
-  if (itemScope !== undefined) {
-    meta.itemScope = itemScope;
-  }
-  if (itemType !== undefined) {
-    meta.itemType = itemType;
-  }
-  if (itemProp !== undefined) {
-    meta.itemProp = itemProp;
-  }
+  const isVisible = inViewport || (onInit && enterCount > 0);
 
-  // Memoize the animation styles to prevent recalculation unless dependencies change
-  const animationStyles = useMemo(() => ({
-    ...style,
-    willChange: "transform, opacity",
-    transition: getTransitionStyle(speed, delay),
-    opacity: (inViewport || (onInit && enterCount > 0)) ? 1 : 0,
-    transform: (inViewport || (onInit && enterCount > 0)) ? sideMap[side] : sideMapNotVisible[side],
-  }), [style, speed, delay, inViewport, onInit, enterCount, side]);
+  const animationStyles = useMemo(
+    () => ({
+      ...style,
+      willChange: "transform, opacity",
+      transition: getTransitionStyle(speed, delay),
+      opacity: isVisible ? 1 : 0,
+      transform: isVisible ? SIDE_MAP[side] : SIDE_MAP_NOT_VISIBLE[side],
+    }),
+    [delay, inViewport, isVisible, onInit, side, speed, style],
+  );
 
   return (
     <Tag
@@ -78,12 +71,14 @@ const VisibilityManagerComponent = React.memo((props) => {
   );
 });
 
-VisibilityManagerComponent.displayName = 'VisibilityManager';
+VisibilityManagerComponent.displayName = "VisibilityManager";
 
-// Use a more performant intersection observer configuration
 const viewportConfig = {
-  threshold: [0], // Only trigger once when element enters viewport
-  rootMargin: '50px 0px', // Add some margin to trigger slightly before element is in view
+  threshold: [0],
+  rootMargin: "50px 0px",
 };
 
-export const VisibilityManager = handleViewport(VisibilityManagerComponent, viewportConfig);
+export const VisibilityManager = handleViewport(
+  VisibilityManagerComponent,
+  viewportConfig,
+);

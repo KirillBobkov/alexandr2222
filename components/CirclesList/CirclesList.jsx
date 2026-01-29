@@ -1,15 +1,14 @@
-import React from "react";
-import styles from "./CirclesList.module.css";
 import { VisibilityManager } from "../shared/VisibilityManager";
 import contentStyles from "../../styles/contentStyles.module.css";
+import styles from "./CirclesList.module.css";
 
 export const CirclesList = ({
+  animation,
+  descriptions,
+  items,
   title,
   titleEmpty,
-  items,
-  descriptions,
   underTitle,
-  animation,
 }) => {
   const content = (
     <div className={styles.block}>
@@ -17,10 +16,11 @@ export const CirclesList = ({
         <VisibilityManager
           as="h2"
           side="left"
-          className={contentStyles.title + " " + styles.title}
+          className={`${contentStyles.title} ${styles.title}`}
           style={{ marginLeft: 0, marginRight: 0, marginBottom: 0 }}
         >
-          {title}{titleEmpty}
+          {title}
+          {titleEmpty}
         </VisibilityManager>
       )}
 
@@ -40,11 +40,7 @@ export const CirclesList = ({
       {descriptions?.length > 0 && (
         <div className={contentStyles.descriptions}>
           {descriptions.map((description, index) => (
-            <VisibilityManager
-              key={index}
-              as="p"
-              className={styles.description}
-            >
+            <VisibilityManager key={index} as="p" className={styles.description}>
               {description}
             </VisibilityManager>
           ))}

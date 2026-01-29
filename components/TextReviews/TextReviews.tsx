@@ -1,6 +1,6 @@
+import { useState } from "react";
+import Image from "next/image";
 import styles from "./TextReviews.module.css";
-import Image from "next/image.js";
-import React, { useState } from "react";
 
 interface Testimonial {
   id: number;
@@ -15,16 +15,14 @@ const testimonials: Testimonial[] = [
     id: 1,
     name: "Никита",
     role: "полицейский",
-    content:
-    "Это помогает мне быть расслабленным там, где раньше сдавали нервы.",
+    content: "Это помогает мне быть расслабленным там, где раньше сдавали нервы.",
     image: "https://avatars.mds.yandex.net/get-yapic/36689/jpEOFu1rpHoHeltF6WA5fbdV7sg-1/orig",
   },
   {
     id: 2,
     name: "Александр",
     role: "менеджер по продажам",
-    content:
-    "З@&бись! Продавать стало легче!))",
+    content: "З@&бись! Продавать стало легче!))",
     image:
       "https://avatars.mds.yandex.net/get-yapic/36689/jpEOFu1rpHoHeltF6WA5fbdV7sg-1/orig",
   },
@@ -32,8 +30,7 @@ const testimonials: Testimonial[] = [
     id: 3,
     name: "Булат",
     role: "организатор мероприятий",
-    content:
-      "Вот эта тема с отключением суеты хорошо зашла, постоянно пользуюсь",
+    content: "Вот эта тема с отключением суеты хорошо зашла, постоянно пользуюсь",
     image:
       "https://avatars.mds.yandex.net/get-yapic/36689/jpEOFu1rpHoHeltF6WA5fbdV7sg-1/orig",
   },
@@ -43,14 +40,14 @@ export const TextReviews = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextSlide = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
+    setCurrentIndex((prev) =>
+      prev === testimonials.length - 1 ? 0 : prev + 1
     );
   };
 
   const prevSlide = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1
+    setCurrentIndex((prev) =>
+      prev === 0 ? testimonials.length - 1 : prev - 1
     );
   };
 

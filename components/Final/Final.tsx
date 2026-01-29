@@ -1,42 +1,47 @@
-import React from "react";
-import styles from "./Final.module.css"; // Adjust the path as necessary
+import { useState } from "react";
+import Image from "next/image";
 import { VisibilityManager } from "../shared/VisibilityManager";
 import LinkButton from "../shared/LinkButton/LinkButton";
-import Image from "next/image";
+import styles from "./Final.module.css";
 
-export const Final = ({ 
-  image,
-  animation,
-  flyletters = true,
+interface FinalProps {
+  image?: string;
+  animation?: boolean;
+  flyletters?: boolean;
+  children: React.ReactNode;
+  customStyles?: React.CSSProperties;
+}
+
+export const Final = ({
   children,
   customStyles = {},
-}) => {
-  const [loaded, setLoaded] = React.useState(false);
+  flyletters = true,
+  image,
+}: FinalProps) => {
+  const [loaded, setLoaded] = useState(false);
 
   const content = (
     <VisibilityManager as="section" className={styles.block} style={customStyles}>
-      <div className={`${styles.content}`}>
+      <div className={styles.content}>
         {image ? (
           <Image
             src={image}
             alt="фоновое изображение"
-            className={styles.background + " " + (loaded ? styles.loaded : "")}
+            className={`${styles.background} ${loaded ? styles.loaded : ""}`}
             onLoad={() => setLoaded(true)}
             fill
             sizes="100vw"
-            style={{ objectFit: 'cover' }}
+            style={{ objectFit: "cover" }}
           />
         ) : (
-          (flyletters ? 
-          <>
-            <span className={styles.move + " " + styles.moving1}>ИN</span>
-            <span className={styles.move + " " + styles.moving2}>ИN</span>
-            <span className={styles.move + " " + styles.moving3}>ИN</span>
-          </>
-          :
-          <>
-          </>
-        ))}
+          flyletters ? (
+            <>
+              <span className={`${styles.move} ${styles.moving1}`}>ИN</span>
+              <span className={`${styles.move} ${styles.moving2}`}>ИN</span>
+              <span className={`${styles.move} ${styles.moving3}`}>ИN</span>
+            </>
+          ) : null
+        )}
         {children}
       </div>
     </VisibilityManager>

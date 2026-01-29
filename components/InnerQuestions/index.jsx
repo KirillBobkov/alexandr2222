@@ -1,15 +1,9 @@
-import React from "react";
-import styles from "./styles.module.css";
-import contentStyles from "../../styles/contentStyles.module.css";
 import { VisibilityManager } from "../shared/VisibilityManager";
+import contentStyles from "../../styles/contentStyles.module.css";
 import point from "../../images/point.webp";
+import styles from "./styles.module.css";
 
-export const InnerQuestions = ({
-  title,
-  subtitle,
-  description,
-  questions,
-}) => {
+export const InnerQuestions = ({ description, questions, subtitle, title }) => {
   return (
     <div className={styles.container}>
       <div className={styles.block}>
@@ -40,13 +34,12 @@ export const InnerQuestions = ({
 };
 
 export const QuestionItem = ({ title }) => {
-    return title ? (
-      <li className={styles.textBlock + ' ' + styles.item}>
-        <h3 className={contentStyles.title_small}>
-          <img src={point.src} alt="" className={contentStyles.textSymbol} />
-          {title}
-        </h3>
-      </li>
-    ) : null;
-  };
-
+  return title ? (
+    <li className={`${styles.textBlock} ${styles.item}`}>
+      <h3 className={contentStyles.title_small}>
+        <img src={point.src} alt="" className={contentStyles.textSymbol} />
+        {title}
+      </h3>
+    </li>
+  ) : null;
+};

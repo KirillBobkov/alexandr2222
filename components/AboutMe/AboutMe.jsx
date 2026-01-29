@@ -1,9 +1,9 @@
-import React from "react";
-import styles from "./AboutMe.module.css"; // Adjust the path as necessary
 import { VisibilityManager } from "../shared/VisibilityManager";
-import { Button } from "../shared/Button/Button.jsx";
+import { Button } from "../shared/Button/Button";
 import contentStyles from "../../styles/contentStyles.module.css";
 import point from "../../images/point.webp";
+import styles from "./AboutMe.module.css";
+
 export const AboutMe = ({
   title,
   titleEmpty,
@@ -43,11 +43,7 @@ export const AboutMe = ({
       )}
 
       {href && buttonStatus && (
-        <Button
-          className={styles.message}
-          href={href}
-          status={buttonStatus}
-        />
+        <Button className={styles.message} href={href} status={buttonStatus} />
       )}
     </div>
   );
@@ -55,9 +51,8 @@ export const AboutMe = ({
 
 const TextBlock = ({ title }) => {
   return title ? (
-    <li className={styles.textBlock + " " + styles.item}>
+    <li className={`${styles.textBlock} ${styles.item}`}>
       <h3 className={contentStyles.title_small}>
-        {" "}
         <img src={point.src} alt="" className={contentStyles.textSymbol} />
         {title}
       </h3>

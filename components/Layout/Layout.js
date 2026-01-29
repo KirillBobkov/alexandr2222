@@ -2,14 +2,13 @@ import { Footer } from "../Footer/Footer";
 import { Navigation } from "../Navigation/Navigation";
 import Head from "next/head";
 import Script from "next/script";
+import { Nunito, Rubik } from "next/font/google";
+import { useTheme } from "../../hooks/useTheme";
+import ScrollTopButton from "../ScrollTopButton/ScrollTopButton";
+import StarsBackground from "../StarsBackground/StarsBackground";
 import favicon180x180 from "../../images/favicon180x180.png";
 import logo_dark from "../../images/logo_dark.webp";
 import favicon from "../../images/logo_dark.ico";
-import ScrollTopButton from "../ScrollTopButton/ScrollTopButton";
-import { useTheme } from "../../hooks/useTheme";
-
-import { Nunito, Rubik } from "next/font/google";
-import StarsBackground from "../StarsBackground/StarsBackground";
 
 const nunito = Nunito({
   weight: ["400", "700"],
@@ -17,13 +16,6 @@ const nunito = Nunito({
   display: "swap",
   subsets: ["cyrillic"],
 });
-
-// const popins = Poppins({
-//   weight: ['400', '700'],
-//   style: ['normal'],
-//   display: 'swap',
-//   subsets: ['cyrillic']
-// })
 
 const rubik = Rubik({
   weight: ["400", "700"],

@@ -1,31 +1,26 @@
-import React from "react";
-import styles from "./AnimatedLine.module.css"; // Adjust the path as necessary
-import Image from "next/image.js";
-import logoLight from "../../images/logo.webp";
-import logoDark from "../../images/logo_dark.webp";
+import Image from "next/image";
 import { useTheme } from "../../hooks/useTheme";
+import logoDark from "../../images/logo_dark.webp";
+import logoLight from "../../images/logo.webp";
+import styles from "./AnimatedLine.module.css";
 
 export const AnimatedLine = () => {
   const { theme } = useTheme();
+  const logo = theme === "light" ? logoLight : logoDark;
+
   return (
     <div className={styles.block}>
       <div className={styles.moving}>
-        <Image src={theme === "light" ? logoLight : logoDark} alt="" className={styles.logo} id="logo" />
-        <p className={styles.logo__title}>
-          TEGRAAL
-        </p>  
+        <Image src={logo} alt="" className={styles.logo} id="logo" />
+        <p className={styles.logo__title}>TEGRAAL</p>
       </div>
       <div className={styles.moving}>
-        <Image src={theme === "light" ? logoLight : logoDark } alt="" className={styles.logo} id="logo" />
-        <p className={styles.logo__title}>
-          TEGRAAL
-        </p>  
+        <Image src={logo} alt="" className={styles.logo} id="logo" />
+        <p className={styles.logo__title}>TEGRAAL</p>
       </div>
       <div className={styles.moving}>
-        <Image src={theme === "light" ? logoLight : logoDark} alt="" className={styles.logo} id="logo" />
-        <p className={styles.logo__title}>
-         TEGRAAL
-        </p>  
+        <Image src={logo} alt="" className={styles.logo} id="logo" />
+        <p className={styles.logo__title}>TEGRAAL</p>
       </div>
     </div>
   );

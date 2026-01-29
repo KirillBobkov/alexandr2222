@@ -1,34 +1,34 @@
 import { useEffect, useLayoutEffect, useState } from "react";
 
 const getMatches = (query) => {
-  // Prevents SSR issues
-  if (typeof window !== 'undefined') {
+  if (typeof window !== "undefined") {
     return window.matchMedia(query).matches;
   }
   return false;
 };
 
 export function useMediaQuery(query) {
-  const [hasMatch, setHasMatches] = useState(getMatches(query));
+  const [hasMatch, setHasMatches] = useState(() => getMatches(query));
   const [initialLoad, setInitialLoad] = useState(true);
 
-  // onli for static site generation
   useLayoutEffect(() => {
     if (initialLoad) {
       setInitialLoad(false);
     }
-  }, []);
-
-  function handleChange() {
-    setHasMatches(getMatches(query));
-  }
+  }, [initialLoad]);
 
   useEffect(() => {
     const matchMedia = window.matchMedia(query);
+
+    const handleChange = () => {
+      setHasMatches(matchMedia.matches);
+    };
+
     handleChange();
-    matchMedia.addEventListener('change', handleChange);
+    matchMedia.addEventListener("change", handleChange);
+
     return () => {
-      matchMedia.removeEventListener('change', handleChange);
+      matchMedia.removeEventListener("change", handleChange);
     };
   }, [query]);
 

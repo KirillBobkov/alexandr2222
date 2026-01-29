@@ -1,12 +1,12 @@
-import Image from 'next/image';
-import LinkButton from '../shared/LinkButton/LinkButton';
-import styles from './BlogCard.module.css';
-import contentStyles from '../../styles/contentStyles.module.css';
-import React from 'react';
-import { VisibilityManager } from '../shared/VisibilityManager';
+import { useState } from "react";
+import Image from "next/image";
+import { VisibilityManager } from "../shared/VisibilityManager";
+import LinkButton from "../shared/LinkButton/LinkButton";
+import contentStyles from "../../styles/contentStyles.module.css";
+import styles from "./BlogCard.module.css";
 
-export const BlogCard = ({ title, description, date, image, slug }) => {
-  const [loaded, setLoaded] = React.useState(false);
+export const BlogCard = ({ date, description, image, slug, title }) => {
+  const [loaded, setLoaded] = useState(false);
 
   return (
     <VisibilityManager as="article" className={styles.card}>
@@ -16,9 +16,9 @@ export const BlogCard = ({ title, description, date, image, slug }) => {
           alt={title}
           width={400}
           height={250}
-          className={styles.image + " " + (loaded ? styles.loaded : "")}
+          className={`${styles.image} ${loaded ? styles.loaded : ""}`}
           onLoad={() => setLoaded(true)}
-          />
+        />
       </div>
       <div className={styles.content}>
         <time className={styles.date}>{date}</time>
@@ -26,6 +26,6 @@ export const BlogCard = ({ title, description, date, image, slug }) => {
         <p className={styles.description}>{description}</p>
         <LinkButton href={`/blog/${slug}`}>Читать полностью</LinkButton>
       </div>
-    </VisibilityManager>  
+    </VisibilityManager>
   );
-}; 
+};

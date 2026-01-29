@@ -1,37 +1,33 @@
-import React, { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
+import { useEffect, useState } from "react";
 import { OrderForm } from "../shared/OrderForm/OrderForm";
 import styles from "./TarifModal.module.css";
 
-interface TarifModalProps {
-  card: any;
-  onClose: () => void;
-  isOpen: boolean;
+interface Card {
+  price: string;
+  title: string;
+  tariff: string;
 }
 
-export const TarifModal = ({
-  card,
-  onClose,
-  isOpen,
-}: TarifModalProps) => {
+interface TarifModalProps {
+  card: Card;
+  isOpen: boolean;
+  onClose: () => void;
+}
+
+export const TarifModal = ({ card, isOpen, onClose }: TarifModalProps) => {
   const [closing, setClosing] = useState(false);
 
-  // Блокировка скролла body при открытии модального окна
   useEffect(() => {
     if (isOpen) {
-      // Сохраняем текущее значение overflow для восстановления
       const originalOverflow = document.body.style.overflow;
-      
-      // Блокируем скролл
-      document.body.style.overflow = 'hidden';
-      
-      // Очищаем при закрытии или размонтировании
+      document.body.style.overflow = "hidden";
+
       return () => {
         document.body.style.overflow = originalOverflow;
       };
     }
-     }, [isOpen]);
-
+  }, [isOpen]);
 
   const handleClose = () => {
     setClosing(true);
@@ -41,16 +37,17 @@ export const TarifModal = ({
     }, 100);
   };
 
-  const handleOverlayClick = (e: any) => {
+  const handleOverlayClick = (e: React.MouseEvent<HTMLDivElement>) => {
     if (e.target === e.currentTarget) {
       handleClose();
     }
   };
 
   if (!isOpen) return null;
+  if (typeof window === "undefined") return null;
 
   const modalContent = (
-    <div 
+    <div
       className={`${styles.overlay} ${!closing ? styles.open : ""}`}
       onClick={handleOverlayClick}
     >
@@ -58,7 +55,7 @@ export const TarifModal = ({
         <button onClick={handleClose} className={styles.closeButton}>
           ✕
         </button>
-        
+
         <div className={styles.modalContent}>
           <div className={styles.formSection}>
             <OrderForm
@@ -73,9 +70,5 @@ export const TarifModal = ({
     </div>
   );
 
-  // Рендерим модальное окно в корне документа через Portal
-  // Проверяем, что мы в браузере (не SSR)
-  if (typeof window === 'undefined') return null;
-  
   return createPortal(modalContent, document.body);
-}; 
+};

@@ -1,41 +1,26 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Input } from "../shared/Input/Input";
-import styles from "./Form.module.css";
 import { VisibilityManager } from "../shared/VisibilityManager";
 import { FormValidator } from "../shared/FormValidator/FormValidator";
 import contentStyles from "../../styles/contentStyles.module.css";
 import { validateName, validatePhone } from "../../utils/validation";
+import styles from "./Form.module.css";
 
 export function Form({
+  animation,
+  description,
   isSubmitted,
   setIsSubmitted,
-  type = "",
   title,
-  description,
-  animation,
+  type = "",
 }) {
   const [message, setMessage] = useState("");
   const id = type;
 
   const fieldsConfig = [
-    {
-      name: 'name',
-      type: 'text',
-      required: true,
-      validator: validateName
-    },
-    {
-      name: 'phone',
-      type: 'phone', 
-      required: true,
-      validator: validatePhone
-    },
-    {
-      name: 'checkbox',
-      type: 'checkbox',
-      required: true,
-      defaultValue: false
-    }
+    { name: "name", type: "text", required: true, validator: validateName },
+    { name: "phone", type: "phone", required: true, validator: validatePhone },
+    { name: "checkbox", type: "checkbox", required: true, defaultValue: false },
   ];
 
   const handleSend = async (formData) => {
@@ -45,7 +30,7 @@ export function Form({
       const url = `https://api.telegram.org/bot${token}/sendMessage`;
       const isMobileDevice =
         /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-          typeof window !== "undefined" ? window.navigator.userAgent : ""
+          typeof window !== "undefined" ? window.navigator.userAgent : "",
         );
 
       const deviceType = isMobileDevice ? "Смартфон" : "Компьютер";
@@ -64,108 +49,116 @@ export function Form({
 👤 <b>Имя</b>: ${formData.name}
 📞 <b>Телефон</b>: ${formData.phone}
 💻 <b>Тип устройства</b>: ${deviceType}
-⏰ <b>Время</b>: ${new Date().toLocaleString('ru-RU')}`,
+⏰ <b>Время</b>: ${new Date().toLocaleString("ru-RU")}`,
         }),
       });
 
       setMessage("success");
-    } catch (error) {
+    } catch {
       setMessage("error");
     }
   };
 
-  const content = (
-    <div className={styles.form + ((title || description) ? " " + styles['form--two-items'] : "")}>
-      {(title || description) ? (
-        <VisibilityManager side="left" className={styles.form_content}>
-          {title ? <h3 className={contentStyles.title_middle + " " + styles.form_title}>{title}</h3> : null}  
-          {description ?  <p className={styles.textDescription}>{description}</p> : null}
-        </VisibilityManager>
-      ) : null}
+  const hasHeader = title || description;
 
-      <FormValidator
-        fields={fieldsConfig}
-        isSubmitted={isSubmitted}
-        setIsSubmitted={setIsSubmitted}
-        onSubmit={handleSend}
+  return (
+    <div className={styles.container}>
+      <div
+        className={`${styles.form}${hasHeader ? ` ${styles["form--two-items"]}` : ""}`}
       >
-        {({ formData, errors, handleChange, handleSubmit, isSubmitted }) => (
-          <form onSubmit={handleSubmit} className={styles.form__item}>
-            <div className={styles.form_elem}>
-              <Input
-                type="text"
-                name="name"
-                placeholder="Введите ваше имя"
-                value={formData.name}
-                onChange={handleChange}
-                disabled={isSubmitted}
-                error={errors.name}
-              />
-            </div>
-            <div className={styles.form_elem}>
-              <Input
-                type="tel"
-                name="phone"
-                placeholder="Введите ваш номер телефона"
-                value={formData.phone}
-                onChange={handleChange}
-                disabled={isSubmitted}
-                error={errors.phone}
-              />
-            </div>
-            <div
-              className={styles.form_elem}
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                gap: 15,
-                position: "relative",
-              }}
-            >
-              <VisibilityManager
-                as="button"
-                type="submit"
-                className={styles.formbutton}
-                disabled={isSubmitted || errors.name || errors.phone || errors.checkbox}
-              >
-                {"Записаться"}
-              </VisibilityManager>
-              <VisibilityManager className={styles["form-checkbox"]}>
-                <input
-                  name="checkbox"
-                  className={`${styles["form-checkbox__input"]} ${
-                    errors.checkbox ? styles["form-checkbox__input--error"] : ""
-                  }`}
-                  type="checkbox"
-                  id={id}
-                  disabled={isSubmitted}
-                  onChange={(e) => {
-                    handleChange(e);
-                  }}
-                  checked={formData.checkbox}
+        {hasHeader ? (
+          <VisibilityManager side="left" className={styles.form_content}>
+            {title ? (
+              <h3 className={`${contentStyles.title_middle} ${styles.form_title}`}>
+                {title}
+              </h3>
+            ) : null}
+            {description ? (
+              <p className={styles.textDescription}>{description}</p>
+            ) : null}
+          </VisibilityManager>
+        ) : null}
+
+        <FormValidator
+          fields={fieldsConfig}
+          isSubmitted={isSubmitted}
+          setIsSubmitted={setIsSubmitted}
+          onSubmit={handleSend}
+        >
+          {({ handleChange, handleSubmit, isSubmitted: formSubmitted, errors, formData }) => (
+            <form onSubmit={handleSubmit} className={styles.form__item}>
+              <div className={styles.form_elem}>
+                <Input
+                  type="text"
+                  name="name"
+                  placeholder="Введите ваше имя"
+                  value={formData.name}
+                  onChange={handleChange}
+                  disabled={formSubmitted}
+                  error={errors.name}
                 />
-                <label
-                  style={{ opacity: isSubmitted ? 0.5 : 1 }}
-                  className={`${styles["form-checkbox__label"]}`}
-                  htmlFor={id}
+              </div>
+              <div className={styles.form_elem}>
+                <Input
+                  type="tel"
+                  name="phone"
+                  placeholder="Введите ваш номер телефона"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  disabled={formSubmitted}
+                  error={errors.phone}
+                />
+              </div>
+              <div
+                className={styles.form_elem}
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: 15,
+                  position: "relative",
+                }}
+              >
+                <VisibilityManager
+                  as="button"
+                  type="submit"
+                  className={styles.formbutton}
+                  disabled={formSubmitted || errors.name || errors.phone || errors.checkbox}
                 >
-                  Я ознакомлен (ознакомлена) с{" "}
-                  <a
-                    target="_blank"
-                    className={styles["form-doc"]}
-                    href="/agreement-data.txt"
+                  Записаться
+                </VisibilityManager>
+                <VisibilityManager className={styles["form-checkbox"]}>
+                  <input
+                    name="checkbox"
+                    className={`${styles["form-checkbox__input"]} ${
+                      errors.checkbox ? styles["form-checkbox__input--error"] : ""
+                    }`}
+                    type="checkbox"
+                    id={id}
+                    disabled={formSubmitted}
+                    onChange={handleChange}
+                    checked={formData.checkbox}
+                  />
+                  <label
+                    style={{ opacity: formSubmitted ? 0.5 : 1 }}
+                    className={styles["form-checkbox__label"]}
+                    htmlFor={id}
                   >
-                    правилами
-                  </a>{" "}
-                  обработки персональных данных
-                </label>
-              </VisibilityManager>
-              {message ? (
-                <VisibilityManager style={{ marginTop: 0 }}>
-                  {message === "error" ? (
+                    Я ознакомлен (ознакомлена) с{" "}
+                    <a
+                      target="_blank"
+                      className={styles["form-doc"]}
+                      href="/agreement-data.txt"
+                    >
+                      правилами
+                    </a>{" "}
+                    обработки персональных данных
+                  </label>
+                </VisibilityManager>
+                {message === "error" && (
+                  <VisibilityManager style={{ marginTop: 0 }}>
                     <p>
-                      Что-то пошло не так. Свяжитесь, пожалуйста, со мной в
-                      Телеграм по{" "}
+                      Что-то пошло не так. Свяжитесь, пожалуйста, со мной в Телеграм
+                      по{" "}
                       <a
                         target="_blank"
                         href="https://t.me/Z44LP"
@@ -178,18 +171,18 @@ export function Form({
                         ссылке
                       </a>
                     </p>
-                  ) : null}
-                  {message === "success" ? (
+                  </VisibilityManager>
+                )}
+                {message === "success" && (
+                  <VisibilityManager style={{ marginTop: 0 }}>
                     <p>Спасибо, ваша запись оформлена.</p>
-                  ) : null}
-                </VisibilityManager>
-              ) : null}
-            </div>
-          </form>
-        )}
-      </FormValidator>
+                  </VisibilityManager>
+                )}
+              </div>
+            </form>
+          )}
+        </FormValidator>
+      </div>
     </div>
   );
-
-  return <div className={styles.container}>{content}</div>;
 }

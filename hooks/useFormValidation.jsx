@@ -1,21 +1,23 @@
-import { useState, useEffect, useCallback } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 export const useFormValidation = (stateSchema, validationSchema, callback) => {
   const [state, setState] = useState(stateSchema);
   const [disable, setDisable] = useState(true);
 
   const validateState = useCallback(() => {
-    const hasError = Object.keys(validationSchema).some((key) => {
+    return Object.keys(validationSchema).some((key) => {
       const isInputRequired = validationSchema[key].required;
-      if (state[key].type === 'checkbox') {
-        return isInputRequired && (state[key].selected === undefined || state[key].error);
+      const fieldState = state[key];
+
+      if (fieldState.type === "checkbox") {
+        return (
+          isInputRequired &&
+          (fieldState.selected === undefined || fieldState.error)
+        );
       }
 
-      const stateValue = state[key].value
-      const stateError = state[key].error
-      return isInputRequired && (!stateValue || stateError);
+      return isInputRequired && (!fieldState.value || fieldState.error);
     });
-    return hasError;
   }, [state, validationSchema]);
 
   useEffect(() => {
@@ -23,10 +25,8 @@ export const useFormValidation = (stateSchema, validationSchema, callback) => {
   }, [validateState]);
 
   const handleChange = ({ target }) => {
-    const { selected, type, value, key } = target;
-
+    const { key, selected, type, value } = target;
     const field = validationSchema[key];
-
     let error = "";
 
     if (type === "checkbox") {
@@ -46,21 +46,15 @@ export const useFormValidation = (stateSchema, validationSchema, callback) => {
       return;
     }
 
-    if (type === "question") {
-      if (field.required) {
-        if (!value) {
-          error = "Поле обязательно для заполнения";
-        } else {
-          if (field.validator.regEx) {
-            if (!field.validator.regEx.test(value.toString())) {
-              error = field.validator.error;
-            }
-          } else if (field.validator.length) {
-            if (field.validator.length > value.length) {
-              error = field.validator.error;
-            }
-          }
+    if (type === "question" && field.required) {
+      if (!value) {
+        error = "Поле обязательно для заполнения";
+      } else if (field.validator.regEx) {
+        if (!field.validator.regEx.test(value.toString())) {
+          error = field.validator.error;
         }
+      } else if (field.validator.length && field.validator.length > value.length) {
+        error = field.validator.error;
       }
 
       setState((prevState) => ({
@@ -75,7 +69,6 @@ export const useFormValidation = (stateSchema, validationSchema, callback) => {
 
     if (!validateState()) {
       callback();
-      // reset
       setState(stateSchema);
     }
   };
