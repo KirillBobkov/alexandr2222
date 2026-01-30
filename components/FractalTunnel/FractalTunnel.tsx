@@ -53,7 +53,7 @@ const FractalTunnel = () => {
   const containerRef = React.useRef<HTMLDivElement | null>(null)
   const frameRef = React.useRef<number | null>(null)
 
-  React.useEffect(() => {
+  React.useLayoutEffect(() => {
     const container = containerRef.current
     if (!container) return
 
