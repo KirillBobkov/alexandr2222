@@ -509,14 +509,7 @@ export default function () {
         <h2 className={finalStyles.title} style={{ color: "#fff" }}>
           Нейротраблшутинг
         </h2>
-        <div className={finalStyles.online}>
-          <span className={finalStyles.blink}>●</span>
-          <span>Онлайн</span>
-        </div>
-        <p className={finalStyles.description} style={{ color: "#fff" }}>
-          Точечное и быстрое устранение первопричин блоков, страхов,
-          зависимостей и ограничений через глубинную работу с подсознанием.
-        </p>
+
         <LinkButton href="/neurotroubleshutting">
           <span>Подробнее</span>
         </LinkButton>
@@ -526,11 +519,7 @@ export default function () {
         <h2 className={finalStyles.title} style={{ color: "#fff" }}>
           Мухоморный ретрит в Казани
         </h2>
-        <p className={finalStyles.description} style={{ color: "#fff" }}>
-          Путь исцеления и самопознания, открывающий доступ к встрече с Высшими
-          Силами, позволяет наладить связь с Творцом и раскрыть своё
-          предназначение.
-        </p>
+
         <LinkButton href="/ceremony">
           <span>Подробнее</span>
         </LinkButton>

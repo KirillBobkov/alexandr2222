@@ -6,25 +6,44 @@
 }
 
 .header {
+  position: relative;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   cursor: pointer;
-  padding: 20px 0;
+  padding: 20px 0px 20px 0;
   transition: color 500ms ease-in-out;
-  gap: 20px;
 }
 
 .header:hover {
   color: var(--accent);
 }
 
+.title {
+  overflow: hidden;
+  padding-right: 30px;
+}
+
+
 .icon {
-  font-size: 32px;
-  font-weight: 300;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
   color: var(--accent);
-  min-width: 30px;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrowIcon {
+  width: 16px;
+  height: 16px;
+  transform: rotate(180deg);
+  transition: transform 300ms ease-in-out;
+}
+
+.arrowIconOpen {
+  transform: rotate(0deg);
 }
 
 .content {

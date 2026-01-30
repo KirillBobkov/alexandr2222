@@ -10,18 +10,18 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     gap: 20px;
     max-width: 1285px;
     margin: 0 auto;
     background: var(--card-color);
     text-align: center;
-    padding: 100px 60px;
+    padding: 50px 60px;
     border-radius: 20px;
     position: relative;
     color: #ffffff;
     overflow: hidden;
-    min-height: 400px;
+    min-height: 460px;
 }
 
 .background {
@@ -34,6 +34,7 @@
     transition: opacity 0.5s ease-in-out;
     z-index: 0;
     filter: brightness(0.8);
+    object-fit: contain!important;
 }
 
 .background.loaded {
@@ -96,80 +97,13 @@
     content: "➞";
 }
 
-@keyframes move1 {
-    0%   { transform: translate(200px, 0) rotate(0deg); }
-    10%  { transform: translate(250px, 20px) rotate(10deg); }
-    20%  { transform: translate(300px, 50px) rotate(20deg); }
-    30%  { transform: translate(280px, 100px) rotate(30deg); }
-    40%  { transform: translate(320px, 80px) rotate(40deg); }
-    50%  { transform: translate(270px, 150px) rotate(50deg); }
-    60%  { transform: translate(230px, 100px) rotate(60deg); }
-    70%  { transform: translate(200px, 50px) rotate(70deg); }
-    80%  { transform: translate(220px, 20px) rotate(80deg); }
-    90%  { transform: translate(210px, 0) rotate(90deg); }
-    100% { transform: translate(200px, 0) rotate(0deg); }
-}
-
-@keyframes move2 {
-    0%   { transform: translate(-200px, 120px) rotate(0deg); }
-    10%  { transform: translate(-230px, 90px) rotate(-10deg); }
-    20%  { transform: translate(-270px, 70px) rotate(-20deg); }
-    30%  { transform: translate(-300px, 150px) rotate(-30deg); }
-    40%  { transform: translate(-350px, 110px) rotate(-40deg); }
-    50%  { transform: translate(-290px, 200px) rotate(-50deg); }
-    60%  { transform: translate(-240px, 170px) rotate(-60deg); }
-    70%  { transform: translate(-210px, 130px) rotate(-70deg); }
-    80%  { transform: translate(-220px, 80px) rotate(-80deg); }
-    90%  { transform: translate(-205px, 60px) rotate(-90deg); }
-    100% { transform: translate(-200px, 120px) rotate(0deg); }
-}
-
-@keyframes move3 {
-    0%   { transform: translate(0, 0) rotate(0deg); }
-    10%  { transform: translate(20px, 60px) rotate(15deg); }
-    20%  { transform: translate(80px, 30px) rotate(30deg); }
-    30%  { transform: translate(120px, 120px) rotate(45deg); }
-    40%  { transform: translate(200px, 50px) rotate(60deg); }
-    50%  { transform: translate(150px, 200px) rotate(75deg); }
-    60%  { transform: translate(100px, 150px) rotate(90deg); }
-    70%  { transform: translate(50px, 100px) rotate(105deg); }
-    80%  { transform: translate(10px, 40px) rotate(120deg); }
-    90%  { transform: translate(0, 10px) rotate(135deg); }
-    100% { transform: translate(0, 0) rotate(0deg); }
-}
-
-.move {
-    will-change: transform;
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    font-size: 90px;
-    font-weight: 900;
-    color: var(--accent);
-    border-radius: 50%;
-    z-index: 0;
-    opacity: 0.3;
-}
-
-.moving1 {
-    animation: move1 30s infinite linear;
-}
-
-.moving2 {
-    animation: move2 30s infinite linear;
-}
-
-.moving3 {
-    animation: move3 40s infinite linear;
-}
-
 @media (max-width: 768px) {
     .block {
         padding: 60px 20px 60px;
     }
 
     .content {
-        padding: 60px 30px;
+        padding: 50px 30px 35px;
     }
 
     .title {
@@ -177,7 +111,14 @@
         font-weight: 700;
         line-height: 36px;
     }
+    .background {
+   
+    object-fit: cover!important;
+}
   }
+
+  
+
 
 .online {
   display: flex;

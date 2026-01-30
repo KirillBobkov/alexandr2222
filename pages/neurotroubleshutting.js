@@ -1,7 +1,7 @@
 import Layout from "../components/Layout/Layout";
 import { AnimatedLine } from "../components/AnimatedLine/AnimatedLine";
 import { SecondaryPreview } from "../components/SecondaryPreview/SecondaryPreview";
-import secondary_preview_7 from "../images/secondary_preview_7.webp";
+import enter_hole_2 from "../images/enter_hole_2.webp";
 import { VideoWidget } from "../components/VideoWidget/VideoWidget";
 import { Form } from "../components/Form/Form";
 import { InnerSatisfaction } from "../components/InnerSatisfaction";
@@ -522,7 +522,8 @@ export default function () {
       <SecondaryPreview
         text={"Нейротраблшутинг"}
         subtext={"ЧТОБЫ ПОМЕНЯТЬ РЕАЛЬНОСТЬ — НУЖНО ИЗМЕНИТЬ МЫШЛЕНИЕ "}
-        image={secondary_preview_7}
+        image={enter_hole_2}
+         animated={false}
       />
       <InnerSatisfaction
         animation={false}

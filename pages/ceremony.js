@@ -6,7 +6,7 @@ import { SecondaryPreview } from "../components/SecondaryPreview/SecondaryPrevie
 import { VisibilityManager } from "../components/shared/VisibilityManager";
 import containerStyles from "../styles/container.module.css";
 import contentStyles from "../styles/contentStyles.module.css";
-import secondary_preview_10 from "../images/secondary_preview_10.webp";
+import enter_hole_1 from "../images/enter_hole_1.webp";
 import { Final } from "../components/Final/Final";
 import { VideoWidget } from "../components/VideoWidget/VideoWidget";
 import { Button } from "../components/shared/Button/Button";
@@ -14,9 +14,7 @@ import { PhotoGrid } from "../components/PhotoGrid/PhotoGrid";
 import { Collapsible, CollapsibleSection } from "../components/Collapsible/Collapsible";
 
 import finalStyles from "../styles/finalContent.module.css";
-import point from "../images/point.webp";
 
-import Image from "next/image";
 const videos = [
   {
     link: "https://vkvideo.ru/video_ext.php?oid=643721177&id=456239017&hash=0b13034ee75b5f53",
@@ -600,7 +598,8 @@ export default function () {
     <Layout metaConfig={metaConfig} schemaOrg={schemaOrg}>
       <SecondaryPreview
         text="Мухоморный ретрит в Казани"
-        image={secondary_preview_10}
+        image={enter_hole_1}
+        animated={false}
       />
 
       <div style={{ background: "var(--card-color)" }}>
@@ -630,150 +629,109 @@ export default function () {
       </div>
 
         <div className={containerStyles.container}>
-          <VisibilityManager as="h3" className={contentStyles.title_middle}>
-            Польза и результаты мухоморного ретрита
-          </VisibilityManager>
+          <Collapsible title="Польза и результаты мухоморного ретрита" defaultOpen={false}>
+            <CollapsibleSection title="Гармонизация эмоций">
+              <p className={contentStyles.textDescription}>
+                Освобождение от внутренних зажимов, тяжёлых переживаний и
+                сдерживаемых чувств.
+              </p>
+              <p className={contentStyles.textDescription}>
+                Снижение уровня внутреннего напряжения, преодоление последствий
+                психоэмоциональных нагрузок.
+              </p>
+              <p className={contentStyles.textDescription}>
+                Глубокое чувство покоя, собранности и целостности после церемонии.
+              </p>
+            </CollapsibleSection>
 
-          <VisibilityManager as="div" className={contentStyles.textBlock}>
-            <h3 className={contentStyles.title_small}>
-              <img src={point.src} alt="" className={contentStyles.textSymbol} />
-              Гармонизация эмоций
-            </h3>
-            <p className={contentStyles.textDescription}>
-              Освобождение от внутренних зажимов, тяжёлых переживаний и
-              сдерживаемых чувств.
-            </p>
-            <p className={contentStyles.textDescription}>
-              Снижение уровня внутреннего напряжения, преодоление последствий
-              психоэмоциональных нагрузок.
-            </p>
-            <p className={contentStyles.textDescription}>
-              Глубокое чувство покоя, собранности и целостности после церемонии.
-            </p>
-          </VisibilityManager>
+            <CollapsibleSection title="Физическое восстановление">
+              <p className={contentStyles.textDescription}>
+                Уходит тяжесть из тела, появляется лёгкость и свобода движений.
+              </p>
+              <p className={contentStyles.textDescription}>
+                Становится проще засыпать, просыпаться и чувствовать себя в
+                ресурсе.
+              </p>
+              <p className={contentStyles.textDescription}>
+                Запускаются процессы, которые ощущаются как глубокое
+                восстановление.
+              </p>
+            </CollapsibleSection>
 
-          <VisibilityManager as="div" className={contentStyles.textBlock}>
-            <h3 className={contentStyles.title_small}>
-              <img src={point.src} alt="" className={contentStyles.textSymbol} />
-              Физическое восстановление
-            </h3>
-            <p className={contentStyles.textDescription}>
-              Уходит тяжесть из тела, появляется лёгкость и свобода движений.
-            </p>
-            <p className={contentStyles.textDescription}>
-              Становится проще засыпать, просыпаться и чувствовать себя в
-              ресурсе.
-            </p>
-            <p className={contentStyles.textDescription}>
-              Запускаются процессы, которые ощущаются как глубокое
-              восстановление.
-            </p>
-          </VisibilityManager>
+            <CollapsibleSection title="Личностный рост и осознание предназначения">
+              <p className={contentStyles.textDescription}>
+                Обретение ясности в мыслях и понимание своих истинных целей.
+              </p>
+              <p className={contentStyles.textDescription}>
+                Улучшение качества жизни, отношений, карьеры.
+              </p>
+              <p className={contentStyles.textDescription}>
+                Повышение личной эффективности и продуктивности.
+              </p>
+            </CollapsibleSection>
 
-          <VisibilityManager as="div" className={contentStyles.textBlock}>
-            <h3 className={contentStyles.title_small}>
-              <img src={point.src} alt="" className={contentStyles.textSymbol} />
-              Личностный рост и осознание предназначения
-            </h3>
-            <p className={contentStyles.textDescription}>
-              Обретение ясности в мыслях и понимание своих истинных целей.
-            </p>
-            <p className={contentStyles.textDescription}>
-              Улучшение качества жизни, отношений, карьеры.
-            </p>
-            <p className={contentStyles.textDescription}>
-              Повышение личной эффективности и продуктивности.
-            </p>
-          </VisibilityManager>
+            <CollapsibleSection title="Прокачка сексуальности">
+              <p className={contentStyles.textDescription}>
+                Освобождение от внутренних блоков, стыда, травм.
+              </p>
+              <p className={contentStyles.textDescription}>
+                Переосмысление отношения к своему телу и интимности.
+              </p>
+              <p className={contentStyles.textDescription}>
+                Пробуждение естественной сексуальной энергии.
+              </p>
+            </CollapsibleSection>
 
-          <VisibilityManager as="div" className={contentStyles.textBlock}>
-            <h3 className={contentStyles.title_small}>
-              <img src={point.src} alt="" className={contentStyles.textSymbol} />
-              Прокачка сексуальности
-            </h3>
-            <p className={contentStyles.textDescription}>
-              Освобождение от внутренних блоков, стыда, травм.
-            </p>
-            <p className={contentStyles.textDescription}>
-              Переосмысление отношения к своему телу и интимности.
-            </p>
-            <p className={contentStyles.textDescription}>
-              Пробуждение естественной сексуальной энергии.
-            </p>
-          </VisibilityManager>
-
-          <VisibilityManager as="div" className={contentStyles.textBlock}>
-            <h3 className={contentStyles.title_small}>
-              <img src={point.src} alt="" className={contentStyles.textSymbol} />
-              Глубинная связь с природой и Высшими Силами
-            </h3>
-            <p className={contentStyles.textDescription}>
-              Единение с миром и понимание своего места во Вселенной.
-            </p>
-            <p className={contentStyles.textDescription}>
-              Ощущение потока жизни, благодарности и осознанности.
-            </p>
-            <p className={contentStyles.textDescription}>
-              Мистические переживания, способные изменить мировоззрение.
-            </p>
-          </VisibilityManager>
+            <CollapsibleSection title="Глубинная связь с природой и Высшими Силами">
+              <p className={contentStyles.textDescription}>
+                Единение с миром и понимание своего места во Вселенной.
+              </p>
+              <p className={contentStyles.textDescription}>
+                Ощущение потока жизни, благодарности и осознанности.
+              </p>
+              <p className={contentStyles.textDescription}>
+                Мистические переживания, способные изменить мировоззрение.
+              </p>
+            </CollapsibleSection>
+          </Collapsible>
 
           <div style={{ height: "1px" }} />
 
-          <VisibilityManager as="h3" className={contentStyles.title_middle}>
-            Исторические примеры 
-          </VisibilityManager>
+          <Collapsible title="Исторические примеры" defaultOpen={false}>
+            <CollapsibleSection title="Шаманизм и древние традиции">
+              <p className={contentStyles.textDescription}>
+                В славянской культуре шаманы использовали Мухомор для общения
+                с духами, целительства и предсказаний, а охотники — для
+                повышения выносливости.
+              </p>
+            </CollapsibleSection>
 
-          <VisibilityManager as="div" className={contentStyles.textBlock}>
-            <h3 className={contentStyles.title_small}>
-              <img src={point.src} alt="" className={contentStyles.textSymbol} />
-              Шаманизм и древние традиции
-            </h3>
-            <p className={contentStyles.textDescription}>
-              В славянской культуре шаманы использовали Мухомор для общения
-              с духами, целительства и предсказаний, а охотники — для
-              повышения выносливости.
-            </p>
-          </VisibilityManager>
+            <CollapsibleSection title="Воинская доблесть и обострение чувств">
+              <p className={contentStyles.textDescription}>
+                Викинги предположительно употребляли мухоморы, чтобы войти в
+                боевой раж и стать бесстрашными в сражении.
+              </p>
+            </CollapsibleSection>
 
-          <VisibilityManager as="div" className={contentStyles.textBlock}>
-            <h3 className={contentStyles.title_small}>
-              <img src={point.src} alt="" className={contentStyles.textSymbol} />
-              Воинская доблесть и обострение чувств
-            </h3>
-            <p className={contentStyles.textDescription}>
-              Викинги предположительно употребляли мухоморы, чтобы войти в
-              боевой раж и стать бесстрашными в сражении.
-            </p>
-          </VisibilityManager>
+            <CollapsibleSection title="Духовные ритуалы индейцев">
+              <p className={contentStyles.textDescription}>
+                В ритуалах североамериканских индейцев мухоморы использовались
+                для очищения, улучшения самочувствия и получения видений.
+              </p>
+            </CollapsibleSection>
 
-          <VisibilityManager as="div" className={contentStyles.textBlock}>
-            <h3 className={contentStyles.title_small}>
-              <img src={point.src} alt="" className={contentStyles.textSymbol} />
-              Духовные ритуалы индейцев
-            </h3>
-            <p className={contentStyles.textDescription}>
-              В ритуалах североамериканских индейцев мухоморы использовались
-              для очищения, улучшения самочувствия и получения видений.
-            </p>
-          </VisibilityManager>
-
-          <VisibilityManager as="div" className={contentStyles.textBlock}>
-            <h3 className={contentStyles.title_small}>
-              <img src={point.src} alt="" className={contentStyles.textSymbol} />
-              Современные исследования
-            </h3>
-            <p className={contentStyles.textDescription}>
-              В западной науке изучается влияние Мухомора на психику и его
-              потенциал в терапии психических расстройств.
-            </p>
-          </VisibilityManager>
+            <CollapsibleSection title="Современные исследования">
+              <p className={contentStyles.textDescription}>
+                В западной науке изучается влияние Мухомора на психику и его
+                потенциал в терапии психических расстройств.
+              </p>
+            </CollapsibleSection>
+          </Collapsible>
         </div>
 
         <div className={containerStyles.container}>
           <VisibilityManager as="h3" className={contentStyles.title_middle}>
-            Пример успешных людей, которые использовали шаманские практики для
-            раскрытия своего потенциала
+            Протрипованные звёзды
           </VisibilityManager>
           <VisibilityManager as="p">
             Множество выдающихся предпринимателей, достигших невероятных высот в
@@ -797,84 +755,54 @@ export default function () {
         </div>
 
         <div className={containerStyles.container}>
-          <VisibilityManager as="h3" className={contentStyles.title_middle}>
-            Преимущества моего ретрита
-          </VisibilityManager>
+          <Collapsible title="Преимущества моего ретрита" defaultOpen={false}>
+            <CollapsibleSection title="Назначен проводником непосредственно от самого Мухомора (пояснение)">
+              <p className={contentStyles.textDescription}>
+                Этот путь был принят мною не из любопытства или моды. Когда мне
+                было 17 лет, отец провёл обряд посвящения, передав древние знания.
+                А в погружении на Мухоморе, мне было прямо указано проводить людей
+                через этот опыт, помогая им восстановиться и найти путь к самим
+                себе.
+              </p>
+            </CollapsibleSection>
 
-          <VisibilityManager as="p">
-            Почему вам стоит выбрать именно этот путь?
-          </VisibilityManager>
+            <CollapsibleSection title="Глубокая работа с подсознанием">
+              <p className={contentStyles.textDescription}>
+                Страх, волнение или сомнения перед ретритом? Это естественно. По
+                необходимости, провожу предварительную работу с подсознанием,
+                помогая устранить внутреннее напряжение, беспокойство и помогаю
+                настроиться на взаимодействие с Мухомором.
+              </p>
+            </CollapsibleSection>
 
-          <VisibilityManager as="div" className={contentStyles.textBlock}>
-            <h3 className={contentStyles.title_small}>
-              <img src={point.src} alt="" className={contentStyles.textSymbol} />
-              Назначен проводником непосредственно от самого Мухомора (пояснение)
-            </h3>
-            <p className={contentStyles.textDescription}>
-              Этот путь был принят мною не из любопытства или моды. Когда мне
-              было 17 лет, отец провёл обряд посвящения, передав древние знания.
-              А в погружении на Мухоморе, мне было прямо указано проводить людей
-              через этот опыт, помогая им восстановиться и найти путь к самим
-              себе.
-            </p>
-          </VisibilityManager>
+            <CollapsibleSection title="Быстрый, но эффективный формат">
+              <p className={contentStyles.textDescription}>
+                В отличие от большинства ретритных центров, где практика длится по
+                3–4 дня, мой ретрит занимает не более суток. Вы получаете мощный
+                трансформационный опыт, без необходимости выпадать из жизни на
+                несколько дней.
+              </p>
+            </CollapsibleSection>
 
-          <VisibilityManager as="div" className={contentStyles.textBlock}>
-            <h3 className={contentStyles.title_small}>
-              <img src={point.src} alt="" className={contentStyles.textSymbol} />
-              
-              Глубокая работа с подсознанием
-            </h3>
-            <p className={contentStyles.textDescription}>
-              Страх, волнение или сомнения перед ретритом? Это естественно. По
-              необходимости, провожу предварительную работу с подсознанием,
-              помогая устранить внутреннее напряжение, беспокойство и помогаю
-              настроиться на взаимодействие с Мухомором.
-            </p>
-          </VisibilityManager>
+            <CollapsibleSection title="Безопасность и грамотная интеграция">
+              <p className={contentStyles.textDescription}>
+                Ретрит проходит в комфортном и защищённом месте. После церемонии,
+                помогаю участникам осознать и правильно внедрить полученный опыт в
+                повседневную жизнь.
+              </p>
+            </CollapsibleSection>
 
-          <VisibilityManager as="div" className={contentStyles.textBlock}>
-            <h3 className={contentStyles.title_small}>
-              <img src={point.src} alt="" className={contentStyles.textSymbol} />
-              
-              Быстрый, но эффективный формат
-            </h3>
-            <p className={contentStyles.textDescription}>
-              В отличие от большинства ретритных центров, где практика длится по
-              3–4 дня, мой ретрит занимает не более суток. Вы получаете мощный
-              трансформационный опыт, без необходимости выпадать из жизни на
-              несколько дней.
-            </p>
-          </VisibilityManager>
-
-          <VisibilityManager as="div" className={contentStyles.textBlock}>
-            <h3 className={contentStyles.title_small}>
-              <img src={point.src} alt="" className={contentStyles.textSymbol} />
-              
-              Безопасность и грамотная интеграция
-            </h3>
-            <p className={contentStyles.textDescription}>
-              Ретрит проходит в комфортном и защищённом месте. После церемонии,
-              помогаю участникам осознать и правильно внедрить полученный опыт в
-              повседневную жизнь.
-            </p>
-          </VisibilityManager>
-
-          <VisibilityManager as="div" className={contentStyles.textBlock}>
-            <h3 className={contentStyles.title_small}>
-              <img src={point.src} alt="" className={contentStyles.textSymbol} />
-              
-              Индивидуальная дозировка и перепроверка через кинезиологический тест
-            </h3>
-            <p className={contentStyles.textDescription}>
-              Каждому участнику подбираю дозировку Мухомора, которую
-              дополнительно проверяю через кинезиологический тест, исключая риск
-              передозировки и даже минимальную вероятность случайного попадания
-              в партию Бледной Поганки. Это позволяет обеспечивать безопасность
-              на каждом этапе.
-            </p>
-          </VisibilityManager>
-          <Final flyletters={false} animation customStyles={{ padding: "0" }}>
+            <CollapsibleSection title="Индивидуальная дозировка и перепроверка через кинезиологический тест">
+              <p className={contentStyles.textDescription}>
+                Каждому участнику подбираю дозировку Мухомора, которую
+                дополнительно проверяю через кинезиологический тест, исключая риск
+                передозировки и даже минимальную вероятность случайного попадания
+                в партию Бледной Поганки. Это позволяет обеспечивать безопасность
+                на каждом этапе.
+              </p>
+            </CollapsibleSection>
+          </Collapsible>
+          <Final flyletters={false} animation className={finalStyles.hero} customStyles={{ padding: "0"}}>
             <div
               className={finalStyles.price}
               style={{ marginTop: "0", textTransform: "uppercase" }}
@@ -1009,48 +937,31 @@ export default function () {
           </Collapsible>
 
           <div style={{ height: "1px" }} />
-          <VisibilityManager as="h3" className={contentStyles.title_middle}>
-            Риски и меры предосторожности
-          </VisibilityManager>
+          <Collapsible title="Риски и меры предосторожности" defaultOpen={false}>
+            <CollapsibleSection title="Токсичность и побочные эффекты">
+              <p className={contentStyles.textDescription}>
+                Мухомор содержит активные вещества, которые могут вызвать тошноту,
+                головокружение и даже отравление при неправильном употреблении.
+                Самостоятельное использование без опыта и знаний может быть
+                опасным.
+              </p>
+            </CollapsibleSection>
 
-          <VisibilityManager as="div" className={contentStyles.textBlock}>
-            <h3 className={contentStyles.title_small}>
-              <img src={point.src} alt="" className={contentStyles.textSymbol} />
-              
-              Токсичность и побочные эффекты
-            </h3>
-            <p className={contentStyles.textDescription}>
-              Мухомор содержит активные вещества, которые могут вызвать тошноту,
-              головокружение и даже отравление при неправильном употреблении.
-              Самостоятельное использование без опыта и знаний может быть
-              опасным.
-            </p>
-          </VisibilityManager>
+            <CollapsibleSection title="Риск десоциализации">
+              <p className={contentStyles.textDescription}>
+                Глубокие переживания требуют осознанной интеграции. Без поддержки
+                проводника можно потерять связь с реальностью или столкнуться с
+                внутренними конфликтами.
+              </p>
+            </CollapsibleSection>
 
-          <VisibilityManager as="div" className={contentStyles.textBlock}>
-            <h3 className={contentStyles.title_small}>
-              <img src={point.src} alt="" className={contentStyles.textSymbol} />
-              
-              Риск десоциализации
-            </h3>
-            <p className={contentStyles.textDescription}>
-              Глубокие переживания требуют осознанной интеграции. Без поддержки
-              проводника можно потерять связь с реальностью или столкнуться с
-              внутренними конфликтами.
-            </p>
-          </VisibilityManager>
-
-          <VisibilityManager as="div" className={contentStyles.textBlock}>
-            <h3 className={contentStyles.title_small}>
-              <img src={point.src} alt="" className={contentStyles.textSymbol} />
-              
-              Юридические аспекты
-            </h3>
-            <p className={contentStyles.textDescription}>
-              В России Мухомор не запрещён и его использование абсолютно
-              легально.
-            </p>
-          </VisibilityManager>
+            <CollapsibleSection title="Юридические аспекты">
+              <p className={contentStyles.textDescription}>
+                В России Мухомор не запрещён и его использование абсолютно
+                легально.
+              </p>
+            </CollapsibleSection>
+          </Collapsible>
 
           <div style={{ height: "1px" }} />
           <VisibilityManager as="h3" className={contentStyles.title_middle}>
