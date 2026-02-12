@@ -81,12 +81,6 @@ export const getNavigationTree = () => [
   },
   {
     parent: {
-      path: "/nonverbal-programming",
-      value: "Невербальное программирование",
-    },
-  },
-  {
-    parent: {
       path: "/ceremony",
       value: "Мухоморный ретрит",
     },

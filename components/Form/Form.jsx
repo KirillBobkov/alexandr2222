@@ -124,7 +124,7 @@ export function Form({
                   className={styles.formbutton}
                   disabled={formSubmitted || errors.name || errors.phone || errors.checkbox}
                 >
-                  Записаться
+                  Консультация
                 </VisibilityManager>
                 <VisibilityManager className={styles["form-checkbox"]}>
                   <input

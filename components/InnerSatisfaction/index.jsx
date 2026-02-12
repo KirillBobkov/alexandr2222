@@ -13,7 +13,7 @@ export const InnerSatisfaction = ({
 }) => {
   const content = (
     <div className={styles.block}>
-      <VisibilityManager
+      {titlePrefix && <VisibilityManager
         as="h2"
         side="left"
         className={`${contentStyles.title} ${styles.title}`}
@@ -22,7 +22,7 @@ export const InnerSatisfaction = ({
         {order === 1 ? `${titlePrefix} ` : null}
         {titleSuffix}
         {order === 2 ? ` ${titlePrefix}` : null}
-      </VisibilityManager>
+      </VisibilityManager>}
 
       <VisibilityManager>
         <p className={styles.paragraph} style={{ maxWidth: 700 }}>

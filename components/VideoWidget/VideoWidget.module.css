@@ -6,6 +6,18 @@
   padding: 100px 30px 100px;
 }
 
+.mobileHeader {
+  display: none;
+  padding: 20px 20px 10px;
+}
+
+.title {
+  font-size: 24px;
+  line-height: 40px;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
 .content {
   display: flex;
   flex-direction: row;
@@ -22,17 +34,35 @@
   min-width: 350px;
 }
 
+.mobileCardWrapper {
+  display: contents;
+}
+
 @media (max-width: 768px) {
   .container {
-    padding: 60px 20px;
+    padding: 10px 20px;
+  }
+
+  .mobileHeader {
+    display: block;
   }
 
   .content {
+    flex-direction: column-reverse;
+  }
+
+  .mobileCardWrapper {
+    display: flex;
     flex-direction: column;
+    background: var(--card-color);
+        box-shadow: 0px -3px 15px 0px var(--border-color) inset;
+    border-radius: 20px;
+    overflow: hidden;
   }
 
   .playerSection {
     width: 100%;
+    border-radius: 0;
   }
 
   .listSection {

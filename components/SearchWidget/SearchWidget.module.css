@@ -3,7 +3,8 @@
   position: sticky;
   height: 200px;
   border-radius: 20px;
-  background-color: var(--card-color);
+  background: var(--card-color);
+        box-shadow: 0px -3px 15px 0px var(--border-color) inset;
   top: 2rem;
 }
 

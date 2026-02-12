@@ -24,7 +24,7 @@ export const VideoList: React.FC<VideoListProps> = ({
     <VisibilityManager side="left" className={styles.container}>
       <div className={styles.header}>
         <h3 className={`${contentStyles.title_middle} ${styles.title}`}>
-          Отзывы людей, которым я помог
+          Отзывы
         </h3>
       </div>
       <div className={styles.listWrapper}>

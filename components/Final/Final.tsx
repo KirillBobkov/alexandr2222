@@ -21,7 +21,7 @@ export const Final = ({
   const [loaded, setLoaded] = useState(false);
 
   const content = (
-    <VisibilityManager as="section" className={styles.block} style={customStyles}>
+    <VisibilityManager as="section" className={styles.block + ' ' + 'glass-card'} style={customStyles}>
       <div className={styles.content + ' ' + className} >
         {image && (
           <Image

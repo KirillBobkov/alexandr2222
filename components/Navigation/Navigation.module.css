@@ -244,7 +244,7 @@
         padding: 0;
         height: 0;
         overflow: hidden;
-        background-color: var(--button-opacity);
+        background-color: var(--bg-color);
         box-shadow: none;
     }
 
@@ -271,15 +271,15 @@
         padding: 10px;
         display: block;
         border-radius: 50%;
-
+box-shadow: 3px -3px 14px 0px var(--border-color) inset;
     }
 
     .navigation__arrow-container {
         width: 20px;
         height: 20px;
-        background-color: var(--button-opacity);
+
         border-radius: 50%;
-        box-shadow: 0 0 0 10px var(--button-opacity);
+  
         z-index: 1;
         color: var(--accent-2);
         display: block;

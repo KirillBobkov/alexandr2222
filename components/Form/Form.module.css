@@ -1,20 +1,30 @@
 .container {
-  background: var(--card-color);
+  padding: 100px 30px;
 }
 
 .form {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
+  flex-direction: column;
+  gap: 40px;
   min-height: 350px;
-  padding: 100px 30px;
   width: 100%;
   max-width: 1285px;
   margin: 0 auto;
+  background: var(--card-color);
+      box-shadow: 0px -3px 15px 0px var(--border-color) inset;
+  border-radius: 20px;
+  padding: 100px 60px;
+  text-align: center;
+}
+
+.form_title {
+  white-space: pre-wrap;
 }
 
 .form--two-items {
-  justify-content: space-between;
+  justify-content: center;
 }
 
 
@@ -25,6 +35,7 @@
   align-items: stretch;
   justify-content: center;
   gap: 0.5rem;
+  max-width: 400px;
 }
 
 .form_content {
@@ -128,6 +139,11 @@
 }
 
 @media (max-width: 768px) {
+
+  .container {
+  padding: 40px 20px;
+}
+
   .form__item {
     display: flex;
     flex-direction: column;

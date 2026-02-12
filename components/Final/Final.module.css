@@ -15,6 +15,7 @@
     max-width: 1285px;
     margin: 0 auto;
     background: var(--card-color);
+    box-shadow: 0px -3px 15px 0px var(--border-color) inset;
     text-align: center;
     padding: 50px 60px;
     border-radius: 20px;

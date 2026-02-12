@@ -23,12 +23,12 @@
   --accent: #EDB834 ;
   --accent-opacity: #edb834b2;
   --accent-2: #8500bf;
-  --accent-22: linear-gradient(180deg, #f067ffa3 0%, #c528d6d9 30%, #9913adad 40%, #e64dffb3 80%, #dd00ffc4 90%, #a443b3 100%);
+  --accent-22: linear-gradient(90deg, #e605ff60 0%, #c528d6 15%, #9913ad 30%, #e64dff70 45%, #dd00ff85 60%, #7b008ef2 75%, #ec42ff 90%, #961fa3 100%);
   --accent-3: #ff2a2a;
  --accent-33: #ff2a2a;
 
-  --border-color: #1C1C1C;
-  --card-color: linear-gradient(70deg, hsl(0deg 0% 22.46% / 94%), rgb(37 37 37 / 69%) 20%, hsl(0deg 0% 40% / 39%) 40%, rgb(39 39 39 / 64%) 60%, rgba(65, 65, 65, .3) 80%, rgb(95 95 95 / 33%));
+  --border-color: #4b4b4b;
+  --card-color: linear-gradient(70deg, hsl(0deg 0% 22.46% / 0%), rgb(37 37 37 / 69%) 20%, hsl(0deg 0% 40% / 39%) 40%, rgb(39 39 39 / 56%) 60%, rgba(65, 65, 65, .3) 80%, rgb(95 95 95 / 0%));
   --card-color-1: linear-gradient(180deg, rgb(195 195 195 / 10%) 0%, rgba(49, 49, 49, 0.6) 25%, rgba(101, 101, 101, 0.312) 50%, rgba(39, 39, 39, 0.317) 75%, rgb(11 11 11 / 32%) 100%);
   --card-color-2: radial-gradient(circle at center, rgb(195 195 195 / 10%) 0%, rgba(49, 49, 49, 0.6) 30%, rgba(101, 101, 101, 0.312) 60%, rgba(39, 39, 39, 0.317) 85%, rgb(11 11 11 / 32%) 100%);
   --card-color-3: radial-gradient(circle at 30% 30%, rgb(195 195 195 / 10%) 0%, rgba(49, 49, 49, 0.6) 20%, rgba(101, 101, 101, 0.312) 45%, rgba(39, 39, 39, 0.317) 70%, rgb(95 95 95 / 40%) 100%);
@@ -84,7 +84,6 @@ body {
 }
 
 *::-webkit-scrollbar-track {
-  background-color: var(--bg-color);
   border-radius: 10px;
   border-radius: 10px;
 }
@@ -92,3 +91,4 @@ body {
 *::-webkit-scrollbar-thumb {
   background-color: var(--accent);
 }
+

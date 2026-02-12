@@ -641,7 +641,7 @@ export default function () {
       <Form
         setIsSubmitted={setIsSubmitted}
         isSubmitted={isSubmitted}
-        title={"БЕСПЛАТНАЯ КОНСУЛЬТАЦИЯ"}
+        title={"КОНСУЛЬТАЦИЯ"}
         type="Первая консультация (Страница: Нейротраблшутинг)"
       />
     </Layout>
