@@ -122,12 +122,14 @@
 
   .form__item {
     display: flex;
+    justify-content: space-between;
     flex-direction: column;
     width: 100%;
-    gap: 10px;
-    padding-top: 40px;
-    padding-bottom: 40px;
     margin-top: 0px;
+    padding-top: 37px;
+    padding-bottom: 37px;
+    flex: 1 1 100%;
+    width: 100%;
   }
 
   .form_elem {
@@ -137,15 +139,10 @@
   .form {
     display: flex;
     flex-direction: column;
-    min-height: 350px;
+    min-height: 460px;
     padding: 10px 20px;
     width: 100%;
     gap: 20px;
-  }
-
-  .form__item {
-    flex: 0 1 100%;
-    width: 100%;
   }
 
   .form_content {
@@ -166,6 +163,6 @@
   }
 
   .form_title {
-  margin-bottom: 20px;
-}
+    margin-bottom: 20px;
+  }
 }

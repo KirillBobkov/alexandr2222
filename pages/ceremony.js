@@ -583,7 +583,7 @@ export default function () {
         </Collapsible>
 
 
-        <Collapsible title="Программа ретрита" defaultOpen={false}>
+        <Collapsible title="Программа" defaultOpen={false}>
                 <div id="program" />
           <CollapsibleSection title="Подготовка">
             <p className={contentStyles.textDescription}>

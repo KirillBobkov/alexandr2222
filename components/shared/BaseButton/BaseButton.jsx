@@ -3,6 +3,7 @@ import styles from "./BaseButton.module.css";
 export const BaseButton = ({
   children,
   className = "",
+  opacity = false,
   href,
   type = "button",
   target,
@@ -12,7 +13,7 @@ export const BaseButton = ({
   as = "button",
 }) => {
   const commonProps = {
-    className: `${styles.button} ${className}`,
+    className: `${styles.button} ${className} ${opacity ? styles.opacity : ''}`,
     disabled,
   };
 

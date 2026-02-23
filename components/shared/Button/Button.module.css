@@ -60,7 +60,7 @@
   width: 25%;
   position: absolute;
   border-radius: 35px;
-  background-image: url('../../../images/button.webp');
+  background: var(--accent-22);
   background-repeat: no-repeat;
   background-position: center;
   animation: pulseWidth 1.5s ease-in-out infinite alternate;
@@ -75,9 +75,7 @@
   height: 100%;
   position: absolute;
   border-radius: 35px;
-  background-image: url('../../../images/button.webp');
-  background-repeat: no-repeat;
-  background-position: center;
+  background: var(--accent-22);
 }
 
 .button:disabled {

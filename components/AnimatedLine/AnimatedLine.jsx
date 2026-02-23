@@ -11,16 +11,13 @@ export const AnimatedLine = () => {
   return (
     <div className={styles.block}>
       <div className={styles.moving}>
-        <Image src={logo} alt="" className={styles.logo} id="logo" />
-        <p className={styles.logo__title}>TEGRAAL</p>
+        <p className={styles.logo__title}>ИNTEGRAAL</p>
       </div>
       <div className={styles.moving}>
-        <Image src={logo} alt="" className={styles.logo} id="logo" />
-        <p className={styles.logo__title}>TEGRAAL</p>
+        <p className={styles.logo__title}>ИNTEGRAAL</p>
       </div>
       <div className={styles.moving}>
-        <Image src={logo} alt="" className={styles.logo} id="logo" />
-        <p className={styles.logo__title}>TEGRAAL</p>
+        <p className={styles.logo__title}>ИNTEGRAAL</p>
       </div>
     </div>
   );

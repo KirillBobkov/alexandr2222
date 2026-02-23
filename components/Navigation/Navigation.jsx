@@ -25,7 +25,7 @@ export const Navigation = () => {
         } ${isHomePage ? styles.header_home : ""}`}
       >
         <div className={styles["header__logo-container"]}>
-          <Image
+          {/* <Image
             src={
               theme === "light" && (isMobile || isHomePage)
                 ? logoLight
@@ -34,8 +34,8 @@ export const Navigation = () => {
             alt="Logo"
             className={styles.header__logo}
             id="logo"
-          />
-          <p className={styles.header__title}>TEGRAAL</p>
+          /> */}
+          <p className={styles.header__title}>ИNTEGRAAL</p>
         </div>
 
         <nav style={{ width: "100%" }}>

@@ -44,11 +44,14 @@ export const Preview = () => {
           Благословенный <br />
           портал мечты
         </h1>
+
+        <div>
         <div className={styles.telegram_container}>
           <BaseButton
             href="https://t.me/chronics44"
             target="_blank"
             rel="noopener noreferrer"
+            opacity
           >
             <svg
               width="24"
@@ -173,6 +176,7 @@ export const Preview = () => {
             </div>
             <span className={styles.social_label}>Дзен</span>
           </span>
+        </div>
         </div>
       </VisibilityManager>
     </section>

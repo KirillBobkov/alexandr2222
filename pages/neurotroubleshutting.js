@@ -70,20 +70,35 @@ export const questionsContent = {
 };
 
 const videos = [
-  {
-    link: "https://vkvideo.ru/video_ext.php?oid=643721177&id=456239020&hash=6432ae2c703424ae",
-    thumbnailUrl:
-      "https://i.mycdn.me/getVideoPreview?id=8588980652761&idx=4&type=39&tkn=FOeAFn0t4WgZzuJoTeg9xs9_FKM&fn=vid_x",
-    name: "Отзыв Алексея о проработке по избавлению от кандидоза",
-    uploadDate: new Date("July 19, 2025").toISOString(),
-  },
-  {
+    {
     link: "https://vk.com/video_ext.php?oid=643721177&id=456239018&hash=21090df415acc25b",
     thumbnailUrl:
       "https://i.mycdn.me/getVideoPreview?id=8427497392857&idx=5&type=39&tkn=GlEU4u6PxO4ufRM8uL06LGlpeHc&fn=vid_x",
     name: "Отзыв Алексея о проработке",
     uploadDate: new Date("June 11, 2025").toISOString(),
   },
+    {
+    link: "https://vkvideo.ru/video_ext.php?oid=290538287&id=456239192&hash=fc6f543804a18fff",
+    thumbnailUrl:
+      "https://i.mycdn.me/getVideoPreview?id=7895760833071&idx=2&type=39&tkn=M56cNKVKS2eNz_YBO5he2T9jdWM&fn=vid_l",
+    name: 'Отзыв Булата Рустамовича о проработках с Александром "Интегралом" Васильевым',
+    uploadDate: new Date("March 13, 2025").toISOString(),
+  },
+    {
+    link: "https://vkvideo.ru/video_ext.php?oid=290538287&id=456239203&hash=715fb2a11dbae2a6",
+    thumbnailUrl:
+      "https://i.mycdn.me/getVideoPreview?id=7673156012591&idx=6&type=39&tkn=m9S6n3h5E9xZhBraLacW2jnP_Tg&fn=vid_x",
+    name: 'Отзыв Сергея Хана о работе с Александром "Интегралом" Васильевым',
+    uploadDate: new Date("November 30, 2024").toISOString(),
+  },
+    {
+    link: "https://vkvideo.ru/video_ext.php?oid=290538287&id=456239185&hash=d1b034b0ccc2b6d2",
+    thumbnailUrl:
+      "https://i.mycdn.me/getVideoPreview?id=7673149262383&idx=9&type=39&tkn=EfhvQoeYxbOiNWqNgax2vu0la4M&fn=vid_x",
+    name: 'Отзыв Кирилла Бобкова о работе Александра "Интеграла" Васильева',
+    uploadDate: new Date("November 30, 2024").toISOString(),
+  },
+
   {
     link: "https://vkvideo.ru/video_ext.php?oid=-230061059&id=456239034&hash=0035901b2a8621d8",
     thumbnailUrl:
@@ -91,6 +106,14 @@ const videos = [
     name: "Отзыв Александры о проработке",
     uploadDate: new Date("April 09, 2025").toISOString(),
   },
+    {
+    link: "https://vkvideo.ru/video_ext.php?oid=643721177&id=456239020&hash=6432ae2c703424ae",
+    thumbnailUrl:
+      "https://i.mycdn.me/getVideoPreview?id=8588980652761&idx=4&type=39&tkn=FOeAFn0t4WgZzuJoTeg9xs9_FKM&fn=vid_x",
+    name: "Отзыв Алексея о проработке по избавлению от кандидоза",
+    uploadDate: new Date("July 19, 2025").toISOString(),
+  },
+
   {
     link: "https://vkvideo.ru/video_ext.php?oid=-230061059&id=456239033&hash=943c42d877b77217",
     thumbnailUrl:
@@ -98,13 +121,7 @@ const videos = [
     name: "Отзыв Виктории о проработке",
     uploadDate: new Date("April 09, 2025").toISOString(),
   },
-  {
-    link: "https://vkvideo.ru/video_ext.php?oid=290538287&id=456239192&hash=fc6f543804a18fff",
-    thumbnailUrl:
-      "https://i.mycdn.me/getVideoPreview?id=7895760833071&idx=2&type=39&tkn=M56cNKVKS2eNz_YBO5he2T9jdWM&fn=vid_l",
-    name: 'Отзыв Булата Рустамовича о проработках с Александром "Интегралом" Васильевым',
-    uploadDate: new Date("March 13, 2025").toISOString(),
-  },
+
   {
     link: "https://vkvideo.ru/video_ext.php?oid=290538287&id=456239188&hash=8a160ed8a99c6834",
     thumbnailUrl:
@@ -119,34 +136,8 @@ const videos = [
   //   name: 'Отзыв Дмитрия Афанасьева о работе с Александром "Интегралом" Васильевым',
   //   uploadDate: new Date("November 30, 2024").toISOString(),
   // },
-  {
-    link: "https://vkvideo.ru/video_ext.php?oid=290538287&id=456239203&hash=715fb2a11dbae2a6",
-    thumbnailUrl:
-      "https://i.mycdn.me/getVideoPreview?id=7673156012591&idx=6&type=39&tkn=m9S6n3h5E9xZhBraLacW2jnP_Tg&fn=vid_x",
-    name: 'Отзыв Сергея Хана о работе с Александром "Интегралом" Васильевым',
-    uploadDate: new Date("November 30, 2024").toISOString(),
-  },
-  {
-    link: "https://vkvideo.ru/video_ext.php?oid=290538287&id=456239185&hash=d1b034b0ccc2b6d2",
-    thumbnailUrl:
-      "https://i.mycdn.me/getVideoPreview?id=7673149262383&idx=9&type=39&tkn=EfhvQoeYxbOiNWqNgax2vu0la4M&fn=vid_x",
-    name: 'Отзыв Кирилла Бобкова о работе Александра "Интеграла" Васильева',
-    uploadDate: new Date("November 30, 2024").toISOString(),
-  },
-  {
-    link: "https://vkvideo.ru/video_ext.php?oid=290538287&id=456239190&hash=a23c38103b4eb288",
-    thumbnailUrl:
-      "https://i.mycdn.me/getVideoPreview?id=7673158765103&idx=15&type=39&tkn=HG3N2h6DiDmo9jGfOjBZWO-jRn8&fn=vid_x",
-    name: 'Отзыв Никиты Цыпленкова о работе с Александром "Интегралом" Васильевым',
-    uploadDate: new Date("November 30, 2024").toISOString(),
-  },
-  {
-    link: "https://vkvideo.ru/video_ext.php?oid=290538287&id=456239189&hash=3f37fe408dafc519",
-    thumbnailUrl:
-      "https://i.mycdn.me/getVideoPreview?id=7673158044207&idx=11&type=39&tkn=tyaKcHE9DvZStOsL9Uf6fwCYgXs&fn=vid_x",
-    name: 'Отзыв Ксении о работе с Александром "Интегралом" Васильевым',
-    uploadDate: new Date("November 30, 2024").toISOString(),
-  },
+
+
 ];
 
 const schemaOrg = {
@@ -641,7 +632,6 @@ export default function () {
       <Form
         setIsSubmitted={setIsSubmitted}
         isSubmitted={isSubmitted}
-        title={"КОНСУЛЬТАЦИЯ"}
         type="Первая консультация (Страница: Нейротраблшутинг)"
       />
     </Layout>

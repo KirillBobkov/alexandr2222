@@ -18,7 +18,7 @@
   line-height: 40px;
   text-transform: uppercase;
 
-  background: var(--accent-22);
+  background: var(--accent-2);
     color: transparent;
     background-clip: text;
 }
@@ -41,7 +41,7 @@
   margin: 0 auto;
   margin-bottom: 40px;
 
-  background: var(--accent-22);
+  background: var(--accent-2);
     color: transparent;
     background-clip: text;
 
