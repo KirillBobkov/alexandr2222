@@ -1,0 +1,39 @@
+.button {
+  z-index: 1;
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  position: relative;
+  border-radius: 35px;
+  letter-spacing: 0.14em;
+  color: #ffffff;
+  background-image: url('../../../images/button.webp');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-align: center;
+  border: none;
+  text-decoration: none;
+  user-select: none;
+  padding: 15px 40px;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.button:active {
+  transform: translateY(0);
+}
+
+.button:disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: 0.5;
+}

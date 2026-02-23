@@ -13,20 +13,20 @@
   max-width: 1285px;
   margin: 0 auto;
   background: var(--card-color);
-      box-shadow: 0px -3px 15px 0px var(--border-color) inset;
+  box-shadow: 0px -3px 15px 0px var(--border-color) inset;
   border-radius: 20px;
-  padding: 100px 60px;
+  padding: 50px 60px;
   text-align: center;
 }
 
 .form_title {
   white-space: pre-wrap;
+  margin-bottom: 20px;
 }
 
 .form--two-items {
   justify-content: center;
 }
-
 
 .form__item {
   flex: 0 1 35%;
@@ -41,7 +41,6 @@
 .form_content {
   flex-basis: 55%;
   display: flex;
-  flex-direction: column;
   align-items: flex-start;
   justify-content: center;
   gap: 1.5rem;
@@ -109,40 +108,17 @@
   background-color: var(--font-color);
 }
 
-.formbutton {
-  border-radius: 3px;
-  background-color: var(--accent-3)!important;
-  padding: 15px 40px;
-  text-align: center;
-  color: #ffffff;
-  cursor: pointer;
-  font-weight: 600;
-  letter-spacing: 0.14em;
-  border-radius: 30px;
+.textTitle {
+  font-size: 40px;
+  font-weight: 700;
+  padding-bottom: 30px;
   text-transform: uppercase;
 }
 
-.formbutton:after {
-  display: none;
-}
-
-.formbutton:disabled {
-  opacity: 0.5!important;
-  cursor: not-allowed;
-}
-
-.textTitle {
-    font-size: 40px;
-    font-weight: 700;
-    padding-bottom: 30px;
-    text-transform: uppercase;
-}
-
 @media (max-width: 768px) {
-
   .container {
-  padding: 40px 20px;
-}
+    padding: 40px 20px;
+  }
 
   .form__item {
     display: flex;
@@ -162,20 +138,19 @@
     display: flex;
     flex-direction: column;
     min-height: 350px;
-    padding: 60px 20px;
+    padding: 10px 20px;
     width: 100%;
     gap: 20px;
   }
-  
+
   .form__item {
     flex: 0 1 100%;
     width: 100%;
   }
-  
+
   .form_content {
     flex-basis: 100%;
   }
-  
 
   .form-checkbox__label {
     font-size: 14px;
@@ -183,11 +158,14 @@
     cursor: pointer;
     text-align: left;
   }
-  
+
   .errorMessage {
     font-size: 14px;
     line-height: 20px;
     margin-left: 30px;
   }
-  
+
+  .form_title {
+  margin-bottom: 0;
+}
 }

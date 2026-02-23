@@ -43,9 +43,6 @@
     padding: 10px 20px;
   }
 
-  .mobileHeader {
-    display: block;
-  }
 
   .content {
     flex-direction: column-reverse;

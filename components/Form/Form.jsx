@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Input } from "../shared/Input/Input";
 import { VisibilityManager } from "../shared/VisibilityManager";
 import { FormValidator } from "../shared/FormValidator/FormValidator";
+import { BaseButton } from "../shared/BaseButton";
 import contentStyles from "../../styles/contentStyles.module.css";
 import { validateName, validatePhone } from "../../utils/validation";
 import styles from "./Form.module.css";
@@ -66,27 +67,35 @@ export function Form({
       <div
         className={`${styles.form}${hasHeader ? ` ${styles["form--two-items"]}` : ""}`}
       >
-        {hasHeader ? (
-          <VisibilityManager side="left" className={styles.form_content}>
-            {title ? (
-              <h3 className={`${contentStyles.title_middle} ${styles.form_title}`}>
-                {title}
-              </h3>
-            ) : null}
-            {description ? (
-              <p className={styles.textDescription}>{description}</p>
-            ) : null}
-          </VisibilityManager>
-        ) : null}
-
         <FormValidator
           fields={fieldsConfig}
           isSubmitted={isSubmitted}
           setIsSubmitted={setIsSubmitted}
           onSubmit={handleSend}
         >
-          {({ handleChange, handleSubmit, isSubmitted: formSubmitted, errors, formData }) => (
+          {({
+            handleChange,
+            handleSubmit,
+            isSubmitted: formSubmitted,
+            errors,
+            formData,
+          }) => (
             <form onSubmit={handleSubmit} className={styles.form__item}>
+              {hasHeader ? (
+                <VisibilityManager side="left" className={styles.form_content}>
+                  {title ? (
+                    <h3
+                      className={`${contentStyles.title_middle} ${styles.form_title}`}
+                    >
+                      {title}
+                    </h3>
+                  ) : null}
+                  {description ? (
+                    <p className={styles.textDescription}>{description}</p>
+                  ) : null}
+                </VisibilityManager>
+              ) : null}
+
               <div className={styles.form_elem}>
                 <Input
                   type="text"
@@ -109,7 +118,7 @@ export function Form({
                   error={errors.phone}
                 />
               </div>
-              <div
+              <VisibilityManager
                 className={styles.form_elem}
                 style={{
                   display: "flex",
@@ -118,19 +127,24 @@ export function Form({
                   position: "relative",
                 }}
               >
-                <VisibilityManager
-                  as="button"
+                <BaseButton
                   type="submit"
-                  className={styles.formbutton}
-                  disabled={formSubmitted || errors.name || errors.phone || errors.checkbox}
+                  disabled={
+                    formSubmitted ||
+                    errors.name ||
+                    errors.phone ||
+                    errors.checkbox
+                  }
                 >
                   Консультация
-                </VisibilityManager>
-                <VisibilityManager className={styles["form-checkbox"]}>
+                </BaseButton>
+                <div className={styles["form-checkbox"]}>
                   <input
                     name="checkbox"
                     className={`${styles["form-checkbox__input"]} ${
-                      errors.checkbox ? styles["form-checkbox__input--error"] : ""
+                      errors.checkbox
+                        ? styles["form-checkbox__input--error"]
+                        : ""
                     }`}
                     type="checkbox"
                     id={id}
@@ -153,12 +167,12 @@ export function Form({
                     </a>{" "}
                     обработки персональных данных
                   </label>
-                </VisibilityManager>
+                </div>
                 {message === "error" && (
                   <VisibilityManager style={{ marginTop: 0 }}>
                     <p>
-                      Что-то пошло не так. Свяжитесь, пожалуйста, со мной в Телеграм
-                      по{" "}
+                      Что-то пошло не так. Свяжитесь, пожалуйста, со мной в
+                      Телеграм по{" "}
                       <a
                         target="_blank"
                         href="https://t.me/Z44LP"
@@ -178,7 +192,7 @@ export function Form({
                     <p>Спасибо, ваша запись оформлена.</p>
                   </VisibilityManager>
                 )}
-              </div>
+              </VisibilityManager>
             </form>
           )}
         </FormValidator>

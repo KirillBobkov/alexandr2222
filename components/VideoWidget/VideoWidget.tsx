@@ -29,7 +29,7 @@ export const VideoWidget: React.FC<VideoWidgetProps> = ({ videos }) => {
             </h3>
           </div>
 
-          <VisibilityManager side="right" className={styles.playerSection}>
+          <VisibilityManager className={styles.playerSection}>
             <VideoPlayer video={selectedVideo} />
           </VisibilityManager>
           <div className={styles.listSection}>

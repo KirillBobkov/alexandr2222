@@ -35,7 +35,10 @@
   border-radius: 35px;
   letter-spacing: 0.14em;
   color: #ffffff;
-  background: var(--card-color);
+  background-image: url('../../../images/button.webp');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   text-transform: uppercase;
   visibility: visible;
   cursor: pointer;
@@ -81,7 +84,10 @@
 }
 
 .success {
-  background: var(--accent-33);
+  background-image: url('../../../images/button.webp');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   opacity: 0.5!important;
 }
 

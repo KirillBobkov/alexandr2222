@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { VisibilityManager } from "../shared/VisibilityManager";
+import { BaseButton } from "../shared/BaseButton";
 import { useTheme } from "../../hooks/useTheme";
 import Wave from "../FractalTunnel/FractalTunnel";
 import vadgra from "../../images/vadgra.webp";
@@ -38,14 +39,12 @@ export const Preview = () => {
           портал мечты
         </h1>
         <div className={styles.telegram_container}>
-          <a
+          <BaseButton
             href="https://t.me/chronics44"
-            className={styles.telegram_button}
             target="_blank"
             rel="noopener noreferrer"
           >
             <svg
-              className={styles.telegram_icon}
               width="24"
               height="24"
               viewBox="0 0 24 24"
@@ -58,7 +57,7 @@ export const Preview = () => {
               />
             </svg>
             TELEGRAM КАНАЛ
-          </a>
+          </BaseButton>
         </div>
         <div className={styles.social_links}>
           <span className={styles.social_link} style={disabledLinkStyle}>
