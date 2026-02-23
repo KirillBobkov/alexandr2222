@@ -1,11 +1,17 @@
 import { useState } from "react";
 import Image from "next/image";
+import dynamic from "next/dynamic";
 import { VisibilityManager } from "../shared/VisibilityManager";
 import { BaseButton } from "../shared/BaseButton";
 import { useTheme } from "../../hooks/useTheme";
-import Wave from "../FractalTunnel/FractalTunnel";
 import vadgra from "../../images/vadgra.webp";
 import styles from "./Preview.module.css";
+
+// Dynamically import FractalTunnel with SSR disabled to avoid useLayoutEffect warnings
+const Wave = dynamic(() => import("../FractalTunnel/FractalTunnel").then(mod => mod.default), {
+  ssr: false,
+  loading: () => null,
+});
 
 const overlayStyle = {
   position: "absolute",

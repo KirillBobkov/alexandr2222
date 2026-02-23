@@ -50,13 +50,22 @@ const noiseFunctions = `
 `
 
 const FractalTunnel = () => {
-  const containerRef = React.useRef<HTMLDivElement | null>(null)
-  const frameRef = React.useRef<number | null>(null)
+  const containerRef = React.useRef(null)
+  const isInitializedRef = React.useRef(false)
+  const retryTimerRef = React.useRef(null)
+  const retryCountRef = React.useRef(0)
+  const resourcesRef = React.useRef(null)
+  const MAX_RETRIES = 60
 
-  React.useEffect(() => {
-    const container = containerRef.current;
-    if (!container) return
+  const isContainerReady = (container) => {
+    return (
+      container !== null &&
+      container.clientWidth > 0 &&
+      container.clientHeight > 0
+    )
+  }
 
+  const initializeScene = (container) => {
     const renderer = new THREE.WebGLRenderer({
       antialias: true,
       powerPreference: 'high-performance',
@@ -424,7 +433,7 @@ const FractalTunnel = () => {
     )
     composer.addPass(bloomPass)
     const fxaaPass = new ShaderPass(FXAAShader)
-    const fxaaMaterial = fxaaPass.material as THREE.ShaderMaterial
+    const fxaaMaterial = fxaaPass.material
     const updateFxaa = () => {
       const dpr = renderer.getPixelRatio()
       fxaaMaterial.uniforms.resolution.value.x = 1 / (container.clientWidth * dpr)
@@ -434,8 +443,24 @@ const FractalTunnel = () => {
     composer.addPass(fxaaPass)
 
     const clock = new THREE.Clock()
+
+    const handleResize = () => {
+      const width = container.clientWidth || 1
+      const height = container.clientHeight || 1
+      camera.aspect = width / height
+      camera.updateProjectionMatrix()
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2))
+      renderer.setSize(width, height, false)
+      composer.setSize(width, height)
+      updateFxaa()
+    }
+
+    const resizeObserver = new ResizeObserver(handleResize)
+    resizeObserver.observe(container)
+
+    const frameIdRef = { current: null }
     const animate = () => {
-      frameRef.current = requestAnimationFrame(animate)
+      frameIdRef.current = requestAnimationFrame(animate)
       const delta = clock.getDelta() / 3
       const time = clock.getElapsedTime() / 3
       starMaterial.uniforms.time.value = time
@@ -453,44 +478,140 @@ const FractalTunnel = () => {
       composer.render()
     }
 
-    const handleResize = () => {
-      const width = container.clientWidth || 1
-      const height = container.clientHeight || 1
-      camera.aspect = width / height
-      camera.updateProjectionMatrix()
-      renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2))
-      renderer.setSize(width, height, false)
-      composer.setSize(width, height)
-      updateFxaa()
+    handleResize()
+    frameIdRef.current = requestAnimationFrame(animate)
+
+    return {
+      renderer,
+      scene,
+      camera,
+      controls,
+      composer,
+      frameId: frameIdRef.current,
+      resizeObserver,
+      clock,
+      starGeometry,
+      shellGeometry,
+      ringGeom,
+      diskGeom,
+      emberGeom,
+      prominenceGeom,
+      starGeom,
+      starMaterial,
+      shellMaterial,
+      ringMat,
+      diskMat,
+      emberMat,
+      prominenceMat,
+      starMat,
+      coreGroup,
+    }
+  }
+
+  const cleanupScene = (resources) => {
+    const {
+      renderer,
+      scene,
+      controls,
+      composer,
+      frameId,
+      resizeObserver,
+      starGeometry,
+      shellGeometry,
+      ringGeom,
+      diskGeom,
+      emberGeom,
+      prominenceGeom,
+      starGeom,
+      starMat,
+      starMaterial,
+      shellMaterial,
+      ringMat,
+      diskMat,
+      emberMat,
+      prominenceMat,
+      coreGroup,
+    } = resources
+
+    if (frameId) cancelAnimationFrame(frameId)
+    resizeObserver.disconnect()
+    controls.dispose()
+    starGeometry.dispose()
+    shellGeometry.dispose()
+    ringGeom.dispose()
+    diskGeom.dispose()
+    emberGeom.dispose()
+    prominenceGeom.dispose()
+    starGeom.dispose()
+    starMat.dispose()
+    starMaterial.dispose()
+    shellMaterial.dispose()
+    ringMat.dispose()
+    diskMat.dispose()
+    emberMat.dispose()
+    prominenceMat.dispose()
+    
+    scene.clear()
+    
+    renderer.dispose()
+    if (renderer.domElement.parentElement) {
+      renderer.domElement.parentElement.removeChild(renderer.domElement)
+    }
+  }
+
+  React.useLayoutEffect(() => {
+    const container = containerRef.current
+    if (!container) {
+      console.warn('[FractalTunnel] Container ref is null')
+      return
     }
 
-    handleResize()
-    const resizeObserver = new ResizeObserver(handleResize)
-    resizeObserver.observe(container)
-    frameRef.current = requestAnimationFrame(animate)
+    if (isInitializedRef.current) {
+      return
+    }
+
+    const tryInitialize = () => {
+      if (isInitializedRef.current) {
+        return
+      }
+
+      if (!isContainerReady(container)) {
+        if (retryCountRef.current < MAX_RETRIES) {
+          retryCountRef.current += 1
+          retryTimerRef.current = requestAnimationFrame(tryInitialize)
+          return
+        } else {
+          console.error(
+            `[FractalTunnel] Failed to initialize after ${MAX_RETRIES} retries. Container dimensions:`,
+            { width: container.clientWidth, height: container.clientHeight }
+          )
+          return
+        }
+      }
+
+      try {
+        const resources = initializeScene(container)
+        resourcesRef.current = resources
+        isInitializedRef.current = true
+        retryCountRef.current = 0
+      } catch (error) {
+        console.error('[FractalTunnel] Error during initialization:', error)
+      }
+    }
+
+    tryInitialize()
 
     return () => {
-      if (frameRef.current) cancelAnimationFrame(frameRef.current)
-      resizeObserver.disconnect()
-      controls.dispose()
-      starGeometry.dispose()
-      shellGeometry.dispose()
-      ringGeom.dispose()
-      diskGeom.dispose()
-      emberGeom.dispose()
-      prominenceGeom.dispose()
-      starGeom.dispose()
-      starMat.dispose()
-      starMaterial.dispose()
-      shellMaterial.dispose()
-      ringMat.dispose()
-      diskMat.dispose()
-      emberMat.dispose()
-      prominenceMat.dispose()
-      renderer.dispose()
-      if (renderer.domElement.parentElement) {
-        renderer.domElement.parentElement.removeChild(renderer.domElement)
+      if (retryTimerRef.current !== null) {
+        cancelAnimationFrame(retryTimerRef.current)
+        retryTimerRef.current = null
       }
+
+      if (resourcesRef.current) {
+        cleanupScene(resourcesRef.current)
+        resourcesRef.current = null
+      }
+      isInitializedRef.current = false
     }
   }, [])
 
