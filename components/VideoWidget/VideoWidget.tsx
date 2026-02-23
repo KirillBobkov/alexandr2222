@@ -16,8 +16,8 @@ interface VideoWidgetProps {
   videos: Video[];
 }
 
-export const VideoWidget: React.FC<VideoWidgetProps> = ({ videos }) => {
-  const [selectedVideo, setSelectedVideo] = useState<Video>(videos[0]);
+export const VideoWidget: React.FC<VideoWidgetProps> = ({ videos }): any => {
+  const [selectedVideo, setSelectedVideo] = useState(videos[0]);
 
   return (
     <div className={styles.container} id="reviews">

@@ -35,9 +35,8 @@
   border-radius: 35px;
   letter-spacing: 0.14em;
   color: #ffffff;
-  background-image: url('../../../images/button.webp');
-  background-repeat: no-repeat;
-  background-position: center;
+  background: var(--card-color);
+      box-shadow: 0px -3px 15px 0px var(--border-color) inset;
   background-size: cover;
   text-transform: uppercase;
   visibility: visible;
@@ -61,7 +60,9 @@
   width: 25%;
   position: absolute;
   border-radius: 35px;
-  background: var(--accent-33);
+  background-image: url('../../../images/button.webp');
+  background-repeat: no-repeat;
+  background-position: center;
   animation: pulseWidth 1.5s ease-in-out infinite alternate;
 }
 
@@ -74,7 +75,9 @@
   height: 100%;
   position: absolute;
   border-radius: 35px;
-  background: var(--accent-33);
+  background-image: url('../../../images/button.webp');
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .button:disabled {
