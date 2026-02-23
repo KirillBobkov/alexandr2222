@@ -54,7 +54,7 @@ const FractalTunnel = () => {
   const frameRef = React.useRef<number | null>(null)
 
   React.useEffect(() => {
-    const container = containerRef.current
+    const container = containerRef.current;
     if (!container) return
 
     const renderer = new THREE.WebGLRenderer({
