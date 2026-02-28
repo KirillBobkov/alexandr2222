@@ -30,7 +30,7 @@ export const CollapsibleSection = ({ children, title }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className={`${styles.section} ${isOpen ? styles.open : ""}`}>
+    <div className={`${styles.section} ${children ? styles.withContent : ''}  ${isOpen ? styles.open : ""}`}>
       <div
         className={`${styles.sectionHeader} ${isOpen ? styles.sectionOpen : ""}`}
         onClick={() => setIsOpen((prev) => !prev)}

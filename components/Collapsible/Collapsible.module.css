@@ -66,7 +66,7 @@
 }
 
 .inner {
-  padding-bottom: 20px;
+  padding-bottom: 0;
 }
 
 .section {
@@ -79,9 +79,9 @@
   justify-content: space-between;
   align-items: flex-start;
   cursor: pointer;
-  gap: 15px;
+  gap: 10px;
   transition: color 300ms ease-in-out;
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .sectionIcon {
@@ -98,6 +98,9 @@
 .sectionContent {
   max-height: 0;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   transition: all 500ms ease-in-out;
 }
 

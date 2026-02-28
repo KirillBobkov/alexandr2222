@@ -13,6 +13,7 @@ export function Form({
   isSubmitted,
   setIsSubmitted,
   title,
+  submitText = "Консультация",
   type = "",
 }) {
   const [message, setMessage] = useState("");
@@ -136,38 +137,9 @@ export function Form({
                     errors.checkbox
                   }
                 >
-                  Консультация
+                  {submitText}
                 </BaseButton>
-                <div className={styles["form-checkbox"]}>
-                  <input
-                    name="checkbox"
-                    className={`${styles["form-checkbox__input"]} ${
-                      errors.checkbox
-                        ? styles["form-checkbox__input--error"]
-                        : ""
-                    }`}
-                    type="checkbox"
-                    id={id}
-                    disabled={formSubmitted}
-                    onChange={handleChange}
-                    checked={formData.checkbox}
-                  />
-                  <label
-                    style={{ opacity: formSubmitted ? 0.5 : 1 }}
-                    className={styles["form-checkbox__label"]}
-                    htmlFor={id}
-                  >
-                    Я ознакомлен (ознакомлена) с{" "}
-                    <a
-                      target="_blank"
-                      className={styles["form-doc"]}
-                      href="/agreement-data.txt"
-                    >
-                      правилами
-                    </a>{" "}
-                    обработки персональных данных
-                  </label>
-                </div>
+
                 {message === "error" && (
                   <VisibilityManager style={{ marginTop: 0 }}>
                     <p>
@@ -193,6 +165,35 @@ export function Form({
                   </VisibilityManager>
                 )}
               </VisibilityManager>
+
+              <div className={styles["form-checkbox"]}>
+                <input
+                  name="checkbox"
+                  className={`${styles["form-checkbox__input"]} ${
+                    errors.checkbox ? styles["form-checkbox__input--error"] : ""
+                  }`}
+                  type="checkbox"
+                  id={id}
+                  disabled={formSubmitted}
+                  onChange={handleChange}
+                  checked={formData.checkbox}
+                />
+                <label
+                  style={{ opacity: formSubmitted ? 0.5 : 1 }}
+                  className={styles["form-checkbox__label"]}
+                  htmlFor={id}
+                >
+                  Я ознакомлен (а) с{" "}
+                  <a
+                    target="_blank"
+                    className={styles["form-doc"]}
+                    href="/agreement-data.txt"
+                  >
+                    правилами
+                  </a>{" "}
+                  обработки персональных данных
+                </label>
+              </div>
             </form>
           )}
         </FormValidator>

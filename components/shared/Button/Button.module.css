@@ -60,7 +60,7 @@
   width: 25%;
   position: absolute;
   border-radius: 35px;
-  background: var(--accent-22);
+  background: linear-gradient(180deg, #a948b3a3 0, #a948b3d9 30%, #8b2f99ad 40%, #501b58b3 80%, #6a1c76c4 90%, #6a1c76cc);;
   background-repeat: no-repeat;
   background-position: center;
   animation: pulseWidth 1.5s ease-in-out infinite alternate;
@@ -75,7 +75,7 @@
   height: 100%;
   position: absolute;
   border-radius: 35px;
-  background: var(--accent-22);
+  background:  linear-gradient(180deg, #a948b3a3 0, #a948b3d9 30%, #8b2f99ad 40%, #501b58b3 80%, #6a1c76c4 90%, #6a1c76cc);
 }
 
 .button:disabled {

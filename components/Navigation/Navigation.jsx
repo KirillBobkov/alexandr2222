@@ -84,28 +84,28 @@ export const getNavigationTree = () => [
       path: "/ceremony",
       value: "Мухоморный ретрит",
     },
-    childs: [
-      {
-        path: "/ceremony#program",
-        value: "Программа",
-      },
-      {
-        path: "/ceremony#reviews",
-        value: "Отзывы",
-      },
-    ],
+    // childs: [
+    //   {
+    //     path: "/ceremony#program",
+    //     value: "Программа",
+    //   },
+    //   {
+    //     path: "/ceremony#reviews",
+    //     value: "Отзывы",
+    //   },
+    // ],
   },
   {
     parent: {
       path: "/neurotroubleshutting",
       value: "Нейротраблшутинг",
     },
-    childs: [
-      {
-        path: "/neurotroubleshutting#reviews",
-        value: "Отзывы",
-      },
-    ],
+    // childs: [
+    //   {
+    //     path: "/neurotroubleshutting#reviews",
+    //     value: "Отзывы",
+    //   },
+    // ],
   },
   {
     parent: {

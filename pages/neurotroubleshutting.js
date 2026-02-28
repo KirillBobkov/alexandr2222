@@ -2,6 +2,7 @@ import Layout from "../components/Layout/Layout";
 import { AnimatedLine } from "../components/AnimatedLine/AnimatedLine";
 import { SecondaryPreview } from "../components/SecondaryPreview/SecondaryPreview";
 import enter_hole_2 from "../images/enter_hole_2.webp";
+import point from "../images/point_2.webp";
 import { VideoWidget } from "../components/VideoWidget/VideoWidget";
 import { Form } from "../components/Form/Form";
 import { InnerSatisfaction } from "../components/InnerSatisfaction";
@@ -10,6 +11,12 @@ import { CirclesList } from "../components/CirclesList/CirclesList";
 import { InnerQuestions } from "../components/InnerQuestions";
 import { useState } from "react";
 import { useScrollToLocation } from "../hooks/useScrollToLocation";
+import {
+  Collapsible,
+  CollapsibleSection,
+} from "../components/Collapsible/Collapsible";
+import containerStyles from "../styles/container.module.css";
+import contentStyles from "../styles/contentStyles.module.css";
 
 export const questionsContent = {
   blocks: [
@@ -70,28 +77,28 @@ export const questionsContent = {
 };
 
 const videos = [
-    {
+  {
     link: "https://vk.com/video_ext.php?oid=643721177&id=456239018&hash=21090df415acc25b",
     thumbnailUrl:
       "https://i.mycdn.me/getVideoPreview?id=8427497392857&idx=5&type=39&tkn=GlEU4u6PxO4ufRM8uL06LGlpeHc&fn=vid_x",
     name: "Отзыв Алексея о проработке",
     uploadDate: new Date("June 11, 2025").toISOString(),
   },
-    {
+  {
     link: "https://vkvideo.ru/video_ext.php?oid=290538287&id=456239192&hash=fc6f543804a18fff",
     thumbnailUrl:
       "https://i.mycdn.me/getVideoPreview?id=7895760833071&idx=2&type=39&tkn=M56cNKVKS2eNz_YBO5he2T9jdWM&fn=vid_l",
     name: 'Отзыв Булата Рустамовича о проработках с Александром "Интегралом" Васильевым',
     uploadDate: new Date("March 13, 2025").toISOString(),
   },
-    {
+  {
     link: "https://vkvideo.ru/video_ext.php?oid=290538287&id=456239203&hash=715fb2a11dbae2a6",
     thumbnailUrl:
       "https://i.mycdn.me/getVideoPreview?id=7673156012591&idx=6&type=39&tkn=m9S6n3h5E9xZhBraLacW2jnP_Tg&fn=vid_x",
     name: 'Отзыв Сергея Хана о работе с Александром "Интегралом" Васильевым',
     uploadDate: new Date("November 30, 2024").toISOString(),
   },
-    {
+  {
     link: "https://vkvideo.ru/video_ext.php?oid=290538287&id=456239185&hash=d1b034b0ccc2b6d2",
     thumbnailUrl:
       "https://i.mycdn.me/getVideoPreview?id=7673149262383&idx=9&type=39&tkn=EfhvQoeYxbOiNWqNgax2vu0la4M&fn=vid_x",
@@ -106,7 +113,7 @@ const videos = [
     name: "Отзыв Александры о проработке",
     uploadDate: new Date("April 09, 2025").toISOString(),
   },
-    {
+  {
     link: "https://vkvideo.ru/video_ext.php?oid=643721177&id=456239020&hash=6432ae2c703424ae",
     thumbnailUrl:
       "https://i.mycdn.me/getVideoPreview?id=8588980652761&idx=4&type=39&tkn=FOeAFn0t4WgZzuJoTeg9xs9_FKM&fn=vid_x",
@@ -136,14 +143,12 @@ const videos = [
   //   name: 'Отзыв Дмитрия Афанасьева о работе с Александром "Интегралом" Васильевым',
   //   uploadDate: new Date("November 30, 2024").toISOString(),
   // },
-
-
 ];
 
 const schemaOrg = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
-name: "Нейротраблшутинг — комплексное устранение тревожности, депрессивных состояний, фобий и психосоматики",
+  name: "Нейротраблшутинг — комплексное устранение тревожности, депрессивных состояний, фобий и психосоматики",
   description:
     "Нейротраблшутинг — профессиональная трансформация для полного устранения тревожных расстройств, депрессивных состояний, фобических проявлений, психосоматических заболеваний, панических атак и глубинных психологических блоков. Быстрый и гарантированный результат за 4-8 терапевтических сессий. Уже свыше 100 успешно завершенных случаев различной сложности, индивидуально разработанный подход, глубинная перестройка подсознательных механизмов. Бесплатная первичная диагностика, профессиональная консультация, уникальные авторские методики. Казань, Россия и онлайн по всей стране.",
   url: "https://alexandrvasilev.ru/neurotroubleshutting",
@@ -512,122 +517,273 @@ export default function () {
     <Layout metaConfig={metaConfig} schemaOrg={schemaOrg}>
       <SecondaryPreview
         text={"Нейротраблшутинг"}
-        subtext={"ЧТОБЫ ПОМЕНЯТЬ РЕАЛЬНОСТЬ — НУЖНО ИЗМЕНИТЬ МЫШЛЕНИЕ "}
         image={enter_hole_2}
-         animated={false}
+        animated={false}
       />
-      <InnerSatisfaction
-        animation={false}
-        titleSuffix="Методика"
-        order={2}
-        description={
-          <>
-            В своей практике я делаю ставку на самодостаточность человека, а не
-            на его зависимость от консультаций, как это делают психологи.
-            <br />
-            <br />
-            Сначала проводим бесплатную диагностику, на которой выявляем, где
-            именно в подсознании прячется решение вашей задачи, а вы сами
-            определяете, идти дальше или нет.
-            <br />
-            <br />
-            Работа идёт в состоянии, когда сознание остаётся активным, но доступ
-            к подсознанию открыт. Это полностью осознанный и безопасный процесс,
-            в котором вы сами видите скрытые причинно-следственные связи.
-            <br />
-            <br />
-            В ходе дальнейшей работы, мы вместе: <br />
-            <br />
-            <b style={{ color: "var(--accent)" }}>●</b> выходим к корневому
-            эпизоду (чаще всего детскому или вытесненному);
-            <br />
-            <br />
-            <b style={{ color: "var(--accent)" }}>●</b> переписываем внутреннюю
-            структуру восприятия;
-            <br />
-            <br />
-            <b style={{ color: "var(--accent)" }}>●</b> закрепляем результат на
-            уровне ощущений, решений и действий.
-            <br />
-            <br />
-            Эффект вы чувствуете сразу. Улучшается состояние, уходят внутренние
-            зажимы, возвращается ясность, налаживается ваш контакт с самим
-            собой.
-          </>
-        }
-      />
-      <AboutMe
-        {...{
-          title: "В ЧЁМ ",
-          titleEmpty: "Я МОГУ ВАМ ПОМОЧЬ?",
-          order: 2,
-          items: [
-            { title: "Физические недуги" },
-            { title: "Эмоциональное выгорание" },
-            { title: "Поиск жизненного предназначения" },
-            { title: "Комплексы и страхи" },
-            { title: "Зависимости" },
-            { title: "Заниженная самооценка" },
-            { title: "Раздражительность" },
-            { title: "Психические травмы" },
-            { title: "Ночные кошмары" },
-            { title: "Взаимодействие с людьми" },
-            { title: "Суицидальные мысли" },
-          ],
-          bottomText:
-            "Возможно, ваша проблема не вошла в этот список, поэтому, напишите свой запрос, и я подумаю, смогу ли вам помочь.",
-          href: { pathname: "/", hash: "#message" },
-          buttonStatus: "Записаться",
-        }}
-      />
+      <div className={containerStyles.container}>
+        <Collapsible title="Описание" defaultOpen={false}>
+          <div
+             className={contentStyles.collapsible}
+          >
+            <p className={contentStyles.textDescription}>
+              Даже при высокой внутренней устойчивости человек может
+              сталкиваться с переживаниями, которые не поддаются рациональному
+              контролю.
+            </p>
+            <p className={contentStyles.textDescription}>
+              Это может быть связано с тем, что эмоциональный отклик
+              зафиксирован на уровне нервной системы и является частью
+              автоматического реагирования.
+            </p>
+            <p className={contentStyles.textDescription}>
+              Источниками такой фиксации могут быть психотравмы, особенности
+              раннего развития (даже в утробе матери), а также
+              наследственность.{" "}
+            </p>
+
+            <p className={contentStyles.textDescription}>
+              Формируется устойчивый паттерн, который воспроизводится независимо
+              от текущих жизненных обстоятельств.
+            </p>
+            <p className={contentStyles.textDescription}>
+              Нейротраблшутинг направлен на точечную коррекцию таких паттернов.
+            </p>
+            <p className={contentStyles.textDescription}>
+              В ходе сессии мы находим, где именно закрепилась эта реакция, и
+              аккуратно её перенастраиваем под ваш запрос.
+            </p>
+            <p className={contentStyles.textDescription}>
+              В ситуациях, которые раньше автоматически запускали прежнюю
+              программу, начинает проявляться выбранное вами состояние. Новый
+              отклик становится естественным.
+            </p>
+            <p className={contentStyles.textDescription}>
+              Вы возвращаете себе контроль.
+            </p>
+          </div>
+        </Collapsible>
+
+        <Collapsible title="Запросы" defaultOpen={false}>
+          <div
+             className={contentStyles.collapsible}
+          >
+            <p className={contentStyles.textDescription}>
+              <img
+                src={point.src}
+                alt=""
+                className={contentStyles.textSymbol}
+              />
+              Эмоциональное выгорание
+            </p>
+            <p className={contentStyles.textDescription}>
+              <img
+                src={point.src}
+                alt=""
+                className={contentStyles.textSymbol}
+              />
+              Внутреннее напряжение
+            </p>
+            <p className={contentStyles.textDescription}>
+              <img
+                src={point.src}
+                alt=""
+                className={contentStyles.textSymbol}
+              />
+              Раздражительность
+            </p>
+            <p className={contentStyles.textDescription}>
+              <img
+                src={point.src}
+                alt=""
+                className={contentStyles.textSymbol}
+              />
+              Неуверенность
+            </p>
+            <p className={contentStyles.textDescription}>
+              <img
+                src={point.src}
+                alt=""
+                className={contentStyles.textSymbol}
+              />
+              Отчаяние
+            </p>
+            <p className={contentStyles.textDescription}>
+              <img
+                src={point.src}
+                alt=""
+                className={contentStyles.textSymbol}
+              />
+              Ревность
+            </p>
+            <p className={contentStyles.textDescription}>
+              <img
+                src={point.src}
+                alt=""
+                className={contentStyles.textSymbol}
+              />
+              Тревога
+            </p>
+            <p className={contentStyles.textDescription}>
+              <img
+                src={point.src}
+                alt=""
+                className={contentStyles.textSymbol}
+              />
+              Зависть
+            </p>
+            <p className={contentStyles.textDescription}>
+              <img
+                src={point.src}
+                alt=""
+                className={contentStyles.textSymbol}
+              />
+              Апатия
+            </p>
+            <p className={contentStyles.textDescription}>
+              <img
+                src={point.src}
+                alt=""
+                className={contentStyles.textSymbol}
+              />
+              Фобии
+            </p>
+            <p className={contentStyles.textDescription}>
+              <img
+                src={point.src}
+                alt=""
+                className={contentStyles.textSymbol}
+              />
+              Обида
+            </p>
+            <p className={contentStyles.textDescription}>
+              <img
+                src={point.src}
+                alt=""
+                className={contentStyles.textSymbol}
+              />
+              Страх
+            </p>
+            <p className={contentStyles.textDescription}>
+              <img
+                src={point.src}
+                alt=""
+                className={contentStyles.textSymbol}
+              />
+              Вина
+            </p>
+            <p className={contentStyles.textDescription}>
+              <img
+                src={point.src}
+                alt=""
+                className={contentStyles.textSymbol}
+              />
+              Стыд
+            </p>
+            <p className={contentStyles.textDescription}>
+              <img
+                src={point.src}
+                alt=""
+                className={contentStyles.textSymbol}
+              />
+              Гнев
+            </p>
+            <p className={contentStyles.textDescription}>
+              <img
+                src={point.src}
+                alt=""
+                className={contentStyles.textSymbol}
+              />
+              Боль
+            </p>
+            <p className={contentStyles.textDescription}>
+              <img
+                src={point.src}
+                alt=""
+                className={contentStyles.textSymbol}
+              />
+              Последствия шока
+            </p>
+          </div>
+        </Collapsible>
+
+        <Collapsible title="Преимущества" defaultOpen={false}>
+          <CollapsibleSection title="Безопасность">
+            <p className={contentStyles.textDescription}>
+              Работа проходит в полностью осознанном состоянии, вы сохраняете
+              контроль над процессом.
+            </p>
+
+            <p className={contentStyles.textDescription}>
+              Вы самостоятельно определяете, к какому состоянию хотите прийти,
+              без навязывания с моей стороны.
+            </p>
+
+            <p className={contentStyles.textDescription}>
+              Воздействие носит точечный характер: корректируется конкретная
+              реакция, а не личность в целом.
+            </p>
+
+            <p className={contentStyles.textDescription}>
+              Глубина работы соотносится с текущим ресурсом психики, без
+              перегрузки и давления. Формат выстраивается индивидуально.
+            </p>
+
+            <p className={contentStyles.textDescription}>
+              Сессия завершается устойчивым состоянием. В отдельных случаях при
+              разрешении глубинного конфликта возможны кратковременные
+              адаптационные реакции. Если это происходит, я остаюсь на связи и
+              спокойно сопровождаю процесс, поясняя всё, что вызывает вопросы.
+            </p>
+
+            <p className={contentStyles.textDescription}>
+              В ряде случаев вместе с неприятными эмоциями ослабевают и
+              психосоматические проявления.
+            </p>
+
+            <p className={contentStyles.textDescription}>
+              Во время сессии могут возникать инсайты, которые помогают глубже
+              понять происходящее и улучшить качество жизни.
+            </p>
+
+            <p className={contentStyles.textDescription}>
+              Сеанс проходит онлайн, в привычной для вас среде.
+            </p>
+          </CollapsibleSection>
+
+          <CollapsibleSection title="Эффективность">
+            <p className={contentStyles.textDescription}>
+              Результат измерим: интенсивность переживания оценивается по
+              10-балльной шкале до и после перепрошивки. Работу завершаем при
+              нулевой выраженности неприятной эмоции.
+            </p>
+
+            <p className={contentStyles.textDescription}>
+              Процесс длится в среднем около полутора часов. За это время
+              удаётся решить то, что могло бы оставаться нерешённым годами.
+            </p>
+
+            <p className={contentStyles.textDescription}>
+              Часто одного сеанса оказывается достаточно.
+            </p>
+          </CollapsibleSection>
+
+          <CollapsibleSection title="Гарантия">
+            <p className={contentStyles.textDescription}>
+              Если результат не достигнут, оплата возвращается полностью.
+            </p>
+          </CollapsibleSection>
+
+          <CollapsibleSection title="Конфиденциальность">
+            <p className={contentStyles.textDescription}>
+              Вам не нужно делиться личными подробностями. Работаем напрямую с
+              внутренним состоянием.
+            </p>
+          </CollapsibleSection>
+        </Collapsible>
+      </div>
+
       <VideoWidget videos={videos} />
-      <InnerQuestions
-        title="ЕСЛИ ВАШ"
-        subtitle="ВНУТРЕННИЙ ГОЛОС ВСЁ ЧАЩЕ ЗАДАЁТ ВОПРОСЫ"
-        questions={[
-          "Почему у других получается, а у меня нет?",
-          "Тем ли делом я занимаюсь?",
-          "Почему я постоянно разочаровываюсь в людях?",
-          "Сколько будут длиться эти страдания?",
-          "Из-за чего то, что должно вызывать радость в жизни, становится обузой?",
-          "Неужели жизнь действительно не имеет смысла?",
-          "Отчего я постоянно хочу уйти из жизни?",
-        ]}
-        description={
-          <>
-            Это говорит о том, что пришло время основательно разобраться в самом
-            себе. Не в образе себя, не в роли, а именно в подлинной сути.
-            <br />
-            <br />
-            Спокойно, без суеты, устранить психотравмы, которые тяжёлым грузом
-            тянут вас вниз, и, в первую очередь, наладить контакт с самим собой,
-            а потом уже со всеми окружающими.
-          </>
-        }
-      />
-      <CirclesList
-        {...{
-          animation: false,
-          title: "Почему жизнь начинает ",
-          titleEmpty: "трещать по швам?",
-          underTitle:
-            "В первую очередь потому, что вы не умеете прислушиваться к своим ощущениям. Зачастую идёте против самих себя и удивляетесь, почему получаете не тот результат, который ожидаете.",
-          items: [
-            { title: "отсутствие энергии" },
-            { title: "потеря радости в жизни" },
-            { title: "ощущение нереализованности" },
-            { title: "желание уйти от реальности" },
-            { title: "ощущение, что жизнь ускользает" },
-            { title: "зависть" },
-            { title: "опустошение" },
-            { title: "презрение к самому себе" },
-          ],
-          descriptions: [
-            "Самый лучший ваш друг — это вы сам, и только тогда, когда вы сможете сосуществовать с самим собой в гармонии, вас ничто не сможет свернуть с истинного пути.",
-          ],
-        }}
-      />
-      <AnimatedLine />
+
       <div id="message" />
       <Form
         setIsSubmitted={setIsSubmitted}
