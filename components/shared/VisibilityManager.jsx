@@ -38,8 +38,8 @@ const VisibilityManagerComponent = memo((props) => {
     leaveCount,
     onInit = true,
     onClick,
-    side = "top",
-    speed = 2,
+    side = "opacity",
+    speed = 3,
     style,
     ...restProps
   } = props;

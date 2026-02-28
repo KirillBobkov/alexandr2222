@@ -21,7 +21,7 @@ export const VideoList: React.FC<VideoListProps> = ({
   videos,
 }) => {
   return (
-    <VisibilityManager className={styles.container}>
+    <VisibilityManager  side="opacity" className={styles.container}>
       <div className={styles.header}>
         <h3 className={`${contentStyles.title_middle} ${styles.title}`}>
           Отзывы

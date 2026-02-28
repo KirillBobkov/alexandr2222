@@ -64,7 +64,7 @@ export function Form({
   const hasHeader = title || description;
 
   return (
-    <div className={styles.container}>
+    <VisibilityManager className={styles.container}>
       <div
         className={`${styles.form}${hasHeader ? ` ${styles["form--two-items"]}` : ""}`}
       >
@@ -119,7 +119,7 @@ export function Form({
                   error={errors.phone}
                 />
               </div>
-              <VisibilityManager
+              <div
                 className={styles.form_elem}
                 style={{
                   display: "flex",
@@ -164,7 +164,7 @@ export function Form({
                     <p>Спасибо, ваша запись оформлена.</p>
                   </VisibilityManager>
                 )}
-              </VisibilityManager>
+              </div>
 
               <div className={styles["form-checkbox"]}>
                 <input
@@ -198,6 +198,6 @@ export function Form({
           )}
         </FormValidator>
       </div>
-    </div>
+    </VisibilityManager>
   );
 }
