@@ -36,8 +36,8 @@ headline:
     name: "Александр Васильев",
     url: "https://alexandrvasilev.ru/#about",
     description:
-      "Нейротраблшутер, специалист по работе с подсознанием и расширению восприятия",
-    jobTitle: "Нейротраблшутер, специалист по работе с подсознанием",
+      "Гипнотерапевт, специалист по работе с подсознанием и расширению восприятия",
+    jobTitle: "Гипнотерапевт, специалист по работе с подсознанием",
   },
   mainEntityOfPage: {
     "@type": "WebPage",
@@ -167,7 +167,6 @@ export default function () {
         setIsSubmitted={setIsSubmitted}
         isSubmitted={isSubmitted}
         type="Фуфломицелий (статья)"
-        title={"КОНСУЛЬТАЦИЯ"}
       />
     </Layout>
   );

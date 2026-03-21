@@ -9,10 +9,8 @@ import styles from "./Form.module.css";
 
 export function Form({
   animation,
-  description,
   isSubmitted,
   setIsSubmitted,
-  title,
   submitText = "Консультация",
   type = "",
 }) {
@@ -61,13 +59,9 @@ export function Form({
     }
   };
 
-  const hasHeader = title || description;
-
   return (
     <VisibilityManager className={styles.container}>
-      <div
-        className={`${styles.form}${hasHeader ? ` ${styles["form--two-items"]}` : ""}`}
-      >
+      <div className={styles.form}>
         <FormValidator
           fields={fieldsConfig}
           isSubmitted={isSubmitted}
@@ -82,21 +76,6 @@ export function Form({
             formData,
           }) => (
             <form onSubmit={handleSubmit} className={styles.form__item}>
-              {hasHeader ? (
-                <VisibilityManager side="left" className={styles.form_content}>
-                  {title ? (
-                    <h3
-                      className={`${contentStyles.title_middle} ${styles.form_title}`}
-                    >
-                      {title}
-                    </h3>
-                  ) : null}
-                  {description ? (
-                    <p className={styles.textDescription}>{description}</p>
-                  ) : null}
-                </VisibilityManager>
-              ) : null}
-
               <div className={styles.form_elem}>
                 <Input
                   type="text"

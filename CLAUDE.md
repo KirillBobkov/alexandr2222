@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a **Next.js 14 static site** for psychological services (neurotroubleshooting, sacred amanita ceremonies, psychological transformation). The site is deployed at `https://alexandrvasilev.ru` with content in Russian.
+This is a **Next.js 14 static site** for psychological services (hypnotherapy, sacred amanita ceremonies, psychological transformation). The site is deployed at `https://alexandrvasilev.ru` with content in Russian.
 
 - **Framework**: Next.js 14 with static export (`output: 'export'`)
 - **UI**: React 18.3.1 with CSS Modules

@@ -9,6 +9,7 @@
   color: var(--font-color);
   overflow: hidden;
   position: relative;
+  background-color: black;
 }
 
 .preview__content {

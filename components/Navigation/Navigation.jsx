@@ -98,7 +98,7 @@ export const getNavigationTree = () => [
   {
     parent: {
       path: "/neurotroubleshutting",
-      value: "Нейротраблшутинг",
+      value: "Гипнопроработка",
     },
     // childs: [
     //   {
