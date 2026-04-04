@@ -26,31 +26,28 @@ export function Form({
 
   const handleSend = async (formData) => {
     try {
-      const token = "7733350115:AAE6tcQZc-R2bRw8ewLKwvtiS3UKHTcgV9c";
-      const chat_id = "-1002359699160";
-      const url = `https://api.telegram.org/bot${token}/sendMessage`;
-      const isMobileDevice =
-        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-          typeof window !== "undefined" ? window.navigator.userAgent : "",
-        );
-
+      const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        typeof window !== "undefined" ? window.navigator.userAgent : ""
+      );
       const deviceType = isMobileDevice ? "Смартфон" : "Компьютер";
 
-      await fetch(url, {
+      // Запрос к вашему прокси-серверу (НЕ к Telegram напрямую)
+      await fetch("https://telegram-proxy-3zk0.onrender.com/api/telegram/send-message", {
         method: "POST",
         headers: {
-          "Content-Type": "application/json;charset=UTF-8",
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          chat_id,
-          parse_mode: "html",
           text: `📋 <b>НОВАЯ ЗАПИСЬ НА КОНСУЛЬТАЦИЮ</b>
 
-📍 <b>Откуда</b>: ${type ?? "Поле отсутствует"}
-👤 <b>Имя</b>: ${formData.name}
-📞 <b>Телефон</b>: ${formData.phone}
-💻 <b>Тип устройства</b>: ${deviceType}
-⏰ <b>Время</b>: ${new Date().toLocaleString("ru-RU")}`,
+  📍 <b>Откуда</b>: ${type ?? "Поле отсутствует"}
+  👤 <b>Имя</b>: ${formData.name}
+  📞 <b>Телефон</b>: ${formData.phone}
+  💻 <b>Тип устройства</b>: ${deviceType}
+  ⏰ <b>Время</b>: ${new Date().toLocaleString("ru-RU")}`,
+          parse_mode: "html",
+          // chat_id можно указать здесь или на сервере
+          chat_id: "-1002359699160",
         }),
       });
 
