@@ -13,6 +13,7 @@ export function Form({
   setIsSubmitted,
   submitText = "Консультация",
   type = "",
+  woman = false,
 }) {
   const [message, setMessage] = useState("");
   const id = type;
@@ -162,7 +163,7 @@ export function Form({
                   className={styles["form-checkbox__label"]}
                   htmlFor={id}
                 >
-                  Я ознакомлен (а) с{" "}
+                  {woman ? 'Я ознакомлена с ' : 'Я ознакомлен(а) с '}
                   <a
                     target="_blank"
                     className={styles["form-doc"]}
