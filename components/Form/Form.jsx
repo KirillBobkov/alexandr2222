@@ -26,30 +26,34 @@ export function Form({
 
   const handleSend = async (formData) => {
     try {
-      const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-        typeof window !== "undefined" ? window.navigator.userAgent : ""
-      );
+      const isMobileDevice =
+        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+          typeof window !== "undefined" ? window.navigator.userAgent : "",
+        );
       const deviceType = isMobileDevice ? "Смартфон" : "Компьютер";
 
       // Запрос к вашему прокси-серверу (НЕ к Telegram напрямую)
-      await fetch("https://telegram-proxy-3zk0.onrender.com/api/telegram/send-message", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          text: `📋 <b>НОВАЯ ЗАПИСЬ НА КОНСУЛЬТАЦИЮ</b>
+      await fetch(
+        "https://telegram-proxy.servemp3.com:4444/api/telegram/send-message",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            text: `📋 <b>НОВАЯ ЗАПИСЬ НА КОНСУЛЬТАЦИЮ</b>
 
   📍 <b>Откуда</b>: ${type ?? "Поле отсутствует"}
   👤 <b>Имя</b>: ${formData.name}
   📞 <b>Телефон</b>: ${formData.phone}
   💻 <b>Тип устройства</b>: ${deviceType}
   ⏰ <b>Время</b>: ${new Date().toLocaleString("ru-RU")}`,
-          parse_mode: "html",
-          // chat_id можно указать здесь или на сервере
-          chat_id: "-1002359699160",
-        }),
-      });
+            parse_mode: "html",
+            // chat_id можно указать здесь или на сервере
+            chat_id: "-1002359699160",
+          }),
+        },
+      );
 
       setMessage("success");
     } catch {
@@ -114,33 +118,8 @@ export function Form({
                     errors.checkbox
                   }
                 >
-                  {submitText}
+                  {message === "success" ? "Запись оформлена" : submitText}
                 </BaseButton>
-
-                {message === "error" && (
-                  <VisibilityManager style={{ marginTop: 0 }}>
-                    <p>
-                      Что-то пошло не так. Свяжитесь, пожалуйста, со мной в
-                      Телеграм по{" "}
-                      <a
-                        target="_blank"
-                        href="https://t.me/Z44LP"
-                        style={{
-                          color: "var(--accent)",
-                          fontWeight: "bold",
-                          cursor: "pointer",
-                        }}
-                      >
-                        ссылке
-                      </a>
-                    </p>
-                  </VisibilityManager>
-                )}
-                {message === "success" && (
-                  <VisibilityManager style={{ marginTop: 0 }}>
-                    <p>Спасибо, ваша запись оформлена.</p>
-                  </VisibilityManager>
-                )}
               </div>
 
               <div className={styles["form-checkbox"]}>
@@ -160,7 +139,7 @@ export function Form({
                   className={styles["form-checkbox__label"]}
                   htmlFor={id}
                 >
-                  {woman ? 'Я ознакомлена с ' : 'Я ознакомлен(а) с '}
+                  {woman ? "Я ознакомлена с " : "Я ознакомлен(а) с "}
                   <a
                     target="_blank"
                     className={styles["form-doc"]}
@@ -171,6 +150,26 @@ export function Form({
                   обработки персональных данных
                 </label>
               </div>
+
+              {message !== "error" && (
+                <VisibilityManager style={{ marginTop: "20px" }}>
+                  <p className={styles.mess}>
+                    Что-то пошло не так. Свяжитесь, пожалуйста, со мной в
+                    Телеграм по{" "}
+                    <a
+                      target="_blank"
+                      href="https://t.me/Z44LP"
+                      style={{
+                        color: "var(--accent)",
+                        fontWeight: "bold",
+                        cursor: "pointer",
+                      }}
+                    >
+                      ссылке
+                    </a>
+                  </p>
+                </VisibilityManager>
+              )}
             </form>
           )}
         </FormValidator>
