@@ -34,7 +34,7 @@ export function Form({
 
       // Запрос к вашему прокси-серверу (НЕ к Telegram напрямую)
       await fetch(
-        "https://telegram-proxy.servemp3.com:4444/api/telegram/send-message",
+        "https://telegram-proxy.servemp3.com:4444/api/alexvasilev/send-message",
         {
           method: "POST",
           headers: {
