@@ -49,8 +49,6 @@ export function Form({
   💻 <b>Тип устройства</b>: ${deviceType}
   ⏰ <b>Время</b>: ${new Date().toLocaleString("ru-RU")}`,
             parse_mode: "html",
-            // chat_id можно указать здесь или на сервере
-            chat_id: "-1002359699160",
           }),
         },
       );
