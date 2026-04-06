@@ -149,7 +149,7 @@ export function Form({
                 </label>
               </div>
 
-              {message !== "error" && (
+              {message === "error" && (
                 <VisibilityManager style={{ marginTop: "20px" }}>
                   <p className={styles.mess}>
                     Что-то пошло не так. Свяжитесь, пожалуйста, со мной в
