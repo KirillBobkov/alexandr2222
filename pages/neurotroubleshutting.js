@@ -568,15 +568,6 @@ export default function () {
             </p>
           </div>
         </Collapsible>
-        <iframe
-          src="https://vkvideo.ru/video_ext.php?oid=643721177&id=456239022&hash=2a097920823e0a9b"
-          width="640"
-          height="360"
-          frameborder="0"
-          allowfullscreen="1"
-          style="background-color: #000"
-          allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
-        ></iframe>
         <Collapsible title="Запросы" defaultOpen={false}>
           <div className={contentStyles.collapsible}>
             <p className={contentStyles.textDescription}>
