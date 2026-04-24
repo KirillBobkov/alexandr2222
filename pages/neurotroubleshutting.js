@@ -18,6 +18,7 @@ import {
 import containerStyles from "../styles/container.module.css";
 import contentStyles from "../styles/contentStyles.module.css";
 
+
 export const questionsContent = {
   blocks: [
     {
@@ -77,6 +78,13 @@ export const questionsContent = {
 };
 
 const videos = [
+  {
+    link: "https://vkvideo.ru/video_ext.php?oid=643721177&id=456239022&hash=2a097920823e0a9b",
+    thumbnailUrl:
+      "https://iv.okcdn.ru/getVideoPreview?id=13499413039833&idx=0&type=39&tkn=dfyTnvWpDja8tTiEKvqbAdMuKX0&fn=vid_t",
+    name: "Отзывы о гипнопроработках Александра",
+    uploadDate: new Date("April 24, 2026").toISOString(),
+  },
   {
     link: "https://vk.com/video_ext.php?oid=643721177&id=456239018&hash=21090df415acc25b",
     thumbnailUrl:
@@ -522,9 +530,7 @@ export default function () {
       />
       <div className={containerStyles.container}>
         <Collapsible title="Описание" defaultOpen={false}>
-          <div
-             className={contentStyles.collapsible}
-          >
+          <div className={contentStyles.collapsible}>
             <p className={contentStyles.textDescription}>
               Даже при высокой внутренней устойчивости человек может
               сталкиваться с переживаниями, которые не поддаются рациональному
@@ -562,130 +568,24 @@ export default function () {
             </p>
           </div>
         </Collapsible>
-
+        <iframe
+          src="https://vkvideo.ru/video_ext.php?oid=643721177&id=456239022&hash=2a097920823e0a9b"
+          width="640"
+          height="360"
+          frameborder="0"
+          allowfullscreen="1"
+          style="background-color: #000"
+          allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+        ></iframe>
         <Collapsible title="Запросы" defaultOpen={false}>
-          <div
-             className={contentStyles.collapsible}
-          >
+          <div className={contentStyles.collapsible}>
             <p className={contentStyles.textDescription}>
               <img
                 src={point.src}
                 alt=""
                 className={contentStyles.textSymbol}
               />
-              Эмоциональное выгорание
-            </p>
-            <p className={contentStyles.textDescription}>
-              <img
-                src={point.src}
-                alt=""
-                className={contentStyles.textSymbol}
-              />
-              Внутреннее напряжение
-            </p>
-            <p className={contentStyles.textDescription}>
-              <img
-                src={point.src}
-                alt=""
-                className={contentStyles.textSymbol}
-              />
-              Раздражительность
-            </p>
-            <p className={contentStyles.textDescription}>
-              <img
-                src={point.src}
-                alt=""
-                className={contentStyles.textSymbol}
-              />
-              Неуверенность
-            </p>
-            <p className={contentStyles.textDescription}>
-              <img
-                src={point.src}
-                alt=""
-                className={contentStyles.textSymbol}
-              />
-              Отчаяние
-            </p>
-            <p className={contentStyles.textDescription}>
-              <img
-                src={point.src}
-                alt=""
-                className={contentStyles.textSymbol}
-              />
-              Ревность
-            </p>
-            <p className={contentStyles.textDescription}>
-              <img
-                src={point.src}
-                alt=""
-                className={contentStyles.textSymbol}
-              />
-              Тревога
-            </p>
-            <p className={contentStyles.textDescription}>
-              <img
-                src={point.src}
-                alt=""
-                className={contentStyles.textSymbol}
-              />
-              Зависть
-            </p>
-            <p className={contentStyles.textDescription}>
-              <img
-                src={point.src}
-                alt=""
-                className={contentStyles.textSymbol}
-              />
-              Апатия
-            </p>
-            <p className={contentStyles.textDescription}>
-              <img
-                src={point.src}
-                alt=""
-                className={contentStyles.textSymbol}
-              />
-              Фобии
-            </p>
-            <p className={contentStyles.textDescription}>
-              <img
-                src={point.src}
-                alt=""
-                className={contentStyles.textSymbol}
-              />
-              Обида
-            </p>
-            <p className={contentStyles.textDescription}>
-              <img
-                src={point.src}
-                alt=""
-                className={contentStyles.textSymbol}
-              />
-              Страх
-            </p>
-            <p className={contentStyles.textDescription}>
-              <img
-                src={point.src}
-                alt=""
-                className={contentStyles.textSymbol}
-              />
-              Вина
-            </p>
-            <p className={contentStyles.textDescription}>
-              <img
-                src={point.src}
-                alt=""
-                className={contentStyles.textSymbol}
-              />
-              Стыд
-            </p>
-            <p className={contentStyles.textDescription}>
-              <img
-                src={point.src}
-                alt=""
-                className={contentStyles.textSymbol}
-              />
-              Гнев
+              ОКР
             </p>
             <p className={contentStyles.textDescription}>
               <img
@@ -701,7 +601,143 @@ export default function () {
                 alt=""
                 className={contentStyles.textSymbol}
               />
+              Вина
+            </p>
+            <p className={contentStyles.textDescription}>
+              <img
+                src={point.src}
+                alt=""
+                className={contentStyles.textSymbol}
+              />
+              Гнев
+            </p>
+            <p className={contentStyles.textDescription}>
+              <img
+                src={point.src}
+                alt=""
+                className={contentStyles.textSymbol}
+              />
+              Стыд
+            </p>
+            <p className={contentStyles.textDescription}>
+              <img
+                src={point.src}
+                alt=""
+                className={contentStyles.textSymbol}
+              />
+              Страх
+            </p>
+            <p className={contentStyles.textDescription}>
+              <img
+                src={point.src}
+                alt=""
+                className={contentStyles.textSymbol}
+              />
+              Обида
+            </p>
+            <p className={contentStyles.textDescription}>
+              <img
+                src={point.src}
+                alt=""
+                className={contentStyles.textSymbol}
+              />
+              Фобии
+            </p>
+            <p className={contentStyles.textDescription}>
+              <img
+                src={point.src}
+                alt=""
+                className={contentStyles.textSymbol}
+              />
+              Апатия
+            </p>
+            <p className={contentStyles.textDescription}>
+              <img
+                src={point.src}
+                alt=""
+                className={contentStyles.textSymbol}
+              />
+              Зависть
+            </p>
+            <p className={contentStyles.textDescription}>
+              <img
+                src={point.src}
+                alt=""
+                className={contentStyles.textSymbol}
+              />
+              Тревога
+            </p>
+            <p className={contentStyles.textDescription}>
+              <img
+                src={point.src}
+                alt=""
+                className={contentStyles.textSymbol}
+              />
+              Ревность
+            </p>
+            <p className={contentStyles.textDescription}>
+              <img
+                src={point.src}
+                alt=""
+                className={contentStyles.textSymbol}
+              />
+              Отчаяние
+            </p>
+            <p className={contentStyles.textDescription}>
+              <img
+                src={point.src}
+                alt=""
+                className={contentStyles.textSymbol}
+              />
+              Неуверенность
+            </p>
+            <p className={contentStyles.textDescription}>
+              <img
+                src={point.src}
+                alt=""
+                className={contentStyles.textSymbol}
+              />
               Последствия шока
+            </p>
+            <p className={contentStyles.textDescription}>
+              <img
+                src={point.src}
+                alt=""
+                className={contentStyles.textSymbol}
+              />
+              Страх проявляться
+            </p>
+            <p className={contentStyles.textDescription}>
+              <img
+                src={point.src}
+                alt=""
+                className={contentStyles.textSymbol}
+              />
+              Раздражительность
+            </p>
+            <p className={contentStyles.textDescription}>
+              <img
+                src={point.src}
+                alt=""
+                className={contentStyles.textSymbol}
+              />
+              Панические эпизоды
+            </p>
+            <p className={contentStyles.textDescription}>
+              <img
+                src={point.src}
+                alt=""
+                className={contentStyles.textSymbol}
+              />
+              Внутреннее напряжение
+            </p>
+            <p className={contentStyles.textDescription}>
+              <img
+                src={point.src}
+                alt=""
+                className={contentStyles.textSymbol}
+              />
+              Эмоциональное выгорание
             </p>
           </div>
         </Collapsible>

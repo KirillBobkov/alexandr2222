@@ -3,7 +3,7 @@ import Image from "next/image";
 import { VisibilityManager } from "../shared/VisibilityManager";
 import styles from "./SecondaryPreview.module.css";
 
-export const SecondaryPreview = ({ image, subtext, text, animated = true, }) => {
+export const SecondaryPreview = ({ image, subtext, text, animated = true, overlay = true }) => {
   const [loaded, setLoaded] = useState(false);
 
   return (
@@ -14,7 +14,7 @@ export const SecondaryPreview = ({ image, subtext, text, animated = true, }) => 
         className={`${styles.secondaryPreview__bg} ${animated ? styles.secondaryPreview__animated : ''} ${loaded ? styles.loaded : ""}`}
         onLoad={() => setLoaded(true)}
       />
-      <div className={styles.overlay} />
+      {overlay && <div className={styles.overlay} />}
       {text && (
         <VisibilityManager className={styles.secondaryPreview__content}>
           <h1 className={styles.secondaryPreview__title}>{text}</h1>

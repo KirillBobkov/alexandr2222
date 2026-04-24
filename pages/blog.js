@@ -23,12 +23,23 @@ import secondary_preview_30 from "../images/secondary_preview_30.webp";
 import secondary_preview_31 from "../images/secondary_preview_31.webp";
 import secondary_preview_32 from "../images/secondary_preview_32.webp";
 import secondary_preview_33 from "../images/secondary_preview_33.webp";
+import secondary_preview_34 from "../images/secondary_preview_34.webp";
+import secondary_preview_2 from "../images/secondary_preview_2.webp";
 import styles from "../styles/blog.module.css";
 import contentStyles from "../styles/contentStyles.module.css";
 import { VisibilityManager } from "../components/shared/VisibilityManager";
 import { useScrollToLocation } from "../hooks/useScrollToLocation";
 
 const articles = [
+  {
+    id: 20,
+    title: "Мужчина — это бетонная плита, а женщина — огонь, который на нём танцует",
+    description:
+      "Помогаю представительницам прекрасного пола обрести уверенность, спокойствие и радость. Устраняю тревожность, комплексы и последствия психологических травм через работу с подсознанием.",
+    date: "24 апреля 2026",
+    image: secondary_preview_34,
+    slug: "girls-power",
+  },
   {
     id: 19,
     title: "ОКР и работа с подсознанием: глубинное освобождение от навязчивых состояний",
