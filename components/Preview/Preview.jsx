@@ -36,6 +36,7 @@ const disabledLinkStyle = {
 
 export const Preview = () => {
   const { theme } = useTheme();
+  const [overlayLoaded, setOverlayLoaded] = useState(false);
 
   return (
     <section className={styles.preview} id="lol">
@@ -43,9 +44,10 @@ export const Preview = () => {
       <Image
         src={secondaryPreviewImage}
         alt="portal overlay"
-        className={styles.portalOverlay}
+        className={`${styles.portalOverlay} ${overlayLoaded ? styles.loaded : ""}`}
         fill
         priority
+        onLoad={() => setOverlayLoaded(true)}
       />
       {/* <Wave /> */}
 
