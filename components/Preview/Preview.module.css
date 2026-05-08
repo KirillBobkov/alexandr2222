@@ -1,6 +1,6 @@
 .preview {
   padding-top: 110px;
-  padding-bottom: 100px;
+  padding-bottom: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,9 +13,10 @@
 
 .portalOverlay {
   position: absolute;
-  inset: 0;
   z-index: 2;
-  object-fit: cover;
+  bottom: 50px;
+  width: 600px;
+  height: auto;
   pointer-events: none;
   mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
   -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
@@ -76,9 +77,12 @@
 /* Responsive styles */
 @media (max-width: 768px) {
   .portalOverlay {
+    width: 100%;
+    height: auto;
 
-  mask-image: radial-gradient(circle at center, black 50%, transparent 80%);
-  -webkit-mask-image: radial-gradient(circle at center, black 50%, transparent 80%);
+  mask-image: radial-gradient(circle at center, black 50%, transparent 70%);
+  -webkit-mask-image: radial-gradient(circle at center, black 50%, transparent 70%);
+    bottom: 120px;
 }
 
   .preview {

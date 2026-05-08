@@ -103,13 +103,13 @@ export const MagicForestPortal = ({ showRings = false }: MagicForestPortalProps)
                     className={`${styles.ring} ${isReverse ? styles.ringReverse : ""}`}
                     cx="300"
                     cy="300"
-                    r={20 + i * 30}
+                    r={20 + i * 20}
                   />
                   <circle
                     className={styles.ringGlow}
                     cx="300"
                     cy="300"
-                    r={20 + i * 30}
+                    r={20 + i * 20}
                     style={{ animationDelay: `0s, ${glowDelay}s, 0s` }}
                   />
                 </g>

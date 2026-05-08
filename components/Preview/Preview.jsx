@@ -45,7 +45,6 @@ export const Preview = () => {
         src={secondaryPreviewImage}
         alt="portal overlay"
         className={`${styles.portalOverlay} ${overlayLoaded ? styles.loaded : ""}`}
-        fill
         priority
         onLoad={() => setOverlayLoaded(true)}
       />
