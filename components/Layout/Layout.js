@@ -5,7 +5,7 @@ import Script from "next/script";
 import { Nunito, Rubik } from "next/font/google";
 import { useTheme } from "../../hooks/useTheme";
 import ScrollTopButton from "../ScrollTopButton/ScrollTopButton";
-import StarsBackground from "../StarsBackground/StarsBackground";
+import MagicForestPortal from "../Preview/MagicForestPortal";
 import favicon180x180 from "../../images/favicon180x180.png";
 import logo_dark from "../../images/logo_dark.webp";
 import favicon from "../../images/logo_dark.ico";
@@ -100,7 +100,7 @@ export default function Layout({ children, metaConfig, schemaOrg = '' }) {
         </h1>
       )}
       <main>
-        <StarsBackground />
+        <MagicForestPortal />
         {children}
       </main>
       <Footer />

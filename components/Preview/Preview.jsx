@@ -4,7 +4,9 @@ import dynamic from "next/dynamic";
 import { VisibilityManager } from "../shared/VisibilityManager";
 import { BaseButton } from "../shared/BaseButton";
 import { useTheme } from "../../hooks/useTheme";
+import { MagicForestPortal } from "./MagicForestPortal";
 import vadgra from "../../images/vadgra.webp";
+import secondaryPreviewImage from "../../images/secondary_preview_35.webp";
 import styles from "./Preview.module.css";
 
 // Dynamically import FractalTunnel with SSR disabled to avoid useLayoutEffect warnings
@@ -37,7 +39,15 @@ export const Preview = () => {
 
   return (
     <section className={styles.preview} id="lol">
-      <Wave />
+      <MagicForestPortal showRings />
+      <Image
+        src={secondaryPreviewImage}
+        alt="portal overlay"
+        className={styles.portalOverlay}
+        fill
+        priority
+      />
+      {/* <Wave /> */}
 
       <VisibilityManager as="div" className={styles.preview__content}>
         <h1 className={styles.preview__title}>

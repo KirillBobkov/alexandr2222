@@ -30,6 +30,8 @@
   transition: opacity 1s ease-in-out;
   object-fit: cover;
   transform-origin: center center;
+  mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
 }
 
 
@@ -42,8 +44,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: var(--bg-color-opacity);
   z-index: 1;
+  background: linear-gradient(to bottom, transparent 60%, rgba(0, 0, 0, 0.3) 80%, rgba(0, 0, 0, 0.7) 100%);
 }
 
 .loaded {

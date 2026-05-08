@@ -1,7 +1,8 @@
 .collapsible {
   border-radius: 30px;
   background: var(--card-color);
-      box-shadow: 0px -3px 15px 0px var(--border-color) inset;
+  border: 0.5px solid var(--border-color);
+  box-shadow: 0px -3px 15px 0px var(--border-color) inset;
   padding: 0 30px;
 }
 

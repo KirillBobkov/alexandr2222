@@ -33,10 +33,11 @@
   font-weight: 700;
   position: relative;
   border-radius: 35px;
+  border: 0.5px solid var(--border-color);
   letter-spacing: 0.14em;
   color: #ffffff;
   background: var(--card-color);
-      box-shadow: 0px -3px 15px 0px var(--border-color) inset;
+  box-shadow: 0px -3px 15px 0px var(--border-color) inset;
   background-size: cover;
   text-transform: uppercase;
   visibility: visible;

@@ -80,6 +80,8 @@
     width: auto;
     padding: 10px 0;
     background: var(--card-color);
+    border: 0.5px solid var(--border-color);
+    border-radius: 15px;
     opacity: 0;
     transform: scaleY(0);
     transform-origin: 0 0 0;
