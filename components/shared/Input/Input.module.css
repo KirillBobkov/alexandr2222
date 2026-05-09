@@ -15,7 +15,7 @@
     margin-bottom: 30px;
     background: var(--bg-color);
     border: 1px solid var(--card-color);
-        box-shadow: 0px -3px 15px 0px var(--border-color) inset;
+        box-shadow: 0px -3px 15px 0px var(--border-color);
     transition: all 0.2s;
     border-radius: 50px;
 }

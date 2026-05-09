@@ -15,18 +15,18 @@
   background-image: url("../../images/forest.png");
   background-size: cover;
   background-position: center;
-  transform: scale(1.05);
+  transform: scale(1.00);
   animation: forestBreath 16s ease-in-out infinite;
   filter:
-    brightness(calc(1 - var(--scroll-progress, 0) * 0.5))
-    saturate(calc(1 - var(--scroll-progress, 0) * 0.4));
+    brightness(calc(1 - var(--scroll-progress, 0.2) * 0.5))
+    saturate(calc(1 - var(--scroll-progress, 0.2) * 0.4));
   transition: filter 0.1s linear;
   will-change: transform, filter;
 }
 
 @keyframes forestBreath {
   0%, 100% {
-    transform: scale(1.05) translateY(0);
+    transform: scale(1.00) translateY(0);
   }
   50% {
     transform: scale(1.07) translateY(-4px);
@@ -111,13 +111,12 @@
 /* Magical glow effect on rings */
 .ringGlow {
   fill: none;
-  stroke: rgba(0, 255, 170, 0.58);
+  stroke: var(--border-color);
   stroke-width: 4;
   transform-origin: center;
   animation:
     ringRotate 20s linear infinite,
-    glowPulse 4s ease-in-out infinite,
-    colorShift 6s ease-in-out infinite alternate;
+    glowPulse 4s ease-in-out infinite;
   filter: blur(4px);
   opacity: 0.36;
   will-change: transform, opacity, stroke, filter;
@@ -126,12 +125,12 @@
 /* Stagger animations for different rings */
 .ringGlow:nth-child(even) {
   animation-duration: 20s, 4.5s, 5s;
-  stroke: rgba(100, 255, 200, 0.5);
+  stroke: var(--border-color);
 }
 
 .ringGlow:nth-child(3n) {
   animation-duration: 20s, 5.5s, 7s;
-  stroke: rgba(0, 200, 255, 0.43);
+  stroke: var(--border-color);
 }
 
 .ringGlow:nth-child(4n) {
@@ -146,7 +145,7 @@
     stroke: rgba(50, 255, 200, 0.5);
   }
   66% {
-    stroke: rgba(0, 200, 255, 0.43);
+    stroke: var(--border-color);
   }
   100% {
     stroke: rgba(150, 255, 180, 0.5);
@@ -203,7 +202,7 @@
   bottom: -100px;
   height: 2px;
   width: var(--line-length, 75px);
-  background: rgba(0, 255, 170, 0.4);
+  background: var(--border-color);
   box-shadow:
     0 0 4px rgba(0, 255, 170, 0.6),
     0 0 8px rgba(0, 255, 170, 0.3);
