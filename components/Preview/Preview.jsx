@@ -40,7 +40,7 @@ export const Preview = () => {
 
   return (
     <section className={styles.preview} id="lol">
-      <MagicForestPortal showRings />
+      <MagicForestPortal />
       <Image
         src={secondaryPreviewImage}
         alt="portal overlay"

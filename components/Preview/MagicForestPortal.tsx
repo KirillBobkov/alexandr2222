@@ -1,26 +1,29 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import styles from "./MagicForestPortal.module.css";
+import secondaryPreview36 from "../../images/secondary_preview_36.webp";
 
 const LINES_COUNT = 15;
 const RINGS_COUNT = 12;
 
-interface MagicForestPortalProps {
-  showRings?: boolean;
-}
-
-export const MagicForestPortal = ({ showRings = false }: MagicForestPortalProps) => {
+export const MagicForestPortal = () => {
   const backgroundRef = useRef<HTMLDivElement>(null);
   const overlayRef = useRef<HTMLDivElement>(null);
+  const secondaryBgRef = useRef<HTMLDivElement>(null);
+  const ringsWrapperRef = useRef<HTMLDivElement>(null);
   const ringsArray = Array.from({ length: RINGS_COUNT });
   const linesArray = Array.from({ length: LINES_COUNT });
+  const [forestLoaded, setForestLoaded] = useState(false);
 
   useEffect(() => {
     console.log("MagicForestPortal mounted");
 
     const backgroundEl = backgroundRef.current;
     const overlayEl = overlayRef.current;
+    const secondaryBgEl = secondaryBgRef.current;
+    const ringsWrapperEl = ringsWrapperRef.current;
 
     const updateProgress = () => {
       const scrollTop = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop;
@@ -33,6 +36,13 @@ export const MagicForestPortal = ({ showRings = false }: MagicForestPortalProps)
       }
       if (overlayEl) {
         overlayEl.style.opacity = (progress * 0.2).toString();
+      }
+      if (secondaryBgEl) {
+        secondaryBgEl.style.opacity = progress.toString();
+      }
+      if (ringsWrapperEl) {
+        // Rings fade out as secondary background fades in
+        ringsWrapperEl.style.opacity = (1 - progress).toString();
       }
     };
 
@@ -59,11 +69,47 @@ export const MagicForestPortal = ({ showRings = false }: MagicForestPortalProps)
     };
   }, []);
 
+  // Track forest.webp loading
+  useEffect(() => {
+    const img = new window.Image();
+    img.src = "/images/forest.webp";
+
+    const handleLoad = () => {
+      setForestLoaded(true);
+    };
+
+    img.onload = handleLoad;
+
+    // Fallback: if already cached or loaded
+    if (img.complete) {
+      handleLoad();
+    }
+
+    // Ultimate fallback: show rings after 1 second regardless
+    const fallbackTimer = setTimeout(() => {
+      setForestLoaded(true);
+    }, 1000);
+
+    return () => {
+      clearTimeout(fallbackTimer);
+    };
+  }, []);
+
   return (
     <>
       {/* Fixed background - always shown */}
       <div className={styles.fixedBackground}>
         <div ref={backgroundRef} className={styles.background} />
+        {/* Secondary background that fades in on scroll */}
+        <div ref={secondaryBgRef} className={styles.secondaryBackground}>
+          <Image
+            src={secondaryPreview36}
+            alt="secondary background"
+            fill
+            priority
+            className={styles.secondaryBackgroundImage}
+          />
+        </div>
         {/* Dark overlay on scroll */}
         <div ref={overlayRef} className={styles.scrollOverlay} />
         <div className={styles.linesLayer}>
@@ -89,9 +135,9 @@ export const MagicForestPortal = ({ showRings = false }: MagicForestPortalProps)
         </div>
       </div>
 
-      {/* Portal rings - only on Preview page, not fixed */}
-      {showRings && (
-        <div className={styles.portalWrapper}>
+      {/* Portal rings */}
+      {forestLoaded && (
+        <div ref={ringsWrapperRef} className={styles.portalWrapper}>
           <svg className={styles.rings} viewBox="0 0 600 600">
             {ringsArray.map((_, i) => {
               const isReverse = i % 3 === 0;

@@ -12,7 +12,7 @@
 .background {
   position: absolute;
   inset: 0;
-  background-image: url("../../images/forest.png");
+  background-image: url("../../images/forest.webp");
   background-size: cover;
   background-position: center;
   transform: scale(1.00);
@@ -22,6 +22,25 @@
     saturate(calc(1 - var(--scroll-progress, 0.2) * 0.4));
   transition: filter 0.1s linear;
   will-change: transform, filter;
+  z-index: 1;
+}
+
+/* Secondary background - fades in on scroll */
+.secondaryBackground {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.1s linear;
+  will-change: opacity;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.secondaryBackgroundImage {
+  object-fit: cover;
+  object-position: center;
+  transform: scale(1.00);
+  animation: forestBreath 16s ease-in-out infinite;
 }
 
 @keyframes forestBreath {
@@ -42,9 +61,9 @@
   transition: opacity 0.1s linear;
 }
 
-/* Portal wrapper - positioned relative to Preview section */
+/* Portal wrapper - fixed position like forest background */
 .portalWrapper {
-  position: absolute;
+  position: fixed;
   left: 50%;
   top: 50%;
   width: 500px;
@@ -55,6 +74,9 @@
   justify-content: center;
   z-index: 1;
   pointer-events: none;
+  opacity: 1;
+  transition: opacity 0.1s linear;
+  will-change: opacity;
 }
 
 /* Ambient glow around portal */
