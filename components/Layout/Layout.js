@@ -5,10 +5,11 @@ import Script from "next/script";
 import { Nunito, Rubik } from "next/font/google";
 import { useTheme } from "../../hooks/useTheme";
 import ScrollTopButton from "../ScrollTopButton/ScrollTopButton";
-import MagicForestPortal from "../Preview/MagicForestPortal";
+import secondaryPreview36 from "../../images/secondary_preview_36.webp";
 import favicon180x180 from "../../images/favicon180x180.png";
 import logo_dark from "../../images/logo_dark.webp";
 import favicon from "../../images/logo_dark.ico";
+import styles from '../../styles/layout.module.css';
 
 const nunito = Nunito({
   weight: ["400", "700"],
@@ -99,8 +100,18 @@ export default function Layout({ children, metaConfig, schemaOrg = '' }) {
           {seoContent}
         </h1>
       )}
-      <main>
-        <MagicForestPortal />
+      <main className={styles.main}>
+        <div style={{
+          position: 'sticky',
+          inset: 0,
+          zIndex: 0,
+          marginBottom: '-100vh',
+          backgroundImage: `url(${secondaryPreview36.src})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          height: '100vh',
+          boxShadow: '0px -3px 15px 0px var(--border-color)'
+        }} />
         {children}
       </main>
       <Footer />

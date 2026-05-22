@@ -3,7 +3,7 @@ import Head from "next/head";
 import { Nunito, Rubik } from "next/font/google";
 import { Form } from "../components/Form/Form";
 import { useTheme } from "../hooks/useTheme";
-import MagicForestPortal from "../components/Preview/MagicForestPortal";
+import secondaryPreview36 from "../images/secondary_preview_36.webp";
 
 import styles from "../styles/ZapisPage.module.css";
 
@@ -49,7 +49,14 @@ export default function ZapisPage() {
       </Head>
 
       <div className={styles.wrapper}>
-         <MagicForestPortal />
+        <div style={{
+          position: 'fixed',
+          inset: 0,
+          zIndex: -1,
+          backgroundImage: `url(${secondaryPreview36.src})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }} />
         <div className={styles.content}>
           <Form
             isSubmitted={isSubmitted}

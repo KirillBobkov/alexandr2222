@@ -6,6 +6,7 @@ import { SecondaryPreview } from "../components/SecondaryPreview/SecondaryPrevie
 import containerStyles from "../styles/container.module.css";
 import contentStyles from "../styles/contentStyles.module.css";
 import enter_hole_1 from "../images/enter_hole_1.webp";
+import forest from "../images/forest.webp";
 import point from "../images/point.webp";
 import { VideoWidget } from "../components/VideoWidget/VideoWidget";
 import {
@@ -465,6 +466,7 @@ export default function () {
       <SecondaryPreview
         text="Мухоморный ретрит в Казани"
         image={enter_hole_1}
+        bgImage={forest}
         animated={false}
       />
 

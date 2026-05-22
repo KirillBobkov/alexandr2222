@@ -1,19 +1,13 @@
 import { useState } from "react";
 import Image from "next/image";
-import dynamic from "next/dynamic";
 import { VisibilityManager } from "../shared/VisibilityManager";
 import { BaseButton } from "../shared/BaseButton";
 import { useTheme } from "../../hooks/useTheme";
-import { MagicForestPortal } from "./MagicForestPortal";
 import vadgra from "../../images/vadgra.webp";
 import secondaryPreviewImage from "../../images/secondary_preview_35.webp";
 import styles from "./Preview.module.css";
 
-// Dynamically import FractalTunnel with SSR disabled to avoid useLayoutEffect warnings
-const Wave = dynamic(() => import("../FractalTunnel/FractalTunnel").then(mod => mod.default), {
-  ssr: false,
-  loading: () => null,
-});
+const RINGS_COUNT = 12;
 
 const overlayStyle = {
   position: "absolute",
@@ -37,10 +31,42 @@ const disabledLinkStyle = {
 export const Preview = () => {
   const { theme } = useTheme();
   const [overlayLoaded, setOverlayLoaded] = useState(false);
+  const ringsArray = Array.from({ length: RINGS_COUNT });
 
   return (
     <section className={styles.preview} id="lol">
-      <MagicForestPortal />
+      {/* Forest background */}
+      <div className={styles.forestBackground} />
+
+      {/* Portal rings */}
+      <div className={styles.portalRings}>
+        <svg className={styles.rings} viewBox="0 0 600 600">
+          {ringsArray.map((_, i) => {
+            const isReverse = i % 3 === 0;
+            const glowDelay = -(Math.random() * 6);
+
+            return (
+              <g key={i}>
+                <circle
+                  className={`${styles.ring} ${isReverse ? styles.ringReverse : ""}`}
+                  cx="300"
+                  cy="300"
+                  r={20 + i * 20}
+                />
+                <circle
+                  className={styles.ringGlow}
+                  cx="300"
+                  cy="300"
+                  r={20 + i * 20}
+                  style={{ animationDelay: `0s, ${glowDelay}s, 0s` }}
+                />
+              </g>
+            );
+          })}
+        </svg>
+      </div>
+
+      {/* Secondary preview overlay */}
       <Image
         src={secondaryPreviewImage}
         alt="portal overlay"
@@ -48,7 +74,6 @@ export const Preview = () => {
         priority
         onLoad={() => setOverlayLoaded(true)}
       />
-      {/* <Wave /> */}
 
       <VisibilityManager as="div" className={styles.preview__content}>
         <h1 className={styles.preview__title}>
