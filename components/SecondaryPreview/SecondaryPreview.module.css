@@ -104,6 +104,7 @@
 .secondaryPreview__title {
   font-size: 60px;
   text-transform: uppercase;
+  white-space: pre-wrap;
   font-weight: 700;
   max-width: 1000px;
   line-height: 72px;

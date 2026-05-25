@@ -80,14 +80,7 @@ export const questionsContent = {
 };
 
 const videos = [
-  {
-    link: "https://vkvideo.ru/video_ext.php?oid=643721177&id=456239022&hash=2a097920823e0a9b",
-    thumbnailUrl:
-      "https://iv.okcdn.ru/getVideoPreview?id=13499413039833&idx=0&type=39&tkn=dfyTnvWpDja8tTiEKvqbAdMuKX0&fn=vid_t",
-    name: "Отзывы о гипнопроработках Александра",
-    uploadDate: new Date("April 24, 2026").toISOString(),
-  },
-  {
+    {
     link: "https://vk.com/video_ext.php?oid=643721177&id=456239018&hash=21090df415acc25b",
     thumbnailUrl:
       "https://i.mycdn.me/getVideoPreview?id=8427497392857&idx=5&type=39&tkn=GlEU4u6PxO4ufRM8uL06LGlpeHc&fn=vid_x",
@@ -100,6 +93,13 @@ const videos = [
       "https://i.mycdn.me/getVideoPreview?id=7895760833071&idx=2&type=39&tkn=M56cNKVKS2eNz_YBO5he2T9jdWM&fn=vid_l",
     name: 'Отзыв Булата Рустамовича о проработках с Александром "Интегралом" Васильевым',
     uploadDate: new Date("March 13, 2025").toISOString(),
+  },
+  {
+    link: "https://vkvideo.ru/video_ext.php?oid=643721177&id=456239022&hash=2a097920823e0a9b",
+    thumbnailUrl:
+      "https://iv.okcdn.ru/getVideoPreview?id=13499413039833&idx=0&type=39&tkn=dfyTnvWpDja8tTiEKvqbAdMuKX0&fn=vid_t",
+    name: "Отзывы о гипнопроработках Александра",
+    uploadDate: new Date("April 24, 2026").toISOString(),
   },
   {
     link: "https://vkvideo.ru/video_ext.php?oid=290538287&id=456239203&hash=715fb2a11dbae2a6",

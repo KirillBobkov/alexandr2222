@@ -465,7 +465,8 @@ export default function () {
   return (
     <Layout metaConfig={metaConfig} schemaOrg={schemaOrg} enableParallaxBackground={false}>
       <SecondaryPreview
-        text="Мухоморный ретрит в Казани"
+        text={`Мухоморный ретрит 
+в Казани`}
         image={enter_hole_1}
         bgImage={secondaryPreview36}
         animated={false}
