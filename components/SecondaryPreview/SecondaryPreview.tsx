@@ -84,6 +84,7 @@ export const SecondaryPreview = ({ image, subtext, text, animated = true, overla
             src={forest}
             alt="фон лес"
             fill
+            priority
             onLoad={() => setBaseBgLoaded(true)}
           />
         </div>
@@ -94,6 +95,7 @@ export const SecondaryPreview = ({ image, subtext, text, animated = true, overla
             src={bgImage}
             alt="фон за заставкой"
             fill
+            priority
             onLoad={() => setBgLoaded(true)}
           />
         </div>
@@ -103,6 +105,7 @@ export const SecondaryPreview = ({ image, subtext, text, animated = true, overla
           src={image}
           alt="заставка превью"
           fill
+          priority
           onLoad={() => setLoaded(true)}
         />
       </div>
