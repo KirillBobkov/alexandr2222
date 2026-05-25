@@ -5,6 +5,7 @@ import { BaseButton } from "../shared/BaseButton";
 import { useTheme } from "../../hooks/useTheme";
 import vadgra from "../../images/vadgra.webp";
 import secondaryPreviewImage from "../../images/secondary_preview_35.webp";
+import forest from "../../images/forest.webp";
 import styles from "./Preview.module.css";
 
 const RINGS_COUNT = 12;
@@ -31,15 +32,23 @@ const disabledLinkStyle = {
 export const Preview = () => {
   const { theme } = useTheme();
   const [overlayLoaded, setOverlayLoaded] = useState(false);
+  const [forestLoaded, setForestLoaded] = useState(false);
   const ringsArray = Array.from({ length: RINGS_COUNT });
 
   return (
     <section className={styles.preview} id="lol">
       {/* Forest background */}
-      <div className={styles.forestBackground} />
+      <Image
+        src={forest}
+        alt="forest background"
+        className={`${styles.forestBackground} ${forestLoaded ? styles.loaded : ""}`}
+        fill
+        priority
+        onLoad={() => setForestLoaded(true)}
+      />
 
       {/* Portal rings */}
-      <div className={styles.portalRings}>
+      <div className={`${styles.portalRings} ${forestLoaded ? styles.loaded : ""}`}>
         <svg className={styles.rings} viewBox="0 0 600 600">
           {ringsArray.map((_, i) => {
             const isReverse = i % 3 === 0;

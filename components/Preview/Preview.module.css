@@ -18,10 +18,14 @@
 .forestBackground {
   position: absolute;
   inset: 0;
-  background-image: url("../../images/forest.webp");
-  background-size: cover;
-  background-position: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  will-change: opacity;
   animation: forestBreath 16s ease-in-out infinite;
+}
+
+.forestBackground img {
+  object-fit: cover;
 }
 
 @keyframes forestBreath {
@@ -46,6 +50,13 @@
   justify-content: center;
   z-index: 1;
   pointer-events: none;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  will-change: opacity;
+}
+
+.portalRings.loaded {
+  opacity: 1;
 }
 
 /* Ambient glow around portal */
