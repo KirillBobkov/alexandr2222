@@ -43,7 +43,7 @@ export const SecondaryPreview = ({ image, subtext, text, animated = true, overla
         contentRef.current.style.opacity = (1 - progress).toString();
       }
       if (overlayRef.current) {
-        overlayRef.current.style.opacity = (progress * 0.3).toString();
+        overlayRef.current.style.opacity = (progress * 0.1).toString();
       }
     };
 

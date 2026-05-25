@@ -112,7 +112,13 @@ export default function Layout({ children, metaConfig, schemaOrg = '', enablePar
             backgroundPosition: 'center',
             height: '100vh',
             boxShadow: '0px -3px 15px 0px var(--border-color)'
-          }} />
+          }}>
+            <div style={{
+              position: 'absolute',
+              inset: 0,
+              backgroundColor: 'rgba(0, 0, 0, 0.2)'
+            }} />
+          </div>
         )}
         {children}
       </main>
