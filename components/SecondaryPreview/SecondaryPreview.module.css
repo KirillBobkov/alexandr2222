@@ -23,6 +23,28 @@
   z-index: 2;
 }
 
+.parallaxMode .secondaryPreview__content {
+  opacity: 0;
+  transition: opacity 500ms ease-in-out;
+}
+
+.parallaxMode .secondaryPreview__content.loaded {
+  opacity: 1;
+}
+
+/* Base background - forest, always visible in parallax mode */
+.baseBackground {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  opacity: 0;
+  transition: opacity 500ms ease-in-out;
+}
+
+.baseBackground img {
+  object-fit: cover;
+}
+
 .secondaryPreview__bg {
   position: absolute;
   top: 0;
@@ -30,11 +52,14 @@
   height: 100%;
   z-index: 0;
   opacity: 0;
-  transition: opacity 1s ease-in-out;
-  object-fit: cover;
-  transform-origin: center center;
+  transition: opacity 500ms ease-in-out;
   mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
   -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+}
+
+.secondaryPreview__bg img {
+  object-fit: cover;
+  transform-origin: center center;
 }
 
 .secondaryPreview__bgImage {
@@ -44,11 +69,14 @@
   height: 100%;
   z-index: -1;
   opacity: 0;
-  transition: opacity 1s ease-in-out;
-  object-fit: cover;
-  transform-origin: center center;
+  transition: opacity 500ms ease-in-out;
   mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
   -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+}
+
+.secondaryPreview__bgImage img {
+  object-fit: cover;
+  transform-origin: center center;
 }
 
 
@@ -86,6 +114,43 @@
   line-height: 30px;
   padding-bottom: 12px;
   color: var(--secondary-font-color);
+}
+
+/* Parallax mode - smooth fade on scroll */
+.parallaxMode .baseBackground {
+  opacity: 0;
+  transition: opacity 500ms ease-in-out;
+  will-change: opacity;
+}
+
+.parallaxMode .baseBackground.loaded {
+  opacity: 1;
+}
+
+.parallaxMode .secondaryPreview__bg {
+  opacity: 0;
+  transition: opacity 500ms ease-in-out;
+  will-change: opacity;
+}
+
+.parallaxMode .secondaryPreview__bg.loaded {
+  opacity: 1;
+}
+
+.parallaxMode .secondaryPreview__bgImage {
+  opacity: 0;
+  transition: opacity 500ms ease-in-out;
+  will-change: opacity;
+}
+
+.parallaxOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  pointer-events: none;
+  opacity: 0;
+  will-change: opacity;
+  z-index: 1;
 }
 
 /* Responsive styles */

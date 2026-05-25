@@ -25,7 +25,7 @@ const rubik = Rubik({
   subsets: ["cyrillic"],
 });
 
-export default function Layout({ children, metaConfig, schemaOrg = '' }) {
+export default function Layout({ children, metaConfig, schemaOrg = '', enableParallaxBackground =  true }) {
   const { title, description, keywords, seoContent } = metaConfig;
 
   useTheme();
@@ -101,17 +101,19 @@ export default function Layout({ children, metaConfig, schemaOrg = '' }) {
         </h1>
       )}
       <main className={styles.main}>
-        <div style={{
-          position: 'sticky',
-          inset: 0,
-          zIndex: 0,
-          marginBottom: '-100vh',
-          backgroundImage: `url(${secondaryPreview36.src})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          height: '100vh',
-          boxShadow: '0px -3px 15px 0px var(--border-color)'
-        }} />
+        {enableParallaxBackground && (
+          <div style={{
+            position: 'sticky',
+            inset: 0,
+            zIndex: 0,
+            marginBottom: '-100vh',
+            backgroundImage: `url(${secondaryPreview36.src})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            height: '100vh',
+            boxShadow: '0px -3px 15px 0px var(--border-color)'
+          }} />
+        )}
         {children}
       </main>
       <Footer />

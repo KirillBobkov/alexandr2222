@@ -7,6 +7,7 @@ import containerStyles from "../styles/container.module.css";
 import contentStyles from "../styles/contentStyles.module.css";
 import enter_hole_1 from "../images/enter_hole_1.webp";
 import forest from "../images/forest.webp";
+import secondaryPreview36 from "../images/secondary_preview_36.webp";
 import point from "../images/point.webp";
 import { VideoWidget } from "../components/VideoWidget/VideoWidget";
 import {
@@ -462,12 +463,13 @@ export default function () {
   };
 
   return (
-    <Layout metaConfig={metaConfig} schemaOrg={schemaOrg}>
+    <Layout metaConfig={metaConfig} schemaOrg={schemaOrg} enableParallaxBackground={false}>
       <SecondaryPreview
         text="Мухоморный ретрит в Казани"
         image={enter_hole_1}
-        bgImage={forest}
+        bgImage={secondaryPreview36}
         animated={false}
+        parallaxMode={true}
       />
 
       <div className={containerStyles.container}>
