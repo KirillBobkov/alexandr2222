@@ -25,7 +25,8 @@
 
 .parallaxMode .secondaryPreview__content {
   opacity: 0;
-  transition: opacity 500ms ease-in-out;
+  transition: opacity 1s ease-in-out;
+  will-change: opacity;
 }
 
 .parallaxMode .secondaryPreview__content.loaded {
@@ -38,7 +39,8 @@
   inset: 0;
   z-index: -2;
   opacity: 0;
-  transition: opacity 500ms ease-in-out;
+  transition: opacity 1s ease-in-out;
+  will-change: opacity;
 }
 
 .baseBackground img {
@@ -52,7 +54,8 @@
   height: 100%;
   z-index: 0;
   opacity: 0;
-  transition: opacity 500ms ease-in-out;
+  transition: opacity 1s ease-in-out;
+  will-change: opacity;
   mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
   -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
 }
@@ -69,7 +72,8 @@
   height: 100%;
   z-index: -1;
   opacity: 0;
-  transition: opacity 500ms ease-in-out;
+  transition: opacity 1s ease-in-out;
+  will-change: opacity;
   mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
   -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
 }
@@ -119,7 +123,7 @@
 /* Parallax mode - smooth fade on scroll */
 .parallaxMode .baseBackground {
   opacity: 0;
-  transition: opacity 500ms ease-in-out;
+  transition: opacity 1s ease-in-out;
   will-change: opacity;
 }
 
@@ -129,7 +133,7 @@
 
 .parallaxMode .secondaryPreview__bg {
   opacity: 0;
-  transition: opacity 500ms ease-in-out;
+  transition: opacity 1s ease-in-out;
   will-change: opacity;
 }
 
@@ -139,7 +143,7 @@
 
 .parallaxMode .secondaryPreview__bgImage {
   opacity: 0;
-  transition: opacity 500ms ease-in-out;
+  transition: opacity 1s ease-in-out;
   will-change: opacity;
 }
 
