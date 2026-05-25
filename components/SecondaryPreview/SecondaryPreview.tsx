@@ -4,7 +4,7 @@ import { VisibilityManager } from "../shared/VisibilityManager";
 import styles from "./SecondaryPreview.module.css";
 import forest from "../../images/forest.webp";
 
-export const SecondaryPreview = ({ image, subtext, text, animated = true, overlay = true, bgImage, parallaxMode = false }) => {
+export const SecondaryPreview = ({ image, subtext, text, animated = true, overlay = true, bgImage, parallaxMode = false, upTitle = false }) => {
   const [loaded, setLoaded] = useState(false);
   const [bgLoaded, setBgLoaded] = useState(false);
   const [baseBgLoaded, setBaseBgLoaded] = useState(false);
@@ -76,7 +76,7 @@ export const SecondaryPreview = ({ image, subtext, text, animated = true, overla
   }, [parallaxMode, loaded, baseBgLoaded]);
 
   return (
-    <section className={`${styles.secondaryPreview} ${parallaxMode ? styles.parallaxMode : ''}`}>
+    <section className={`${styles.secondaryPreview} ${parallaxMode ? styles.parallaxMode : ''} ${upTitle ? styles.upTitle : ''}`}>
       {/* Base background - forest, fades out on scroll */}
       {parallaxMode && (
         <div ref={baseBgRef} className={`${styles.baseBackground} ${baseBgLoaded ? styles.loaded : ""}`}>

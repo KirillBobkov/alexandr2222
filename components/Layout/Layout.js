@@ -2,7 +2,6 @@ import { Footer } from "../Footer/Footer";
 import { Navigation } from "../Navigation/Navigation";
 import Head from "next/head";
 import Script from "next/script";
-import { Nunito, Rubik } from "next/font/google";
 import { useTheme } from "../../hooks/useTheme";
 import ScrollTopButton from "../ScrollTopButton/ScrollTopButton";
 import secondaryPreview36 from "../../images/secondary_preview_36.webp";
@@ -11,19 +10,6 @@ import logo_dark from "../../images/logo_dark.webp";
 import favicon from "../../images/logo_dark.ico";
 import styles from '../../styles/layout.module.css';
 
-const nunito = Nunito({
-  weight: ["400", "700"],
-  style: ["normal", "italic"],
-  display: "swap",
-  subsets: ["cyrillic"],
-});
-
-const rubik = Rubik({
-  weight: ["400", "700"],
-  style: ["normal"],
-  display: "swap",
-  subsets: ["cyrillic"],
-});
 
 export default function Layout({ children, metaConfig, schemaOrg = '', enableParallaxBackground =  true }) {
   const { title, description, keywords, seoContent } = metaConfig;
@@ -33,13 +19,6 @@ export default function Layout({ children, metaConfig, schemaOrg = '', enablePar
   return (
     <>
       <Head>
-        <style jsx global>{`
-          :root {
-            --heading: ${nunito.style.fontFamily};
-            --body-font: ${rubik.style.fontFamily};
-          }
-        `}</style>
-
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta charSet="utf-8" />

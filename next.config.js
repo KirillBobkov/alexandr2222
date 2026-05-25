@@ -13,6 +13,14 @@ const nextConfig = {
           filename: 'static/media/[name].[hash][ext]'
         }
       });
+      // Шрифты
+      config.module.rules.push({
+        test: /\.(ttf|otf|eot|woff|woff2)$/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'static/media/[name].[hash][ext]'
+        }
+      });
       return config;
     },
   }

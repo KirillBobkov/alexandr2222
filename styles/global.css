@@ -1,17 +1,31 @@
+@font-face {
+  font-family: 'TTDaysSans';
+  src: url('/fonts/TTDaysSans-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TTDaysSans';
+  src: url('/fonts/TTDaysSans-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TTDaysSans';
+  src: url('/fonts/TTDaysSans-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
-  /* #ff6b61 in decimal RGB */
-
   /* Fonts */
-  --heading-1: "Arimo";
-  --heading-2: "Oswald";
-  --heading-3: "Jost";
-  --heading-4: "Poppins";
-  --body-font: "Arimo";
-  --transition: 500ms all ease;
-
-  /* Fonts */
-  --heading: "Nunito";
-  --body-font: "Rubik";
+  --body-font: 'TTDaysSans', sans-serif;
+  --heading: 'TTDaysSans', sans-serif;
   --transition: 500ms all ease;
 
   --bg-color: #000000;
@@ -42,12 +56,10 @@
 }
 
 body {
-  font-family: var(--body-font);
-  font-weight: 300;
-  margin: 0;
-  font-family: "Open Sans", sans-serif;
-  font-size: 18px;
+  font-family: var(--body-font), sans-serif;
   font-weight: 400;
+  margin: 0;
+  font-size: 18px;
   line-height: 1.5;
   color: var(--secondary-font-color);
   position: relative;
@@ -83,5 +95,10 @@ body {
 
 *::-webkit-scrollbar-thumb {
   background-color: var(--accent);
+}
+
+/* Font weight utilities */
+.font-bold {
+  font-weight: 700;
 }
 

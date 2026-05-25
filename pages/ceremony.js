@@ -470,6 +470,7 @@ export default function () {
         bgImage={secondaryPreview36}
         animated={false}
         parallaxMode={true}
+        upTitle={true}
       />
 
       <div className={containerStyles.container}>
