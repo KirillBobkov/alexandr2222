@@ -1,8 +1,6 @@
 import Layout from "../../components/Layout/Layout";
 import { SITE_URL } from "../../../consts/site";
 import { Form } from "../../components/Form/Form";
-import { useState } from "react";
-import { useScrollToLocation } from "../../hooks/useScrollToLocation";
 import { SecondaryPreview } from "../../components/SecondaryPreview/SecondaryPreview";
 import { VisibilityManager } from "../../components/shared/VisibilityManager";
 import containerStyles from "../../styles/container.module.css";
@@ -58,9 +56,7 @@ const schemaOrg = {
 };
 
 export default function FatalMushroomDosageErrorSochiPage() {
-  const [isSubmitted, setIsSubmitted] = useState(false);
 
-  useScrollToLocation();
 
   const metaConfig = {
     title: "Трагедия в Сочи: фатальная ошибка с дозировкой Мухомора",
@@ -185,8 +181,6 @@ export default function FatalMushroomDosageErrorSochiPage() {
         </div>
       <div id="message" />
       <Form
-        setIsSubmitted={setIsSubmitted}
-        isSubmitted={isSubmitted}
         type="Обсуждение безопасности Мухомора (статья)"
       />
     </Layout>

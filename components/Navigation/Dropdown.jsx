@@ -1,19 +1,13 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { useMediaQuery } from "../../hooks/useMediaQuery";
 import styles from "./Navigation.module.css";
 
 export const Dropdown = ({ childs, href, isActive, onClick, text }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
+  const isMobile = useMediaQuery("(max-width: 768px)");
   const router = useRouter();
-
-  useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth < 768);
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
 
   const handleMouseEnter = useCallback(() => {
     if (!isMobile) setIsOpen(true);

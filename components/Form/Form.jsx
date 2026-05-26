@@ -10,12 +10,11 @@ import styles from "./Form.module.css";
 
 export function Form({
   animation,
-  isSubmitted,
-  setIsSubmitted,
   submitText = "Консультация",
   type = "",
   woman = false,
 }) {
+  const [isSubmitted, setIsSubmitted] = useState(false);
   const [message, setMessage] = useState("");
   const id = type;
 

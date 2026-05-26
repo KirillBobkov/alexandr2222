@@ -1,7 +1,5 @@
 import Layout from "../../components/Layout/Layout";
 import { SITE_URL } from "../../../consts/site";
-import { useState } from "react";
-import { useScrollToLocation } from "../../hooks/useScrollToLocation";
 import { SecondaryPreview } from "../../components/SecondaryPreview/SecondaryPreview";
 import { VisibilityManager } from "../../components/shared/VisibilityManager";
 import containerStyles from "../../styles/container.module.css";
@@ -69,9 +67,7 @@ headline: "Невербальное программирование: мгнов
 };
 
 export default function () {
-  const [isSubmitted, setIsSubmitted] = useState(false);
 
-  useScrollToLocation();
 
   const metaConfig = {
     title: "Невербальное программирование: как управлять эмоциями через тело",

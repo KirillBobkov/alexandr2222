@@ -1,8 +1,6 @@
 import Layout from "../../components/Layout/Layout";
 import { SITE_URL } from "../../../consts/site";
 import { Form } from "../../components/Form/Form";
-import { useState } from "react";
-import { useScrollToLocation } from "../../hooks/useScrollToLocation";
 import { SecondaryPreview } from "../../components/SecondaryPreview/SecondaryPreview";
 import { VisibilityManager } from "../../components/shared/VisibilityManager";
 import containerStyles from "../../styles/container.module.css";
@@ -58,9 +56,7 @@ const schemaOrg = {
 };
 
 export default function () {
-  const [isSubmitted, setIsSubmitted] = useState(false);
 
-  useScrollToLocation();
 
   const metaConfig = {
     title: "Мухомор и терапия ПТСР: улучшение самочувствия через связь с подсознанием",
@@ -221,8 +217,6 @@ export default function () {
         </div>
       <div id="message" />
       <Form
-        setIsSubmitted={setIsSubmitted}
-        isSubmitted={isSubmitted}
         type="Мухомор и терапия PTSD (статья)"
       />
     </Layout>

@@ -29,7 +29,6 @@ import secondary_preview_2 from "../images/secondary_preview_2.webp";
 import styles from "../styles/blog.module.css";
 import contentStyles from "../styles/contentStyles.module.css";
 import { VisibilityManager } from "../components/shared/VisibilityManager";
-import { useScrollToLocation } from "../hooks/useScrollToLocation";
 
 const articles = [
   {
@@ -275,7 +274,6 @@ export default function Blog() {
     }
   };
 
-  useScrollToLocation();
 
   return (
     <Layout metaConfig={metaConfig} schemaOrg={schemaOrg}>

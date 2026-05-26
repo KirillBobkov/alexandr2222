@@ -1,12 +1,10 @@
 import Image from "next/image";
 import { useTheme } from "../../hooks/useTheme";
-import logoDark from "../../images/logo_dark.webp";
-import logoLight from "../../images/logo.webp";
 import vadgra from "../../images/vadgra.webp";
 import styles from "./Footer.module.css";
 
 export function Footer() {
-  const { theme } = useTheme();
+  useTheme();
 
   const overlayStyle = {
     position: "absolute",
@@ -30,11 +28,6 @@ export function Footer() {
     <footer className={styles.footer}>
       <div className={styles.container}>
         <div className={styles.logo__container}>
-          {/* <Image
-            className={styles.logo}
-            src={theme === "light" ? logoLight : logoDark}
-            alt="Company Logo"
-          /> */}
           <ul className={styles.social__list}>
             <li>
               <span className={styles.social__link} style={disabledLinkStyle}>

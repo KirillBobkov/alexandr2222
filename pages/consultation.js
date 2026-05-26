@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Head from "next/head";
 import { Nunito, Rubik } from "next/font/google";
 import { Form } from "../components/Form/Form";
@@ -22,7 +21,6 @@ const rubik = Rubik({
 });
 
 export default function ZapisPage() {
-  const [isSubmitted, setIsSubmitted] = useState(false);
 
   useTheme();
 
@@ -59,8 +57,6 @@ export default function ZapisPage() {
         }} />
         <div className={styles.content}>
           <Form
-            isSubmitted={isSubmitted}
-            setIsSubmitted={setIsSubmitted}
             submitText="Консультация"
             type="Страница телетайп для женщин"
             woman

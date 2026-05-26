@@ -1,8 +1,6 @@
 import Layout from "../components/Layout/Layout";
 import { SITE_URL } from "../../consts/site";
 import { Form } from "../components/Form/Form";
-import { useState } from "react";
-import { useScrollToLocation } from "../hooks/useScrollToLocation";
 import { SecondaryPreview } from "../components/SecondaryPreview/SecondaryPreview";
 import { VisibilityManager } from "../components/shared/VisibilityManager";
 import containerStyles from "../styles/container.module.css";
@@ -11,8 +9,6 @@ import secondary_preview_8 from "../images/secondary_preview_8.webp";
 import { Button } from "../components/shared/Button/Button";
 
 export default function () {
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  useScrollToLocation();
 
   const metaConfig = {
     title: "Обо мне - Александр Васильев",
@@ -170,8 +166,6 @@ const schemaOrg = {
         </div>
       <div id="message" />
       <Form
-        setIsSubmitted={setIsSubmitted}
-        isSubmitted={isSubmitted}
         type="Первая консультация (Страница: Обо мне)"
       />
     </Layout>

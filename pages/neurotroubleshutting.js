@@ -13,8 +13,6 @@ import { InnerSatisfaction } from "../components/InnerSatisfaction";
 import { AboutMe } from "../components/AboutMe/AboutMe";
 import { CirclesList } from "../components/CirclesList/CirclesList";
 import { InnerQuestions } from "../components/InnerQuestions";
-import { useState } from "react";
-import { useScrollToLocation } from "../hooks/useScrollToLocation";
 import {
   Collapsible,
   CollapsibleSection,
@@ -504,9 +502,7 @@ const schemaOrg = {
 };
 
 export default function () {
-  const [isSubmitted, setIsSubmitted] = useState(false);
 
-  useScrollToLocation();
 
   const metaConfig = {
     title: "Гипнопроработка | Устранение тревоги, депрессии и психосоматики",
@@ -809,8 +805,6 @@ export default function () {
 
       <div id="message" />
       <Form
-        setIsSubmitted={setIsSubmitted}
-        isSubmitted={isSubmitted}
         type="Первая консультация (Страница: Гипнопроработка)"
       />
     </Layout>

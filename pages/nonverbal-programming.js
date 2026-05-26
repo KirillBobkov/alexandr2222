@@ -6,7 +6,6 @@ import { SecondaryPreview } from "../components/SecondaryPreview/SecondaryPrevie
 import secondary_preview_29 from "../images/secondary_preview_29.webp";
 import { Helping } from "../components/Helping/Helping";
 import { Form } from "../components/Form/Form";
-import { useState } from "react";
 import { CourseContent } from "../components/CourseContent/CourseContent";
 import { ReasonCards } from "../components/ReasonCards/ReasonCards";
 import { ReasonCard } from "../components/ReasonCard/ReasonCard";
@@ -14,13 +13,10 @@ import { TarifCard } from "../components/TarifCard/TarifCard";
 import { PurchaseSuccessWidget } from "../components/PurchaseSuccessWidget/PurchaseSuccessWidget";
 import { VideoBlock } from "../components/VideoBlock/VideoBlock";
 import teaserVideo from "../images/teaser.mp4";
-import { useScrollToLocation } from "../hooks/useScrollToLocation";
 
 export default function NonverbalProgramming() {
-  const [isSubmitted, setIsSubmitted] = useState(false);
 
   
-  useScrollToLocation();
 
   const metaConfig = {
     title: "Невербальное программирование — Управляй эмоциями через тело",
@@ -224,8 +220,6 @@ name: "Невербальное программирование — мгнов�
         )}
       />
       <Form
-        setIsSubmitted={setIsSubmitted}
-        isSubmitted={isSubmitted}
         type="Курс по невербальному программированию"
       />
     </Layout>

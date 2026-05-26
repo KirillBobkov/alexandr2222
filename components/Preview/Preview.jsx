@@ -30,7 +30,7 @@ const disabledLinkStyle = {
 };
 
 export const Preview = () => {
-  const { theme } = useTheme();
+  useTheme();
   const [overlayLoaded, setOverlayLoaded] = useState(false);
   const [forestLoaded, setForestLoaded] = useState(false);
   const ringsArray = Array.from({ length: RINGS_COUNT });

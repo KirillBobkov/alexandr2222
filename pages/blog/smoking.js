@@ -1,8 +1,6 @@
 import Layout from "../../components/Layout/Layout";
 import { SITE_URL } from "../../../consts/site";
 import { Form } from "../../components/Form/Form";
-import { useState } from "react";
-import { useScrollToLocation } from "../../hooks/useScrollToLocation";
 import { SecondaryPreview } from "../../components/SecondaryPreview/SecondaryPreview";
 import { VisibilityManager } from "../../components/shared/VisibilityManager";
 import containerStyles from "../../styles/container.module.css";
@@ -65,9 +63,7 @@ const schemaOrg = {
 };
 
 export default function () {
-  const [isSubmitted, setIsSubmitted] = useState(false);
 
-  useScrollToLocation();
 
   const metaConfig = {
     title: "Курение как подсознательный крик души: почему мы травим себя и как это остановить",
@@ -298,8 +294,6 @@ export default function () {
       
       <div id="message" />
       <Form
-        setIsSubmitted={setIsSubmitted}
-        isSubmitted={isSubmitted}
         type="Курение как подсознательный крик души (статья)"
       />
     </Layout>

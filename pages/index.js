@@ -2,8 +2,6 @@ import Layout from "../components/Layout/Layout";
 import { SITE_URL } from "../../consts/site";
 import { BUILD_DATE } from "../../consts/build";
 import { Form } from "../components/Form/Form";
-import { useState } from "react";
-import { useScrollToLocation } from "../hooks/useScrollToLocation";
 import { Preview } from "../components/Preview/Preview";
 import { AnimatedLine } from "../components/AnimatedLine/AnimatedLine";
 import { Final } from "../components/Final/Final";
@@ -463,9 +461,7 @@ export const products = [
 ];
 
 export default function () {
-  const [isSubmitted, setIsSubmitted] = useState(false);
 
-  useScrollToLocation();
 
   const metaConfig = {
     seoContent:
@@ -531,8 +527,6 @@ export default function () {
       </Final>
       <div id="message" />
       <Form
-        setIsSubmitted={setIsSubmitted}
-        isSubmitted={isSubmitted}
         type="Первая консультация (Страница: Главная)"
       />
     </Layout>

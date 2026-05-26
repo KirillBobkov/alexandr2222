@@ -4,6 +4,7 @@ import { Navigation } from "../Navigation/Navigation";
 import Head from "next/head";
 import Script from "next/script";
 import { useTheme } from "../../hooks/useTheme";
+import { useScrollToLocation } from "../../hooks/useScrollToLocation";
 import ScrollTopButton from "../ScrollTopButton/ScrollTopButton";
 import secondaryPreview36 from "../../images/secondary_preview_36.webp";
 import favicon180x180 from "../../images/favicon180x180.png";
@@ -16,6 +17,7 @@ export default function Layout({ children, metaConfig, schemaOrg = '', enablePar
   const { title, description, keywords, seoContent } = metaConfig;
 
   useTheme();
+  useScrollToLocation();
 
   return (
     <>
