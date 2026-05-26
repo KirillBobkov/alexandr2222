@@ -6,31 +6,13 @@ import styles from "./Footer.module.css";
 export function Footer() {
   useTheme();
 
-  const overlayStyle = {
-    position: "absolute",
-    top: 0,
-    left: 0,
-    width: "100%",
-    height: "100%",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    pointerEvents: "none",
-  };
-
-  const disabledLinkStyle = {
-    position: "relative",
-    cursor: "not-allowed",
-    backgroundColor: "transparent",
-  };
-
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
         <div className={styles.logo__container}>
           <ul className={styles.social__list}>
             <li>
-              <span className={styles.social__link} style={disabledLinkStyle}>
+              <span className={`${styles.social__link} ${styles["disabled-link"]}`}>
                 <svg
                   width="24"
                   height="24"
@@ -43,7 +25,7 @@ export function Footer() {
                     fill="currentColor"
                   />
                 </svg>
-                <div style={overlayStyle}>
+                <div className={styles.overlay}>
                   <Image
                     src={vadgra}
                     alt="overlay"
@@ -119,7 +101,7 @@ export function Footer() {
               </a>
             </li>
             <li>
-              <span className={styles.social__link} style={disabledLinkStyle}>
+              <span className={`${styles.social__link} ${styles["disabled-link"]}`}>
                 <svg
                   width="24"
                   height="24"
@@ -132,7 +114,7 @@ export function Footer() {
                     fill="currentColor"
                   />
                 </svg>
-                <div style={overlayStyle}>
+                <div className={styles.overlay}>
                   <Image
                     src={vadgra}
                     alt="overlay"

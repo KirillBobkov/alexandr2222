@@ -27,7 +27,7 @@ export const Navigation = () => {
 
         <nav style={{ width: "100%" }}>
           <ul className={styles.navigation}>
-            {getNavigationTree(router.pathname).map((item) => {
+            {NAVIGATION_TREE.map((item) => {
               const isActive =
                 router.pathname === item.parent.path ||
                 item.childs?.some((child) => router.pathname === child.path);
@@ -59,7 +59,7 @@ export const Navigation = () => {
   );
 };
 
-export const getNavigationTree = () => [
+const NAVIGATION_TREE = [
   {
     parent: {
       path: "/",
@@ -84,4 +84,4 @@ export const getNavigationTree = () => [
       value: "Блог",
     },
   },
-].filter(Boolean);
+];

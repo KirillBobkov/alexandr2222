@@ -26,18 +26,17 @@ export default function ScrollTopButton() {
   const [visible, setVisible] = useState(false);
 
   const toggleVisible = useCallback(() => {
-    const scrolled = document.body.scrollTop;
-    setVisible(scrolled > 50);
+    setVisible(window.scrollY > 50);
   }, []);
 
   const onClick = useCallback(() => {
-    document.body.scrollTo({ top: 0, behavior: "smooth" });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
 
   useEffect(() => {
-    document.body?.addEventListener("scroll", toggleVisible);
+    window.addEventListener("scroll", toggleVisible, { passive: true });
     return () => {
-      document.body?.removeEventListener("scroll", toggleVisible);
+      window.removeEventListener("scroll", toggleVisible);
     };
   }, [toggleVisible]);
 

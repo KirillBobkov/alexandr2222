@@ -96,15 +96,7 @@ export function Form({
                   error={errors.phone}
                 />
               </div>
-              <div
-                className={styles.form_elem}
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  gap: 15,
-                  position: "relative",
-                }}
-              >
+              <div className={`${styles.form_elem} ${styles["button-container"]}`}>
                 <BaseButton
                   type="submit"
                   disabled={

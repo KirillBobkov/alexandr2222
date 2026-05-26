@@ -68,17 +68,7 @@ export default function Layout({ children, metaConfig, schemaOrg = '', enablePar
       )}
       <Navigation />
       {seoContent && (
-        <h1 style={{
-          visibility: 'hidden',
-          width: '1px',
-          height: '1px',
-          padding: '0',
-          margin: '-1px',
-          overflow: 'hidden',
-          clip: 'rect(0,0,0,0)',
-          whiteSpace: 'nowrap',
-          border: '0'
-        }}>
+        <h1 className={styles["sr-only"]}>
           {seoContent}
         </h1>
       )}

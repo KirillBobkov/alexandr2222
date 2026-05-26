@@ -4,6 +4,24 @@
     padding: 0 60px 60px;
 }
 
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+}
+
+.disabled-link {
+  position: relative;
+  cursor: not-allowed;
+  background-color: transparent;
+}
+
 .container {
     padding-top: 60px;
     max-width: 1285px;
