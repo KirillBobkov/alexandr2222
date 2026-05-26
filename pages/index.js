@@ -1,4 +1,6 @@
 import Layout from "../components/Layout/Layout";
+import { SITE_URL } from "../../consts/site";
+import { BUILD_DATE } from "../../consts/build";
 import { Form } from "../components/Form/Form";
 import { useState } from "react";
 import { useScrollToLocation } from "../hooks/useScrollToLocation";
@@ -19,14 +21,14 @@ const schemaOrg = {
   name: "Гипнолог Александр Васильев — глубинная трансформация и психоэмоциональное восстановление",
   description:
     "Профессиональный специалист по гипнопроработке и трансформации сознания. Осуществляю глубокую работу с подсознательными механизмами, нейтрализацию травмирующих воспоминаний, полное устранение страхов и фобий, комплексное лечение депрессивных состояний и тревожных расстройств. Проводу уникальные мухоморные трансформации, разрабатываю индивидуальные программы восстановления. Уже свыше 100 клиентов достигли состояния душевной гармонии и личностного роста. Предоставляю бесплатную первичную диагностику и персонализированный подход для каждого клиента. Работаю очно в Казани и удаленно по всей России.",
-  url: "https://alexandrvasilev.ru",
+  url: "${SITE_URL}",
   inLanguage: "ru",
-  dateModified: new Date().toISOString(),
-  lastReviewed: new Date().toISOString(),
+  dateModified: BUILD_DATE,
+  lastReviewed: BUILD_DATE,
   publisher: {
     "@type": "Organization",
     name: "INTEGRAAL",
-    url: "https://alexandrvasilev.ru",
+    url: "${SITE_URL}",
     foundingDate: "2020-01-01",
     logo: {
       "@type": "ImageObject",
@@ -38,7 +40,7 @@ const schemaOrg = {
   author: {
     "@type": "Person",
     name: "Александр Васильев",
-    url: "https://alexandrvasilev.ru/#about",
+    url: "${SITE_URL}/#about",
     description:
       "Специалист по трансформации сознания. Эксперт в области глубинной психологии, работы с травмирующими воспоминаниями и проведения духовных практик. Разработчик авторских методик для восстановления психологического здоровья и обретения внутренней гармонии.",
     image: {
@@ -62,8 +64,8 @@ const schemaOrg = {
       "https://t.me/chronics44",
       "https://www.tiktok.com/@alexandrvasilev.ru?_t=ZS-8vOVKf5Isrv&_r=1",
       "https://youtube.com/@alexandrvasilev_ru?si=h6JxlRRBXkh8Oxln",
-      "https://alexandrvasilev.ru/",
-      "https://alexandrvasilev.ru/#about",
+      "${SITE_URL}/",
+      "${SITE_URL}/#about",
     ],
   },
   mainEntity: {
@@ -75,8 +77,8 @@ const schemaOrg = {
       "https://t.me/chronics44",
       "https://www.tiktok.com/@alexandrvasilev.ru?_t=ZS-8vOVKf5Isrv&_r=1",
       "https://youtube.com/@alexandrvasilev_ru?si=h6JxlRRBXkh8Oxln",
-      "https://alexandrvasilev.ru/",
-      "https://alexandrvasilev.ru/#about",
+      "${SITE_URL}/",
+      "${SITE_URL}/#about",
     ],
   },
   about: [
@@ -189,7 +191,7 @@ const schemaOrg = {
           item: {
             "@type": "Service",
             name: "Мухоморный ретрит в Казани",
-            url: "https://alexandrvasilev.ru/ceremony",
+            url: "${SITE_URL}/ceremony",
             description:
               "Путь исцеления и самопознания, открывающий доступ к встрече с Высшими Силами, позволяет наладить связь с Творцом и раскрыть своё предназначение.",
           },
@@ -200,7 +202,7 @@ const schemaOrg = {
           item: {
             "@type": "Service",
             name: "Гипнопроработка",
-            url: "https://alexandrvasilev.ru/neurotroubleshutting",
+            url: "${SITE_URL}/neurotroubleshutting",
             description:
               "Точечное и быстрое устранение первопричин блоков, страхов, зависимостей и ограничений через глубинную работу с подсознанием.",
           },
@@ -211,7 +213,7 @@ const schemaOrg = {
           item: {
             "@type": "Service",
             name: "Бросить курить",
-            url: "https://alexandrvasilev.ru/programs/drop-smoking",
+            url: "${SITE_URL}/programs/drop-smoking",
             description:
               "Индивидуальная программа по избавлению от никотиновой зависимости.",
           },
@@ -222,7 +224,7 @@ const schemaOrg = {
           item: {
             "@type": "Service",
             name: "Отпустить негатив",
-            url: "https://alexandrvasilev.ru/programs/remove-bad-memories",
+            url: "${SITE_URL}/programs/remove-bad-memories",
             description:
               "Программа по освобождению от негативных воспоминаний и эмоций.",
           },
@@ -233,7 +235,7 @@ const schemaOrg = {
           item: {
             "@type": "Service",
             name: "Увеличить заработок",
-            url: "https://alexandrvasilev.ru/programs/grow-money",
+            url: "${SITE_URL}/programs/grow-money",
             description:
               "Программа по снятию внутренних ограничений, мешающих финансовому росту.",
           },
@@ -244,7 +246,7 @@ const schemaOrg = {
           item: {
             "@type": "Service",
             name: "Преодоление фобий",
-            url: "https://alexandrvasilev.ru/programs/freedom-from-phobia",
+            url: "${SITE_URL}/programs/freedom-from-phobia",
             description: "Программа по работе с фобиями и страхами.",
           },
         },
@@ -254,7 +256,7 @@ const schemaOrg = {
           item: {
             "@type": "Service",
             name: "Свобода от аллергии",
-            url: "https://alexandrvasilev.ru/programs/freedom-from-allergy",
+            url: "${SITE_URL}/programs/freedom-from-allergy",
             description:
               "Программа по устранению аллергических реакций через работу с подсознанием.",
           },
@@ -265,7 +267,7 @@ const schemaOrg = {
           item: {
             "@type": "Service",
             name: "Спокойный сон",
-            url: "https://alexandrvasilev.ru/programs/freedom-from-nightmares",
+            url: "${SITE_URL}/programs/freedom-from-nightmares",
             description:
               "Программа по устранению ночных кошмаров и улучшению качества сна.",
           },
@@ -329,47 +331,47 @@ const schemaOrg = {
         "@type": "ListItem",
         position: 1,
         name: "Главная",
-        item: "https://alexandrvasilev.ru/",
+        item: "${SITE_URL}/",
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "Программы",
-        item: "https://alexandrvasilev.ru/#programs",
+        item: "${SITE_URL}/#programs",
       },
       {
         "@type": "ListItem",
         position: 3,
         name: "Обо мне",
-        item: "https://alexandrvasilev.ru/#about",
+        item: "${SITE_URL}/#about",
       },
       {
         "@type": "ListItem",
         position: 4,
         name: "Отзывы",
-        item: "https://alexandrvasilev.ru/#reviews",
+        item: "${SITE_URL}/#reviews",
       },
       {
         "@type": "ListItem",
         position: 5,
         name: "Вопросы и ответы",
-        item: "https://alexandrvasilev.ru/#faq",
+        item: "${SITE_URL}/#faq",
       },
     ],
   },
   mainContentOfPage: {
     "@type": "WebPageElement",
-    isPartOf: { "@id": "https://alexandrvasilev.ru/" },
+    isPartOf: { "@id": "${SITE_URL}/" },
     speakable: {
       "@type": "SpeakableSpecification",
       cssSelector: [".title", ".paragraph"],
     },
   },
   significantLink: [
-    "https://alexandrvasilev.ru/neurotroubleshutting",
-    "https://alexandrvasilev.ru/ceremony",
-    "https://alexandrvasilev.ru/#about",
-    "https://alexandrvasilev.ru/#reviews",
+    "${SITE_URL}/neurotroubleshutting",
+    "${SITE_URL}/ceremony",
+    "${SITE_URL}/#about",
+    "${SITE_URL}/#reviews",
   ],
   relatedLink: [
     "https://t.me/chronics44",
@@ -382,10 +384,10 @@ const schemaOrg = {
       price: "0",
       priceCurrency: "RUB",
       availability: "https://schema.org/InStock",
-      url: "https://alexandrvasilev.ru/#message",
+      url: "${SITE_URL}/#message",
       description:
         "КОНСУЛЬТАЦИЯ с ведущим гипнологом России. Диагностика проблем, определение путей решения, составление индивидуального плана работы.",
-      validFrom: new Date().toISOString(),
+      validFrom: BUILD_DATE,
     },
     {
       "@type": "Offer",
@@ -393,7 +395,7 @@ const schemaOrg = {
       price: "300000",
       priceCurrency: "RUB",
       availability: "https://schema.org/InStock",
-      url: "https://alexandrvasilev.ru/ceremony",
+      url: "${SITE_URL}/ceremony",
       description:
         "Профессиональный мухоморный ретрит с опытным проводником. Безопасная трансформационная практика.",
     },
@@ -403,7 +405,7 @@ const schemaOrg = {
       price: "125000",
       priceCurrency: "RUB",
       availability: "https://schema.org/InStock",
-      url: "https://alexandrvasilev.ru/neurotroubleshutting",
+      url: "${SITE_URL}/neurotroubleshutting",
       description:
         "Полный курс гипнопроработки для устранения психологических блоков и травм.",
     },
@@ -411,7 +413,7 @@ const schemaOrg = {
   contactPoint: {
     "@type": "ContactPoint",
     contactType: "Запись на консультацию",
-    url: "https://alexandrvasilev.ru/#message",
+    url: "${SITE_URL}/#message",
     availableLanguage: ["Russian"],
     areaServed: "RU",
     hoursAvailable: {

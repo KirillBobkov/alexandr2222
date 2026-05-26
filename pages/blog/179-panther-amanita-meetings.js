@@ -1,4 +1,5 @@
 import Layout from "../../components/Layout/Layout";
+import { SITE_URL } from "../../../consts/site";
 import { Form } from "../../components/Form/Form";
 import { useState } from "react";
 import { useScrollToLocation } from "../../hooks/useScrollToLocation";
@@ -15,13 +16,13 @@ const schemaOrg = {
   "headline": "179 трансформационных сессий с Пантерным Мухомором: глубинный опыт шаманского проводника",
   "description": "Подробный анализ личного опыта проведения 179 церемоний с Пантерным Мухомором за 8 месяцев интенсивной работы. Исследование различных типов трансформационных взаимодействий — от глубоких контактов с Высшими Силами до тихих медитативных состояний. Профессиональные шаманские методики, гарантированно безопасный подход, индивидуальные консультации по работе с мухоморными практиками. Ключевые слова: пантерный мухомор, шаманский опыт, церемониальные практики, трансформационные сессии, духовное развитие, шаманская трансформация, консультация шамана, мухоморный опыт, духовные ритуалы, глубинное самопознание, шаман Казань, мухоморные практики.",
   "image": "/_next/static/media/secondary_preview_22.webp",
-  "url": "https://alexandrvasilev.ru/blog/179-panther-amanita-meetings",
+  "url": "${SITE_URL}/blog/179-panther-amanita-meetings",
   "inLanguage": "ru",
   "datePublished": "2025-08-24",
   "publisher": {
     "@type": "Organization",
     "name": "INTEGRAAL",
-    "url": "https://alexandrvasilev.ru",
+    "url": "${SITE_URL}",
     "logo": {
       "@type": "ImageObject",
       "url": "/_next/static/media/logo.ab1a421b.webp",
@@ -32,13 +33,13 @@ const schemaOrg = {
   "author": {
     "@type": "Person",
     "name": "Александр Васильев",
-    "url": "https://alexandrvasilev.ru/#about",
+    "url": "${SITE_URL}/#about",
     "description": "Гипнотерапевт, специалист по работе с подсознанием и расширению восприятия",
     "jobTitle": "Гипнотерапевт, специалист по работе с подсознанием"
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://alexandrvasilev.ru/blog/179-panther-amanita-meetings"
+    "@id": "${SITE_URL}/blog/179-panther-amanita-meetings"
   },
   "keywords": "мухомор, церемонии, шаманские практики, трансформация, духовные практики, ретриты",
   "about": [
@@ -58,7 +59,7 @@ const schemaOrg = {
     "price": "Бесплатная первая консультация",
     "priceCurrency": "RUB",
     "availability": "https://schema.org/InStock",
-    "url": "https://alexandrvasilev.ru/blog/179-panther-amanita-meetings#message",
+    "url": "${SITE_URL}/blog/179-panther-amanita-meetings#message",
     "description": "Запишитесь на консультацию, чтобы узнать больше о работе с мухомором на основе реального опыта."
   }
 };

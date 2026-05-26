@@ -1,4 +1,5 @@
 import Layout from "../../components/Layout/Layout";
+import { SITE_URL } from "../../../consts/site";
 import { Form } from "../../components/Form/Form";
 import { useState } from "react";
 import { useScrollToLocation } from "../../hooks/useScrollToLocation";
@@ -17,13 +18,13 @@ const schemaOrg = {
   description:
     "Гипнопроработка для женщин — эффективный метод устранения тревожности, комплексов и последствий психологических травм через направленное воображение. Работа с подсознанием без необходимости обсуждать сокровенное. Онлайн-сессии, гарантия результата, индивидуальный подход. Ключевые слова: гипнопроработка для женщин, работа с подсознанием, уверенность в себе, спокойствие, избавление от тревожности, проработка комплексов, психологические травмы, женская психология, эмоциональное состояние, трансформация через подсознание.",
   image: "/_next/static/media/secondary_preview_2.webp",
-  url: "https://alexandrvasilev.ru/blog/girls-power",
+  url: "${SITE_URL}/blog/girls-power",
   inLanguage: "ru",
   datePublished: "2025-04-24",
   publisher: {
     "@type": "Organization",
     name: "INTEGRAAL",
-    url: "https://alexandrvasilev.ru",
+    url: "${SITE_URL}",
     logo: {
       "@type": "ImageObject",
       url: "/_next/static/media/logo.ab1a421b.webp",
@@ -34,14 +35,14 @@ const schemaOrg = {
   author: {
     "@type": "Person",
     name: "Александр Васильев",
-    url: "https://alexandrvasilev.ru/#about",
+    url: "${SITE_URL}/#about",
     description:
       "Гипнолог, специалист по работе с подсознанием и психологическим состояниям",
     jobTitle: "Гипнолог, эксперт по работе с подсознанием",
   },
   mainEntityOfPage: {
     "@type": "WebPage",
-    "@id": "https://alexandrvasilev.ru/blog/girls-power",
+    "@id": "${SITE_URL}/blog/girls-power",
   },
   keywords:
     "гипнопроработка женщины, уверенность, спокойствие, радость, работа с подсознанием, тревожность, комплексы, психологические травмы",
@@ -64,7 +65,7 @@ const schemaOrg = {
     price: "10000",
     priceCurrency: "RUB",
     availability: "https://schema.org/InStock",
-    url: "https://alexandrvasilev.ru/blog/girls-power#message",
+    url: "${SITE_URL}/blog/girls-power#message",
     description:
       "Запишитесь на консультацию, чтобы узнать, как гипнопроработка может помочь вам обрести уверенность, спокойствие и радость.",
   },

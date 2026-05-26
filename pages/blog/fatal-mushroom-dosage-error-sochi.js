@@ -1,4 +1,5 @@
 import Layout from "../../components/Layout/Layout";
+import { SITE_URL } from "../../../consts/site";
 import { Form } from "../../components/Form/Form";
 import { useState } from "react";
 import { useScrollToLocation } from "../../hooks/useScrollToLocation";
@@ -15,13 +16,13 @@ const schemaOrg = {
 "headline": "Сочинская трагедия: анализ фатальной ошибки дозировки Мухомора и предупреждения",
   "description": "Последнее время участились случаи серьезных осложнений при不当使用 мухомора. Недавно в Сочи на трансформационном ретрите произошла трагедия — скончался молодой IT-специалист в результате критической ошибки в дозировке Мухомора. Проведем детальный анализ причин случившегося и сформулируем четкие рекомендации по безопасному применению.",
   "image": "/images/secondary_preview_28.webp", // Update if Next.js mangles names, e.g., /_next/static/media/secondary_preview_tragedy.webp
-  "url": "https://alexandrvasilev.ru/blog/fatal-mushroom-dosage-error-sochi",
+  "url": "${SITE_URL}/blog/fatal-mushroom-dosage-error-sochi",
   "inLanguage": "ru",
   "datePublished": "2025-07-27", // Updated date
   "publisher": {
     "@type": "Organization",
     "name": "INTEGRAAL",
-    "url": "https://alexandrvasilev.ru",
+    "url": "${SITE_URL}",
     "logo": {
       "@type": "ImageObject",
       "url": "/_next/static/media/logo.ab1a421b.webp",
@@ -32,13 +33,13 @@ const schemaOrg = {
   "author": {
     "@type": "Person",
     "name": "Александр Васильев",
-    "url": "https://alexandrvasilev.ru/#about",
+    "url": "${SITE_URL}/#about",
     "description": "Гипнотерапевт, специалист по работе с подсознанием и преодолению травм",
     "jobTitle": "Гипнотерапевт, специалист по работе с подсознанием" 
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://alexandrvasilev.ru/blog/fatal-mushroom-dosage-error-sochi"
+    "@id": "${SITE_URL}/blog/fatal-mushroom-dosage-error-sochi"
   },
   "keywords": "мухомор, передозировка, Сочи, ретрит, безопасность, кинезиологический тест, дозировка, отравление, фатальная ошибка",
   "about": {
@@ -51,7 +52,7 @@ const schemaOrg = {
     "price": "Бесплатная первая консультация",
     "priceCurrency": "RUB",
     "availability": "https://schema.org/InStock",
-    "url": "https://alexandrvasilev.ru/blog/fatal-mushroom-dosage-error-sochi#message",
+    "url": "${SITE_URL}/blog/fatal-mushroom-dosage-error-sochi#message",
     "description": "Узнайте больше о безопасных практиках и важности индивидуального подхода при работе с Мухомором."
   }
 };

@@ -1,5 +1,9 @@
+const MIN_NAME_LENGTH = 2;
+const MIN_PHONE_LENGTH = 6;
+const MAX_PHONE_LENGTH = 20;
+
 export const validateName = (name: string): string => {
-  if (name.trim().length < 2) {
+  if (name.trim().length < MIN_NAME_LENGTH) {
     return 'Имя должно содержать не менее 2 символов';
   }
   // Updated regex to allow common name characters including hyphens, apostrophes, and periods
@@ -11,10 +15,10 @@ export const validateName = (name: string): string => {
 
 export const validatePhone = (phone: string): string => {
   const digitsOnly = phone.replace(/\D/g, '');
-  if (digitsOnly.length < 6) {
+  if (digitsOnly.length < MIN_PHONE_LENGTH) {
     return 'Номер телефона слишком короткий';
   }
-  if (digitsOnly.length > 20) {
+  if (digitsOnly.length > MAX_PHONE_LENGTH) {
     return 'Номер телефона слишком длинный';
   }
   return '';

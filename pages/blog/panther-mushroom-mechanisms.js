@@ -1,4 +1,5 @@
 import Layout from "../../components/Layout/Layout";
+import { SITE_URL } from "../../../consts/site";
 import { Form } from "../../components/Form/Form";
 import { useState } from "react";
 import { useScrollToLocation } from "../../hooks/useScrollToLocation";
@@ -15,13 +16,13 @@ const schemaOrg = {
 "headline": "Механизмы действия Пантерного Мухомора: научный и духовный анализ трансформации",
   "description": "Пантерный Мухомор — мощный трансформационный инструмент для глубокой нейтрализации подсознательных паттернов, кардинальной перестройки психических процессов и физического восстановления организма. Изучите научно обоснованные и шаманские методики безопасного использования этого гриба для персональной терапии, духовного эволюционного роста и эмоционального целостного исцеления. Комплексный анализ научных исследований и традиционных шаманских знаний, индивидуально адаптированные консультационные сессии, профессиональная поддержка опытного трансформатора. Ключевые слова: пантерный мухомор анализ, механизмы психической трансформации, научное исследование грибов, глубинная перестройка сознания, подсознательная нейтрализация, трансформационный проводник, терапевтическая трансформация, шаманские методики, профессиональная консультация, Казань, безопасная трансформационная практика, глубинная работа с сознанием, эмоциональное восстановление, шаманская трансформация, шаманские традиции.",
   "image": "/_next/static/media/secondary_preview_23.webp",
-  "url": "https://alexandrvasilev.ru/blog/panther-mushroom-mechanisms",
+  "url": "${SITE_URL}/blog/panther-mushroom-mechanisms",
   "inLanguage": "ru",
   "datePublished": "2025-04-03",
   "publisher": {
     "@type": "Organization",
     "name": "INTEGRAAL",
-    "url": "https://alexandrvasilev.ru",
+    "url": "${SITE_URL}",
     "logo": {
       "@type": "ImageObject",
       "url": "/_next/static/media/logo.ab1a421b.webp",
@@ -32,13 +33,13 @@ const schemaOrg = {
   "author": {
     "@type": "Person",
     "name": "Александр Васильев",
-    "url": "https://alexandrvasilev.ru/#about",
+    "url": "${SITE_URL}/#about",
     "description": "Гипнотерапевт, специалист по работе с подсознанием и проводник по практикам с мухомором",
     "jobTitle": "Гипнотерапевт, специалист по работе с подсознанием"
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://alexandrvasilev.ru/blog/panther-mushroom-mechanisms"
+    "@id": "${SITE_URL}/blog/panther-mushroom-mechanisms"
   },
   "keywords": "пантерный мухомор, психика, тело, трансформация, подсознание, проводник, терапия",
   "about": [
@@ -58,7 +59,7 @@ const schemaOrg = {
     "price": "Бесплатная первая консультация",
     "priceCurrency": "RUB",
     "availability": "https://schema.org/InStock",
-    "url": "https://alexandrvasilev.ru/blog/panther-mushroom-mechanisms#message",
+    "url": "${SITE_URL}/blog/panther-mushroom-mechanisms#message",
     "description": "Запишитесь на консультацию, чтобы узнать больше о безопасной работе с Пантерным Мухомором."
   }
 };

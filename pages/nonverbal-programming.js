@@ -1,4 +1,5 @@
 import Layout from "../components/Layout/Layout";
+import { SITE_URL } from "../../consts/site";
 import { InnerSatisfaction } from "../components/InnerSatisfaction";
 import { CirclesList } from "../components/CirclesList/CirclesList";
 import { SecondaryPreview } from "../components/SecondaryPreview/SecondaryPreview";
@@ -36,11 +37,11 @@ export default function NonverbalProgramming() {
     "@type": "Course",
 name: "Невербальное программирование — мгновенный контроль эмоциональных состояний через тело",
   description: "Передовой курс Александра Васильева по невербальному программированию: моментальная нейтрализация тревожности, раздражительности, чувства стыда, формирование внутренней устойчивости с помощью точных микродвижений и телесных коррекций. Проверенные практические методики, мгновенный терапевтический эффект, персонализированная поддержка. Ключевые слова: невербальное программирование эмоций, мгновенное управление эмоциями, телесные микродвижения, эмоциональный интеллект, психология тела, быстрые корректирующие техники, онлайн-курс трансформации, профессиональная консультация, обретение гармонии, нейтрализация стресса, формирование устойчивости, личностная эффективность, эмоциональный контроль.",
-    url: "https://alexandrvasilev.ru/nonverbal-programming",
+    url: "${SITE_URL}/nonverbal-programming",
     provider: {
       "@type": "Person",
       name: "Александр Васильев",
-      url: "https://alexandrvasilev.ru/#about"
+      url: "${SITE_URL}/#about"
     }
   };
 

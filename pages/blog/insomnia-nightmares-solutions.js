@@ -1,4 +1,5 @@
 import Layout from "../../components/Layout/Layout";
+import { SITE_URL } from "../../../consts/site";
 import { Form } from "../../components/Form/Form";
 import { useState } from "react";
 import { useScrollToLocation } from "../../hooks/useScrollToLocation";
@@ -15,13 +16,13 @@ const schemaOrg = {
 "headline": "Инсомния и ночные кошмары: подсознательные причины и глубинное решение",
   "description": "Хроническая бессонница и ночные кошмарные состояния — это не просто нарушения сна, а важные сигналы подсознания о глубинных внутренних конфликтах и нерешенных эмоциональных проблемах. Методы гипнопроработки позволяют эффективно выявлять и полностью нейтрализовывать причины инсомнии, тревожных сновидений, ночных панических атак. Глубинная перестройка подсознательных механизмов, индивидуально разработанный подход, моментальное достижение устойчивых результатов. Ключевые слова: хроническая бессонница лечение, кошмарные состояния, гипнопроработка расстройств сна, глубинная работа с подсознанием, психология нарушенного сна, ночные тревожные атаки, профессиональная консультация, Казань, трансформация сна, психотерапия нарушений сна, полное избавление от страхов, восстановление здорового сна.",
   "image": "/_next/static/media/secondary_preview_25.webp",
-  "url": "https://alexandrvasilev.ru/blog/insomnia-nightmares-solutions",
+  "url": "${SITE_URL}/blog/insomnia-nightmares-solutions",
   "inLanguage": "ru",
   "datePublished": "2025-04-10",
   "publisher": {
     "@type": "Organization",
     "name": "INTEGRAAL",
-    "url": "https://alexandrvasilev.ru",
+    "url": "${SITE_URL}",
     "logo": {
       "@type": "ImageObject",
       "url": "/_next/static/media/logo.ab1a421b.webp",
@@ -32,13 +33,13 @@ const schemaOrg = {
   "author": {
     "@type": "Person",
     "name": "Александр Васильев",
-    "url": "https://alexandrvasilev.ru/#about",
+    "url": "${SITE_URL}/#about",
     "description": "Гипнотерапевт, специалист по работе с подсознанием и расстройствами сна",
     "jobTitle": "Гипнотерапевт, специалист по работе с подсознанием"
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://alexandrvasilev.ru/blog/insomnia-nightmares-solutions"
+    "@id": "${SITE_URL}/blog/insomnia-nightmares-solutions"
   },
   "keywords": "бессонница, кошмары, гипнопроработка, расстройства сна, подсознание, психология сна, ночные страхи",
   "about": [
@@ -58,7 +59,7 @@ const schemaOrg = {
     "price": "Бесплатная первая консультация",
     "priceCurrency": "RUB",
     "availability": "https://schema.org/InStock",
-    "url": "https://alexandrvasilev.ru/blog/insomnia-nightmares-solutions#message",
+    "url": "${SITE_URL}/blog/insomnia-nightmares-solutions#message",
     "description": "Запишитесь на консультацию, чтобы узнать, как гипнопроработка может помочь вам нормализовать сон и избавиться от кошмаров."
   }
 };

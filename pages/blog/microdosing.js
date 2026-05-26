@@ -1,4 +1,5 @@
 import Layout from "../../components/Layout/Layout";
+import { SITE_URL } from "../../../consts/site";
 import { Form } from "../../components/Form/Form";
 import { useState } from "react";
 import { useScrollToLocation } from "../../hooks/useScrollToLocation";
@@ -15,13 +16,13 @@ const schemaOrg = {
 "headline": "Микродозинг мухомора: научно-основанный подход к трансформации ментального состояния",
   "description": "Микродозингная практика с мухомором — инновационный инструмент для комплексного улучшения психического здоровья, креативного потенциала, качества сна и эмоционального равновесия. Сочетание современных научных исследований и традиционных шаманских знаний, гарантированно безопасная методика, персонализированные консультационные сессии. Изучите научные основы подбора оптимальной дозировки, различные виды мухомора и их свойства, эффективные стратегии минимизации потенциальных рисков. Ключевые слова: микродозинговая практика, мухоморные исследования, научно обоснованный трансформационный подход, ментальное здоровье и трансформация, психоделические исследования, духовные практики сознания, профессиональная консультация, Казань, традиционные шаманские методики, безопасная микродозинговая практика, глубокая работа с подсознанием, улучшение качества сна, креативное мышление, осознанное восприятие.",
   "image": "/_next/static/media/secondary_preview_17.webp",
-  "url": "https://alexandrvasilev.ru/blog/microdosing",
+  "url": "${SITE_URL}/blog/microdosing",
   "inLanguage": "ru",
   "datePublished": "2025-03-16",
   "publisher": {
     "@type": "Organization",
     "name": "INTEGRAAL",
-    "url": "https://alexandrvasilev.ru",
+    "url": "${SITE_URL}",
     "logo": {
       "@type": "ImageObject",
       "url": "/_next/static/media/logo.ab1a421b.webp",
@@ -32,13 +33,13 @@ const schemaOrg = {
   "author": {
     "@type": "Person",
     "name": "Александр Васильев",
-    "url": "https://alexandrvasilev.ru/#about",
+    "url": "${SITE_URL}/#about",
     "description": "Гипнотерапевт, специалист по работе с подсознанием и грибной терапии",
     "jobTitle": "Гипнотерапевт, специалист по работе с подсознанием"
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://alexandrvasilev.ru/blog/microdosing"
+    "@id": "${SITE_URL}/blog/microdosing"
   },
   "keywords": "микродозинг, мухомор, психоделики, ментальное здоровье, духовные практики",
   "about": [
@@ -58,7 +59,7 @@ const schemaOrg = {
     "price": "Бесплатная первая консультация",
     "priceCurrency": "RUB",
     "availability": "https://schema.org/InStock",
-    "url": "https://alexandrvasilev.ru/blog/microdosing#message",
+    "url": "${SITE_URL}/blog/microdosing#message",
     "description": "Запишитесь на консультацию, чтобы узнать больше о практике микродозинга."
   }
 };

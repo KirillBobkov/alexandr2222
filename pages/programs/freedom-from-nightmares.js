@@ -1,4 +1,5 @@
 import Layout from "../../components/Layout/Layout";
+import { SITE_URL } from "../../../consts/site";
 import { Form } from "../../components/Form/Form";
 import { useState } from "react";
 import { useScrollToLocation } from "../../hooks/useScrollToLocation";
@@ -17,12 +18,12 @@ const schemaOrg = {
   "@type": "Service",
 "name": "Трансформация ночных кошмаров и бессонных состояний",
   "description": "Полное и окончательное избавление от н кошмаров и нарушений сна навсегда! Инновационная программа Александра Васильева — передовая гипнопроработка: глубинная нейтрализация подсознательных источников, комплексная перестройка психических процессов, индивидуально разработанный подход, моментальное достижение устойчивых результатов. Без медикаментозных средств и гипнотических методик. Уже свыше 100 успешно завершенных случаев, гарантированный результат или финансовая компенсация. Ключевые слова: ночные кошмары лечение, бессонные состояния, гипнопроработка сновидений, глубинная психотерапия, избавление от кошмаров, Казань, профессиональная консультация, работа с подсознанием, улучшение качества сна, восстановление психического здоровья, трансформация сна, выздоровление.",
-  "url": "https://alexandrvasilev.ru/programs/freedom-from-nightmares",
+  "url": "${SITE_URL}/programs/freedom-from-nightmares",
   "provider": {
     "@type": "Person",
     "name": "Александр Васильев",
     "description": "Гипнотерапевт, специалист по работе с подсознанием",
-    "url": "https://alexandrvasilev.ru/#about"
+    "url": "${SITE_URL}/#about"
   },
   "areaServed": "Казань и онлайн",
   "serviceType": "Гипнопроработка",
@@ -31,7 +32,7 @@ const schemaOrg = {
     "price": "По запросу",
     "priceCurrency": "RUB",
     "availability": "https://schema.org/InStock",
-    "url": "https://alexandrvasilev.ru/programs/freedom-from-nightmares#message"
+    "url": "${SITE_URL}/programs/freedom-from-nightmares#message"
   },
   "serviceOutput": {
     "@type": "Thing",
@@ -40,7 +41,7 @@ const schemaOrg = {
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://alexandrvasilev.ru/programs/freedom-from-nightmares"
+    "@id": "${SITE_URL}/programs/freedom-from-nightmares"
   }
 };
 

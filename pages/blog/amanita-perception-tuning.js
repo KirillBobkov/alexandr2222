@@ -1,4 +1,5 @@
 import Layout from "../../components/Layout/Layout";
+import { SITE_URL } from "../../../consts/site";
 import { Form } from "../../components/Form/Form";
 import { useState } from "react";
 import { useScrollToLocation } from "../../hooks/useScrollToLocation";
@@ -15,13 +16,13 @@ const schemaOrg = {
 "headline": "Трансформация восприятия с мухомором: доступ к скрытым измерениям сознания",
   "description": "Мухомор как мощный инструмент для калибровки восприятия и открытия новых горизонтов сознания. Профессиональные шаманские практики с использованием мухомора способствуют кардинальной перестройке системы восприятия, значительному усилению креативного потенциала, углублению эмоционального интеллекта и достижению высокого уровня осознанности. Проверенные практические методики, гарантированно безопасный подход, персонализированные консультационные сессии. Ключевые слова: мухоморное трансформационное восприятие, шаманские техники, калибрация сознания, расширение восприятия, микродозинг для трансформации, психология восприятия, шаманская трансформация Казань, профессиональная консультация, духовные практики развития, сознательная трансформация, осознанное восприятие, улучшение качества жизни, мухоморные практики.",
   "image": "/_next/static/media/secondary_preview_21.webp",
-  "url": "https://alexandrvasilev.ru/blog/amanita-perception-tuning",
+  "url": "${SITE_URL}/blog/amanita-perception-tuning",
   "inLanguage": "ru",
   "datePublished": "2025-03-25",
   "publisher": {
     "@type": "Organization",
     "name": "INTEGRAAL",
-    "url": "https://alexandrvasilev.ru",
+    "url": "${SITE_URL}",
     "logo": {
       "@type": "ImageObject",
       "url": "/_next/static/media/logo.ab1a421b.webp",
@@ -32,13 +33,13 @@ const schemaOrg = {
   "author": {
     "@type": "Person",
     "name": "Александр Васильев",
-    "url": "https://alexandrvasilev.ru/#about",
+    "url": "${SITE_URL}/#about",
     "description": "Гипнотерапевт, специалист по работе с подсознанием и расширению восприятия",
     "jobTitle": "Гипнотерапевт, специалист по работе с подсознанием"
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://alexandrvasilev.ru/blog/amanita-perception-tuning"
+    "@id": "${SITE_URL}/blog/amanita-perception-tuning"
   },
   "keywords": "мухомор, восприятие, сознание, психология, трансформация, осознанность, микродозинг",
   "about": [
@@ -58,7 +59,7 @@ const schemaOrg = {
     "price": "Бесплатная первая консультация",
     "priceCurrency": "RUB",
     "availability": "https://schema.org/InStock",
-    "url": "https://alexandrvasilev.ru/blog/amanita-perception-tuning#message",
+    "url": "${SITE_URL}/blog/amanita-perception-tuning#message",
     "description": "Запишитесь на консультацию, чтобы узнать больше о тонкой настройке восприятия с помощью мухомора."
   }
 };

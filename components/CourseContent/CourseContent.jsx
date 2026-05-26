@@ -4,6 +4,8 @@ import { ReasonCard } from "../ReasonCard/ReasonCard";
 import contentStyles from "../../styles/contentStyles.module.css";
 import styles from "./CourseContent.module.css";
 
+const GRID_COLUMNS = 3;
+
 export const CourseContent = () => {
   const courseItems = [
     { title: "Вступительный урок", badgeText: "Знакомство с курсом" },
@@ -46,7 +48,7 @@ export const CourseContent = () => {
             aria-label="Программа курса"
           >
             {courseItems.map((item, index) => {
-              const gridColumns = 3;
+              const gridColumns = GRID_COLUMNS;
               const row = Math.floor(index / gridColumns);
               const positionInRow = index % gridColumns;
               const isEvenRow = row % 2 === 0;

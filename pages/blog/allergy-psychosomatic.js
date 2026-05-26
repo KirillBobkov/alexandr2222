@@ -1,4 +1,5 @@
 import Layout from "../../components/Layout/Layout";
+import { SITE_URL } from "../../../consts/site";
 import { Form } from "../../components/Form/Form";
 import { useState } from "react";
 import { useScrollToLocation } from "../../hooks/useScrollToLocation";
@@ -15,13 +16,13 @@ const schemaOrg = {
 "headline": "Хроническая аллергия: психосоматический анализ и трансформационное лечение без препаратов",
   "description": "Глубинный анализ психосоматики аллергических реакций — эффективный путь к освобождению от хронических проявлений без зависимости от медикаментов. Методы гипнопроработки позволяют выявить и коренным образом устранить подсознательные триггеры аллергических состояний: пищевые аллергены, сезонные поллинозы, аллергия на домашних животных, бытовые раздражители. Опытный Гипнотерапевт эффективно работает с любой формой аллергической патологии у пациентов всех возрастных групп. Использую исключительно безопасные и клинически проверенные методики, обеспечиваю персонализированный подход и глубокую работу с подсознательными механизмами. Запишитесь на консультацию и откройте для себя возможность полного избавления от аллергии через нейтрализацию внутренних конфликтов и эмоциональных блоков в подсознании. Ключевые слова: психосоматическая аллергия, глубинное трансформационное лечение, гипнопроработка аллергий, работа с подсознанием, исцеление без препаратов, аллергическая патология, консультация специалиста, полное избавление от аллергии, Казань, психология здоровья, аллергические реакции, нейтрализация триггеров.",
   "image": "/_next/static/media/secondary_preview_22.webp",
-  "url": "https://alexandrvasilev.ru/blog/allergy-psychosomatic",
+  "url": "${SITE_URL}/blog/allergy-psychosomatic",
   "inLanguage": "ru",
   "datePublished": "2025-04-01",
   "publisher": {
     "@type": "Organization",
     "name": "INTEGRAAL",
-    "url": "https://alexandrvasilev.ru",
+    "url": "${SITE_URL}",
     "logo": {
       "@type": "ImageObject",
       "url": "/_next/static/media/logo.ab1a421b.webp",
@@ -32,13 +33,13 @@ const schemaOrg = {
   "author": {
     "@type": "Person",
     "name": "Александр Васильев",
-    "url": "https://alexandrvasilev.ru/#about",
+    "url": "${SITE_URL}/#about",
     "description": "Гипнотерапевт, специалист по работе с подсознанием и психосоматикой",
     "jobTitle": "Гипнотерапевт, специалист по работе с подсознанием"
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://alexandrvasilev.ru/blog/allergy-psychosomatic"
+    "@id": "${SITE_URL}/blog/allergy-psychosomatic"
   },
   "keywords": "аллергия, психосоматика, гипнопроработка, подсознание, здоровье, психология",
   "about": [
@@ -58,7 +59,7 @@ const schemaOrg = {
     "price": "Бесплатная первая консультация",
     "priceCurrency": "RUB",
     "availability": "https://schema.org/InStock",
-    "url": "https://alexandrvasilev.ru/blog/allergy-psychosomatic#message",
+    "url": "${SITE_URL}/blog/allergy-psychosomatic#message",
     "description": "Запишитесь на консультацию, чтобы узнать, как избавиться от аллергии через работу с подсознанием."
   }
 };

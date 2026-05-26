@@ -3,6 +3,7 @@ import { Input } from "../Input/Input";
 import { FormValidator } from "../FormValidator/FormValidator";
 import { VisibilityManager } from "../VisibilityManager";
 import { validateEmail, validateName, validatePhone } from "../../../utils/validation";
+import { PAYMENT_API_URL, PAYMENT_API_TIMEOUT } from "../../../consts/api";
 import styles from "./OrderForm.module.css";
 
 interface OrderFormProps {
@@ -28,7 +29,7 @@ export const OrderForm = ({
     setIsRedirecting(true);
 
     try {
-      const fetchPromise = fetch("https://6ce8d736a9b6.vps.myjino.ru/api/payment", {
+      const fetchPromise = fetch(PAYMENT_API_URL, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -42,7 +43,7 @@ export const OrderForm = ({
       });
 
       const timeoutPromise = new Promise<never>((_, reject) =>
-        setTimeout(() => reject(new Error("Request timed out after 20 seconds")), 20000),
+        setTimeout(() => reject(new Error("Request timed out after 20 seconds")), PAYMENT_API_TIMEOUT),
       );
 
       const res = (await Promise.race([fetchPromise, timeoutPromise])) as Response;

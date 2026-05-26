@@ -1,4 +1,5 @@
 import Layout from "../../components/Layout/Layout";
+import { SITE_URL } from "../../../consts/site";
 import { Form } from "../../components/Form/Form";
 import { useState } from "react";
 import { useScrollToLocation } from "../../hooks/useScrollToLocation";
@@ -15,13 +16,13 @@ const schemaOrg = {
 "headline": "Преодоление созависимости: гипнопроработка как путь к восстановлению личных границ",
   "description": "Созависимые паттерны — это не приговор, а корректируемые психологические установки. Методы гипнопроработки эффективно помогают освободиться от деструктивной роли вечного спасателя, восстановить целостность личных границ, нейтрализовать иррациональное чувство вины и вернуть себе законное право на полноценную автономную жизнь. Глубинная нейтрализация подсознательных установок, проработка глубинных детских психологических травм, индивидуально разработанный подход к каждому клиенту, быстрое достижение устойчивых результатов. Ключевые слова: созависимость нейтрализация, гипнопроработка отношений, психология личных границ, трансформация спасательского поведения, психологические травмы созависимости, профессиональная консультация, Казань, глубинная работа с подсознанием, восстановление личных границ, эмоциональная независимость, проработка детских травм, комплексное восстановление самооценки, трансформация созависимых паттернов.",
   "image": "/_next/static/media/secondary_preview_20.webp",
-  "url": "https://alexandrvasilev.ru/blog/codependency",
+  "url": "${SITE_URL}/blog/codependency",
   "inLanguage": "ru",
   "datePublished": "2025-03-21",
   "publisher": {
     "@type": "Organization",
     "name": "INTEGRAAL",
-    "url": "https://alexandrvasilev.ru",
+    "url": "${SITE_URL}",
     "logo": {
       "@type": "ImageObject",
       "url": "/_next/static/media/logo.ab1a421b.webp",
@@ -32,13 +33,13 @@ const schemaOrg = {
   "author": {
     "@type": "Person",
     "name": "Александр Васильев",
-    "url": "https://alexandrvasilev.ru/#about",
+    "url": "${SITE_URL}/#about",
     "description": "Гипнотерапевт, специалист по работе с подсознанием и психологическими травмами",
     "jobTitle": "Гипнотерапевт, специалист по работе с подсознанием"
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://alexandrvasilev.ru/blog/codependency"
+    "@id": "${SITE_URL}/blog/codependency"
   },
   "keywords": "созависимость, гипнопроработка, психология, отношения, спасатель, травмы",
   "about": [
@@ -58,7 +59,7 @@ const schemaOrg = {
     "price": "Бесплатная первая консультация",
     "priceCurrency": "RUB",
     "availability": "https://schema.org/InStock",
-    "url": "https://alexandrvasilev.ru/blog/codependency#message",
+    "url": "${SITE_URL}/blog/codependency#message",
     "description": "Запишитесь на консультацию, чтобы узнать, как освободиться от созависимых отношений и вернуть право на собственную жизнь."
   }
 };

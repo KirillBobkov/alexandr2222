@@ -1,4 +1,5 @@
 import Layout from "../../components/Layout/Layout";
+import { SITE_URL } from "../../../consts/site";
 import { useState } from "react";
 import { useScrollToLocation } from "../../hooks/useScrollToLocation";
 import { SecondaryPreview } from "../../components/SecondaryPreview/SecondaryPreview";
@@ -14,13 +15,13 @@ const schemaOrg = {
 headline: "Невербальное программирование: мгновенный контроль эмоциональных состояний через телесные механизмы",
   description: "Невербальное программирование — инновационная методика моментального эмоционального управления через телесные каналы восприятия. Освойте профессиональные техники контроля эмоциональных состояний всего за 1-2 секунды: глубинная нейтрализация тревожности, стрессовых реакций, раздражительности, чувства стыда и неуверенности. Проверенные практические методики, научно обоснованный подход, персонализированная поддержка. Комплексная программа для развития эмоционального интеллекта, повышения личной эффективности и достижения внутреннего равновесия. Ключевые слова: невербальное программирование эмоций, мгновенное управление эмоциями, телесная обратная связь, телесная психотерапия, психосоматические состояния, эмоциональный контроль, профессиональная консультация, Казань, развитие эмоционального интеллекта, быстрые корректирующие техники, онлайн-трансформация, глубинная работа с подсознанием, обретение гармонии, нейтрализация стресса, устойчивость к эмоциональным воздействиям.",
   image: "/_next/static/media/secondary_preview_17.webp",
-  url: "https://alexandrvasilev.ru/blog/nonverbal-programming",
+  url: "${SITE_URL}/blog/nonverbal-programming",
   inLanguage: "ru",
   datePublished: "2025-04-02",
   publisher: {
     "@type": "Organization",
     name: "INTEGRAAL",
-    url: "https://alexandrvasilev.ru",
+    url: "${SITE_URL}",
     logo: {
       "@type": "ImageObject",
       url: "/_next/static/media/logo.ab1a421b.webp",
@@ -31,14 +32,14 @@ headline: "Невербальное программирование: мгнов
   author: {
     "@type": "Person",
     name: "Александр Васильев",
-    url: "https://alexandrvasilev.ru/#about",
+    url: "${SITE_URL}/#about",
     description:
       "Гипнотерапевт, специалист по невербальному программированию и управлению состояниями",
     jobTitle: "Гипнотерапевт, специалист по работе с подсознанием",
   },
   mainEntityOfPage: {
     "@type": "WebPage",
-    "@id": "https://alexandrvasilev.ru/blog/nonverbal-programming",
+    "@id": "${SITE_URL}/blog/nonverbal-programming",
   },
   keywords:
     "невербальное программирование, управление эмоциями, биофидбек, телесная терапия, психосоматика, состояния",
@@ -61,7 +62,7 @@ headline: "Невербальное программирование: мгнов
     price: "Бесплатная первая консультация",
     priceCurrency: "RUB",
     availability: "https://schema.org/InStock",
-    url: "https://alexandrvasilev.ru/blog/nonverbal-programming#message",
+    url: "${SITE_URL}/blog/nonverbal-programming#message",
     description:
       "Запишитесь на консультацию, чтобы узнать больше о невербальном программировании и управлении эмоциями.",
   },

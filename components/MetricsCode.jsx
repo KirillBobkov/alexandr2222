@@ -1,4 +1,5 @@
 import Script from "next/script";
+import { YANDEX_METRIKA_ID } from "../consts/analytics";
 export default function MetricsCode() {
   return (
     <Script>
@@ -10,7 +11,7 @@ export default function MetricsCode() {
    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
       if (ym) {
-        ym(100539520, "init", {
+        ym(${YANDEX_METRIKA_ID}, "init", {
               clickmap:true,
               trackLinks:true,
               accurateTrackBounce:true,

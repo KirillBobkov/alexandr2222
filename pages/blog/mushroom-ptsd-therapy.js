@@ -1,4 +1,5 @@
 import Layout from "../../components/Layout/Layout";
+import { SITE_URL } from "../../../consts/site";
 import { Form } from "../../components/Form/Form";
 import { useState } from "react";
 import { useScrollToLocation } from "../../hooks/useScrollToLocation";
@@ -15,13 +16,13 @@ const schemaOrg = {
 "headline": "Мухоморная терапия ПТСР: глубинное исцеление травм через сознательную трансформацию",
   "description": "Мухомор в сочетании с профессиональными шаманскими методиками — передовой подход к комплексному лечению посттравматического стрессового расстройства, глубоких психологических ран, тревожных состояний и хронического утомления. Глубокая нейтрализация травмирующих паттернов подсознания, гарантированно безопасная терапевтическая практика, индивидуально разработанный подход, постоянная поддержка квалифицированного трансформатора. Узнайте методики полного освобождения от последствий психологических травм, восстановления естественного цикла сна, возвращения жизненной энергии и обретения радостного восприятия жизни. Ключевые слова: посттравматическое стрессовое расстройство, мухоморная психотерапия, глубокое исцеление травм, терапевтическая трансформация, работа с подсознанием, шаманские методики исцеления, профессиональная консультация, Казань, безопасная травматерапия, эмоциональная нейтрализация, восстановление сна, полное избавление от страхов, ПТСР лечение, психологическое восстановление.",
   "image": "/_next/static/media/secondary_preview_25.webp",
-  "url": "https://alexandrvasilev.ru/blog/mushroom-ptsd-therapy",
+  "url": "${SITE_URL}/blog/mushroom-ptsd-therapy",
   "inLanguage": "ru",
   "datePublished": "2025-04-10",
   "publisher": {
     "@type": "Organization",
     "name": "INTEGRAAL",
-    "url": "https://alexandrvasilev.ru",
+    "url": "${SITE_URL}",
     "logo": {
       "@type": "ImageObject",
       "url": "/_next/static/media/logo.ab1a421b.webp",
@@ -32,13 +33,13 @@ const schemaOrg = {
   "author": {
     "@type": "Person",
     "name": "Александр Васильев",
-    "url": "https://alexandrvasilev.ru/#about",
+    "url": "${SITE_URL}/#about",
     "description": "Гипнотерапевт, специалист по работе с подсознанием и преодолению травм",
     "jobTitle": "Гипнотерапевт, специалист по работе с подсознанием" 
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://alexandrvasilev.ru/blog/mushroom-ptsd-therapy"
+    "@id": "${SITE_URL}/blog/mushroom-ptsd-therapy"
   },
   "keywords": "ПТСР, посттравматическое стрессовое расстройство, мухомор, психологическая травма, терапия травмы, подсознание",
   "about": {
@@ -51,7 +52,7 @@ const schemaOrg = {
     "price": "Бесплатная первая консультация",
     "priceCurrency": "RUB",
     "availability": "https://schema.org/InStock",
-    "url": "https://alexandrvasilev.ru/blog/mushroom-ptsd-therapy#message",
+    "url": "${SITE_URL}/blog/mushroom-ptsd-therapy#message",
     "description": "Запишитесь на консультацию, чтобы узнать больше о терапии психологических травм."
   }
 };

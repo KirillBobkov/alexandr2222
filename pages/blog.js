@@ -1,4 +1,5 @@
 import { useState, useDeferredValue } from "react";
+import { SITE_URL } from "../../consts/site";
 import Layout from "../components/Layout/Layout";
 import { SecondaryPreview } from "../components/SecondaryPreview/SecondaryPreview";
 import { BlogCard } from "../components/BlogCard/BlogCard";
@@ -253,11 +254,11 @@ export default function Blog() {
     "@type": "Blog",
 "name": "Экспертный блог о духовных практиках, шаманских традициях и трансформационных методиках",
   "description": "Профессиональный блог Александра Васильева — глубокие экспертные статьи о древних шаманских практиках, современных духовных трансформациях, мухоморных ретритах, глубинной работе с подсознанием, психосоматических расстройствах, личностном росте и эволюционном развитии. Проверенные практические методики, эффективные техники, реальные кейсы трансформации для достижения внутреннего равновесия, полного избавления от страхов и тревожных состояний, нейтрализации депрессивных проявлений и обретения подлинной жизненной силы. Ключевые слова: шаманизм древние традиции, духовные практики развития, мухоморные трансформации, ретритные практики, глубинная работа с подсознанием, психосоматическое лечение, гармоничное развитие, личностная трансформация, духовное исцеление, шаманская экспертиза Казань.",
-    "url": "https://alexandrvasilev.ru/blog",
+    "url": "${SITE_URL}/blog",
     "publisher": {
       "@type": "Person",
       "name": "Александр Васильев",
-      "url": "https://alexandrvasilev.ru/#about",
+      "url": "${SITE_URL}/#about",
       "description": "Гипнолог, специалист по работе с подсознанием",
       "jobTitle": "Гипнолог, специалист по работе с подсознанием"
     },
@@ -266,11 +267,11 @@ export default function Blog() {
       "headline": article.title,
       "description": article.description,
       "datePublished": article.date,
-      "url": `https://alexandrvasilev.ru/blog/${article.slug}`
+      "url": `${SITE_URL}/blog/${article.slug}`
     })),
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://alexandrvasilev.ru/blog"
+      "@id": "${SITE_URL}/blog"
     }
   };
 

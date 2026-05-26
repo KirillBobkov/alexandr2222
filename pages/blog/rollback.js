@@ -1,4 +1,5 @@
 import Layout from "../../components/Layout/Layout";
+import { SITE_URL } from "../../../consts/site";
 import { Form } from "../../components/Form/Form";
 import { useState } from "react";
 import { useScrollToLocation } from "../../hooks/useScrollToLocation";
@@ -15,13 +16,13 @@ const schemaOrg = {
 "headline": "Трансформационные откаты: преобразование регресса в ступени личностного развития",
   "description": "Откаты — естественное и предсказуемое явление в процессе глубинной личностной трансформации. Изучите, как методы гипнопроработки эффективно позволяют преобразовывать регрессионные состояния в ступени для эволюционного развития, глубинной проработки внутренних психологических барьеров, нейтрализации эмоциональных всплесков, хронической усталости и саботажных паттернов. Проверенные практические методики, индивидуально разработанный подход, профессиональная поддержка опытного трансформатора. Ключевые слова: трансформационные откаты, эволюционный регресс, личностный рост, психология трансформаций, саморазвитие через трудности, гипнопроработка изменений, профессиональная консультация, Казань, глубинная работа с подсознанием, эмоциональная нейтрализация, проработка внутренних блоков, психотерапия поддержки, трансформация трудностей.",
   "image": "/_next/static/media/secondary_preview_13.webp",
-  "url": "https://alexandrvasilev.ru/blog/rollback",
+  "url": "${SITE_URL}/blog/rollback",
   "inLanguage": "ru",
   "datePublished": "2025-03-10",
   "publisher": {
     "@type": "Organization",
     "name": "INTEGRAAL",
-    "url": "https://alexandrvasilev.ru",
+    "url": "${SITE_URL}",
     "logo": {
       "@type": "ImageObject",
       "url": "/_next/static/media/logo.ab1a421b.webp",
@@ -32,13 +33,13 @@ const schemaOrg = {
   "author": {
     "@type": "Person",
     "name": "Александр Васильев",
-    "url": "https://alexandrvasilev.ru/#about",
+    "url": "${SITE_URL}/#about",
     "description": "Гипнотерапевт, специалист по работе с подсознанием и личностному росту",
     "jobTitle": "Гипнотерапевт, специалист по работе с подсознанием"
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://alexandrvasilev.ru/blog/rollback"
+    "@id": "${SITE_URL}/blog/rollback"
   },
   "keywords": "откаты, личностный рост, трансформация, психология, саморазвитие, гипнопроработка",
   "about": [
@@ -58,7 +59,7 @@ const schemaOrg = {
     "price": "Бесплатная первая консультация",
     "priceCurrency": "RUB",
     "availability": "https://schema.org/InStock",
-    "url": "https://alexandrvasilev.ru/blog/rollback#message",
+    "url": "${SITE_URL}/blog/rollback#message",
     "description": "Запишитесь на консультацию, чтобы узнать, как превратить откаты в ступеньки к вашему развитию."
   }
 };

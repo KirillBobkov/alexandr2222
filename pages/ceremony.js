@@ -1,4 +1,6 @@
 import Layout from "../components/Layout/Layout";
+import { SITE_URL } from "../../consts/site";
+import { BUILD_DATE } from "../../consts/build";
 import { Form } from "../components/Form/Form";
 import { useState } from "react";
 import { useScrollToLocation } from "../hooks/useScrollToLocation";
@@ -101,13 +103,13 @@ const schemaOrg = {
   name: "Трансформационные мухоморные ретриты в Казани с профессиональным проводником",
   description:
     "Профессиональные шаманские церемонии с мухомором под руководством опытного проводника и трансформатора сознания Александра Васильева. Предлагаю безопасную глубинную трансформацию, самопознание на новом уровне, исцеление душевных ран и полное раскрытие скрытых возможностей личности. Гарантированный индивидуальный подход и комплексное сопровождение на всех этапах. Традиционные и современные практики шаманизма, работа с растениями-учителями, эффективная интеграция трансформационного опыта, постоянная поддержка после завершения ретрита. Ключевые слова: мухоморная церемония Казань, трансформация сознания, шаманский ритуал, духовное очищение, растительные учителя, глубинная трансформация, исцеление душевных травм, шаманская консультация, безопасные практики, персональный подход, духовные традиции, работа с подсознанием, самопознание, душевная гармония, трансформация личности, шаман Казань.",
-  url: "https://alexandrvasilev.ru/ceremony",
-  dateModified: new Date().toISOString(),
-  lastReviewed: new Date().toISOString(),
+  url: "${SITE_URL}/ceremony",
+  dateModified: BUILD_DATE,
+  lastReviewed: BUILD_DATE,
   provider: {
     "@type": "Person",
     name: "Александр Васильев",
-    url: "https://alexandrvasilev.ru/#about",
+    url: "${SITE_URL}/#about",
     description:
       "Гипнотерапевт и опытный проводник мухоморных церемоний. Специализируется на безопасных трансформационных практиках и глубинной работе с сознанием.",
     jobTitle:
@@ -139,13 +141,13 @@ const schemaOrg = {
     price: "300000",
     priceCurrency: "RUB",
     availability: "https://schema.org/InStock",
-    url: "https://alexandrvasilev.ru/ceremony#message",
+    url: "${SITE_URL}/ceremony#message",
     description:
       "Профессиональный мухоморный ретрит в Казани. Безопасная церемония с полным сопровождением опытного проводника. Индивидуальная дозировка, комфортные условия, гарантия безопасности.",
     priceValidUntil: new Date(new Date().setMonth(new Date().getMonth() + 12))
       .toISOString()
       .split("T")[0],
-    validFrom: new Date().toISOString(),
+    validFrom: BUILD_DATE,
     category: "Трансформационные практики",
   },
   serviceOutput: {
@@ -278,7 +280,7 @@ const schemaOrg = {
     "@type": "ReserveAction",
     target: {
       "@type": "EntryPoint",
-      urlTemplate: "https://alexandrvasilev.ru/ceremony#message",
+      urlTemplate: "${SITE_URL}/ceremony#message",
     },
     result: {
       "@type": "Reservation",
@@ -429,7 +431,7 @@ const schemaOrg = {
   },
   mainEntityOfPage: {
     "@type": "WebPage",
-    "@id": "https://alexandrvasilev.ru/ceremony",
+    "@id": "${SITE_URL}/ceremony",
   },
   aggregateRating: {
     "@type": "AggregateRating",

@@ -1,4 +1,5 @@
 import Layout from "../../components/Layout/Layout";
+import { SITE_URL } from "../../../consts/site";
 import { Form } from "../../components/Form/Form";
 import { useState } from "react";
 import { useScrollToLocation } from "../../hooks/useScrollToLocation";
@@ -17,12 +18,12 @@ const schemaOrg = {
   "@type": "Service",
 "name": "Комплексная трансформация аллергических состояний",
   "description": "Полное и окончательное избавление от любой формы аллергической патологии навсегда! Инновационная программа Александра Васильева — передовая гипнопроработка: глубинная нейтрализация психосоматических корней, комплексная перестройка подсознательных механизмов, персонализированный подход к каждому клиенту, моментальное достижение устойчивых результатов. Без медикаментозной терапии и гипнотических методик. Уже свыше 100 успешно завершенных случаев, гарантированный результат или финансовая компенсация. Ключевые слова: аллергическая патология лечение, психосоматическая нейтрализация, гипнопроработка аллергий, комплексное избавление от аллергии, Казань, профессиональная консультация, восстановление здоровья, глубинная работа с подсознанием, лечение аллергических реакций, трансформация иммунных ответов, полное выздоровление.",
-  "url": "https://alexandrvasilev.ru/programs/freedom-from-allergy",
+  "url": "${SITE_URL}/programs/freedom-from-allergy",
   "provider": {
     "@type": "Person",
     "name": "Александр Васильев",
     "description": "Гипнотерапевт, специалист по работе с психосоматикой и аллергиями",
-    "url": "https://alexandrvasilev.ru/#about"
+    "url": "${SITE_URL}/#about"
   },
   "areaServed": "Казань и онлайн",
   "serviceType": "Гипнопроработка психосоматических состояний",
@@ -31,7 +32,7 @@ const schemaOrg = {
     "price": "По запросу",
     "priceCurrency": "RUB",
     "availability": "https://schema.org/InStock",
-    "url": "https://alexandrvasilev.ru/programs/freedom-from-allergy#message"
+    "url": "${SITE_URL}/programs/freedom-from-allergy#message"
   },
   "serviceOutput": {
     "@type": "Thing",
@@ -40,7 +41,7 @@ const schemaOrg = {
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://alexandrvasilev.ru/programs/freedom-from-allergy"
+    "@id": "${SITE_URL}/programs/freedom-from-allergy"
   }
 };
 

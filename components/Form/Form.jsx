@@ -5,6 +5,7 @@ import { FormValidator } from "../shared/FormValidator/FormValidator";
 import { BaseButton } from "../shared/BaseButton";
 import contentStyles from "../../styles/contentStyles.module.css";
 import { validateName, validatePhone } from "../../utils/validation";
+import { TELEGRAM_API_URL } from "../../consts/api";
 import styles from "./Form.module.css";
 
 export function Form({
@@ -33,9 +34,7 @@ export function Form({
       const deviceType = isMobileDevice ? "Смартфон" : "Компьютер";
 
       // Запрос к вашему прокси-серверу (НЕ к Telegram напрямую)
-      await fetch(
-        "https://shepsik.servemp3.com:4444/api/alexvasilev/send-message",
-        {
+      await fetch(TELEGRAM_API_URL, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

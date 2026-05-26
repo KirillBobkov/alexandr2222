@@ -1,4 +1,6 @@
 import Layout from "../components/Layout/Layout";
+import { SITE_URL } from "../../consts/site";
+import { BUILD_DATE } from "../../consts/build";
 import { AnimatedLine } from "../components/AnimatedLine/AnimatedLine";
 import { SecondaryPreview } from "../components/SecondaryPreview/SecondaryPreview";
 import enter_hole_2 from "../images/enter_hole_2.webp";
@@ -154,13 +156,13 @@ const schemaOrg = {
   name: "Гипнопроработка — комплексное устранение тревожности, депрессивных состояний, фобий и психосоматики",
   description:
     "Гипнопроработка — профессиональная трансформация для полного устранения тревожных расстройств, депрессивных состояний, фобических проявлений, психосоматических заболеваний, панических атак и глубинных психологических блоков. Быстрый и гарантированный результат за 4-8 терапевтических сессий. Уже свыше 100 успешно завершенных случаев различной сложности, индивидуально разработанный подход, глубинная перестройка подсознательных механизмов. Бесплатная первичная диагностика, профессиональная консультация, уникальные авторские методики. Казань, Россия и онлайн по всей стране.",
-  url: "https://alexandrvasilev.ru/neurotroubleshutting",
-  dateModified: new Date().toISOString(),
-  lastReviewed: new Date().toISOString(),
+  url: "${SITE_URL}/neurotroubleshutting",
+  dateModified: BUILD_DATE,
+  lastReviewed: BUILD_DATE,
   provider: {
     "@type": "Person",
     name: "Александр Васильев",
-    url: "https://alexandrvasilev.ru/#about",
+    url: "${SITE_URL}/#about",
     description:
       "Гипнолог. Специалист по работе с подсознанием. Более 100 успешно решенных случаев различной сложности.",
     jobTitle: "Гипнолог, эксперт по работе с подсознанием",
@@ -181,10 +183,10 @@ const schemaOrg = {
       price: "0",
       priceCurrency: "RUB",
       availability: "https://schema.org/InStock",
-      url: "https://alexandrvasilev.ru/neurotroubleshutting#message",
+      url: "${SITE_URL}/neurotroubleshutting#message",
       description:
         "Бесплатная диагностика для выявления корневых причин проблем. Определение стратегии работы и прогноза результатов.",
-      validFrom: new Date().toISOString(),
+      validFrom: BUILD_DATE,
     },
     {
       "@type": "Offer",
@@ -222,7 +224,7 @@ const schemaOrg = {
     "@type": "ReserveAction",
     target: {
       "@type": "EntryPoint",
-      urlTemplate: "https://alexandrvasilev.ru/neurotroubleshutting#message",
+      urlTemplate: "${SITE_URL}/neurotroubleshutting#message",
     },
     result: {
       "@type": "Reservation",

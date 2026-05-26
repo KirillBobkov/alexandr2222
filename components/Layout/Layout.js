@@ -1,4 +1,5 @@
 import { Footer } from "../Footer/Footer";
+import { SITE_URL } from "../../consts/site";
 import { Navigation } from "../Navigation/Navigation";
 import Head from "next/head";
 import Script from "next/script";
@@ -34,7 +35,7 @@ export default function Layout({ children, metaConfig, schemaOrg = '', enablePar
         <meta name="copyright" content="Александр Васильев" />
         <meta name="keywords" content={keywords} />
         <meta name="robots" content="index,follow" />
-        <meta property="og:url" content={`https://alexandrvasilev.ru`} />
+        <meta property="og:url" content={`${SITE_URL}`} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:type" content="website" />

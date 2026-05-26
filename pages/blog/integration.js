@@ -1,4 +1,5 @@
 import Layout from "../../components/Layout/Layout";
+import { SITE_URL } from "../../../consts/site";
 import { Form } from "../../components/Form/Form";
 import { useState } from "react";
 import { useScrollToLocation } from "../../hooks/useScrollToLocation";
@@ -16,13 +17,13 @@ const schemaOrg = {
   "headline": "Интеграционный процесс после мухоморного опыта: безопасная трансформация сознания",
   "description": "Пост-ретритная интеграция — фундаментальный этап для гармоничного сознательного роста и безопасного духовного развития после мухоморных практик. Изучите методики эффективной реализации инсайтов, профилактики десоциализации, деперсонализации и других потенциальных рисков трансформационного опыта. Конкретные практические рекомендации, профессиональная поддержка опытного трансформатора, индивидуальный подход к каждому клиенту. Ключевые слова: мухоморная интеграция, пост-трансформационная поддержка, безопасное духовное развитие, инсайт-интеграция, профилактика десоциализации, шаманские практики восстановления, профессиональная консультация, Казань, глубинная работа с опытом, психология трансформации, ретритная интеграция, осознанная трансформация, безопасная трансформация сознания.",
   "image": "/_next/static/media/secondary_preview_19.webp",
-  "url": "https://alexandrvasilev.ru/blog/integration",
+  "url": "${SITE_URL}/blog/integration",
   "inLanguage": "ru",
   "datePublished": "2025-03-19",
   "publisher": {
     "@type": "Organization",
     "name": "INTEGRAAL",
-    "url": "https://alexandrvasilev.ru",
+    "url": "${SITE_URL}",
     "logo": {
       "@type": "ImageObject",
       "url": "/_next/static/media/logo.ab1a421b.webp",
@@ -33,13 +34,13 @@ const schemaOrg = {
   "author": {
     "@type": "Person",
     "name": "Александр Васильев",
-    "url": "https://alexandrvasilev.ru/#about",
+    "url": "${SITE_URL}/#about",
     "description": "Гипнотерапевт, специалист по работе с подсознанием и интеграции духовного опыта",
     "jobTitle": "Гипнотерапевт, специалист по работе с подсознанием"
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://alexandrvasilev.ru/blog/integration"
+    "@id": "${SITE_URL}/blog/integration"
   },
   "keywords": "мухомор, интеграция, трип, духовный опыт, десоциализация, эзотерика, осознанность",
   "about": [
@@ -59,7 +60,7 @@ const schemaOrg = {
     "price": "Бесплатная первая консультация",
     "priceCurrency": "RUB",
     "availability": "https://schema.org/InStock",
-    "url": "https://alexandrvasilev.ru/blog/integration#message",
+    "url": "${SITE_URL}/blog/integration#message",
     "description": "Запишитесь на консультацию, чтобы узнать больше о правильной интеграции духовного опыта в повседневную жизнь."
   }
 };

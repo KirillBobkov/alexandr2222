@@ -1,4 +1,5 @@
 import Layout from "../components/Layout/Layout";
+import { SITE_URL } from "../../consts/site";
 import { Form } from "../components/Form/Form";
 import { useState } from "react";
 import { useScrollToLocation } from "../hooks/useScrollToLocation";
@@ -26,14 +27,14 @@ const schemaOrg = {
     "@type": "Person",
     name: "Александр Васильев — трансформатор сознания и духовный наставник",
     description: "Специалист по глубинной трансформации, мастер шаманских традиций и практик духовного очищения. Помогаю клиентам преодолевать жизненные кризисы, устранять психологические травмы и восстанавливать душевное равновесие. Провел свыше 100 успешных трансформационных программ, использую уникальный метод сочетания древних шаманских техник с современными психологическими подходами для достижения максимальных результатов.",
-    url: "https://alexandrvasilev.ru/about-me",
+    url: "${SITE_URL}/about-me",
     jobTitle: "Мастер трансформации сознания, шаманский проводник, эксперт по психологии",
     knowsAbout: ["Глубинная психология", "Шаманские традиции", "Духовные практики", "Восстановление психологического здоровья", "Трансформация личности", "Работа с травмами"],
     sameAs: [
       "https://t.me/chronics44",
       "https://www.tiktok.com/@alexandrvasilev.ru",
       "https://youtube.com/@alexandrvasilev_ru",
-      "https://alexandrvasilev.ru/"
+      "${SITE_URL}/"
     ]
   };
 

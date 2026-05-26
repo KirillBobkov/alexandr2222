@@ -1,4 +1,5 @@
 import Layout from "../../components/Layout/Layout";
+import { SITE_URL } from "../../../consts/site";
 import { Form } from "../../components/Form/Form";
 import { useState } from "react";
 import { useScrollToLocation } from "../../hooks/useScrollToLocation";
@@ -17,12 +18,12 @@ const schemaOrg = {
   "@type": "Service",
 "name": "Трансформационная программа «Обретение любви к жизни»",
   "description": "Восстановите радостное восприятие жизни и обретите глубокий смысл существования! Инновационная программа Александра Васильева — передовая гипнопроработка: полная нейтрализация апатических состояний, глубокая трансформация депрессивных проявлений, проработка глубинных негативных установок, индивидуально разработанный подход, моментальное достижение устойчивых результатов. Уже свыше 100 успешно завершенных случаев, гарантированный результат или финансовое возмещение. Ключевые слова: трансформация апатии, депрессивные состояния лечение, обретение любви к жизни, гипнопроработка эмоционального состояния, восстановление радости жизни, эмоциональное восстановление, Казань, профессиональная консультация, глубинная работа с подсознанием, достижение гармонии, формирование жизненной мотивации, трансформация эмоционального фона.",
-  "url": "https://alexandrvasilev.ru/programs/love-life",
+  "url": "${SITE_URL}/programs/love-life",
   "provider": {
     "@type": "Person",
     "name": "Александр Васильев",
     "description": "Гипнотерапевт, специалист по работе с подсознанием и эмоциональными состояниями",
-    "url": "https://alexandrvasilev.ru/#about"
+    "url": "${SITE_URL}/#about"
   },
   "areaServed": "Казань и онлайн",
   "serviceType": "Гипнопроработка эмоциональных состояний",
@@ -31,7 +32,7 @@ const schemaOrg = {
     "price": "По запросу",
     "priceCurrency": "RUB",
     "availability": "https://schema.org/InStock",
-    "url": "https://alexandrvasilev.ru/programs/love-life#message"
+    "url": "${SITE_URL}/programs/love-life#message"
   },
   "serviceOutput": {
     "@type": "Thing",
@@ -40,7 +41,7 @@ const schemaOrg = {
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://alexandrvasilev.ru/programs/love-life"
+    "@id": "${SITE_URL}/programs/love-life"
   }
 };
 

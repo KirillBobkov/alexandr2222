@@ -1,4 +1,5 @@
 import Layout from "../../components/Layout/Layout";
+import { SITE_URL } from "../../../consts/site";
 import { Form } from "../../components/Form/Form";
 import { useState } from "react";
 import { useScrollToLocation } from "../../hooks/useScrollToLocation";
@@ -15,13 +16,13 @@ const schemaOrg = {
 "headline": "Преодоление супружеской неверности: гипнопроработка как инструмент восстановления доверия",
   "description": "Супружеская измена не является приговором для отношений и самооценки. Методы гипнопроработки эффективно помогают глубинной проработке травмы предательства, восстановлению доверительных отношений с собой и партнером, нейтрализации панических атак, страхов и бессонных состояний. Глубинная перестройка подсознательных механизмов, индивидуально разработанный подход, моментальное достижение устойчивых результатов. Ключевые слова: супружеская неверность, восстановление доверия, психология предательства, гипнопроработка травм, травматический опыт, отношения доверия, профессиональная консультация, Казань, глубинная работа с подсознанием, восстановление доверительных отношений, проработка психологических травм, личностная трансформация, эмоциональное восстановление.",
   "image": "/_next/static/media/secondary_preview_18.webp",
-  "url": "https://alexandrvasilev.ru/blog/infidelity",
+  "url": "${SITE_URL}/blog/infidelity",
   "inLanguage": "ru",
   "datePublished": "2025-03-18",
   "publisher": {
     "@type": "Organization",
     "name": "INTEGRAAL",
-    "url": "https://alexandrvasilev.ru",
+    "url": "${SITE_URL}",
     "logo": {
       "@type": "ImageObject",
       "url": "/_next/static/media/logo.ab1a421b.webp",
@@ -32,13 +33,13 @@ const schemaOrg = {
   "author": {
     "@type": "Person",
     "name": "Александр Васильев",
-    "url": "https://alexandrvasilev.ru/#about",
+    "url": "${SITE_URL}/#about",
     "description": "Гипнотерапевт, специалист по работе с подсознанием и восстановлению после психологических травм",
     "jobTitle": "Гипнотерапевт, специалист по работе с подсознанием"
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://alexandrvasilev.ru/blog/infidelity"
+    "@id": "${SITE_URL}/blog/infidelity"
   },
   "keywords": "измена, доверие, психология, гипнопроработка, травмы, отношения",
   "about": [
@@ -58,7 +59,7 @@ const schemaOrg = {
     "price": "Бесплатная первая консультация",
     "priceCurrency": "RUB",
     "availability": "https://schema.org/InStock",
-    "url": "https://alexandrvasilev.ru/blog/infidelity#message",
+    "url": "${SITE_URL}/blog/infidelity#message",
     "description": "Запишитесь на консультацию, чтобы узнать, как гипнопроработка может помочь вам пережить измену и восстановить способность доверять."
   }
 };
