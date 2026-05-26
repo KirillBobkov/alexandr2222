@@ -1,19 +1,16 @@
 import { useState } from "react";
-import Image from "next/image";
 import { useRouter } from "next/router";
 import { useTheme } from "../../hooks/useTheme";
 import { useMediaQuery } from "../../hooks/useMediaQuery";
 import { Dropdown } from "./Dropdown";
 import styles from "./Navigation.module.css";
-import logoDark from "../../images/logo_dark.webp";
-import logoLight from "../../images/logo.webp";
 
 export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
-  const { theme } = useTheme();
+  useTheme();
   const isHomePage = router.pathname === "/";
-  const isMobile = useMediaQuery("(max-width: 768px)");
+  useMediaQuery("(max-width: 768px)");
 
   const toggleMenu = () => setIsOpen((prev) => !prev);
 
@@ -25,16 +22,6 @@ export const Navigation = () => {
         } ${isHomePage ? styles.header_home : ""}`}
       >
         <div className={styles["header__logo-container"]}>
-          {/* <Image
-            src={
-              theme === "light" && (isMobile || isHomePage)
-                ? logoLight
-                : logoDark
-            }
-            alt="Logo"
-            className={styles.header__logo}
-            id="logo"
-          /> */}
           <p className={styles.header__title}>ИNTEGRAAL</p>
         </div>
 
@@ -84,28 +71,12 @@ export const getNavigationTree = () => [
       path: "/ceremony",
       value: "Мухоморный ретрит",
     },
-    // childs: [
-    //   {
-    //     path: "/ceremony#program",
-    //     value: "Программа",
-    //   },
-    //   {
-    //     path: "/ceremony#reviews",
-    //     value: "Отзывы",
-    //   },
-    // ],
   },
   {
     parent: {
       path: "/neurotroubleshutting",
       value: "Гипнопроработка",
     },
-    // childs: [
-    //   {
-    //     path: "/neurotroubleshutting#reviews",
-    //     value: "Отзывы",
-    //   },
-    // ],
   },
   {
     parent: {
