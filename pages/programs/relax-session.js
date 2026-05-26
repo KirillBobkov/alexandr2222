@@ -1,6 +1,8 @@
 import Layout from "../../components/Layout/Layout";
 import { SITE_URL } from "../../consts/site";
 import { Form } from "../../components/Form/Form";
+import { useState } from "react";
+import { useScrollToLocation } from "../../hooks/useScrollToLocation";
 import { SecondaryPreview } from "../../components/SecondaryPreview/SecondaryPreview";
 import { VisibilityManager } from "../../components/shared/VisibilityManager";
 import containerStyles from "../../styles/container.module.css";
@@ -15,12 +17,12 @@ const schemaOrg = {
   "@type": "Service",
 "name": "Комплексная сеанс глубокой релаксации и энергетического восстановления",
   "description": "Глубокая трансформация и полное восстановление жизненной энергии! Инновационный сеанс Александра Васильева — передовая гипнопроработка, древний вегетализм и современные методики для нейтрализации стрессовых состояний, достижения внутреннего равновесия, улучшения качества сна и значительного повышения жизненного тонуса. Индивидуально разработанный подход, моментальное достижение устойчивых результатов. Уже свыше 100 успешно завершенных случаев, гарантированный результат или финансовое возмещение. Ключевые слова: глубинная релаксация, комплексное снятие стресса, гипнопроработка состояний, вегеталистическая трансформация, полное восстановление энергии, Казань, профессиональная консультация, работа с подсознанием, достижение внутреннего покоя, обретение гармонии, энергетическое преображение.",
-  "url": "${SITE_URL}/programs/relax-session",
+  "url": `${SITE_URL}/programs/relax-session`,
   "provider": {
     "@type": "Person",
     "name": "Александр Васильев",
     "description": "Гипнотерапевт, специалист по работе с подсознанием и техникам релаксации",
-    "url": "${SITE_URL}/#about"
+    "url": `${SITE_URL}/#about`
   },
   "areaServed": "Казань и онлайн",
   "serviceType": "Гипнопроработка стрессовых состояний",
@@ -29,7 +31,7 @@ const schemaOrg = {
     "price": "По запросу",
     "priceCurrency": "RUB",
     "availability": "https://schema.org/InStock",
-    "url": "${SITE_URL}/programs/relax-session#message"
+    "url": `${SITE_URL}/programs/relax-session#message`
   },
   "serviceOutput": {
     "@type": "Thing",
@@ -38,12 +40,14 @@ const schemaOrg = {
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "${SITE_URL}/programs/relax-session"
+    "@id": `${SITE_URL}/programs/relax-session`
   }
 };
 
 export default function () {
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
+  useScrollToLocation();
 
   const metaConfig = {
     title: 'Сеанс релаксации — Александр "Интеграл" Васильев',
@@ -134,6 +138,8 @@ export default function () {
         </div>
       <div id="message" />
       <Form
+        setIsSubmitted={setIsSubmitted}
+        isSubmitted={isSubmitted}
         type={'Программа: ' + metaConfig.pageTitle}
       />
     </Layout>

@@ -1,6 +1,8 @@
 import Layout from "../../components/Layout/Layout";
 import { SITE_URL } from "../../consts/site";
 import { Form } from "../../components/Form/Form";
+import { useState } from "react";
+import { useScrollToLocation } from "../../hooks/useScrollToLocation";
 import { SecondaryPreview } from "../../components/SecondaryPreview/SecondaryPreview";
 import { VisibilityManager } from "../../components/shared/VisibilityManager";
 import containerStyles from "../../styles/container.module.css";
@@ -15,12 +17,12 @@ const schemaOrg = {
   "@type": "Service",
 "name": "Трансформация фобий и тревожных состояний",
   "description": "Лечебная программа полного освобождения от любых фобических проявлений и тревожных расстройств навсегда! Метод Александра Васильева — инновационная гипнопроработка: глубинная нейтрализация психологических триггеров, коррекция подсознательных установок, персонализированный подход, моментальные изменения. Без медикаментозного лечения и гипнотических техник. Уже свыше 100 успешно завершенных случаев, гарантированный результат или финансовая компенсация. Ключевые слова: фобическая патология, тревожные расстройства лечение, гипнопроработка фобий, глубинная психотерапия, нейтрализация страхов, трансформация тревожности, Казань, профессиональная консультация, работа с подсознанием, восстановление психического здоровья, избавление от фобий, полное выздоровление.",
-  "url": "${SITE_URL}/programs/freedom-from-phobia",
+  "url": `${SITE_URL}/programs/freedom-from-phobia`,
   "provider": {
     "@type": "Person",
     "name": "Александр Васильев",
     "description": "Гипнотерапевт, специалист по работе с подсознанием и фобиями",
-    "url": "${SITE_URL}/#about"
+    "url": `${SITE_URL}/#about`
   },
   "areaServed": "Казань и онлайн",
   "serviceType": "Гипнопроработка",
@@ -29,7 +31,7 @@ const schemaOrg = {
     "price": "По запросу",
     "priceCurrency": "RUB",
     "availability": "https://schema.org/InStock",
-    "url": "${SITE_URL}/programs/freedom-from-phobia#message"
+    "url": `${SITE_URL}/programs/freedom-from-phobia#message`
   },
   "serviceOutput": {
     "@type": "Thing",
@@ -38,12 +40,14 @@ const schemaOrg = {
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "${SITE_URL}/programs/freedom-from-phobia"
+    "@id": `${SITE_URL}/programs/freedom-from-phobia`
   }
 };
 
 export default function () {
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
+  useScrollToLocation();
 
   const metaConfig = {
     title: 'Преодоление фобий — Александр "Интеграл" Васильев',
@@ -239,6 +243,8 @@ export default function () {
         </div>
       <div id="message" />
       <Form
+        setIsSubmitted={setIsSubmitted}
+        isSubmitted={isSubmitted}
         type={'Программа: ' + metaConfig.pageTitle}
       />
     </Layout>

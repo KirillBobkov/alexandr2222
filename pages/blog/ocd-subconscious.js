@@ -14,13 +14,13 @@ const schemaOrg = {
   "headline": "ОКР и работа с подсознанием: глубинное освобождение от навязчивых состояний",
   "description": "Обсессивно-компульсивное расстройство (ОКР) проявляется через специфические «петли»: навязчивая мысль вызывает тревогу, которую временно снижает ритуал. Работа с подсознанием позволяет обратиться к глубинным причинам напрямую, меняя внутреннее восприятие событий из прошлого и ослабляя эмоциональный заряд. В отдельных случаях проблема решается в результате всего одного сеанса. Работа проходит конфиденциально, без необходимости подробно рассказывать личные истории.",
   "image": "/_next/static/media/secondary_preview_24.webp",
-  "url": "${SITE_URL}/blog/ocd-subconscious",
+  "url": `${SITE_URL}/blog/ocd-subconscious`,
   "inLanguage": "ru",
   "datePublished": "2025-01-25",
   "publisher": {
     "@type": "Organization",
     "name": "INTEGRAAL",
-    "url": "${SITE_URL}",
+    "url": `${SITE_URL}`,
     "logo": {
       "@type": "ImageObject",
       "url": "/_next/static/media/logo.ab1a421b.webp",
@@ -31,13 +31,13 @@ const schemaOrg = {
   "author": {
     "@type": "Person",
     "name": "Александр Васильев",
-    "url": "${SITE_URL}/#about",
+    "url": `${SITE_URL}/#about`,
     "description": "Гипнотерапевт, специалист по работе с подсознанием и навязчивыми состояниями",
     "jobTitle": "Гипнотерапевт, специалист по работе с подсознанием"
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "${SITE_URL}/blog/ocd-subconscious"
+    "@id": `${SITE_URL}/blog/ocd-subconscious`
   },
   "keywords": "ОКР, обсессивно-компульсивное расстройство, навязчивые мысли, компульсии, гипнопроработка, подсознание, психология, работа с подсознанием",
   "about": [
@@ -57,7 +57,7 @@ const schemaOrg = {
     "price": "Бесплатная первая консультация",
     "priceCurrency": "RUB",
     "availability": "https://schema.org/InStock",
-    "url": "${SITE_URL}/blog/ocd-subconscious#message",
+    "url": `${SITE_URL}/blog/ocd-subconscious#message`,
     "description": "Запишитесь на консультацию, чтобы узнать, как работа с подсознанием может помочь при ОКР."
   }
 };

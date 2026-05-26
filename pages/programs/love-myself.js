@@ -1,6 +1,8 @@
 import Layout from "../../components/Layout/Layout";
 import { SITE_URL } from "../../consts/site";
 import { Form } from "../../components/Form/Form";
+import { useState } from "react";
+import { useScrollToLocation } from "../../hooks/useScrollToLocation";
 import { SecondaryPreview } from "../../components/SecondaryPreview/SecondaryPreview";
 import { VisibilityManager } from "../../components/shared/VisibilityManager";
 import containerStyles from "../../styles/container.module.css";
@@ -16,12 +18,12 @@ const schemaOrg = {
   "@type": "Service",
 "name": "Трансформационная программа «Обретение любви к себе»",
   "description": "Восстановите любовь к себе и обретите глубокую внутреннюю гармонию! Инновационная программа Александра Васильева — передовая гипнопроработка: полное устранение внутренних блоков, препятствующих самоценности, значительное повышение самооценки, индивидуально разработанный подход, моментальное достижение устойчивых результатов. Уже свыше 100 успешно завершенных случаев, гарантированный результат или финансовое возмещение. Ключевые слова: восстановление самооценки, формирование уверенности в себе, обретение любви к себе, гипнопроработка личностного роста, трансформация самоотношения, Казань, профессиональная консультация, глубинная работа с подсознанием, достижение внутренней гармонии, полное само принятие, трансформация личности.",
-  "url": "${SITE_URL}/programs/love-myself",
+  "url": `${SITE_URL}/programs/love-myself`,
   "provider": {
     "@type": "Person",
     "name": "Александр Васильев",
     "description": "Гипнотерапевт, специалист по работе с подсознанием и личностным ростом",
-    "url": "${SITE_URL}/#about"
+    "url": `${SITE_URL}/#about`
   },
   "areaServed": "Казань и онлайн",
   "serviceType": "Гипнопроработка личностного роста",
@@ -30,7 +32,7 @@ const schemaOrg = {
     "price": "По запросу",
     "priceCurrency": "RUB",
     "availability": "https://schema.org/InStock",
-    "url": "${SITE_URL}/programs/love-myself#message"
+    "url": `${SITE_URL}/programs/love-myself#message`
   },
   "serviceOutput": {
     "@type": "Thing",
@@ -39,12 +41,14 @@ const schemaOrg = {
   },
   "mainEntityOfPage": {
     "@type": "WebPage", 
-    "@id": "${SITE_URL}/programs/love-myself"
+    "@id": `${SITE_URL}/programs/love-myself`
   }
 };
 
 export default function () {
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
+  useScrollToLocation();
 
   const metaConfig = {
     title: 'Программа «Полюби себя» — Александр "Интеграл" Васильев',
@@ -165,6 +169,8 @@ export default function () {
         </div>  
       <div id="message" />
       <Form
+        setIsSubmitted={setIsSubmitted}
+        isSubmitted={isSubmitted}
         type={'Программа: ' + metaConfig.pageTitle}
       />
     </Layout>

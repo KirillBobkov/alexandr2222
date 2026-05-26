@@ -14,13 +14,13 @@ const schemaOrg = {
 "headline": "Гипнопроработка для предпринимателей: трансформация бизнес-блоков в ростовые возможности",
   "description": "Гипнопроработка для предпринимателей — инновационный метод быстрой нейтрализации внутренних психологических барьеров, саботажных паттернов, глубинных страхов и ограничивающих убеждений, напрямую мешающих бизнес-развитию и личностной эффективности. Глубокая перестройка подсознательных механизмов, индивидуально разработанный подход, моментальное достижение измеримых результатов, профессиональная поддержка опытного трансформатора. Ключевые слова: гипнопроработка бизнес-трансформации, предпринимательский рост, бизнес-психология, нейтрализация внутренних барьеров, бизнес-масштабирование, саботажные паттерны, профессиональная консультация, Казань, глубинная работа с подсознанием, бизнес-эффективность, устранение предпринимательских страхов, трансформация бизнес-развития.",
   "image": "/_next/static/media/secondary_preview_26.webp",
-  "url": "${SITE_URL}/blog/neurotroubleshutting-entrepreneurs",
+  "url": `${SITE_URL}/blog/neurotroubleshutting-entrepreneurs`,
   "inLanguage": "ru",
   "datePublished": "2025-04-15",
   "publisher": {
     "@type": "Organization",
     "name": "INTEGRAAL",
-    "url": "${SITE_URL}",
+    "url": `${SITE_URL}`,
     "logo": {
       "@type": "ImageObject",
       "url": "/_next/static/media/logo.ab1a421b.webp",
@@ -31,13 +31,13 @@ const schemaOrg = {
   "author": {
     "@type": "Person",
     "name": "Александр Васильев",
-    "url": "${SITE_URL}/#about",
+    "url": `${SITE_URL}/#about`,
     "description": "Гипнотерапевт, специалист по работе с подсознанием и развитию бизнеса",
     "jobTitle": "Гипнотерапевт, специалист по работе с подсознанием"
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "${SITE_URL}/blog/neurotroubleshutting-entrepreneurs"
+    "@id": `${SITE_URL}/blog/neurotroubleshutting-entrepreneurs`
   },
   "keywords": "гипнопроработка, предприниматели, бизнес, подсознание, внутренние блоки, рост, масштабирование, саботаж",
   "about": [
@@ -57,7 +57,7 @@ const schemaOrg = {
     "price": "Бесплатная первая консультация",
     "priceCurrency": "RUB",
     "availability": "https://schema.org/InStock",
-    "url": "${SITE_URL}/blog/neurotroubleshutting-entrepreneurs#message",
+    "url": `${SITE_URL}/blog/neurotroubleshutting-entrepreneurs#message`,
     "description": "Запишитесь на консультацию, чтобы узнать, как гипнопроработка может помочь преодолеть внутренние блоки и ускорить рост вашего бизнеса."
   }
 };

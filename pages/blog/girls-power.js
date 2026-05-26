@@ -16,13 +16,13 @@ const schemaOrg = {
   description:
     "Гипнопроработка для женщин — эффективный метод устранения тревожности, комплексов и последствий психологических травм через направленное воображение. Работа с подсознанием без необходимости обсуждать сокровенное. Онлайн-сессии, гарантия результата, индивидуальный подход. Ключевые слова: гипнопроработка для женщин, работа с подсознанием, уверенность в себе, спокойствие, избавление от тревожности, проработка комплексов, психологические травмы, женская психология, эмоциональное состояние, трансформация через подсознание.",
   image: "/_next/static/media/secondary_preview_2.webp",
-  url: "${SITE_URL}/blog/girls-power",
+  url: `${SITE_URL}/blog/girls-power`,
   inLanguage: "ru",
   datePublished: "2025-04-24",
   publisher: {
     "@type": "Organization",
     name: "INTEGRAAL",
-    url: "${SITE_URL}",
+    url: `${SITE_URL}`,
     logo: {
       "@type": "ImageObject",
       url: "/_next/static/media/logo.ab1a421b.webp",
@@ -33,14 +33,14 @@ const schemaOrg = {
   author: {
     "@type": "Person",
     name: "Александр Васильев",
-    url: "${SITE_URL}/#about",
+    url: `${SITE_URL}/#about`,
     description:
       "Гипнолог, специалист по работе с подсознанием и психологическим состояниям",
     jobTitle: "Гипнолог, эксперт по работе с подсознанием",
   },
   mainEntityOfPage: {
     "@type": "WebPage",
-    "@id": "${SITE_URL}/blog/girls-power",
+    "@id": `${SITE_URL}/blog/girls-power`,
   },
   keywords:
     "гипнопроработка женщины, уверенность, спокойствие, радость, работа с подсознанием, тревожность, комплексы, психологические травмы",
@@ -63,7 +63,7 @@ const schemaOrg = {
     price: "10000",
     priceCurrency: "RUB",
     availability: "https://schema.org/InStock",
-    url: "${SITE_URL}/blog/girls-power#message",
+    url: `${SITE_URL}/blog/girls-power#message`,
     description:
       "Запишитесь на консультацию, чтобы узнать, как гипнопроработка может помочь вам обрести уверенность, спокойствие и радость.",
   },
@@ -232,9 +232,10 @@ export default function () {
           src="https://vkvideo.ru/video_ext.php?oid=643721177&id=456239022&hash=2a097920823e0a9b"
           width="640"
           height="360"
+          
           frameBorder="0"
           allowFullScreen={true}
-          style={{ backgroundColor: "#000", width: "100%", aspectRatio: "16/9", borderRadius: "20px" }}
+          style={{ backgroundColor: "#000", width: "100%", aspectRatio: "16/9", borderRadius: "20px", zIndex: 1 }}
           allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
         ></iframe>
 

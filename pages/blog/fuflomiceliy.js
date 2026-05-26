@@ -16,13 +16,13 @@ headline:
   description:
     "Научный анализ Ежовика Гребенчатого показывает его потенциал для улучшения когнитивных функций и ментальной ясности, однако терапевтический эффект наблюдается исключительно при использовании плодовых тел. Проведем объективный разбор, почему мицелий представляет собой финансово неэффективный продукт, и рассмотрим научно обоснованные методы применения гриба для достижения максимальных результатов.",
   image: "/_next/static/media/secondary_preview_23.webp",
-  url: "${SITE_URL}/blog/fuflomiceliy",
+  url: `${SITE_URL}/blog/fuflomiceliy`,
   inLanguage: "ru",
   datePublished: "2025-10-07",
   publisher: {
     "@type": "Organization",
     name: "INTEGRAAL",
-    url: "${SITE_URL}",
+    url: `${SITE_URL}`,
     logo: {
       "@type": "ImageObject",
       url: "/_next/static/media/logo.ab1a421b.webp",
@@ -33,14 +33,14 @@ headline:
   author: {
     "@type": "Person",
     name: "Александр Васильев",
-    url: "${SITE_URL}/#about",
+    url: `${SITE_URL}/#about`,
     description:
       "Гипнотерапевт, специалист по работе с подсознанием и расширению восприятия",
     jobTitle: "Гипнотерапевт, специалист по работе с подсознанием",
   },
   mainEntityOfPage: {
     "@type": "WebPage",
-    "@id": "${SITE_URL}/blog/fuflomiceliy",
+    "@id": `${SITE_URL}/blog/fuflomiceliy`,
   },
   keywords:
     "ежовик гребенчатый, hericium erinaceus, lion's mane, мицелий, плодовые тела, память, нейропластичность, ясность ума, ноотроп, экстракт",
@@ -63,7 +63,7 @@ headline:
     price: "Бесплатная первая консультация",
     priceCurrency: "RUB",
     availability: "https://schema.org/InStock",
-    url: "${SITE_URL}/blog/fuflomiceliy#message",
+    url: `${SITE_URL}/blog/fuflomiceliy#message`,
     description:
       "Запишитесь на консультацию, чтобы подобрать работающий протокол с Ежовиком.",
   },
