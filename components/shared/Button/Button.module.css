@@ -33,11 +33,11 @@
   font-weight: 700;
   position: relative;
   border-radius: 35px;
-  border: 0.5px solid var(--border-color);
+  border: var(--default-border);
   letter-spacing: 0.14em;
   color: #ffffff;
   background: var(--card-color);
-  box-shadow: 0px -3px 15px 0px var(--border-color);
+  box-shadow: var(--inner-shadow);
   background-size: cover;
   text-transform: uppercase;
   visibility: visible;
@@ -61,7 +61,7 @@
   width: 25%;
   position: absolute;
   border-radius: 35px;
-  background: linear-gradient(180deg, #a948b3a3 0, #a948b3d9 30%, #8b2f99ad 40%, #501b58b3 80%, #6a1c76c4 90%, #6a1c76cc);;
+  background: var(--button-gradient);;
   background-repeat: no-repeat;
   background-position: center;
   animation: pulseWidth 1.5s ease-in-out infinite alternate;
@@ -76,7 +76,7 @@
   height: 100%;
   position: absolute;
   border-radius: 35px;
-  background:  linear-gradient(180deg, #a948b3a3 0, #a948b3d9 30%, #8b2f99ad 40%, #501b58b3 80%, #6a1c76c4 90%, #6a1c76cc);
+  background:  var(--button-gradient);
 }
 
 .button:disabled {

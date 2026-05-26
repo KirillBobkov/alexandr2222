@@ -15,8 +15,8 @@
 
 .widget {
   background: var(--card-color);
-  border: 0.5px solid var(--border-color);
-  border-radius: 20px;
+  border: var(--default-border);
+  border-radius: var(--default-radius);
   padding: 30px;
   max-width: 500px;
   width: 90%;

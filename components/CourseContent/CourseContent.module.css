@@ -30,7 +30,7 @@
     background: var(--accent);
     color: var(--card-color);
     padding: 20px 25px;
-    border-radius: 20px;
+    border-radius: var(--default-radius);
     text-align: center;
     min-width: 140px;
     position: sticky;

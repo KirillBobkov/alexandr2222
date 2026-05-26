@@ -29,7 +29,7 @@
   height: 100%;
   z-index: -1;
   opacity: 1;
- background: linear-gradient(180deg, #a948b3a3 0, #a948b3d9 30%, #8b2f99ad 40%, #501b58b3 80%, #6a1c76c4 90%, #6a1c76cc);
+ background: var(--button-gradient);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -40,7 +40,7 @@
 }
 
 .button.opacity {
-  border: 0.5px solid var(--border-color);
+  border: var(--default-border);
   box-shadow: 0px -3px 15px 4px var(--border-color);
 }
 

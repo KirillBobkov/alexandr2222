@@ -30,7 +30,7 @@
   height: auto;
   min-height: 200px;
   max-height: 90dvh;
-  border-radius: 20px;
+  border-radius: var(--default-radius);
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
   position: relative;
   overflow: hidden;
