@@ -148,6 +148,10 @@
   will-change: opacity;
 }
 
+.parallaxMode .secondaryPreview__bgImage.loaded {
+  opacity: 1;
+}
+
 .parallaxOverlay {
   position: absolute;
   inset: 0;

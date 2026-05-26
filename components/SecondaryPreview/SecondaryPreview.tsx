@@ -47,12 +47,22 @@ export const SecondaryPreview = ({ image, subtext, text, animated = true, overla
       }
     };
 
-    window.addEventListener("scroll", updateProgress, { passive: true });
+    // Try multiple scroll targets (like in MagicForestPortal)
+    const scrollTargets = [
+      window,
+      document,
+      document.documentElement,
+      document.body,
+    ];
+
+    scrollTargets.forEach(target => {
+      target.addEventListener("scroll", updateProgress, { passive: true });
+    });
 
     updateProgress(); // Initial call
 
     return () => {
-      window.removeEventListener("scroll", updateProgress);
+      scrollTargets.forEach(target => {
         target.removeEventListener("scroll", updateProgress);
       });
     };

@@ -1,5 +1,5 @@
 import { useState, useDeferredValue } from "react";
-import { SITE_URL } from "../../consts/site";
+import { SITE_URL } from "../consts/site";
 import Layout from "../components/Layout/Layout";
 import { SecondaryPreview } from "../components/SecondaryPreview/SecondaryPreview";
 import { BlogCard } from "../components/BlogCard/BlogCard";

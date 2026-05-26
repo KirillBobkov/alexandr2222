@@ -1,6 +1,6 @@
 import Layout from "../components/Layout/Layout";
-import { SITE_URL } from "../../consts/site";
-import { BUILD_DATE } from "../../consts/build";
+import { SITE_URL } from "../consts/site";
+import { BUILD_DATE } from "../consts/build";
 import { AnimatedLine } from "../components/AnimatedLine/AnimatedLine";
 import { SecondaryPreview } from "../components/SecondaryPreview/SecondaryPreview";
 import enter_hole_2 from "../images/enter_hole_2.webp";

@@ -1,6 +1,6 @@
 import Layout from "../components/Layout/Layout";
-import { SITE_URL } from "../../consts/site";
-import { BUILD_DATE } from "../../consts/build";
+import { SITE_URL } from "../consts/site";
+import { BUILD_DATE } from "../consts/build";
 import { Form } from "../components/Form/Form";
 import { SecondaryPreview } from "../components/SecondaryPreview/SecondaryPreview";
 import containerStyles from "../styles/container.module.css";

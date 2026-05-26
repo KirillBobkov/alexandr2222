@@ -102,7 +102,7 @@ export const FormValidator: React.FC<FormValidatorProps> = ({
         if (error) hasErrors = true;
       } else {
         const validator = field.validator || getDefaultValidator(field.type);
-        const error = validator(formData[field.name]);
+        const error = validator(formData[field.name] as string);
         newErrors[field.name] = error;
         if (error) hasErrors = true;
       }

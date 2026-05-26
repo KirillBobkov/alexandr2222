@@ -1,5 +1,5 @@
 import Layout from "../../components/Layout/Layout";
-import { SITE_URL } from "../../../consts/site";
+import { SITE_URL } from "../../consts/site";
 import { SecondaryPreview } from "../../components/SecondaryPreview/SecondaryPreview";
 import { VisibilityManager } from "../../components/shared/VisibilityManager";
 import containerStyles from "../../styles/container.module.css";

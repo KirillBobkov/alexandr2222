@@ -1,5 +1,5 @@
 import Layout from "../components/Layout/Layout";
-import { SITE_URL } from "../../consts/site";
+import { SITE_URL } from "../consts/site";
 import { InnerSatisfaction } from "../components/InnerSatisfaction";
 import { CirclesList } from "../components/CirclesList/CirclesList";
 import { SecondaryPreview } from "../components/SecondaryPreview/SecondaryPreview";
