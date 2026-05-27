@@ -6,6 +6,13 @@ import { validateEmail, validateName, validatePhone } from "../../../utils/valid
 import { PAYMENT_API_URL, PAYMENT_API_TIMEOUT } from "../../../consts/api";
 import styles from "./OrderForm.module.css";
 
+interface OrderFormData {
+  name: string;
+  email: string;
+  phone: string;
+  agreement: boolean;
+}
+
 interface OrderFormProps {
   onPaymentSubmit?: (formData: unknown) => void;
   title?: string;
@@ -106,17 +113,20 @@ export const OrderForm = ({
           setIsSubmitted={setIsSubmitted}
           onSubmit={handleSubmit}
         >
-          {({ formData, errors, handleChange, handleSubmit, isSubmitted: formSubmitted }) => (
+          {({ formData, errors, handleChange, handleSubmit, isSubmitted: formSubmitted }) => {
+            const typedFormData = formData as unknown as OrderFormData;
+
+            return (
             <form onSubmit={handleSubmit} className={styles.orderForm}>
               <div className={styles.orderFormInput}>
                 <Input
                   type="text"
                   name="name"
-                  value={formData.name}
+                  value={typedFormData.name}
                   onChange={handleChange}
                   placeholder="Имя"
                   animated={false}
-                  error={errors.name}
+                  error={errors.name as string}
                   disabled={formSubmitted}
                 />
               </div>
@@ -124,11 +134,11 @@ export const OrderForm = ({
                 <Input
                   type="email"
                   name="email"
-                  value={formData.email}
+                  value={typedFormData.email}
                   onChange={handleChange}
                   placeholder="Email"
                   animated={false}
-                  error={errors.email}
+                  error={errors.email as string}
                   disabled={formSubmitted}
                 />
               </div>
@@ -136,24 +146,24 @@ export const OrderForm = ({
                 <Input
                   type="tel"
                   name="phone"
-                  value={formData.phone}
+                  value={typedFormData.phone}
                   onChange={handleChange}
                   placeholder="Номер телефона"
                   animated={false}
-                  error={errors.phone}
+                  error={errors.phone as string}
                   disabled={formSubmitted}
                 />
               </div>
               <div
                 style={{
                   ...buttonContainerStyle,
-                  opacity: formData.agreement ? 1 : 0.7,
-                  pointerEvents: formData.agreement ? "auto" : "none",
+                  opacity: typedFormData.agreement ? 1 : 0.7,
+                  pointerEvents: typedFormData.agreement ? "auto" : "none",
                 }}
               >
                 <button
                   type="submit"
-                  disabled={!formData.agreement || formSubmitted}
+                  disabled={!typedFormData.agreement || formSubmitted}
                   className={styles.submitOrderButton}
                 >
                   {isRedirecting && <div className={styles.loader} />}
@@ -165,7 +175,7 @@ export const OrderForm = ({
                   type="checkbox"
                   id="offer-checkbox-orderform"
                   name="agreement"
-                  checked={formData.agreement}
+                  checked={typedFormData.agreement}
                   onChange={handleChange}
                   className={`${styles.agreementCheckboxInput} ${
                     errors.agreement ? styles.agreementCheckboxError : ""
@@ -195,7 +205,8 @@ export const OrderForm = ({
                 </VisibilityManager>
               )}
             </form>
-          )}
+            );
+          }}
         </FormValidator>
       </div>
     </div>
