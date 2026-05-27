@@ -1,13 +1,8 @@
 import Image from "next/image";
 import { VisibilityManager } from "../shared/VisibilityManager";
+import { Video } from "../VideoWidget/VideoWidget";
 import contentStyles from "../../styles/contentStyles.module.css";
 import styles from "./VideoList.module.css";
-
-interface Video {
-  link: string;
-  thumbnailUrl: string;
-  name: string;
-}
 
 interface VideoListProps {
   videos: Video[];
