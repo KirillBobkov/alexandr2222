@@ -78,7 +78,7 @@ export function Form({
                 <Input
                   type="text"
                   name="name"
-                  placeholder="Введите ваше имя"
+                  placeholder="Ваше имя"
                   value={formData.name}
                   onChange={handleChange}
                   disabled={formSubmitted}
@@ -89,7 +89,7 @@ export function Form({
                 <Input
                   type="tel"
                   name="phone"
-                  placeholder="Введите ваш номер телефона"
+                  placeholder="Ваш номер телефона"
                   value={formData.phone}
                   onChange={handleChange}
                   disabled={formSubmitted}
