@@ -75,7 +75,7 @@ const NAVIGATION_TREE = [
   {
     parent: {
       path: "/neurotroubleshutting",
-      value: "Гипнопроработка",
+      value: "Направленная медитация",
     },
   },
   {
