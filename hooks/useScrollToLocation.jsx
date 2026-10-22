@@ -12,7 +12,7 @@ export const useScrollToLocation = () => {
         element.scrollIntoView({ behavior: "smooth" });
       }
     } else {
-      document.body.scrollTo(0, 0);
+      window.scrollTo(0, 0);
     }
   }, [asPath]);
 };

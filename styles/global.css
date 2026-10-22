@@ -83,6 +83,22 @@ body {
 
 body {
   background-color: transparent;
+  /* Скролл-контейнер — viewport (window), а не body: иначе не работают
+     window.scrollY/scrollTo (ScrollTopButton и т.п.), а pointer-events
+     на body ломает перетаскивание его скроллбара */
+  overflow: visible;
+  /* fixed-хиро (z-index: -1) рисуется под body, и body перехватывает
+     его клики — отключаем; на скролл это не влияет */
+  pointer-events: none;
+}
+
+/* #__next (обёртка Next.js) рисуется выше хиро и тоже перехватывает клики */
+body > div {
+  pointer-events: none;
+}
+
+body > div > * {
+  pointer-events: auto;
 }
 
 .no-scroll-page {

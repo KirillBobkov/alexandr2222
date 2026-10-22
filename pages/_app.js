@@ -5,11 +5,9 @@ import "../styles/reset.css";
 
 export default function App({ Component, pageProps }) {
   return (
-    <main>
-      <ThemeProvider>
-        <Component {...pageProps} />
-        <MetricsCode />
-      </ThemeProvider>
-    </main>
+    <ThemeProvider>
+      <Component {...pageProps} />
+      <MetricsCode />
+    </ThemeProvider>
   );
 }

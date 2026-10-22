@@ -8,6 +8,9 @@
   min-height: 500px;
   color: var(--font-color);
   overflow: hidden;
+  /* clip вместо hidden: не создаёт скролл-контейнер, иначе герой
+     перехватывает колесо мыши и страница не скроллится */
+  overflow: clip;
   position: fixed;
   top: 0;
   z-index: -1;
